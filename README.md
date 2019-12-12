@@ -8,6 +8,9 @@ This package is meant to encompass all aspects that are desired or missing from 
 ### Features:
 - Small keys and dungeon chests are auto-tracked in both Standard and Keysanity
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
+- Dungeon chests show on the item tracker; in Standard, the chest icons indicate the remaining items (not chests), in Keysanity, the chest icons indicate the remaining chests.
+- In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
+- In Keysanity, each chest has it's own logical access defined, except where they can be grouped
 - GT Big Key Guessing Game shows on Standard Broadcast Views, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
 - Backwards compatibility to v30 logic with non-progressive bow, so modes like multiworld properly shows silvers without bow
