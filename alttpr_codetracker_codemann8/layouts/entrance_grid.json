@@ -1,0 +1,82 @@
+{
+    "shared_entrance_grid": {
+		"type": "dock",
+		"dock": "bottom",
+		"content": [
+			{
+				"type": "group",
+				"header": "Dropdowns",
+				"margin": "0,0,3,0",
+				"dock": "left",
+				"content": {
+					"type": "itemgrid",
+					"v_alignment": "center",
+					"item_margin": "1,1",
+					"item_size": 40,
+					"rows": [
+						[
+							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Overworld/Misc",
+				"margin": "0,0,3,0",
+				"dock": "left",
+				"content": {
+					"type": "itemgrid",
+					"h_alignment": "left",
+					"item_margin": "1,1",
+					"item_size": 40,
+					"badge_font_size": 24,
+					"rows": [
+						[
+							"dam","aga","aga2","gt_crystals", "ganon_crystals"
+						]
+					]
+				}
+			}
+		]
+	},
+	"shared_entrance_v_grid": {
+		"type": "array",
+		"orientation": "vertical",
+		"content": [
+			{
+				"type": "group",
+				"header": "Dropdowns",
+				"margin": "0,0,0,0",
+				"dock": "left",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "1,1",
+					"item_size": 40,
+					"rows": [
+						[
+							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
+				"header": "Overworld/Misc",
+				"margin": "0,0,0,0",
+				"dock": "left",
+				"content": {
+					"type": "itemgrid",
+					"item_margin": "1,1",
+					"item_size": 60,
+					"badge_font_size": 24,
+					"rows": [
+						[
+							"dam","aga","aga2","gt_crystals", "ganon_crystals"
+						]
+					]
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,343 @@
+[
+    // Regions
+    {
+        "name": "Light World",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "light_world"
+    },
+    {
+        "name": "Castle Second Floor",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "castle_top"
+    },
+    {
+        "name": "Race Game Area",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "race_game"
+    },
+    {
+        "name": "Desert Ledge",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "desert_ledge"
+    },
+    {
+        "name": "Desert Back",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "desert_back"
+    },
+    {
+        "name": "Desert Front",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "desert_front"
+    },
+    {
+        "name": "Mire Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "mire_area"
+    },
+    {
+        "name": "Northwest Dark World",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dw_west"
+    },
+    {
+        "name": "South Dark World",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dw_south"
+    },
+    {
+        "name": "East Dark World",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dw_east"
+    },
+    {
+        "name": "Southeast Dark World",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dw_southeast"
+    },
+    {
+        "name": "Dark Witch Hut",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dw_witch"
+    },
+    {
+        "name": "Light Witch Hut",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "lw_witch"
+    },
+    {
+        "name": "Zora Area Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "zora_area"
+    },
+    {
+        "name": "King's Tomb Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "kings_tomb"
+    },
+    {
+        "name": "Graveyard Ledge Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "graveyard_ledge"
+    },
+    {
+        "name": "Hammer House Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "hammer_house"
+    },
+    {
+        "name": "Hammer Pegs Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "hammer_pegs"
+    },
+    {
+        "name": "Grass House Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "grass_house"
+    },
+    {
+        "name": "Bomb Hut Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "bomb_hut"
+    },
+    {
+        "name": "Bumper Cave Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "bumper_cave"
+    },
+    {
+        "name": "Bumper Cave Entrance Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "bumper_entrance"
+    },
+    {
+        "name": "Ice Palace Access",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ip_area"
+    },
+    {
+        "name": "Death Mountain West Top",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_west_top"
+    },
+    {
+        "name": "Death Mountain West Bottom",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_west_bottom"
+    },
+    {
+        "name": "Death Mountain East Top",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_east_top"
+    },
+    {
+        "name": "Death Mountain East Spiral",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_east_spiral"
+    },
+    {
+        "name": "Death Mountain East Mimic",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_east_mimic"
+    },
+    {
+        "name": "Death Mountain East Connector Top",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_east_connect_top"
+    },
+    {
+        "name": "Death Mountain East Bottom",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "dm_east_bottom"
+    },
+    {
+        "name": "Dark Death Mountain West",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_west"
+    },
+    {
+        "name": "Dark Death Mountain Floating Island",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_floating"
+    },
+    {
+        "name": "Dark Death Mountain Top",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_top"
+    },
+    {
+        "name": "Dark Death Mountain TR Bridge",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_tr_bridge"
+    },
+    {
+        "name": "Dark Death Mountain TR Safety Door",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_tr_safety"
+    },
+    {
+        "name": "Dark Death Mountain East",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "ddm_east"
+    },
+    {
+        "name": "Agahnim 2",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/aga2.png",
+        "codes": "aga2,gt"
+    },
+	{
+        "name": "Dam",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/dam.png",
+        "disabled_img_mods": "",
+        "img": "images/dam-drained.png",
+        "codes": "dam"
+    },
+	{
+        "name": "Secret Passage Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-uncle.png",
+        "disabled_img_mods": "",
+        "img": "images/drop-uncle-checked.png",
+        "codes": "dropdown_uncle"
+    },
+	{
+        "name": "Sanctuary Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-sanc.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-sanc-checked.png",
+		"codes": "dropdown_sanc"
+    },
+	{
+        "name": "Lumberjack Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-lumberjack.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-lumberjack-checked.png",
+		"codes": "dropdown_lumberjack"
+    },
+	{
+        "name": "Thieve's Hideout Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-thief.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-thief-checked.png",
+		"codes": "dropdown_thief"
+    },
+	{
+        "name": "Kakariko Well Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-well.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-well-checked.png",
+		"codes": "dropdown_well"
+    },
+	{
+        "name": "Magic Bat Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-bat.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-bat-checked.png",
+		"codes": "dropdown_bat"
+    },
+	{
+        "name": "Fairy Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/drop-fairy.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-fairy-checked.png",
+		"codes": "dropdown_fairy"
+    },
+	{
+        "name": "Ganon Dropdown",
+        "capturable": false,
+        "type": "toggle",
+        "disabled_img": "images/ganon.png",
+		"disabled_img_mods": "",
+		"img": "images/drop-ganon-checked.png",
+		"codes": "dropdown_ganon"
+    }
+]

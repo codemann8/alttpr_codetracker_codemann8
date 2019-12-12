@@ -1,0 +1,18 @@
+﻿[
+	{
+		"name": "lightworld",
+		"location_size": 80,
+		"location_border_thickness": 5,
+		"img": "images/lttp_lightworld.png"
+	},
+	{
+		"name": "darkworld",
+		"location_size": 80,
+		"location_border_thickness": 5,
+		"img": "images/lttp_darkworld.png"
+	},
+	{
+		"name": "inverteddarkworld",
+		"img": "images/lttp_darkworld.png"
+	}
+]
