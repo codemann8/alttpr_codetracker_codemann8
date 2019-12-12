@@ -1,0 +1,408 @@
+[
+    {
+        "name": "Hyrule Castle & Sanctuary",
+        "short_name": "Escape",
+        "color": "#701d43",
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1000,
+                "y": 940
+            }
+        ],
+        "sections": [
+          {
+            "name": "Items",
+            "clear_as_group": false,
+            "access_rules": [ "[firesource],[lift1]" ],
+            "item_count": 6
+          }
+        ]
+	},
+	{
+		"name": "Agahnim's Tower",
+		"color": "#701d43",
+		"map_locations": [
+			{
+				"map": "lightworld",
+				"x": 1000,
+				"y": 750
+			}
+		],
+		"sections": [
+			{
+				"name": "Agahnim",
+				"access_rules": [
+					"[lamp],$canRemoveCurtains,sword",
+					"[lamp],$canRemoveCurtains,hammer",
+					"[lamp],$canRemoveCurtains,net"
+				],
+				"hosted_item": "aga1"
+			}
+		]
+	},
+	//  Eastern Palace
+	{
+		"name": "Eastern Palace",
+		"color": "#af0000",
+		"access_rules": [ "[lamp]" ],
+		"sections": [
+			{
+				"name": "Items",
+				"clear_as_group": false,
+				"access_rules": [ "[lamp]" ],
+				"item_count": 3
+			},
+			{
+				"name": "Armos",
+				"access_rules": [ "bow,[firesource]" ],
+				"hosted_item": "easternpalace"
+			}
+		],
+		"map_locations": [
+			{
+				"map": "lightworld",
+				"x": 1925,
+				"y": 773
+			}
+		]
+	},
+	//  Desert Palace
+	{
+		"name": "Desert Palace",
+		"color": "#af0000",
+		"completion_rules": [ "firesource,boots" ],
+		"sections": [
+			{
+				"name": "Items",
+				"clear_as_group": false,
+				"capture_item": true,
+				"access_rules": [ "[boots]" ],
+				"item_count": 2
+			},
+			{
+				"name": "Lanmolas",
+				"short_name": "Lanmo",
+				"access_rules": [
+					"firesource,sword",
+					"firesource,hammer",
+					"firesource,firerod",
+					"firesource,icerod",
+					"firesource,bow",
+					"firesource,somaria"
+				],
+				"hosted_item": "desertpalace"
+			}
+		],
+		"map_locations": [
+			{
+			"map": "lightworld",
+			"x": 150,
+			"y": 1700
+			}
+		]
+	},
+	//  Palace of Darkness
+	{
+		"name": "Palace of Darkness",
+		"short_name": "PoD",
+		"color": "#af0000",
+		"sections": [
+			//  Front
+			{
+				"name": "Items",
+				"clear_as_group": false,
+				"access_rules": [
+					"[bow],[lamp]"
+				],
+				"item_count": 5
+			},
+			//  Back
+			{
+				"name": "Helmasaur King",
+				"short_name": "Helma",
+				"access_rules": [ "bow,hammer,[lamp]" ],
+				"hosted_item": "palaceofdarkness"
+			}
+		],
+		"map_locations": [
+			{
+				"map": "darkworld",
+				"x": 1925,
+				"y": 773
+			}
+		]
+	},
+	//  Swamp Area
+	{
+		"name": "Swamp Area",
+		"group": "Swamp Area",
+		"color": "#0d8452",
+		"children": [
+			//  Dark Swamp Area
+			{
+				"name": "Dark Swamp Area",
+				"group": "Swamp Area",
+				"children": [
+					//  Swamp Palace
+					{
+						"name": "Swamp Palace",
+						"color": "#af0000",
+						"access_rules": [ "flippers,dam" ],
+						"sections": [
+							//  Front
+							{
+								"name": "Items",
+								"clear_as_group": false,
+								"access_rules": [ "[hammer],[hookshot]" ],
+								"item_count": 6
+							},
+							//  Back
+							{
+								"name": "Arrgus",
+								"access_rules": [ "hammer,hookshot" ],
+								"hosted_item": "swamppalace"
+							}
+						],
+						"map_locations": [
+							{
+								"map": "darkworld",
+								"x": 940,
+								"y": 1825
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	//  Dark World
+	{
+		"name": "Northwest Dark World",
+		"color": "#35046b",
+		"group": "Lost Woods",
+		"children": [
+			//  Skull Woods
+			{
+				"name": "Skull Woods",
+				"color": "#af0000",
+				"sections": [
+					//  Front
+					{
+						"name": "Items",
+						"clear_as_group": false,
+						"item_count": 2
+					},
+					//  Back
+					{
+						"name": "Mothula",
+						"access_rules": [ "firesource,[firerod],$canRemoveCurtains" ],
+						"hosted_item": "skullwoods"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 80,
+						"y": 50
+					}
+				]
+			},
+			//   Thieve's Town
+			{
+				"name": "Thieves Town",
+				"color": "#af0000",
+				"sections": [
+					{
+						"name": "Items",
+						"clear_as_group": false,
+						"access_rules": [ "[hammer]" ],
+						"item_count": 4
+					},
+					//  Back
+					{
+						"name": "Blind",
+						"hosted_item": "thievestown",
+						"access_rules": [
+							"sword",
+							"hammer",
+							"somaria",
+							"byrna"
+						]
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 255,
+						"y": 925
+					}
+				]
+			}
+		]
+	},
+	//  Ice Palace
+	{
+		"name": "Ice Palace",
+		"color": "#af0000",
+		"access_rules": [
+			"firerod",
+			"bombos,$canUseMedallions"
+		],
+		"sections": [
+			{
+				"name": "Items",
+				"clear_as_group": false,
+				"access_rules": [
+					"[hammer],[lift1],[hookshot],[somaria]",
+					"[hammer],[lift1],[hookshot],[somaria]"
+				],
+				"item_count": 3
+			},
+			{
+				"name": "Khold",
+				"access_rules": [
+					"hammer,lift1"
+				],
+				"hosted_item": "icepalace"
+			}
+		],
+		"map_locations": [
+			{
+				"map": "darkworld",
+				"x": 1600,
+				"y": 1685
+			}
+		]
+	},
+	//  Misery Mire
+	{
+		"name": "Misery Mire",
+		"color": "#af0000",
+		"parent": "Mire Area",
+		"access_rules": [
+			"$canUseMedallions,mm_medallion,hookshot",
+			"$canUseMedallions,mm_medallion,boots",
+			"$canUseMedallions,bombos,ether,quake,hookshot",
+			"$canUseMedallions,bombos,ether,quake,boots"
+		],
+		"sections": [
+			{
+				"name": "Items",
+				"clear_as_group": false,
+				"access_rules": [ "[firesource]" ],
+				"item_count": 2
+			},
+			{
+				"name": "Vitreous",
+				"access_rules": [
+					"somaria,[lamp],sword",
+					"somaria,[lamp],bow"
+				],
+				"hosted_item": "miserymire"
+			}
+		],
+		"map_locations": [
+			{
+				"map": "darkworld",
+				"x": 150,
+				"y": 1600
+			}
+		]
+	},
+	//  Death Mountain
+	{
+		"name": "Death Mountain",
+		"group": "Death Mountain",
+		"color": "#934f17",
+		"children": [
+			//  Tower of Hera
+			{
+				"name": "Tower of Hera",
+				"color": "#af0000",
+				"sections": [
+					{
+						"name": "Items",
+						"clear_as_group": false,
+						"access_rules": [ "[firesource]" ],
+						"item_count": 2
+					},
+					{
+						"name": "Moldorm",
+						"access_rules": [
+							"sword,[firesource]",
+							"hammer,[firesource]"
+						],
+						"hosted_item": "towerofhera"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "lightworld",
+						"x": 1125,
+						"y": 20
+					}
+				]
+			},
+			//  Turtle Rock
+			{
+				"name": "Turtle Rock",
+				"color": "#af0000",
+				"access_rules": [ "[somaria]" ],
+				"sections": [
+					{
+						"name": "Items",
+						"clear_as_group": false,
+						"access_rules": [ "[firerod],[lamp]" ],
+						"item_count": 5
+					},
+					{
+						"name": "Trinexx",
+						"access_rules": [
+							"[lamp],somaria,firerod,icerod,sword",
+							"[lamp],somaria,firerod,icerod,hammer"
+						],
+						"hosted_item": "turtlerock"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 1890,
+						"y": 115
+					}
+				]
+			},
+			//  Ganon's Tower
+			{
+				"name": "Ganon's Tower",
+				"color": "#af0000",
+				"sections": [
+					{
+						"name": "Items",
+						"clear_as_group": false,
+						"access_rules": [
+							"[hammer],[somaria],[firerod],[boots],[hookshot],[bow]",
+							"[hammer],[somaria],[firerod],boots,[hookshot],[bow]",
+							"[hammer],somaria,[firerod],[boots],[hookshot],[bow]"
+						],
+						"item_count": 20
+					},
+					{
+						"name": "Agahnim 2",
+						"clear_as_group": false,
+						"access_rules": [ "[bow],firesource,[hookshot]" ],
+						"hosted_item": "aga2"
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 1125,
+						"y": 20
+					}
+				]
+			}
+		]
+	}
+]

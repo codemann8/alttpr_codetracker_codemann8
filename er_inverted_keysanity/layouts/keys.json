@@ -1,0 +1,100 @@
+{
+    "keys_grid": {
+		"type": "itemgrid",
+		"margin": "1,0,2,3",
+		"item_margin": "1,1",
+		"item_size": 26,
+		"badge_font_size": 16,
+		"rows": [
+			[
+				"hc_label",
+				"easternpalace",
+				"desertpalace",
+				"towerofhera",
+				"at_label",
+				"palaceofdarkness",
+				"swamppalace",
+				"skullwoods",
+				"thievestown",
+				"icepalace",
+				"miserymire",
+				"turtlerock",
+				"gt_label"
+			],
+			[
+				"hc_chest",
+				"ep_chest",
+				"dp_chest",
+				"toh_chest",
+				"at_chest",
+				"pod_chest",
+				"sp_chest",
+				"sw_chest",
+				"tt_chest",
+				"ip_chest",
+				"mm_chest",
+				"tr_chest",
+				"gt_chest"
+			],
+			[
+				"hc_smallkey",
+				"ep_smallkey",
+				"dp_smallkey",
+				"toh_smallkey",
+				"at_smallkey",
+				"pod_smallkey",
+				"sp_smallkey",
+				"sw_smallkey",
+				"tt_smallkey",
+				"ip_smallkey",
+				"mm_smallkey",
+				"tr_smallkey",
+				"gt_smallkey"
+			],
+			[
+				"",
+				"ep_bigkey",
+				"dp_bigkey",
+				"toh_bigkey",
+				"",
+				"pod_bigkey",
+				"sp_bigkey",
+				"sw_bigkey",
+				"tt_bigkey",
+				"ip_bigkey",
+				"mm_bigkey",
+				"tr_bigkey",
+				"gt_bigkey"
+			]
+		]
+	},
+    "light_keys_grid": {
+        "type": "itemgrid",
+        "margin": "-1,2",
+        "h_alignment": "center",
+        "item_margin": "0,1",
+        "item_size": 31,
+        "badge_font_size": 16,
+        "rows": [
+            [ "hc_label", "hc_chest", "hc_smallkey", "" ],
+            [ "easternpalace", "ep_chest", "ep_smallkey", "ep_bigkey" ],
+            [  "desertpalace", "dp_chest", "dp_smallkey", "dp_bigkey" ],
+            [ "towerofhera", "toh_chest", "toh_smallkey", "toh_bigkey" ],
+            [ "at_label", "at_chest", "at_smallkey", "" ]
+        ]
+    },
+    "dark_keys_grid": {
+        "type": "itemgrid",
+        "margin": "3,-3,0,3",
+        "h_alignment": "left",
+        "item_margin": "4,0",
+        "item_size": 32,
+        "badge_font_size": 16,
+        "rows": [
+            [ "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock", "gt_label" ],
+            [ "pod_chest", "sp_chest", "sw_chest", "tt_chest", "ip_chest", "mm_chest", "tr_chest", "gt_chest" ],
+            [ "pod_smallkey", "sp_smallkey", "sw_smallkey", "tt_smallkey", "ip_smallkey", "mm_smallkey", "tr_smallkey", "gt_smallkey" ],
+            [ "pod_bigkey", "sp_bigkey", "sw_bigkey", "tt_bigkey", "ip_bigkey", "mm_bigkey", "tr_bigkey", "gt_bigkey" ]
+        ]
+    }
+}

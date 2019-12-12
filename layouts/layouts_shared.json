@@ -1,0 +1,454 @@
+{
+    "shared_item_grid": {
+		"type": "itemgrid",
+		"h_alignment": "center",
+		"item_margin": "1,2",
+		"item_size": 40,
+		"rows": [
+			[
+				"bowandarrows",
+				"boomerangs",
+				"hookshot",
+				"bombs",
+				"powder",
+				"mushroom",
+				"boots",
+				"owsword"
+			],
+			[
+				"firerod",
+				"icerod",
+				"bombos",
+				"ether",
+				"quake",
+				"halfmagic",
+				"lift1",
+				"shield"
+			],
+			[
+				"lamp",
+				"hammer",
+				"ocarina",
+				"net",
+				"book",
+				"shovel",
+				"flippers",
+				"armor"
+			],
+			[
+				"bottle",
+				"somaria",
+				"byrna",
+				"cape",
+				"mirror",
+				"aga",
+				"moonpearl",
+				"gomode"
+			]
+		]
+	},
+	"sphere_progression_grid": {
+		"type": "array",
+		"orientation": "horizontal",
+		"content": [
+			{
+				"type": "itemgrid",
+				"h_alignment": "center",
+				"item_margin": "1,2",
+				"item_size": 30,
+				"rows": [
+					[
+						"0bow", "0hookshot", "0powder", "0mushroom", "0firerod", "0icerod", "0bombos", "0ether", "0quake", "0lamp", "0hammer", "0flute", "0shovel", "0book", "0bottle", "0somaria", "0byrna", "0cape", "0mirror", "0boots", "0glove", "0flippers", "0moonpearl", "0sword"
+					],
+					[
+						"1bow", "1hookshot", "1powder", "1mushroom", "1firerod", "1icerod", "1bombos", "1ether", "1quake", "1lamp", "1hammer", "1flute", "1shovel", "1book", "1bottle", "1somaria", "1byrna", "1cape", "1mirror", "1boots", "1glove", "1flippers", "1moonpearl", "1sword"
+					],
+					[
+						"2bow", "2hookshot", "2powder", "2mushroom", "2firerod", "2icerod", "2bombos", "2ether", "2quake", "2lamp", "2hammer", "2flute", "2shovel", "2book", "2bottle", "2somaria", "2byrna", "2cape", "2mirror", "2boots", "2glove", "2flippers", "2moonpearl", "2sword"
+					],
+					[
+						"3bow", "3hookshot", "3powder", "3mushroom", "3firerod", "3icerod", "3bombos", "3ether", "3quake", "3lamp", "3hammer", "3flute", "3shovel", "3book", "3bottle", "3somaria", "3byrna", "3cape", "3mirror", "3boots", "3glove", "3flippers", "3moonpearl", "3sword"
+					],
+					[
+						"4bow", "4hookshot", "4powder", "4mushroom", "4firerod", "4icerod", "4bombos", "4ether", "4quake", "4lamp", "4hammer", "4flute", "4shovel", "4book", "4bottle", "4somaria", "4byrna", "4cape", "4mirror", "4boots", "4glove", "4flippers", "4moonpearl", "4sword"
+					],
+					[
+						"5bow", "5hookshot", "5powder", "5mushroom", "5firerod", "5icerod", "5bombos", "5ether", "5quake", "5lamp", "5hammer", "5flute", "5shovel", "5book", "5bottle", "5somaria", "5byrna", "5cape", "5mirror", "5boots", "5glove", "5flippers", "5moonpearl", "5sword"
+					],
+					[
+						"6bow", "6hookshot", "6powder", "6mushroom", "6firerod", "6icerod", "6bombos", "6ether", "6quake", "6lamp", "6hammer", "6flute", "6shovel", "6book", "6bottle", "6somaria", "6byrna", "6cape", "6mirror", "6boots", "6glove", "6flippers", "6moonpearl", "6sword"
+					],
+					[
+						"7bow", "7hookshot", "7powder", "7mushroom", "7firerod", "7icerod", "7bombos", "7ether", "7quake", "7lamp", "7hammer", "7flute", "7shovel", "7book", "7bottle", "7somaria", "7byrna", "7cape", "7mirror", "7boots", "7glove", "7flippers", "7moonpearl", "7sword"
+					]
+				]
+			}
+		]
+	},
+    "settings_popup": {
+        "type": "array",
+        "margin": "5",
+        "content": [
+            {
+                "type": "group",
+                "header": "World State Mode",
+                "header_background": "#3e4b57",
+                "content":[
+                    {
+                        "type": "item",
+                        "margin": "-5,-1,-5,-5",
+                        "item": "world_state_mode"
+                    }
+                ]
+            }            
+        ]
+	},
+	"tracker_capture_item": {
+		"type": "container",
+		"content": {
+			"type": "itemgrid",
+			"h_alignment": "center",
+			"item_margin": "1,2",
+			"rows": [
+				[ "bowandarrows", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "" ],
+				[ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "" ],
+				[ "lamp", "hammer", "ocarina", "net", "book", "shovel", "" ],
+				[ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
+				[ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor" ]
+			]
+		}
+    },
+    
+    //misc dungeon layouts
+    "shared_misc_center": {
+        "type": "itemgrid",
+        "v_alignment": "center",
+        "item_margin": "-10,1",
+        "item_size": 40,
+        "badge_font_size": 20,
+        "rows": [
+            [
+                ""
+            ],
+            [
+                ""
+            ]
+        ]
+    },
+    "shared_misc_left": {
+        "type": "array",
+        "orientation": "horizontal",
+        "h_alignment": "center",
+        "margin": "-32,0,32,0",
+        "content": [
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "item_margin": "1,0",
+                "item_size": 40,
+                "badge_font_size": 20,
+                "rows": [
+                    [
+                        "gt_crystals", "ganon_crystals"
+                    ]
+                ]
+            },
+            {
+
+            }
+        ]
+    },
+    "shared_misc_right": {
+        "type": "array",
+        "orientation": "horizontal",
+        "h_alignment": "center",
+        "margin": "32,0,-32,0",
+        "content": [
+            {
+
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "item_margin": "1,0",
+                "item_size": 40,
+                "badge_font_size": 20,
+                "rows": [
+                    [
+                        "", ""
+                    ]
+                ]
+            }
+        ]
+    },
+
+    //dungeon grids
+	"shared_lw_grid": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+		"v_alignment": "center",
+		"item_margin": "1,2",
+		"item_size": 50,
+		"badge_font_size": 24,
+		"rows": [
+			[
+				"", "toh_item", "towerofhera", "hc_label", "hc_item"
+			],
+			[
+				"dp_item", "desertpalace", "easternpalace", "ep_item"
+			],
+			[
+				"gt_crystals", "ganon_crystals"
+			]
+		]
+	},
+	"shared_dw_grid": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+		"v_alignment": "center",
+		"item_margin": "1,2",
+		"item_size": 50,
+		"badge_font_size": 24,
+		"rows": [
+			[
+				"sw_item",
+				"skullwoods",
+				"gt_item",
+				"turtlerock",
+				"tr_item"
+			],
+			[
+				"tt_item",
+				"thievestown",
+				"sp_item",
+				"palaceofdarkness",
+				"pod_item"
+			],
+			[
+				"mm_item",
+				"miserymire",
+				"swamppalace",
+				"icepalace",
+				"ip_item"
+			]
+		]
+    },
+    "shared_lw_keys_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "h_alignment": "center",
+        "margin": "0,-4,0,10",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "h_alignment": "center",
+                        "content": [
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "1,1",
+                                "item_size": 40,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "hc_label", "hc_chest", "hc_smallkey", "hc_map"
+                                    ]
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "width": 10,
+                                "rows": [ ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "1,1",
+                                "item_size": 40,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "at_label", "at_chest", "at_smallkey"
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "height": 6,
+                        "rows": [ ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "v_alignment": "center",
+                        "item_margin": "1,0",
+                        "item_size": 40,
+                        "badge_font_size": 20,
+                        "rows": [
+                            [
+                                "toh_chest", "toh_mcbk", "towerofhera", "toh_smallkey", ""
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "h_alignment": "center",
+                        "margin": -10,
+                        "content": [
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "1,1",
+                                "item_size": 40,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "", "desertpalace", ""
+                                    ],
+                                    [
+                                        "dp_chest", "dp_mcbk", "dp_smallkey"
+                                    ]
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "1,1",
+                                "item_size": 40,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "", "easternpalace", ""
+                                    ],
+                                    [
+                                        "ep_chest", "ep_mcbk"
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "item_margin": "1,1",
+                "item_size": 40,
+                "badge_font_size": 20,
+                "rows": [
+                    [ "gt_label" ],
+                    [ "gt_chest" ],
+                    [ "gt_mcbk" ],
+                    [ "gt_smallkey" ]
+                ]
+            }
+        ]
+    },
+    "shared_dw_keys_grid": {
+        "type": "array",
+        "orientation": "vertical",
+        "h_alignment": "center",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "v_alignment": "center",
+                        "item_margin": "1,2",
+                        "item_size": 40,
+                        "badge_font_size": 20,
+                        "rows": [
+                            [
+                                "sw_chest", "sw_mcbk", "sw_smallkey", "skullwoods"
+                            ],
+                            [
+                                "tt_chest", "tt_mcbk", "tt_smallkey", "thievestown"
+                            ],
+                            [
+                                "mm_chest", "mm_mcbk", "mm_smallkey", "miserymire"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "h_alignment": "center",
+                        "content": [
+                            {
+                                "type": "layout",
+				                "key": "shared_misc_center"
+                            },
+                            {
+                                "type": "itemgrid",
+                                "h_alignment": "center",
+                                "item_margin": "-10,-4",
+                                "item_size": 40,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "swamppalace"
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "v_alignment": "center",
+                        "item_margin": "1,2",
+                        "item_size": 40,
+                        "badge_font_size": 20,
+                        "rows": [
+                            [
+                                "turtlerock", "tr_chest", "tr_mcbk", "tr_smallkey"
+                            ],
+                            [
+                                "palaceofdarkness", "pod_chest", "pod_mcbk", "pod_smallkey"
+                            ],
+                            [
+                                "icepalace", "ip_chest", "ip_mcbk", "ip_smallkey"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "h_alignment": "center",
+                "margin": "0,-5",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_misc_left"
+                    },
+                    {
+                        "type": "itemgrid",
+                        "h_alignment": "center",
+                        "item_margin": "1,0",
+                        "item_size": 40,
+                        "badge_font_size": 20,
+                        "rows": [
+                            [
+                                "sp_chest", "sp_mcbk", "sp_smallkey"
+                            ]
+                        ]
+                    },
+                    {
+                        "type": "layout",
+				        "key": "shared_misc_right"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,895 @@
+[
+	// Bow and Arrows
+    {
+        "name": "Bow and Arrows",
+        "type": "progressive",
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+        "stages": [
+		  {
+			"img": "images/silver_arrow.png",
+			"codes": "np_silvers2"
+		  },
+          {
+            "img": "images/bow.png",
+            "img_mods": "@disabled",
+            "codes": "bowandarrows"
+          },            
+          {
+            "img": "images/bow.png",
+            "codes": "bow"
+          },
+          {
+            "img": "images/bowandsilverarrow.png",
+            "codes": "silvers,silverarrows"
+          }
+        ]
+      },    
+    // Legacy Bow
+    {
+      "name": "Bow",
+      "type": "toggle",
+      "img": "images/0000.png",
+      "codes": "np_bow,bow"
+    },
+    // Legacy Silver Arrows
+    {
+      "name": "Silver Arrows",
+      "type": "toggle",
+      "img": "images/silver_arrow.png",
+      "codes": "np_silverarrows,np_silvers,silverarrows,silvers"
+    },
+    // Legacy Bow + Silvers
+    /*{
+      "name": "Bow and Arrows",
+      "type": "composite_toggle",
+      "codes": "np_bowandarrows",
+      "item_left": "np_bow",
+      "item_right": "np_silvers",
+      "images": [
+        {
+          "left": false,
+          "right": false,
+          "img": "images/bow.png",
+          "img_mods": "@disabled"
+        },
+        {
+          "left": true,
+          "right": false,
+          "img": "images/bow.png"
+        },
+        {
+          "left": false,
+          "right": true,
+          "img": "images/bowandsilverarrowdisabled.png"
+        },
+        {
+          "left": true,
+          "right": true,
+          "img": "images/bowandsilverarrow.png"
+        }
+      ]
+    },*/
+	// Bombs
+	{
+		"name": "Bombs",
+		"type": "progressive_toggle",
+		"initial_stage_idx": 0,
+		"stages": [
+			{
+				"img": "images/0003.png",
+				"codes": "bombs,bomb"
+			},
+			{
+				"img": "images/0003withbigbomb.png",
+				"disabled_img": "images/0003withbigbombdisabled.png",
+				"disabled_img_mods": "",
+				"codes": "bombs,bomb",
+				"secondary_codes": "bigbomb,superbomb,redbomb,pyramid,pyramidfairy,cherrybomb"
+			}
+		]
+	},
+	// Boomerang
+	{
+		"name": "Boomerang",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/boomerangsblue.png",
+				"disabled_img": "images/boomerangs.png",
+				"codes": "blueboomerang,boomerang"
+			},
+			{
+				"img": "images/boomerangs.png",
+				"disabled_img": "images/boomerangsdisabled.png",
+				"disabled_img_mods": "",
+				"codes": "redboomerang,boomerang"
+			}
+		]
+	},
+	
+	// Blue Boomerang
+	{
+		"name": "Blue Boomerang",
+		"type": "toggle",
+		"img": "images/boomerang_blue.png",
+		"codes": "blue_boomerang,bluemarang,boomerang"
+	},
+	
+	// Red Boomerang
+	{
+		"name": "Red Boomerang",
+		"type": "toggle",
+		"img": "images/boomerang_red.png",
+		"codes": "red_boomerang,redmarang,magicboomerang,magic_boomerang,redboomerang"
+	},
+	
+	// Boomerang Combo
+	{
+		"name": "Boomerangs",
+		"type": "composite_toggle",
+		"codes": "boomerangs",
+		"item_left": "blue_boomerang",
+		"item_right": "red_boomerang",
+		"images": [
+			{
+				"left": false,
+				"right": false,
+				"img": "images/boomerangs.png",
+				"img_mods": "@disabled"
+			},
+			{
+				"left": true,
+				"right": false,
+				"img": "images/boomerangsblue.png"
+			},
+			{
+				"left": false,
+				"right": true,
+				"img": "images/boomerangsdisabled.png"
+			},
+			{
+				"left": true,
+				"right": true,
+				"img": "images/boomerangs.png"
+			}
+		]
+	},
+	
+	// Hookshot
+	{
+		"name": "Hookshot",
+		"type": "toggle",
+		"img": "images/0002.png",
+		"codes": "hookshot,hs"
+	},
+	// Powder
+	{
+		"name": "Magic Powder",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/0046.png",
+				"codes": "powder",
+				"secondary_codes": "none,default,clear"
+			},
+			{
+				"img": "images/0046withbat.png",
+				"disabled_img": "images/0046withbatdisabled.png",
+				"disabled_img_mods": "",
+				"codes": "powder",
+				"secondary_codes": "bat, used"
+			}
+		]
+	},
+	// Mushroom
+	{
+		"name": "Mushroom",
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0004.png",
+				"codes": "mushroom"
+			},
+			{
+				"inherit_codes": false,
+				"img": "images/0056.png"
+			}
+		]
+	},
+	
+	// Fire Rod
+	{
+		"name": "Fire Rod",
+		"type": "toggle",
+		"img": "images/0005.png",
+		"codes": "firerod,firesource"
+	},
+	// Ice Rod
+	{
+		"name": "Ice Rod",
+		"type": "toggle",
+		"img": "images/0006.png",
+		"codes": "icerod"
+	},
+	
+	// Bombos
+	{
+		"name": "Bombos",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/0007.png",
+				"codes": "bombos",
+				"secondary_codes": "none,clear"
+			},
+			{
+				"img": "images/0117.png",
+				"codes": "bombos,mm_medallion",
+				"secondary_codes": "mm"
+			},
+			{
+				"img": "images/0120.png",
+				"codes": "bombos,tr_medallion",
+				"secondary_codes": "tr"
+			},
+			{
+				"img": "images/0123.png",
+				"codes": "bombos,mm_medallion,tr_medallion",
+				"secondary_codes": "both"
+			}
+		]
+	},
+	// Ether
+	{
+		"name": "Ether",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/0008.png",
+				"codes": "ether",
+				"secondary_codes": "none,clear"
+			},
+			{
+				"img": "images/0118.png",
+				"codes": "ether,mm_medallion",
+				"secondary_codes": "mm, misery mire, mire"
+			},
+			{
+				"img": "images/0121.png",
+				"codes": "ether,tr_medallion",
+				"secondary_codes": "tr, turtle rock"
+			},
+			{
+				"img": "images/0124.png",
+				"codes": "ether,mm_medallion,tr_medallion",
+				"secondary_codes": "both"
+			}
+		]
+	},
+	// Quake
+	{
+		"name": "Quake",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/0009.png",
+				"codes": "quake",
+				"secondary_codes": "none,clear"
+			},
+			{
+				"img": "images/0119.png",
+				"codes": "quake,mm_medallion",
+				"secondary_codes": "mm"
+			},
+			{
+				"img": "images/0122.png",
+				"codes": "quake,tr_medallion",
+				"secondary_codes": "tr"
+			},
+			{
+				"img": "images/0125.png",
+				"codes": "quake,mm_medallion,tr_medallion",
+				"secondary_codes": "both"
+			}
+		]
+	},
+	
+	// Shovel
+	{
+		"name": "Shovel",
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0012.png",
+				"codes": "shovel"
+			},
+			{
+				"img": "images/0057.png",
+				"inherit_codes": false
+			}
+		]
+	},
+	
+	// Lamp
+	{
+		"name": "Lamp",
+		"type": "toggle",
+		"img": "images/0010.png",
+		"codes": "lamp,firesource"
+	},
+	// Hammer
+	{
+		"name": "Hammer",
+		"type": "toggle",
+		"img": "images/0011.png",
+		"codes": "hammer"
+	},
+	// Flute
+	{
+		"name": "Flute",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/0047.png",
+				"codes": "flute,ocarina"
+			},
+			{
+				"img": "images/0047withduck.png",
+				"codes": "flute,ocarina",
+				"secondary_codes": "activated"
+			}
+		]
+	},
+	// Bug Catching Net
+	{
+		"name": "Bug Catching Net",
+		"type": "toggle",
+		"img": "images/0013.png",
+		"codes": "net"
+	},
+	// Book of Mudora
+	{
+		"name": "Book of Mudora",
+		"type": "toggle",
+		"img": "images/0014.png",
+		"codes": "book"
+	},
+	// Moon Pearl
+	{
+		"name": "Moon Pearl",
+		"type": "toggle",
+		"img": "images/0022.png",
+		"codes": "pearl,moonpearl"
+	},
+	
+	// Bottles
+	{
+		"name": "Bottles",
+		"type": "progressive",
+		"allow_disabled": "false",
+		"stages": [
+			{
+				"img": "images/0026.png",
+				"img_mods": "@disabled"
+			},
+			{
+				"img": "images/0070.png",
+				"codes": "bottle"
+			},
+			{
+				"img": "images/0071.png"
+			},
+			{
+				"img": "images/0072.png"
+			},
+			{
+				"img": "images/0073.png"
+			}
+		]
+	},
+	
+	// Somaria
+	{
+		"name": "Cane of Somaria",
+		"type": "toggle",
+		"img": "images/0015.png",
+		"codes": "somaria,redcane"
+	},
+	// Cane of Byrna
+	{
+		"name": "Cane of Byrna",
+		"type": "toggle",
+		"img": "images/0016.png",
+		"codes": "byrna,bluecane,sakucane,caneofsaku"
+	},
+	// Magic Cape
+	{
+		"name": "Magic Cape",
+		"type": "toggle",
+		"img": "images/0017.png",
+		"codes": "cape"
+	},
+	// Mirror
+	{
+		"name": "Mirror",
+		"type": "toggle",
+		"img": "images/0018.png",
+		"codes": "mirror"
+	},
+	
+	// Go-Mode
+	{
+		"name": "Go Mode!",
+		"capturable": false,
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0062.png",
+				"codes": "gomode"
+			},
+			{
+				"img": "images/0062-yellow.png",
+				"codes": "yellowgomode,maybegomode,yieldgomode"
+			}
+		]
+	},
+	
+	// Aganhim
+	{
+		"name": "Aganhim",
+		"capturable": false,
+		"type": "toggle",
+		"img": "images/0055.png",
+		"codes": "aga1,aga,aganhim"
+	},
+	
+	// Progressive Gloves
+	{
+		"name": "Gloves",
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0019.png",
+				"codes": "glove,gloves,lift1"
+			},
+			{
+				"img": "images/0043.png",
+				"codes": "glove,gloves,mitts,lift2"
+			}
+		]
+	},
+	// Boots
+	{
+		"name": "Boots",
+		"type": "toggle",
+		"img": "images/0020.png",
+		"codes": "boots"
+	},
+	// Flippers
+	{
+		"name": "Flippers",
+		"type": "toggle",
+		"img": "images/0021.png",
+		"codes": "flippers"
+	},
+	// Half-Magic / Quarter-Magic
+	{
+		"name": "Half-Magic",
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0064.png",
+			"codes": "halfmagic"
+			},
+			{
+				"img": "images/0065.png",
+			"codes": "halfmagic,quartermagic"
+			}
+		]
+	},
+	// Progressive Swords (Overworld)
+	{
+		"name": "Sword",
+		"type": "progressive",
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"img": "images/swordless.png",
+				"codes": "swordless"
+			},
+			{
+				"img": "images/sworddisabled.png",
+				"inherit_codes": false,
+				"img_mods": "@disabled",
+				"codes": ""
+			},
+			{
+				"img": "images/sword1.png",
+				"inherit_codes": false,
+				"codes": "sword, owsword,fighter"
+			},
+			{
+				"img": "images/sword2.png",
+				"inherit_codes": false,
+				"codes": "sword,sword2,mst,master"
+			},
+			{
+				"img": "images/sword3.png",
+				"inherit_codes": false,
+				"codes": "sword,sword2,sword3,tempered,bacon"
+			},
+			{
+				"img": "images/sword4.png",
+				"inherit_codes": false,
+				"codes": "sword,sword2,sword3,sword4,butter"
+			}
+		]
+	},
+	// Progressive Shields
+	{
+		"name": "Shield",
+		"type": "progressive",
+		"stages": [
+			{
+				"img": "images/0024.png",
+				"codes": "shield"
+			},
+			{
+				"img": "images/0044.png",
+				"codes": "shield,shield2,redshield"
+			},
+			{
+				"img": "images/0045.png",
+				"codes": "shield,shield2,shield3,mirrorshield,riotshield"
+			}
+		]
+	},
+	// Progressive Mail
+	{
+		"name": "Mail",
+		"type": "progressive",
+		"allow_disabled": false,
+		"stages": [
+			{
+				"img": "images/0025.png",
+				"codes": "mail,armor,armor1,greenmail"
+			},
+			{
+				"img": "images/0041.png",
+				"codes": "mail,armor,armor2,bluemail"
+			},
+			{
+				"img": "images/0042.png",
+				"codes": "mail,armor,armor2,armor3,redmail"
+			}
+		]
+	},
+	// Heart Pieces
+	{
+		"name": "Heart Piece",
+		"type": "consumable",
+		"img": "images/0067.png",
+		"codes": "heartpiece",
+		"max_quantity": 24
+	},
+	// Heart Containers
+	{
+		"name": "Heart Container",
+		"type": "consumable",
+		"img": "images/0060.png",
+		"codes": "heartcontainer",
+		"max_quantity": 11
+	},
+	// GT Required Crystals
+	{
+		"name": "GT Required Crystals",
+		"capturable": false,
+		"type": "progressive",
+		"allow_disabled": false,
+		"loop": "true",
+		"stages": [
+			{
+				"img": "images/GTSign.png",
+				"img_mods": "overlay|images/overlayNA.png, @disabled",
+				"codes": "GTReq",
+				"secondary_codes": "GTReq, ?"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 0",
+				"img_mods": "overlay|images/overlay0.png",
+				"secondary_codes": "0"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 1",
+				"img_mods": "overlay|images/overlay1.png",
+				"secondary_codes": "1"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 2",
+				"img_mods": "overlay|images/overlay2.png",
+				"secondary_codes": "2"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 3",
+				"img_mods": "overlay|images/overlay3.png",
+				"secondary_codes": "3"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 4",
+				"img_mods": "overlay|images/overlay4.png",
+				"secondary_codes": "4"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 5",
+				"img_mods": "overlay|images/overlay5.png",
+				"secondary_codes": "5"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 6",
+				"img_mods": "overlay|images/overlay6.png",
+				"secondary_codes": "6"
+			},
+			{
+				"img": "images/GTSign.png",
+				"codes": "GTReq, 7",
+				"img_mods": "overlay|images/overlay7.png",
+				"secondary_codes": "7"
+			}
+		]
+	},
+    {
+        "name": "GT Required Crystals",
+        "type": "consumable",
+        "img": "images/GTSign.png",
+        "codes": "gt_crystals",
+        "swap_actions" :true,
+        "max_quantity": 7,
+        "initial_quantity": 7
+    },
+    // Ganon Required Crystals
+    {
+        "name": "Ganon Required Crystals",
+        "type": "consumable",
+        "img": "images/ganon_crystals.png",
+        "codes": "ganon_crystals",
+        "swap_actions" :true,
+        "max_quantity": 7,
+        "initial_quantity": 7
+    },
+    // Placement Modes
+    {
+        "name": "Item Placement Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "initial_stage_idx": 1,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/item_placement_basic.png",
+				"codes": "item_placement_mode,item_placement_basic"
+			},
+			{
+				"img": "images/item_placement_advanced.png",
+				"codes": "item_placement_mode,item_placement_advanced"
+			}
+        ]
+	},
+	
+	// Current Dungeon
+	{
+		"name": "Current Dungeon",
+		"type": "consumable",
+		"codes": "dungeon",
+		"max_quantity": 255,
+		"initial_quantity": 255
+	},
+	//Sphere Progression
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "0bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "0hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "0powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "0mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "0firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "0icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "0bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "0ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "0quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "0shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "0lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "0hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "0flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "0book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "0moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "0bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "0somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "0byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "0cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "0mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "0glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "0boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "0flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "0sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "1bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "1hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "1powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "1mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "1firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "1icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "1bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "1ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "1quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "1shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "1lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "1hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "1flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "1book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "1moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "1bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "1somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "1byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "1cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "1mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "1glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "1boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "1flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "1sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "2bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "2hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "2powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "2mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "2firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "2icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "2bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "2ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "2quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "2shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "2lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "2hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "2flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "2book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "2moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "2bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "2somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "2byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "2cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "2mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "2glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "2boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "2flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "2sword" },
+	
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "3bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "3hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "3powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "3mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "3firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "3icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "3bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "3ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "3quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "3shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "3lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "3hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "3flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "3book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "3moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "3bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "3somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "3byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "3cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "3mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "3glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "3boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "3flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "3sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "4bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "4hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "4powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "4mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "4firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "4icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "4bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "4ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "4quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "4shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "4lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "4hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "4flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "4book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "4moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "4bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "4somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "4byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "4cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "4mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "4glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "4boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "4flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "4sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "5bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "5hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "5powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "5mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "5firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "5icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "5bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "5ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "5quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "5shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "5lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "5hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "5flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "5book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "5moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "5bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "5somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "5byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "5cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "5mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "5glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "5boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "5flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "5sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "6bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "6hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "6powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "6mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "6firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "6icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "6bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "6ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "6quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "6shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "6lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "6hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "6flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "6book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "6moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "6bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "6somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "6byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "6cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "6mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "6glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "6boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "6flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "6sword" },
+
+	{ "name": "Bow", "type": "toggle", "img": "images/0000.png", "codes": "7bow" },
+	{ "name": "Hookshot", "type": "toggle", "img": "images/0002.png", "codes": "7hookshot" },
+	{ "name": "Magic Powder", "type": "toggle", "img": "images/0046.png", "codes": "7powder" },
+	{ "name": "Mushroom", "type": "toggle", "img": "images/0004.png", "codes": "7mushroom" },
+	{ "name": "Fire Rod", "type": "toggle", "img": "images/0005.png", "codes": "7firerod" },
+	{ "name": "Ice Rod", "type": "toggle", "img": "images/0006.png", "codes": "7icerod" },
+	{ "name": "Bombos", "type": "toggle", "img": "images/0007.png", "codes": "7bombos" },
+	{ "name": "Ether", "type": "toggle", "img": "images/0008.png", "codes": "7ether" },
+	{ "name": "Quake", "type": "toggle", "img": "images/0009.png", "codes": "7quake" },
+	{ "name": "Shovel", "type": "toggle", "img": "images/0012.png", "codes": "7shovel" },
+	{ "name": "Lamp", "type": "toggle", "img": "images/0010.png", "codes": "7lamp" },
+	{ "name": "Hammer", "type": "toggle", "img": "images/0011.png", "codes": "7hammer" },
+	{ "name": "Flute", "type": "toggle", "img": "images/0047.png", "codes": "7flute" },
+	{ "name": "Book of Mudora", "type": "toggle", "img": "images/0014.png", "codes": "7book" },
+	{ "name": "Moon Pearl", "type": "toggle", "img": "images/0022.png", "codes": "7moonpearl" },
+	{ "name": "Bottle", "type": "toggle", "img": "images/0070.png", "codes": "7bottle" },
+	{ "name": "Cane of Somaria", "type": "toggle", "img": "images/0015.png", "codes": "7somaria" },
+	{ "name": "Cane of Byrna", "type": "toggle", "img": "images/0016.png", "codes": "7byrna" },
+	{ "name": "Magic Cape", "type": "toggle", "img": "images/0017.png", "codes": "7cape" },
+	{ "name": "Mirror", "type": "toggle", "img": "images/0018.png", "codes": "7mirror" },
+	{ "name": "Glove", "type": "toggle", "img": "images/0019.png", "codes": "7glove" },
+	{ "name": "Boots", "type": "toggle", "img": "images/0020.png", "codes": "7boots" },
+	{ "name": "Flippers", "type": "toggle", "img": "images/0021.png", "codes": "7flippers" },
+	{ "name": "Sword", "type": "toggle", "img": "images/sword1.png", "codes": "7sword" }
+]
