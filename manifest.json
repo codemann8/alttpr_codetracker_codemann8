@@ -7,10 +7,10 @@
   "author": "codemann8",
   "variants": {
     "standard": {
-      "display_name": "Standard Map Tracker"
+      "display_name": "Standard"
     },
     "keysanity": {
-      "display_name": "Keysanity Map Tracker"
+      "display_name": "Keysanity"
     },
     "inverted": {
       "display_name": "Inverted"
