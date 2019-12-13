@@ -24,7 +24,7 @@
 							{
 								"type": "itemgrid",
 								"h_alignment": "left",
-								"margin": "0,-5,0,0",
+								"margin": "0,-3,0,0",
 								"item_margin": "4,5",
 								"badge_font_size": 16,
 								"background": "#3F000000",
@@ -103,7 +103,7 @@
 								"content": [
 									{
 										"type": "container",
-										"margin": "0,0,0,0",
+										"margin": "0,0,-7,0",
 										"width": 325,
 										"content": {
 											"type": "recentpins",
@@ -121,7 +121,7 @@
 											{
 												"type": "itemgrid",
 												"h_alignment": "center",
-												"item_margin": "-6,0,-1,6",
+												"item_margin": "0,0,0,0",
 												"background": "#3F000000",
 												"rows": [
 													[ "gt_bkgame" ]

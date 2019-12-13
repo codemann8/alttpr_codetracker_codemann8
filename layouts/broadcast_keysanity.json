@@ -95,8 +95,8 @@
 									{
 										"type": "itemgrid",
 										"h_alignment": "center",
-										"margin": "2,-2,3,0",
-										"item_margin": "0,2",
+										"margin": "0,0,0,0",
+										"item_margin": "3,2",
 										"item_size": 36,
 										"badge_font_size": 18,
 										"background": "#3F000000",
