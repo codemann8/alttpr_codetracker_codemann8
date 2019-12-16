@@ -1,0 +1,54 @@
+{
+    "name": "Codemann8 Custom Packages",
+    "packages": [
+        {
+            "name": "CodeTracker Full Tracker",
+            "author": "codemann8",
+            "game_name": "A Link to the Past Randomizer",
+            "version": "1.0.0.1",
+            "flags": [ "map", "pins", "chathud" ],
+            "required_app_version": "2.3.6.6",
+            "uid": "alttpr_codetracker_codemann8",
+            "link": "https://github.com/codemann8/alttpr_codetracker_codemann8/releases/download/1.0.0.1/alttpr_codetracker_codemann8.zip",
+            "documentation_url": "https://github.com/codemann8/alttpr_codetracker_codemann8/blob/master/README.md",
+            "variants": [
+                {
+                    "name": "Standard",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "Keysanity",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "Inverted",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "Inverted Keysanity",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "ER - Standard",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "ER - Keysanity",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "ER - Inverted Keysanity",
+                    "flags": [ "map", "pins", "chathud" ]
+                },
+                {
+                    "name": "Item Tracker",
+                    "flags": [ "chathud" ]
+                },
+                {
+                    "name": "Item Tracker w/ Keys",
+                    "flags": [ "chathud" ]
+                }
+            ]
+        }
+    ]
+}
