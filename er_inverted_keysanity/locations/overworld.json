@@ -7,8 +7,7 @@
       "light_world",
       "lift2,pearl",
       "lift1,hammer,pearl",
-      "aga1",
-      "aga2",
+      "aga1,mirror",
       "grass_house,pearl",
       "lw_witch,pearl",
       "zora_area,pearl,flippers",
@@ -726,8 +725,7 @@
             "group": "Central Hyrule",
             "access_rules": [
               "castle_top",
-              "aga1",
-              "aga2"
+              "aga1,mirror"
             ],
             "children": [
               {
@@ -1203,8 +1201,7 @@
           "light_world",
           "hammer,lift1,pearl",
           "lift2,pearl",
-          "aga1",
-          "aga2",
+          "aga1,mirror",
           "castle_top",
           "lw_witch,pearl"
         ],
@@ -2282,7 +2279,6 @@
       "dw_southeast,[flippers]",
       "dw_witch,lift1",
       "aga1,mirror",
-      "aga2,mirror",
       "castle_top,mirror",
       "lw_witch,mirror,lift1",
       "lw_witch,mirror,hammer",
@@ -2486,8 +2482,7 @@
       "dw_west,[flippers]",
       "dw_witch,[flippers]",
       "dw_east,[flippers]",
-      "aga1,[flippers]",
-      "aga2,[flippers]",
+      "aga1,mirror,[flippers]",
       "light_world,mirror",
       "ip_area,mirror,[flippers]"
     ],

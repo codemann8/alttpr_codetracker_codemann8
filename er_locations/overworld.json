@@ -891,7 +891,7 @@
             "access_rules": [
               "pearl,lift2,flippers",
               "pearl,lift1,hammer",
-              "pearl,aga1,lift1",
+              "pearl,aga1,mirror,lift1",
               "pearl,lift2,boots,[flippers]",
               "dw_witch,pearl,lift1",
               "dw_east,pearl,lift1",
@@ -1103,9 +1103,9 @@
             "name": "Dark Northern",
             "access_rules": [
               "pearl,lift2",
-              "pearl,aga1,hammer,hookshot",
-              "pearl,aga1,lift1,hookshot",
-              "pearl,aga1,flippers,hookshot",
+              "pearl,aga1,mirror,hammer,hookshot",
+              "pearl,aga1,mirror,lift1,hookshot",
+              "pearl,aga1,mirror,flippers,hookshot",
               "pearl,lift1,hammer",
               "dw_west,pearl",
               "dw_east,flippers,hookshot",
@@ -1338,9 +1338,9 @@
     "color": "#35046b",
     "group": "Lost Woods",
     "access_rules": [
-      "aga1,hookshot,flippers,moonpearl",
-      "aga1,hookshot,lift1,moonpearl",
-      "aga1,hookshot,hammer,moonpearl",
+      "aga1,mirror,hookshot,flippers,moonpearl",
+      "aga1,mirror,hookshot,lift1,moonpearl",
+      "aga1,mirror,hookshot,hammer,moonpearl",
       "lift1,hammer,moonpearl",
       "lift2,moonpearl",
       "dw_west",
@@ -1705,9 +1705,9 @@
     "color": "#35046b",
     "group": "South Dark World",
     "access_rules": [
-      "aga1,hammer,moonpearl",
-      "aga1,hookshot,lift1,moonpearl",
-      "aga1,hookshot,flippers,moonpearl",
+      "aga1,mirror,hammer,moonpearl",
+      "aga1,mirror,hookshot,lift1,moonpearl",
+      "aga1,mirror,hookshot,flippers,moonpearl",
       "lift1,hammer,moonpearl",
       "lift2,moonpearl",
       "dw_west",
@@ -1961,8 +1961,7 @@
     "group": "East Dark World",
     "access_rules": [
       "lift1,hammer,pearl",
-      "aga1",
-      "aga2",
+      "aga1,mirror",
       "lift2,flippers,pearl",
       "lift2,boots,pearl,[hammer]",
       "dw_west,pearl,flippers",
@@ -2126,7 +2125,7 @@
         "name": "Pyramid Hole",
         "color": "#35046b",
         "access_rules": [
-          "aga2"
+          "aga2","dw_east"
         ],
         "sections": [
           {
@@ -2153,7 +2152,7 @@
     "access_rules": [
       "pearl, lift2, [flippers]",
       "pearl, hammer,lift1, [flippers]",
-      "pearl,aga1,[flippers]",
+      "pearl,aga1,mirror,[flippers]",
       "dw_south,pearl,[flippers]",
       "dw_east,pearl,[flippers]",
       "dw_witch,pearl,[flippers]",
