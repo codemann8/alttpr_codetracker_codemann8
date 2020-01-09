@@ -5,7 +5,7 @@ function MapCompassBK:init(name, dungeonCode)
 	self.code = dungeonCode .. "_mcbk"
 	self:setProperty("dungeon", dungeonCode)
 	self:setProperty("state", 0)
-	self.activeImage = ImageReference:FromPackRelativePath("images/mapcompassbigKey000.png")
+	self.activeImage = ImageReference:FromPackRelativePath("images/mapcompassbigkey000.png")
 	--self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
 	self.ItemInstance.PotentialIcon = self.activeImage
 
@@ -24,29 +24,29 @@ function MapCompassBK:updateIcon()
 	if self:getState() < 4 then
 		if self:getState() < 2 then
 			if self:getState() < 1 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey000.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey000.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey001.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey001.png")
 			end
 		else
 			if self:getState() < 3 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey010.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey010.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey011.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey011.png")
 			end
 		end
 	else
 		if self:getState() < 6 then
 			if self:getState() < 5 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey100.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey100.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey101.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey101.png")
 			end
 		else
 			if self:getState() < 7 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey110.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey110.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigKey111.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey111.png")
 			end
 		end
 	end
