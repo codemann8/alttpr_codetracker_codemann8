@@ -7,7 +7,7 @@
       "light_world",
       "lift2,pearl",
       "lift1,hammer,pearl",
-      "aga1,mirror",
+      "aga1",
       "grass_house,pearl",
       "lw_witch,pearl",
       "zora_area,pearl,flippers",
@@ -1201,7 +1201,7 @@
           "light_world",
           "hammer,lift1,pearl",
           "lift2,pearl",
-          "aga1,mirror",
+          "aga1",
           "castle_top",
           "lw_witch,pearl"
         ],
