@@ -544,11 +544,6 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 			end
 			
 			location.AvailableChestCount = location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems)
-			
-			local item = Tracker:FindObjectForCode(dungeonPrefix.."_item")
-			if item then
-				item.AcquiredCount = location.AvailableChestCount
-			end
 		end
 	end
 end
