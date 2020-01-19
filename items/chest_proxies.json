@@ -1,0 +1,86 @@
+[
+    // HC Items
+    {
+        "name": "Hyrule Castle Items",
+        "type": "sectionchests",
+        "codes": "hc_item",
+        "section": "@Hyrule Castle & Sanctuary/Items"
+    },
+    // EP Items
+    {
+        "name": "Eastern Palace Items",
+        "type": "sectionchests",
+        "codes": "ep_item",
+        "section": "@Eastern Palace/Items"
+    },
+    // DP Items
+    {
+        "name": "Desert Palace Items",
+        "type": "sectionchests",
+        "codes": "dp_item",
+        "section": "@Desert Palace/Items"
+    },
+    // TOH Items
+    {
+        "name": "Tower of Hera Items",
+        "type": "sectionchests",
+        "codes": "toh_item",
+        "section": "@Tower of Hera/Items"
+    },
+    // POD Items
+    {
+        "name": "Palace of Darkness Items",
+        "type": "sectionchests",
+        "codes": "pod_item",
+        "section": "@Palace of Darkness/Items"
+    },
+    // SP Items
+    {
+        "name": "Swamp Palace Items",
+        "type": "sectionchests",
+        "codes": "sp_item",
+        "section": "@Swamp Palace/Items"
+    },
+    // SW Items
+    {
+        "name": "Skull Woods Items",
+        "type": "sectionchests",
+        "codes": "sw_item",
+        "section": "@Skull Woods/Items"
+    },
+    // TT Items
+    {
+        "name": "Thieves Town Items",
+        "type": "sectionchests",
+        "codes": "tt_item",
+        "section": "@Thieves Town/Items"
+    },
+    // IP Items
+    {
+        "name": "Ice Palace Items",
+        "type": "sectionchests",
+        "codes": "ip_item",
+        "section": "@Ice Palace/Items"
+    },
+    // MM Items
+    {
+        "name": "Misery Mire Items",
+        "type": "sectionchests",
+        "codes": "mm_item",
+        "section": "@Misery Mire/Items"
+    },
+    // TR Items
+    {
+        "name": "Turtle Rock Items",
+        "type": "sectionchests",
+        "codes": "tr_item",
+        "section": "@Turtle Rock/Items"
+    },
+    // GT Items
+    {
+        "name": "Ganon's Tower Items",
+        "type": "sectionchests",
+        "codes": "gt_item",
+        "section": "@Ganon's Tower/Items"
+    }   
+  ]

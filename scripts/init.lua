@@ -44,6 +44,7 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	end
 	Tracker:AddLocations("locations/dungeons.json")		
 end
+Tracker:AddItems("items/chest_proxies.json")
 
 --Tracker Layout
 Tracker:AddLayouts("layouts/layouts_custom.json")
