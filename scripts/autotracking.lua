@@ -3,7 +3,6 @@ print("Active Auto-Tracker Configuration")
 print("---------------------------------------------------------------------")
 print("Enable Item Tracking:			", AUTOTRACKER_ENABLE_ITEM_TRACKING)
 print("Enable Location Tracking:		", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
-print("Enable Entrance Tracking:		", AUTOTRACKER_ENABLE_ENTRANCE_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 		print("Enable Debug Logging:				", "true")
 end
@@ -57,13 +56,6 @@ function updateInGameStatusFromMemorySegment(segment)
 	
 	if mainModuleIdx == 0 then
 		START_TIME = os.time()
-	end
-
-	if mainModuleIdx == 0x09 then
-		LASTCOORDX = segment:ReadUInt16(0x7e0022)
-		LASTCOORDY = segment:ReadUInt16(0x7e0020)
-
-		--print(string.format("Coord: %xx%x", LASTCOORDX, LASTCOORDY))
 	end
 
 	if mainModuleIdx ~= PREV_MODULEID then
@@ -1071,20 +1063,6 @@ function updateDungeonFromMemorySegment(segment)
 		if dungeon.AcquiredCount ~= dungeonLocal then
 			dungeon.AcquiredCount = dungeonLocal
 		end
-
-		if AUTOTRACKER_ENABLE_ENTRANCE_TRACKING then
-			print(LASTOWID, LASTCOORDX, LASTCOORDY, LASTROOMID)
-			--if LASTOWID ~= owarea then
-				if owarea > 0 then
-					LASTOWID = owarea
-				else
-					LASTROOMID = ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)
-				end
-				if LASTOWID and LASTCOORDX and LASTCOORDY and LASTROOMID and segment == SEGMENT_OWID then --entrance tracking
-					print(string.format("%x %xx%x leads to %s %x", LASTOWID, LASTCOORDX, LASTCOORDY, dungeonId, LASTROOMID));
-				end
-			--end
-		end
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
@@ -1148,12 +1126,6 @@ function updateModuleFromMemorySegment(segment)
 				sendExternalMessage("dungeon", dungeonId)
 			end
 		end
-
-		if AUTOTRACKER_ENABLE_ENTRANCE_TRACKING then
-			if LASTOWID then --entrance tracking
-				--print(string.format("%x %xx%x leads to %s %x", LASTOWID, LASTCOORDX, LASTCOORDY, dungeonId, LASTROOMID));
-			end
-		end
 	elseif ReadU8(segment, 0x7e0010) == 0x09 then --overworld
 		--LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -1171,12 +1143,6 @@ function updateModuleFromMemorySegment(segment)
 				sendExternalMessage("dungeon", "er-lw")
 			else
 				sendExternalMessage("dungeon", "lw")
-			end
-		end
-
-		if AUTOTRACKER_ENABLE_ENTRANCE_TRACKING then
-			if (LASTROOMID) then
-				--print(string.format("%x %xx%x came from %s %x", LASTOWID, LASTCOORDX, LASTCOORDY, dungeonMap[LASTROOMID], LASTROOMID));
 			end
 		end
 	end
