@@ -3,12 +3,13 @@
 FORE WORD: If you don't want maps to be displayed on the Broadcast View, please read below.
 
 ### Overview:
-This package is meant to encompass all aspects that are desired or missing from the existing array of ALTTPR packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, multiworld, and custom ROM hacks.
+This package is meant to encompass all aspects that are desired or missing from the existing array of ALTTPR packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, multiworld, door rando, and custom ROM hacks.
 
 ### Features:
 - Small keys and dungeon chests are auto-tracked in both Standard and Keysanity
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; in Standard, the chest icons indicate the remaining items (not chests), in Keysanity, the chest icons indicate the remaining chests.
+- Door Rando Mode, when playing door rando, small key and dungeon chest calculation cannot work, so a new mode was created to disable autotracking the parts that are unable to be autotracked, these will have to be manually tracked: this is enabled by clicking the Gear in the Dungeons section
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - In Keysanity, each chest has it's own logical access defined, except where they can be grouped
 - GT Big Key Guessing Game shows on Standard Broadcast Views, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
@@ -17,9 +18,9 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Optional sphere progression grid for those who wish to track progression on each sphere, this is manually tracked (only available in the horizontal orientation) (This feature is projected to vastly improve when the base EmoTracker software allows for additional tracking features)
 - Blips on the map have been made bigger to show up better on Broadcast View (maps can be disabled also, see below)
 - Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found
-- Entrance rando, an Aga2 icon has been added for when Aga2 is defeated, this gives the player access to the east-side dark world, this is auto-tracked
+- Entrance rando, an Aga2 icon has been added for when Aga2 is defeated, this is auto-tracked
 - Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
-- Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios.
+- Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Advanced development feature, in Beta and disabled by default, output file when certain items are obtained
 - Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld
 

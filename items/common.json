@@ -684,6 +684,13 @@
         ]
 	},
 	
+	// Door Rando Modes
+    {
+        "name": "Door Rando Mode",
+        "type": "toggle",
+		"img": "images/door_rando.png",
+        "codes": "door_rando_mode"
+	},
 	// Current Dungeon
 	{
 		"name": "Current Dungeon",

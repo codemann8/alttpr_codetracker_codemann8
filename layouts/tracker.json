@@ -27,6 +27,12 @@
 								{
 									"type": "group",
 									"header": "Dungeons",
+									"header_content": {
+									    "type": "button_popup",
+									    "style": "settings",
+									    "popup_background": "#55212121",
+									    "layout": "dungeon_settings_popup"
+									},
 									"content": {
 										"type": "layout",
 										"key": "shared_dungeon_v_grid"
@@ -104,6 +110,12 @@
 													"header": "Dungeons",
 													"margin": "0,0,3,0",
 													"dock": "left",
+													"header_content": {
+														"type": "button_popup",
+														"style": "settings",
+														"popup_background": "#55212121",
+														"layout": "dungeon_settings_popup"
+													},
 													"content": {
 														"type": "layout",
 														"key": "shared_dungeon_grid"

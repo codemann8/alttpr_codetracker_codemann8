@@ -444,23 +444,26 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 		[255] = "OW"
 	}
 
-	local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-	if chestKeys then
-		local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
-		if doorsOpened then
-			local currentDungeon = Tracker:FindObjectForCode("dungeon")
-			local currentKeys = 0
-			
-			if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
-				currentKeys = ReadU8(segment, 0x7ef36f)
-			else
-				currentKeys = ReadU8(segment, address)
-			end
-			local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-			if potKeys then
-				chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
-			else
-				chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
+	local doorRando = Tracker:FindObjectForCode("door_rando_mode")
+	if not doorRando.Active then
+		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+		if chestKeys then
+			local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
+			if doorsOpened then
+				local currentDungeon = Tracker:FindObjectForCode("dungeon")
+				local currentKeys = 0
+				
+				if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
+					currentKeys = ReadU8(segment, 0x7ef36f)
+				else
+					currentKeys = ReadU8(segment, address)
+				end
+				local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
+				if potKeys then
+					chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
+				else
+					chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
+				end
 			end
 		end
 	end
@@ -514,36 +517,39 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 			return
 		end
 		
-		local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
-		if chest then
-			local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
-			local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
-			local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
-			local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
-			local dungeonItems = 0
-			
-			if bigkey and bigkey.Active then
-				dungeonItems = dungeonItems + 1
+		local doorRando = Tracker:FindObjectForCode("door_rando_mode")
+		if not doorRando.Active then
+			local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
+			if chest then
+				local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
+				local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
+				local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
+				local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
+				local dungeonItems = 0
+				
+				if bigkey and bigkey.Active then
+					dungeonItems = dungeonItems + 1
+				end
+				
+				if map and map.Active then
+					dungeonItems = dungeonItems + 1
+				end
+				
+				if compass and compass.Active then
+					dungeonItems = dungeonItems + 1
+				end
+				
+				if smallkey and smallkey.AcquiredCount then
+					dungeonItems = dungeonItems + smallkey.AcquiredCount
+				end
+				
+				if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+					print(dungeonPrefix.." Items", dungeonItems)
+					print(dungeonPrefix.." Chests", chest.MaxCount - chest.AcquiredCount)
+				end
+				
+				location.AvailableChestCount = location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems)
 			end
-			
-			if map and map.Active then
-				dungeonItems = dungeonItems + 1
-			end
-			
-			if compass and compass.Active then
-				dungeonItems = dungeonItems + 1
-			end
-			
-			if smallkey and smallkey.AcquiredCount then
-				dungeonItems = dungeonItems + smallkey.AcquiredCount
-			end
-			
-			if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-				print(dungeonPrefix.." Items", dungeonItems)
-				print(dungeonPrefix.." Chests", chest.MaxCount - chest.AcquiredCount)
-			end
-			
-			location.AvailableChestCount = location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems)
 		end
 	end
 end
