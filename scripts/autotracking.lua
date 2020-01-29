@@ -51,7 +51,6 @@ function isInGame()
 end
 
 function updateInGameStatusFromMemorySegment(segment)
-	
 	local mainModuleIdx = segment:ReadUInt8(0x7e0010)
 	
 	if mainModuleIdx == 0 then
@@ -87,6 +86,11 @@ end
 function updateProgressiveItemFromByte(segment, code, address, offset)
 		local item = Tracker:FindObjectForCode(code)
 		if item then
+			-- Do not auto-track this the user has manually modified it
+			if item.Owner.ModifiedByUser then
+				return
+			end
+
 			local value = ReadU8(segment, address)
 			if value + (offset or 0) - item.CurrentStage == 1 then
 				itemFlippedOn(code)
@@ -173,6 +177,11 @@ end
 function updateToggleItemFromByte(segment, code, address)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
+		-- Do not auto-track this the user has manually modified it
+		if item.Owner.ModifiedByUser then
+			return
+		end
+
 		local value = ReadU8(segment, address)
 		if value > 0 then
 			if not item.Active then
@@ -188,6 +197,11 @@ end
 function updateToggleItemFromByteAndFlag(segment, code, address, flag)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
+		-- Do not auto-track this the user has manually modified it
+		if item.Owner.ModifiedByUser then
+			return
+		end
+
 		local value = ReadU8(segment, address)
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print(item.Name, code, flag)
@@ -213,6 +227,11 @@ end
 function updateToggleFromRoomSlot(segment, code, slot)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
+		-- Do not auto-track this the user has manually modified it
+		if item.Owner.ModifiedByUser then
+			return
+		end
+
 		local roomData = ReadU16(segment, 0x7ef000 + (slot[1] * 2))
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -250,6 +269,11 @@ end
 function updateConsumableItemFromByte(segment, code, address)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
+		-- Do not auto-track this the user has manually modified it
+		if item.Owner.ModifiedByUser then
+			return
+		end
+
 		local value = ReadU8(segment, address)
 		item.AcquiredCount = value
 	else
@@ -440,6 +464,10 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 	if not doorRando.Active then
 		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
 		if chestKeys then
+			-- Do not auto-track this the user has manually modified it
+			if chestKeys.Owner.ModifiedByUser then
+				return
+			end
 			local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
 			if doorsOpened then
 				local currentDungeon = Tracker:FindObjectForCode("dungeon")
