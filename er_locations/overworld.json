@@ -488,7 +488,7 @@
                     "access_rules": [
                       "aga1,hammer,moonpearl,mirror",
                       "aga1,hookshot,lift1,moonpearl,mirror",
-                      "aga1,hookshot,flippers,moonpearl,mirror",
+                      "aga1,hookshot,[flippers],moonpearl,mirror",
                       "lift1,hammer,moonpearl,mirror",
                       "lift2,moonpearl,mirror",
                       "dw_west,mirror",
@@ -632,12 +632,12 @@
               "castle_top",
               "aga1,mirror",
               "pearl,lift1,hammer,mirror",
-              "pearl,lift2,flippers,mirror",
+              "pearl,lift2,[flippers],mirror",
               "dw_east,mirror",
               "dw_south,pearl,hammer,mirror",
-              "dw_south,pearl,flippers,mirror",
+              "dw_south,pearl,[flippers],mirror",
               "dw_west,pearl,hammer,mirror",
-              "dw_west,pearl,flippers,mirror"
+              "dw_west,pearl,[flippers],mirror"
             ],
             "children": [
               {
@@ -874,9 +874,8 @@
                     "capture_item": true,
                     "access_rules": [
                       "flippers",
-                      "[flippers],boots",
-                      "{lift1}",
-                      "{[flippers]}"
+                      "[flippers],bow",
+                      "{}"
                     ],
                     "item_count": 1
                   }
@@ -889,13 +888,13 @@
             "name": "Catfish",
             "color": "#35046b",
             "access_rules": [
-              "pearl,lift2,flippers",
+              "pearl,lift2,[flippers]",
               "pearl,lift1,hammer",
               "pearl,aga1,lift1",
               "pearl,lift2,boots,[flippers]",
               "dw_witch,pearl,lift1",
               "dw_east,pearl,lift1",
-              "dw_west,pearl,lift1,flippers"
+              "dw_west,pearl,lift1,[flippers]"
             ],
             "sections": [
               {
@@ -1067,15 +1066,15 @@
             "name": "King's Tomb",
             "access_rules": [
               "lift2",
-              "pearl,aga1,flippers,hookshot,mirror",
+              "pearl,aga1,[flippers],hookshot,mirror",
               "pearl,aga1,hammer,hookshot,mirror",
               "pearl,aga1,lift1,hookshot,mirror",
               "pearl,lift1,hammer,mirror",
               "dw_west,pearl,mirror",
-              "dw_east,flippers,hookshot,mirror",
+              "dw_east,[flippers],hookshot,mirror",
               "dw_east,lift1,hookshot,mirror",
               "dw_east,hammer,hookshot,mirror",
-              "dw_south,flippers,hookshot,mirror",
+              "dw_south,[flippers],hookshot,mirror",
               "dw_south,hammer,hookshot,mirror",
               "dw_witch,pearl,hookshot,mirror"
             ],
@@ -1105,13 +1104,13 @@
               "pearl,lift2",
               "pearl,aga1,hammer,hookshot",
               "pearl,aga1,lift1,hookshot",
-              "pearl,aga1,flippers,hookshot",
+              "pearl,aga1,[flippers],hookshot",
               "pearl,lift1,hammer",
               "dw_west,pearl",
-              "dw_east,flippers,hookshot",
+              "dw_east,[flippers],hookshot",
               "dw_east,lift1,hookshot",
               "dw_east,hammer,hookshot",
-              "dw_south,flippers,hookshot",
+              "dw_south,[flippers],hookshot",
               "dw_south,hammer,hookshot",
               "dw_witch,pearl,hookshot"
             ],
@@ -1338,7 +1337,7 @@
     "color": "#35046b",
     "group": "Lost Woods",
     "access_rules": [
-      "aga1,hookshot,flippers,moonpearl",
+      "aga1,hookshot,[flippers],moonpearl",
       "aga1,hookshot,lift1,moonpearl",
       "aga1,hookshot,hammer,moonpearl",
       "lift1,hammer,moonpearl",
@@ -1348,7 +1347,7 @@
       "bumper_entrance",
       "hammer_house,hammer,moonpearl",
       "dw_east,pearl,lift1,hookshot",
-      "dw_east,pearl,flippers,hookshot",
+      "dw_east,pearl,[flippers],hookshot",
       "dw_east,pearl,hammer,hookshot",
       "dw_witch,pearl,hookshot"
     ],
@@ -1707,7 +1706,7 @@
     "access_rules": [
       "aga1,hammer,moonpearl",
       "aga1,hookshot,lift1,moonpearl",
-      "aga1,hookshot,flippers,moonpearl",
+      "aga1,hookshot,[flippers],moonpearl",
       "lift1,hammer,moonpearl",
       "lift2,moonpearl",
       "dw_west",
@@ -1717,7 +1716,7 @@
       "dw_south",
       "dw_east,pearl,hammer",
       "dw_east,pearl,lift1,hookshot",
-      "dw_east,pearl,flippers,hookshot",
+      "dw_east,pearl,[flippers],hookshot",
       "dw_witch,pearl,hammer",
       "dw_witch,pearl,hookshot"
     ],
@@ -1962,21 +1961,21 @@
     "access_rules": [
       "lift1,hammer,pearl",
       "aga1",
-      "lift2,flippers,pearl",
+      "lift2,[flippers],pearl",
       "lift2,boots,pearl,[hammer]",
-      "dw_west,pearl,flippers",
+      "dw_west,pearl,[flippers]",
       "dw_west,boots,pearl,[hammer]",
-      "bumper_cave,pearl,flippers",
+      "bumper_cave,pearl,[flippers]",
       "bumper_cave,boots,pearl,[hammer]",
-      "bumper_entrance,pearl,flippers",
+      "bumper_entrance,pearl,[flippers]",
       "bumper_entrance,boots,pearl,[hammer]",
       "hammer_house,hammer,moonpearl",
       "dw_south,pearl,hammer",
-      "dw_south,pearl,flippers",
+      "dw_south,pearl,[flippers]",
       "dw_east",
       "dw_witch,pearl,lift1",
       "dw_witch,pearl,hammer",
-      "dw_witch,pearl,flippers"
+      "dw_witch,pearl,[flippers]"
     ],
     "children": [
       {
@@ -2060,7 +2059,7 @@
         "access_rules": [
           "pearl,hammer",
           "pearl,lift1",
-          "pearl,flippers"
+          "pearl,[flippers]"
         ],
         "sections": [
           {
@@ -2125,7 +2124,7 @@
         "name": "Pyramid Hole",
         "color": "#35046b",
         "access_rules": [
-          "aga2","dw_east"
+          "aga2"
         ],
         "sections": [
           {
