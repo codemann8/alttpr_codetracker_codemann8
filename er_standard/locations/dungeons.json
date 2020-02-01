@@ -281,10 +281,8 @@
 		"color": "#af0000",
 		"parent": "Mire Area",
 		"access_rules": [
-			"$canUseMedallions,mm_medallion,hookshot",
-			"$canUseMedallions,mm_medallion,boots",
-			"$canUseMedallions,bombos,ether,quake,hookshot",
-			"$canUseMedallions,bombos,ether,quake,boots"
+			"hookshot",
+			"boots"
 		],
 		"sections": [
 			{
