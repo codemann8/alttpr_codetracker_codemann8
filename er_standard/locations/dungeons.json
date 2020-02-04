@@ -279,7 +279,6 @@
 	{
 		"name": "Misery Mire",
 		"color": "#af0000",
-		"parent": "Mire Area",
 		"access_rules": [
 			"hookshot",
 			"boots"
