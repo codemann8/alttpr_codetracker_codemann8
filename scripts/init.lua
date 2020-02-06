@@ -33,6 +33,7 @@ MapCompassBK("Ganon's Tower Map/Compass/Big Key", "gt")
 if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript("scripts/logic_common.lua")
 	ScriptHost:LoadScript("scripts/logic_custom.lua")
+	Tracker:AddItems("items/rooms.json")
 	Tracker:AddMaps("maps/maps.json")
 
 	if string.find(Tracker.ActiveVariantUID, "er_") and not string.find(Tracker.ActiveVariantUID, "inverted") then

@@ -10,6 +10,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; in Standard, the chest icons indicate the remaining items (not chests), in Keysanity, the chest icons indicate the remaining chests.
 - Door Rando Mode, when playing door rando, small key and dungeon chest calculation cannot work, so a new mode was created to disable autotracking the parts that are unable to be autotracked, these will have to be manually tracked: this is enabled by clicking the Gear in the Dungeons section
+- Door Rando maps are available and are able to be manually checked off when a room is found
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - In Keysanity, each chest has it's own logical access defined, except where they can be grouped
 - GT Big Key Guessing Game shows on Standard Broadcast Views, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
