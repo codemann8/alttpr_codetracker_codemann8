@@ -39,10 +39,10 @@ This package is meant to encompass all aspects that are desired or missing from 
 ## Installation:
 Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or Star this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
 1) Download/update EmoTracker to the latest version
-- This package sometimes utilizes features of EmoTracker that were implemented in recent versions
+  - This package sometimes utilizes features of EmoTracker that were implemented in recent versions
 2) Download the latest .zip file from the Releases page
 3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/\<user\>/Documents/EmoTracker/packs`)
-- If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
+  - If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
 4) If EmoTracker is already opened, you will need to close and reopen the program for it to detect the new package
 5) Click the `Gear icon -> Installed packages -> A Link to the Past Randomizer`, you will see `CodeTracker Full Tracker` as a new option
 6) Beat the pig ;) See Usage section for further info, if needed
