@@ -37,12 +37,12 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Items And Keys Only
 
 ## Installation:
-Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or Star this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
-1) Download/update EmoTracker to the latest version
-  This package sometimes utilizes features of EmoTracker that were implemented in recent versions
-2) Download the latest .zip file from the Releases page
-3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/\<user\>/Documents/EmoTracker/packs`)
-  If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
+Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or `Watch` this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
+1) Download/update EmoTracker to the latest version  
+     This package sometimes utilizes features of EmoTracker that were implemented in recent versions
+2) Download the latest .zip file from the [Releases](https://github.com/codemann8/alttpr_codetracker_codemann8/releases) page
+3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/\<user\>/Documents/EmoTracker/packs`)  
+     If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
 4) If EmoTracker is already opened, you will need to close and reopen the program for it to detect the new package
 5) Click the `Gear icon -> Installed packages -> A Link to the Past Randomizer`, you will see `CodeTracker Full Tracker` as a new option
 6) Beat the pig ;) See Usage section for further info, if needed
@@ -55,6 +55,7 @@ The first thing you may notice is that a few things are rearranged differently t
 - In Entrance Rando, there are 8 Dropdown icons, indicating the 8 possible locations you can find thru a dropdown entrance. These can be used to mark the dropdowns you have found so you are aware of what is left to find. There is also a Dam icon, to indicate if the dam has been drained, this is used to indicate access to Swamp Palace and the item on the Overworld.
 - The Map area features a `Dungeon` tab, which shows all the dungeon rooms in the game. This is intended to be used for Door Rando to mark rooms of as you find them.
 - In Entrance Rando modes, it is recommended to enable the `Gear -> Tracking -> Always Allow Chest Manipulation` option, which allows you to mark off entrances you find in areas you don't have logical access to but find thru a connecting tunnel.
+- In Entrance Rando modes, it is recommended to use another tracker in conjunction with this one to note which entrances are useful. An example of a tracker is [CodeTracker](https://zelda.codemann8.com/ertracker/tracker.php), a browser-based tracker which features a broadcast view or a link that can be shared with viewers.
 
 #### Broadcast View
 - Maps are included on Broadcast View by default as it helps with putting as much info on your stream so viewers ask less questions about what you have or haven't done yet. The colored dots have been made bigger compared to other LttP packages so they are better visible to viewers. If you wish to not have maps shown on your Broadcast View, please see the Customization section below.
@@ -73,7 +74,7 @@ The first thing you may notice is that a few things are rearranged differently t
 - If using autotracking, `Door Rando Mode` MUST be enabled. This disables autotracking for dungeon items (in Standard modes) and small keys (in Keysanity modes) as it is impossible to calculate this information when the doors are shuffled. Weird behavior WILL happen if `Door Rando Mode` isn't enabled when playing Door Rando and autotracker is active. This can be enabled by clicking the Gear in the header of the `Dungeons` section.
 
 ## Customization:
-EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
+EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
 
 For instance, some may not want to have maps be shown on the Broadcast View. There is a settings file that can be modified to have maps be disabled. This settings file is where all options to configure (current and future) are surfaced. The settings file will be found under `scripts/settings.lua`. Inside the settings file, there is an option called `MAP_ON_BROADCAST_VIEW`. If you change this to false, the Broadcast View will now show the base view instead.
 
