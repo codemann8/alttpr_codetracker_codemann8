@@ -26,7 +26,7 @@
 								"h_alignment": "left",
 								"margin": "0,-3,0,0",
 								"item_margin": "4,5",
-								"badge_font_size": 16,
+								"badge_font_size": 18,
 								"background": "#3F000000",
 								"rows": [
 									[
@@ -81,7 +81,7 @@
 										"icepalace",
 										"miserymire",
 										"turtlerock",
-										"aga",
+										"gt_bkgame",
 										"gt_crystals"
 									],
 									[
@@ -98,38 +98,17 @@
 								]
 							},
 							{
-								"type": "array",
-								"orientation": "horizontal",
-								"content": [
-									{
-										"type": "container",
-										"margin": "0,0,-7,0",
-										"width": 325,
-										"content": {
-											"type": "recentpins",
-											"h_alignment": "left",
-											"v_alignment": "top",
-											"orientation": "horizontal",
-											"compact": true,
-											"style": "wrap"
-										}
-									},
-									{
-										"type": "array",
-										"orientation": "vertical",
-										"content": [
-											{
-												"type": "itemgrid",
-												"h_alignment": "center",
-												"item_margin": "0,0,0,0",
-												"background": "#3F000000",
-												"rows": [
-													[ "gt_bkgame" ]
-												]
-											}
-										]
-									}
-								]
+								"type": "container",
+								"margin": "0,0,-7,0",
+								"width": 325,
+								"content": {
+									"type": "recentpins",
+									"h_alignment": "left",
+									"v_alignment": "top",
+									"orientation": "horizontal",
+									"compact": true,
+									"style": "wrap"
+								}
 							}
 						]
 					}
