@@ -70,7 +70,7 @@ The first thing you may notice is that a few things are rearranged differently t
 - In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly unlike the other Lttp packages.
 
 #### Door Rando
-- In the map area of the tracker, there is a new tab called `Dungeon` which shows all the rooms in the game. These can be marked off as they are found. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the rooms. If not, there are separate tabs for each of the dungeons.
+- In the map area of the tracker, there is a new tab called `Dungeon` which shows all the rooms in the game. These can be marked off as they are found. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the rooms. If not, there are separate tabs for each of the dungeons. Rooms with chests are marked with a GREEN square, rooms with a bos are marked with an ORANGE square.
 - If using autotracking, `Door Rando Mode` MUST be enabled. This disables autotracking for dungeon items (in Standard modes) and small keys (in Keysanity modes) as it is impossible to calculate this information when the doors are shuffled. Weird behavior WILL happen if `Door Rando Mode` isn't enabled when playing Door Rando and autotracker is active. This can be enabled by clicking the Gear in the header of the `Dungeons` section.
 
 ## Customization:
