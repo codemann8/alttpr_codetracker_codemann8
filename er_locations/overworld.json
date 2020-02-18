@@ -1071,11 +1071,11 @@
               "pearl,aga1,lift1,hookshot,mirror",
               "pearl,lift1,hammer,mirror",
               "dw_west,pearl,mirror",
-              "dw_east,[flippers],hookshot,mirror",
-              "dw_east,lift1,hookshot,mirror",
-              "dw_east,hammer,hookshot,mirror",
-              "dw_south,[flippers],hookshot,mirror",
-              "dw_south,hammer,hookshot,mirror",
+              "dw_east,pearl,[flippers],hookshot,mirror",
+              "dw_east,pearl,lift1,hookshot,mirror",
+              "dw_east,pearl,hammer,hookshot,mirror",
+              "dw_south,pearl,[flippers],hookshot,mirror",
+              "dw_south,pearl,hammer,hookshot,mirror",
               "dw_witch,pearl,hookshot,mirror"
             ],
             "sections": [
