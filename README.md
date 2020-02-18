@@ -41,7 +41,7 @@ Normally, an EmoTracker package is installed through the EmoTracker program itse
 1) Download/update EmoTracker to the latest version  
      This package sometimes utilizes features of EmoTracker that were implemented in recent versions
 2) Download the latest .zip file from the [Releases](https://github.com/codemann8/alttpr_codetracker_codemann8/releases) page
-3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/\<user\>/Documents/EmoTracker/packs`)  
+3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/<user>/Documents/EmoTracker/packs`)  
      If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
 4) If EmoTracker is already opened, you will need to close and reopen the program for it to detect the new package
 5) Click the `Gear icon -> Installed packages -> A Link to the Past Randomizer`, you will see `CodeTracker Full Tracker` as a new option
@@ -80,5 +80,5 @@ For instance, some may not want to have maps be shown on the Broadcast View. The
 
 #### Settings:
 - MAP_ON_BROADCAST_VIEW - Shows maps on Broadcast View
-- AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/\<user\>/Documents/EmoTracker` when a new item is collected
-- AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/\<user\>/Documents/EmoTracker` when the player enters a new area of the game
+- AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
+- AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
