@@ -3,12 +3,12 @@
     "name": "lightworld",
     "location_size": 48,
     "location_border_thickness": 5,
-    "img": "images/lttp_lightworld.png"
+    "img": "images/lttp_lightworld_inverted.png"
   },
   {
     "name": "darkworld",
     "location_size": 48,
     "location_border_thickness": 5,
-    "img": "images/lttp_darkworld.png"
+    "img": "images/lttp_darkworld_inverted.png"
   }
 ]

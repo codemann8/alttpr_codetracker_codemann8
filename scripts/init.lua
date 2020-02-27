@@ -34,7 +34,11 @@ if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
 	ScriptHost:LoadScript("scripts/logic_common.lua")
 	ScriptHost:LoadScript("scripts/logic_custom.lua")
 	Tracker:AddItems("items/rooms.json")
-	Tracker:AddMaps("maps/maps.json")
+	if not string.find(Tracker.ActiveVariantUID, "inverted") then
+		Tracker:AddMaps("maps/maps.json")
+	else
+		Tracker:AddMaps("maps/maps_inverted.json")
+	end
 
 	if string.find(Tracker.ActiveVariantUID, "er_") and not string.find(Tracker.ActiveVariantUID, "inverted") then
 		Tracker:AddLocations("er_locations/overworld.json")
