@@ -255,7 +255,8 @@
         "type": "array",
         "orientation": "horizontal",
         "h_alignment": "center",
-        "margin": "0,-4,0,10",
+        "v_alignment": "center",
+        "margin": "0,-4,0,6",
         "content": [
             {
                 "type": "array",
@@ -315,6 +316,11 @@
                         ]
                     },
                     {
+                        "type": "itemgrid",
+                        "height": 6,
+                        "rows": [ ]
+                    },
+                    {
                         "type": "array",
                         "orientation": "horizontal",
                         "h_alignment": "center",
@@ -356,8 +362,14 @@
             },
             {
                 "type": "itemgrid",
+                "height": 6,
+                "rows": [ ]
+            },
+            {
+                "type": "itemgrid",
                 "v_alignment": "center",
-                "item_margin": "1,1",
+                "margin": "0,4,0,0",
+                "item_margin": "1,2",
                 "item_size": 40,
                 "badge_font_size": 20,
                 "rows": [
@@ -373,6 +385,8 @@
         "type": "array",
         "orientation": "vertical",
         "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": "0,-4,0,4",
         "content": [
             {
                 "type": "array",
@@ -381,7 +395,7 @@
                     {
                         "type": "itemgrid",
                         "v_alignment": "center",
-                        "item_margin": "1,2",
+                        "item_margin": "1,3",
                         "item_size": 40,
                         "badge_font_size": 20,
                         "rows": [
@@ -408,7 +422,7 @@
                             {
                                 "type": "itemgrid",
                                 "h_alignment": "center",
-                                "item_margin": "-10,-4",
+                                "item_margin": "-10,2",
                                 "item_size": 40,
                                 "badge_font_size": 20,
                                 "rows": [
@@ -422,7 +436,7 @@
                     {
                         "type": "itemgrid",
                         "v_alignment": "center",
-                        "item_margin": "1,2",
+                        "item_margin": "1,3",
                         "item_size": 40,
                         "badge_font_size": 20,
                         "rows": [

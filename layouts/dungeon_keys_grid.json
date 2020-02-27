@@ -9,7 +9,7 @@
 			},
 			{
 				"type": "itemgrid",
-				"width": 10,
+				"width": 20,
 				"rows": [ ]
 			},
 			{
@@ -28,7 +28,7 @@
 			},
 			{
 				"type": "itemgrid",
-				"height": 10,
+				"height": 20,
 				"rows": [ ]
 			},
 			{
