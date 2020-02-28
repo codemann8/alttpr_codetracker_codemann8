@@ -1,1345 +1,1345 @@
 [
-    //Hyrule Castle
-    {
-		"name": "Hyrule Castle Main Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
-		"img": "images/rooms/61.png",
-		"codes": "hc_lobby_main"
-    },
-    {
-		"name": "Hyrule Castle West Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
-		"img": "images/rooms/60.png",
-		"codes": "hc_lobby_west"
+  //Hyrule Castle
+  {
+    "name": "Hyrule Castle Main Lobby",
+    "type": "toggle",
+    "initial_active_state": true,
+    "img": "images/rooms/61.png",
+    "codes": "hc_lobby_main"
+  },
+  {
+    "name": "Hyrule Castle West Lobby",
+    "type": "toggle",
+    "initial_active_state": true,
+    "img": "images/rooms/60.png",
+    "codes": "hc_lobby_west"
 	},
-    {
-		"name": "Hyrule Castle East Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+  {
+    "name": "Hyrule Castle East Lobby",
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/62.png",
 		"codes": "hc_lobby_east"
 	},
-    {
+  {
 		"name": "Hyrule Castle West Hallway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/50.png",
 		"codes": "hc_hallway_west"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle East Hallway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/52.png",
 		"codes": "hc_hallway_east"
 	},
-    {
+  {
 		"name": "Hyrule Castle Back Hallway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/01.png",
 		"codes": "hc_hallway_back"
 	},
-    {
+  {
 		"name": "Hyrule Castle Throne Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/51.png",
 		"codes": "hc_throne"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement First Guard",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/72.png",
 		"codes": "hc_basement_first"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement Stealth Right",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/82.png",
 		"codes": "hc_basement_stealth_right"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement Stealth Left",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/81.png",
 		"codes": "hc_basement_stealth_left"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement Second Guard",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/71.png",
 		"codes": "hc_basement_second"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement Stairs",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/70.png",
 		"codes": "hc_basement_stairs"
 	},
-    {
+  {
 		"name": "Hyrule Castle Basement Prison",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/80.png",
 		"codes": "hc_basement_prison"
-    },
-    
-    //Escape
-    {
+  },
+  
+  //Escape
+  {
 		"name": "Hyrule Castle Escape Trap",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/41.png",
 		"codes": "hc_escape_trap"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Escape Snake Avoidance",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/42.png",
 		"codes": "hc_escape_snake"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Escape Dark Cross",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/32.png",
 		"codes": "hc_escape_darkcross"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Escape Sewer",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/22.png",
 		"codes": "hc_escape_sewer"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Escape Key Rat",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/21.png",
 		"codes": "hc_escape_keyrat"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Escape Back",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/11.png",
 		"codes": "hc_escape_back"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Sanctuary Hideaway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/12.png",
 		"codes": "hc_sanc_hideaway"
-    },
-    {
+  },
+  {
 		"name": "Hyrule Castle Sanctuary",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/02.png",
 		"codes": "hc_sanc"
-    },
+  },
 
-    //Eastern Palace
-    {
+  //Eastern Palace
+  {
 		"name": "Eastern Palace Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c9.png",
 		"codes": "ep_lobby"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Cannonball",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/b9.png",
 		"codes": "ep_cannonball"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Big Chest",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/a9.png",
 		"codes": "ep_bigchest"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Map Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/aa.png",
 		"codes": "ep_maproom"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Stalfos Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/a8.png",
 		"codes": "ep_stalfos"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Dark Key Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/ba.png",
 		"codes": "ep_darkkey"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Big Key Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/b8.png",
 		"codes": "ep_bigkeyroom"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Fairy Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/89.png",
 		"codes": "ep_fairy"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Dark Eyegore",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/99.png",
 		"codes": "ep_darkeyegore"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Pot Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/da.png",
 		"codes": "ep_potroom"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Eyegore Cannon",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/d9.png",
 		"codes": "ep_eyegorecannon"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Red Eyegore",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/d8.png",
 		"codes": "ep_redeyegore"
-    },
-    {
+  },
+  {
 		"name": "Eastern Palace Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/c8.png",
 		"codes": "ep_bossroom"
-    },
+  },
 
-    //Desert Palace
-    {
+  //Desert Palace
+  {
 		"name": "Desert Palace Main Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/84.png",
 		"codes": "dp_lobby_main"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace West Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/83.png",
 		"codes": "dp_lobby_west"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace East Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/85.png",
 		"codes": "dp_lobby_east"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Torch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/73.png",
 		"codes": "dp_torch"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Map Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/74.png",
 		"codes": "dp_maproom"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Cannonball",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/75.png",
 		"codes": "dp_cannonball"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Back Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/63.png",
 		"codes": "dp_lobby_back"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Popo Genocide",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/53.png",
 		"codes": "dp_popogenocide"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Stonewall",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/43.png",
 		"codes": "dp_stonewall"
-    },
-    {
+  },
+  {
 		"name": "Desert Palace Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/33.png",
 		"codes": "dp_bossroom"
-    },
+  },
 
-    //Tower of Hera
-    {
+  //Tower of Hera
+  {
 		"name": "Tower of Hera Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/77.png",
 		"codes": "toh_lobby"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Basement",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/87.png",
 		"codes": "toh_basement"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Beetles",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/31.png",
 		"codes": "toh_beetles"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Petting Zoo",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/27.png",
 		"codes": "toh_pettingzoo"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Pre-Moldorm",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/17.png",
 		"codes": "toh_premoldorm"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Fairy",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a7.png",
 		"codes": "toh_fairy"
-    },
-    {
+  },
+  {
 		"name": "Tower of Hera Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/07.png",
 		"codes": "toh_bossroom"
-    },
+  },
 
-    //Aganihm's Tower
-    {
+  //Aganihm's Tower
+  {
 		"name": "Aganihm's Tower Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/e0.png",
 		"codes": "at_lobby"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Dark Room of Despair",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/d0.png",
 		"codes": "at_dark_despair"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Dark Room of Melancholy",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c0.png",
 		"codes": "at_dark_melancholy"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Circle of Pots",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/b0.png",
 		"codes": "at_potcircle"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Pit Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/40.png",
 		"codes": "at_pitroom"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Chamber",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/30.png",
 		"codes": "at_chamber"
-    },
-    {
+  },
+  {
 		"name": "Aganihm's Tower Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/20.png",
 		"codes": "at_bossroom"
-    },
+  },
 
-    //Palace of Darkness
-    {
+  //Palace of Darkness
+  {
 		"name": "Palace of Darkness Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/4a.png",
 		"codes": "pod_lobby"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Shooter Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/09.png",
 		"codes": "pod_shooter"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Main Hub",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/3a.png",
 		"codes": "pod_mainhub"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Stalfos Basement",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/0a.png",
 		"codes": "pod_stalfos"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Bari Hallway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/4b.png",
 		"codes": "pod_hallway"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Conveyor",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/3b.png",
 		"codes": "pod_conveyor"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Statue Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/2b.png",
 		"codes": "pod_statue"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Arena",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/2a.png",
 		"codes": "pod_arena"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Hammeryump Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/1a.png",
 		"codes": "pod_hammeryump"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Dark Maze",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/19.png",
 		"codes": "pod_darkmaze"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Mimic Statue",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/1b.png",
 		"codes": "pod_mimicstatue"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Turtle Basement",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/0b.png",
 		"codes": "pod_turtlebasement"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Rupee Basement",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/6a.png",
 		"codes": "pod_rupeebasement"
-    },
-    {
+  },
+  {
 		"name": "Palace of Darkness Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/5a.png",
 		"codes": "pod_bossroom"
-    },
+  },
 
-    //Swamp Palace
-    {
+  //Swamp Palace
+  {
 		"name": "Swamp Palace Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/28.png",
 		"codes": "sp_lobby"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Key Pot",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/38.png",
 		"codes": "sp_keypot"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Hammer Water Flood",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/37.png",
 		"codes": "sp_hammerwaterflood"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Main Hub",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/36.png",
 		"codes": "sp_mainhub"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace South Loop",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/46.png",
 		"codes": "sp_southloop"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Pegs Water Flood",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/35.png",
 		"codes": "sp_pegswaterflood"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Left Side",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/34.png",
 		"codes": "sp_leftside"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Left Side Dropdown",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/54.png",
 		"codes": "sp_leftsidedropdown"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Statue Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/26.png",
 		"codes": "sp_statue"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Water Drain",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/76.png",
 		"codes": "sp_waterdrain"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Waterfall",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/66.png",
 		"codes": "sp_waterfall"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Swim",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/16.png",
 		"codes": "sp_swim"
-    },
-    {
+  },
+  {
 		"name": "Swamp Palace Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/06.png",
 		"codes": "sp_bossroom"
-    },
+  },
 
-    //Skull Woods
-    {
+  //Skull Woods
+  {
 		"name": "Skull Woods East Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/58.png",
 		"codes": "sw_lobby_east"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Central Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/57.png",
 		"codes": "sw_lobby_central"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Compass Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/67.png",
 		"codes": "sw_compassroom"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Pinball Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/68.png",
 		"codes": "sw_pinball"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods West Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/56.png",
 		"codes": "sw_lobby_west"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods North Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/59.png",
 		"codes": "sw_lobby_north"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Torch Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/49.png",
 		"codes": "sw_torch"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Mothula Dropdown",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/39.png",
 		"codes": "sw_mothdropdown"
-    },
-    {
+  },
+  {
 		"name": "Skull Woods Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/29.png",
 		"codes": "sw_bossroom"
-    },
+  },
 
-    //Thieves Town
-    {
+  //Thieves Town
+  {
 		"name": "Thieves Town Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/db.png",
 		"codes": "tt_lobby"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Front Northwest",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/cb.png",
 		"codes": "tt_front_northwest"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Front Northeast",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/cc.png",
 		"codes": "tt_front_northeast"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Front Southeast",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/dc.png",
 		"codes": "tt_front_southeast"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Stalfos Hallway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/bc.png",
 		"codes": "tt_stalfoshallway"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Hellway",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/bb.png",
 		"codes": "tt_hellway"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Peg Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/ab.png",
 		"codes": "tt_pegswitch"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Attic Left",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/64.png",
 		"codes": "tt_attic_left"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Attic Right",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/65.png",
 		"codes": "tt_attic_right"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Prison",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/45.png",
 		"codes": "tt_prison"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Big Chest",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/44.png",
 		"codes": "tt_bigchest"
-    },
-    {
+  },
+  {
 		"name": "Thieves Town Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/ac.png",
 		"codes": "tt_bossroom"
-    },
+  },
 
-    //Ice Palace
-    {
+  //Ice Palace
+  {
 		"name": "Ice Palace Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/0e.png",
 		"codes": "ip_lobby"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Block Cross",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/1e.png",
 		"codes": "ip_blockcross"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Compass Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/2e.png",
 		"codes": "ip_compassroom"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Ice Breaker",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/1f.png",
 		"codes": "ip_icebreaker"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Conveyor",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/3e.png",
 		"codes": "ip_conveyor"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Bomb Jump",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/4e.png",
 		"codes": "ip_ipbj"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Pengator Line",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/6e.png",
 		"codes": "ip_pengatorline"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Spike Cross",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/5e.png",
 		"codes": "ip_spikecross"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Spike Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/5f.png",
 		"codes": "ip_spike"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Map Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/3f.png",
 		"codes": "ip_maproom"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Freezor",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/7e.png",
 		"codes": "ip_freezor"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Freezor Zol",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/8e.png",
 		"codes": "ip_freezorzol"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Hookshot Pass",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/7f.png",
 		"codes": "ip_hookshotpass"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Big Chest Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/9e.png",
 		"codes": "ip_bigchest"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Frozen Key",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/9f.png",
 		"codes": "ip_frozenkey"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Ice Pit",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/af.png",
 		"codes": "ip_icepit"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Ice T",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/ae.png",
 		"codes": "ip_icet"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Block Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/be.png",
 		"codes": "ip_blockswitch"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Fairy",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/bf.png",
 		"codes": "ip_fairy"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Pre-Kholdstare",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/ce.png",
 		"codes": "ip_prekholdstare"
-    },
-    {
+  },
+  {
 		"name": "Ice Palace Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/de.png",
 		"codes": "ip_bossroom"
-    },
+  },
 
-    //Misery Mire
-    {
+  //Misery Mire
+  {
 		"name": "Misery Mire Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/98.png",
 		"codes": "mm_lobby"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Mire 2",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/d2.png",
 		"codes": "mm_mire2"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Main Hub",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/c2.png",
 		"codes": "mm_mainhub"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Shooting Torches",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/b2.png",
 		"codes": "mm_shootingtorches"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Spike Chest",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/b3.png",
 		"codes": "mm_spikechest"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Tile Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/c1.png",
 		"codes": "mm_tile"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Conveyor Slug",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/d1.png",
 		"codes": "mm_conveyorslug"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Wall Slide",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/97.png",
 		"codes": "mm_wallslide"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Spike Pass",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/b1.png",
 		"codes": "mm_spikepass"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Falling Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/c3.png",
 		"codes": "mm_fallingbridge"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire L Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a3.png",
 		"codes": "mm_lbridge"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Bridges",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a2.png",
 		"codes": "mm_bridges"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Fishbone Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a1.png",
 		"codes": "mm_fishbone"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Dark Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/93.png",
 		"codes": "mm_darkswitch"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Spooky Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/92.png",
 		"codes": "mm_spookyswitch"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Raining Zols",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/91.png",
 		"codes": "mm_rainingzols"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Pre-Vitty",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a0.png",
 		"codes": "mm_previtreous"
-    },
-    {
+  },
+  {
 		"name": "Misery Mire Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/90.png",
 		"codes": "mm_bossroom"
-    },
+  },
 
-    //Turtle Rock
-    {
+  //Turtle Rock
+  {
 		"name": "Turtle Rock Main Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/d6.png",
 		"codes": "tr_lobby_main"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Main Hub",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c6.png",
 		"codes": "tr_mainhub"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Torches",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c7.png",
 		"codes": "tr_torches"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Roller Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/b7.png",
 		"codes": "tr_roller"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Chain Chomps",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/b6.png",
 		"codes": "tr_chainchomps"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Pipes",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/15.png",
 		"codes": "tr_pipes"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Lava",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/14.png",
 		"codes": "tr_lava"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Pokey Steal",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/13.png",
 		"codes": "tr_pokeysteal"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock East Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/24.png",
 		"codes": "tr_lobby_east"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock West Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/23.png",
 		"codes": "tr_lobby_west"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Crystaroller",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/04.png",
 		"codes": "tr_crystaroller"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Dark Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/b5.png",
 		"codes": "tr_darkroom"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Mini-Helmasaur Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c5.png",
 		"codes": "tr_minihelmbridge"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Laser Bridge Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/d5.png",
 		"codes": "tr_lobby_laserbridge"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Switch Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/c4.png",
 		"codes": "tr_switchroom"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Pre-Trinexx",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/b4.png",
 		"codes": "tr_pretrinexx"
-    },
-    {
+  },
+  {
 		"name": "Turtle Rock Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/a4.png",
 		"codes": "tr_bossroom"
-    },
+  },
 
-    //Ganon's Tower
-    {
+  //Ganon's Tower
+  {
 		"name": "Ganon's Tower Lobby",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/0c.png",
 		"codes": "gt_lobby"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Multi Purpose",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/8c.png",
 		"codes": "gt_multipurpose"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Hookshot Pit",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/8b.png",
 		"codes": "gt_hookshotpit"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Stalfos",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/7b.png",
 		"codes": "gt_stalfos"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Peg Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/9b.png",
 		"codes": "gt_pegswitch"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Firesnake",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/7d.png",
 		"codes": "gt_firesnake"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Rando Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/7c.png",
 		"codes": "gt_rando"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Invisifloor",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/9c.png",
 		"codes": "gt_invisifloor"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Ice Armos",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/1c.png",
 		"codes": "gt_icearmos"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Tile Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/8d.png",
 		"codes": "gt_tile"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Compass Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/9d.png",
 		"codes": "gt_compassroom"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Mimics",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/6b.png",
 		"codes": "gt_mimics"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Eyegore Switch",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/5b.png",
 		"codes": "gt_eyegoreswitch"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Cannonball Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/5c.png",
 		"codes": "gt_cannonball"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Front Guantlet",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/5d.png",
 		"codes": "gt_gauntlet_front"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Ice Gauntlet",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/6d.png",
 		"codes": "gt_gauntlet_ice"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Lanmola",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/6c.png",
 		"codes": "gt_lanmola"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Wizrobes",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a5.png",
 		"codes": "gt_wizrobes"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Conveyor Bridge",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/95.png",
 		"codes": "gt_conveyorbridge"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Firebar Torches",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/96.png",
 		"codes": "gt_firebartorches"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Climb Treasure",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/3d.png",
 		"codes": "gt_climbtreasure"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Moldorm",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/alt/4d.png",
 		"codes": "gt_moldorm"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Spike Shame",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/a6.png",
 		"codes": "gt_spikeshame"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Ice Bumper Dash",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/4c.png",
 		"codes": "gt_icebumperdash"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Pre-Aganihm",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/1d.png",
 		"codes": "gt_preaganihm"
-    },
-    {
+  },
+  {
 		"name": "Ganon's Tower Boss Room",
-        "type": "toggle",
-        "initial_active_state": true,
+    "type": "toggle",
+    "initial_active_state": true,
 		"img": "images/rooms/0d.png",
 		"codes": "gt_bossroom"
-    }
+  }
 ]
