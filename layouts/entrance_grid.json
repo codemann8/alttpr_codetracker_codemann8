@@ -10,6 +10,7 @@
 				"dock": "left",
 				"content": {
 					"type": "itemgrid",
+					"h_alignment": "left",
 					"v_alignment": "center",
 					"item_margin": "1,1",
 					"item_size": 40,
@@ -28,6 +29,7 @@
 				"content": {
 					"type": "itemgrid",
 					"h_alignment": "left",
+					"v_alignment": "center",
 					"item_margin": "1,1",
 					"item_size": 40,
 					"badge_font_size": 24,
@@ -51,11 +53,16 @@
 				"dock": "left",
 				"content": {
 					"type": "itemgrid",
+					"h_alignment": "center",
+					"v_alignment": "center",
 					"item_margin": "1,1",
-					"item_size": 40,
+					"item_size": 60,
 					"rows": [
 						[
-							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
+							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief"
+						],
+						[
+							"dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
 						]
 					]
 				}
@@ -67,6 +74,8 @@
 				"dock": "left",
 				"content": {
 					"type": "itemgrid",
+					"h_alignment": "center",
+					"v_alignment": "center",
 					"item_margin": "1,1",
 					"item_size": 60,
 					"badge_font_size": 24,
