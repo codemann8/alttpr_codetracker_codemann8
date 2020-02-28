@@ -33,7 +33,7 @@
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"dam","aga","aga2","gt_crystals", "ganon_crystals"
+							"dam", "", "gt_crystals", "ganon_crystals"
 						]
 					]
 				}
@@ -72,7 +72,7 @@
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"dam","aga","aga2","gt_crystals", "ganon_crystals"
+							"dam", "", "gt_crystals", "ganon_crystals"
 						]
 					]
 				}

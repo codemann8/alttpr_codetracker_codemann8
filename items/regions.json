@@ -253,13 +253,6 @@
         "codes": "ddm_east"
     },
     {
-        "name": "Agahnim 2",
-        "capturable": false,
-        "type": "toggle",
-        "img": "images/aga2.png",
-        "codes": "aga2,gt"
-    },
-	{
         "name": "Dam",
         "capturable": false,
         "type": "toggle",

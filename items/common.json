@@ -435,14 +435,51 @@
 		]
 	},
 	
-	// Aganhim
+	// Aganhims
 	{
 		"name": "Aganhim",
 		"capturable": false,
 		"type": "toggle",
-		"img": "images/0055.png",
+		"img": "images/aga-green.png",
 		"codes": "aga1,aga,aganhim"
 	},
+	{
+        "name": "Agahnim 2",
+        "capturable": false,
+        "type": "toggle",
+        "img": "images/aga-red.png",
+        "codes": "aga2,gt"
+    },
+	{
+		"name": "Agahnims",
+		"type": "composite_toggle",
+		"codes": "agas",
+		"item_left": "aga1",
+		"item_right": "aga2",
+		"images": [
+		  {
+			"left": false,
+			"right": false,
+			"img": "images/0055.png",
+			"img_mods": "@disabled"
+		  },
+		  {
+			"left": true,
+			"right": false,
+			"img": "images/aga1.png"
+		  },
+		  {
+			"left": false,
+			"right": true,
+			"img": "images/aga2.png"
+		  },
+		  {
+			"left": true,
+			"right": true,
+			"img": "images/0055.png"
+		  }
+		]
+	  },
 	
 	// Progressive Gloves
 	{
