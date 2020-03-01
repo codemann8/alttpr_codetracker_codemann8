@@ -793,13 +793,6 @@
           },
           {
             "name": "Link's House",
-            "map_locations": [
-              {
-                "map": "lightworld",
-                "x": 1098,
-                "y": 1382
-              }
-            ],
             "sections": [
               {
                 "name": "Entrance",
@@ -807,6 +800,13 @@
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
                 "hosted_item": "light_world"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "lightworld",
+                "x": 1098,
+                "y": 1382
               }
             ]
           },
@@ -915,13 +915,6 @@
             "access_rules": [
               "boots,pearl"
             ],
-            "map_locations": [
-              {
-                "map": "lightworld",
-                "x": 945,
-                "y": 1310
-              }
-            ],
             "sections": [
               {
                 "name": "Entrance",
@@ -930,18 +923,18 @@
                 "item_count": 1,
                 "hosted_item": "light_world"
               }
+            ],
+            "map_locations": [
+              {
+                "map": "lightworld",
+                "x": 945,
+                "y": 1310
+              }
             ]
           },
           {
             "name": "Grove Digging Spot",
             "short_name": "Dig Spot",
-            "map_locations": [
-              {
-                "map": "lightworld",
-                "x": 585,
-                "y": 1320
-              }
-            ],
             "access_rules": [
               "shovel,pearl"
             ],
@@ -949,6 +942,13 @@
               {
                 "name": "Hidden Treasure",
                 "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "lightworld",
+                "x": 585,
+                "y": 1320
               }
             ]
           },
@@ -1535,30 +1535,6 @@
             ]
           },
           {
-            "name": "Checkerboard Cave",
-            "short_name": "Checkerboard",
-            "color": "#aa860d",
-            "access_rules": [
-              "pearl,lift1"
-            ],
-            "sections": [
-              {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-              }
-            ],
-            "map_locations": [
-              {
-                "map": "lightworld",
-                "x": 354,
-                "y": 1560
-              }
-            ]
-          },
-          {
             "name": "Aginah's Cave",
             "sections": [
               {
@@ -1574,28 +1550,6 @@
                 "map": "lightworld",
                 "x": 400,
                 "y": 1655
-              }
-            ]
-          },
-          {
-            "name": "Bombos Tablet",
-            "color": "#aa860d",
-            "sections": [
-              {
-                "name": "Tablet",
-                "access_rules": [
-                  "book,$canActivateTablets",
-                  "{book}"
-                ],
-                "capture_item": true,
-                "item_count": 1
-              }
-            ],
-            "map_locations": [
-              {
-                "map": "lightworld",
-                "x": 440,
-                "y": 1845
               }
             ]
           },
@@ -1637,6 +1591,52 @@
                 "map": "lightworld",
                 "x": 625,
                 "y": 1920
+              }
+            ]
+          },
+          {
+            "name": "Checkerboard Cave",
+            "short_name": "Checkerboard",
+            "color": "#aa860d",
+            "access_rules": [
+              "pearl,lift1"
+            ],
+            "sections": [
+              {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "lightworld",
+                "x": 354,
+                "y": 1560
+              }
+            ]
+          },
+          {
+            "name": "Bombos Tablet",
+            "color": "#aa860d",
+            "sections": [
+              {
+                "name": "Tablet",
+                "access_rules": [
+                  "book,$canActivateTablets",
+                  "{book}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+              }
+            ],
+            "map_locations": [
+              {
+                "map": "lightworld",
+                "x": 440,
+                "y": 1845
               }
             ]
           }
@@ -2046,7 +2046,11 @@
   {
     "name": "Ice Palace Entrance",
     "access_rules": [
-      "[flippers]",
+      "dw_east,[flippers]",
+      "dw_south,[flippers]",
+      "dw_west,[flippers]",
+      "dw_witch,hammer,[flippers]",
+      "dw_witch,lift1,[flippers]",
       "ip_area,mirror"
     ],
     "sections": [
@@ -2278,6 +2282,7 @@
       "dw_west,[flippers]",
       "dw_southeast,[flippers]",
       "dw_witch,lift1",
+      "dw_witch,hammer",
       "aga1,mirror",
       "castle_top,mirror",
       "lw_witch,mirror,lift1",
@@ -2480,7 +2485,8 @@
       "dw_southeast",
       "dw_south,[flippers]",
       "dw_west,[flippers]",
-      "dw_witch,[flippers]",
+      "dw_witch,hammer,[flippers]",
+      "dw_witch,lift1,[flippers]",
       "dw_east,[flippers]",
       "aga1,mirror,[flippers]",
       "light_world,mirror",
