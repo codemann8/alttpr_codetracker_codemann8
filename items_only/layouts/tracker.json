@@ -1,0 +1,96 @@
+{
+	"tracker_default": {
+		"type": "container",
+		"background": "#877373",
+        "content": {
+            "type": "dock",
+			"dock": "left",
+			"dropshadow": true,
+			"content": [
+                {
+					"type": "array",
+					"orientation": "horizontal",
+					"content": [
+						{
+							"type": "array",
+							"orientation": "vertical",
+							"dock": "top",
+							"content": [
+								{
+									"type": "group",
+									"header": "Items",
+									"v_alignment": "center",
+									"content": [
+										{
+											"type": "layout",
+											"key": "shared_item_grid"
+										}
+									]
+								},
+								{
+									"type": "group",
+									"header": "Dungeons",
+									"v_alignment": "center",
+									"content": [
+										{
+											"type": "layout",
+											"key": "shared_dungeon_v_grid"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+        }
+	},
+	"tracker_horizontal": {
+        "type": "container",
+		"background": "#877373",
+        "content": {
+            "type": "dock",
+			"dock": "left",
+			"dropshadow": true,
+			"content": [
+                {
+					"type": "array",
+					"orientation": "vertical",
+					"content": [
+						{
+							"type": "array",
+							"orientation": "horizontal",
+							"dock": "top",
+							"content": [
+								{
+									"type": "group",
+									"header": "Items",
+									"margin": "0,0,3,0",
+									"h_alignment": "center",
+									"content": [
+										{
+											"type": "layout",
+											"key": "shared_item_grid"
+										}
+									]
+								},
+								{
+									"type": "group",
+									"header": "Dungeons",
+									"margin": "0,0,3,0",
+									"h_alignment": "center",
+									"content": [
+										{
+											"type": "layout",
+											"key": "shared_dungeon_grid"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+        }
+    }
+}

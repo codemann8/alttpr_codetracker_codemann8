@@ -35,6 +35,34 @@ function canClearAgaTowerBarrier()
     end    
 end
 
+function canDamageLanmolas()
+    if Tracker:ProviderCountForCode("sword") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("hammer") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("firerod") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("icerod") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("bow") > 0 then
+        return 1
+    else
+        return Tracker:ProviderCountForCode("somaria")
+    end
+end
+
+function canDamageBlind()
+    if Tracker:ProviderCountForCode("sword") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("hammer") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("byrna") > 0 then
+        return 1
+    else
+        return Tracker:ProviderCountForCode("somaria")
+    end
+end
+
 function gtCrystalCount()
     local reqCount = Tracker:ProviderCountForCode("gt_crystals")
     local count = Tracker:ProviderCountForCode("crystal")

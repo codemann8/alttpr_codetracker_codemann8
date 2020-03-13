@@ -23,7 +23,7 @@
 			},
 			{
 				"type": "group",
-				"header": "Overworld/Misc",
+				"header": "Other",
 				"margin": "0,0,3,0",
 				"dock": "left",
 				"content": {
@@ -35,7 +35,7 @@
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"dam", "", "gt_crystals", "ganon_crystals"
+							"dam", "attic", "gt_bkgame", "gt_crystals", "ganon_crystals"
 						]
 					]
 				}
@@ -56,20 +56,17 @@
 					"h_alignment": "center",
 					"v_alignment": "center",
 					"item_margin": "1,1",
-					"item_size": 60,
+					"item_size": 44,
 					"rows": [
 						[
-							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief"
-						],
-						[
-							"dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
+							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
 						]
 					]
 				}
 			},
 			{
 				"type": "group",
-				"header": "Overworld/Misc",
+				"header": "Other",
 				"margin": "0,0,0,0",
 				"dock": "left",
 				"content": {
@@ -77,11 +74,11 @@
 					"h_alignment": "center",
 					"v_alignment": "center",
 					"item_margin": "1,1",
-					"item_size": 60,
+					"item_size": 48,
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"dam", "", "gt_crystals", "ganon_crystals"
+							"dam", "attic", "gt_bkgame", "gt_crystals", "ganon_crystals"
 						]
 					]
 				}

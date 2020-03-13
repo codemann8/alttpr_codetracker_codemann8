@@ -2,11 +2,26 @@ function itemFlippedOn(item)
 	if os.time() - START_TIME > 5 then
 		if item == "sword" then
 			local object = Tracker:FindObjectForCode(item)
-			if object.CurrentStage == 3 then
+			if object.CurrentStage == 1 then
+				sendExternalMessage("item", "sword")
+				START_TIME = os.time()
+			elseif object.CurrentStage == 2 then
+				sendExternalMessage("item", "master")
+				START_TIME = os.time()
+			elseif object.CurrentStage == 3 then
 				sendExternalMessage("item", "bacon")
 				START_TIME = os.time()
 			elseif object.CurrentStage == 4 then
 				sendExternalMessage("item", "butter")
+				START_TIME = os.time()
+			end
+		elseif item == "glove" then
+			local object = Tracker:FindObjectForCode(item)
+			if object.CurrentStage == 1 then
+				sendExternalMessage("item", "gloves")
+				START_TIME = os.time()
+			elseif object.CurrentStage == 2 then
+				sendExternalMessage("item", "mitts")
 				START_TIME = os.time()
 			end
 		elseif item == "np_bow" then
@@ -16,7 +31,9 @@ function itemFlippedOn(item)
 			or item == "lamp" or item == "halfmagic" or item == "firerod" or item == "icerod"
 			or item == "bombos" or item == "ether" or item == "quake"
 			or item == "mushroom" or item == "powder" or item == "shovel"
-			or item == 'mirror' or item == "hookshot" or item == "book" or item == "cape" then
+			or item == 'mirror' or item == "hookshot" or item == "book"
+			or item == "cape" or item == "byrna" or item == "somaria"
+			or item == "net" or item == "flippers" or item == "pearl" then
 			sendExternalMessage("item", item)
 			START_TIME = os.time()
 		end

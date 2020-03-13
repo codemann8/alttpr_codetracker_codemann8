@@ -1,0 +1,939 @@
+[
+  // Link's House
+  {
+    "name": "Link's House",
+    "parent": "Light World Color",
+    "sections": [
+      {
+        "name": "By The Door",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1097,
+        "y": 1366,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      },
+      {
+        "map": "darkworld",
+        "x": 1097,
+        "y": 1366,
+        "force_invisibility_rules": [
+          "world_state_open"
+        ]
+      }
+    ]
+  },
+  // Light World
+  {
+    "name": "Lumberjack Cave",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [
+          "aga,boots",
+          "{}"
+        ],
+        "capture_item": true,
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 633,
+        "y": 117
+      }
+    ]
+  },
+  {
+    "name": "Lost Woods",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Mushroom Spot",
+        "short_name": "Shroom",
+        "item_count": 1
+      },
+      {
+        "name": "Forest Hideout",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 280,
+        "y": 220
+      }
+    ]
+  },
+  {
+    "name": "Blind's House",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Basement",
+        "short_name": "Main",
+        "item_count": 4
+      },
+      {
+        "name": "Bombable Wall",
+        "short_name": "Bomb",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 307,
+        "y": 840
+      }
+    ]
+  },
+  {
+    "name": "The Well",
+    "parent": "Light World",
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 4
+      },
+      {
+        "name": "Bombable Wall",
+        "short_name": "Bomb",
+        "access_rules": [
+          "world_state_open",
+          "world_state_inverted,pearl"
+        ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 47,
+        "y": 833
+      }
+    ]
+  },
+  {
+    "name": "Chicken House",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Bombable Wall",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 197,
+        "y": 1066
+      }
+    ]
+  },
+  {
+    "name": "Sick Kid",
+    "parent": "Light World",
+    "sections": [
+      {
+        "name": "By The Bed",
+        "access_rules": [ "bottle" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 314,
+        "y": 1060
+      }
+    ]
+  },
+  {
+    "name": "Magic Bat",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open,hammer",
+      "world_state_open,lift2,pearl,mirror",
+      "world_state_inverted,pearl,hammer"
+    ],
+    "sections": [
+      {
+        "name": "Magic Bowl",
+        "access_rules": [
+          "powder",
+          "somaria,mushroom,[powder]"
+        ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 650,
+        "y": 1135
+      }
+    ]
+  },
+  {
+    "name": "Library",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl",
+      "{}"
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 313,
+        "y": 1310
+      }
+    ],
+    "sections": [
+      {
+        "name": "On The Shelf",
+        "access_rules": [
+          "boots",
+          "{}"
+        ],
+        "capture_item": true,
+        "item_count": 1
+      }
+    ]
+  },
+  {
+    "name": "Secret Passage",
+    "short_name": "Uncle",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Uncle",
+        "item_count": 1
+      },
+      {
+        "name": "Hallway",
+        "item_count": 1
+      }									
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1196,
+        "y": 834
+      }
+    ]
+  },
+  {
+    "name": "Cave 45",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open,@South Dark World,mirror",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Circle of Bushes",
+        "capture_item": true,
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 552,
+        "y": 1693
+      },
+      {
+        "map": "darkworld",
+        "x": 552,
+        "y": 1693,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dam",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Inside",
+        "item_count": 1
+      },
+      {
+        "name": "Outside",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 942,
+        "y": 1880
+      }
+    ]
+  },
+  {
+    "name": "Mini Moldorm Cave",
+    "short_name": "Mini-Moldorm",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 5
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1309,
+        "y": 1887
+      }
+    ]
+  },
+  {
+    "name": "Ice Rod Cave",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1795,
+        "y": 1547
+      }
+    ]
+  },
+  {
+    "name": "Potion Shop",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Assistant",
+        "access_rules": [ "mushroom" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1607,
+        "y": 670
+      }
+    ]
+  },
+  {
+    "name": "Waterfall Fairy",
+    "parent": "Zora Area",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [
+          "flippers",
+          "pearl,[flippers]",
+          "boots,[flippers]"
+        ],
+        "item_count": 2
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1806,
+        "y": 286
+      }
+    ]
+  },
+  {
+    "name": "Sahasrala's Hut",
+    "short_name": "Sah's Hut",
+    "parent": "Light World",
+    "sections": [
+      {
+        "name": "Closet",
+        "access_rules": [
+          "world_state_open",
+          "world_state_inverted,pearl"
+        ],
+        "short_name": "Back",
+        "item_count": 3
+      },
+      {
+        "name": "Sahasrala",
+        "short_name": "Sah",
+        "access_rules": [ "greenpendant" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1625,
+        "y": 900
+      }
+    ]
+  },
+  {
+    "name": "Bonk Rocks",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [ "boots" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 777,
+        "y": 590
+      }
+    ]
+  },
+  {
+    "name": "King's Tomb",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "The Crypt",
+        "access_rules": [
+          "lift2,boots",
+          "world_state_open,@Northwest Dark World,pearl,mirror,boots"
+        ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1210,
+        "y": 598
+      }
+    ]
+  },
+  {
+    "name": "Graveyard Ledge",
+    "parent": "Light World",
+    "access_rules": [
+      "world_state_open,@Northwest Dark World,pearl,mirror",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1132,
+        "y": 530
+      },
+      {
+        "map": "darkworld",
+        "x": 1132,
+        "y": 530,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aginah's Cave",
+    "parent": "Desert Area",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 400,
+        "y": 1655
+      }
+    ]
+  },
+  {
+    "name": "Checkerboard Cave",
+    "short_name": "Checkerboard",
+    "parent": "Desert Area",
+    "access_rules": [
+      "world_state_open,@Mire Area,mirror",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [ "lift1" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 354,
+        "y": 1560
+      },
+      {
+        "map": "darkworld",
+        "x": 354,
+        "y": 1560,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      }
+    ]
+  },
+  // Dark World
+  {
+    "name": "C-Shaped House",
+    "parent": "Northwest Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "House",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 414,
+        "y": 969
+      }
+    ]
+  },
+  {
+    "name": "Chest Game",
+    "parent": "Northwest Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Prize",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 100,
+        "y": 936
+      }
+    ]
+  },
+  {
+    "name": "Brewery",
+    "parent": "Northwest Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Downstairs",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 219,
+        "y": 1171
+      }
+    ]
+  },
+  {
+    "name": "Hammer Pegs",
+    "parent": "Hammer Pegs Area",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [ "hammer" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 636,
+        "y": 1214
+      }
+    ]
+  },
+  {
+    "name": "Hype Cave",
+    "parent": "South Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 5
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 1200,
+        "y": 1560
+      }
+    ]
+  },
+  {
+    "name": "Pyramid Fairy",
+    "parent": "East Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Big Bomb Spot",
+        "access_rules": [
+          "world_state_open,@South Dark World,crystal56:2",
+          "world_state_inverted,@Light World,crystal56:2"
+        ],
+        "item_count": 2
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 940,
+        "y": 976
+      }
+    ]
+  },
+  {
+    "name": "Mire Shed",
+    "parent": "Mire Area",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Shed",
+        "item_count": 2
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 77,
+        "y": 1600
+      }
+    ]
+  },
+  // Death Mountain
+  {
+    "name": "Old Man",
+    "parent": "Death Mountain West Bottom",
+    "sections": [
+      {
+        "name": "Bring Him Home",
+        "access_rules": [ "[lamp]" ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 816,
+        "y": 378,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      },
+      {
+        "map": "darkworld",
+        "x": 816,
+        "y": 378,
+        "force_invisibility_rules": [
+          "world_state_open"
+        ]
+      },
+      {
+        "map": "lightworld",
+        "x": 900,
+        "y": 440,
+        "force_invisibility_rules": [
+          "world_state_open"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Spectacle Rock",
+    "parent": "Death Mountain West Bottom",
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 1
+      },
+      {
+        "name": "Up On Top",
+        "access_rules": [
+          "world_state_open,mirror",
+          "world_state_inverted,@Death Mountain West Top",
+          "{}"
+        ],
+        "capture_item": true,
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 980,
+        "y": 178
+      }
+    ]
+  },
+  {
+    "name": "Paradox Cave",
+    "parent": "Death Mountain East Bottom",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Bottom",
+        "item_count": 2
+      },
+      {
+        "name": "Top",
+        "item_count": 5
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1731,
+        "y": 434
+      },
+      {
+        "map": "lightworld",
+        "x": 1714,
+        "y": 293
+      }
+    ]
+  },
+  {
+    "name": "Spiral Cave",
+    "parent": "Death Mountain East Top",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1598,
+        "y": 190
+      }
+    ]
+  },
+  {
+    "name": "Mimic Cave",
+    "parent": "Death Mountain East Top",
+    "access_rules": [
+      "world_state_open,@TR Main Entrance,pearl,somaria,tr_smallkey:2,[tr_smallkey:3],mirror",
+      "world_state_inverted,@Death Mountain East Top,pearl"
+    ],
+    "sections": [
+      {
+          "name": "Cave",
+          "access_rules": [ "hammer" ],
+          "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 1694,
+        "y": 190
+      },
+      {
+        "map": "darkworld",
+        "x": 1694,
+        "y": 204,
+        "force_invisibility_rules": [
+          "world_state_inverted"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Spike Cave",
+    "parent": "Dark Death Mountain West",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "access_rules": [
+          "hammer,lift1,byrna",
+          "hammer,lift1,cape",
+          "hammer,lift1,[byrna],bottle:1",
+          "hammer,lift1,[byrna],halfmagic",
+          "hammer,lift1,[cape],bottle:1",
+          "hammer,lift1,[cape],halfmagic"
+        ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 1151,
+        "y": 294
+      }
+    ]
+  },
+  {
+    "name": "Hookshot Cave",
+    "parent": "Dark Death Mountain Top",
+    "access_rules": [
+      "world_state_open,pearl,lift1",
+      "world_state_inverted,lift1"
+    ],
+    "sections": [
+      {
+        "name": "Bonkable Chest",
+        "short_name": "Front",
+        "access_rules": [
+          "boots",
+          "hookshot"
+        ],
+        "item_count": 1
+      },
+      {
+        "name": "Back",
+        "access_rules": [ "hookshot" ],
+        "item_count": 3
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 1670,
+        "y": 122
+      }
+    ]
+  },
+  {
+    "name": "Super-Bunny Cave",
+    "parent": "Dark Death Mountain East",
+    "access_rules": [
+      "world_state_open,[pearl]",
+      "world_state_inverted"
+    ],
+    "sections": [
+      {
+        "name": "Cave",
+        "item_count": 2
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 1695,
+        "y": 290
+      }
+    ]
+  }
+
+]

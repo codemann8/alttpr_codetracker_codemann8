@@ -24,13 +24,13 @@
 							{
 								"type": "array",
 								"orientation": "horizontal",
-								"margin": "0,-5,0,0",
+								"margin": "0,-5,5,0",
+								"background": "#3F000000",
 								"content": [
 									{
 										"type": "itemgrid",
 										"h_alignment": "center",
 										"item_margin": "0,0,2,10",
-										"background": "#3F000000",
 										"rows": [
 											[
 												"bowandarrows",
@@ -72,7 +72,6 @@
 									},
 									{
 										"type": "container",
-										"background": "#3F000000",
 										"content": {
 											"type": "layout",
 											"key": "light_keys_grid"
@@ -83,10 +82,11 @@
 							{
 								"type": "array",
 								"orientation": "horizontal",
+								"background": "#3F000000",
+								"margin": "0,-2,5,0",
 								"content": [
 									{
 										"type": "container",
-										"background": "#3F000000",
 										"content": {
 											"type": "layout",
 											"key": "dark_keys_grid"
@@ -95,15 +95,15 @@
 									{
 										"type": "itemgrid",
 										"h_alignment": "center",
-										"margin": "0,0,0,0",
+										"margin": "3,-7,4,0",
 										"item_margin": "3,2",
-										"item_size": 36,
+										"item_size": 32,
 										"badge_font_size": 18,
-										"background": "#3F000000",
 										"rows": [
 											[ "agas" ],
 											[ "gt_crystals" ],
-											[ "ganon_crystals" ]
+											[ "ganon_crystals" ],
+											[ "gt_bkgame" ]
 										]
 									}
 								]

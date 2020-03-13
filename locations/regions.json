@@ -1,0 +1,410 @@
+[
+  // Colors
+  {
+    "name": "Light World Color",
+    "color": "#059134"
+  },
+  {
+    "name": "Dark World Color",
+    "color": "#35046b"
+  },
+  {
+    "name": "Water Area Color",
+    "color": "#345a99"
+  },
+  {
+    "name": "Mire Area Color",
+    "color": "#02473f"
+  },
+  {
+    "name": "Death Mountain Color",
+    "color": "#934f17"
+  },
+  {
+    "name": "Dark Death Mountain Color",
+    "color": "#6f6539"
+  },
+  {
+    "name": "Dungeon Color",
+    "color": "#af0000"
+  },
+  {
+    "name": "Semi-Dungeon Color",
+    "color": "#701d43"
+  },
+  
+  // Regions
+  {
+    "name": "Light World",
+    "parent": "Light World Color",
+    "always_allow_chest_manipulation": true,
+    "access_rules": [
+      "light_world",
+      "desert_ledge",
+      "castle_top",
+      "race_game",
+      "world_state_open",
+      "world_state_inverted,hammer,lift1,pearl",
+      "world_state_inverted,lift2,pearl",
+      "world_state_inverted,aga",
+      "world_state_inverted,bumper_cave",
+      "world_state_inverted,bumper_entrance",
+      "world_state_inverted,grass_house,pearl",
+      "world_state_inverted,bomb_hut,pearl",
+      "world_state_inverted,lw_witch,pearl",
+      "world_state_inverted,graveyard_ledge,pearl",
+      "world_state_inverted,desert_back,pearl,lift1",
+      "world_state_inverted,kings_tomb,pearl,lift2",
+      "world_state_inverted,upgrade_fairy,pearl,[flippers]",
+      "world_state_inverted,zora_area,pearl,flippers"
+    ],
+    "children": [
+      {
+        "name": "Water Areas",
+        "color": "#345a99",
+        "children": [
+          {
+            "name": "Zora Area",
+            "access_rules": [
+              "world_state_open,lift1",
+              "world_state_open,[flippers]",
+              "world_state_inverted,zora_area,pearl,flippers",
+              "world_state_inverted,@Light World,pearl,lift1",
+              "world_state_inverted,@Light World,pearl,[flippers]"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Desert Area",
+        "color": "#aa860d",
+        "children": [
+          {
+            "name": "Desert Ledge Area",
+            "access_rules": [
+              "desert_ledge",
+              "world_state_open,flute,lift2,mirror",
+              "world_state_open,mire_area,mirror",
+              "world_state_open,desert_back,lift1",
+              "world_state_inverted,desert_back,pearl,lift1"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dark World",
+    "parent": "Dark World Color",
+    "always_allow_chest_manipulation": true,
+    "children": [
+      {
+        "name": "Northwest Dark World",
+        "access_rules": [
+          "dw_west",
+          "world_state_open,lift2,pearl",
+          "world_state_open,hammer,lift1,pearl",
+          "world_state_open,bumper_cave",
+          "world_state_open,bumper_entrance",
+          "world_state_open,hammer_house,pearl,hammer",
+          "world_state_open,dw_witch,pearl,hookshot",
+          "world_state_open,dw_east,pearl,lift1,hookshot",
+          "world_state_open,dw_east,pearl,hammer,hookshot",
+          "world_state_open,aga,pearl,lift1,hookshot",
+          "world_state_open,aga,pearl,hammer,hookshot",
+          "world_state_open,dw_southeast,pearl,[flippers],hookshot",
+          "world_state_open,dw_south,pearl,hammer,hookshot",
+          "world_state_open,dw_south,pearl,[flippers],hookshot",
+          
+          "world_state_inverted,entrance_shuffle_off",
+          "world_state_inverted,@Light World,mirror",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,lw_dmentry",
+          "world_state_inverted,bomb_hut,mirror",
+          "world_state_inverted,kings_tomb,mirror",
+          "world_state_inverted,graveyard_ledge,mirror",
+          "world_state_inverted,grass_house,mirror,hammer",
+          "world_state_inverted,hammer_house,hammer",
+          "world_state_inverted,hammer_pegs,lift2",
+          "world_state_inverted,dw_witch,hookshot",
+          "world_state_inverted,dw_witch,hammer,lift2",
+          "world_state_inverted,dw_east,lift1,hookshot",
+          "world_state_inverted,dw_east,hammer,hookshot",
+          "world_state_inverted,dw_east,hammer,lift2",
+          "world_state_inverted,aga,lift1,hookshot",
+          "world_state_inverted,aga,hammer,hookshot",
+          "world_state_inverted,aga,hammer,lift2",
+          "world_state_inverted,dw_southeast,[flippers],hookshot",
+          "world_state_inverted,dw_southeast,[flippers],hammer,lift2",
+          "world_state_inverted,ip_area,[flippers],hookshot",
+          "world_state_inverted,ip_area,[flippers],hammer,lift2",
+          "world_state_inverted,dw_south,lift2",
+          "world_state_inverted,dw_south,hammer,hookshot",
+          "world_state_inverted,dw_south,[flippers],hookshot"
+        ]
+      },
+      {
+        "name": "South Dark World",
+        "access_rules": [
+          "dw_south",
+          "@Northwest Dark World",
+          "world_state_open,dw_witch,pearl,hammer",
+          "world_state_open,dw_east,pearl,hammer",
+          "world_state_open,dw_southeast,pearl,[flippers],hammer",
+          "world_state_open,ip_area,pearl,[flippers],hammer",
+          "world_state_inverted,dw_witch,hammer",
+          "world_state_inverted,dw_east,hammer",
+          "world_state_inverted,dw_southeast,[flippers],hammer",
+          "world_state_inverted,ip_area,[flippers],hammer"
+        ]
+      },
+      {
+        "name": "East Dark World",
+        "access_rules": [
+          "dw_east",
+          "world_state_open,@Northwest Dark World,pearl,hammer",
+          "world_state_open,@Northwest Dark World,pearl,[flippers]",
+          "world_state_open,@South Dark World,pearl,hammer",
+          "world_state_open,@South Dark World,pearl,[flippers]",
+          "world_state_open,aga",
+          "world_state_open,dw_witch,pearl,hammer",
+          "world_state_open,dw_witch,pearl,lift1",
+          "world_state_open,dw_witch,pearl,[flippers]",
+          "world_state_open,dw_southeast,pearl,[flippers]",
+          "world_state_open,ip_area,pearl,[flippers]",
+
+          "world_state_inverted,@Light World,mirror",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,@Northwest Dark World,hammer",
+          "world_state_inverted,@Northwest Dark World,[flippers]",
+          "world_state_inverted,@South Dark World,hammer",
+          "world_state_inverted,@South Dark World,[flippers]",
+          "world_state_inverted,dw_witch,hammer",
+          "world_state_inverted,dw_witch,lift1",
+          "world_state_inverted,dw_witch,[flippers]",
+          "world_state_inverted,dw_southeast,[flippers]",
+          "world_state_inverted,ip_area,[flippers]"
+        ]
+      },
+      {
+        "name": "Southeast Dark World",
+        "access_rules": [
+          "dw_southeast",
+          "world_state_open,@Northwest Dark World,pearl,[flippers]",
+          "world_state_open,@South Dark World,pearl,[flippers]",
+          "world_state_open,@East Dark World,pearl,[flippers]",
+          "world_state_open,dw_witch,pearl,[flippers]",
+          
+          "world_state_inverted,@Light World,mirror",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,@Northwest Dark World,[flippers]",
+          "world_state_inverted,@South Dark World,[flippers]",
+          "world_state_inverted,@East Dark World,[flippers]",
+          "world_state_inverted,ip_area,[flippers]",
+          "world_state_inverted,dw_witch,[flippers]"
+        ]
+      },
+      {
+        "name": "Northeast Dark World",
+        "access_rules": [
+          "dw_witch",
+          "world_state_open,@Northwest Dark World,pearl,[flippers]",
+          "world_state_open,@South Dark World,pearl,[flippers]",
+          "world_state_open,@South Dark World,pearl,hammer",
+          "world_state_open,@East Dark World,pearl,[flippers]",
+          "world_state_open,@East Dark World,pearl,hammer",
+          "world_state_open,@East Dark World,pearl,lift1",
+          "world_state_open,@Southeast Dark World,pearl,[flippers]",
+          
+          "world_state_inverted,@Light World,mirror",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,@Northwest Dark World,[flippers]",
+          "world_state_inverted,@South Dark World,[flippers]",
+          "world_state_inverted,@South Dark World,hammer",
+          "world_state_inverted,@East Dark World,[flippers]",
+          "world_state_inverted,@East Dark World,hammer",
+          "world_state_inverted,@East Dark World,lift1",
+          "world_state_inverted,@Southeast Dark World,[flippers]",
+          "world_state_inverted,ip_area,[flippers]"
+        ]
+      },
+      {
+        "name": "Hammer Pegs Area",
+        "access_rules": [
+          "hammer_pegs",
+          "world_state_inverted,@Northwest Dark World,lift2",
+          "world_state_inverted,@Light World,mirror"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mire Area",
+    "parent": "Mire Area Color",
+    "always_allow_chest_manipulation": true,
+    "access_rules": [
+      "mire_area",
+      "world_state_open,flute,lift2",
+      "world_state_inverted,@Light World,mirror",
+      "world_state_inverted,@Light World,pearl,flute",
+      "world_state_inverted,desert_back,mirror",
+      "world_state_inverted,desert_front,mirror"
+    ]
+  },
+  {
+    "name": "Castle Second Floor",
+    "parent": "Light World",
+    "access_rules": [
+      "castle_top",
+      "world_state_open,@East Dark World,mirror"
+    ]
+  },
+  {
+    "name": "Death Mountain",
+    "parent": "Death Mountain Color",
+    "always_allow_chest_manipulation": true,
+    "children": [
+      {
+        "name": "Death Mountain West Top",
+        "access_rules": [
+          "dm_west_top",
+          "world_state_open,flute,mirror",
+          "world_state_open,dm_west_bottom,mirror",
+          "world_state_open,dm_east_bottom,hookshot,mirror",
+          "world_state_open,dm_east_top,hookshot,mirror",
+          "world_state_open,dm_east_top,hammer",
+          "world_state_open,dm_east_spiral,hookshot,mirror",
+          "world_state_open,dm_east_mimic,hookshot,mirror",
+          "world_state_open,dm_east_connect,hookshot,mirror",
+          "world_state_open,ddm_west,mirror",
+          "world_state_open,ddm_top,mirror",
+          "world_state_open,ddm_floating,mirror",
+          "world_state_open,ddm_east,mirror,hookshot",
+          "world_state_open,ddm_tr_bridge,mirror,hookshot",
+          "world_state_open,ddm_tr_safety,mirror,hookshot",
+          "world_state_inverted,@Light World,pearl,flute,lift2,hammer",
+          "world_state_inverted,dm_east_top,pearl,hammer",
+          "world_state_inverted,ddm_top,lift2,pearl,hammer",
+          "world_state_inverted,ddm_west,lift2,pearl,hammer",
+          "world_state_inverted,ddm_floating,lift2,pearl,hammer"
+        ]
+      },
+      {
+        "name": "Death Mountain East Top",
+        "access_rules": [
+          "dm_east_top",
+          "world_state_open,@Death Mountain West Top,hammer",
+          "world_state_open,ddm_top,mirror",
+          "world_state_open,ddm_floating,mirror",
+          "world_state_inverted,@Death Mountain West Top,pearl,hammer",
+          "world_state_inverted,dm_west_top,pearl,hammer"
+        ]
+      },
+      {
+        "name": "Death Mountain West Bottom",
+        "access_rules": [
+          "dm_west_bottom",
+          "@Death Mountain West Top",
+          "world_state_open,@Death Mountain East Top,hookshot",
+          "world_state_open,@Death Mountain East Top,hammer",
+          "world_state_open,flute",
+          "world_state_open,entrance_shuffle_off,lift1,[lamp]",
+          "world_state_open,dm_east_spiral,hookshot",
+          "world_state_open,dm_east_mimic,hookshot",
+          "world_state_open,dm_east_connect,hookshot",
+          "world_state_open,dm_east_bottom,hookshot",
+          "world_state_open,ddm_east,mirror,hookshot",
+          "world_state_open,ddm_tr_bridge,mirror,hookshot",
+          "world_state_open,ddm_tr_safety,mirror,hookshot",
+          "world_state_inverted,entrance_shuffle_off,lift1,[lamp]",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,@Death Mountain East Top,pearl,hookshot",
+          "world_state_inverted,@Death Mountain East Top,pearl,hammer",
+          "world_state_inverted,dm_east_bottom,pearl,hookshot",
+          "world_state_inverted,dm_east_connect,pearl,hookshot",
+          "world_state_inverted,dm_east_spiral,pearl,hookshot",
+          "world_state_inverted,dm_east_mimic,pearl,hookshot",
+          "world_state_inverted,ddm_west",
+          "world_state_inverted,ddm_top",
+          "world_state_inverted,ddm_floating",
+          "world_state_inverted,ddm_east,mirror,pearl,hookshot"
+        ]
+      },
+      {
+        "name": "Death Mountain East Bottom",
+        "access_rules": [
+          "dm_east_bottom",
+          "dm_east_spiral",
+          "dm_east_connect",
+          "@Death Mountain East Top",
+          "world_state_open,@Death Mountain West Bottom,hookshot",
+          "world_state_open,ddm_east,mirror",
+          "world_state_open,ddm_tr_bridge,mirror",
+          "world_state_open,ddm_tr_safety,mirror",
+          "world_state_inverted,@Death Mountain West Bottom,pearl,hookshot",
+          "world_state_inverted,ddm_east,lift2",
+          "world_state_inverted,ddm_top,lift2",
+          "world_state_inverted,ddm_west,lift2",
+          "world_state_inverted,ddm_floating,lift2"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dark Death Mountain",
+    "parent": "Dark Death Mountain Color",
+    "always_allow_chest_manipulation": true,
+    "children": [
+      {
+        "name": "Dark Death Mountain Top",
+        "access_rules": [
+          "ddm_top",
+          "ddm_floating",
+          "world_state_open,@Death Mountain East Top,lift2,hammer",
+          "World_state_inverted,entrance_shuffle_off,lift1,[lamp]",
+          "world_state_inverted,@Light World,pearl,flute",
+          "world_state_inverted,@Death Mountain East Top,mirror",
+          "world_state_inverted,@Death Mountain West Bottom,mirror",
+          "world_state_inverted,ddm_west"
+        ]
+      },
+      {
+        "name": "Dark Death Mountain West",
+        "access_rules": [
+          "ddm_west",
+          "@Dark Death Mountain Top",
+          "world_state_open,entrance_shuffle_off,lift1,[lamp]",
+          "world_state_open,@Death Mountain West Bottom"
+        ]
+      },
+      {
+        "name": "Dark Death Mountain East",
+        "access_rules": [
+          "ddm_east",
+          "@Dark Death Mountain Top",
+          "world_state_open,@Death Mountain East Bottom,lift2",
+          "world_state_inverted,dm_east_bottom,mirror",
+          "world_state_inverted,dm_east_spiral,mirror",
+          "world_state_inverted,dm_east_connect,mirror"
+        ]
+      }
+    ]
+  },
+
+  // Grouped Criteria
+  {
+    "name": "Non-Full Keysanity",
+    "access_rules": [
+      "keysanity_standard",
+      "keysanity_mapsanity",
+      "keysanity_smallsanity"
+    ]
+  },
+  {
+    "name": "Non-Key Keysanity",
+    "access_rules": [
+      "keysanity_standard",
+      "keysanity_mapsanity"
+    ]
+  }
+]

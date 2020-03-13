@@ -8,7 +8,7 @@
         "stages": [
 		  {
 			"img": "images/silver_arrow.png",
-			"codes": "np_silvers2"
+			"codes": "np_silvers"
 		  },
           {
             "img": "images/bow.png",
@@ -37,7 +37,7 @@
       "name": "Silver Arrows",
       "type": "toggle",
       "img": "images/silver_arrow.png",
-      "codes": "np_silverarrows,np_silvers,silverarrows,silvers"
+      "codes": "np_silverarrows,np_silvers2,silverarrows,silvers"
     },
     // Legacy Bow + Silvers
     /*{
@@ -550,7 +550,7 @@
 			{
 				"img": "images/sword2.png",
 				"inherit_codes": false,
-				"codes": "sword,sword2,mst,master"
+				"codes": "sword,sword2,master"
 			},
 			{
 				"img": "images/sword3.png",
@@ -618,6 +618,13 @@
 		"img": "images/0060.png",
 		"codes": "heartcontainer",
 		"max_quantity": 11
+	},
+	// Rupees
+	{
+		"name": "Rupees",
+		"type": "toggle",
+		"img": "images/redrupee.png",
+		"codes": "rupee"
 	},
 	// GT Required Crystals
 	{
@@ -701,7 +708,8 @@
         "swap_actions" :true,
         "max_quantity": 7,
         "initial_quantity": 7
-    },
+	},
+	
     // Placement Modes
     {
         "name": "Item Placement Mode",
@@ -720,13 +728,91 @@
 			}
         ]
 	},
-	
-	// Door Rando Modes
+	// World State
     {
-        "name": "Door Rando Mode",
-        "type": "toggle",
-		"img": "images/door_rando.png",
-        "codes": "door_rando_mode"
+        "name": "World State",
+        "type": "progressive",
+		"allow_disabled": false,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/mode_world_state_open.png",
+				"codes": "world_state_mode,world_state_open",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_world_state_inverted.png",
+				"codes": "world_state_mode,world_state_inverted",
+				"inherit_codes": false
+			}
+        ]
+	},
+	// Keysanity Mode
+    {
+        "name": "Dungeon Items",
+        "type": "progressive",
+		"allow_disabled": false,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/mode_keysanity_standard.png",
+				"codes": "keysanity_mode,keysanity_standard,",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_keysanity_mapsanity.png",
+				"codes": "keysanity_mode,keysanity_mapsanity,",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_keysanity_smallsanity.png",
+				"codes": "keysanity_mode,keysanity_smallsanity,",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_keysanity_full.png",
+				"codes": "keysanity_mode,keysanity_full,",
+				"inherit_codes": false
+			}
+        ]
+	},
+	// Entrance Mode
+    {
+        "name": "Entrance Shuffle",
+        "type": "progressive",
+		"allow_disabled": false,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/mode_entrance_shuffle_off.png",
+				"codes": "entrance_shuffle,entrance_shuffle_off,",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_entrance_shuffle_on.png",
+				"codes": "entrance_shuffle,entrance_shuffle_on",
+				"inherit_codes": false
+			}
+        ]
+	},
+	// Door Shuffle
+    {
+        "name": "Door Shuffle",
+        "type": "progressive",
+		"allow_disabled": false,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/mode_door_shuffle_off.png",
+				"codes": "door_shuffle,door_shuffle_off,",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_door_shuffle_on.png",
+				"codes": "door_shuffle,door_shuffle_on",
+				"inherit_codes": false
+			}
+        ]
 	},
 	// Current Dungeon
 	{

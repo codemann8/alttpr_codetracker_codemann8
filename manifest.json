@@ -2,36 +2,24 @@
   "name": "CodeTracker Full Tracker",
   "game_name": "A Link to the Past Randomizer",
   "platform": "snes",
-  "package_version": "1.0.1.2",
+  "package_version": "2.0.0.0",
   "package_uid": "alttpr_codetracker_codemann8",
   "author": "codemann8",
   "variants": {
-    "standard": {
-      "display_name": "Standard"
+    "mystery": {
+      "display_name": "Map Tracker"
     },
-    "keysanity": {
-      "display_name": "Keysanity"
+    "std_mystery": {
+      "display_name": "Map Tracker (Map Broadcast)"
     },
-    "inverted": {
-      "display_name": "Inverted"
-    },
-    "inverted_keysanity": {
-      "display_name": "Inverted Keysanity"
-    },
-    "er_standard": {
-      "display_name": "ER - Standard"
-    },
-    "er_keysanity": {
-      "display_name": "ER - Keysanity"
-    },
-    "er_inverted_keysanity": {
-      "display_name": "ER - Inverted Keysanity"
+    "er_mystery": {
+      "display_name": "Map Tracker (ER Broadcast)"
     },
     "items_only": {
       "display_name": "Item Tracker"
     },
     "items_only_keys": {
-      "display_name": "Item Tracker w/ Keys"
+      "display_name": "Item/Key Tracker"
     }
   }
 }

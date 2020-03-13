@@ -1,0 +1,31 @@
+{
+    "shared_map_tab": {
+        "type": "tabbed",
+        "tabs": [
+            {	
+                "title": "Entrance",
+                "content": {
+                    "type": "map",
+                    "maps": [ "erlightworld", "erdarkworld" ]
+                }
+            },
+            {	
+                "title": "Overworld",
+                "content": {
+                    "type": "map",
+                    "maps": [ "lightworld", "darkworld" ]
+                }
+            },
+            {	
+                "title": "Dungeon",
+                "content": {
+                    "type": "container",
+                    "content": {
+                        "type": "layout",
+                        "key": "shared_doorrando"
+                    }
+                }
+            }
+        ]
+    }
+}

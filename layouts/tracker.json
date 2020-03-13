@@ -19,6 +19,12 @@
 								{
 									"type": "group",
 									"header": "Items",
+									"header_content": {
+										"type": "button_popup",
+										"style": "settings",
+										"popup_background": "#55212121",
+										"layout": "settings_popup"
+									},
 									"content": {
 										"type": "layout",
 										"key": "shared_item_grid"
@@ -27,12 +33,6 @@
 								{
 									"type": "group",
 									"header": "Dungeons",
-									"header_content": {
-									    "type": "button_popup",
-									    "style": "settings",
-									    "popup_background": "#55212121",
-									    "layout": "dungeon_settings_popup"
-									},
 									"content": {
 										"type": "layout",
 										"key": "shared_dungeon_v_grid"
@@ -60,27 +60,9 @@
                     ]
                 },
                 {
-					"type": "tabbed",
-					"tabs": [
-						{	
-							"title": "Overworld",
-							"content": {
-								"type": "map",
-								"maps": [ "lightworld", "darkworld" ]
-							}
-						},
-						{	
-							"title": "Dungeon",
-							"content": {
-								"type": "container",
-								"content": {
-									"type": "layout",
-									"key": "shared_v_doorrando"
-								}
-							}
-						}
-					]
-                }
+					"type": "layout",
+					"key": "shared_map_tab"
+				}
             ]
         }
 	},
@@ -112,6 +94,12 @@
 													"header": "Items",
 													"margin": "0,0,3,0",
 													"dock": "left",
+													"header_content": {
+														"type": "button_popup",
+														"style": "settings",
+														"popup_background": "#55212121",
+														"layout": "settings_popup"
+													},
 													"content": {
 														"type": "layout",
 														"key": "shared_item_grid"
@@ -122,12 +110,6 @@
 													"header": "Dungeons",
 													"margin": "0,0,3,0",
 													"dock": "left",
-													"header_content": {
-														"type": "button_popup",
-														"style": "settings",
-														"popup_background": "#55212121",
-														"layout": "dungeon_settings_popup"
-													},
 													"content": {
 														"type": "layout",
 														"key": "shared_dungeon_grid"
@@ -137,33 +119,10 @@
 										},
 										{
 											"type": "layout",
+											"h_alignment": "stretch",
 											"key": "shared_entrance_grid"
 										}
 									]
-								},
-								{
-									"type": "group",
-									"header": "Sphere Progression",
-									"margin": "0,0,3,0",
-									"content": {
-										"type": "tabbed",
-										"tabs": [
-											{	
-												"title": "Off",
-												"content": {
-													"type": "layout",
-													"key": ""
-												}
-											},
-											{	
-												"title": "On",
-												"content": {
-													"type": "layout",
-													"key": "sphere_progression_grid"
-												}
-											}
-										]
-									}
 								}
 							]
 						},
@@ -183,26 +142,8 @@
 					]
 				},
 				{
-					"type": "tabbed",
-					"tabs": [
-						{	
-							"title": "Overworld",
-							"content": {
-								"type": "map",
-								"maps": [ "lightworld", "darkworld" ]
-							}
-						},
-						{	
-							"title": "Dungeon",
-							"content": {
-								"type": "container",
-								"content": {
-									"type": "layout",
-									"key": "shared_doorrando"
-								}
-							}
-						}
-					]
+					"type": "layout",
+					"key": "shared_map_tab"
 				}
 			]
 		}

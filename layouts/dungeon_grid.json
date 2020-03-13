@@ -2,7 +2,7 @@
 	"shared_dungeon_grid": {
 		"type": "array",
 		"orientation": "horizontal",
-		"margin": "-24,0,6,0",
+		"margin": "0,0,6,0",
 		"content": [
 			{
 				"type": "layout",

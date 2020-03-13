@@ -64,7 +64,7 @@
 						"content": [
 							{
 								"type": "map",
-								"maps": [ "lightworld", "darkworld" ],
+								"maps": [ "erlightworld", "erdarkworld" ],
 								"width": 500,
 								"height": 250
 							},
@@ -78,10 +78,10 @@
 								"rows": [
 									[ "gt_crystals" ],
 									[ "ganon_crystals" ],
-									[ "" ],
-									[ "" ],
 									[ "dam" ],
-									[ "agas" ]
+									[ "attic" ],
+									[ "agas" ],
+									[ "gt_bkgame" ]
 								]
 							}
 						]

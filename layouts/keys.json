@@ -1,5 +1,5 @@
 {
-    "keys_grid": {
+    "legacy_keys_grid": {
         "type": "array",
         "orientation": "vertical",
         "content": [
@@ -26,7 +26,7 @@
                         "item_size": 16,
                         "badge_font_size": 12,
                         "rows": [
-                            [ "hc_chest" ]
+                            [ "hc_item" ]
                         ]
                     },
                     {
@@ -64,7 +64,7 @@
                         "item_size": 16,
                         "badge_font_size": 12,
                         "rows": [
-                            [ "at_chest" ]
+                            [ "at_item" ]
                         ]
                     },
                     {
@@ -114,67 +114,67 @@
                         "rows": [
                             [
                                 "easternpalace",
-                                "ep_chest",
+                                "ep_item",
                                 "ep_smallkey",
                                 "ep_bigkey"
                             ],
                             [
                                 "desertpalace",
-                                "dp_chest",
+                                "dp_item",
                                 "dp_smallkey",
                                 "dp_bigkey"
                             ],
                             [
                                 "towerofhera",
-                                "toh_chest",
+                                "toh_item",
                                 "toh_smallkey",
                                 "toh_bigkey"
                             ],
                             [
                                 "palaceofdarkness",
-                                "pod_chest",
+                                "pod_item",
                                 "pod_smallkey",
                                 "pod_bigkey"
                             ],
                             [
                                 "swamppalace",
-                                "sp_chest",
+                                "sp_item",
                                 "sp_smallkey",
                                 "sp_bigkey"
                             ],
                             [
                                 "skullwoods",
-                                "sw_chest",
+                                "sw_item",
                                 "sw_smallkey",
                                 "sw_bigkey"
                             ],
                             [
                                 "thievestown",
-                                "tt_chest",
+                                "tt_item",
                                 "tt_smallkey",
                                 "tt_bigkey"
                             ],
                             [
                                 "icepalace",
-                                "ip_chest",
+                                "ip_item",
                                 "ip_smallkey",
                                 "ip_bigkey"
                             ],
                             [
                                 "miserymire",
-                                "mm_chest",
+                                "mm_item",
                                 "mm_smallkey",
                                 "mm_bigkey"
                             ],
                             [
                                 "turtlerock",
-                                "tr_chest",
+                                "tr_item",
                                 "tr_smallkey",
                                 "tr_bigkey"
                             ],
                             [
                                 "",
-                                "gt_chest",
+                                "gt_item",
                                 "gt_smallkey",
                                 "gt_bigkey"
                             ]
@@ -184,6 +184,75 @@
             }
         ]
     },
+    "keys_grid": {
+		"type": "itemgrid",
+		"margin": "1,0,2,3",
+		"item_margin": "1,1",
+		"item_size": 26,
+		"badge_font_size": 16,
+		"rows": [
+			[
+				"hc_label",
+				"easternpalace",
+				"desertpalace",
+				"towerofhera",
+				"at_label",
+				"palaceofdarkness",
+				"swamppalace",
+				"skullwoods",
+				"thievestown",
+				"icepalace",
+				"miserymire",
+				"turtlerock",
+				"gt_label"
+			],
+			[
+				"hc_item",
+				"ep_item",
+				"dp_item",
+				"toh_item",
+				"at_item",
+				"pod_item",
+				"sp_item",
+				"sw_item",
+				"tt_item",
+				"ip_item",
+				"mm_item",
+				"tr_item",
+				"gt_item"
+			],
+			[
+				"hc_smallkey",
+				"ep_smallkey",
+				"dp_smallkey",
+				"toh_smallkey",
+				"at_smallkey",
+				"pod_smallkey",
+				"sp_smallkey",
+				"sw_smallkey",
+				"tt_smallkey",
+				"ip_smallkey",
+				"mm_smallkey",
+				"tr_smallkey",
+				"gt_smallkey"
+			],
+			[
+				"",
+				"ep_bigkey",
+				"dp_bigkey",
+				"toh_bigkey",
+				"",
+				"pod_bigkey",
+				"sp_bigkey",
+				"sw_bigkey",
+				"tt_bigkey",
+				"ip_bigkey",
+				"mm_bigkey",
+				"tr_bigkey",
+				"gt_bigkey"
+			]
+		]
+	},
     "light_keys_grid": {
         "type": "itemgrid",
         "margin": "-1,2",
@@ -192,23 +261,23 @@
         "item_size": 31,
         "badge_font_size": 16,
         "rows": [
-            [ "hc_label", "hc_chest", "hc_smallkey", "" ],
-            [ "easternpalace", "ep_chest", "ep_smallkey", "ep_bigkey" ],
-            [  "desertpalace", "dp_chest", "dp_smallkey", "dp_bigkey" ],
-            [ "towerofhera", "toh_chest", "toh_smallkey", "toh_bigkey" ],
-            [ "at_label", "at_chest", "at_smallkey", "" ]
+            [ "hc_label", "hc_item", "hc_smallkey", "" ],
+            [ "easternpalace", "ep_item", "ep_smallkey", "ep_bigkey" ],
+            [  "desertpalace", "dp_item", "dp_smallkey", "dp_bigkey" ],
+            [ "towerofhera", "toh_item", "toh_smallkey", "toh_bigkey" ],
+            [ "at_label", "at_item", "at_smallkey", "" ]
         ]
     },
     "dark_keys_grid": {
         "type": "itemgrid",
         "margin": "3,-3,0,3",
         "h_alignment": "left",
-        "item_margin": "4,0",
+        "item_margin": "4,1",
         "item_size": 32,
         "badge_font_size": 16,
         "rows": [
             [ "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock", "gt_label" ],
-            [ "pod_chest", "sp_chest", "sw_chest", "tt_chest", "ip_chest", "mm_chest", "tr_chest", "gt_chest" ],
+            [ "pod_item", "sp_item", "sw_item", "tt_item", "ip_item", "mm_item", "tr_item", "gt_item" ],
             [ "pod_smallkey", "sp_smallkey", "sw_smallkey", "tt_smallkey", "ip_smallkey", "mm_smallkey", "tr_smallkey", "gt_smallkey" ],
             [ "pod_bigkey", "sp_bigkey", "sw_bigkey", "tt_bigkey", "ip_bigkey", "mm_bigkey", "tr_bigkey", "gt_bigkey" ]
         ]

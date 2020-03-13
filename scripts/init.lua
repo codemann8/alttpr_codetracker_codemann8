@@ -8,11 +8,7 @@ ScriptHost:LoadScript("scripts/mapcompassbk.lua")
 
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
-if string.find(Tracker.ActiveVariantUID, "keys") then
-	Tracker:AddItems("items/keysanity_dungeon_items.json")
-else
-	Tracker:AddItems("items/dungeon_items.json")
-end
+Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
 
@@ -29,58 +25,53 @@ MapCompassBK("Misery Mire Map/Compass/Big Key", "mm")
 MapCompassBK("Turtle Rock Map/Compass/Big Key", "tr")
 MapCompassBK("Ganon's Tower Map/Compass/Big Key", "gt")
 
---Map Locations
-if not (string.find(Tracker.ActiveVariantUID, "items_only")) then
+if Tracker.ActiveVariantUID == "items_only" then
+	Tracker:AddLayouts("layouts/layouts_custom.json")
+	Tracker:AddLayouts("layouts/layouts_shared.json")
+	Tracker:AddLayouts("layouts/dungeon_grid.json")
+	Tracker:AddLayouts("layouts/tracker.json")
+	Tracker:AddLayouts("layouts/broadcast_standard.json")
+else
+	--Maps
+	Tracker:AddMaps("maps/maps.json")
+	Tracker:AddItems("items/rooms.json")
+
+	--Layouts
+	Tracker:AddLayouts("layouts/layouts_capture.json")
+
+	--Map Locations
 	ScriptHost:LoadScript("scripts/logic_common.lua")
 	ScriptHost:LoadScript("scripts/logic_custom.lua")
-	Tracker:AddItems("items/rooms.json")
-	if not string.find(Tracker.ActiveVariantUID, "inverted") then
-		Tracker:AddMaps("maps/maps.json")
-	else
-		Tracker:AddMaps("maps/maps_inverted.json")
-	end
+	
+	Tracker:AddLocations("locations/regions.json")
+	Tracker:AddLocations("locations/dungeons.json")
+	Tracker:AddLocations("locations/underworld.json")
+	Tracker:AddLocations("locations/overworld.json")
+	
+	Tracker:AddItems("items/chest_proxies.json")
+	ScriptHost:LoadScript("scripts/keysanitymode.lua")
+	KeysanityMode(Tracker.ActiveVariantUID)
 
-	if string.find(Tracker.ActiveVariantUID, "er_") and not string.find(Tracker.ActiveVariantUID, "inverted") then
-		Tracker:AddLocations("er_locations/overworld.json")
-	elseif string.find(Tracker.ActiveVariantUID, "inverted") and not string.find(Tracker.ActiveVariantUID, "er_") then
-		Tracker:AddLocations("inverted_locations/overworld.json")
-	else
-		Tracker:AddLocations("locations/overworld.json")
-	end
-	Tracker:AddLocations("locations/dungeons.json")		
-end
-Tracker:AddItems("items/chest_proxies.json")
+	--Tracker Layout
+	Tracker:AddLayouts("layouts/layouts_custom.json")
+	Tracker:AddLayouts("layouts/layouts_shared.json")
 
---Tracker Layout
-Tracker:AddLayouts("layouts/layouts_custom.json")
-Tracker:AddLayouts("layouts/layouts_shared.json")
-if not (string.find(Tracker.ActiveVariantUID, "keys")) then
-	Tracker:AddLayouts("layouts/dungeon_grid.json")
-else
 	Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
-end
-if string.find(Tracker.ActiveVariantUID, "er_") then
 	Tracker:AddLayouts("layouts/entrance_grid.json")
-end
 
-Tracker:AddLayouts("layouts/tracker.json")
+	Tracker:AddLayouts("layouts/tracker.json")
 
---Broadcast Layout
-if MAP_ON_BROADCAST_VIEW and not (string.find(Tracker.ActiveVariantUID, "items_only")) then
-	Tracker:AddLayouts("layouts/maps.json")
-end	
-if not (string.find(Tracker.ActiveVariantUID, "keys")) then
-	if MAP_ON_BROADCAST_VIEW and string.find(Tracker.ActiveVariantUID, "er_")  then
-		Tracker:AddLayouts("layouts/broadcast_standard_custom.json")
-	else
-		Tracker:AddLayouts("layouts/broadcast_standard.json")
-	end
-else
+	--Broadcast Layout
 	Tracker:AddLayouts("layouts/keys.json")
-	if not MAP_ON_BROADCAST_VIEW or not string.find(Tracker.ActiveVariantUID, "er_") then
+	if Tracker.ActiveVariantUID == "mystery" or Tracker.ActiveVariantUID == "items_only_keys" then
 		Tracker:AddLayouts("layouts/broadcast_keysanity.json")
 	else
-		Tracker:AddLayouts("layouts/broadcast_erkeysanity.json")
+		Tracker:AddLayouts("layouts/maps.json")
+		if string.find(Tracker.ActiveVariantUID, "er_") then
+			Tracker:AddLayouts("layouts/broadcast_erkeysanity.json")
+		else
+			Tracker:AddLayouts("layouts/broadcast_keysanity.json")
+		end
 	end
 end
 

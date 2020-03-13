@@ -1,13 +1,40 @@
 print("")
 print("Active Auto-Tracker Configuration")
 print("---------------------------------------------------------------------")
-print("Enable Item Tracking:			", AUTOTRACKER_ENABLE_ITEM_TRACKING)
-print("Enable Location Tracking:		", AUTOTRACKER_ENABLE_LOCATION_TRACKING)
+print("Enable Item Tracking:			", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
+print("Enable Location Tracking:		", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
+print("Enable Region Tracking:		    ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 		print("Enable Debug Logging:				", "true")
 end
 print("---------------------------------------------------------------------")
 print("")
+
+Tracker.DisplayAllLocations = true
+Tracker.AlwaysAllowClearing = true
+
+--WORKD
+--local boots = Tracker:FindObjectForCode("hc_item")
+--boots.BadgeTextColor = "#ff0000"
+--local surrogate = Tracker:FindObjectForCode("surrogate1")
+--surrogate.Icon = otherItem.Icon
+
+--local misc = Tracker:FindObjectForCode("@Link's House/By The Door")
+--misc.Owner.Color = "#ff0000"
+--misc.Thumbnail = boots.PotentialIcon
+--misc.GateItem = flips
+--misc.HostedItem = boots
+
+--local img = ImageReference:FromPackRelativePath("images/0018.png")
+--misc.Owner.AddBadge(img, nil) --did not work
+
+--ScriptHost:Output("hi")
+
+--TESTING
+
+
+
+--TESTING END
 
 function autotracker_started()
 	-- Invoked when the auto-tracker is activated/connected
@@ -84,19 +111,19 @@ function updateInGameStatusFromMemorySegment(segment)
 end
 
 function updateProgressiveItemFromByte(segment, code, address, offset)
-		local item = Tracker:FindObjectForCode(code)
-		if item then
-			-- Do not auto-track this the user has manually modified it
-			if item.Owner.ModifiedByUser then
-				return
-			end
-
-			local value = ReadU8(segment, address)
-			if value + (offset or 0) - item.CurrentStage == 1 then
-				itemFlippedOn(code)
-			end
-			item.CurrentStage = value + (offset or 0)
+	local item = Tracker:FindObjectForCode(code)
+	if item then
+		-- Do not auto-track this the user has manually modified it
+		if item.Owner.ModifiedByUser then
+			return
 		end
+
+		local value = ReadU8(segment, address)
+		if value + (offset or 0) - item.CurrentStage == 1 then
+			itemFlippedOn(code)
+		end
+		item.CurrentStage = value + (offset or 0)
+	end
 end
 
 function updateAga1(segment)
@@ -104,7 +131,8 @@ function updateAga1(segment)
 	local value = ReadU8(segment, 0x7ef3c5)
 	if value >= 3 then
 		item.Active = true
-		if (string.find(Tracker.ActiveVariantUID, "inverted")) then
+		local worldState = Tracker:FindObjectForCode("world_state_mode")
+		if worldState.CurrentStage > 0 then
 			item = Tracker:FindObjectForCode("castle_top")
 		else
 			item = Tracker:FindObjectForCode("dw_east")
@@ -120,7 +148,8 @@ function updateAga2(segment)
 	local value = ReadU8(segment, 0x7ef2db)
 	if value & 0x20 > 0 then
 		item.Active = true
-		if (string.find(Tracker.ActiveVariantUID, "inverted")) then
+		local worldState = Tracker:FindObjectForCode("world_state_mode")
+		if worldState.CurrentStage > 0 then
 			item = Tracker:FindObjectForCode("castle_top")
 		else
 			item = Tracker:FindObjectForCode("dw_east")
@@ -355,10 +384,11 @@ function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots
 			if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 				print(locationRef, roomData, 1 << slot[2])
 			end
-					
+			
+			local entrance = Tracker:FindObjectForCode("entrance_shuffle")
 			if (roomData & (1 << slot[2])) ~= 0 then
 				clearedCount = clearedCount + 1
-			elseif not (string.find(Tracker.ActiveVariantUID, "er_")) and slot[3] and roomData & slot[3] ~= 0 then
+			elseif entrance.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
 				clearedCount = clearedCount + 1
 			end
 		end
@@ -412,7 +442,7 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, call
 			local roomData = ReadU16(segment, 0x7ef000 + (slot[1] * 2))
 
 			if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-					print(doorKeyRef, roomData, 1 << slot[2])
+				print(doorKeyRef, roomData, 1 << slot[2])
 			end
 	
 			if (roomData & (1 << slot[2])) ~= 0 then
@@ -460,8 +490,8 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 		[255] = "OW"
 	}
 
-	local doorRando = Tracker:FindObjectForCode("door_rando_mode")
-	if not doorRando.Active then
+	local doorRando = Tracker:FindObjectForCode("door_shuffle")
+	if doorRando.CurrentStage == 0 then
 		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
 		if chestKeys then
 			-- Do not auto-track this the user has manually modified it
@@ -533,33 +563,34 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 	local location = Tracker:FindObjectForCode(locationRef)
 	if location then
 		-- Do not auto-track this the user has manually modified it
-		if location.Owner.ModifiedByUser then
-			return
-		end
+		--if location.Owner.ModifiedByUser then
+		--	return
+		--end
 		
-		local doorRando = Tracker:FindObjectForCode("door_rando_mode")
-		if not doorRando.Active then
+		local doorRando = Tracker:FindObjectForCode("door_shuffle")
+		if doorRando.CurrentStage == 0 then
 			local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
 			if chest then
+				local mode = Tracker:FindObjectForCode("keysanity_mode")
 				local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
 				local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
 				local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
 				local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
 				local dungeonItems = 0
 				
-				if bigkey and bigkey.Active then
+				if bigkey and bigkey.Active and mode.CurrentStage < 3 then
 					dungeonItems = dungeonItems + 1
 				end
 				
-				if map and map.Active then
+				if map and map.Active and mode.CurrentStage < 1 then
 					dungeonItems = dungeonItems + 1
 				end
 				
-				if compass and compass.Active then
+				if compass and compass.Active and mode.CurrentStage < 1 then
 					dungeonItems = dungeonItems + 1
 				end
 				
-				if smallkey and smallkey.AcquiredCount then
+				if smallkey and smallkey.AcquiredCount and mode.CurrentStage < 2 then
 					dungeonItems = dungeonItems + smallkey.AcquiredCount
 				end
 				
@@ -599,7 +630,7 @@ end
 function updateMushroomStatus(status)
 	local item = Tracker:FindObjectForCode("mushroom")
 	if item then
-		local location = Tracker:FindObjectForCode("@Witch's Hut/Assistant")
+		local location = Tracker:FindObjectForCode("@Potion Shop/Assistant")
 		if location and location.AvailableChestCount == 0 then
 			item.CurrentStage = 2
 		end
@@ -620,7 +651,7 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 		return false
 	end
 
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return true
 	end
 
@@ -629,8 +660,8 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 	updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home", 0x7ef410, 0x01)
 	updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora", 0x7ef410, 0x02)
 	updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed", 0x7ef410, 0x04)
-	updateSectionChestCountFromByteAndFlag(segment, "@Haunted Grove/Stumpy", 0x7ef410, 0x08)
-	updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Shabbadoo", 0x7ef410, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell", 0x7ef410, 0x08)
+	updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala", 0x7ef410, 0x10)
 	updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones", 0x7ef410, 0x20)
 	-- 0x40 is unused
 	updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf", 0x7ef410, 0x80)
@@ -640,7 +671,8 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 	updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home", 0x7ef411, 0x04)
 	-- 0x08 is no longer relevant
 	updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot", 0x7ef411, 0x10)
-	updateSectionChestCountFromByteAndFlag(segment, "@Witch's Hut/Assistant", 0x7ef411, 0x20)
+	updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom", 0x7ef411, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant", 0x7ef411, 0x20)
 	-- 0x40 is unused
 	updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl", 0x7ef411, 0x80, updateBatIndicatorStatus)
 end
@@ -650,20 +682,22 @@ function updateOverworldEventsFromMemorySegment(segment)
 		return false
 	end
 
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return true
 	end		
 
 	InvalidateReadCaches()
 
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spectacle Rock/Up On Top",           3)
+	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spec Rock/Up On Top",                3)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Floating Island/Island",             5)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Race Game/Take This Trash",          40)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure", 42, updateShovelStatus)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Desert Ledge/Ledge",                 48)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Lake Hylia Island/Island",           53)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Dam/Outside",                        59)
-	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Bumper Cave/Ledge",                  74)
+	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Sunken Treasure/Drain The Dam",      59)
+	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Bumper Ledge/Ledge",                  74)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Pyramid Ledge/Ledge",                91)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Digging Game/Dig For Treasure",      104)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Master Sword Pedestal/Pedestal",     128)
@@ -681,7 +715,7 @@ function updateRoomsFromMemorySegment(segment)
 
 	InvalidateReadCaches()
 
-	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
 		updateToggleFromRoomSlot(segment, "ep", { 200, 11 })
 		updateToggleFromRoomSlot(segment, "dp", { 51, 11 })
 		updateToggleFromRoomSlot(segment, "toh", { 7, 11 })
@@ -694,7 +728,7 @@ function updateRoomsFromMemorySegment(segment)
 		updateToggleFromRoomSlot(segment, "tr", { 164, 11 })
 	end
 
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return true
 	end		
 
@@ -703,8 +737,9 @@ function updateRoomsFromMemorySegment(segment)
 	updateSectionChestCountFromRoomSlotList(segment, "@The Well/Bombable Wall", { { 47, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Hookshot Cave/Bonkable Chest", { { 60, 7 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Hookshot Cave/Back", { { 60, 4 }, { 60, 5 }, { 60, 6 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Castle Secret Entrance/Hallway", { { 85, 4 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Secret Passage/Hallway", { { 85, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Lost Woods/Forest Hideout", { { 225, 9, 4 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Forest Hideout/Cave", { { 225, 9, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Lumberjack Cave/Cave", { { 226, 9 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Spectacle Rock/Cave", { { 234, 10, 2 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Paradox Cave/Top", { { 239, 4 }, { 239, 5 }, { 239, 6 }, { 239, 7 }, { 239, 8 } })
@@ -713,20 +748,20 @@ function updateRoomsFromMemorySegment(segment)
 	updateSectionChestCountFromRoomSlotList(segment, "@Paradox Cave/Bottom", { { 255, 4 }, { 255, 5 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Tavern/Back Room", { { 259, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Link's House/By The Door", { { 260, 4 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Sahasrala's Hut/Back Room", { { 261, 4 }, { 261, 5 }, { 261, 6 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Bombable Shack/Downstairs", { { 262, 4 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Treasure Game/Prize", { { 262, 10 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Sahasrala's Hut/Closet", { { 261, 4 }, { 261, 5 }, { 261, 6 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Brewery/Downstairs", { { 262, 4 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Chest Game/Prize", { { 262, 10 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Chicken House/Bombable Wall", { { 264, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Aginah's Cave/Cave", { { 266, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Dam/Inside", { { 267, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Mimic Cave/Cave", { { 268, 4 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Mire Shack/Shack", { { 269, 4 }, { 269, 5 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Mire Shed/Shed", { { 269, 4 }, { 269, 5 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@King's Tomb/The Crypt", { { 275, 4 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Waterfall Fairy/Waterfall Cave", { { 276, 4 }, { 276, 5 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Fat Fairy/Big Bomb Spot", { { 278, 4 }, { 278, 5 } }, updateBombIndicatorStatus)
+	updateSectionChestCountFromRoomSlotList(segment, "@Waterfall Fairy/Cave", { { 276, 4 }, { 276, 5 } })
+	updateSectionChestCountFromRoomSlotList(segment, "@Pyramid Fairy/Big Bomb Spot", { { 278, 4 }, { 278, 5 } }, updateBombIndicatorStatus)
 	updateSectionChestCountFromRoomSlotList(segment, "@Spike Cave/Cave", { { 279, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", { { 283, 9, 8 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@South of Grove/Circle of Bushes", { { 283, 10 } }) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
+	updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", { { 283, 10 } }) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
 	updateSectionChestCountFromRoomSlotList(segment, "@C-Shaped House/House", { { 284, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Blind's House/Basement", { { 285, 5 }, { 285, 6 }, { 285, 7 }, { 285, 8 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Blind's House/Bombable Wall", { { 285, 4 } })	 
@@ -745,7 +780,7 @@ function updateItemsFromMemorySegment(segment)
 
 	InvalidateReadCaches()
 
-	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
 		updateProgressiveItemFromByte(segment, "sword",	0x7ef359, 1)
 		updateProgressiveItemFromByte(segment, "shield", 0x7ef35a, 0)
 		updateProgressiveItemFromByte(segment, "armor",	0x7ef35b, 0)
@@ -780,7 +815,7 @@ function updateItemsFromMemorySegment(segment)
 			updateToggleItemFromByte(segment, "blue_boomerang", 0x7ef341)
 		else
 			updateToggleItemFromByteAndFlag(segment, "np_bow", 0x7ef38e, 0x80)
-			updateToggleItemFromByteAndFlag(segment, "np_silvers", 0x7ef38e, 0x40)
+			updateToggleItemFromByteAndFlag(segment, "np_silverarrows", 0x7ef38e, 0x40)
 			updateProgressiveBow(segment)
 		end
 
@@ -792,16 +827,16 @@ function updateItemsFromMemorySegment(segment)
 		updateAga1(segment)
 	end
 
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return true
 	end		
 
 	--	It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
-	--	which makes it more efficient to update them here.
-	updateSectionChestCountFromByteAndFlag(segment, "@Castle Secret Entrance/Uncle", 0x7ef3c6, 0x01)		
+	--	which makes it more efficient to update them here.		
+	updateSectionChestCountFromByteAndFlag(segment, "@Secret Passage/Uncle", 0x7ef3c6, 0x01)
 	updateSectionChestCountFromByteAndFlag(segment, "@Hobo/Under The Bridge", 0x7ef3c9, 0x01)
 	updateSectionChestCountFromByteAndFlag(segment, "@Bottle Vendor/This Jerk", 0x7ef3c9, 0x02)
-	updateSectionChestCountFromByteAndFlag(segment, "@Purple Chest/Show To Gary", 0x7ef3c9, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Purple Chest/Middle-Aged Man", 0x7ef3c9, 0x10)
 end
 
 function updateDungeonItemsFromMemorySegment(segment)
@@ -811,13 +846,13 @@ function updateDungeonItemsFromMemorySegment(segment)
 
 	InvalidateReadCaches()
 
-	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
 		if SEGMENT_ROOMDATA then
 			--Doors Opened
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_door", { { 114, 15 }, { 113, 15 }, { 50, 15, 34, 15 }, { 17, 13, 33, 15 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_door", { { 224, 13 }, { 208, 15 }, { 192, 13 }, { 176, 13 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_door", { { 133, 14 }, { 99, 15 }, { 83, 13, 67, 13 }, { 67, 14 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "toh_door", { { 119, 15 } })
+			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_door", { { 224, 13 }, { 208, 15 }, { 192, 13 }, { 176, 13 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "pod_door", { { 74, 13, 58, 15 }, { 10, 15 }, { 42, 14, 26, 12 }, { 26, 14, 25, 14 }, { 26, 15 }, { 11, 13 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_door", { { 40, 15 }, { 56, 14, 55, 12 }, { 55, 13 }, { 54, 13, 53, 15 }, { 54, 14, 38, 15 }, { 22, 14 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_door", { { 87, 13, 88, 14 }, { 104, 14, 88, 13 }, { 86, 15 }, { 89, 15, 73, 13 }, { 57, 14 } })
@@ -829,8 +864,8 @@ function updateDungeonItemsFromMemorySegment(segment)
 			
 			--Pot and Enemy Keys
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_potkey", { { 114, 10 }, { 113, 10 }, { 33, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_potkey", { { 192, 10 }, { 176, 10 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_potkey", { { 99, 10 }, { 83, 10 }, { 67, 10 } })
+			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_potkey", { { 192, 10 }, { 176, 10 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_potkey", { { 56, 10 }, { 55, 10 }, { 54, 10 }, { 53, 10 }, { 22, 10 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_potkey", { { 86, 10 }, { 57, 10 } })
 			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tt_potkey", { { 188, 10 }, { 171, 10 } })
@@ -881,10 +916,10 @@ function updateDungeonItemsFromMemorySegment(segment)
 			
 			--Small Keys
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "hc",	0x7ef37c)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "at",	0x7ef380)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ep",	0x7ef37e)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "dp",	0x7ef37f)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "toh", 0x7ef386)
+			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "at",	0x7ef380)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "pod", 0x7ef382)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sp",	0x7ef381)
 			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sw",	0x7ef384)
@@ -896,17 +931,17 @@ function updateDungeonItemsFromMemorySegment(segment)
 		end
 	end
 	
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return true
 	end
 	
 	if SEGMENT_ROOMDATA then
 		--Dungeon Chests
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_chest", { { 114, 4 }, { 113, 4 }, { 128, 4 }, { 50, 4 }, { 17, 4 }, { 17, 5 }, { 17, 6 }, { 18, 4 } })
-		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_chest", { { 224, 4 }, { 208, 4 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "ep_chest", { { 185, 4 }, { 170, 4 }, { 168, 4 }, { 169, 4 }, { 184, 4 }, { 200, 11 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_chest", { { 115, 4 }, { 115, 10 }, { 116, 4 }, { 133, 4 }, { 117, 4 }, { 51, 11 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "toh_chest", { { 135, 10 }, { 119, 4 }, { 135, 4 }, { 39, 4 }, { 39, 5 }, { 7, 11 } })
+		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_chest", { { 224, 4 }, { 208, 4 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "pod_chest", { { 9, 4 }, { 43, 4 }, { 42, 4 }, { 42, 5 }, { 58, 4 }, { 10, 4 }, { 26, 4 }, { 26, 5 }, { 26, 6 }, { 25, 4 }, { 25, 5 }, { 106, 4 }, { 106, 5 }, { 90, 11 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_chest", { { 40, 4 }, { 55, 4 }, { 54, 4 }, { 53, 4 }, { 52, 4 }, { 70, 4 }, { 118, 4 }, { 118, 5 }, { 102, 4 }, { 6, 11 } })
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_chest", { { 103, 4 }, { 104, 4 }, { 87, 4 }, { 87, 5 }, { 88, 4 }, { 88, 5 }, { 89, 4 }, { 41, 11 } })
@@ -921,9 +956,6 @@ function updateDungeonItemsFromMemorySegment(segment)
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Dark Cross", { { 50, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Back", { { 17, 4 }, { 17, 5 }, { 17, 6 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Sanctuary", { { 18, 4 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Front", { { 224, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Back", { { 208, 4 } })
 		
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Front", { { 185, 4 }, { 170, 4 }, { 168, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Big Chest", { { 169, 4 } })
@@ -941,6 +973,9 @@ function updateDungeonItemsFromMemorySegment(segment)
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Compass Chest", { { 39, 5 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Big Chest", { { 39, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Moldorm", { { 7, 11 } })
+		
+		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Front", { { 224, 4 } })
+		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Back", { { 208, 4 } })
 		
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Shooter Chest", { { 9, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Bow Side", { { 43, 4 }, { 42, 4 } })
@@ -1017,21 +1052,25 @@ function updateDungeonItemsFromMemorySegment(segment)
 		updateBossChestCountFromRoom(SEGMENT_ROOMDATA, "@Ice Palace/Khold", { 222, 11 })
 		updateBossChestCountFromRoom(SEGMENT_ROOMDATA, "@Misery Mire/Vitreous", { 144, 11 })
 		updateBossChestCountFromRoom(SEGMENT_ROOMDATA, "@Turtle Rock/Trinexx", { 164, 11 })
+
+		--Miscellaneous
+		updateToggleItemFromByteAndFlag(SEGMENT_ROOMDATA, "attic", 0x7ef0cb, 0x01)
 	end
 	
 	--Regular Dungeon Items
-	updateSectionChestCountFromDungeon("@Hyrule Castle & Sanctuary/Items", "hc")
-	updateSectionChestCountFromDungeon("@Eastern Palace/Items", "ep")
-	updateSectionChestCountFromDungeon("@Desert Palace/Items", "dp")
-	updateSectionChestCountFromDungeon("@Tower of Hera/Items", "toh")
-	updateSectionChestCountFromDungeon("@Palace of Darkness/Items", "pod")
-	updateSectionChestCountFromDungeon("@Swamp Palace/Items", "sp")
-	updateSectionChestCountFromDungeon("@Skull Woods/Items", "sw")
-	updateSectionChestCountFromDungeon("@Thieves Town/Items", "tt")
-	updateSectionChestCountFromDungeon("@Ice Palace/Items", "ip")
-	updateSectionChestCountFromDungeon("@Misery Mire/Items", "mm")
-	updateSectionChestCountFromDungeon("@Turtle Rock/Items", "tr")
-	updateSectionChestCountFromDungeon("@Ganon's Tower/Items", "gt")
+	updateSectionChestCountFromDungeon("@HC/Items", "hc")
+	updateSectionChestCountFromDungeon("@EP/Items", "ep")
+	updateSectionChestCountFromDungeon("@DP/Items", "dp")
+	updateSectionChestCountFromDungeon("@ToH/Items", "toh")
+	updateSectionChestCountFromDungeon("@AT/Items", "at")
+	updateSectionChestCountFromDungeon("@PoD/Items", "pod")
+	updateSectionChestCountFromDungeon("@SP/Items", "sp")
+	updateSectionChestCountFromDungeon("@SW/Items", "sw")
+	updateSectionChestCountFromDungeon("@TT/Items", "tt")
+	updateSectionChestCountFromDungeon("@IP/Items", "ip")
+	updateSectionChestCountFromDungeon("@MM/Items", "mm")
+	updateSectionChestCountFromDungeon("@TR/Items", "tr")
+	updateSectionChestCountFromDungeon("@GT/Items", "gt")
 end
 
 function updateDungeonFromMemorySegment(segment)
@@ -1039,7 +1078,7 @@ function updateDungeonFromMemorySegment(segment)
 		return false
 	end
 	
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return false
 	end
 	
@@ -1076,6 +1115,22 @@ function updateDungeonFromMemorySegment(segment)
 		[0xd0] = 8,  [0xd1] = 14, [0xd2] = 14,                           [0xd5] = 24, [0xd6] = 24,              [0xd8] = 4,  [0xd9] = 4,  [0xda] = 4,  [0xdb] = 22, [0xdc] = 22,              [0xde] = 18,
 		[0xe0] = 8
 	}
+
+	local overworldMap =
+	{
+		[0x02] = "light_world", [0x03] = "dm_west_bottom",
+		[0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x11] = "lw_witch",
+		[0x22] = "light_world", [0x1e] = "light_world",
+		[0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
+		[0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
+		[0x3a] = "light_world", [0x3b] = "light_world",
+		[0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
+		[0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
+		[0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
+		[0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
+		[0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
+		[0x7b] = "dw_south"
+	}
 	
 	local dungeon = Tracker:FindObjectForCode("dungeon")
 	local dungeonLocal = 0xff
@@ -1091,6 +1146,15 @@ function updateDungeonFromMemorySegment(segment)
 		if dungeon.AcquiredCount ~= dungeonLocal then
 			dungeon.AcquiredCount = dungeonLocal
 		end
+
+		if not AUTOTRACKER_DISABLE_REGION_TRACKING then
+			if owarea > 0 and overworldMap[owarea] then
+				local region = Tracker:FindObjectForCode(overworldMap[owarea])
+				if region then
+					region.Active = true
+				end
+			end
+		end
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
@@ -1103,7 +1167,7 @@ function updateModuleFromMemorySegment(segment)
 		return false
 	end
 	
-	if not AUTOTRACKER_ENABLE_LOCATION_TRACKING then
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return false
 	end
 	
@@ -1139,6 +1203,7 @@ function updateModuleFromMemorySegment(segment)
 	end
 
 	--update dungeon image
+	local entrance = Tracker:FindObjectForCode("entrance_shuffle")
 	if ReadU8(segment, 0x7e0010) == 0x07 then --underworld
 		LASTROOMID = ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)
 		local dungeonId = dungeonMap[LASTROOMID]
@@ -1148,26 +1213,26 @@ function updateModuleFromMemorySegment(segment)
 		end
 
 		if dungeonId then
-			if (string.find(Tracker.ActiveVariantUID, "er_")) then
+			if entrance.CurrentStage > 0 then
 				sendExternalMessage("dungeon", "er-"..dungeonId)
 			else
 				sendExternalMessage("dungeon", dungeonId)
 			end
 		end
 	elseif ReadU8(segment, 0x7e0010) == 0x09 then --overworld
-		--LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
+		LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("OW: ", ReadU8(SEGMENT_OWID, 0x7e008a))
 		end
 
 		if ReadU8(SEGMENT_OWID, 0x7e008a) >= 0x40 and ReadU8(SEGMENT_OWID, 0x7e008a) < 0x80 then
-			if (string.find(Tracker.ActiveVariantUID, "er_")) then
+			if entrance.CurrentStage > 0 then
 				sendExternalMessage("dungeon", "er-dw")
 			else
 				sendExternalMessage("dungeon", "dw")
 			end
 		else
-			if (string.find(Tracker.ActiveVariantUID, "er_")) then
+			if entrance.CurrentStage > 0 then
 				sendExternalMessage("dungeon", "er-lw")
 			else
 				sendExternalMessage("dungeon", "lw")
@@ -1177,7 +1242,7 @@ function updateModuleFromMemorySegment(segment)
 end
 
 function updateGTBKFromMemorySegment(segment)
-	if not isInGame() or string.find(Tracker.ActiveVariantUID, "keys") then
+	if not isInGame() then
 		return false
 	end
 	
@@ -1213,7 +1278,7 @@ function updateHeartPiecesFromMemorySegment(segment)
 
 	InvalidateReadCaches()
 
-	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
 		updateConsumableItemFromByte(segment, "heartpiece", 0x7ef448)
 	end
 end
@@ -1225,7 +1290,7 @@ function updateHeartContainersFromMemorySegment(segment)
 
 	InvalidateReadCaches()
 
-	if AUTOTRACKER_ENABLE_ITEM_TRACKING then
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
 		local pieces = Tracker:FindObjectForCode("heartpiece")
 		local containers = Tracker:FindObjectForCode("heartcontainer")
 
@@ -1310,3 +1375,4 @@ SEGMENT_LASTROOMID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e00a0, 2, upda
 SEGMENT_GTBIGKEYCOUNT = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef42a, 1, updateGTBKFromMemorySegment)
 SEGMENT_GTTORCHROOM = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef118, 2, updateGTBKFromMemorySegment) --GT Torch Visit
 ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef0d6, 2, updateGTBKFromMemorySegment) --GT Gauntlet Climb Update
+ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef01a, 2, updateGTBKFromMemorySegment) --Aga2 Update

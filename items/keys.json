@@ -1,147 +1,73 @@
 [
-	// Eastern Big Key
+	// Big Keys
 	{
 		"name": "Eastern Palace Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "ep_bigkey"
 	},
-	// Desert Big Key
 	{
 		"name": "Desert Palace Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "dp_bigkey"
 	},
-	// Desert Small Keys
-	{
-		"name": "Desert Palace Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "dp_smallkey",
-		"max_quantity": 1
-	},
-	// Hera Big Key
 	{
 		"name": "Tower of Hera Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "toh_bigkey"
 	},
-	// Hera Small Keys
-	{
-		"name": "Tower of Hera Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "toh_smallkey",
-		"max_quantity": 1
-	},
-	// POD Big Key
 	{
 		"name": "Palace of Darkness Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "pod_bigkey"
 	},
-	// POD Small Keys
-	{
-		"name": "Palace of Darkness Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "pod_smallkey",
-		"max_quantity": 6
-	},
-	// SP Big Key
 	{
 		"name": "Swamp Palace Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "sp_bigkey"
 	},
-	// SP Small Keys
-	{
-		"name": "Swamp Palace Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sp_smallkey",
-		"max_quantity": 1
-	},
-	// SW Big Key
 	{
 		"name": "Skull Woods Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "sw_bigkey"
 	},
-	// SW Small Keys
-	{
-		"name": "Skull Woods Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sw_smallkey",
-		"max_quantity": 3
-	},
-	// TT Big Key
 	{
 		"name": "Thieves Town Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "tt_bigkey"
 	},
-	// TT Small Keys
-	{
-		"name": "Thieves Town Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tt_smallkey",
-		"max_quantity": 1
-	},
-	// IP Big Key
 	{
 		"name": "Ice Palace Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "ip_bigkey"
 	},
-	// IP Small Keys
-	{
-		"name": "Ice Palace Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "ip_smallkey",
-		"max_quantity": 2
-	},
-	// MM Big Key
 	{
 		"name": "Misery Mire Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "mm_bigkey"
 	},
-	// MM Small Keys
-	{
-		"name": "Misery Mire Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "mm_smallkey",
-		"max_quantity": 3
-	},
-	// TR Big Key
 	{
 		"name": "Turtle Rock Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "tr_bigkey"
 	},
-	// TR Small Keys
 	{
-		"name": "Turtle Rock Small Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tr_smallkey",
-		"max_quantity": 4
+		"name": "Ganon's Tower Big Key",
+		"type": "toggle",
+		"img": "images/BigKey.png",
+		"codes": "gt_bigkey"
 	},
-	// HC Small Keys
+	
+	// Small Keys
 	{
 		"name": "Hyrule Castle Small Key",
 		"type": "consumable",
@@ -149,7 +75,20 @@
 		"codes": "hc_smallkey",
 		"max_quantity": 1
 	},
-	// AT Small Keys
+	{
+		"name": "Desert Palace Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "dp_smallkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Tower of Hera Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "toh_smallkey",
+		"max_quantity": 1
+	},
 	{
 		"name": "Aganhim's Tower Small Key",
 		"type": "consumable",
@@ -157,7 +96,55 @@
 		"codes": "at_smallkey",
 		"max_quantity": 2
 	},
-	// GT Small Keys
+	{
+		"name": "Palace of Darkness Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "pod_smallkey",
+		"max_quantity": 6
+	},
+	{
+		"name": "Swamp Palace Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sp_smallkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Skull Woods Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sw_smallkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Thieves Town Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tt_smallkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Ice Palace Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "ip_smallkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Misery Mire Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "mm_smallkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Turtle Rock Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tr_smallkey",
+		"max_quantity": 4
+	},
 	{
 		"name": "Ganon's Tower Small Key",
 		"type": "consumable",
@@ -165,14 +152,7 @@
 		"codes": "gt_smallkey",
 		"max_quantity": 4
 	},
-	// GT Big Key
-	{
-		"name": "Ganon's Tower Big Key",
-		"type": "toggle",
-		"img": "images/BigKey.png",
-		"codes": "gt_bigkey"
-	},
-	// Generic Small Keys
+	// Generic Keys
 	{
 		"name": "Generic Small Key",
 		"type": "static",
@@ -180,7 +160,6 @@
 		"codes": "generic_smallkey",
 		"capturable": true
 	},
-	// Generic Big Keys
 	{
 		"name": "Generic Big Key",
 		"type": "static",
@@ -189,107 +168,7 @@
 		"capturable": true
 	},
 	
-	// Eastern Chests
-	{
-		"name": "Eastern Palace Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "ep_chest",
-		"max_quantity": 6,
-		"initial_quantity": 6,
-		"increment": -1
-	},
-	// Desert Chests
-	{
-		"name": "Desert Palace Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "dp_chest",
-		"max_quantity": 6,
-		"initial_quantity": 6,
-		"increment": -1
-	},
-	// Hera Chests
-	{
-		"name": "Tower of Hera Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "toh_chest",
-		"max_quantity": 6,
-		"initial_quantity": 6,
-		"increment": -1
-	},
-	// POD Chests
-	{
-		"name": "Palace of Darkness Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "pod_chest",
-		"max_quantity": 14,
-		"initial_quantity": 14,
-		"increment": -1
-	},
-	// SP Chests
-	{
-		"name": "Swamp Palace Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "sp_chest",
-		"max_quantity": 10,
-		"initial_quantity": 10,
-		"increment": -1
-	},
-	// SW Chests
-	{
-		"name": "Skull Woods Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "sw_chest",
-		"max_quantity": 8,
-		"initial_quantity": 8,
-		"increment": -1
-	},
-	// TT Chests
-	{
-		"name": "Thieves Town Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "tt_chest",
-		"max_quantity": 8,
-		"initial_quantity": 8,
-		"increment": -1
-	},
-	// IP Chests
-	{
-		"name": "Ice Palace Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "ip_chest",
-		"max_quantity": 8,
-		"initial_quantity": 8,
-		"increment": -1
-	},
-	// MM Chests
-	{
-		"name": "Misery Mire Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "mm_chest",
-		"max_quantity": 8,
-		"initial_quantity": 8,
-		"increment": -1
-	},
-	// TR Chests
-	{
-		"name": "Turtle Rock Chest",
-		"type": "consumable",
-		"img": "images/0058.png",
-		"codes": "tr_chest",
-		"max_quantity": 12,
-		"initial_quantity": 12,
-		"increment": -1
-	},
-	// HC Chests
+	// Chests
 	{
 		"name": "Hyrule Castle Chest",
 		"type": "consumable",
@@ -299,7 +178,33 @@
 		"initial_quantity": 8,
 		"increment": -1
 	},
-	// AT Chests
+	{
+		"name": "Eastern Palace Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "ep_chest",
+		"max_quantity": 6,
+		"initial_quantity": 6,
+		"increment": -1
+	},
+	{
+		"name": "Desert Palace Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "dp_chest",
+		"max_quantity": 6,
+		"initial_quantity": 6,
+		"increment": -1
+	},
+	{
+		"name": "Tower of Hera Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "toh_chest",
+		"max_quantity": 6,
+		"initial_quantity": 6,
+		"increment": -1
+	},
 	{
 		"name": "Aga Tower Chest",
 		"type": "consumable",
@@ -309,7 +214,69 @@
 		"initial_quantity": 2,
 		"increment": -1
 	},
-	// GT Chests
+	{
+		"name": "Palace of Darkness Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "pod_chest",
+		"max_quantity": 14,
+		"initial_quantity": 14,
+		"increment": -1
+	},
+	{
+		"name": "Swamp Palace Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "sp_chest",
+		"max_quantity": 10,
+		"initial_quantity": 10,
+		"increment": -1
+	},
+	{
+		"name": "Skull Woods Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "sw_chest",
+		"max_quantity": 8,
+		"initial_quantity": 8,
+		"increment": -1
+	},
+	{
+		"name": "Thieves Town Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "tt_chest",
+		"max_quantity": 8,
+		"initial_quantity": 8,
+		"increment": -1
+	},
+	{
+		"name": "Ice Palace Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "ip_chest",
+		"max_quantity": 8,
+		"initial_quantity": 8,
+		"increment": -1
+	},
+	{
+		"name": "Misery Mire Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "mm_chest",
+		"max_quantity": 8,
+		"initial_quantity": 8,
+		"increment": -1
+	},
+	{
+		"name": "Turtle Rock Chest",
+		"type": "consumable",
+		"img": "images/0058.png",
+		"codes": "tr_chest",
+		"max_quantity": 12,
+		"initial_quantity": 12,
+		"increment": -1
+	},
 	{
 		"name": "Ganon's Tower Chest",
 		"type": "consumable",
@@ -320,135 +287,7 @@
 		"increment": -1
 	},
 	
-	// Desert Door
-	{
-		"name": "Desert Palace Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "dp_door",
-		"max_quantity": 4
-	},
-	// Desert Pot Key
-	{
-		"name": "Desert Palace Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "dp_potkey",
-		"max_quantity": 3
-	},
-	// Hera Door
-	{
-		"name": "Tower of Hera Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "toh_door",
-		"max_quantity": 1
-	},
-	// POD Door
-	{
-		"name": "Palace of Darkness Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "pod_door",
-		"max_quantity": 6
-	},
-	// SP Door
-	{
-		"name": "Swamp Palace Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sp_door",
-		"max_quantity": 6
-	},
-	// SP Pot Key
-	{
-		"name": "Swamp Palace Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sp_potkey",
-		"max_quantity": 5
-	},
-	// SW Door
-	{
-		"name": "Skull Woods Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sw_door",
-		"max_quantity": 5
-	},
-	// SW Pot Key
-	{
-		"name": "Skull Woods Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "sw_potkey",
-		"max_quantity": 2
-	},
-	// TT Door
-	{
-		"name": "Thieves Town Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tt_door",
-		"max_quantity": 3
-	},
-	// TT Pot Key
-	{
-		"name": "Thieves Town Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tt_potkey",
-		"max_quantity": 2
-	},
-	// IP Door
-	{
-		"name": "Ice Palace Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "ip_door",
-		"max_quantity": 6
-	},
-	// IP Pot Key
-	{
-		"name": "Ice Palace Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "ip_potkey",
-		"max_quantity": 4
-	},
-	// MM Door
-	{
-		"name": "Misery Mire Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "mm_door",
-		"max_quantity": 6
-	},
-	// MM Pot Key
-	{
-		"name": "Misery Mire Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "mm_potkey",
-		"max_quantity": 3
-	},
-	// TR Door
-	{
-		"name": "Turtle Rock Door",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tr_door",
-		"max_quantity": 6
-	},
-	// TR Pot Key
-	{
-		"name": "Turtle Rock Pot Key",
-		"type": "consumable",
-		"img": "images/SmallKey2.png",
-		"codes": "tr_potkey",
-		"max_quantity": 2
-	},
-	// HC Door
+	// Doors
 	{
 		"name": "Hyrule Castle Door",
 		"type": "consumable",
@@ -456,15 +295,27 @@
 		"codes": "hc_door",
 		"max_quantity": 4
 	},
-	// HC Pot Key
 	{
-		"name": "Hyrule Castle Pot Key",
+		"name": "Eastern Palace Door",
 		"type": "consumable",
 		"img": "images/SmallKey2.png",
-		"codes": "hc_potkey",
-		"max_quantity": 3
+		"codes": "ep_door",
+		"max_quantity": 2
 	},
-	// AT Door
+	{
+		"name": "Desert Palace Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "dp_door",
+		"max_quantity": 4
+	},
+	{
+		"name": "Tower of Hera Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "toh_door",
+		"max_quantity": 1
+	},
 	{
 		"name": "Aga Tower Door",
 		"type": "consumable",
@@ -472,15 +323,55 @@
 		"codes": "at_door",
 		"max_quantity": 4
 	},
-	// AT Pot Key
 	{
-		"name": "Aga Tower Pot Key",
+		"name": "Palace of Darkness Door",
 		"type": "consumable",
 		"img": "images/SmallKey2.png",
-		"codes": "at_potkey",
-		"max_quantity": 2
+		"codes": "pod_door",
+		"max_quantity": 6
 	},
-	// GT Door
+	{
+		"name": "Swamp Palace Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sp_door",
+		"max_quantity": 6
+	},
+	{
+		"name": "Skull Woods Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sw_door",
+		"max_quantity": 5
+	},
+	{
+		"name": "Thieves Town Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tt_door",
+		"max_quantity": 3
+	},
+	{
+		"name": "Ice Palace Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "ip_door",
+		"max_quantity": 6
+	},
+	{
+		"name": "Misery Mire Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "mm_door",
+		"max_quantity": 6
+	},
+	{
+		"name": "Turtle Rock Door",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tr_door",
+		"max_quantity": 6
+	},
 	{
 		"name": "Ganon's Tower Door",
 		"type": "consumable",
@@ -488,7 +379,78 @@
 		"codes": "gt_door",
 		"max_quantity": 8
 	},
-	// GT Pot Key
+
+	// Pot Keys
+	{
+		"name": "Hyrule Castle Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "hc_potkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Eastern Palace Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "ep_potkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Desert Palace Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "dp_potkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Aga Tower Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "at_potkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Swamp Palace Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sp_potkey",
+		"max_quantity": 5
+	},
+	{
+		"name": "Skull Woods Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "sw_potkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Thieves Town Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tt_potkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Ice Palace Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "ip_potkey",
+		"max_quantity": 4
+	},
+	{
+		"name": "Misery Mire Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "mm_potkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Turtle Rock Pot Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "tr_potkey",
+		"max_quantity": 2
+	},
 	{
 		"name": "Ganon's Tower Pot Key",
 		"type": "consumable",
@@ -497,77 +459,67 @@
 		"max_quantity": 4
 	},
 	
-	// Eastern Compass
+	// Compasses
 	{
 		"name": "Eastern Palace Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "ep_compass"
 	},
-	// Desert Compass
 	{
 		"name": "Desert Palace Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "dp_compass"
 	},
-	// Hera Compass
 	{
 		"name": "Tower of Hera Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "toh_compass"
 	},
-	// POD Compass
 	{
 		"name": "Palace of Darkness Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "pod_compass"
 	},
-	// SP Compass
 	{
 		"name": "Swamp Palace Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "sp_compass"
 	},
-	// SW Compass
 	{
 		"name": "Skull Woods Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "sw_compass"
 	},
-	// TT Compass
 	{
 		"name": "Thieves Town Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "tt_compass"
 	},
-	// IP Compass
 	{
 		"name": "Ice Palace Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "ip_compass"
 	},
-	// MM Compass
 	{
 		"name": "Misery Mire Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "mm_compass"
 	},
-	// TR Compass
 	{
 		"name": "Turtle Rock Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "tr_compass"
 	},
-	// GT Compass
 	{
 		"name": "Ganon's Tower Compass",
 		"type": "toggle",
@@ -575,85 +527,73 @@
 		"codes": "gt_compass"
 	},
 	
-	// Eastern Map
+	// Maps
+	{
+		"name": "Hyrule Castle Map",
+		"type": "toggle",
+		"img": "images/map.png",
+		"codes": "hc_map"
+	},
 	{
 		"name": "Eastern Palace Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "ep_map"
 	},
-	// Desert Map
 	{
 		"name": "Desert Palace Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "dp_map"
 	},
-	// Hera Map
 	{
 		"name": "Tower of Hera Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "toh_map"
 	},
-	// POD Map
 	{
 		"name": "Palace of Darkness Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "pod_map"
 	},
-	// SP Map
 	{
 		"name": "Swamp Palace Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "sp_map"
 	},
-	// SW Map
 	{
 		"name": "Skull Woods Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "sw_map"
 	},
-	// TT Map
 	{
 		"name": "Thieves Town Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "tt_map"
 	},
-	// IP Map
 	{
 		"name": "Ice Palace Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "ip_map"
 	},
-	// MM Map
 	{
 		"name": "Misery Mire Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "mm_map"
 	},
-	// TR Map
 	{
 		"name": "Turtle Rock Map",
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "tr_map"
 	},
-	// HC Map
-	{
-		"name": "Hyrule Castle Map",
-		"type": "toggle",
-		"img": "images/0058.png",
-		"img": "images/map.png",
-		"codes": "hc_map"
-	},
-	// GT Map
 	{
 		"name": "Ganon's Tower Map",
 		"type": "toggle",
@@ -661,7 +601,7 @@
 		"codes": "gt_map"
 	},
 	
-	//GT BK Game
+	// GT BK Game
 	{
 		"name": "Ganon's Tower Big Key Game",
 		"type": "consumable",
