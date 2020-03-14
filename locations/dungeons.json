@@ -48,8 +48,7 @@
 						"clear_as_group": true,
 						"access_rules": [
 							"lift1",
-							"hc_smallkey:1,[firesource]",
-							"@Non-Key Keysanity,[firesource]"
+							"hc_smallkey:1,[firesource]"
 						],
 						"item_count": 3
 					},
@@ -229,7 +228,7 @@
 		"name": "ToH Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Death Mountain Top West",
+			"@Death Mountain West Top",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -253,7 +252,8 @@
 					{
 						"name": "Basement",
 						"access_rules": [
-							"firesource,toh_smallkey"
+							"firesource,toh_smallkey",
+							"firesource,@Non-Key Keysanity"
 						],
 						"item_count": 1
 					},
@@ -261,14 +261,16 @@
 						"name": "Compass Chest",
 						"access_rules": [
 							"toh_bigkey",
-							"[toh_bigkey],hookshot"
+							"[toh_bigkey],hookshot",
+							"@Non-Full Keysanity"
 						],
 						"item_count": 1
 					},
 					{
 						"name": "Big Chest",
 						"access_rules": [
-							"toh_bigkey"
+							"toh_bigkey",
+							"@Non-Full Keysanity"
 						],
 						"item_count": 1
 					},
@@ -907,8 +909,8 @@
 	{
     	"name": "TR Main Entrance",
         "access_rules": [
-            "$canUseMedallions,tr_medallion",
-			"$canUseMedallions,bombos,ether,quake",
+            "@Dark Death Mountain Top,$canUseMedallions,tr_medallion",
+			"@Dark Death Mountain Top,$canUseMedallions,bombos,ether,quake",
 			"entrance_shuffle_on"
         ]
     },
