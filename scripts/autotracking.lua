@@ -599,7 +599,7 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 					print(dungeonPrefix.." Chests", chest.MaxCount - chest.AcquiredCount)
 				end
 				
-				location.AvailableChestCount = location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems)
+				location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
 			end
 		end
 	end
@@ -1126,7 +1126,7 @@ function updateDungeonFromMemorySegment(segment)
 		[0x3a] = "light_world", [0x3b] = "light_world",
 		[0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
 		[0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-		[0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
+		[0x5a] = "dw_west", --[0x5b] = "dw_east", [0x5e] = "dw_east", --one of these two are automarking during S+Q
 		[0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
 		[0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
 		[0x7b] = "dw_south"
