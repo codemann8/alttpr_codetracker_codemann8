@@ -523,8 +523,8 @@
 		"name": "SP Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"world_state_open,@South Dark World,mirror,pearl",
-			"world_state_inverted,@South Dark World,mirror",
+			"world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl",
+			"world_state_inverted,entrance_shuffle_off,@South Dark World,mirror",
 			"entrance_shuffle_on,dam"
 		],
 		"children": [
@@ -627,7 +627,8 @@
 					{
 						"name": "Big Chest",
 						"access_rules": [
-							"sw_bigkey"
+							"sw_bigkey",
+							"@Non-Full Keysanity"
 						],
 						"item_count": 1
 					},
@@ -909,8 +910,10 @@
 	{
     	"name": "TR Main Entrance",
         "access_rules": [
-            "@Dark Death Mountain Top,$canUseMedallions,tr_medallion",
-			"@Dark Death Mountain Top,$canUseMedallions,bombos,ether,quake",
+            "world_state_open,@Death Mountain East Top,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
+			"world_state_open,@Death Mountain East Top,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+			"world_state_inverted,@Dark Death Mountain Top,$canUseMedallions,tr_medallion",
+			"world_state_inverted,@Dark Death Mountain Top,$canUseMedallions,bombos,ether,quake",
 			"entrance_shuffle_on"
         ]
     },
@@ -973,7 +976,8 @@
 						"access_rules": [
 							"@TR Main Entrance,somaria,tr_smallkey:2,[tr_smallkey:3]",
 							"@TR Main Entrance,somaria,@Non-Key Keysanity",
-							"@TR Mirror Entrances"
+							"@TR Mirror Entrances,[tr_smallkey:1]",
+							"@TR Mirror Entrances,@Non-Key Keysanity"
 						],
 						"item_count": 1
 					},

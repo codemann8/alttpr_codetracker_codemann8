@@ -100,16 +100,12 @@ function KeysanityMode:advanceToCode(code)
 end
 
 function KeysanityMode:save()
-	local saveData = {}
-	saveData["state"] = self.getState()
-	return saveData
+	return { }
 end
 
-function KeysanityMode:Load(data)
-	if data["state"] ~= nil then
-		self:setState(data["state"])
-	end
-	return true
+function KeysanityMode:load(data)
+	local item = Tracker:FindObjectForCode("keysanity_mode")
+	self:setState(item.CurrentStage)
 end
 
 function KeysanityMode:propertyChanged(key, value)

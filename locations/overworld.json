@@ -594,6 +594,7 @@
       {
         "name": "Take This Trash",
         "access_rules": [
+          "world_state_open,entrance_shuffle_off,@Light World",
           "world_state_open,@Northwest Dark World,mirror",
           "world_state_inverted,race_game,pearl",
           "{}"
@@ -823,6 +824,10 @@
   {
     "name": "South of Grove",
     "parent": "Light World",
+    "access_rules": [
+      "world_state_open,@South Dark World,mirror",
+      "world_state_inverted"
+    ],
     "sections": [
       {
         "name": "Entrance",
@@ -1169,14 +1174,15 @@
     "name": "King's Tomb Entrance",
     "parent": "Light World",
     "access_rules": [
-      "world_state_open",
-      "world_state_inverted,pearl"
+      "world_state_open,lift2",
+      "world_state_open,@Northwest Dark World,pearl,mirror",
+      "world_state_inverted,pearl,lift2"
     ],
     "sections": [
       {
         "name": "Entrance",
         "access_rules": [
-          "lift2,boots"
+          "boots"
         ],
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
@@ -1196,7 +1202,7 @@
     "name": "Graveyard Ledge Entrance",
     "parent": "Light World",
     "access_rules": [
-      "world_state_open",
+      "world_state_open,@Northwest Dark World,pearl,mirror",
       "world_state_inverted,pearl"
     ],
     "sections": [
@@ -1862,11 +1868,30 @@
     ]
   },
   {
-    "name": "Dark Lumberjack",
+    "name": "Skull Woods Area",
     "parent": "Northwest Dark World",
     "sections": [
       {
         "name": "Entrance",
+        "chest_unopened_img": "images/door_closed.png",
+        "chest_opened_img": "images/door_open.png",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "erdarkworld",
+        "x": 350,
+        "y": 275
+      }
+    ]
+  },
+  {
+    "name": "Dark Lumberjack",
+    "parent": "Northwest Dark World",
+    "sections": [
+      {
+        "name": "Entrances",
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
         "item_count": 1,
@@ -2008,6 +2033,10 @@
   {
     "name": "Brewery Entrance",
     "parent": "Northwest Dark World",
+    "access_rules": [
+      "world_state_open,pearl",
+      "world_state_inverted"
+    ],
     "sections": [
       {
         "name": "Entrance",
@@ -2689,7 +2718,9 @@
       {
         "name": "Bumper Ledge",
         "access_rules": [
+          "world_state_open,entrance_shuffle_off,@Northwest Dark World,pearl,lift1,cape",
           "world_state_open,bumper_cave",
+          "world_state_inverted,entrance_shuffle_off,@Light World,pearl,lift1,cape,mirror",
           "world_state_inverted,bumper_cave,mirror",
           "{@Northwest Dark World}"
         ],
@@ -2908,6 +2939,7 @@
     "parent": "Death Mountain Color",
     "access_rules": [
       "world_state_open,ddm_floating,mirror",
+      "world_state_open,entrance_shuffle_off,@Dark Death Mountain Top,pearl,lift1,mirror",
       "world_state_inverted,@Death Mountain East Top",
       "{@Death Mountain East Top}"
     ],
