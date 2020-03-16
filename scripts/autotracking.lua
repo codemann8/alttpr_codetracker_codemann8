@@ -177,6 +177,15 @@ function testFlag(segment, address, flag)
     end    
 end
 
+function updateProgressiveMirror(segment)
+    local item = Tracker:FindObjectForCode("mirror")    
+    if testFlag(segment, 0x7ef353, 0x2) then
+        item.Active = true
+	else
+        item.Active = false
+    end
+end
+
 function updateProgressiveBow(segment)
     local item = Tracker:FindObjectForCode("bowandarrows")    
     if testFlag(segment, 0x7ef38e, 0x40) then
@@ -800,7 +809,6 @@ function updateItemsFromMemorySegment(segment)
 		updateToggleItemFromByte(segment, "somaria",	 0x7ef350)
 		updateToggleItemFromByte(segment, "byrna",		 0x7ef351)
 		updateToggleItemFromByte(segment, "cape",			0x7ef352)
-		updateToggleItemFromByte(segment, "mirror",		0x7ef353)
 		updateToggleItemFromByte(segment, "boots",		 0x7ef355)
 		updateToggleItemFromByte(segment, "flippers",	0x7ef356)
 		updateToggleItemFromByte(segment, "pearl",		 0x7ef357)
@@ -818,6 +826,8 @@ function updateItemsFromMemorySegment(segment)
 			updateToggleItemFromByteAndFlag(segment, "np_silverarrows", 0x7ef38e, 0x40)
 			updateProgressiveBow(segment)
 		end
+
+		updateProgressiveMirror(segment)
 
 		updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20, updateMushroomStatus)
 		updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
