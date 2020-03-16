@@ -110,12 +110,13 @@
           "world_state_open,dw_witch,pearl,hookshot",
           "world_state_open,dw_east,pearl,lift1,hookshot",
           "world_state_open,dw_east,pearl,hammer,hookshot",
+          "world_state_open,dw_east,pearl,[flippers],hookshot",
           "world_state_open,aga,pearl,lift1,hookshot",
           "world_state_open,aga,pearl,hammer,hookshot",
+          "world_state_open,aga,pearl,[flippers],hookshot",
           "world_state_open,dw_southeast,pearl,[flippers],hookshot",
           "world_state_open,dw_south,pearl,hammer,hookshot",
           "world_state_open,dw_south,pearl,[flippers],hookshot",
-          
           "world_state_inverted,entrance_shuffle_off",
           "world_state_inverted,@Light World,mirror",
           "world_state_inverted,@Light World,pearl,flute",
@@ -169,7 +170,6 @@
           "world_state_open,dw_witch,pearl,[flippers]",
           "world_state_open,dw_southeast,pearl,[flippers]",
           "world_state_open,ip_area,pearl,[flippers]",
-
           "world_state_inverted,@Light World,mirror",
           "world_state_inverted,@Light World,pearl,flute",
           "world_state_inverted,@Northwest Dark World,hammer",
@@ -191,7 +191,6 @@
           "world_state_open,@South Dark World,pearl,[flippers]",
           "world_state_open,@East Dark World,pearl,[flippers]",
           "world_state_open,dw_witch,pearl,[flippers]",
-          
           "world_state_inverted,@Light World,mirror",
           "world_state_inverted,@Light World,pearl,flute",
           "world_state_inverted,@Northwest Dark World,[flippers]",
