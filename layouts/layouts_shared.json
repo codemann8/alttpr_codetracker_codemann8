@@ -500,35 +500,6 @@
             }
         ]
     },
-    "shared_map_tab": {
-        "type": "tabbed",
-        "tabs": [
-            {	
-                "title": "Overworld",
-                "content": {
-                    "type": "map",
-                    "maps": [ "lightworld", "darkworld" ]
-                }
-            },
-            {	
-                "title": "Entrance",
-                "content": {
-                    "type": "map",
-                    "maps": [ "erlightworld", "erdarkworld" ]
-                }
-            },
-            {	
-                "title": "Dungeon",
-                "content": {
-                    "type": "container",
-                    "content": {
-                        "type": "layout",
-                        "key": "shared_doorrando"
-                    }
-                }
-            }
-        ]
-    },
     "shared_doorrando_egmap": {
         "type": "itemgrid",
         "h_alignment": "center",
@@ -1537,6 +1508,35 @@
                             "gt_lobby", "gt_icearmos", "", "gt_mimics", "gt_lanmola", "gt_gauntlet_ice", ""
                         ]
                     ]
+                }
+            }
+        ]
+    },
+    "shared_map_tab": {
+        "type": "tabbed",
+        "tabs": [
+            {	
+                "title": "Overworld",
+                "content": {
+                    "type": "map",
+                    "maps": [ "lightworld", "darkworld" ]
+                }
+            },
+            {	
+                "title": "Entrance",
+                "content": {
+                    "type": "map",
+                    "maps": [ "erlightworld", "erdarkworld" ]
+                }
+            },
+            {	
+                "title": "Dungeon",
+                "content": {
+                    "type": "container",
+                    "content": {
+                        "type": "layout",
+                        "key": "shared_doorrando"
+                    }
                 }
             }
         ]
