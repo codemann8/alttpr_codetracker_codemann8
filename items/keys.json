@@ -1,6 +1,12 @@
 [
 	// Big Keys
 	{
+		"name": "Hyrule Castle Big Key",
+		"type": "toggle",
+		"img": "images/BigKey.png",
+		"codes": "hc_bigkey"
+	},
+	{
 		"name": "Eastern Palace Big Key",
 		"type": "toggle",
 		"img": "images/BigKey.png",
@@ -17,6 +23,12 @@
 		"type": "toggle",
 		"img": "images/BigKey.png",
 		"codes": "toh_bigkey"
+	},
+	{
+		"name": "Aganihm's Tower Big Key",
+		"type": "toggle",
+		"img": "images/BigKey.png",
+		"codes": "at_bigkey"
 	},
 	{
 		"name": "Palace of Darkness Big Key",
@@ -73,6 +85,13 @@
 		"type": "consumable",
 		"img": "images/SmallKey2.png",
 		"codes": "hc_smallkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Eastern Palace Small Key",
+		"type": "consumable",
+		"img": "images/SmallKey2.png",
+		"codes": "ep_smallkey",
 		"max_quantity": 1
 	},
 	{
@@ -461,6 +480,12 @@
 	
 	// Compasses
 	{
+		"name": "Hyrule Castle Compass",
+		"type": "toggle",
+		"img": "images/compass.png",
+		"codes": "hc_compass"
+	},
+	{
 		"name": "Eastern Palace Compass",
 		"type": "toggle",
 		"img": "images/compass.png",
@@ -477,6 +502,12 @@
 		"type": "toggle",
 		"img": "images/compass.png",
 		"codes": "toh_compass"
+	},
+	{
+		"name": "Aganihm's Tower Compass",
+		"type": "toggle",
+		"img": "images/compass.png",
+		"codes": "at_compass"
 	},
 	{
 		"name": "Palace of Darkness Compass",
@@ -553,6 +584,12 @@
 		"codes": "toh_map"
 	},
 	{
+		"name": "Aganihm's Tower Map",
+		"type": "toggle",
+		"img": "images/map.png",
+		"codes": "at_map"
+	},
+	{
 		"name": "Palace of Darkness Map",
 		"type": "toggle",
 		"img": "images/map.png",
@@ -599,6 +636,73 @@
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "gt_map"
+	},
+	
+	// Chest Known Count
+	{
+		"name": "HC Count",
+		"type": "consumable",
+		"codes": "hc_count"
+	},
+	{
+		"name": "Eastern Palace Count",
+		"type": "consumable",
+		"codes": "ep_count"
+	},
+	{
+		"name": "Desert Palace Count",
+		"type": "consumable",
+		"codes": "dp_count"
+	},
+	{
+		"name": "Tower of Hera Count",
+		"type": "consumable",
+		"codes": "toh_count"
+	},
+	{
+		"name": "Aganihm's Tower Count",
+		"type": "consumable",
+		"codes": "at_count"
+	},
+	{
+		"name": "Palace of Darkness Count",
+		"type": "consumable",
+		"codes": "pod_count"
+	},
+	{
+		"name": "Swamp Palace Count",
+		"type": "consumable",
+		"codes": "sp_count"
+	},
+	{
+		"name": "Skull Woods Count",
+		"type": "consumable",
+		"codes": "sw_count"
+	},
+	{
+		"name": "Thieves Town Count",
+		"type": "consumable",
+		"codes": "tt_count"
+	},
+	{
+		"name": "Ice Palace Count",
+		"type": "consumable",
+		"codes": "ip_count"
+	},
+	{
+		"name": "Misery Mire Count",
+		"type": "consumable",
+		"codes": "mm_count"
+	},
+	{
+		"name": "Turtle Rock Count",
+		"type": "consumable",
+		"codes": "tr_count"
+	},
+	{
+		"name": "Ganon's Tower Count",
+		"type": "consumable",
+		"codes": "gt_count"
 	},
 	
 	// GT BK Game
