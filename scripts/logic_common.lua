@@ -35,6 +35,18 @@ function canClearAgaTowerBarrier()
     end    
 end
 
+function canDamageArmos()
+    if Tracker:ProviderCountForCode("sword") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("hammer") > 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("bow") > 0 then
+        return 1
+    else
+        return Tracker:ProviderCountForCode("boomerang")
+    end
+end
+
 function canDamageLanmolas()
     if Tracker:ProviderCountForCode("sword") > 0 then
         return 1
