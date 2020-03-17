@@ -1109,7 +1109,7 @@ function updateDungeonFromMemorySegment(segment)
 		return false
 	end
 
-	local dungeonMap =
+	local roomMap =
 	{
 		             [0x01] = 2,  [0x02] = 0,               [0x04] = 24,              [0x06] = 10, [0x07] = 20,              [0x09] = 12, [0x0a] = 12, [0x0b] = 12, [0x0c] = 26, [0x0d] = 26, [0x0e] = 18,
 		             [0x11] = 0,  [0x12] = 0,  [0x13] = 24, [0x14] = 24, [0x15] = 24, [0x16] = 10, [0x17] = 20,              [0x19] = 12, [0x1a] = 12, [0x1b] = 12, [0x1c] = 26, [0x1d] = 26, [0x1e] = 18, [0x1f] = 18,
@@ -1125,6 +1125,25 @@ function updateDungeonFromMemorySegment(segment)
 		[0xb0] = 8,  [0xb1] = 14, [0xb2] = 14, [0xb3] = 14, [0xb4] = 24, [0xb5] = 24, [0xb6] = 24, [0xb7] = 24, [0xb8] = 4,  [0xb9] = 4,  [0xba] = 4,  [0xbb] = 22, [0xbc] = 22,              [0xbe] = 18, [0xbf] = 18,
 		[0xc0] = 8,  [0xc1] = 14, [0xc2] = 14, [0xc3] = 14, [0xc4] = 24, [0xc5] = 24, [0xc6] = 24, [0xc7] = 24, [0xc8] = 4,  [0xc9] = 4,               [0xcb] = 22, [0xcc] = 22,              [0xce] = 18,
 		[0xd0] = 8,  [0xd1] = 14, [0xd2] = 14,                           [0xd5] = 24, [0xd6] = 24,              [0xd8] = 4,  [0xd9] = 4,  [0xda] = 4,  [0xdb] = 22, [0xdc] = 22,              [0xde] = 18,
+		[0xe0] = 8
+	}
+
+	local dungeonMap =
+	{
+		              [0x01] = 254, [0x02] = 254,               [0x04] = 254,               [0x06] = 254, [0x07] = 254,               [0x09] = 254, [0x0a] = 254, [0x0b] = 254, [0x0c] = 26,  [0x0d] = 254, [0x0e] = 18,
+		              [0x11] = 254, [0x12] = 0,   [0x13] = 254, [0x14] = 254, [0x15] = 254, [0x16] = 254, [0x17] = 254,               [0x19] = 254, [0x1a] = 254, [0x1b] = 254, [0x1c] = 254, [0x1d] = 254, [0x1e] = 254, [0x1f] = 254,
+		[0x20] = 254, [0x21] = 254, [0x22] = 254, [0x23] = 24,  [0x24] = 24,                [0x26] = 254, [0x27] = 254, [0x28] = 10,  [0x29] = 254, [0x2a] = 254, [0x2b] = 254,                             [0x2e] = 254,
+		[0x30] = 254, [0x31] = 254, [0x32] = 254, [0x33] = 254, [0x34] = 254, [0x35] = 254, [0x36] = 254, [0x37] = 254, [0x38] = 254, [0x39] = 254, [0x3a] = 254, [0x3b] = 254,               [0x3d] = 254, [0x3e] = 254, [0x3f] = 254,
+		[0x40] = 254, [0x41] = 254, [0x42] = 254, [0x43] = 254, [0x44] = 254, [0x45] = 254, [0x46] = 254,                             [0x49] = 254, [0x4a] = 12,  [0x4b] = 254, [0x4c] = 254, [0x4d] = 254, [0x4e] = 254, [0x4f] = 254,
+		[0x50] = 254, [0x51] = 254, [0x52] = 254, [0x53] = 254, [0x54] = 254,               [0x56] = 16,  [0x57] = 16,  [0x58] = 16,  [0x59] = 16,  [0x5a] = 254, [0x5b] = 254, [0x5c] = 254, [0x5d] = 254, [0x5e] = 254, [0x5f] = 254,
+		[0x60] = 2,   [0x61] = 2,   [0x62] = 2,   [0x63] = 6,   [0x64] = 254, [0x65] = 254, [0x66] = 254, [0x67] = 16,  [0x68] = 16,                [0x6a] = 254, [0x6b] = 254, [0x6c] = 254, [0x6d] = 254, [0x6e] = 254,
+		[0x70] = 254, [0x71] = 254, [0x72] = 254, [0x73] = 254, [0x74] = 254, [0x75] = 254, [0x76] = 254, [0x77] = 20,                                            [0x7b] = 254, [0x7c] = 254, [0x7d] = 254, [0x7e] = 254, [0x7f] = 254,
+		[0x80] = 254, [0x81] = 254, [0x82] = 254, [0x83] = 6,   [0x84] = 6,   [0x85] = 6,                 [0x87] = 254,               [0x89] = 254,               [0x8b] = 254, [0x8c] = 254, [0x8d] = 254, [0x8e] = 254,
+		[0x90] = 254, [0x91] = 254, [0x92] = 254, [0x93] = 254,               [0x95] = 254, [0x96] = 254, [0x97] = 254, [0x98] = 14,  [0x99] = 254,               [0x9b] = 254, [0x9c] = 254, [0x9d] = 254, [0x9e] = 254, [0x9f] = 254,
+		[0xa0] = 254, [0xa1] = 254, [0xa2] = 254, [0xa3] = 254, [0xa4] = 254, [0xa5] = 254, [0xa6] = 254, [0xa7] = 254, [0xa8] = 254, [0xa9] = 254, [0xaa] = 254, [0xab] = 254, [0xac] = 254,               [0xae] = 254, [0xaf] = 254,
+		[0xb0] = 254, [0xb1] = 254, [0xb2] = 254, [0xb3] = 254, [0xb4] = 254, [0xb5] = 254, [0xb6] = 254, [0xb7] = 254, [0xb8] = 254, [0xb9] = 254, [0xba] = 254, [0xbb] = 254, [0xbc] = 254,               [0xbe] = 254, [0xbf] = 254,
+		[0xc0] = 254, [0xc1] = 254, [0xc2] = 254, [0xc3] = 254, [0xc4] = 254, [0xc5] = 254, [0xc6] = 254, [0xc7] = 254, [0xc8] = 254, [0xc9] = 4,                 [0xcb] = 254, [0xcc] = 254,               [0xce] = 254,
+		[0xd0] = 254, [0xd1] = 254, [0xd2] = 254,                             [0xd5] = 24,  [0xd6] = 24,                [0xd8] = 254, [0xd9] = 254, [0xda] = 254, [0xdb] = 22,  [0xdc] = 254,               [0xde] = 254,
 		[0xe0] = 8
 	}
 
@@ -1144,19 +1163,31 @@ function updateDungeonFromMemorySegment(segment)
 		[0x7b] = "dw_south"
 	}
 	
+	local room = Tracker:FindObjectForCode("dungeonroom")
 	local dungeon = Tracker:FindObjectForCode("dungeon")
+	local roomLocal = 0xff
 	local dungeonLocal = 0xff
 
 	if dungeon then
 		--dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
 		
 		local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
+		if owarea == 0 and roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
+			roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
+		end
+
+		if room.AcquiredCount ~= roomLocal then
+			room.AcquiredCount = roomLocal
+			print("CURRENT ROOM ORIGDUNGEON:", room.AcquiredCount, owarea)
+		end
+
 		if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
 			dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
 		end
 		
-		if dungeon.AcquiredCount ~= dungeonLocal then
+		if dungeonLocal ~= 0xfe and dungeon.AcquiredCount ~= dungeonLocal then
 			dungeon.AcquiredCount = dungeonLocal
+			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
 		end
 
 		if not AUTOTRACKER_DISABLE_REGION_TRACKING then
@@ -1170,6 +1201,7 @@ function updateDungeonFromMemorySegment(segment)
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
+			print("CURRENT ROOM ORIGDUNGEON:", room.AcquiredCount, owarea)
 		end
 	end
 end
@@ -1191,23 +1223,23 @@ function updateModuleFromMemorySegment(segment)
 		return false
 	end
 
-	local dungeonMap =
+	local dungeons =
 	{
-		[0x00] = "gt",  [0x01] = "hc",  [0x02] = "hc",                  [0x04] = "tr",                  [0x06] = "sp",  [0x07] = "toh",                 [0x09] = "pod", [0x0a] = "pod", [0x0b] = "pod", [0x0c] = "gt",  [0x0d] = "gt",  [0x0e] = "ip",
-		                [0x11] = "hc",  [0x12] = "hc",  [0x13] = "tr",  [0x14] = "tr",  [0x15] = "tr",  [0x16] = "sp",  [0x17] = "toh",                 [0x19] = "pod", [0x1a] = "pod", [0x1b] = "pod", [0x1c] = "gt",  [0x1d] = "gt",  [0x1e] = "ip",  [0x1f] = "ip",
-		[0x20] = "at",  [0x21] = "hc",  [0x22] = "hc",  [0x23] = "tr",  [0x24] = "tr",                  [0x26] = "sp",  [0x27] = "toh", [0x28] = "sp",  [0x29] = "sw",  [0x2a] = "pod", [0x2b] = "pod",                                 [0x2e] = "ip",
-		[0x30] = "at",  [0x31] = "toh", [0x32] = "hc",  [0x33] = "dp",  [0x34] = "sp",  [0x35] = "sp",  [0x36] = "sp",  [0x37] = "sp",  [0x38] = "sp",  [0x39] = "sw",  [0x3a] = "pod", [0x3b] = "pod",                 [0x3d] = "gt",  [0x3e] = "ip",  [0x3f] = "ip",
-		[0x40] = "at",  [0x41] = "hc",  [0x42] = "hc",  [0x43] = "dp",  [0x44] = "tt",  [0x45] = "tt",  [0x46] = "sp",                                  [0x49] = "sw",  [0x4a] = "pod", [0x4b] = "pod", [0x4c] = "gt",  [0x4d] = "gt",  [0x4e] = "ip",  [0x4f] = "ip",
-		[0x50] = "hc",  [0x51] = "hc",  [0x52] = "hc",  [0x53] = "dp",  [0x54] = "sp",                  [0x56] = "sw",  [0x57] = "sw",  [0x58] = "sw",  [0x59] = "sw",  [0x5a] = "pod", [0x5b] = "gt",  [0x5c] = "gt",  [0x5d] = "gt",  [0x5e] = "ip",  [0x5f] = "ip",
-		[0x60] = "hc",  [0x61] = "hc",  [0x62] = "hc",  [0x63] = "dp",  [0x64] = "tt",  [0x65] = "tt",  [0x66] = "sp",  [0x67] = "sw",  [0x68] = "sw",                  [0x6a] = "pod", [0x6b] = "gt",  [0x6c] = "gt",  [0x6d] = "gt",  [0x6e] = "ip",
-		[0x70] = "hc",  [0x71] = "hc",  [0x72] = "hc",  [0x73] = "dp",  [0x74] = "dp",  [0x75] = "dp",  [0x76] = "sp",  [0x77] = "toh",                                                 [0x7b] = "gt",  [0x7c] = "gt",  [0x7d] = "gt",  [0x7e] = "ip",  [0x7f] = "ip",
-		[0x80] = "hc",  [0x81] = "hc",  [0x82] = "hc",  [0x83] = "dp",  [0x84] = "dp",  [0x85] = "dp",                  [0x87] = "toh",                 [0x89] = "ep",                  [0x8b] = "gt",  [0x8c] = "gt",  [0x8d] = "gt",  [0x8e] = "ip",
-		[0x90] = "mm",  [0x91] = "mm",  [0x92] = "mm",  [0x93] = "mm",                  [0x95] = "gt",  [0x96] = "gt",  [0x97] = "mm",  [0x98] = "mm",  [0x99] = "ep",                  [0x9b] = "gt",  [0x9c] = "gt",  [0x9d] = "gt",  [0x9e] = "ip",  [0x9f] = "ip",
-		[0xa0] = "mm",  [0xa1] = "mm",  [0xa2] = "mm",  [0xa3] = "mm",  [0xa4] = "tr",  [0xa5] = "gt",  [0xa6] = "gt",  [0xa7] = "toh", [0xa8] = "ep",  [0xa9] = "ep",  [0xaa] = "ep",  [0xab] = "tt",  [0xac] = "tt",                  [0xae] = "ip",  [0xaf] = "ip",
-		[0xb0] = "at",  [0xb1] = "mm",  [0xb2] = "mm",  [0xb3] = "mm",  [0xb4] = "tr",  [0xb5] = "tr",  [0xb6] = "tr",  [0xb7] = "tr",  [0xb8] = "ep",  [0xb9] = "ep",  [0xba] = "ep",  [0xbb] = "tt",  [0xbc] = "tt",                  [0xbe] = "ip",  [0xbf] = "ip",
-		[0xc0] = "at",  [0xc1] = "mm",  [0xc2] = "mm",  [0xc3] = "mm",  [0xc4] = "tr",  [0xc5] = "tr",  [0xc6] = "tr",  [0xc7] = "tr",  [0xc8] = "ep",  [0xc9] = "ep",                  [0xcb] = "tt",  [0xcc] = "tt",                  [0xce] = "ip",
-		[0xd0] = "at",  [0xd1] = "mm",  [0xd2] = "mm",                                  [0xd5] = "tr",  [0xd6] = "tr",                  [0xd8] = "ep",  [0xd9] = "ep",  [0xda] = "ep",  [0xdb] = "tt",  [0xdc] = "tt",                  [0xde] = "ip",
-		[0xe0] = "at"
+		[0] = "hc",--sewer
+		[2] = "hc",
+		[4] = "ep",
+		[6] = "dp",
+		[8] = "at",
+		[10] = "sp",
+		[12] = "pod",
+		[14] = "mm",
+		[16] = "sw",
+		[18] = "ip",
+		[20] = "toh",
+		[22] = "tt",
+		[24] = "tr",
+		[26] = "gt",
+		[255] = "OW"
 	}
 
 	if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -1217,8 +1249,8 @@ function updateModuleFromMemorySegment(segment)
 	--update dungeon image
 	local entrance = Tracker:FindObjectForCode("entrance_shuffle")
 	if ReadU8(segment, 0x7e0010) == 0x07 then --underworld
-		LASTROOMID = ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)
-		local dungeonId = dungeonMap[LASTROOMID]
+		local dungeon = Tracker:FindObjectForCode("dungeon")
+		local dungeonId = dungeons[dungeon.AcquiredCount]
 
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("DUNGEON: ", dungeonId)

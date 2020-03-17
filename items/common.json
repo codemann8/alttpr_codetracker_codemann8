@@ -836,7 +836,14 @@
 			}
         ]
 	},
-	// Current Dungeon
+	// Current Dungeon/Room
+	{
+		"name": "Current Dungeon Room",
+		"type": "consumable",
+		"codes": "dungeonroom",
+		"max_quantity": 255,
+		"initial_quantity": 255
+	},
 	{
 		"name": "Current Dungeon",
 		"type": "consumable",
