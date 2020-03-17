@@ -1194,7 +1194,8 @@ function updateDungeonFromMemorySegment(segment)
 			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
 		end
 
-		if not AUTOTRACKER_DISABLE_REGION_TRACKING then
+		local entrance = Tracker:FindObjectForCode("entrance_shuffle")
+		if not AUTOTRACKER_DISABLE_REGION_TRACKING and entrance.CurrentStage > 0 then
 			if owarea > 0 and overworldMap[owarea] then
 				local region = Tracker:FindObjectForCode(overworldMap[owarea])
 				if region then
