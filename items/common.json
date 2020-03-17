@@ -825,8 +825,13 @@
 				"inherit_codes": false
 			},
 			{
-				"img": "images/mode_door_shuffle_on.png",
-				"codes": "door_shuffle,door_shuffle_on",
+				"img": "images/mode_door_shuffle_basic.png",
+				"codes": "door_shuffle,door_shuffle_on,door_shuffle_basic",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_door_shuffle_crossed.png",
+				"codes": "door_shuffle,door_shuffle_on,door_shuffle_crossed",
 				"inherit_codes": false
 			}
         ]
