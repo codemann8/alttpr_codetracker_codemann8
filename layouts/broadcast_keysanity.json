@@ -95,9 +95,9 @@
 									{
 										"type": "itemgrid",
 										"h_alignment": "center",
-										"margin": "3,-7,4,0",
-										"item_margin": "3,2",
-										"item_size": 32,
+										"margin": "3,-1,4,0",
+										"item_margin": "3,1",
+										"item_size": 31,
 										"badge_font_size": 18,
 										"rows": [
 											[ "agas" ],

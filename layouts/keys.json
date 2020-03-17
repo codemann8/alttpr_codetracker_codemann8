@@ -223,7 +223,7 @@
 			],
 			[
 				"hc_smallkey",
-				"ep_smallkey",
+				"ep_smallkey_surrogate",
 				"dp_smallkey",
 				"toh_smallkey",
 				"at_smallkey",
@@ -237,11 +237,11 @@
 				"gt_smallkey"
 			],
 			[
-				"",
+				"hc_bigkey_surrogate",
 				"ep_bigkey",
 				"dp_bigkey",
 				"toh_bigkey",
-				"",
+				"at_bigkey_surrogate",
 				"pod_bigkey",
 				"sp_bigkey",
 				"sw_bigkey",
@@ -261,11 +261,11 @@
         "item_size": 31,
         "badge_font_size": 16,
         "rows": [
-            [ "hc_label", "hc_item", "hc_smallkey", "" ],
-            [ "easternpalace", "ep_item", "ep_smallkey", "ep_bigkey" ],
+            [ "hc_label", "hc_item", "hc_smallkey", "hc_bigkey_surrogate" ],
+            [ "easternpalace", "ep_item", "ep_smallkey_surrogate", "ep_bigkey" ],
             [  "desertpalace", "dp_item", "dp_smallkey", "dp_bigkey" ],
             [ "towerofhera", "toh_item", "toh_smallkey", "toh_bigkey" ],
-            [ "at_label", "at_item", "at_smallkey", "" ]
+            [ "at_label", "at_item", "at_smallkey", "at_bigkey_surrogate" ]
         ]
     },
     "dark_keys_grid": {
