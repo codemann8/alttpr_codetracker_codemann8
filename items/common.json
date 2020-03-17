@@ -413,9 +413,26 @@
 	// Mirror
 	{
 		"name": "Mirror",
-		"type": "toggle",
-		"img": "images/0018.png",
-		"codes": "mirror"
+		"type": "progressive",
+		"allow_disabled": false,
+		"initial_stage_idx": 1,
+		"stages": [
+			{
+				"img": "images/mirrorscroll.png",
+				"codes": "mirrorscroll"
+			},
+			{
+				"img": "images/0018.png",
+				"inherit_codes": false,
+				"img_mods": "@disabled",
+				"codes": ""
+			},
+			{
+				"img": "images/0018.png",
+				"inherit_codes": false,
+				"codes": "mirror"
+			}
+		]
 	},
 	
 	// Go-Mode
@@ -545,7 +562,7 @@
 			{
 				"img": "images/sword1.png",
 				"inherit_codes": false,
-				"codes": "sword, owsword,fighter"
+				"codes": "sword,owsword,fighter"
 			},
 			{
 				"img": "images/sword2.png",
