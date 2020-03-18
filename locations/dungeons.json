@@ -828,12 +828,12 @@
 				"access_rules": [
 					"door_shuffle_off,firerod",
 					"door_shuffle_off,$canUseMedallions,bombos",
-					"door_shuffle_basic,firerod,[somaria],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
-					"door_shuffle_basic,firerod,[somaria],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
-					"door_shuffle_basic,firerod,[somaria],[hammer],[lift1],@Non-Key Keysanity",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hammer],[lift1],@Non-Key Keysanity",
+					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
+					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
+					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
+					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
+					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],@Non-Key Keysanity",
+					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],@Non-Key Keysanity",
 					"door_shuffle_crossed"
 				],
 				"sections": [
