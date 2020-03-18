@@ -191,7 +191,7 @@
 							"door_shuffle_on,[dp_smallkey:1]"
 						],
 						"clear_as_group": true,
-						"item_count": 2
+						"item_count": 1
 					},
 					{
 						"name": "Cannonball Chest",
@@ -201,7 +201,7 @@
 							"door_shuffle_crossed"
 						],
 						"clear_as_group": true,
-						"item_count": 2
+						"item_count": 1
 					},
 					{
 						"name": "Big Chest",
