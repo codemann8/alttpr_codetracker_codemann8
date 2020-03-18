@@ -527,6 +527,21 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 				end
 			end
 		end
+	elseif doorRando.CurrentStage > 0 then
+		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+		if chestKeys then
+			-- Do not auto-track this the user has manually modified it
+			if chestKeys.Owner.ModifiedByUser then
+				return
+			end
+			
+			local currentDungeon = Tracker:FindObjectForCode("dungeon")
+			if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
+				chestKeys.AcquiredCount = ReadU8(segment, 0x7ef36f)
+			else
+				chestKeys.AcquiredCount = ReadU8(segment, address)
+			end
+		end
 	end
 	
 	--update map/compass/big key
