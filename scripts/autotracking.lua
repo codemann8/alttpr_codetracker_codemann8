@@ -605,7 +605,9 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 				local dungeonItems = 0
 				
 				if bigkey and bigkey.Active and mode.CurrentStage < 3 then
-					dungeonItems = dungeonItems + 1
+					if (dungeonPrefix ~= "hc") then
+						dungeonItems = dungeonItems + 1
+					end
 				end
 				
 				if map and map.Active and mode.CurrentStage < 1 then
