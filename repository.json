@@ -13,31 +13,15 @@
             "documentation_url": "https://github.com/codemann8/alttpr_codetracker_codemann8/blob/master/README.md",
             "variants": [
                 {
-                    "name": "Standard",
+                    "name": "Map Tracker",
                     "flags": [ "map", "pins", "chathud" ]
                 },
                 {
-                    "name": "Keysanity",
+                    "name": "Map Tracker (Map Broadcast)",
                     "flags": [ "map", "pins", "chathud" ]
                 },
                 {
-                    "name": "Inverted",
-                    "flags": [ "map", "pins", "chathud" ]
-                },
-                {
-                    "name": "Inverted Keysanity",
-                    "flags": [ "map", "pins", "chathud" ]
-                },
-                {
-                    "name": "ER - Standard",
-                    "flags": [ "map", "pins", "chathud" ]
-                },
-                {
-                    "name": "ER - Keysanity",
-                    "flags": [ "map", "pins", "chathud" ]
-                },
-                {
-                    "name": "ER - Inverted Keysanity",
+                    "name": "Map Tracker (ER Broadcast)",
                     "flags": [ "map", "pins", "chathud" ]
                 },
                 {
@@ -45,7 +29,7 @@
                     "flags": [ "chathud" ]
                 },
                 {
-                    "name": "Item Tracker w/ Keys",
+                    "name": "Item/Key Tracker",
                     "flags": [ "chathud" ]
                 }
             ]
