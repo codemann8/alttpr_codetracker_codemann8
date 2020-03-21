@@ -1321,9 +1321,12 @@ function updateGTBKFromMemorySegment(segment)
 	
 	local gtBK = Tracker:FindObjectForCode("gt_bkgame")
 	local dungeon = Tracker:FindObjectForCode("dungeon")
+	local doorrando = Tracker:FindObjectForCode("door_shuffle")
 
 	if gtBK and dungeon and dungeon.AcquiredCount == 26 then --if in GT
-		local gtTorchRoom = ReadU16(SEGMENT_GTTORCHROOM, 0x7ef118)
+		if doorrando and doorrando.CurrentStage < 2 then
+			local gtTorchRoom = ReadU16(SEGMENT_GTTORCHROOM, 0x7ef118) --TODO: Fix this so then the torch can count in crossed door shuffle
+		end
 		local gtCount = ReadU8(SEGMENT_GTBIGKEYCOUNT, 0x7ef42a) & 0x1f
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
