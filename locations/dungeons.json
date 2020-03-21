@@ -1017,7 +1017,7 @@
     {
     	"name": "TR Mirror Entrances",
         "access_rules": [
-			"world_state_inverted,@East Light Death Mountain,mirror",
+			"world_state_inverted,@Death Mountain East Top,mirror",
 			"entrance_shuffle_on"
         ]
     },

@@ -273,7 +273,7 @@
         "access_rules": [
           "dm_west_top",
           "world_state_open,@Mountain Access,mirror",
-          "world_state_open,@Mountain Access,hookshot,hammer",
+          "world_state_open,entrance_shuffle_off,@Mountain Access,hookshot,hammer",
           "world_state_open,dm_west_bottom,mirror",
           "world_state_open,dm_east_bottom,hookshot,mirror",
           "world_state_open,dm_east_top,hookshot,mirror",
@@ -287,7 +287,8 @@
           "world_state_open,ddm_east,mirror,hookshot",
           "world_state_open,ddm_tr_bridge,mirror,hookshot",
           "world_state_open,ddm_tr_safety,mirror,hookshot",
-          "world_state_inverted,@Mountain Access,lift2,hammer",
+          "world_state_inverted,entrance_shuffle_off,@Mountain Access,lift2,hammer",
+          "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot,hammer",
           "world_state_inverted,dm_east_top,pearl,hammer",
           "world_state_inverted,ddm_top,lift2,pearl,hammer",
           "world_state_inverted,ddm_west,lift2,pearl,hammer",
@@ -298,13 +299,12 @@
         "name": "Death Mountain East Top",
         "access_rules": [
           "dm_east_top",
+          "world_state_open,entrance_shuffle_off,@Mountain Access,hookshot",
           "world_state_open,@Death Mountain West Top,hammer",
           "world_state_open,ddm_floating,mirror",
-          "world_state_open,entrance_shuffle_off,@Mountain Access,hookshot",
           "world_state_inverted,@Death Mountain West Top,pearl,hammer",
           "world_state_inverted,dm_west_top,pearl,hammer",
-          "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot",
-          "world_state_open,@Mountain Access,hookshot"
+          "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot"
         ]
       },
       {
