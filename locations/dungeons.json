@@ -126,8 +126,8 @@
 					{
 						"name": "Armos",
 						"access_rules": [
-							"door_shuffle_off,ep_bigkey,$canDamageArmos,[firesource]",
-							"door_shuffle_off,@Non-Full Keysanity,$canDamageArmos,[firesource]",
+							"door_shuffle_off,ep_bigkey,[firesource],bow,$canDamageArmos",
+							"door_shuffle_off,@Non-Full Keysanity,[firesource],bow,$canDamageArmos",
 							"door_shuffle_on,[$canDamageArmos]"
 						],
 						"item_count": 1,
