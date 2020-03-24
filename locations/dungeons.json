@@ -757,7 +757,8 @@
 					{
 						"name": "Attic Chest",
 						"access_rules": [
-							"[tt_smallkey:1]",
+							"[tt_smallkey:1],tt_bigkey",
+							"[tt_smallkey:1],@Non-Full Keysanity",
 							"@Non-Key Keysanity",
 							"door_shuffle_on"
 						],
