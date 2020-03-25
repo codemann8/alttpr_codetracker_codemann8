@@ -692,6 +692,7 @@
     "parent": "Mire Area",
     "access_rules": [
       "world_state_open,pearl",
+      "world_state_open,[pearl],mirror",
       "world_state_inverted"
     ],
     "sections": [
