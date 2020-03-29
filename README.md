@@ -59,7 +59,7 @@ There are 3 Map Tracker variants, each with a different Braodcast View.
 - The Map Broadcast variant shows the regular map in addition to the items
 - The ER Broadcast variant shows the entrance map, which is a bit larger due to the smaller size of the colored dots.
 
-- Maps help with putting as much info on your stream so viewers ask less questions about what you have or haven't done yet. The colored dots have been made bigger compared to other LttP packages so they are better visible to viewers.
+Maps help with putting as much info on your stream so viewers ask less questions about what you have or haven't done yet. The colored dots have been made bigger compared to other LttP packages so they are better visible to viewers.
 - Dungeon chests/items have been added to the Broadcast View for better visibility into what dungeons you have already visited.
 
 #### Autotracking
@@ -83,6 +83,5 @@ For instance, there is a settings file that can be modified to enable or disable
 #### Settings:
 - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
 - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance rando)
-
 - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
 - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
