@@ -1,7 +1,7 @@
 # CodeTracker Full Tracker Package for EmoTracker
 
 ## Overview:
-This package is meant to encompass all aspects that are desired or missing from the existing array of ALTTPR packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, mystery multiworld, door rando, and custom ROM hacks.
+This package is meant to encompass all aspects that are desired or missing from the existing array of LttP packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, mystery multiworld, door rando, and custom ROM hacks.
 
 ## Features:
 - All variants (Standard, Keysanity, Inverted, etc) have been combined into one variant where your game mode is set by toggling settings. This allows for Mystery Multiworld support where you don't have to disconnect EmoTracker from the multiworld to change to a different variant (losing all your marked off locations)
@@ -69,7 +69,7 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - In Entrance Rando, the Dam autotracks when the dam is drained.
 - In Door Rando, the Attic autotracks when the TT attic floor is bombed.
 - In Door Rando modes, `Door Rando` MUST be enabled for proper behavior (See the Door Rando sub-section below).
-- In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly unlike the other ALTTP packages.
+- In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly unlike the other LttP packages.
 
 #### Door Rando
 - In the map area of the tracker, there is a new tab called `Dungeon` which shows all the rooms in the game. These can be marked off as they are found. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the rooms. If not, there are separate tabs for each of the dungeons. Rooms with chests are marked with a GREEN square, rooms with a boss are marked with an ORANGE square.
