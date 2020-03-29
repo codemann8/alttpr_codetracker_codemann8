@@ -734,7 +734,7 @@ function updateOverworldEventsFromMemorySegment(segment)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Master Sword Pedestal/Pedestal",     128)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Zora's Domain/Ledge",                129)
 
-	updateAga2(segment)
+	--updateAga2(segment) --TODO: Find better way to determine Pyramid Hole
 	updateDam(segment)
 end
 
@@ -1202,7 +1202,6 @@ function updateDungeonFromMemorySegment(segment)
 
 		if room.AcquiredCount ~= roomLocal then
 			room.AcquiredCount = roomLocal
-			print("CURRENT ROOM ORIGDUNGEON:", room.AcquiredCount, owarea)
 		end
 
 		if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
@@ -1211,7 +1210,6 @@ function updateDungeonFromMemorySegment(segment)
 		
 		if dungeonLocal ~= 0xfe and dungeon.AcquiredCount ~= dungeonLocal then
 			dungeon.AcquiredCount = dungeonLocal
-			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
 		end
 
 		local entrance = Tracker:FindObjectForCode("entrance_shuffle")
