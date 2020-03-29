@@ -1539,11 +1539,7 @@
       {
         "name": "Ledge",
         "access_rules": [
-          "desert_ledge",
-          "world_state_open,flute,lift2,mirror",
-          "world_state_open,mire_area,mirror",
-          "world_state_open,desert_back,lift1",
-          "world_state_inverted,desert_back,pearl,lift1",
+          "@Desert Ledge Area",
           "{}"
         ],
         "capture_item": true,
