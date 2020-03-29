@@ -192,18 +192,28 @@ function updateProgressiveMirror(segment)
 end
 
 function updateProgressiveBow(segment)
-    local item = Tracker:FindObjectForCode("bowandarrows")    
-    if testFlag(segment, 0x7ef38e, 0x40) then
-        if testFlag(segment, 0x7ef38e, 0x80) then
+	local item = Tracker:FindObjectForCode("bowandarrows")
+	if Tracker.ActiveVariantUID == "items_only" then
+		if ReadU8(segment, 0x7ef340) > 2 then
 			item.CurrentStage = 3
+		elseif ReadU8(segment, 0x7ef340) > 0 then
+			item.CurrentStage = 2
 		else
-			item.CurrentStage = 0
+			item.CurrentStage = 1
 		end
-	elseif testFlag(segment, 0x7ef38e, 0x80) then
-        item.CurrentStage = 2
-    else
-        item.CurrentStage = 1
-    end
+	else
+		if testFlag(segment, 0x7ef38e, 0x40) then
+			if testFlag(segment, 0x7ef38e, 0x80) then
+				item.CurrentStage = 3
+			else
+				item.CurrentStage = 0
+			end
+		elseif testFlag(segment, 0x7ef38e, 0x80) then
+			item.CurrentStage = 2
+		else
+			item.CurrentStage = 1
+		end
+	end
 end
 
 function updateBottles(segment)
@@ -287,25 +297,29 @@ end
 
 function updateFlute(segment)
 	local item = Tracker:FindObjectForCode("flute")
-	local value = ReadU8(segment, 0x7ef38c)
-
-	local fakeFlute = value & 0x02
-	local realFlute = value & 0x01
-
-	if realFlute ~= 0 then
-		if item.CurrentStage == 0 then
-			itemFlippedOn("flute2")
-		end
-		item.Active = true
-		item.CurrentStage = 1
-	elseif fakeFlute ~= 0 then
-		if not item.Active then
-			itemFlippedOn("flute")
-		end
-		item.Active = true
-		item.CurrentStage = 0
+	if Tracker.ActiveVariantUID == "items_only" then
+		item.Active = ReadU8(segment, 0x7ef34c) > 1
 	else
-		item.Active = false
+		local value = ReadU8(segment, 0x7ef38c)
+
+		local fakeFlute = value & 0x02
+		local realFlute = value & 0x01
+
+		if realFlute ~= 0 then
+			if item.CurrentStage == 0 then
+				itemFlippedOn("flute2")
+			end
+			item.Active = true
+			item.CurrentStage = 1
+		elseif fakeFlute ~= 0 then
+			if not item.Active then
+				itemFlippedOn("flute")
+			end
+			item.Active = true
+			item.CurrentStage = 0
+		else
+			item.Active = false
+		end
 	end
 end
 
@@ -836,26 +850,28 @@ function updateItemsFromMemorySegment(segment)
 		updateToggleItemFromByte(segment, "pearl",		 0x7ef357)
 		updateProgressiveItemFromByte(segment, "halfmagic",	0x7ef37b)
 
-		updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
-		updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
-		updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
 		
-		if (string.find(Tracker.ActiveVariantUID, "items_only")) then
-			updateToggleItemFromByte(segment, "bow", 0x7ef340)
-			updateToggleItemFromByte(segment, "blue_boomerang", 0x7ef341)
+		if Tracker.ActiveVariantUID == "items_only" then
+			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef341, 0x01)
+			updateToggleItemFromByteAndFlag(segment, "red_boomerang", 0x7ef341, 0x02)
+			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
+			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef344, 0x2)
 		else
 			updateToggleItemFromByteAndFlag(segment, "np_bow", 0x7ef38e, 0x80)
 			updateToggleItemFromByteAndFlag(segment, "np_silverarrows", 0x7ef38e, 0x40)
-			updateProgressiveBow(segment)
+			
+			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
+			updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
+			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
+		
+			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20, updateMushroomStatus)
+			updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
 		end
 
-		updateProgressiveMirror(segment)
-
-		updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20, updateMushroomStatus)
-		updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
-
-		updateBottles(segment)
+		updateProgressiveBow(segment)
 		updateFlute(segment)
+		updateProgressiveMirror(segment)
+		updateBottles(segment)
 		updateAga1(segment)
 	end
 
