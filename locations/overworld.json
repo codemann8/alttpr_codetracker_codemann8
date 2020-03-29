@@ -2091,8 +2091,9 @@
       {
         "name": "Bring Him Home",
         "access_rules": [
-          "lift2",
-          "world_state_inverted,@Light World,pearl,mirror"
+          "world_state_open,lift2",
+          "world_state_inverted,@Light World,pearl,mirror",
+          "world_state_inverted,@Light World,lift2"
         ],
         "item_count": 1
       }
