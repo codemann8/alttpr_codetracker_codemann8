@@ -58,6 +58,12 @@
 					{
 						"name": "Sanctuary",
 						"short_name": "Sanc",
+						"access_rules": [
+							"world_state_open",
+							"world_state_inverted,pearl",
+							"world_state_inverted,[pearl],mirror",
+							"entrance_shuffle_on"
+						],
 						"item_count": 1
 					}
 				],

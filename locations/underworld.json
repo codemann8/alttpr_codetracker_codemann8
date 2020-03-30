@@ -58,18 +58,24 @@
   {
     "name": "Lost Woods",
     "parent": "Light World",
-    "access_rules": [
-      "world_state_open",
-      "world_state_inverted,pearl"
-    ],
     "sections": [
       {
         "name": "Mushroom Spot",
         "short_name": "Shroom",
+        "access_rules": [
+          "world_state_open",
+          "world_state_inverted,pearl"
+        ],
         "item_count": 1
       },
       {
         "name": "Forest Hideout",
+        "access_rules": [
+          "world_state_open",
+          "world_state_inverted,pearl",
+          "{}"
+        ],
+        "capture_item": true,
         "item_count": 1
       }
     ],
@@ -114,6 +120,10 @@
     "sections": [
       {
         "name": "Cave",
+        "access_rules": [
+          "world_state_open",
+          "world_state_inverted,[pearl]"
+        ],
         "item_count": 4
       },
       {
@@ -257,7 +267,9 @@
     "parent": "Light World",
     "access_rules": [
       "world_state_open,@South Dark World,mirror",
-      "world_state_inverted,pearl"
+      "world_state_inverted,pearl",
+      "world_state_inverted,[pearl],mirror",
+      "{world_state_inverted}"
     ],
     "sections": [
       {
@@ -287,7 +299,8 @@
     "parent": "Light World",
     "access_rules": [
       "world_state_open",
-      "world_state_inverted,pearl"
+      "world_state_inverted,pearl",
+      "world_state_inverted,[pearl],mirror"
     ],
     "sections": [
       {
