@@ -18,7 +18,8 @@
 		"name": "HC Access",
 		"parent": "Semi-Dungeon Color",
 		"access_rules": [
-			"@Light World",
+			"world_state_open,@Light World",
+			"world_state_inverted,@Light World,[pearl]",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -48,7 +49,8 @@
 						"name": "Back",
 						"clear_as_group": true,
 						"access_rules": [
-							"lift1",
+							"world_state_open,lift1",
+							"world_state_inverted,pearl,lift1",
 							"door_shuffle_off,hc_smallkey:1,[firesource]"
 						],
 						"item_count": 3
@@ -88,7 +90,8 @@
 		"name": "EP Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Light World",
+			"world_state_open,@Light World",
+			"world_state_inverted,@Light World,[pearl]",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -158,7 +161,8 @@
 		"name": "DP Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Light World,book",
+			"world_state_open,@Light World,book",
+			"world_state_inverted,@Light World,[pearl],book",
 			"@Desert Ledge Area",
 			"entrance_shuffle_on"
 		],
