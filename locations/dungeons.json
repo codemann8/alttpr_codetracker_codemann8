@@ -51,7 +51,8 @@
 						"access_rules": [
 							"world_state_open,lift1",
 							"world_state_inverted,pearl,lift1",
-							"door_shuffle_off,hc_smallkey:1,[firesource]"
+							"door_shuffle_off,hc_smallkey:1,[firesource]",
+							"entrance_shuffle_on"
 						],
 						"item_count": 3
 					},
