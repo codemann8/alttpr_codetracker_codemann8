@@ -34,9 +34,18 @@
 				],
 				"sections": [
 					{
-						"name": "Escape",
+						"name": "Key Guards",
 						"clear_as_group": false,
-						"item_count": 3
+						"item_count": 2
+					},
+					{
+						"name": "Prison Cell",
+						"access_rules": [
+							"door_shuffle_off,[hc_smallkey:1]",
+							"door_shuffle_off,@Non-Key Keysanity",
+							"door_shuffle_on"
+						],
+						"item_count": 1
 					},
 					{
 						"name": "Dark Cross",
@@ -52,6 +61,7 @@
 							"world_state_open,lift1",
 							"world_state_inverted,pearl,lift1",
 							"door_shuffle_off,hc_smallkey:1,[firesource]",
+							"door_shuffle_off,@Non-Key Keysanity,[firesource]",
 							"entrance_shuffle_on"
 						],
 						"item_count": 3
