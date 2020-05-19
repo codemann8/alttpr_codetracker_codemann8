@@ -123,21 +123,21 @@
 											"key": "shared_entrance_grid"
 										}
 									]
+								},
+								{
+									"type": "group",
+									"header": "Pinned Locations",
+									"content": {
+										"type": "recentpins",
+										"style": "wrap",
+										"h_alignment": "stretch",
+										"v_alignment": "stretch",
+										"orientation": "horizontal",
+										"scale": 1.25,
+										"compact": true
+									}
 								}
 							]
-						},
-						{
-							"type": "group",
-							"header": "Pinned Locations",
-							"content": {
-								"type": "recentpins",
-								"style": "wrap",
-								"h_alignment": "stretch",
-								"v_alignment": "stretch",
-								"orientation": "horizontal",
-								"scale": 1.5,
-								"compact": true
-							}
 						}
 					]
 				},
