@@ -178,14 +178,18 @@ function testFlag(segment, address, flag)
 end
 
 function updateProgressiveMirror(segment)
-    local item = Tracker:FindObjectForCode("mirror")    
+    local item = Tracker:FindObjectForCode("mirror")
 	if testFlag(segment, 0x7ef353, 0x2) then
 		if item.CurrentStage ~= 2 then
 			itemFlippedOn("mirror")
 		end
         item.CurrentStage = 2
 	elseif testFlag(segment, 0x7ef353, 0x1) then
-        item.CurrentStage = 0
+		item.CurrentStage = 0
+		item = Tracker:FindObjectForCode("door_shuffle")
+		if item.CurrentStage == 0 then
+			item.CurrentStage = 1
+		end
 	else
         item.CurrentStage = 1
     end
