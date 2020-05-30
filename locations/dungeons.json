@@ -26,12 +26,6 @@
 			{
 				"name": "Hyrule Castle & Sanctuary",
 				"short_name": "Escape",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[firesource],[hc_smallkey:1]",
-					"door_shuffle_basic,[firesource],@Non-Key Keysanity",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Key Guards",
@@ -114,12 +108,6 @@
 		"children": [
 			{
 				"name": "Eastern Palace",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[lamp],[ep_bigkey],[$canDamageArmos]",
-					"door_shuffle_basic,[lamp],@Non-Full Keysanity,[$canDamageArmos]",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Front",
@@ -186,11 +174,6 @@
 		"children": [
 			{
 				"name": "Desert Palace",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_on,[dp_smallkey:1]",
-					"door_shuffle_on,@Non-Key Keysanity"
-				],
 				"sections": [
 					{
 						"name": "Eyegore Room",
@@ -209,7 +192,7 @@
 						"access_rules": [
 							"@Non-Key Keysanity",
 							"door_shuffle_off,dp_smallkey:1",
-							"door_shuffle_on,[dp_smallkey:1]"
+							"door_shuffle_on"
 						],
 						"clear_as_group": true,
 						"item_count": 1
@@ -238,9 +221,7 @@
 						"access_rules": [
 							"door_shuffle_off,lift1,firesource,dp_bigkey,$canDamageLanmolas",
 							"door_shuffle_off,lift1,firesource,@Non-Full Keysanity,$canDamageLanmolas",
-							"door_shuffle_basic,[lift1],[firesource],[dp_bigkey],$canDamageLanmolas",
-							"door_shuffle_basic,[lift1],[firesource],@Non-Full Keysanity,$canDamageLanmolas",
-							"door_shuffle_crossed,[lift1],$canDamageLanmolas",
+							"door_shuffle_on,$canDamageLanmolas",
 							"entrance_shuffle_on,firesource,dp_bigkey,$canDamageLanmolas",
 							"entrance_shuffle_on,firesource,@Non-Full Keysanity,$canDamageLanmolas"
 						],
@@ -278,16 +259,6 @@
 		"children": [
 			{
 				"name": "Tower of Hera",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[firesource],[toh_smallkey:1],[toh_bigkey],[sword]",
-					"door_shuffle_basic,[firesource],[toh_smallkey:1],[toh_bigkey],[hammer]",
-					"door_shuffle_basic,[firesource],[toh_smallkey:1],@Non-Full Keysanity,[sword]",
-					"door_shuffle_basic,[firesource],[toh_smallkey:1],@Non-Full Keysanity,[hammer]",
-					"door_shuffle_basic,[firesource],@Non-Key Keysanity,[sword]",
-					"door_shuffle_basic,[firesource],@Non-Key Keysanity,[hammer]",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Lobby\\Cage",
@@ -325,7 +296,9 @@
 						"name": "Moldorm",
 						"access_rules": [
 							"@Tower of Hera/Compass Chest,sword",
-							"@Tower of Hera/Compass Chest,hammer"
+							"@Tower of Hera/Compass Chest,hammer",
+							"door_shuffle_on,sword",
+							"door_shuffle_on,hammer"
 						],
 						"hosted_item": "towerofhera",
 						"item_count": 1
@@ -386,9 +359,9 @@
 							"$canRemoveCurtains,@Non-Key Keysanity,[lamp],sword",
 							"$canRemoveCurtains,@Non-Key Keysanity,[lamp],hammer",
 							"$canRemoveCurtains,@Non-Key Keysanity,[lamp],net",
-							"door_shuffle_crossed,sword",
-							"door_shuffle_crossed,hammer",
-							"door_shuffle_crossed,net"
+							"door_shuffle_on,sword",
+							"door_shuffle_on,hammer",
+							"door_shuffle_on,net"
 						],
 						"hosted_item": "aga"
 					}
@@ -457,13 +430,6 @@
 		"children": [
 			{
 				"name": "Palace of Darkness",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[lamp],[bow],[hammer],[pod_smallkey:6],[pod_bigkey]",
-					"door_shuffle_basic,[lamp],[bow],[hammer],[pod_smallkey:6],@Non-Full Keysanity",
-					"door_shuffle_basic,[lamp],[bow],[hammer],@Non-Key Keysanity",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Shooter Chest",
@@ -572,7 +538,9 @@
 							"door_shuffle_off,bow,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],pod_bigkey",
 							"door_shuffle_off,bow,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],@Non-Full Keysanity",
 							"door_shuffle_off,bow,[lamp],hammer,@Non-Key Keysanity",
-							"door_shuffle_on"
+							"door_shuffle_on,sword",
+							"door_shuffle_on,hammer",
+							"door_shuffle_on,bow"
 						],
 						"hosted_item": "palaceofdarkness",
 						"item_count": 1
@@ -610,10 +578,7 @@
 			{
 				"name": "Swamp Palace",
 				"access_rules": [
-					"door_shuffle_off,flippers",
-					"door_shuffle_basic,flippers,[hammer],[hookshot],[sp_smallkey:1],[sp_bigkey]",
-					"door_shuffle_basic,flippers,[hammer],[hookshot],[sp_smallkey:1],@Non-Full Keysanity",
-					"door_shuffle_basic,flippers,[hammer],[hookshot],@Non-Key Keysanity",
+					"flippers",
 					"door_shuffle_crossed"
 				],
 				"sections": [
@@ -664,7 +629,8 @@
 						"name": "Arrghus",
 						"access_rules": [
 							"door_shuffle_off,@Swamp Palace/Left\\South Side,hookshot",
-							"door_shuffle_on,hookshot"
+							"door_shuffle_on,hookshot,sword",
+							"door_shuffle_on,hookshot,hammer"
 						],
 						"hosted_item": "swamppalace",
 						"item_count": 1
@@ -726,7 +692,9 @@
 						"name": "Mothula",
 						"access_rules": [
 							"door_shuffle_off,@Skull Woods/Bridge,firesource,$canRemoveCurtains",
-							"door_shuffle_on"
+							"door_shuffle_on,sword",
+							"door_shuffle_on,firerod",
+							"door_shuffle_on,hammer"
 						],
 						"hosted_item": "skullwoods",
 						"item_count": 1
@@ -762,13 +730,6 @@
 		"children": [
 			{
 				"name": "Thieves Town",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[hammer],[lift1],[tt_smallkey:1],[tt_bigkey],[$canDamageBlind]",
-					"door_shuffle_basic,[hammer],[lift1],[tt_smallkey:1],@Non-Full Keysanity,[$canDamageBlind]",
-					"door_shuffle_basic,[hammer],[lift1],@Non-Key Keysanity,[$canDamageBlind]",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Front",
@@ -808,8 +769,7 @@
 					{
 						"name": "Blind",
 						"access_rules": [
-							"door_shuffle_off,@Thieves Town/Attic Chest,@Thieves Town/Prison Cell,$canDamageBlind",
-							"door_shuffle_basic,@Thieves Town/Attic Chest,@Thieves Town/Prison Cell,$canDamageBlind",
+							"@Thieves Town/Attic Chest,@Thieves Town/Prison Cell,$canDamageBlind",
 							"door_shuffle_crossed,attic,@Thieves Town/Prison Cell,$canDamageBlind"
 						],
 						"hosted_item": "thievestown",
@@ -848,14 +808,8 @@
 			{
 				"name": "Ice Palace",
 				"access_rules": [
-					"door_shuffle_off,firerod",
-					"door_shuffle_off,$canUseMedallions,bombos",
-					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],[ip_bigkey]",
-					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],[ip_smallkey:2],@Non-Full Keysanity",
-					"door_shuffle_basic,firerod,[somaria],[hookshot],[hammer],[lift1],@Non-Key Keysanity",
-					"door_shuffle_basic,$canUseMedallions,bombos,[somaria],[hookshot],[hammer],[lift1],@Non-Key Keysanity",
+					"firerod",
+					"$canUseMedallions,bombos",
 					"door_shuffle_crossed"
 				],
 				"sections": [
@@ -879,7 +833,7 @@
 							"@Ice Palace/Spike Room,hammer",
 							"[@Ice Palace/Spike Room],[hammer],somaria",
 							"door_shuffle_on,hammer,lift1",
-							"door_shuffle_on,[hammer],[lift1],somaris"
+							"door_shuffle_on,[hammer],[lift1],somaria"
 						],
 						"clear_as_group": true,
 						"item_count":1
@@ -896,10 +850,6 @@
 					},
 					{
 						"name": "Freezor Chest",
-						"access_rules": [
-							"firerod",
-							"$canUseMedallions,bombos"
-						],
 						"item_count": 1
 					},
 					{
@@ -922,7 +872,7 @@
 							"hammer,lift1,[ip_smallkey:1]",
 							"hammer,lift1,@Non-Key Keysanity",
 							"door_shuffle_on,hammer,lift1,firerod",
-							"door_shuffle_on,hammer,lift1,$canUseMedallions"
+							"door_shuffle_on,hammer,lift1,$canUseMedallions,bombos"
 						],
 						"hosted_item": "icepalace",
 						"item_count": 1
@@ -962,11 +912,8 @@
 			{
 				"name": "Misery Mire",
 				"access_rules": [
-					"door_shuffle_off,hookshot",
-					"door_shuffle_off,boots",
-					"door_shuffle_on,[hookshot],[lamp],[somaria],[mm_smallkey:3],[mm_bigkey]",
-					"door_shuffle_on,[hookshot],[lamp],[somaria],[mm_smallkey:3],@Non-Full Keysanity",
-					"door_shuffle_on,[hookshot],[lamp],[somaria],@Non-Key Keysanity",
+					"hookshot",
+					"boots",
 					"door_shuffle_crossed"
 				],
 				"sections": [
@@ -1000,7 +947,8 @@
 							"mm_bigkey,[lamp],somaria",
 							"@Non-Full Keysanity,[lamp],somaria",
 							"door_shuffle_on,sword",
-							"door_shuffle_on,bow"
+							"door_shuffle_on,bow",
+							"door_shuffle_on,hammer"
 						],
 						"hosted_item": "miserymire",
 						"item_count": 1
@@ -1056,10 +1004,8 @@
 			{
 				"name": "Turtle Rock",
 				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[somaria],[lamp],[firerod],[icerod],[tr_smallkey:4],[tr_bigkey]",
-					"door_shuffle_basic,[somaria],[lamp],[firerod],[icerod],[tr_smallkey:4],@Non-Full Keysanity",
-					"door_shuffle_basic,[somaria],[lamp],[firerod],[icerod],@Non-Key Keysanity",
+					"@TR Main Entrance,somaria",
+					"@TR Mirror Entrances",
 					"door_shuffle_crossed"
 				],
 				"sections": [
@@ -1194,13 +1140,6 @@
 		"children": [
 			{
 				"name": "Ganon's Tower",
-				"access_rules": [
-					"door_shuffle_off",
-					"door_shuffle_basic,[boots],[hammer],[hookshot],[somaria],[firerod],[bow],[gt_smallkey:4],[gt_bigkey]",
-					"door_shuffle_basic,[boots],[hammer],[hookshot],[somaria],[firerod],[bow],[gt_smallkey:4],@Non-Full Keysanity",
-					"door_shuffle_basic,[boots],[hammer],[hookshot],[somaria],[firerod],[bow],@Non-Key Keysanity",
-					"door_shuffle_crossed"
-				],
 				"sections": [
 					{
 						"name": "Hope Room",
