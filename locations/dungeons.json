@@ -868,9 +868,10 @@
 					{
 						"name": "Khold",
 						"access_rules": [
-							"hammer,lift1,[somaria]",
-							"hammer,lift1,[ip_smallkey:1]",
-							"hammer,lift1,@Non-Key Keysanity",
+							"hammer,lift1,[somaria],[ip_bigkey]",
+							"hammer,lift1,[somaria],@Non-Full Keysanity",
+							"hammer,lift1,[ip_smallkey:1],[ip_bigkey]",
+							"hammer,lift1,[ip_smallkey:1],@Non-Full Keysanity",
 							"door_shuffle_on,hammer,lift1,firerod",
 							"door_shuffle_on,hammer,lift1,$canUseMedallions,bombos"
 						],
