@@ -287,12 +287,24 @@
                             {
                                 "type": "itemgrid",
                                 "v_alignment": "center",
-                                "item_margin": "1,1",
+                                "item_margin": "-6,1,-6,0",
+                                "item_size": 30,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "hc_label"
+                                    ]
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "-1,1",
                                 "item_size": 40,
                                 "badge_font_size": 20,
                                 "rows": [
                                     [
-                                        "hc_label", "hc_item", "hc_smallkey", "hc_map"
+                                        "hc_item", "hc_smallkey", "hc_mcbk"
                                     ]
                                 ]
                             },
@@ -304,12 +316,24 @@
                             {
                                 "type": "itemgrid",
                                 "v_alignment": "center",
-                                "item_margin": "1,1",
+                                "item_margin": "-4,1,-6,0",
+                                "item_size": 30,
+                                "badge_font_size": 20,
+                                "rows": [
+                                    [
+                                        "at_label"
+                                    ]
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "v_alignment": "center",
+                                "item_margin": "-1,1",
                                 "item_size": 40,
                                 "badge_font_size": 20,
                                 "rows": [
                                     [
-                                        "at_label", "at_item", "at_smallkey"
+                                        "at_item", "at_smallkey", "at_mcbk"
                                     ]
                                 ]
                             }
@@ -360,6 +384,11 @@
                             },
                             {
                                 "type": "itemgrid",
+                                "height": 6,
+                                "rows": [ ]
+                            },
+                            {
+                                "type": "itemgrid",
                                 "v_alignment": "center",
                                 "item_margin": "1,1",
                                 "item_size": 40,
@@ -369,7 +398,7 @@
                                         "", "easternpalace", ""
                                     ],
                                     [
-                                        "ep_item", "ep_mcbk"
+                                        "ep_item", "ep_mcbk", "ep_smallkey"
                                     ]
                                 ]
                             }
