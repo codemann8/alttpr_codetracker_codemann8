@@ -306,6 +306,86 @@
 		"increment": -1
 	},
 	
+	// Chest Key Counts
+	{
+		"name": "Hyrule Castle Chest Key",
+		"type": "consumable",
+		"codes": "hc_chestkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Eastern Palace Chest Key",
+		"type": "consumable",
+		"codes": "ep_chestkey",
+		"max_quantity": 0
+	},
+	{
+		"name": "Desert Palace Chest Key",
+		"type": "consumable",
+		"codes": "dp_chestkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Tower of Hera Chest Key",
+		"type": "consumable",
+		"codes": "toh_chestkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Aganihm's Tower Chest Key",
+		"type": "consumable",
+		"codes": "at_chestkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Palace of Darkness Chest Key",
+		"type": "consumable",
+		"codes": "pod_chestkey",
+		"max_quantity": 6
+	},
+	{
+		"name": "Swamp Palace Chest Key",
+		"type": "consumable",
+		"codes": "sp_chestkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Skull Woods Chest Key",
+		"type": "consumable",
+		"codes": "sw_chestkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Thieves Town Chest Key",
+		"type": "consumable",
+		"codes": "tt_chestkey",
+		"max_quantity": 1
+	},
+	{
+		"name": "Ice Palace Chest Key",
+		"type": "consumable",
+		"codes": "ip_chestkey",
+		"max_quantity": 2
+	},
+	{
+		"name": "Misery Mire Chest Key",
+		"type": "consumable",
+		"codes": "mm_chestkey",
+		"max_quantity": 3
+	},
+	{
+		"name": "Turtle Rock Chest Key",
+		"type": "consumable",
+		"codes": "tr_chestkey",
+		"max_quantity": 4
+	},
+	{
+		"name": "Ganon's Tower Chest Key",
+		"type": "consumable",
+		"codes": "gt_chestkey",
+		"max_quantity": 4
+	},
+	
 	// Doors
 	{
 		"name": "Hyrule Castle Door",
@@ -636,73 +716,6 @@
 		"type": "toggle",
 		"img": "images/map.png",
 		"codes": "gt_map"
-	},
-	
-	// Chest Known Count
-	{
-		"name": "HC Count",
-		"type": "consumable",
-		"codes": "hc_count"
-	},
-	{
-		"name": "Eastern Palace Count",
-		"type": "consumable",
-		"codes": "ep_count"
-	},
-	{
-		"name": "Desert Palace Count",
-		"type": "consumable",
-		"codes": "dp_count"
-	},
-	{
-		"name": "Tower of Hera Count",
-		"type": "consumable",
-		"codes": "toh_count"
-	},
-	{
-		"name": "Aganihm's Tower Count",
-		"type": "consumable",
-		"codes": "at_count"
-	},
-	{
-		"name": "Palace of Darkness Count",
-		"type": "consumable",
-		"codes": "pod_count"
-	},
-	{
-		"name": "Swamp Palace Count",
-		"type": "consumable",
-		"codes": "sp_count"
-	},
-	{
-		"name": "Skull Woods Count",
-		"type": "consumable",
-		"codes": "sw_count"
-	},
-	{
-		"name": "Thieves Town Count",
-		"type": "consumable",
-		"codes": "tt_count"
-	},
-	{
-		"name": "Ice Palace Count",
-		"type": "consumable",
-		"codes": "ip_count"
-	},
-	{
-		"name": "Misery Mire Count",
-		"type": "consumable",
-		"codes": "mm_count"
-	},
-	{
-		"name": "Turtle Rock Count",
-		"type": "consumable",
-		"codes": "tr_count"
-	},
-	{
-		"name": "Ganon's Tower Count",
-		"type": "consumable",
-		"codes": "gt_count"
 	},
 	
 	// GT BK Game

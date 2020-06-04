@@ -2,6 +2,7 @@
 ScriptHost:LoadScript("scripts/settings.lua")
 
 --Items
+ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/class.lua")
 ScriptHost:LoadScript("scripts/custom_item.lua")
 ScriptHost:LoadScript("scripts/mapcompassbk.lua")
@@ -12,19 +13,7 @@ Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
 
-MapCompassBK("Hyrule Castle Map/Compass/Big Key", "hc")
-MapCompassBK("Eastern Palace Map/Compass/Big Key", "ep")
-MapCompassBK("Desert Palace Map/Compass/Big Key", "dp")
-MapCompassBK("Tower of Hera Map/Compass/Big Key", "toh")
-MapCompassBK("Aganihm's Tower Map/Compass/Big Key", "at")
-MapCompassBK("Palace of Darkness Map/Compass/Big Key", "pod")
-MapCompassBK("Swamp Palace Map/Compass/Big Key", "sp")
-MapCompassBK("Skull Woods Map/Compass/Big Key", "sw")
-MapCompassBK("Thieves Town Map/Compass/Big Key", "tt")
-MapCompassBK("Ice Palace Map/Compass/Big Key", "ip")
-MapCompassBK("Misery Mire Map/Compass/Big Key", "mm")
-MapCompassBK("Turtle Rock Map/Compass/Big Key", "tr")
-MapCompassBK("Ganon's Tower Map/Compass/Big Key", "gt")
+loadMCBK()
 
 if Tracker.ActiveVariantUID == "items_only" then
 	Tracker:AddLayouts("layouts/layouts_custom.json")
@@ -52,6 +41,8 @@ else
 	Tracker:AddItems("items/chest_proxies.json")
 	ScriptHost:LoadScript("scripts/keysanitymode.lua")
 	KeysanityMode(Tracker.ActiveVariantUID)
+	ScriptHost:LoadScript("scripts/doorshufflemode.lua")
+	DoorShuffleMode()
 
 	--Tracker Layout
 	Tracker:AddLayouts("layouts/layouts_custom.json")

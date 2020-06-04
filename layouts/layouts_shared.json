@@ -91,7 +91,7 @@
         "content": [
             {
                 "type": "group",
-                "header": "World State Mode",
+                "header": "World State",
                 "header_background": "#3e4b57",
                 "content":[
                     {
@@ -133,30 +133,12 @@
                     {
                         "type": "item",
                         "margin": "-5,-1,-5,-5",
-                        "item": "door_shuffle"
+                        "item": "door_shuffle_surrogate"
                     }
                 ]
             }
         ]
     },
-    "dungeon_settings_popup": {
-        "type": "array",
-        "margin": "5",
-        "content": [
-            {
-                "type": "group",
-                "header": "Door Rando Mode",
-                "header_background": "#3e4b57",
-                "content":[
-                    {
-                        "type": "item",
-                        "margin": "-5,-1,-5,-5",
-                        "item": "door_rando_mode"
-                    }
-                ]
-            }
-        ]
-	},
 	
     //misc dungeon layouts
     "shared_misc_center": {
