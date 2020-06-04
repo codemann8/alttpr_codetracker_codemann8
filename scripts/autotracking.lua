@@ -503,37 +503,40 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, call
 end
 
 function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
-	local dungeons =
-	{
-		[0] = "hc",--sewer
-		[2] = "hc",
-		[4] = "ep",
-		[6] = "dp",
-		[8] = "at",
-		[10] = "sp",
-		[12] = "pod",
-		[14] = "mm",
-		[16] = "sw",
-		[18] = "ip",
-		[20] = "toh",
-		[22] = "tt",
-		[24] = "tr",
-		[26] = "gt",
-		[255] = "OW"
-	}
-
-	local doorRando = Tracker:FindObjectForCode("door_shuffle")
-	if doorRando.CurrentStage == 0 then
-		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-		if chestKeys then
-			-- Do not auto-track this the user has manually modified it
-			if chestKeys.Owner.ModifiedByUser then
-				return
-			end
+	-- Do not auto-track this the user has manually modified it
+	if chestKeys.Owner.ModifiedByUser then
+		return
+	end
+	
+	local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+	if chestKeys then
+		local doorRando = Tracker:FindObjectForCode("door_shuffle")
+		if doorRando.CurrentStage > 0 then
+			chestKeys.AcquiredCount = ReadU8(segment, address)
+		else
 			local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
 			if doorsOpened then
 				local currentDungeon = Tracker:FindObjectForCode("dungeon")
 				local currentKeys = 0
+
+				local dungeons =
+				{
+					[0] = "hc",--sewer
+					[2] = "hc",
+					[4] = "ep",
+					[6] = "dp",
+					[8] = "at",
+					[10] = "sp",
+					[12] = "pod",
+					[14] = "mm",
+					[16] = "sw",
+					[18] = "ip",
+					[20] = "toh",
+					[22] = "tt",
+					[24] = "tr",
+					[26] = "gt",
+					[255] = "OW"
+				}
 				
 				if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
 					currentKeys = ReadU8(segment, 0x7ef36f)
@@ -546,21 +549,6 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 				else
 					chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
 				end
-			end
-		end
-	elseif doorRando.CurrentStage > 0 then
-		local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-		if chestKeys then
-			-- Do not auto-track this the user has manually modified it
-			if chestKeys.Owner.ModifiedByUser then
-				return
-			end
-			
-			local currentDungeon = Tracker:FindObjectForCode("dungeon")
-			if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
-				chestKeys.AcquiredCount = ReadU8(segment, 0x7ef36f)
-			else
-				chestKeys.AcquiredCount = ReadU8(segment, address)
 			end
 		end
 	end
@@ -606,7 +594,7 @@ function updateBossChestCountFromRoom(segment, locationRef, roomSlot)
 	end
 end
 
-function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
+function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
 	local location = Tracker:FindObjectForCode(locationRef)
 	if location then
 		-- Do not auto-track this the user has manually modified it
@@ -615,7 +603,11 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 		--end
 		
 		local doorRando = Tracker:FindObjectForCode("door_shuffle")
-		if doorRando.CurrentStage == 0 then
+		if doorRando.CurrentStage == 2 then
+			if SEGMENT_DUNGEONKEYS then
+				location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
+			end
+		else
 			local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
 			if chest then
 				local mode = Tracker:FindObjectForCode("keysanity_mode")
@@ -626,7 +618,7 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix)
 				local dungeonItems = 0
 				
 				if bigkey and bigkey.Active and mode.CurrentStage < 3 then
-					if (dungeonPrefix ~= "hc") then
+					if dungeonPrefix ~= "hc" then
 						dungeonItems = dungeonItems + 1
 					end
 				end
@@ -899,88 +891,112 @@ function updateDungeonItemsFromMemorySegment(segment)
 	InvalidateReadCaches()
 
 	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-		if SEGMENT_ROOMDATA then
-			--Doors Opened
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_door", { { 114, 15 }, { 113, 15 }, { 50, 15, 34, 15 }, { 17, 13, 33, 15 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_door", { { 133, 14 }, { 99, 15 }, { 83, 13, 67, 13 }, { 67, 14 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "toh_door", { { 119, 15 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_door", { { 224, 13 }, { 208, 15 }, { 192, 13 }, { 176, 13 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "pod_door", { { 74, 13, 58, 15 }, { 10, 15 }, { 42, 14, 26, 12 }, { 26, 14, 25, 14 }, { 26, 15 }, { 11, 13 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_door", { { 40, 15 }, { 56, 14, 55, 12 }, { 55, 13 }, { 54, 13, 53, 15 }, { 54, 14, 38, 15 }, { 22, 14 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_door", { { 87, 13, 88, 14 }, { 104, 14, 88, 13 }, { 86, 15 }, { 89, 15, 73, 13 }, { 57, 14 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tt_door", { { 188, 15 }, { 171, 15 }, { 68, 14 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "ip_door", { { 14, 15 }, { 62, 14, 78, 14 }, { 94, 15, 95, 15 }, { 126, 15, 142, 15 }, { 158, 15 }, { 190, 14, 191, 15 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "mm_door", { { 179, 15 }, { 194, 14, 193, 14 }, { 193, 15 }, { 194, 15, 195, 15 }, { 161, 15, 177, 14 }, { 147, 14 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tr_door", { { 198, 15, 182, 13 }, { 182, 12 }, { 182, 15 }, { 19, 15, 20, 14 }, { 4, 15 }, { 197, 15, 196, 15 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_door", { { 140, 13 }, { 139, 14 }, { 155, 15 }, { 125, 13 }, { 141, 14 }, { 123, 14, 124, 13 }, { 61, 14 }, { 61, 13, 77, 15 } })
+		local doorrando = Tracker:FindObjectForCode("door_shuffle")
+		if doorrando then
+			if SEGMENT_ROOMDATA and doorrando.CurrentStage == 0 then
+				--Doors Opened
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_door", { { 114, 15 }, { 113, 15 }, { 50, 15, 34, 15 }, { 17, 13, 33, 15 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_door", { { 133, 14 }, { 99, 15 }, { 83, 13, 67, 13 }, { 67, 14 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "toh_door", { { 119, 15 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_door", { { 224, 13 }, { 208, 15 }, { 192, 13 }, { 176, 13 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "pod_door", { { 74, 13, 58, 15 }, { 10, 15 }, { 42, 14, 26, 12 }, { 26, 14, 25, 14 }, { 26, 15 }, { 11, 13 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_door", { { 40, 15 }, { 56, 14, 55, 12 }, { 55, 13 }, { 54, 13, 53, 15 }, { 54, 14, 38, 15 }, { 22, 14 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_door", { { 87, 13, 88, 14 }, { 104, 14, 88, 13 }, { 86, 15 }, { 89, 15, 73, 13 }, { 57, 14 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tt_door", { { 188, 15 }, { 171, 15 }, { 68, 14 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "ip_door", { { 14, 15 }, { 62, 14, 78, 14 }, { 94, 15, 95, 15 }, { 126, 15, 142, 15 }, { 158, 15 }, { 190, 14, 191, 15 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "mm_door", { { 179, 15 }, { 194, 14, 193, 14 }, { 193, 15 }, { 194, 15, 195, 15 }, { 161, 15, 177, 14 }, { 147, 14 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tr_door", { { 198, 15, 182, 13 }, { 182, 12 }, { 182, 15 }, { 19, 15, 20, 14 }, { 4, 15 }, { 197, 15, 196, 15 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_door", { { 140, 13 }, { 139, 14 }, { 155, 15 }, { 125, 13 }, { 141, 14 }, { 123, 14, 124, 13 }, { 61, 14 }, { 61, 13, 77, 15 } })
+				
+				--Pot and Enemy Keys
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_potkey", { { 114, 10 }, { 113, 10 }, { 33, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_potkey", { { 99, 10 }, { 83, 10 }, { 67, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_potkey", { { 192, 10 }, { 176, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_potkey", { { 56, 10 }, { 55, 10 }, { 54, 10 }, { 53, 10 }, { 22, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_potkey", { { 86, 10 }, { 57, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tt_potkey", { { 188, 10 }, { 171, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "ip_potkey", { { 14, 10 }, { 62, 10 }, { 63, 10 }, { 159, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "mm_potkey", { { 179, 10 }, { 193, 10 }, { 161, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tr_potkey", { { 182, 10 }, { 19, 10 } })
+				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_potkey", { { 139, 10 }, { 155, 10 }, { 123, 10 }, { 61, 10 } })
+			end
 			
-			--Pot and Enemy Keys
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_potkey", { { 114, 10 }, { 113, 10 }, { 33, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_potkey", { { 99, 10 }, { 83, 10 }, { 67, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "at_potkey", { { 192, 10 }, { 176, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sp_potkey", { { 56, 10 }, { 55, 10 }, { 54, 10 }, { 53, 10 }, { 22, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "sw_potkey", { { 86, 10 }, { 57, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tt_potkey", { { 188, 10 }, { 171, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "ip_potkey", { { 14, 10 }, { 62, 10 }, { 63, 10 }, { 159, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "mm_potkey", { { 179, 10 }, { 193, 10 }, { 161, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "tr_potkey", { { 182, 10 }, { 19, 10 } })
-			updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_potkey", { { 139, 10 }, { 155, 10 }, { 123, 10 }, { 61, 10 } })
-		end
-		
-		if SEGMENT_DUNGEONITEMS then
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_bigkey",	0x7ef366, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_bigkey",	0x7ef366, 0x08)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_bigkey",	0x7ef366, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_bigkey", 0x7ef366, 0x20)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_bigkey",	0x7ef366, 0x40)		
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_bigkey",	0x7ef366, 0x80)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_bigkey",	0x7ef367, 0x01)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_bigkey", 0x7ef367, 0x02)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_bigkey",	0x7ef367, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_bigkey",	0x7ef367, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_bigkey",	0x7ef367, 0x20)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "hc_bigkey",	0x7ef367, 0x40)
-			
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_map",	0x7ef368, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_map",	0x7ef368, 0x08)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_map",	0x7ef368, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_map", 0x7ef368, 0x20)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_map",	0x7ef368, 0x40)		
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_map",	0x7ef368, 0x80)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_map",	0x7ef369, 0x01)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_map", 0x7ef369, 0x02)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_map",	0x7ef369, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_map",	0x7ef369, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_map",	0x7ef369, 0x20)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "hc_map",	0x7ef369, 0x40)
-			
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_compass",	0x7ef364, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_compass",	0x7ef364, 0x08)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_compass",	0x7ef364, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_compass", 0x7ef364, 0x20)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_compass",	0x7ef364, 0x40)		
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_compass",	0x7ef364, 0x80)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_compass",	0x7ef365, 0x01)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_compass", 0x7ef365, 0x02)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_compass",	0x7ef365, 0x04)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_compass",	0x7ef365, 0x10)
-			updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_compass",	0x7ef365, 0x20)
-			
+			--Dungeon Items
+			if SEGMENT_DUNGEONITEMS then
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_bigkey",	0x7ef366, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_bigkey",	0x7ef366, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_bigkey",	0x7ef366, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_bigkey", 0x7ef366, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_bigkey",	0x7ef366, 0x40)		
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_bigkey",	0x7ef366, 0x80)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_bigkey",	0x7ef367, 0x01)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_bigkey", 0x7ef367, 0x02)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_bigkey",	0x7ef367, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "at_bigkey",	0x7ef367, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_bigkey",	0x7ef367, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_bigkey",	0x7ef367, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "hc_bigkey",	0x7ef367, 0x40)
+				
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_map",	0x7ef368, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_map",	0x7ef368, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_map",	0x7ef368, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_map", 0x7ef368, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_map",	0x7ef368, 0x40)		
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_map",	0x7ef368, 0x80)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_map",	0x7ef369, 0x01)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_map", 0x7ef369, 0x02)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_map",	0x7ef369, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "at_map",	0x7ef369, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_map",	0x7ef369, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_map",	0x7ef369, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "hc_map",	0x7ef369, 0x40)
+				
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "gt_compass",	0x7ef364, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tr_compass",	0x7ef364, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "tt_compass",	0x7ef364, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "toh_compass", 0x7ef364, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ip_compass",	0x7ef364, 0x40)		
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sw_compass",	0x7ef364, 0x80)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "mm_compass",	0x7ef365, 0x01)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "pod_compass", 0x7ef365, 0x02)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "sp_compass",	0x7ef365, 0x04)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "at_compass",	0x7ef365, 0x08)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "dp_compass",	0x7ef365, 0x10)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "ep_compass",	0x7ef365, 0x20)
+				updateToggleItemFromByteAndFlag(SEGMENT_DUNGEONITEMS, "hc_compass",	0x7ef365, 0x40)
+			end
+
 			--Small Keys
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "hc",	0x7ef37c)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ep",	0x7ef37e)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "dp",	0x7ef37f)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "toh", 0x7ef386)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "at",	0x7ef380)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "pod", 0x7ef382)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sp",	0x7ef381)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sw",	0x7ef384)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "tt",	0x7ef387)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ip",	0x7ef385)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "mm",	0x7ef383)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "tr",	0x7ef388)
-			updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "gt",	0x7ef389)
-		end
+			if SEGMENT_DUNGEONKEYS and doorrando.CurrentStage > 0 then
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "hc",	0x7ef4e1)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "ep",	0x7ef4e2)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "dp",	0x7ef4e3)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "toh", 0x7ef4ea)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "at",	0x7ef4e4)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "pod", 0x7ef4e6)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "sp",	0x7ef4e5)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "sw",	0x7ef4e8)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "tt",	0x7ef4eb)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "ip",	0x7ef4e9)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "mm",	0x7ef4e7)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "tr",	0x7ef4ec)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "gt",	0x7ef4ed)
+			elseif SEGMENT_DUNGEONITEMS and doorrando.CurrentStage == 0 then
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "hc",	0x7ef37c)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ep",	0x7ef37e)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "dp",	0x7ef37f)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "toh", 0x7ef386)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "at",	0x7ef380)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "pod", 0x7ef382)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sp",	0x7ef381)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "sw",	0x7ef384)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "tt",	0x7ef387)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ip",	0x7ef385)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "mm",	0x7ef383)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "tr",	0x7ef388)
+				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "gt",	0x7ef389)
+			end
+		end 
 	end
 	
 	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
@@ -1115,19 +1131,19 @@ function updateDungeonItemsFromMemorySegment(segment)
 	end
 	
 	--Regular Dungeon Items
-	updateSectionChestCountFromDungeon("@HC/Items", "hc")
-	updateSectionChestCountFromDungeon("@EP/Items", "ep")
-	updateSectionChestCountFromDungeon("@DP/Items", "dp")
-	updateSectionChestCountFromDungeon("@ToH/Items", "toh")
-	updateSectionChestCountFromDungeon("@AT/Items", "at")
-	updateSectionChestCountFromDungeon("@PoD/Items", "pod")
-	updateSectionChestCountFromDungeon("@SP/Items", "sp")
-	updateSectionChestCountFromDungeon("@SW/Items", "sw")
-	updateSectionChestCountFromDungeon("@TT/Items", "tt")
-	updateSectionChestCountFromDungeon("@IP/Items", "ip")
-	updateSectionChestCountFromDungeon("@MM/Items", "mm")
-	updateSectionChestCountFromDungeon("@TR/Items", "tr")
-	updateSectionChestCountFromDungeon("@GT/Items", "gt")
+	updateSectionChestCountFromDungeon("@HC/Items", "hc", 0x7ef4c0)
+	updateSectionChestCountFromDungeon("@EP/Items", "ep", 0x7ef4c1)
+	updateSectionChestCountFromDungeon("@DP/Items", "dp", 0x7ef4c2)
+	updateSectionChestCountFromDungeon("@ToH/Items", "toh", 0x7ef4c9)
+	updateSectionChestCountFromDungeon("@AT/Items", "at", 0x7ef4c3)
+	updateSectionChestCountFromDungeon("@PoD/Items", "pod", 0x7ef4c5)
+	updateSectionChestCountFromDungeon("@SP/Items", "sp", 0x7ef4c4)
+	updateSectionChestCountFromDungeon("@SW/Items", "sw", 0x7ef4c7)
+	updateSectionChestCountFromDungeon("@TT/Items", "tt", 0x7ef4ca)
+	updateSectionChestCountFromDungeon("@IP/Items", "ip", 0x7ef4c8)
+	updateSectionChestCountFromDungeon("@MM/Items", "mm", 0x7ef4c6)
+	updateSectionChestCountFromDungeon("@TR/Items", "tr", 0x7ef4cb)
+	updateSectionChestCountFromDungeon("@GT/Items", "gt", 0x7ef4cc)
 end
 
 function updateDungeonFromMemorySegment(segment)
@@ -1459,8 +1475,9 @@ ScriptHost:AddMemoryWatch("LTTP NPC Item Data", 0x7ef410, 2, updateNPCItemFlagsF
 ScriptHost:AddMemoryWatch("LTTP Heart Piece Data", 0x7ef448, 1, updateHeartPiecesFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartContainersFromMemorySegment)
 
-SEGMENT_ROOMDATA = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef000, 0x250, updateDungeonItemsFromMemorySegment)
-SEGMENT_DUNGEONITEMS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
+SEGMENT_ROOMDATA = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef000, 0x250, updateDungeonItemsFromMemorySegment, 10000)
+SEGMENT_DUNGEONITEMS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment, 10000)
+SEGMENT_DUNGEONKEYS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonItemsFromMemorySegment, 10000)
 --ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e040c, 1, updateDungeonFromMemorySegment) --switch to this if memory address becomes available
 SEGMENT_OWID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e008a, 2, updateDungeonFromMemorySegment)
 SEGMENT_LASTROOMID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e00a0, 2, updateDungeonFromMemorySegment)
