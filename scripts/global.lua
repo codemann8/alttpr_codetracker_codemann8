@@ -19,9 +19,11 @@ function updateIcons(keysanity, doorrando)
 	for i = 1, 13 do
 		local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
 		local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
-		if (doorrando == 2) then
-			item.Section.ChestCount = 99
-			item.Section.AvailableChestCount = 0
+        if (doorrando == 2) then
+            if item.Section.ChestCount ~= 99 then
+                item.Section.ChestCount = 99
+                item.Section.AvailableChestCount = 0
+            end
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
