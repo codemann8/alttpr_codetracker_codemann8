@@ -571,7 +571,7 @@
 		"parent": "Dungeon Color",
 		"access_rules": [
 			"world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl",
-			"world_state_inverted,entrance_shuffle_off,@South Dark World,mirror",
+			"world_state_inverted,entrance_shuffle_off,@Light World,mirror,[pearl]",
 			"entrance_shuffle_on,dam"
 		],
 		"children": [
