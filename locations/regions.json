@@ -289,7 +289,7 @@
           "world_state_open,ddm_east,mirror,hookshot",
           "world_state_open,ddm_tr_bridge,mirror,hookshot",
           "world_state_open,ddm_tr_safety,mirror,hookshot",
-          "world_state_inverted,entrance_shuffle_off,@Mountain Access,lift2,hammer",
+          "world_state_inverted,entrance_shuffle_off,@Mountain Access,lift2,pearl,hammer",
           "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot,hammer",
           "world_state_inverted,dm_east_top,pearl,hammer",
           "world_state_inverted,ddm_top,lift2,pearl,hammer",
