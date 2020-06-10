@@ -54,6 +54,9 @@ else
 	DoorShuffleMode("")
 	DoorShuffleMode("_small")
 
+	ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
+	GTCrystalReq()
+
 	--Tracker Layout
 	Tracker:AddLayouts("layouts/layouts_custom.json")
 	Tracker:AddLayouts("layouts/layouts_shared.json")

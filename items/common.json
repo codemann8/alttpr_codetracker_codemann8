@@ -643,67 +643,7 @@
 		"img": "images/redrupee.png",
 		"codes": "rupee"
 	},
-	// GT Required Crystals
-	{
-		"name": "GT Required Crystals",
-		"capturable": false,
-		"type": "progressive",
-		"allow_disabled": false,
-		"loop": "true",
-		//"swap_actions" :true,
-		"initial_stage_idx": 8,
-		//"initial_active_state": 1,
-		"stages": [
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlayNA.png",
-				"inherit_codes": false,
-				"codes": "",
-				"secondary_codes": "?"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay0.png",
-				"inherit_codes": false,
-				"codes": "gtreq, 0"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay1.png",
-				"codes": "gtreq, 1"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay2.png",
-				"codes": "gtreq, 2"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay3.png",
-				"codes": "gtreq, 3"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay4.png",
-				"codes": "gtreq, 4"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay5.png",
-				"codes": "gtreq, 5"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay6.png",
-				"codes": "gtreq, 6"
-			},
-			{
-				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlay7.png",
-				"codes": "gtreq, 7"
-			}
-		]
-	},
+	
 	// GT Required Crystals
     {
         "name": "GT Required Crystals",
