@@ -56,6 +56,9 @@ else
 
 	ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 	GTCrystalReq()
+	ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
+	GoalSetting()
+	
 
 	--Tracker Layout
 	Tracker:AddLayouts("layouts/layouts_custom.json")

@@ -35,7 +35,7 @@
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "ganon_crystals"
+							"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting"
 						]
 					]
 				}
@@ -83,7 +83,7 @@
 							"badge_font_size": 24,
 							"rows": [
 								[
-									"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "ganon_crystals"
+									"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting"
 								]
 							]
 						}
