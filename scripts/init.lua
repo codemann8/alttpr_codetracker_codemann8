@@ -5,7 +5,7 @@ ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/class.lua")
 ScriptHost:LoadScript("scripts/custom_item.lua")
-ScriptHost:LoadScript("scripts/mapcompassbk.lua")
+ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
 
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
@@ -38,17 +38,19 @@ else
 	Tracker:AddLocations("locations/underworld.json")
 	Tracker:AddLocations("locations/overworld.json")
 	
+	--Custom Items
 	Tracker:AddItems("items/chest_proxies.json")
-	ScriptHost:LoadScript("scripts/worldstatemode.lua")
+
+	ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
 	WorldStateMode("")
 	WorldStateMode("_small")
-	ScriptHost:LoadScript("scripts/keysanitymode.lua")
+	ScriptHost:LoadScript("scripts/custom/keysanitymode.lua")
 	KeysanityMode(Tracker.ActiveVariantUID, "")
 	KeysanityMode(Tracker.ActiveVariantUID, "_small")
-	ScriptHost:LoadScript("scripts/entranceshufflemode.lua")
+	ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
 	EntranceShuffleMode("")
 	EntranceShuffleMode("_small")
-	ScriptHost:LoadScript("scripts/doorshufflemode.lua")
+	ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
 	DoorShuffleMode("")
 	DoorShuffleMode("_small")
 
