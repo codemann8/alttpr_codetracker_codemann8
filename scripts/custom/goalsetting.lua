@@ -50,11 +50,11 @@ function GoalSetting:updateIcon()
 end
 
 function GoalSetting:onLeftClick()
-	self:setState((self:getState() + 1) % 12)
+	self:setState((self:getState() - 1) % 12)
 end
 
 function GoalSetting:onRightClick()
-	self:setState((self:getState() - 1) % 12)
+	self:setState((self:getState() + 1) % 12)
 end
 
 function GoalSetting:canProvideCode(code)

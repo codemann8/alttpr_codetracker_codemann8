@@ -5,7 +5,7 @@ function GTCrystalReq:init()
     self.code = "gt_crystals_surrogate"
     self.ItemInstance.Name = "GT Crystal Requirement"
     
-    self:setState(7)
+    self:setState(8)
 end
 
 function GTCrystalReq:setState(state)
@@ -45,11 +45,11 @@ function GTCrystalReq:updateIcon()
 end
 
 function GTCrystalReq:onLeftClick()
-	self:setState((self:getState() + 1) % 9)
+	self:setState((self:getState() - 1) % 9)
 end
 
 function GTCrystalReq:onRightClick()
-	self:setState((self:getState() - 1) % 9)
+	self:setState((self:getState() + 1) % 9)
 end
 
 function GTCrystalReq:canProvideCode(code)
