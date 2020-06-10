@@ -36,7 +36,8 @@
         "name": "Shroom",
         "access_rules": [
           "world_state_open",
-          "world_state_inverted,pearl"
+          "world_state_inverted,pearl",
+          "{world_state_inverted}"
         ],
         "item_count": 1
       }
