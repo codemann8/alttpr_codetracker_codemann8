@@ -650,63 +650,61 @@
 		"type": "progressive",
 		"allow_disabled": false,
 		"loop": "true",
+		//"swap_actions" :true,
+		"initial_stage_idx": 8,
+		//"initial_active_state": 1,
 		"stages": [
 			{
 				"img": "images/GTSign.png",
-				"img_mods": "overlay|images/overlayNA.png, @disabled",
-				"codes": "GTReq",
-				"secondary_codes": "GTReq, ?"
+				"img_mods": "overlay|images/overlayNA.png",
+				"inherit_codes": false,
+				"codes": "",
+				"secondary_codes": "?"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 0",
 				"img_mods": "overlay|images/overlay0.png",
-				"secondary_codes": "0"
+				"inherit_codes": false,
+				"codes": "gtreq, 0"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 1",
 				"img_mods": "overlay|images/overlay1.png",
-				"secondary_codes": "1"
+				"codes": "gtreq, 1"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 2",
 				"img_mods": "overlay|images/overlay2.png",
-				"secondary_codes": "2"
+				"codes": "gtreq, 2"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 3",
 				"img_mods": "overlay|images/overlay3.png",
-				"secondary_codes": "3"
+				"codes": "gtreq, 3"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 4",
 				"img_mods": "overlay|images/overlay4.png",
-				"secondary_codes": "4"
+				"codes": "gtreq, 4"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 5",
 				"img_mods": "overlay|images/overlay5.png",
-				"secondary_codes": "5"
+				"codes": "gtreq, 5"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 6",
 				"img_mods": "overlay|images/overlay6.png",
-				"secondary_codes": "6"
+				"codes": "gtreq, 6"
 			},
 			{
 				"img": "images/GTSign.png",
-				"codes": "GTReq, 7",
 				"img_mods": "overlay|images/overlay7.png",
-				"secondary_codes": "7"
+				"codes": "gtreq, 7"
 			}
 		]
 	},
+	// GT Required Crystals
     {
         "name": "GT Required Crystals",
         "type": "consumable",
