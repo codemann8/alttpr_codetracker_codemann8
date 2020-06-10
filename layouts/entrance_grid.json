@@ -23,6 +23,25 @@
 			},
 			{
 				"type": "group",
+				"header": "Modes",
+				"margin": "0,0,3,0",
+				"dock": "left",
+				"content": {
+					"type": "itemgrid",
+					"h_alignment": "left",
+					"v_alignment": "center",
+					"item_margin": "1,1",
+					"item_size": 40,
+					"badge_font_size": 24,
+					"rows": [
+						[
+							"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals", "ganon_crystals"
+						]
+					]
+				}
+			},
+			{
+				"type": "group",
 				"header": "Miscellaneous",
 				"margin": "0,0,3,0",
 				"dock": "left",
@@ -35,7 +54,7 @@
 					"badge_font_size": 24,
 					"rows": [
 						[
-							"dam", "attic", "gt_bkgame", "gt_crystals", "ganon_crystals"
+							"dam", "attic", "gt_bkgame"
 						]
 					]
 				}
@@ -47,23 +66,48 @@
 		"orientation": "vertical",
 		"content": [
 			{
-				"type": "group",
-				"header": "Miscellaneous",
-				"margin": "0,0,0,0",
-				"dock": "left",
-				"content": {
-					"type": "itemgrid",
-					"h_alignment": "center",
-					"v_alignment": "center",
-					"item_margin": "1,1",
-					"item_size": 48,
-					"badge_font_size": 24,
-					"rows": [
-						[
-							"dam", "attic", "gt_bkgame", "gt_crystals", "ganon_crystals"
-						]
-					]
-				}
+				"type": "array",
+				"orientation": "horizontal",
+				"content": [
+					{
+						"type": "group",
+						"header": "Modes",
+						"margin": "0,0,3,0",
+						"dock": "left",
+						"content": {
+							"type": "itemgrid",
+							"h_alignment": "left",
+							"v_alignment": "center",
+							"item_margin": "1,1",
+							"item_size": 40,
+							"badge_font_size": 24,
+							"rows": [
+								[
+									"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals", "ganon_crystals"
+								]
+							]
+						}
+					},
+					{
+						"type": "group",
+						"header": "Miscellaneous",
+						"margin": "0,0,0,0",
+						"dock": "left",
+						"content": {
+							"type": "itemgrid",
+							"h_alignment": "center",
+							"v_alignment": "center",
+							"item_margin": "1,1",
+							"item_size": 40,
+							"badge_font_size": 24,
+							"rows": [
+								[
+									"dam", "attic", "gt_bkgame"
+								]
+							]
+						}
+					}
+				]
 			},
 			{
 				"type": "group",

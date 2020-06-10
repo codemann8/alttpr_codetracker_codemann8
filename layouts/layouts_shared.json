@@ -97,7 +97,7 @@
                     {
                         "type": "item",
                         "margin": "-5,-1,-5,-5",
-                        "item": "world_state_mode"
+                        "item": "world_state_mode_surrogate"
                     }
                 ]
             },
@@ -121,7 +121,7 @@
                     {
                         "type": "item",
                         "margin": "-5,-1,-5,-5",
-                        "item": "entrance_shuffle"
+                        "item": "entrance_shuffle_surrogate"
                     }
                 ]
             },

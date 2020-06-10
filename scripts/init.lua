@@ -39,10 +39,18 @@ else
 	Tracker:AddLocations("locations/overworld.json")
 	
 	Tracker:AddItems("items/chest_proxies.json")
+	ScriptHost:LoadScript("scripts/worldstatemode.lua")
+	WorldStateMode("")
+	WorldStateMode("_small")
 	ScriptHost:LoadScript("scripts/keysanitymode.lua")
-	KeysanityMode(Tracker.ActiveVariantUID)
+	KeysanityMode(Tracker.ActiveVariantUID, "")
+	KeysanityMode(Tracker.ActiveVariantUID, "_small")
+	ScriptHost:LoadScript("scripts/entranceshufflemode.lua")
+	EntranceShuffleMode("")
+	EntranceShuffleMode("_small")
 	ScriptHost:LoadScript("scripts/doorshufflemode.lua")
-	DoorShuffleMode()
+	DoorShuffleMode("")
+	DoorShuffleMode("_small")
 
 	--Tracker Layout
 	Tracker:AddLayouts("layouts/layouts_custom.json")

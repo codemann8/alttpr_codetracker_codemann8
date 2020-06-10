@@ -1,10 +1,10 @@
 DoorShuffleMode = class(CustomItem)
 
-function DoorShuffleMode:init()
+function DoorShuffleMode:init(suffix)
 	self:createItem("Door Shuffle")
 	self.code = "door_shuffle_surrogate"
-	self.activeImage = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off.png")
-	self.ItemInstance.PotentialIcon = self.activeImage
+    self.suffix = suffix
+    
     self:setState(0)
 end
 
@@ -21,17 +21,41 @@ function DoorShuffleMode:updateIcon()
 	item.CurrentStage = self:getState()
 
 	item = Tracker:FindObjectForCode("gt_bkgame")
-	item.MaxCount = 22
-
+	
 	if self:getState() == 0 then
-		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off.png")
-	elseif self:getState() == 1 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic.png")
+		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
+        self.ItemInstance.Name = "Off"
+        item.MaxCount = 22
+    elseif self:getState() == 1 then
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
+        self.ItemInstance.Name = "Basic"
         item.MaxCount = 27
 	else
-		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed.png")
-		item.MaxCount = 99
+		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
+        self.ItemInstance.Name = "Crossed"
+        item.MaxCount = 99
     end
+
+    --Sync other surrogates
+    local state = -1
+	if self.suffix == "" then
+		item = Tracker:FindObjectForCode(self.code .. "_small")
+		if item then
+            state = item:ProvidesCode(self.code .. "_small")
+        end
+	else
+		item = Tracker:FindObjectForCode(self.code)
+		if item then
+            state = item:ProvidesCode(self.code)
+        end
+	end
+	if item and self:getState() ~= state then
+		if (self:getState() - state) % 3 == 1 then
+			item:OnLeftClick()
+		else
+			item:OnRightClick()
+		end
+	end
     
     local keysanity = Tracker:FindObjectForCode("keysanity_mode")
 	updateIcons(keysanity.CurrentStage, self:getState())
@@ -46,7 +70,7 @@ function DoorShuffleMode:onRightClick()
 end
 
 function DoorShuffleMode:canProvideCode(code)
-	if code == self.code then
+	if code == self.code .. self.suffix then
 		return true
 	else
 		return false
@@ -54,14 +78,14 @@ function DoorShuffleMode:canProvideCode(code)
 end
 
 function DoorShuffleMode:providesCode(code)
-	if code == self.code and self:getState() ~= 0 then
-		return 1
+	if code == self.code .. self.suffix and self:getState() ~= 0 then
+		return self:getState()
 	end
 	return 0
 end
 
 function DoorShuffleMode:advanceToCode(code)
-	if code == nil or code == self.code then
+	if code == nil or code == self.code .. self.suffix then
 		self:setState((self:getState() + 1) % 3)
 	end
 end
