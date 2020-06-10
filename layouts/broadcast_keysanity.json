@@ -101,8 +101,8 @@
 										"badge_font_size": 18,
 										"rows": [
 											[ "agas" ],
-											[ "gt_crystals" ],
-											[ "ganon_crystals" ],
+											[ "gt_crystals_surrogate" ],
+											[ "goal_setting" ],
 											[ "gt_bkgame" ]
 										]
 									}

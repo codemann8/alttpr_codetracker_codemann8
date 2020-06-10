@@ -76,8 +76,8 @@
 								"badge_font_size": 18,
 								"background": "#3F000000",
 								"rows": [
-									[ "gt_crystals" ],
-									[ "ganon_crystals" ],
+									[ "gt_crystals_surrogate" ],
+									[ "goal_setting" ],
 									[ "dam" ],
 									[ "attic" ],
 									[ "agas" ],
