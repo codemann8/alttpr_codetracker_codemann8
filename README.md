@@ -9,18 +9,17 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
-- Door Rando Mode, when playing door rando, small key and dungeon chest calculation cannot work, so a new mode was created to disable autotracking the parts that are unable to be autotracked, these will have to be manually tracked: this is enabled by clicking the Gear in the Dungeons section
-- Door Rando maps are available and are able to be manually checked off when a room is found
+- Door Rando Mode, this is enabled by clicking the Gear in the `Items` section. Under the `Dungeon` tab, maps are available and are able to be manually checked off when a room is found
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - GT Big Key Guessing Game, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
-- Backwards compatibility to v30 logic with non-progressive bow, so modes like multiworld properly shows silvers without bow
+- Backwards compatibility to v30 logic with non-progressive bow, so modes like legacy versions of multiworld properly shows silvers without bow
 - Blips on the map have been made bigger to show up better on Broadcast View
 - Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found
 - Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
 - Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Door rando, an Attic icon has been added for when you bomb the Attic floor in cross dungeon door rando, this is auto-tracked
-- An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon
+- An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon, autotracking this is disabled as it can spoil Fast Ganon in Mystery seeds
 - Advanced development feature, in Beta and disabled by default, output file when certain items are obtained
 - Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld
 
@@ -63,17 +62,16 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - Dungeon chests/items have been added to the Broadcast View for better visibility into what dungeons you have already visited.
 
 #### Autotracking
-- Dungeon items and Small Keys DO autotrack, unlike the other LttP trackers. This feaure is disabled when `Door Rando` is enabled, as it is impossible to calculate this info in that mode (See the Door Rando sub-section below).
+- Dungeon items and Small Keys DO autotrack, unlike the other LttP trackers.
 - There is a GT Big Key guessing game icon that auto increments a GTBK chest count as chests are collected in GT, this correctly counts the torch if it was viewed but not collected.
 - Some Locations autotrack if an item was viewed but not collected (Cave 45 does not, as there is a bug in the vanilla game).
 - In Entrance Rando, the Dam autotracks when the dam is drained.
 - In Door Rando, the Attic autotracks when the TT attic floor is bombed.
-- In Door Rando modes, `Door Rando` MUST be enabled for proper behavior (See the Door Rando sub-section below).
 - In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly unlike the other LttP packages.
 
 #### Door Rando
 - In the map area of the tracker, there is a new tab called `Dungeon` which shows all the rooms in the game. These can be marked off as they are found. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the rooms. If not, there are separate tabs for each of the dungeons. Rooms with chests are marked with a GREEN square, rooms with a boss are marked with an ORANGE square.
-- If using autotracking, `Door Rando` MUST be enabled. This disables autotracking for dungeon items and small keys as it is impossible to calculate this information when the doors are shuffled. Weird behavior WILL happen if `Door Rando` isn't enabled when playing Door Rando and autotracker is active. This can be enabled by clicking the Gear in the header of the `Items` section.
+- In Crossed Dungeon Door Rando, dungeon chests default to a count of 0 and increment when you collect chests, as the total number of chests in dungeons is unknown. It is possible in a future version of door rando code, where we might be able to read the total number of chests in a dungeon (like when you get the compass for a dungeon) but it is currently impossible to do in door rando's current version.
 
 ## Customization:
 EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
