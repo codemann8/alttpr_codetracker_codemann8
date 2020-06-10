@@ -306,7 +306,8 @@
           "world_state_open,ddm_floating,mirror",
           "world_state_inverted,@Death Mountain West Top,pearl,hammer",
           "world_state_inverted,dm_west_top,pearl,hammer",
-          "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot"
+          "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot",
+          "world_state_inverted,entrance_shuffle_off,lift2"
         ]
       },
       {
