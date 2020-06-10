@@ -5,9 +5,7 @@ function MapCompassBK:init(name, dungeonCode)
 	self.code = dungeonCode .. "_mcbk"
 	self:setProperty("dungeon", dungeonCode)
 	self:setProperty("state", 0)
-	self.activeImage = ImageReference:FromPackRelativePath("images/mapcompassbigkey000.png")
-	--self.disabledImage = ImageReference:FromImageReference(self.activeImage, "@disabled")
-	self.ItemInstance.PotentialIcon = self.activeImage
+	self.ItemInstance.PotentialIcon = ImageReference:FromPackRelativePath("images/mapcompassbigkey000.png")
 
 	self:updateIcon()		
 end

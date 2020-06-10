@@ -3,8 +3,7 @@ KeysanityMode = class(CustomItem)
 function KeysanityMode:init(variant)
 	self:createItem("Dungeon Items")
 	self.code = "keysanity_mode_surrogate"
-	self.activeImage = ImageReference:FromPackRelativePath("images/mode_keysanity_standard.png")
-	self.ItemInstance.PotentialIcon = self.activeImage
+	self.ItemInstance.PotentialIcon = ImageReference:FromPackRelativePath("images/mode_keysanity_standard.png")
 
 	if variant == "items_only_keys" then
 		self:setState(3)
