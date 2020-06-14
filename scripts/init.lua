@@ -61,7 +61,10 @@ else
 	
 
 	--Tracker Layout
-	Tracker:AddLayouts("layouts/layouts_custom.json")
+	Tracker:AddLayouts("layouts/layouts_base_custom.json") --anything defined here overrides layouts defined in 'layouts_base_shared'
+	Tracker:AddLayouts("layouts/layouts_base_shared.json")
+
+	Tracker:AddLayouts("layouts/layouts_custom.json") --anything defined here overrides layouts defined in 'layouts_shared'
 	Tracker:AddLayouts("layouts/layouts_shared.json")
 
 	Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
