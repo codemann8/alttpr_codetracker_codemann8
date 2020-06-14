@@ -81,9 +81,8 @@
 				"codes": "bombs,bomb"
 			},
 			{
-				"img": "images/0003withbigbomb.png",
-				"disabled_img": "images/0003withbigbombdisabled.png",
-				"disabled_img_mods": "",
+				"img": "images/0003.png",
+				"img_mods": "overlay|images/overlayRedBomb.png",
 				"codes": "bombs,bomb",
 				"secondary_codes": "bigbomb,superbomb,redbomb,pyramid,pyramidfairy,cherrybomb"
 			}
@@ -174,7 +173,8 @@
 				"secondary_codes": "none,default,clear"
 			},
 			{
-				"img": "images/0046withbat.png",
+				"img": "images/0046.png",
+				"img_mods": "overlay|images/overlayBat.png",
 				"disabled_img": "images/0046withbatdisabled.png",
 				"disabled_img_mods": "",
 				"codes": "powder",
@@ -335,7 +335,8 @@
 				"codes": "flute,ocarina"
 			},
 			{
-				"img": "images/0047withduck.png",
+				"img": "images/0047.png",
+				"img_mods": "overlay|images/overlayDuck.png",
 				"codes": "flute,ocarina",
 				"secondary_codes": "activated"
 			}
