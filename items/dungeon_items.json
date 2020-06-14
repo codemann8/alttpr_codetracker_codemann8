@@ -1,282 +1,322 @@
 [
-	// Eastern Palace
-	{
-		"name": "Eastern Palace",
-		"type": "progressive_toggle",
-		"capturable": false,
-		"stages": [
-			{
-				"img": "images/0105.png",
-				"codes": "ep,easternpalace,crystal",
+    // Eastern Palace
+    {
+        "name": "Eastern Palace",
+        "type": "progressive_toggle",
+        "capturable": false,
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayEP.png",
+        		"codes": "ep,easternpalace,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0106.png",
-				"codes": "ep,easternpalace,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayEP.png",
+        		"codes": "ep,easternpalace,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0107.png",
-				"codes": "ep,easternpalace,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayEP.png",
+        		"codes": "ep,easternpalace,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0108.png",
-				"codes": "ep,easternpalace,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayEP.png",
+        		"codes": "ep,easternpalace,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Desert Palace
-	{
-		"name": "Desert Palace",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0109.png",
-				"codes": "dp,desertpalace,crystal",
+        ]
+    },
+    // Desert Palace
+    {
+        "name": "Desert Palace",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayDP.png",
+        		"codes": "dp,desertpalace,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0110.png",
-				"codes": "dp,desertpalace,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayDP.png",
+        		"codes": "dp,desertpalace,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0111.png",
-				"codes": "dp,desertpalace,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayDP.png",
+        		"codes": "dp,desertpalace,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0112.png",
-				"codes": "dp,desertpalace,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayDP.png",
+        		"codes": "dp,desertpalace,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Tower of Hera
-	{
-		"name": "Tower of Hera",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0113.png",
-				"codes": "toh,towerofhera,crystal",
+        ]
+    },
+    // Tower of Hera
+    {
+        "name": "Tower of Hera",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayTOH.png",
+        		"codes": "toh,towerofhera,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0114.png",
-				"codes": "toh,towerofhera,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayTOH.png",
+        		"codes": "toh,towerofhera,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0115.png",
-				"codes": "toh,towerofhera,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayTOH.png",
+        		"codes": "toh,towerofhera,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0116.png",
-				"codes": "toh,towerofhera,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayTOH.png",
+        		"codes": "toh,towerofhera,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Palace of Darkness
-	{
-		"name": "Palace of Darkness",
-		"capturable": false,
+        ]
+    },
+    // Palace of Darkness
+    {
+        "name": "Palace of Darkness",
+        "capturable": false,
 		"type": "progressive_toggle",
 		"stages": [
-			{
-				"img": "images/0077.png",
-				"codes": "pod,palaceofdarkness,crystal",
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayPOD.png",
+        		"codes": "pod,palaceofdarkness,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0078.png",
-				"codes": "pod,palaceofdarkness,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayPOD.png",
+        		"codes": "pod,palaceofdarkness,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0079.png",
-				"codes": "pod,palaceofdarkness,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayPOD.png",
+        		"codes": "pod,palaceofdarkness,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0080.png",
-				"codes": "pod,palaceofdarkness,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayPOD.png",
+        		"codes": "pod,palaceofdarkness,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Swamp Palace
-	{
-		"name": "Swamp Palace",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0081.png",
-				"codes": "sp,swamppalace,crystal",
+        ]
+    },
+    // Swamp Palace
+    {
+        "name": "Swamp Palace",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlaySP.png",
+        		"codes": "sp,swamppalace,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0082.png",
-				"codes": "sp,swamppalace,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlaySP.png",
+        		"codes": "sp,swamppalace,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0083.png",
-				"codes": "sp,swamppalace,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlaySP.png",
+        		"codes": "sp,swamppalace,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0084.png",
-				"codes": "sp,swamppalace,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlaySP.png",
+        		"codes": "sp,swamppalace,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Skull Woods
-	{
-		"name": "Skull Woods",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0085.png",
-				"codes": "sw,skullwoods,crystal",
+        ]
+    },
+    // Skull Woods
+    {
+        "name": "Skull Woods",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlaySW.png",
+        		"codes": "sw,skullwoods,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0086.png",
-				"codes": "sw,skullwoods,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlaySW.png",
+        		"codes": "sw,skullwoods,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0087.png",
-				"codes": "sw,skullwoods,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlaySW.png",
+        		"codes": "sw,skullwoods,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0088.png",
-				"codes": "sw,skullwoods,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlaySW.png",
+        		"codes": "sw,skullwoods,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Thieve's Town
-	{
-		"name": "Thieves Town",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0089.png",
-				"codes": "tt,thievestown,crystal",
+        ]
+    },
+    // Thieve's Town
+    {
+        "name": "Thieves Town",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayTT.png",
+        		"codes": "tt,thievestown,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0090.png",
-				"codes": "tt,thievestown,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayTT.png",
+        		"codes": "tt,thievestown,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0091.png",
-				"codes": "tt,thievestown,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayTT.png",
+        		"codes": "tt,thievestown,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0092.png",
-				"codes": "tt,thievestown,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayTT.png",
+        		"codes": "tt,thievestown,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Ice Palace
-	{
-		"name": "Ice Palace",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0093.png",
-				"codes": "ip,icepalace,crystal",
+        ]
+    },
+    // Ice Palace
+    {
+        "name": "Ice Palace",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayIP.png",
+        		"codes": "ip,icepalace,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0094.png",
-				"codes": "ip,icepalace,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayIP.png",
+        		"codes": "ip,icepalace,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0095.png",
-				"codes": "ip,icepalace,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayIP.png",
+        		"codes": "ip,icepalace,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0096.png",
-				"codes": "ip,icepalace,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayIP.png",
+        		"codes": "ip,icepalace,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Misery Mire
-	{
-		"name": "Misery Mire",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0097.png",
-				"codes": "mm,miserymire,crystal",
+        ]
+    },
+    // Misery Mire
+    {
+        "name": "Misery Mire",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayMM.png",
+        		"codes": "mm,miserymire,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0098.png",
-				"codes": "mm,miserymire,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayMM.png",
+        		"codes": "mm,miserymire,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0099.png",
-				"codes": "mm,miserymire,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayMM.png",
+        		"codes": "mm,miserymire,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0100.png",
-				"codes": "mm,miserymire,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayMM.png",
+        		"codes": "mm,miserymire,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	},
-	// Turtle Rock
-	{
-		"name": "Turtle Rock",
-		"capturable": false,
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/0101.png",
-				"codes": "tr,turtlerock,crystal",
+        ]
+    },
+    // Turtle Rock
+    {
+        "name": "Turtle Rock",
+        "capturable": false,
+        "type": "progressive_toggle",
+        "stages": [
+            {
+				"img": "images/prize-crystal.png",
+				"img_mods": "overlay|images/overlayTR.png",
+        		"codes": "tr,turtlerock,crystal",
 				"secondary_codes": "crystal"
 			},
 			{
-				"img": "images/0102.png",
-				"codes": "tr,turtlerock,crystal,crystal56,redcrystal,red",
+				"img": "images/prize-crystal56.png",
+				"img_mods": "overlay|images/overlayTR.png",
+        		"codes": "tr,turtlerock,crystal,crystal56,redcrystal,red",
 				"secondary_codes": "crystal five six, red crystal, fairy crystal"
 			},
 			{
-				"img": "images/0103.png",
-				"codes": "tr,turtlerock,pendant",
+				"img": "images/prize-pendant.png",
+				"img_mods": "overlay|images/overlayTR.png",
+        		"codes": "tr,turtlerock,pendant",
 				"secondary_codes": "pendant, red pendant, blue pendant"
 			},
 			{
-				"img": "images/0104.png",
-				"codes": "tr,turtlerock,greenpendant,green",
+				"img": "images/prize-greenpendant.png",
+				"img_mods": "overlay|images/overlayTR.png",
+        		"codes": "tr,turtlerock,greenpendant,green",
 				"secondary_codes": "green pendant"
 			}
-		]
-	}
+        ]
+    }
 ]

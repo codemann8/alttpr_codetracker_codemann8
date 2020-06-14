@@ -224,17 +224,20 @@
 				"secondary_codes": "none,clear"
 			},
 			{
-				"img": "images/0117.png",
+				"img": "images/0007.png",
+				"img_mods": "overlay|images/overlayMM.png",
 				"codes": "bombos,mm_medallion",
 				"secondary_codes": "mm"
 			},
 			{
-				"img": "images/0120.png",
+				"img": "images/0007.png",
+				"img_mods": "overlay|images/overlayTR.png",
 				"codes": "bombos,tr_medallion",
 				"secondary_codes": "tr"
 			},
 			{
-				"img": "images/0123.png",
+				"img": "images/0007.png",
+				"img_mods": "overlay|images/overlayBOTH.png",
 				"codes": "bombos,mm_medallion,tr_medallion",
 				"secondary_codes": "both"
 			}
@@ -251,17 +254,20 @@
 				"secondary_codes": "none,clear"
 			},
 			{
-				"img": "images/0118.png",
+				"img": "images/0008.png",
+				"img_mods": "overlay|images/overlayMM.png",
 				"codes": "ether,mm_medallion",
 				"secondary_codes": "mm, misery mire, mire"
 			},
 			{
-				"img": "images/0121.png",
+				"img": "images/0008.png",
+				"img_mods": "overlay|images/overlayTR.png",
 				"codes": "ether,tr_medallion",
 				"secondary_codes": "tr, turtle rock"
 			},
 			{
-				"img": "images/0124.png",
+				"img": "images/0008.png",
+				"img_mods": "overlay|images/overlayBOTH.png",
 				"codes": "ether,mm_medallion,tr_medallion",
 				"secondary_codes": "both"
 			}
@@ -278,17 +284,20 @@
 				"secondary_codes": "none,clear"
 			},
 			{
-				"img": "images/0119.png",
+				"img": "images/0009.png",
+				"img_mods": "overlay|images/overlayMM.png",
 				"codes": "quake,mm_medallion",
 				"secondary_codes": "mm"
 			},
 			{
-				"img": "images/0122.png",
+				"img": "images/0009.png",
+				"img_mods": "overlay|images/overlayTR.png",
 				"codes": "quake,tr_medallion",
 				"secondary_codes": "tr"
 			},
 			{
-				"img": "images/0125.png",
+				"img": "images/0009.png",
+				"img_mods": "overlay|images/overlayBOTH.png",
 				"codes": "quake,mm_medallion,tr_medallion",
 				"secondary_codes": "both"
 			}
