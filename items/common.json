@@ -374,17 +374,21 @@
 				"img_mods": "@disabled"
 			},
 			{
-				"img": "images/0070.png",
+				"img": "images/0026.png",
+				"img_mods": "overlay|images/overlay1.png",
 				"codes": "bottle"
 			},
 			{
-				"img": "images/0071.png"
+				"img": "images/0026.png",
+				"img_mods": "overlay|images/overlay2.png"
 			},
 			{
-				"img": "images/0072.png"
+				"img": "images/0026.png",
+				"img_mods": "overlay|images/overlay3.png"
 			},
 			{
-				"img": "images/0073.png"
+				"img": "images/0026.png",
+				"img_mods": "overlay|images/overlay4.png"
 			}
 		]
 	},
