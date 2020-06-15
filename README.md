@@ -1,4 +1,5 @@
 # CodeTracker Full Tracker Package for EmoTracker
+Join the [Discord](https://discord.gg/Fk4wTn6) to get notified of updates!
 
 ## Overview:
 This package is meant to encompass all aspects that are desired or missing from the existing array of LttP packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, mystery multiworld, door rando, and custom ROM hacks.
@@ -31,7 +32,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Item/Key Tracker
 
 ## Installation:
-Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or `Watch` this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
+Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or `Join` the [Discord](https://discord.gg/Fk4wTn6) or `Watch` this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
 1) Download/update EmoTracker to the latest version  
      This package sometimes utilizes features of EmoTracker that were implemented in recent versions
 2) Download the latest .zip file (NOT the source code) from the [Releases](https://github.com/codemann8/alttpr_codetracker_codemann8/releases) page
