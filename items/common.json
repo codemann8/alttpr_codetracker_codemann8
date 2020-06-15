@@ -469,22 +469,23 @@
 	// Aganhims
 	{
 		"name": "Aganhim",
-		"capturable": false,
 		"type": "toggle",
+		"capturable": false,
 		"img": "images/aga-green.png",
 		"codes": "aga1,aga,aganhim"
 	},
 	{
         "name": "Agahnim 2",
-        "capturable": false,
         "type": "toggle",
+        "capturable": false,
         "img": "images/aga-red.png",
         "codes": "aga2,gt"
     },
 	{
 		"name": "Agahnims",
 		"type": "composite_toggle",
-		"codes": "agas",
+		"capturable": false,
+        "codes": "agas",
 		"item_left": "aga1",
 		"item_right": "aga2",
 		"images": [
