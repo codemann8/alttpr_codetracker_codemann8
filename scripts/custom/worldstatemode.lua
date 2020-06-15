@@ -23,7 +23,7 @@ function WorldStateMode:updateIcon()
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_world_state_open" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Open/Standard/Retro"
+        self.ItemInstance.Name = "Open/Standard"
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_world_state_inverted" .. self.suffix .. ".png")
         self.ItemInstance.Name = "Inverted"
