@@ -20,20 +20,31 @@ function DoorShuffleMode:updateIcon()
 	local item = Tracker:FindObjectForCode("door_shuffle")
 	item.CurrentStage = self:getState()
 
+	local mirror = Tracker:FindObjectForCode("mirror")
+
 	item = Tracker:FindObjectForCode("gt_bkgame")
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
         self.ItemInstance.Name = "Off"
-        item.MaxCount = 22
+		item.MaxCount = 22
+		if mirror.CurrentStage == 0 then
+			mirror.CurrentStage = 1
+		end
     elseif self:getState() == 1 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
         self.ItemInstance.Name = "Basic"
-        item.MaxCount = 27
+		item.MaxCount = 27
+		if mirror.CurrentStage == 1 then
+			mirror.CurrentStage = 0
+		end
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
         self.ItemInstance.Name = "Crossed"
-        item.MaxCount = 99
+		item.MaxCount = 99
+		if mirror.CurrentStage == 1 then
+			mirror.CurrentStage = 0
+		end
     end
 
     --Sync other surrogates
