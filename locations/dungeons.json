@@ -578,8 +578,7 @@
 			{
 				"name": "Swamp Palace",
 				"access_rules": [
-					"flippers",
-					"door_shuffle_crossed"
+					"flippers"
 				],
 				"sections": [
 					{
@@ -809,8 +808,7 @@
 				"name": "Ice Palace",
 				"access_rules": [
 					"firerod",
-					"$canUseMedallions,bombos",
-					"door_shuffle_crossed"
+					"$canUseMedallions,bombos"
 				],
 				"sections": [
 					{
@@ -914,8 +912,7 @@
 				"name": "Misery Mire",
 				"access_rules": [
 					"hookshot",
-					"boots",
-					"door_shuffle_crossed"
+					"boots"
 				],
 				"sections": [
 					{
@@ -1006,8 +1003,7 @@
 				"name": "Turtle Rock",
 				"access_rules": [
 					"@TR Main Entrance,somaria",
-					"@TR Mirror Entrances",
-					"door_shuffle_crossed"
+					"@TR Mirror Entrances"
 				],
 				"sections": [
 					{
