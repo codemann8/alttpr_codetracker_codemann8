@@ -3,7 +3,6 @@
 	{
 		"name": "Hyrule Castle Big Key",
 		"type": "toggle",
-		"img": "images/BigKey.png",
 		"codes": "hc_bigkey"
 	},
 	{
@@ -27,7 +26,6 @@
 	{
 		"name": "Aganihm's Tower Big Key",
 		"type": "toggle",
-		"img": "images/BigKey.png",
 		"codes": "at_bigkey"
 	},
 	{
@@ -90,7 +88,6 @@
 	{
 		"name": "Eastern Palace Small Key",
 		"type": "consumable",
-		"img": "images/SmallKey2.png",
 		"codes": "ep_smallkey",
 		"max_quantity": 0
 	},
