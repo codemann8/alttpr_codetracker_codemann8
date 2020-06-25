@@ -187,7 +187,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 302,
+        "x": 306,
         "y": 840
       }
     ]
@@ -208,7 +208,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 346,
+        "x": 352,
         "y": 840
       }
     ]
@@ -676,7 +676,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 1000,
+        "x": 1003,
         "y": 886
       }
     ]
@@ -1081,8 +1081,8 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 1925,
-        "y": 825
+        "x": 1924,
+        "y": 830
       }
     ]
   },
@@ -1286,7 +1286,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 1000,
+        "x": 1003,
         "y": 794
       }
     ]
@@ -1311,7 +1311,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 1000,
+        "x": 1003,
         "y": 840,
         "force_invisibility_rules": [
           "world_state_open"
@@ -1528,7 +1528,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 150,
+        "x": 148,
         "y": 1540
       }
     ]
@@ -1602,7 +1602,7 @@
     "map_locations": [
       {
         "map": "erlightworld",
-        "x": 150,
+        "x": 148,
         "y": 1600
       }
     ]
@@ -2002,7 +2002,7 @@
     "map_locations": [
       {
         "map": "erdarkworld",
-        "x": 255,
+        "x": 251,
         "y": 975
       }
     ]
@@ -2477,7 +2477,7 @@
     "map_locations": [
       {
         "map": "erdarkworld",
-        "x": 1925,
+        "x": 1924,
         "y": 830
       }
     ]
@@ -2795,8 +2795,8 @@
     "map_locations": [
       {
         "map": "erdarkworld",
-        "x": 150,
-        "y": 1650
+        "x": 148,
+        "y": 1610
       }
     ]
   },
@@ -2836,7 +2836,7 @@
       {
         "map": "erdarkworld",
         "x": 220,
-        "y": 1610
+        "y": 1600
       }
     ]
   },

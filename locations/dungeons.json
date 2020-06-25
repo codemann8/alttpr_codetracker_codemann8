@@ -145,13 +145,13 @@
 				"map_locations": [
 					{
 						"map": "lightworld",
-						"x": 1925,
+						"x": 1924,
 						"y": 791
 					},
 					{
 						"map": "erlightworld",
-						"x": 1925,
-						"y": 768
+						"x": 1924,
+						"y": 773
 					},
 					{
 						"map": "erlightdungeon",
@@ -232,12 +232,12 @@
 				"map_locations": [
 					{
 						"map": "lightworld",
-						"x": 146,
+						"x": 148,
 						"y": 1584
 					},
 					{
 						"map": "erlightworld",
-						"x": 146,
+						"x": 148,
 						"y": 1700
 					},
 					{
@@ -307,17 +307,17 @@
 				"map_locations": [
 					{
 						"map": "lightworld",
-						"x": 1126,
+						"x": 1125,
 						"y": 68
 					},
 					{
 						"map": "erlightworld",
-						"x": 1126,
+						"x": 1125,
 						"y": 20
 					},
 					{
 						"map": "erlightdungeon",
-						"x": 1126,
+						"x": 1125,
 						"y": 144
 					}
 				]
@@ -386,7 +386,7 @@
 					{
 						"map": "erlightworld",
 						"x": 1003,
-						"y": 727,
+						"y": 737,
 						"force_invisibility_rules": [
 							"world_state_inverted"
 						]
@@ -550,7 +550,7 @@
 					{
 						"map": "darkworld",
 						"x": 1924,
-						"y": 800
+						"y": 791
 					},
 					{
 						"map": "erdarkworld",
@@ -640,7 +640,7 @@
 					{
 						"map": "darkworld",
 						"x": 940,
-						"y": 1880
+						"y": 1860
 					},
 					{
 						"map": "erdarkworld",
@@ -703,8 +703,8 @@
 				"map_locations": [
 					{
 						"map": "darkworld",
-						"x": 79,
-						"y": 121
+						"x": 80,
+						"y": 110
 					},
 					{
 						"map": "erdarkworld",
@@ -958,13 +958,13 @@
 				"map_locations": [
 					{
 						"map": "darkworld",
-						"x": 150,
+						"x": 148,
 						"y": 1670
 					},
 					{
 						"map": "erdarkworld",
-						"x": 150,
-						"y": 1710
+						"x": 148,
+						"y": 1700
 					},
 					{
 						"map": "erdarkdungeon",
@@ -1265,7 +1265,7 @@
 					},
 					{
 						"map": "darkworld",
-						"x": 1126,
+						"x": 1125,
 						"y": 68,
 						"force_invisibility_rules": [
 						"world_state_inverted"
@@ -1281,7 +1281,7 @@
 					},
 					{
 						"map": "erdarkworld",
-						"x": 1126,
+						"x": 1125,
 						"y": 20,
 						"force_invisibility_rules": [
 							"world_state_inverted"
@@ -1297,7 +1297,7 @@
 					},
 					{
 						"map": "erdarkdungeon",
-						"x": 1126,
+						"x": 1125,
 						"y": 144,
 						"force_invisibility_rules": [
 						"world_state_inverted"
