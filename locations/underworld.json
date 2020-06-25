@@ -686,8 +686,9 @@
       {
         "name": "Big Bomb Spot",
         "access_rules": [
-          "world_state_open,@South Dark World,crystal56:2",
-          "world_state_inverted,@Light World,crystal56:2"
+          "world_state_open,@South Dark World,crystal56:2,[hammer]",
+          "world_state_open,@South Dark World,crystal56:2,[mirror],[aga]",
+          "world_state_inverted,@Light World,crystal56:2,mirror"
         ],
         "item_count": 2
       }
