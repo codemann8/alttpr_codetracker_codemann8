@@ -3251,8 +3251,8 @@
     "name": "Mimic Cave Entrance",
     "parent": "Death Mountain East Bottom",
     "access_rules": [
-      "@Death Mountain East Top",
-      "world_state_open,ddm_tr_bridge,mirror"
+      "world_state_open,ddm_tr_bridge,mirror",
+      "world_state_inverted,@Death Mountain East Top"
     ],
     "sections": [
       {
