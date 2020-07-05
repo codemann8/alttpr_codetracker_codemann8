@@ -2777,14 +2777,16 @@
     "parent": "Mire Area",
     "access_rules": [
       "world_state_open,pearl",
-      "world_state_inverted"
+      "world_state_inverted",
+      "{}"
     ],
     "sections": [
       {
         "name": "Entrance",
         "access_rules": [
           "$canUseMedallions,mm_medallion",
-          "$canUseMedallions,bombos,ether,quake"
+          "$canUseMedallions,bombos,ether,quake",
+          "{}"
         ],
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
@@ -3422,14 +3424,16 @@
     "parent": "Dark Death Mountain Top",
     "access_rules": [
       "world_state_open,@Death Mountain East Top,lift2,hammer,pearl",
-      "world_state_inverted"
+      "world_state_inverted",
+      "{}"
     ],
     "sections": [
       {
         "name": "Entrance",
         "access_rules": [
           "$canUseMedallions,tr_medallion",
-          "$canUseMedallions,bombos,ether,quake"
+          "$canUseMedallions,bombos,ether,quake",
+          "{}"
         ],
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
