@@ -1020,8 +1020,8 @@ function updateDungeonItemsFromMemorySegment(segment)
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_chest", { { 140, 10 }, { 123, 4 }, { 123, 5 }, { 123, 6 }, { 123, 7 }, { 139, 4 }, { 125, 4 }, { 124, 4 }, { 124, 5 }, { 124, 6 }, { 124, 7 }, { 140, 4 }, { 140, 5 }, { 140, 6 }, { 140, 7 }, { 28, 4 }, { 28, 5 }, { 28, 6 }, { 141, 4 }, { 157, 4 }, { 157, 5 }, { 157, 6 }, { 157, 7 }, { 61, 4 }, { 61, 5 }, { 61, 6 }, { 77, 4 } })
 
 		--Keysanity Dungeon Map Locations
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Key Guards", { { 114, 4 }, { 113, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Prison Cell", { { 128, 4 } })
+		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/First", { { 114, 4 } })
+		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Boomerang\\Prison", { { 113, 4 }, { 128, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Dark Cross", { { 50, 4 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Back", { { 17, 4 }, { 17, 5 }, { 17, 6 } })
 		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Sanctuary", { { 18, 4 } })

@@ -18,7 +18,7 @@
 		"name": "HC Access",
 		"parent": "Semi-Dungeon Color",
 		"access_rules": [
-			"world_state_open,@Light World",
+			"world_state_open",
 			"world_state_inverted,@Light World,[pearl]",
 			"entrance_shuffle_on"
 		],
@@ -28,18 +28,18 @@
 				"short_name": "Escape",
 				"sections": [
 					{
-						"name": "Key Guards",
-						"clear_as_group": false,
-						"item_count": 2
+						"name": "First",
+						"item_count": 1
 					},
 					{
-						"name": "Prison Cell",
+						"name": "Boomerang\\Prison",
+						"clear_as_group": false,
 						"access_rules": [
 							"door_shuffle_off,[hc_smallkey:1]",
 							"door_shuffle_off,@Non-Key Keysanity",
 							"door_shuffle_on"
 						],
-						"item_count": 1
+						"item_count": 2
 					},
 					{
 						"name": "Dark Cross",
@@ -52,10 +52,10 @@
 						"name": "Back",
 						"clear_as_group": true,
 						"access_rules": [
-							"world_state_open,lift1",
-							"world_state_inverted,pearl,lift1",
+							"door_shuffle_off,lift1",
 							"door_shuffle_off,hc_smallkey:1,[firesource]",
 							"door_shuffle_off,@Non-Key Keysanity,[firesource]",
+							"door_shuffle_on",
 							"entrance_shuffle_on"
 						],
 						"item_count": 3
@@ -63,12 +63,6 @@
 					{
 						"name": "Sanctuary",
 						"short_name": "Sanc",
-						"access_rules": [
-							"world_state_open",
-							"world_state_inverted,pearl",
-							"world_state_inverted,[pearl],mirror",
-							"entrance_shuffle_on"
-						],
 						"item_count": 1
 					}
 				],
