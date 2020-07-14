@@ -1517,7 +1517,8 @@
       {
         "name": "Entrance",
         "access_rules": [
-          "lift1"
+          "lift1",
+          "world_state_open,@Mire Area,mirror"
         ],
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
