@@ -15,10 +15,10 @@ function loadMCBK()
 end
 
 function updateIcons(keysanity, doorrando)
-	local dungeons = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
-	for i = 1, 13 do
-		local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
-		local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
+    local dungeons = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
+    for i = 1, 13 do
+        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
+        local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if (doorrando == 2) then
             if item.Section.ChestCount ~= 99 then
                 item.Section.ChestCount = 99
@@ -32,36 +32,40 @@ function updateIcons(keysanity, doorrando)
             end
         else
             local chestkey = Tracker:FindObjectForCode(dungeons[i] .. "_chestkey")
-            key.MaxCount = chestkey.MaxCount
-            if key.MaxCount == 0 then
+            
+            if key.MaxCount ~= chestkey.MaxCount and key.MaxCount == 0 then
                 key.Icon = ""
             end
+            key.MaxCount = chestkey.MaxCount
 
             if dungeons[i] == "hc" or dungeons[i] == "at" then
-               Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ""
+                local bk = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
+                if bk.Icon ~= "" then
+                    bk.Icon = ""
+                end
             end
 
             local found = 0
             if item.Section.ChestCount ~= 99 then
-			    found = item.Section.ChestCount - item.Section.AvailableChestCount
+            found = item.Section.ChestCount - item.Section.AvailableChestCount
             end
 
-			local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
+            local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
             item.Section.ChestCount = chest.MaxCount
-			if keysanity <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
-				item.Section.ChestCount = item.Section.ChestCount - 1
-			end
-			if keysanity <= 1 and key then
-				item.Section.ChestCount = item.Section.ChestCount - key.MaxCount
-			end
-			if keysanity == 0 then
-				if dungeons[i] == "hc" then
-					item.Section.ChestCount = item.Section.ChestCount - 1
-				elseif dungeons[i] ~= "at" then
-					item.Section.ChestCount = item.Section.ChestCount - 2
-				end
-			end
-			item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
-		end
-	end
+            if keysanity <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+                item.Section.ChestCount = item.Section.ChestCount - 1
+            end
+            if keysanity <= 1 and key then
+                item.Section.ChestCount = item.Section.ChestCount - key.MaxCount
+            end
+            if keysanity == 0 then
+                if dungeons[i] == "hc" then
+                    item.Section.ChestCount = item.Section.ChestCount - 1
+                elseif dungeons[i] ~= "at" then
+                    item.Section.ChestCount = item.Section.ChestCount - 2
+                end
+            end
+            item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
+        end
+    end
 end
