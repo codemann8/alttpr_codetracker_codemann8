@@ -774,7 +774,7 @@
         "stages": [
 			{
 				"img": "images/mode_door_shuffle_off.png",
-				"codes": "door_shuffle,door_shuffle_off,",
+				"codes": "door_shuffle,door_shuffle_off",
 				"inherit_codes": false
 			},
 			{
