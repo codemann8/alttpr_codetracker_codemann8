@@ -146,17 +146,16 @@ end
 function updateAga2(segment)
 	local item = Tracker:FindObjectForCode("aga2")
 	local value = ReadU8(segment, 0x7ef2db)
-	if value & 0x20 > 0 then
-		item.Active = true
-		local worldState = Tracker:FindObjectForCode("world_state_mode")
-		if worldState.CurrentStage > 0 then
-			item = Tracker:FindObjectForCode("castle_top")
-		else
-			item = Tracker:FindObjectForCode("dw_east")
-		end
-		item.Active = true
+	item.Active = value & 0x20 > 0
+end
+
+function updateBigBomb(segment)
+	local item = Tracker:FindObjectForCode("bombs")
+	local value = ReadU8(segment, 0x7ef2db)
+	if value & 0x02 > 0 then
+		item.CurrentStage = 1
 	else
-		item.Active = false
+		item.CurrentStage = 0
 	end
 end
 
@@ -646,17 +645,6 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
 	end
 end
 
-function updateBombIndicatorStatus(status)
-	local item = Tracker:FindObjectForCode("bombs")
-	if item then
-		if status then
-			item.CurrentStage = 1
-		else
-			item.CurrentStage = 0
-		end
-	end
-end
-
 function updateBatIndicatorStatus(status)
 	local item = Tracker:FindObjectForCode("powder")
 	if item then
@@ -745,6 +733,7 @@ function updateOverworldEventsFromMemorySegment(segment)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Zora's Domain/Ledge",                129)
 
 	--updateAga2(segment) --TODO: Find better way to determine Pyramid Hole
+	updateBigBomb(segment)
 	updateDam(segment)
 end
 
@@ -799,7 +788,7 @@ function updateRoomsFromMemorySegment(segment)
 	updateSectionChestCountFromRoomSlotList(segment, "@Mire Shed/Shed", { { 269, 4 }, { 269, 5 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@King's Tomb/The Crypt", { { 275, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Waterfall Fairy/Cave", { { 276, 4 }, { 276, 5 } })
-	updateSectionChestCountFromRoomSlotList(segment, "@Pyramid Fairy/Big Bomb Spot", { { 278, 4 }, { 278, 5 } }, updateBombIndicatorStatus)
+	updateSectionChestCountFromRoomSlotList(segment, "@Pyramid Fairy/Big Bomb Spot", { { 278, 4 }, { 278, 5 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Spike Cave/Cave", { { 279, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", { { 283, 9, 8 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", { { 283, 10 } }) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
