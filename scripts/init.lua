@@ -5,7 +5,7 @@ ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/class.lua")
 ScriptHost:LoadScript("scripts/custom_item.lua")
-ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
+
 
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
@@ -13,9 +13,12 @@ Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
 
+ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
 loadMCBK()
 
 if Tracker.ActiveVariantUID == "items_only" then
+	Tracker:AddLayouts("layouts/layouts_base_custom.json")
+	Tracker:AddLayouts("layouts/layouts_base_shared.json")
 	Tracker:AddLayouts("layouts/layouts_custom.json")
 	Tracker:AddLayouts("layouts/layouts_shared.json")
 	Tracker:AddLayouts("layouts/dungeon_grid.json")
@@ -40,7 +43,6 @@ else
 	
 	--Custom Items
 	Tracker:AddItems("items/chest_proxies.json")
-
 	ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
 	WorldStateMode("")
 	WorldStateMode("_small")
@@ -58,7 +60,6 @@ else
 	GTCrystalReq()
 	ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
 	GoalSetting()
-	
 
 	--Tracker Layout
 	Tracker:AddLayouts("layouts/layouts_base_custom.json") --anything defined here overrides layouts defined in 'layouts_base_shared'
@@ -89,6 +90,6 @@ end
 if _VERSION == "Lua 5.3" then
 	ScriptHost:LoadScript("scripts/fileio.lua")
 	ScriptHost:LoadScript("scripts/autotracking.lua")
-else		
+else
 	print("Auto-tracker is unsupported by your tracker version")
 end
