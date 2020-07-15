@@ -445,11 +445,8 @@
             {	
                 "title": "Dungeon",
                 "content": {
-                    "type": "container",
-                    "content": {
-                        "type": "layout",
-                        "key": "shared_doorrando"
-                    }
+                    "type": "layout",
+                    "key": "shared_doorrando"
                 }
             }
         ]
