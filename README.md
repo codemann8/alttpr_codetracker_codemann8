@@ -32,15 +32,12 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Item/Key Tracker
 
 ## Installation:
-Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it, which means you will need to periodically check this page (or `Join` the [Discord](https://discord.gg/Fk4wTn6) or `Watch` this GitHub project to receive notifications) for when new releases are available. To install, you will need to perform the following steps:
-1) Download/update EmoTracker to the latest version  
-     This package sometimes utilizes features of EmoTracker that were implemented in recent versions
-2) Download the latest .zip file (NOT the source code) from the [Releases](https://github.com/codemann8/alttpr_codetracker_codemann8/releases) page
-3) Put the .zip file in `Documents/EmoTracker/packs` (`C:/Users/<user>/Documents/EmoTracker/packs`)  
-     If you are upgrading the package to a newer version, simply overwrite the .zip file with the new one
-4) If EmoTracker is already opened, you will need to close and reopen the program for it to detect the new package
-5) Click the `Gear icon -> Installed packages -> A Link to the Past Randomizer`, you will see `CodeTracker Full Tracker` as a new option
-6) Beat the pig ;) See Usage section for further info, if needed
+Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it. To install, you will need to perform the following steps:
+1) You will need to modify a settings file in your local EmoTracker install directory, located in `C:/Users/<user>/Documents/EmoTracker/application_settings.json`. Open this file in your favorite text editor (Notepad if you don't have any).
+2) There is a line labeled `"package_repositories": []`, you will need to add a link to my repository, which is what informs EmoTracker should download a new update to the tracker package. The resulting line should be `"package_repositories": ["https://raw.githubusercontent.com/codemann8/alttpr_codetracker_codemann8/master/repository.json"]`. Save the file.
+3) If EmoTracker is open, close and reopen it. From here, the new tracker package should now be a package that shows in the default `Package Manager` alongside all the other packages you can install. You will see `CodeTracker Full Tracker` as a new option to install.
+4) Click `Install`. From now on, EmoTracker will show a yellow cloud icon when there is a new version of this tracker to install.
+5) Beat the pig ;) See Usage section for further info, if needed
 
 ## Usage:
 #### Tracker Layout
