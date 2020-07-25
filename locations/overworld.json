@@ -285,6 +285,7 @@
         "chest_opened_img": "images/door_open.png",
         "item_count": 1,
         "capture_item": true,
+        "capture_item_layout": "tracker_capture_dropdown",
         "hosted_item": "light_world"
       }
     ],
@@ -650,6 +651,8 @@
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
         "item_count": 1,
+        "capture_item": true,
+        "capture_item_layout": "tracker_capture_dropdown",
         "hosted_item": "light_world"
       }
     ],
@@ -2360,6 +2363,8 @@
         "chest_unopened_img": "images/door_closed.png",
         "chest_opened_img": "images/door_open.png",
         "item_count": 1,
+        "capture_item": true,
+        "capture_item_layout": "tracker_capture_dropdown",
         "hosted_item": "dw_east"
       }
     ],
