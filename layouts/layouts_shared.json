@@ -436,13 +436,6 @@
                 }
             },
             {	
-                "title": "Entrance",
-                "content": {
-                    "type": "map",
-                    "maps": [ "erlightworld", "erdarkworld" ]
-                }
-            },
-            {	
                 "title": "Dungeon",
                 "content": {
                     "type": "layout",
