@@ -933,7 +933,8 @@
 			"world_state_open,@Mire Area,pearl,$canUseMedallions,bombos,ether,quake",
 			"world_state_inverted,@Mire Area,$canUseMedallions,mm_medallion",
 			"world_state_inverted,@Mire Area,$canUseMedallions,bombos,ether,quake",
-			"entrance_shuffle_on"
+			"entrance_shuffle_on",
+			"{entrance_shuffle_off,@Mire Area}"
 		],
 		"children": [
 			{
@@ -946,35 +947,38 @@
 					{
 						"name": "Front",
 						"clear_as_group": false,
+						"access_rules": [
+							"{blank}"
+						],
 						"item_count": 4
 					},
 					{
 						"name": "Left Side",
 						"clear_as_group": false,
 						"access_rules": [
-							"firesource,[mm_smallkey:1]",
-							"firesource,@Non-Key Keysanity",
-							"door_shuffle_on,firesource"
+							"firesource,[mm_smallkey:1],{blank}",
+							"firesource,@Non-Key Keysanity,{blank}",
+							"door_shuffle_on,firesource,{blank}"
 						],
 						"item_count": 2
 					},
 					{
 						"name": "Big Chest",
 						"access_rules": [
-							"mm_bigkey",
-							"@Non-Full Keysanity",
-							"door_shuffle_crossed"
+							"mm_bigkey,{blank}",
+							"@Non-Full Keysanity,{blank}",
+							"door_shuffle_crossed,{blank}"
 						],
 						"item_count": 1
 					},
 					{
 						"name": "Vitreous",
 						"access_rules": [
-							"mm_bigkey,[lamp],somaria",
-							"@Non-Full Keysanity,[lamp],somaria",
-							"door_shuffle_on,sword",
-							"door_shuffle_on,bow",
-							"door_shuffle_on,hammer"
+							"mm_bigkey,[lamp],somaria,{blank}",
+							"@Non-Full Keysanity,[lamp],somaria,{blank}",
+							"door_shuffle_on,sword,{blank}",
+							"door_shuffle_on,bow,{blank}",
+							"door_shuffle_on,hammer,{blank}"
 						],
 						"hosted_item": "miserymire",
 						"item_count": 1
@@ -999,6 +1003,28 @@
 						"map": "erdarkdungeon",
 						"x": 160,
 						"y": 1670
+					}
+				]
+			},
+			{
+				"name": "Misery Mire Medallion Check",
+				"sections": [
+					{
+						"name": "Medallion",
+						"access_rules": [
+							"{}"
+						],
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 148,
+						"y": 1694,
+						"size": 48,
+						"restrict_visibility_rules": [ "entrance_shuffle_off,@Mire Area" ],
+						"force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake" ]
 					}
 				]
 			}
@@ -1028,7 +1054,8 @@
 			"world_state_open,@TR Main Entrance,pearl",
 			"world_state_inverted,@TR Main Entrance",
 			"world_state_inverted,@TR Mirror Entrances",
-			"entrance_shuffle_on"
+			"entrance_shuffle_on",
+			"{entrance_shuffle_off,@Dark Death Mountain Top}"
 		],
 		"children": [
 			{
@@ -1157,6 +1184,28 @@
 						"map": "erdarkdungeon",
 						"x": 1855,
 						"y": 144
+					}
+				]
+			},
+			{
+				"name": "Turtle Rock Medallion Check",
+				"sections": [
+					{
+						"name": "Medallion",
+						"access_rules": [
+							"{}"
+						],
+						"item_count": 1
+					}
+				],
+				"map_locations": [
+					{
+						"map": "darkworld",
+						"x": 1890,
+						"y": 124,
+						"size": 48,
+						"restrict_visibility_rules": [ "entrance_shuffle_off,@Dark Death Mountain Top" ],
+						"force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake" ]
 					}
 				]
 			}
