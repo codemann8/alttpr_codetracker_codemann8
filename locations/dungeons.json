@@ -1003,7 +1003,7 @@
 						"y": 1694,
 						"size": 48,
 						"restrict_visibility_rules": [ "entrance_shuffle_off,@Mire Area" ],
-						"force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake" ]
+						"force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake", "$hasSeenMireMedallion" ]
 					}
 				]
 			}
@@ -1182,7 +1182,7 @@
 						"y": 124,
 						"size": 48,
 						"restrict_visibility_rules": [ "entrance_shuffle_off,@Dark Death Mountain Top" ],
-						"force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake" ]
+						"force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake", "$hasSeenTurtleMedallion" ]
 					}
 				]
 			}

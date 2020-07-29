@@ -75,6 +75,44 @@ function canDamageBlind()
     end
 end
 
+function hasSeenMireMedallion()
+    local medallion = Tracker:FindObjectForCode("bombos")
+    if medallion.CurrentStage == 1 or medallion.CurrentStage == 3 then
+        return 1
+    end
+    
+    medallion = Tracker:FindObjectForCode("ether")
+    if medallion.CurrentStage == 1 or medallion.CurrentStage == 3 then
+        return 1
+    end
+
+    medallion = Tracker:FindObjectForCode("quake")
+    if medallion.CurrentStage == 1 or medallion.CurrentStage == 3 then
+        return 1
+    end
+
+    return 0
+end
+
+function hasSeenTurtleMedallion()
+    local medallion = Tracker:FindObjectForCode("bombos")
+    if medallion.CurrentStage > 1 then
+        return 1
+    end
+    
+    medallion = Tracker:FindObjectForCode("ether")
+    if medallion.CurrentStage > 1 then
+        return 1
+    end
+
+    medallion = Tracker:FindObjectForCode("quake")
+    if medallion.CurrentStage > 1 then
+        return 1
+    end
+
+    return 0
+end
+
 function gtCrystalCount()
     local reqCount = Tracker:ProviderCountForCode("gt_crystals")
     local count = Tracker:ProviderCountForCode("crystal")
