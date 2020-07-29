@@ -74,7 +74,7 @@ function ReadU16(segment, address)
 end
 
 function isInGame()
-	local module = AutoTracker:ReadU8(0x7e0010, 0))
+	local module = AutoTracker:ReadU8(0x7e0010, 0)
 	return module > 0x05 and module < 0x55
 end
 
