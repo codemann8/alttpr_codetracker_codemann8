@@ -71,22 +71,19 @@
 						"map": "lightworld",
 						"x": 925,
 						"y": 546,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
 						"map": "lightworld",
 						"x": 1003,
 						"y": 912,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 1003,
 						"y": 942,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erlightdungeon",
@@ -147,15 +144,13 @@
 						"map": "lightworld",
 						"x": 1924,
 						"y": 791,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 1924,
 						"y": 773,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erlightdungeon",
@@ -238,15 +233,13 @@
 						"map": "lightworld",
 						"x": 148,
 						"y": 1584,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 148,
 						"y": 1700,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erlightdungeon",
@@ -317,15 +310,13 @@
 						"map": "lightworld",
 						"x": 1125,
 						"y": 58,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 1125,
 						"y": 20,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erlightdungeon",
@@ -384,28 +375,28 @@
 						"x": 1003,
 						"y": 790,
 						"size": 110,
-						"restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off" ]
+						"restrict_visibility_rules": [ "world_state_open" ]
 					},
 					{
 						"map": "darkworld",
 						"x": 1126,
 						"y": 68,
 						"size": 110,
-						"restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_off" ]
+						"restrict_visibility_rules": [ "world_state_inverted" ]
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 1003,
 						"y": 737,
 						"size": 64,
-						"restrict_visibility_rules": [ "world_state_open,entrance_shuffle_on" ]
+						"restrict_visibility_rules": [ "world_state_open" ]
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 1126,
 						"y": 20,
 						"size": 64,
-						"restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_on" ]
+						"restrict_visibility_rules": [ "world_state_inverted" ]
 					},
 					{
 						"map": "erlightdungeon",
@@ -559,15 +550,13 @@
 						"map": "darkworld",
 						"x": 1924,
 						"y": 791,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 1924,
 						"y": 773,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -652,15 +641,13 @@
 						"map": "darkworld",
 						"x": 940,
 						"y": 1860,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 940,
 						"y": 1820,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -720,15 +707,13 @@
 						"map": "darkworld",
 						"x": 80,
 						"y": 100,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 80,
 						"y": 54,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -800,15 +785,13 @@
 						"map": "darkworld",
 						"x": 254,
 						"y": 971,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 254,
 						"y": 920,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -906,15 +889,13 @@
 						"map": "darkworld",
 						"x": 1600,
 						"y": 1728,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 1600,
 						"y": 1680,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -989,15 +970,13 @@
 						"map": "darkworld",
 						"x": 148,
 						"y": 1694,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 148,
 						"y": 1700,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -1170,15 +1149,13 @@
 						"map": "darkworld",
 						"x": 1890,
 						"y": 124,
-						"size": 110,
-						"restrict_visibility_rules": [ "entrance_shuffle_off" ]
+						"size": 110
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 1890,
 						"y": 110,
-						"size": 64,
-						"restrict_visibility_rules": [ "entrance_shuffle_on" ]
+						"size": 64
 					},
 					{
 						"map": "erdarkdungeon",
@@ -1341,28 +1318,28 @@
 						"x": 1003,
 						"y": 790,
 						"size": 110,
-						"restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_off" ]
+						"restrict_visibility_rules": [ "world_state_inverted" ]
 					},
 					{
 						"map": "darkworld",
 						"x": 1125,
 						"y": 58,
 						"size": 110,
-						"restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off" ]
+						"restrict_visibility_rules": [ "world_state_open" ]
 					},
 					{
-						"map": "lightworld",
+						"map": "erlightworld",
 						"x": 1003,
 						"y": 727,
 						"size": 64,
-						"restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_on" ]
+						"restrict_visibility_rules": [ "world_state_inverted" ]
 					},
 					{
-						"map": "darkworld",
+						"map": "erdarkworld",
 						"x": 1125,
 						"y": 20,
 						"size": 64,
-						"restrict_visibility_rules": [ "world_state_open,entrance_shuffle_on" ]
+						"restrict_visibility_rules": [ "world_state_open" ]
 					},
 					{
 						"map": "erlightdungeon",

@@ -1,5 +1,5 @@
 ﻿[
-  {
+	{
 		"name": "lightworld",
 		"location_size": 80,
 		"location_border_thickness": 5,
@@ -8,6 +8,18 @@
 	{
 		"name": "darkworld",
 		"location_size": 80,
+		"location_border_thickness": 5,
+		"img": "images/lttp_darkworld.png"
+	},
+	{
+		"name": "erlightworld",
+		"location_size": 48,
+		"location_border_thickness": 5,
+		"img": "images/lttp_lightworld.png"
+	},
+	{
+		"name": "erdarkworld",
+		"location_size": 48,
 		"location_border_thickness": 5,
 		"img": "images/lttp_darkworld.png"
 	},
