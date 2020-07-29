@@ -10,6 +10,8 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
+- Dungeon locations having a larger blip on the map compared to other locations
+- MM and TR Medallion Checks are added to inform the user when it is available to check
 - Door Rando Mode, this is enabled by clicking the Gear in the `Items` section. Under the `Dungeon` tab, maps are available and are able to be manually checked off when a room is found
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - GT Big Key Guessing Game, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
