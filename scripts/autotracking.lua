@@ -86,7 +86,7 @@ function updateInGameStatusFromMemorySegment(segment)
 
 	if mainModuleIdx ~= PREV_MODULEID then
 		if (mainModuleIdx == 0x07 or mainModuleIdx == 0x09) then
-			updateModuleFromMemorySegment(segment)
+			updateModuleFromMemorySegment(segment, mainModuleIdx)
 		end
 	end
 
@@ -1239,7 +1239,7 @@ function updateDungeonFromMemorySegment(segment)
 		end
 
 		local entrance = Tracker:FindObjectForCode("entrance_shuffle")
-		if not AUTOTRACKER_DISABLE_REGION_TRACKING and entrance.CurrentStage > 0 then
+		if (not AUTOTRACKER_DISABLE_REGION_TRACKING) and entrance.CurrentStage > 0 then
 			if owarea > 0 and overworldMap[owarea] then
 				local region = Tracker:FindObjectForCode(overworldMap[owarea])
 				if region then
@@ -1255,7 +1255,7 @@ function updateDungeonFromMemorySegment(segment)
 	end
 end
 
-function updateModuleFromMemorySegment(segment)
+function updateModuleFromMemorySegment(segment, moduleId)
 	if not isInGame() then
 		return false
 	end
@@ -1292,12 +1292,11 @@ function updateModuleFromMemorySegment(segment)
 	}
 
 	if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-		print("MODULE: ", ReadU8(segment, 0x7e0010))
+		print("MODULE: ", moduleId)
 	end
 
 	--update dungeon image
-	local entrance = Tracker:FindObjectForCode("entrance_shuffle")
-	if ReadU8(segment, 0x7e0010) == 0x07 then --underworld
+	if moduleId == 0x07 then --underworld
 		local dungeon = Tracker:FindObjectForCode("dungeon")
 		local dungeonId = dungeons[dungeon.AcquiredCount]
 
@@ -1306,26 +1305,26 @@ function updateModuleFromMemorySegment(segment)
 		end
 
 		if dungeonId then
-			if entrance.CurrentStage > 0 then
+			if string.find(Tracker.ActiveVariantUID, "er_") then
 				sendExternalMessage("dungeon", "er-"..dungeonId)
 			else
 				sendExternalMessage("dungeon", dungeonId)
 			end
 		end
-	elseif ReadU8(segment, 0x7e0010) == 0x09 then --overworld
+	elseif moduleId == 0x09 then --overworld
 		LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("OW: ", ReadU8(SEGMENT_OWID, 0x7e008a))
 		end
 
 		if ReadU8(SEGMENT_OWID, 0x7e008a) >= 0x40 and ReadU8(SEGMENT_OWID, 0x7e008a) < 0x80 then
-			if entrance.CurrentStage > 0 then
+			if string.find(Tracker.ActiveVariantUID, "er_") then
 				sendExternalMessage("dungeon", "er-dw")
 			else
 				sendExternalMessage("dungeon", "dw")
 			end
 		else
-			if entrance.CurrentStage > 0 then
+			if string.find(Tracker.ActiveVariantUID, "er_") then
 				sendExternalMessage("dungeon", "er-lw")
 			else
 				sendExternalMessage("dungeon", "lw")
