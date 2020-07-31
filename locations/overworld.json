@@ -2900,6 +2900,32 @@
     ]
   },
   {
+    "name": "Misery Mire Medallion Check",
+    "parent": "Dungeon Color",
+    "access_rules": [
+      "{entrance_shuffle_off,@Mire Area}"
+    ],
+    "sections": [
+      {
+        "name": "Medallion",
+        "access_rules": [
+          "{}"
+        ],
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 148,
+        "y": 1694,
+        "size": 48,
+        "restrict_visibility_rules": [ "entrance_shuffle_off,@Mire Area" ],
+        "force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake", "$hasSeenMireMedallion" ]
+      }
+    ]
+  },
+  {
     "name": "Mire Left Shed",
     "parent": "Mire Area",
     "sections": [
@@ -3568,6 +3594,29 @@
         "x": 1890,
         "y": 165,
         "size": 48
+      }
+    ]
+  },
+  {
+    "name": "Turtle Rock Medallion Check",
+    "parent": "Dungeon Color",
+    "access_rules": [
+      "{entrance_shuffle_off,@Dark Death Mountain Top}"
+    ],
+    "sections": [
+      {
+        "name": "Medallion",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "darkworld",
+        "x": 1890,
+        "y": 124,
+        "size": 48,
+        "restrict_visibility_rules": [ "entrance_shuffle_off,@Dark Death Mountain Top" ],
+        "force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake", "$hasSeenTurtleMedallion" ]
       }
     ]
   },
