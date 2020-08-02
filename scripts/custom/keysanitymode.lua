@@ -1,7 +1,7 @@
 KeysanityMode = class(CustomItem)
 
 function KeysanityMode:init(variant, suffix)
-	self:createItem("Dungeon Items")
+	self:createItem("Dungeon Items" .. suffix)
 	self.code = "keysanity_mode_surrogate"
 	self.suffix = suffix
 
@@ -26,16 +26,12 @@ function KeysanityMode:updateIcon()
 
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_standard" .. self.suffix .. ".png")
-		self.ItemInstance.Name = "Standard"
 	elseif self:getState() == 1 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_mapsanity" .. self.suffix .. ".png")
-		self.ItemInstance.Name = "Mapsanity"
 	elseif self:getState() == 2 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_smallsanity" .. self.suffix .. ".png")
-		self.ItemInstance.Name = "Smallsanity"
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_full" .. self.suffix .. ".png")
-		self.ItemInstance.Name = "Full Keysanity"
 	end
 
 	--Sync other surrogates
@@ -93,12 +89,13 @@ function KeysanityMode:advanceToCode(code)
 end
 
 function KeysanityMode:save()
-	return { }
+	return {}
 end
 
 function KeysanityMode:load(data)
 	local item = Tracker:FindObjectForCode("keysanity_mode")
 	self:setState(item.CurrentStage)
+	return true
 end
 
 function KeysanityMode:propertyChanged(key, value)

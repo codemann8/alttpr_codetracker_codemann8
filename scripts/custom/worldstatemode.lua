@@ -1,7 +1,7 @@
 WorldStateMode = class(CustomItem)
 
 function WorldStateMode:init(suffix)
-	self:createItem("World State")
+	self:createItem("World State" .. suffix)
 	self.code = "world_state_mode_surrogate"
     self.suffix = suffix
     
@@ -23,10 +23,8 @@ function WorldStateMode:updateIcon()
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_world_state_open" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Open/Standard"
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_world_state_inverted" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Inverted"
     end
 
     --Sync other surrogates
@@ -81,12 +79,13 @@ function WorldStateMode:advanceToCode(code)
 end
 
 function WorldStateMode:save()
-	return { }
+	return {}
 end
 
 function WorldStateMode:load(data)
 	local item = Tracker:FindObjectForCode("world_state_mode")
 	self:setState(item.CurrentStage)
+	return true
 end
 
 function WorldStateMode:propertyChanged(key, value)

@@ -1,7 +1,7 @@
 EntranceShuffleMode = class(CustomItem)
 
 function EntranceShuffleMode:init(suffix)
-	self:createItem("Entrance Shuffle")
+	self:createItem("Entrance Shuffle" .. suffix)
 	self.code = "entrance_shuffle_surrogate"
     self.suffix = suffix
     
@@ -23,10 +23,8 @@ function EntranceShuffleMode:updateIcon()
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_off" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Vanilla"
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_on" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Entrance"
     end
 
     --Sync other surrogates
@@ -81,12 +79,13 @@ function EntranceShuffleMode:advanceToCode(code)
 end
 
 function EntranceShuffleMode:save()
-	return { }
+	return {}
 end
 
 function EntranceShuffleMode:load(data)
 	local item = Tracker:FindObjectForCode("entrance_shuffle")
 	self:setState(item.CurrentStage)
+	return true
 end
 
 function EntranceShuffleMode:propertyChanged(key, value)

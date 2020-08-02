@@ -110,13 +110,10 @@ function MapCompassBK:advanceToCode(code)
 end
 
 function MapCompassBK:save()
-	print("Saving")
-	local saveData = {}
-	return saveData
+	return {}
 end
 
 function MapCompassBK:load(data)
-	print("Loading")
 	local newState = 0
 	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
 	if item.Active then

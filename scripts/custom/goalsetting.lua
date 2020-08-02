@@ -18,13 +18,10 @@ end
 function GoalSetting:updateIcon()
     if self:getState() == 9 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/pedestal.png")
-        self.ItemInstance.Name = "Pedestal Goal"
     elseif self:getState() == 10 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/goal_alldungeons.png")
-        self.ItemInstance.Name = "All Dungeons"
     elseif self:getState() == 11 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/triforce.png")
-        self.ItemInstance.Name = "Triforce Hunt"
     else
         if self:getState() == 0 then
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay0.png")
@@ -45,7 +42,6 @@ function GoalSetting:updateIcon()
         elseif self:getState() == 8 then
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlayNA.png")
         end
-        self.ItemInstance.Name = "Defeat Ganon"
     end
 end
 
@@ -80,13 +76,13 @@ end
 
 function GoalSetting:save()
 	local saveData = {}
-	saveData["state"] = self.getState()
+    saveData["state"] = self:getState()
 	return saveData
 end
 
 function GoalSetting:load(data)
 	if data["state"] ~= nil then
-		self:setState(data["state"])
+        self:setState(data["state"])
 	end
 	return true
 end
