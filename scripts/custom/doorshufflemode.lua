@@ -1,7 +1,7 @@
 DoorShuffleMode = class(CustomItem)
 
 function DoorShuffleMode:init(suffix)
-	self:createItem("Door Shuffle")
+	self:createItem("Door Shuffle" .. suffix)
 	self.code = "door_shuffle_surrogate"
     self.suffix = suffix
     
@@ -26,21 +26,18 @@ function DoorShuffleMode:updateIcon()
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Off"
 		item.MaxCount = 22
 		if mirror.CurrentStage == 0 then
 			mirror.CurrentStage = 1
 		end
     elseif self:getState() == 1 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Basic"
 		item.MaxCount = 27
 		if mirror.CurrentStage == 1 then
 			mirror.CurrentStage = 0
 		end
 	else
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
-        self.ItemInstance.Name = "Crossed"
 		item.MaxCount = 99
 		if mirror.CurrentStage == 1 then
 			mirror.CurrentStage = 0
@@ -102,12 +99,13 @@ function DoorShuffleMode:advanceToCode(code)
 end
 
 function DoorShuffleMode:save()
-	return { }
+	return {}
 end
 
 function DoorShuffleMode:load(data)
 	local item = Tracker:FindObjectForCode("door_shuffle")
 	self:setState(item.CurrentStage)
+	return true
 end
 
 function DoorShuffleMode:propertyChanged(key, value)
