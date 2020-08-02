@@ -107,25 +107,6 @@
 								]
 							}
 						]
-					},
-					{
-						"type": "array",
-						"orientation": "horizontal",
-						"content": [
-							{
-								"type": "container",
-								"width": 250,
-								"margin": "0,-10,0,0",
-								"content": {
-									"type": "recentpins",
-									"h_alignment": "left",
-									"v_alignment": "top",
-									"orientation": "horizontal",
-									"compact": true,
-									"style": "wrap"
-								}
-							}
-						]
 					}
 				]
 			}
