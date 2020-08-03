@@ -63,28 +63,17 @@ end
 function MapCompassBK:onRightClick()
 	local newState = (self:getState() & 0x4) + ((self:getState() & 0x3) + 1) % 4
 	
-	if math.abs(newState - self:getState()) & 0x1 == 1 then
-		local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
+	self:setState(newState)
+	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
 		
-		if item then
-			self:setState(newState)
-			
-			item.Active = newState & 0x1 > 0
-		else
-			newState = (newState & 0x4) + ((newState & 0x3) + 1) % 4
-		end
+	if item then
+		item.Active = newState & 0x1 > 0
 	end
 		
-	if math.abs(newState - self:getState()) & 0x2 == 2 then
-		local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
+	item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
 		
-		if item then
-			self:setState(newState)
-			
-			item.Active = newState & 0x2 > 0
-		else
-			newState = (newState & 0x4) + ((newState & 0x3) + 1) % 4
-		end
+	if item then
+		item.Active = newState & 0x2 > 0
 	end
 end
 
