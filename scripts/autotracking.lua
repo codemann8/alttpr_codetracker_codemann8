@@ -560,12 +560,12 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 		state = state + 0x4
 	end
 	
-	item = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+	item = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
 	if item and item.Active then
 		state = state + 0x2
 	end
 	
-	item = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
+	item = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
 	if item and item.Active then
 		state = state + 0x1
 	end

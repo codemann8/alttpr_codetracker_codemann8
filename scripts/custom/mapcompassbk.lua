@@ -23,11 +23,11 @@ function MapCompassBK:updateIcon()
 			if self:getState() < 1 then
 				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey000.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey001.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey010.png")
 			end
 		else
 			if self:getState() < 3 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey010.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey001.png")
 			else
 				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey011.png")
 			end
@@ -37,11 +37,11 @@ function MapCompassBK:updateIcon()
 			if self:getState() < 5 then
 				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey100.png")
 			else
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey101.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey110.png")
 			end
 		else
 			if self:getState() < 7 then
-				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey110.png")
+				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey101.png")
 			else
 				self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mapcompassbigkey111.png")
 			end
@@ -64,13 +64,13 @@ function MapCompassBK:onRightClick()
 	local newState = (self:getState() & 0x4) + ((self:getState() & 0x3) + 1) % 4
 	
 	self:setState(newState)
-	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
+	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
 		
 	if item then
 		item.Active = newState & 0x1 > 0
 	end
 		
-	item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
+	item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
 		
 	if item then
 		item.Active = newState & 0x2 > 0
@@ -104,11 +104,11 @@ end
 
 function MapCompassBK:load(data)
 	local newState = 0
-	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
+	local item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
 	if item.Active then
 		newState = newState + 1
 	end
-	item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_map")
+	item = Tracker:FindObjectForCode(self:getProperty("dungeon") .. "_compass")
 	if item.Active then
 		newState = newState + 2
 	end
