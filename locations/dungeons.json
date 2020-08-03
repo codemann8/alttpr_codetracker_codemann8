@@ -393,7 +393,7 @@
 					},
 					{
 						"map": "erdarkworld",
-						"x": 1126,
+						"x": 1125,
 						"y": 20,
 						"size": 64,
 						"restrict_visibility_rules": [ "world_state_inverted" ]
@@ -1281,7 +1281,7 @@
 					{
 						"map": "erlightworld",
 						"x": 1003,
-						"y": 727,
+						"y": 737,
 						"size": 64,
 						"restrict_visibility_rules": [ "world_state_inverted" ]
 					},
