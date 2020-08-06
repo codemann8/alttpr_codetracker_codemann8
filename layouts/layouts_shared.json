@@ -200,7 +200,7 @@
                                 "badge_font_size": 20,
                                 "rows": [
                                     [
-                                        "hc_item", "hc_smallkey", "hc_mcbk"
+                                        "hc_item", "hc_mcbk", "hc_smallkey"
                                     ]
                                 ]
                             },
@@ -229,7 +229,7 @@
                                 "badge_font_size": 20,
                                 "rows": [
                                     [
-                                        "at_item", "at_smallkey", "at_mcbk"
+                                        "at_item", "at_mcbk", "at_smallkey"
                                     ]
                                 ]
                             }
@@ -248,7 +248,7 @@
                         "badge_font_size": 20,
                         "rows": [
                             [
-                                "toh_item", "toh_mcbk", "towerofhera", "toh_smallkey", ""
+                                "", "toh_item", "towerofhera", "toh_mcbk", "toh_smallkey"
                             ]
                         ]
                     },
