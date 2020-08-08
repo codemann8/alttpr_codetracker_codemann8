@@ -314,8 +314,7 @@
 				"codes": "shovel"
 			},
 			{
-				"img": "images/0057.png",
-				"inherit_codes": false
+				"img": "images/0057.png"
 			}
 		]
 	},
