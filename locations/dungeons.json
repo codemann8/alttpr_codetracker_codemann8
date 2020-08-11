@@ -167,7 +167,8 @@
 		"access_rules": [
 			"world_state_open,@Light World,book",
 			"world_state_inverted,@Light World,[pearl],book",
-			"@Desert Ledge Area",
+			"world_state_open,@Desert Ledge Area",
+			"world_state_inverted,@Desert Ledge Area,[pearl]",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -254,7 +255,8 @@
 		"name": "ToH Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Death Mountain West Top",
+			"world_state_open,@Death Mountain West Top",
+			"world_state_inverted,@Death Mountain West Top,[pearl]",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -662,7 +664,8 @@
 		"name": "SW Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Northwest Dark World",
+			"world_state_open,@Northwest Dark World,[pearl]",
+			"world_state_inverted,@Northwest Dark World",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -685,7 +688,8 @@
 					{
 						"name": "Bridge",
 						"access_rules": [
-							"firerod",
+							"world_state_open,[pearl],firerod",
+							"world_state_inverted,firerod",
 							"entrance_shuffle_on"
 						],
 						"item_count": 1
@@ -728,7 +732,8 @@
 		"name": "TT Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"@Northwest Dark World",
+			"world_state_open,@Northwest Dark World,pearl",
+			"world_state_inverted,@Northwest Dark World",
 			"entrance_shuffle_on"
 		],
 		"children": [
@@ -806,7 +811,7 @@
 		"name": "IP Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"world_state_open,[flippers],lift2,pearl",
+			"world_state_open,[flippers],lift2,[pearl]",
 			"world_state_inverted,[flippers]",
 			"entrance_shuffle_on"
 		],
@@ -1143,7 +1148,7 @@
 		"name": "GT Access",
 		"parent": "Dungeon Color",
 		"access_rules": [
-			"world_state_open,@Dark Death Mountain Top,pearl,$gtCrystalCount",
+			"world_state_open,@Dark Death Mountain Top,[pearl],$gtCrystalCount",
 			"world_state_inverted,@Light World,$gtCrystalCount",
 			"entrance_shuffle_on"
 		],
