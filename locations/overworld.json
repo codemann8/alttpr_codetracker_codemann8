@@ -618,13 +618,18 @@
   {
     "name": "Race Game",
     "parent": "Light World",
+    "access_rules": [
+      "world_state_open",
+      "world_state_inverted,pearl",
+      "{}"
+    ],
     "sections": [
       {
         "name": "Take This Trash",
         "access_rules": [
-          "world_state_open,entrance_shuffle_off,@Light World",
+          "entrance_shuffle_off",
+          "race_game",
           "world_state_open,@Northwest Dark World,mirror",
-          "world_state_inverted,race_game,pearl",
           "{}"
         ],
         "capture_item": true,
