@@ -3422,6 +3422,7 @@
       "@Death Mountain East Top",
       "world_state_open,lift2",
       "world_state_open,ddm_tr_safety,mirror",
+      "world_state_open,@Dark Death Mountain East,pearl,mirror",
       "world_state_inverted,pearl,lift2"
     ],
     "sections": [
