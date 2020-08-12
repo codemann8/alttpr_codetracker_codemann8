@@ -33,7 +33,7 @@ function updateIcons(keysanity, doorrando)
         else
             local chestkey = Tracker:FindObjectForCode(dungeons[i] .. "_chestkey")
             
-            if key.MaxCount ~= chestkey.MaxCount and key.MaxCount == 0 then
+            if key.MaxCount == 0 then
                 key.Icon = ""
             end
             key.MaxCount = chestkey.MaxCount
