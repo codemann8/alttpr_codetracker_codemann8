@@ -6,14 +6,21 @@ ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/class.lua")
 ScriptHost:LoadScript("scripts/custom_item.lua")
 
-
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
 
+--Custom Items
 ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
+ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
+ScriptHost:LoadScript("scripts/custom/keysanitymode.lua")
+ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
+ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
+ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
+ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
+
 loadMCBK()
 
 if Tracker.ActiveVariantUID == "items_only" then
@@ -43,22 +50,16 @@ else
 	
 	--Custom Items
 	Tracker:AddItems("items/chest_proxies.json")
-	ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
+
 	WorldStateMode("")
 	WorldStateMode("_small")
-	ScriptHost:LoadScript("scripts/custom/keysanitymode.lua")
 	KeysanityMode(Tracker.ActiveVariantUID, "")
 	KeysanityMode(Tracker.ActiveVariantUID, "_small")
-	ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
 	EntranceShuffleMode("")
 	EntranceShuffleMode("_small")
-	ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
 	DoorShuffleMode("")
 	DoorShuffleMode("_small")
-
-	ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 	GTCrystalReq()
-	ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
 	GoalSetting()
 
 	--Tracker Layout
