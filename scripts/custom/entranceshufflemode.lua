@@ -1,4 +1,4 @@
-EntranceShuffleMode = class(CustomItem)
+EntranceShuffleMode = CustomItem:extend()
 
 function EntranceShuffleMode:init(suffix)
 	self:createItem("Entrance Shuffle" .. suffix)

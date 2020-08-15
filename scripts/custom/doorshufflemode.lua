@@ -1,4 +1,4 @@
-DoorShuffleMode = class(CustomItem)
+DoorShuffleMode = CustomItem:extend()
 
 function DoorShuffleMode:init(suffix)
 	self:createItem("Door Shuffle" .. suffix)

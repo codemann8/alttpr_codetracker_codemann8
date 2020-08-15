@@ -1,4 +1,4 @@
-KeysanityMode = class(CustomItem)
+KeysanityMode = CustomItem:extend()
 
 function KeysanityMode:init(variant, suffix)
 	self:createItem("Dungeon Items" .. suffix)

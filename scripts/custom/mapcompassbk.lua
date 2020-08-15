@@ -1,4 +1,4 @@
-MapCompassBK = class(CustomItem)
+MapCompassBK = CustomItem:extend()
 
 function MapCompassBK:init(name, dungeonCode)
 	self:createItem(name)

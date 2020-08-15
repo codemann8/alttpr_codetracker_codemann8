@@ -1,4 +1,4 @@
-WorldStateMode = class(CustomItem)
+WorldStateMode = CustomItem:extend()
 
 function WorldStateMode:init(suffix)
 	self:createItem("World State" .. suffix)

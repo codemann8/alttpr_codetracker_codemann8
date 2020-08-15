@@ -1,4 +1,4 @@
-GTCrystalReq = class(CustomItem)
+GTCrystalReq = CustomItem:extend()
 
 function GTCrystalReq:init()
 	self:createItem("GT Crystal Requirement")
