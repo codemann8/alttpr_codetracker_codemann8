@@ -389,7 +389,7 @@
         "y": 964,
         "size": 48,
         "restrict_visibility_rules": [ "@Light World,flute" ],
-        "force_invisibility_rules": [ "flute_active" ]
+        "force_invisibility_rules": [ "activated_flute" ]
       }
     ]
   },

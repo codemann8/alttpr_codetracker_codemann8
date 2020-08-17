@@ -345,7 +345,7 @@
 			{
 				"img": "images/0047.png",
 				"img_mods": "overlay|images/overlayDuck.png",
-				"codes": "flute,ocarina,flute_active",
+				"codes": "flute,ocarina,activated_flute",
 				"secondary_codes": "activated"
 			}
 		]
