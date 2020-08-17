@@ -24,7 +24,7 @@
             "codes": "silvers,silverarrows"
           }
         ]
-      },    
+	},    
     // Legacy Bow
     {
       "name": "Bow",
@@ -37,39 +37,8 @@
       "name": "Silver Arrows",
       "type": "toggle",
       "img": "images/silver_arrow.png",
-      "codes": "np_silverarrows,np_silvers2,silverarrows,silvers"
+      "codes": "np_silverarrows,silvers"
     },
-    // Legacy Bow + Silvers
-    /*{
-      "name": "Bow and Arrows",
-      "type": "composite_toggle",
-      "codes": "np_bowandarrows",
-      "item_left": "np_bow",
-      "item_right": "np_silvers",
-      "images": [
-        {
-          "left": false,
-          "right": false,
-          "img": "images/bow.png",
-          "img_mods": "@disabled"
-        },
-        {
-          "left": true,
-          "right": false,
-          "img": "images/bow.png"
-        },
-        {
-          "left": false,
-          "right": true,
-          "img": "images/bowandsilverarrowdisabled.png"
-        },
-        {
-          "left": true,
-          "right": true,
-          "img": "images/bowandsilverarrow.png"
-        }
-      ]
-    },*/
 	// Bombs
 	{
 		"name": "Bombs",
