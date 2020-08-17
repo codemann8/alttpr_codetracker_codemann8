@@ -47,11 +47,14 @@
 		"stages": [
 			{
 				"img": "images/0003.png",
-				"codes": "bombs,bomb"
+				"codes": "bombs,bomb",
+				"secondary_codes": "none,default,clear"
 			},
 			{
 				"img": "images/0003.png",
 				"img_mods": "overlay|images/overlayRedBomb.png",
+				"disabled_img": "images/0003.png",
+				"disabled_img_mods": "@disabled,overlay|images/overlayRedBomb.png",
 				"codes": "bombs,bomb",
 				"secondary_codes": "bigbomb,superbomb,redbomb,pyramid,pyramidfairy,cherrybomb"
 			}
@@ -144,8 +147,8 @@
 			{
 				"img": "images/0046.png",
 				"img_mods": "overlay|images/overlayBat.png",
-				"disabled_img": "images/0046withbatdisabled.png",
-				"disabled_img_mods": "",
+				"disabled_img": "images/0046.png",
+				"disabled_img_mods": "@disabled,overlay|images/overlayBat.png",
 				"codes": "powder",
 				"secondary_codes": "bat, used"
 			}
@@ -154,15 +157,20 @@
 	// Mushroom
 	{
 		"name": "Mushroom",
-		"type": "progressive",
+		"type": "progressive_toggle",
 		"stages": [
 			{
 				"img": "images/0004.png",
-				"codes": "mushroom"
+				"codes": "mushroom",
+				"secondary_codes": "none,default,clear"
 			},
 			{
-				"inherit_codes": false,
-				"img": "images/0056.png"
+				"img": "images/0004.png",
+				"img_mods": "overlay|images/overlayWitch.png",
+				"disabled_img": "images/0004.png",
+				"disabled_img_mods": "@disabled,overlay|images/overlayWitch.png",
+				"codes": "mushroom",
+				"secondary_codes": "witch, used"
 			}
 		]
 	},
@@ -276,14 +284,20 @@
 	// Shovel
 	{
 		"name": "Shovel",
-		"type": "progressive",
+		"type": "progressive_toggle",
 		"stages": [
 			{
 				"img": "images/0012.png",
-				"codes": "shovel"
+				"codes": "shovel",
+				"secondary_codes": "none,default,clear"
 			},
 			{
-				"img": "images/0057.png"
+				"img": "images/0012.png",
+				"img_mods": "overlay|images/overlayDig.png",
+				"disabled_img": "images/0012.png",
+				"disabled_img_mods": "@disabled,overlay|images/overlayDig.png",
+				"codes": "shovel",
+				"secondary_codes": "dug, used"
 			}
 		]
 	},

@@ -342,7 +342,7 @@ function updateConsumableItemFromByte(segment, code, address)
 	end
 end
 
-function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag, callback)
+function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag)
 	local item = Tracker:FindObjectForCode(code)
 	if item then
 		if item.Owner.ModifiedByUser then
@@ -359,10 +359,6 @@ function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag
 			item.CurrentStage = math.max(1, item.CurrentStage)
 		else 
 			item.CurrentStage = 0
-		end	
-		
-		if callback then
-			callback(true)
 		end
 	end
 end
@@ -657,21 +653,24 @@ function updateBatIndicatorStatus(status)
 	end
 end
 
-function updateMushroomStatus(status)
+function updateMushroomIndicatorStatus(status)
 	local item = Tracker:FindObjectForCode("mushroom")
 	if item then
-		local location = Tracker:FindObjectForCode("@Potion Shop/Assistant")
-		if location and location.AvailableChestCount == 0 then
-			item.CurrentStage = 2
+		if status then
+			item.CurrentStage = 1
+		else
+			item.CurrentStage = 0
 		end
 	end
 end
 
-function updateShovelStatus(status)
+function updateShovelIndicatorStatus(status)
 	local item = Tracker:FindObjectForCode("shovel")
 	if item then
 		if status then
-			item.CurrentStage = 2
+			item.CurrentStage = 1
+		else
+			item.CurrentStage = 0
 		end
 	end
 end
@@ -702,7 +701,7 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 	-- 0x08 is no longer relevant
 	updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot", 0x7ef411, 0x10)
 	updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom", 0x7ef411, 0x10)
-	updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant", 0x7ef411, 0x20)
+	updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant", 0x7ef411, 0x20, updateMushroomIndicatorStatus)
 	-- 0x40 is unused
 	updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl", 0x7ef411, 0x80, updateBatIndicatorStatus)
 end
@@ -722,12 +721,12 @@ function updateOverworldEventsFromMemorySegment(segment)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spec Rock/Up On Top",                3)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Floating Island/Island",             5)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Race Game/Take This Trash",          40)
-	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure", 42, updateShovelStatus)
+	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure", 42, updateShovelIndicatorStatus)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Desert Ledge/Ledge",                 48)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Lake Hylia Island/Island",           53)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Dam/Outside",                        59)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Sunken Treasure/Drain The Dam",      59)
-	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Bumper Ledge/Ledge",                  74)
+	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Bumper Ledge/Ledge",                 74)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Pyramid Ledge/Ledge",                91)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Digging Game/Dig For Treasure",      104)
 	updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Master Sword Pedestal/Pedestal",     128)
@@ -816,6 +815,7 @@ function updateItemsFromMemorySegment(segment)
 		updateProgressiveItemFromByte(segment, "shield", 0x7ef35a, 0)
 		updateProgressiveItemFromByte(segment, "armor",	0x7ef35b, 0)
 		updateProgressiveItemFromByte(segment, "gloves", 0x7ef354, 0)
+		updateProgressiveItemFromByte(segment, "halfmagic",	0x7ef37b)
 		
 		updateToggleItemFromByte(segment, "hookshot",	0x7ef342)
 		updateToggleItemFromByte(segment, "bombs",		 0x7ef343)
@@ -834,8 +834,6 @@ function updateItemsFromMemorySegment(segment)
 		updateToggleItemFromByte(segment, "boots",		 0x7ef355)
 		updateToggleItemFromByte(segment, "flippers",	0x7ef356)
 		updateToggleItemFromByte(segment, "pearl",		 0x7ef357)
-		updateProgressiveItemFromByte(segment, "halfmagic",	0x7ef37b)
-
 		
 		if Tracker.ActiveVariantUID == "items_only" then
 			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef341, 0x01)
@@ -848,10 +846,9 @@ function updateItemsFromMemorySegment(segment)
 			
 			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
 			updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
+			updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
 			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
-		
-			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20, updateMushroomStatus)
-			updatePseudoProgressiveItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
+			updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
 		end
 
 		updateProgressiveBow(segment)
