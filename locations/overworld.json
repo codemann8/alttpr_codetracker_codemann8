@@ -355,6 +355,36 @@
     ]
   },
   {
+    "name": "Weathervane",
+    "parent": "Light World",
+    "sections": [
+      {
+        "name": "Activate Flute",
+        "chest_unopened_img": "images/0047.png",
+        "chest_opened_img": "images/0047.png",
+        "item_count": 1
+      }
+    ],
+    "map_locations": [
+      {
+        "map": "lightworld",
+        "x": 256,
+        "y": 964,
+        "size": 48,
+        "restrict_visibility_rules": [ "@Light World,flute" ],
+        "force_invisibility_rules": [ "flute_active" ]
+      },
+      {
+        "map": "erlightworld",
+        "x": 252,
+        "y": 964,
+        "size": 48,
+        "restrict_visibility_rules": [ "@Light World,flute" ],
+        "force_invisibility_rules": [ "flute_active" ]
+      }
+    ]
+  },
+  {
     "name": "Grass House",
     "parent": "Light World",
     "access_rules": [
