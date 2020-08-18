@@ -23,6 +23,7 @@ function updateIcons(keysanity, doorrando)
             if item.Section.ChestCount ~= 99 then
                 item.Section.ChestCount = 99
                 item.Section.AvailableChestCount = 0
+                item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0058.png")
             end
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
@@ -47,7 +48,7 @@ function updateIcons(keysanity, doorrando)
 
             local found = 0
             if item.Section.ChestCount ~= 99 then
-            found = item.Section.ChestCount - item.Section.AvailableChestCount
+                found = item.Section.ChestCount - item.Section.AvailableChestCount
             end
 
             local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
@@ -65,6 +66,8 @@ function updateIcons(keysanity, doorrando)
                     item.Section.ChestCount = item.Section.ChestCount - 2
                 end
             end
+            
+            item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0059.png")
             item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
         end
     end
