@@ -1,9 +1,9 @@
 print("")
 print("Active Auto-Tracker Configuration")
 print("---------------------------------------------------------------------")
-print("Enable Item Tracking:			", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
-print("Enable Location Tracking:		", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
-print("Enable Region Tracking:		    ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
+print("Enable Item Tracking:       ", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
+print("Enable Location Tracking:   ", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
+print("Enable Region Tracking:     ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 		print("Enable Debug Logging:				", "true")
 end
