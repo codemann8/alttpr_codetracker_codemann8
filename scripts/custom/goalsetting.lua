@@ -1,4 +1,4 @@
-GoalSetting = class(CustomItem)
+GoalSetting = CustomItem:extend()
 
 function GoalSetting:init()
 	self:createItem("Goal")
