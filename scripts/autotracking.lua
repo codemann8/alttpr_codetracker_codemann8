@@ -196,27 +196,39 @@ function updateProgressiveMirror(segment)
 end
 
 function updateProgressiveBow(segment)
-	local item = Tracker:FindObjectForCode("bowandarrows")
+	local item = Tracker:FindObjectForCode("bow")
+	local prevActive = item.Active
 	if Tracker.ActiveVariantUID == "items_only" then
 		if ReadU8(segment, 0x7ef340) > 2 then
-			item.CurrentStage = 3
-		elseif ReadU8(segment, 0x7ef340) > 0 then
-			item.CurrentStage = 2
-		else
+			item.Active = true
 			item.CurrentStage = 1
+		elseif ReadU8(segment, 0x7ef340) > 0 then
+			item.Active = true
+			item.CurrentStage = 0
+		else
+			item.Active = false
+			item.CurrentStage = 0
 		end
 	else
 		if testFlag(segment, 0x7ef38e, 0x40) then
 			if testFlag(segment, 0x7ef38e, 0x80) then
-				item.CurrentStage = 3
+				item.Active = true
+				item.CurrentStage = 1
 			else
-				item.CurrentStage = 0
+				item.Active = false
+				item.CurrentStage = 1
 			end
 		elseif testFlag(segment, 0x7ef38e, 0x80) then
-			item.CurrentStage = 2
+			item.Active = true
+			item.CurrentStage = 0
 		else
-			item.CurrentStage = 1
+			item.Active = false
+			item.CurrentStage = 0
 		end
+	end
+
+	if not prevActive and prevActive ~= item.Active then
+		itemFlippedOn("bow")
 	end
 end
 
@@ -841,9 +853,6 @@ function updateItemsFromMemorySegment(segment)
 			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
 			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef344, 0x2)
 		else
-			updateToggleItemFromByteAndFlag(segment, "np_bow", 0x7ef38e, 0x80)
-			updateToggleItemFromByteAndFlag(segment, "np_silverarrows", 0x7ef38e, 0x40)
-			
 			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
 			updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
 			updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)

@@ -24,10 +24,7 @@ function itemFlippedOn(item)
 				sendExternalMessage("item", "mitts")
 				START_TIME = os.time()
 			end
-		elseif item == "np_bow" then
-			sendExternalMessage("item", "bow")
-			START_TIME = os.time()
-		elseif item == "hammer" or item == "flute" or item == "boots"
+		elseif item == "bow" or item == "hammer" or item == "flute" or item == "boots"
 			or item == "lamp" or item == "halfmagic" or item == "firerod" or item == "icerod"
 			or item == "bombos" or item == "ether" or item == "quake"
 			or item == "mushroom" or item == "powder" or item == "shovel"

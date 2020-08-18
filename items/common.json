@@ -1,44 +1,24 @@
 [
-	// Bow and Arrows
+	// Bow/Silvers
     {
-        "name": "Bow and Arrows",
-        "type": "progressive",
-		"allow_disabled": false,
-		"initial_stage_idx": 1,
-        "stages": [
-		  {
-			"img": "images/silver_arrow.png",
-			"codes": "np_silvers"
-		  },
-          {
-            "img": "images/bow.png",
-            "img_mods": "@disabled",
-            "codes": "bowandarrows"
-          },            
-          {
-            "img": "images/bow.png",
-            "codes": "bow"
-          },
-          {
-            "img": "images/bowandsilverarrow.png",
-            "codes": "silvers,silverarrows"
-          }
-        ]
-	},    
-    // Legacy Bow
-    {
-      "name": "Bow",
-      "type": "toggle",
-      "img": "images/0000.png",
-      "codes": "np_bow,bow"
-    },
-    // Legacy Silver Arrows
-    {
-      "name": "Silver Arrows",
-      "type": "toggle",
-      "img": "images/silver_arrow.png",
-      "codes": "np_silverarrows,silvers"
-    },
+		"name": "Bow",
+		"type": "progressive_toggle",
+		"stages": [
+			{
+				"img": "images/bow.png",
+				"codes": "bow",
+				"secondary_codes": "none,default,clear"
+			},
+			{
+				"img": "images/bow.png",
+				"img_mods": "overlay|images/silver_arrow.png",
+				"disabled_img": "images/bow.png",
+				"disabled_img_mods": "@disabled,overlay|images/silver_arrow.png",
+				"codes": "bow",
+				"secondary_codes": "silvers,silverarrows"
+			}
+		]
+	},
 	// Bombs
 	{
 		"name": "Bombs",
@@ -60,24 +40,6 @@
 			}
 		]
 	},
-	// Boomerang
-	{
-		"name": "Boomerang",
-		"type": "progressive_toggle",
-		"stages": [
-			{
-				"img": "images/boomerangsblue.png",
-				"disabled_img": "images/boomerangs.png",
-				"codes": "blueboomerang,boomerang"
-			},
-			{
-				"img": "images/boomerangs.png",
-				"disabled_img": "images/boomerangsdisabled.png",
-				"disabled_img_mods": "",
-				"codes": "redboomerang,boomerang"
-			}
-		]
-	},
 	
 	// Blue Boomerang
 	{
@@ -86,7 +48,6 @@
 		"img": "images/boomerang_blue.png",
 		"codes": "blue_boomerang,bluemarang,boomerang"
 	},
-	
 	// Red Boomerang
 	{
 		"name": "Red Boomerang",
@@ -94,7 +55,6 @@
 		"img": "images/boomerang_red.png",
 		"codes": "red_boomerang,redmarang,magicboomerang,magic_boomerang,redboomerang"
 	},
-	
 	// Boomerang Combo
 	{
 		"name": "Boomerangs",
