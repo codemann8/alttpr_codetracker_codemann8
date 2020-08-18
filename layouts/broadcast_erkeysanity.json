@@ -64,7 +64,7 @@
 						"content": [
 							{
 								"type": "map",
-								"maps": [ "erlightworld", "erdarkworld" ],
+								"maps": [ "lightworld", "darkworld" ],
 								"width": 500,
 								"height": 250
 							},
