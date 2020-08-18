@@ -11,7 +11,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
-- MM and TR Medallion Checks are added to inform the user when it is available to check
+- MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it.
 - Door Rando Mode, this is enabled by clicking the Gear in the `Items` section. Under the `Dungeon` tab, maps are available and are able to be manually checked off when a room is found
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - GT Big Key Guessing Game, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
@@ -38,7 +38,7 @@ Normally, an EmoTracker package is installed through the EmoTracker program itse
 1) You will need to modify a settings file in your local EmoTracker install directory, located in `C:/Users/<user>/Documents/EmoTracker/application_settings.json`. Open this file in your favorite text editor (Notepad if you don't have any).
 2) There is a line labeled `"package_repositories": []`, you will need to add a link to my repository, which is what informs EmoTracker to download a new update to the tracker package. The resulting line should be `"package_repositories": ["https://raw.githubusercontent.com/codemann8/alttpr_codetracker_codemann8/master/repository.json"]`. Save the file.
 3) If EmoTracker is open, close and reopen it. From here, the new tracker package should now be a package that shows in the default `Package Manager` alongside all the other packages you can install. You will see `CodeTracker Full Tracker` as a new option to install.
-4) Click `Install`. From now on, EmoTracker will show a yellow cloud icon when there is a new version of this tracker to install.
+4) Click `Install`. From now on, EmoTracker will show a yellow/green cloud icon when there is a new version of this tracker to install.
 5) Beat the pig ;) See Usage section for further info, if needed
 
 ## Usage:
