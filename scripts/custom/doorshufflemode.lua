@@ -64,9 +64,11 @@ function DoorShuffleMode:updateIcon()
 			item:OnRightClick()
 		end
 	end
-    
-    local keysanity = Tracker:FindObjectForCode("keysanity_mode")
-	updateIcons(keysanity.CurrentStage, self:getState())
+	
+	if self.suffix == "" then
+		local keysanity = Tracker:FindObjectForCode("keysanity_mode")
+		updateIcons(keysanity.CurrentStage, self:getState())
+	end
 end
 
 function DoorShuffleMode:onLeftClick()

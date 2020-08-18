@@ -1,3 +1,5 @@
+START_CLOCK = os.clock()
+
 function loadMCBK()
     MapCompassBK("Hyrule Castle Map/Compass/Big Key", "hc")
     MapCompassBK("Eastern Palace Map/Compass/Big Key", "ep")

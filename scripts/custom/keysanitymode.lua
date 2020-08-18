@@ -55,8 +55,10 @@ function KeysanityMode:updateIcon()
 		end
 	end
 
-	local doorrando = Tracker:FindObjectForCode("door_shuffle")
-	updateIcons(self:getState(), doorrando.CurrentStage)
+	if self.suffix == "" then
+		local doorrando = Tracker:FindObjectForCode("door_shuffle")
+		updateIcons(self:getState(), doorrando.CurrentStage)
+	end
 end
 
 function KeysanityMode:onLeftClick()
