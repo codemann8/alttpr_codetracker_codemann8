@@ -7,7 +7,7 @@
             "item_margin": "1,2",
             "item_size": 40,
 			"rows": [
-				[ "bowandarrows", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "bomb" ],
+				[ "bow", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "bomb" ],
 				[ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "rupee" ],
 				[ "lamp", "hammer", "ocarina", "net", "book", "shovel", "" ],
 				[ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
