@@ -371,15 +371,9 @@
 		"name": "Mirror",
 		"type": "progressive",
 		"allow_disabled": false,
-		"initial_stage_idx": 1,
 		"stages": [
 			{
-				"img": "images/mirrorscroll.png",
-				"codes": "mirrorscroll"
-			},
-			{
 				"img": "images/0018.png",
-				"inherit_codes": false,
 				"img_mods": "@disabled",
 				"codes": ""
 			},
@@ -431,29 +425,29 @@
 		"item_left": "aga1",
 		"item_right": "aga2",
 		"images": [
-		  {
-			"left": false,
-			"right": false,
-			"img": "images/0055.png",
-			"img_mods": "@disabled"
-		  },
-		  {
-			"left": true,
-			"right": false,
-			"img": "images/aga1.png"
-		  },
-		  {
-			"left": false,
-			"right": true,
-			"img": "images/aga2.png"
-		  },
-		  {
-			"left": true,
-			"right": true,
-			"img": "images/0055.png"
-		  }
+			{
+				"left": false,
+				"right": false,
+				"img": "images/0055.png",
+				"img_mods": "@disabled"
+			},
+			{
+				"left": true,
+				"right": false,
+				"img": "images/aga1.png"
+			},
+			{
+				"left": false,
+				"right": true,
+				"img": "images/aga2.png"
+			},
+			{
+				"left": true,
+				"right": true,
+				"img": "images/0055.png"
+			}
 		]
-	  },
+	},
 	
 	// Progressive Gloves
 	{
@@ -491,11 +485,11 @@
 		"stages": [
 			{
 				"img": "images/0064.png",
-			"codes": "halfmagic"
+				"codes": "halfmagic"
 			},
 			{
 				"img": "images/0065.png",
-			"codes": "halfmagic,quartermagic"
+				"codes": "halfmagic,quartermagic"
 			}
 		]
 	},

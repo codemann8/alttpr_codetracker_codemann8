@@ -180,17 +180,22 @@ end
 function updateProgressiveMirror(segment)
     local item = Tracker:FindObjectForCode("mirror")
 	if testFlag(segment, 0x7ef353, 0x2) then
-		if item.CurrentStage ~= 2 then
+		if item.CurrentStage ~= 1 then
 			itemFlippedOn("mirror")
 		end
-        item.CurrentStage = 2
-	elseif testFlag(segment, 0x7ef353, 0x1) then
-		item.CurrentStage = 0
-		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 then
-			OBJ_DOORSHUFFLE.CurrentStage = 1
-		end
+		item.CurrentStage = 1
 	else
-        item.CurrentStage = 1
+		item.CurrentStage = 0
+		if testFlag(segment, 0x7ef353, 0x1) then
+			item.Stages[item.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
+			item.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
+			if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 then
+				OBJ_DOORSHUFFLE.CurrentStage = 1
+			end
+		else
+			item.Stages[item.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
+			item.Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
+		end
     end
 end
 
