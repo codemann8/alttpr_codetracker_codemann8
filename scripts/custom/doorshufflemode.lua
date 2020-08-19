@@ -17,12 +17,10 @@ function DoorShuffleMode:getState()
 end
 
 function DoorShuffleMode:updateIcon()
-	local item = Tracker:FindObjectForCode("door_shuffle")
-	item.CurrentStage = self:getState()
+	Tracker:FindObjectForCode("door_shuffle").CurrentStage = self:getState()
 
 	local mirror = Tracker:FindObjectForCode("mirror")
-
-	item = Tracker:FindObjectForCode("gt_bkgame")
+	local item = Tracker:FindObjectForCode("gt_bkgame")
 	
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
@@ -65,9 +63,8 @@ function DoorShuffleMode:updateIcon()
 		end
 	end
 	
-	if self.suffix == "" then
-		local keysanity = Tracker:FindObjectForCode("keysanity_mode")
-		updateIcons(keysanity.CurrentStage, self:getState())
+	if self.suffix == "" and OBJ_KEYSANITY and OBJ_DOORSHUFFLE then
+		updateIcons()
 	end
 end
 

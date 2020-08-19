@@ -21,8 +21,7 @@ function KeysanityMode:getState()
 end
 
 function KeysanityMode:updateIcon()
-	local item = Tracker:FindObjectForCode("keysanity_mode")
-	item.CurrentStage = self:getState()
+	Tracker:FindObjectForCode("keysanity_mode").CurrentStage = self:getState()
 
 	if self:getState() == 0 then
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_standard" .. self.suffix .. ".png")
@@ -55,9 +54,8 @@ function KeysanityMode:updateIcon()
 		end
 	end
 
-	if self.suffix == "" then
-		local doorrando = Tracker:FindObjectForCode("door_shuffle")
-		updateIcons(self:getState(), doorrando.CurrentStage)
+	if self.suffix == "" and OBJ_KEYSANITY and OBJ_DOORSHUFFLE then
+		updateIcons()
 	end
 end
 

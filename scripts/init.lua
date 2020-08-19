@@ -59,6 +59,7 @@ else
 	EntranceShuffleMode("_small")
 	DoorShuffleMode("")
 	DoorShuffleMode("_small")
+
 	GTCrystalReq()
 	GoalSetting()
 
@@ -87,6 +88,9 @@ else
 		end
 	end
 end
+
+--Load Global Variables
+initGlobalVars()
 
 if _VERSION == "Lua 5.3" then
 	ScriptHost:LoadScript("scripts/fileio.lua")

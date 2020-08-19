@@ -1,5 +1,15 @@
 START_CLOCK = os.clock()
 
+function initGlobalVars()
+    OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
+    
+    if Tracker.ActiveVariantUID ~= "items_only" then
+        OBJ_KEYSANITY = Tracker:FindObjectForCode("keysanity_mode")
+        OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
+        OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
+    end
+end
+
 function loadMCBK()
     MapCompassBK("Hyrule Castle Map/Compass/Big Key", "hc")
     MapCompassBK("Eastern Palace Map/Compass/Big Key", "ep")
@@ -16,12 +26,12 @@ function loadMCBK()
     MapCompassBK("Ganon's Tower Map/Compass/Big Key", "gt")
 end
 
-function updateIcons(keysanity, doorrando)
+function updateIcons()
     local dungeons = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
     for i = 1, 13 do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
-        if (doorrando == 2) then
+        if (OBJ_DOORSHUFFLE.CurrentStage == 2) then
             if item.Section.ChestCount ~= 99 then
                 item.Section.ChestCount = 99
                 item.Section.AvailableChestCount = 0
@@ -55,13 +65,13 @@ function updateIcons(keysanity, doorrando)
 
             local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
             item.Section.ChestCount = chest.MaxCount
-            if keysanity <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+            if OBJ_KEYSANITY.CurrentStage <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
                 item.Section.ChestCount = item.Section.ChestCount - 1
             end
-            if keysanity <= 1 and key then
+            if OBJ_KEYSANITY.CurrentStage <= 1 and key then
                 item.Section.ChestCount = item.Section.ChestCount - key.MaxCount
             end
-            if keysanity == 0 then
+            if OBJ_KEYSANITY.CurrentStage == 0 then
                 if dungeons[i] == "hc" then
                     item.Section.ChestCount = item.Section.ChestCount - 1
                 elseif dungeons[i] ~= "at" then

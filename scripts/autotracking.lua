@@ -5,7 +5,7 @@ print("Enable Item Tracking:       ", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
 print("Enable Location Tracking:   ", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
 print("Enable Region Tracking:     ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-		print("Enable Debug Logging:				", "true")
+	print("Enable Debug Logging:       ", "true")
 end
 print("---------------------------------------------------------------------")
 print("")
@@ -186,9 +186,8 @@ function updateProgressiveMirror(segment)
         item.CurrentStage = 2
 	elseif testFlag(segment, 0x7ef353, 0x1) then
 		item.CurrentStage = 0
-		item = Tracker:FindObjectForCode("door_shuffle")
-		if item.CurrentStage == 0 then
-			item.CurrentStage = 1
+		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 then
+			OBJ_DOORSHUFFLE.CurrentStage = 1
 		end
 	else
         item.CurrentStage = 1
@@ -425,10 +424,9 @@ function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots
 				print(locationRef, roomData, 1 << slot[2])
 			end
 			
-			local entrance = Tracker:FindObjectForCode("entrance_shuffle")
 			if (roomData & (1 << slot[2])) ~= 0 then
 				clearedCount = clearedCount + 1
-			elseif entrance.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
+			elseif OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
 				clearedCount = clearedCount + 1
 			end
 		end
@@ -518,13 +516,11 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 			return
 		end
 
-		local doorRando = Tracker:FindObjectForCode("door_shuffle")
-		if doorRando.CurrentStage > 0 then
+		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
 			chestKeys.AcquiredCount = ReadU8(segment, address)
 		else
 			local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
 			if doorsOpened then
-				local currentDungeon = Tracker:FindObjectForCode("dungeon")
 				local currentKeys = 0
 
 				local dungeons =
@@ -546,7 +542,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 					[255] = "OW"
 				}
 				
-				if currentDungeon and dungeons[currentDungeon.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
+				if dungeons[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
 					currentKeys = ReadU8(segment, 0x7ef36f)
 				else
 					currentKeys = ReadU8(segment, address)
@@ -610,36 +606,34 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
 		--	return
 		--end
 		
-		local doorRando = Tracker:FindObjectForCode("door_shuffle")
-		if doorRando.CurrentStage == 2 then
+		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 then
 			if SEGMENT_DUNGEONKEYS then
 				location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
 			end
 		else
 			local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
 			if chest then
-				local mode = Tracker:FindObjectForCode("keysanity_mode")
 				local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
 				local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
 				local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
 				local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
 				local dungeonItems = 0
 				
-				if bigkey and bigkey.Active and mode.CurrentStage < 3 then
+				if bigkey and bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 then
 					if dungeonPrefix ~= "hc" then
 						dungeonItems = dungeonItems + 1
 					end
 				end
 				
-				if map and map.Active and mode.CurrentStage < 1 then
+				if map and map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
 					dungeonItems = dungeonItems + 1
 				end
 				
-				if compass and compass.Active and mode.CurrentStage < 1 then
+				if compass and compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
 					dungeonItems = dungeonItems + 1
 				end
 				
-				if smallkey and smallkey.AcquiredCount and mode.CurrentStage < 2 then
+				if smallkey and smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
 					dungeonItems = dungeonItems + smallkey.AcquiredCount
 				end
 				
@@ -887,9 +881,8 @@ function updateDungeonItemsFromMemorySegment(segment)
 	InvalidateReadCaches()
 
 	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-		local doorrando = Tracker:FindObjectForCode("door_shuffle")
-		if doorrando then
-			if SEGMENT_ROOMDATA and doorrando.CurrentStage == 0 then
+		if OBJ_DOORSHUFFLE then
+			if SEGMENT_ROOMDATA and OBJ_DOORSHUFFLE.CurrentStage == 0 then
 				--Doors Opened
 				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "hc_door", { { 114, 15 }, { 113, 15 }, { 50, 15, 34, 15 }, { 17, 13, 33, 15 } })
 				updateDoorKeyCountFromRoomSlotList(SEGMENT_ROOMDATA, "dp_door", { { 133, 14 }, { 99, 15 }, { 83, 13, 67, 13 }, { 67, 14 } })
@@ -963,7 +956,7 @@ function updateDungeonItemsFromMemorySegment(segment)
 			end
 
 			--Small Keys
-			if SEGMENT_DUNGEONKEYS and doorrando.CurrentStage > 0 then
+			if SEGMENT_DUNGEONKEYS and OBJ_DOORSHUFFLE.CurrentStage > 0 then
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "hc",	0x7ef4e1)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "ep",	0x7ef4e2)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "dp",	0x7ef4e3)
@@ -977,7 +970,7 @@ function updateDungeonItemsFromMemorySegment(segment)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "mm",	0x7ef4e7)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "tr",	0x7ef4ec)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "gt",	0x7ef4ed)
-			elseif SEGMENT_DUNGEONITEMS and doorrando.CurrentStage == 0 then
+			elseif SEGMENT_DUNGEONITEMS and OBJ_DOORSHUFFLE.CurrentStage == 0 then
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "hc",	0x7ef37c)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "ep",	0x7ef37e)
 				updateDungeonKeysFromPrefix(SEGMENT_DUNGEONITEMS, "dp",	0x7ef37f)
@@ -1245,8 +1238,7 @@ function updateDungeonFromMemorySegment(segment)
 			dungeon.AcquiredCount = dungeonLocal
 		end
 
-		local entrance = Tracker:FindObjectForCode("entrance_shuffle")
-		if (not AUTOTRACKER_DISABLE_REGION_TRACKING) and entrance.CurrentStage > 0 then
+		if (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage > 0 then
 			if owarea > 0 and overworldMap[owarea] then
 				local region = Tracker:FindObjectForCode(overworldMap[owarea])
 				if region then
@@ -1350,12 +1342,10 @@ function updateGTBKFromMemorySegment(segment)
 	end
 	
 	local gtBK = Tracker:FindObjectForCode("gt_bkgame")
-	local dungeon = Tracker:FindObjectForCode("dungeon")
-	local doorrando = Tracker:FindObjectForCode("door_shuffle")
-
-	if gtBK and dungeon and dungeon.AcquiredCount == 26 then --if in GT
+	
+	if gtBK and OBJ_DUNGEON.AcquiredCount == 26 then --if in GT
 		local gtTorchRoom = 0
-		if doorrando and doorrando.CurrentStage < 2 then
+		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage < 2 then
 			gtTorchRoom = ReadU16(SEGMENT_GTTORCHROOM, 0x7ef118) --TODO: Fix this so then the torch can count in crossed door shuffle
 		end
 		local gtCount = ReadU8(SEGMENT_GTBIGKEYCOUNT, 0x7ef42a) & 0x1f
