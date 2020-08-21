@@ -26,7 +26,6 @@ function DoorShuffleMode:updateIcon()
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
 		item.MaxCount = 22
 		if mirror.CurrentStage == 0 then
-			print("1")
 			mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
 			mirror.Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
 		end
@@ -34,7 +33,6 @@ function DoorShuffleMode:updateIcon()
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
 		item.MaxCount = 27
 		if mirror.CurrentStage == 0 then
-			print("2")
 			mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
 			mirror.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
 		end
@@ -42,7 +40,6 @@ function DoorShuffleMode:updateIcon()
 		self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
 		item.MaxCount = 99
 		if mirror.CurrentStage == 0 then
-			print("3")
 			mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
 			mirror.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
 		end
@@ -70,6 +67,13 @@ function DoorShuffleMode:updateIcon()
 	end
 	
 	if self.suffix == "" and OBJ_KEYSANITY and OBJ_DOORSHUFFLE then
+		if OBJ_DOORSHUFFLE.CurrentStage == 2 then
+			local message = "NEW FEATURE: For Crossed Door Rando, new icons have been added to the lower right of the Dungeons section."
+			message = message .. "\n\nThe Dungeon Selector icon will cycle thru each dungeon and Total Chests icon will set the total number of chests for that particular dungeon."
+			message = message .. " Left click will increment the total chests and right click will reset it to 'unknown amount'."
+			ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
+		end
+		
 		updateIcons()
 	end
 end

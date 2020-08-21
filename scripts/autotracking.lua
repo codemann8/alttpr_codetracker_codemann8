@@ -1309,6 +1309,26 @@ function updateModuleFromMemorySegment(segment, moduleId)
 		end
 
 		if dungeonId then
+			local dungeonSelect =
+			{
+				[0] = 0,
+				[2] = 0,
+				[4] = 1,
+				[6] = 2,
+				[8] = 4,
+				[10] = 6,
+				[12] = 5,
+				[14] = 10,
+				[16] = 7,
+				[18] = 9,
+				[20] = 3,
+				[22] = 8,
+				[24] = 11,
+				[26] = 12
+			}
+			if dungeon.AcquiredCount < 255 then
+				OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[dungeon.AcquiredCount])
+			end
 			if string.find(Tracker.ActiveVariantUID, "er_") then
 				sendExternalMessage("dungeon", "er-"..dungeonId)
 			else

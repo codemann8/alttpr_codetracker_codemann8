@@ -107,7 +107,7 @@
                 "item_size": 40,
                 "badge_font_size": 20,
                 "rows": [
-                    [ "", "" ]
+                    [ "door_dungeonselect", "door_totalchest" ]
                 ]
             }
         ]

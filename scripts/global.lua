@@ -2,11 +2,14 @@ START_CLOCK = os.clock()
 
 function initGlobalVars()
     OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
-    
+
     if Tracker.ActiveVariantUID ~= "items_only" then
         OBJ_KEYSANITY = Tracker:FindObjectForCode("keysanity_mode")
         OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
+
+        OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
+        OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
     end
 end
 
@@ -31,7 +34,7 @@ function updateIcons()
     for i = 1, 13 do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
-        if (OBJ_DOORSHUFFLE.CurrentStage == 2) then
+        if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if item.Section.ChestCount ~= 99 then
                 item.Section.ChestCount = 99
                 item.Section.AvailableChestCount = 0
@@ -83,4 +86,7 @@ function updateIcons()
             item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
         end
     end
+
+    OBJ_DOORDUNGEON.ItemState:updateIcon()
+    OBJ_DOORCHEST.ItemState:updateIcon()
 end

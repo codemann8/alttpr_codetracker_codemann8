@@ -20,6 +20,8 @@ ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
+ScriptHost:LoadScript("scripts/custom/doordungeonselect.lua")
+ScriptHost:LoadScript("scripts/custom/doortotalchest.lua")
 
 loadMCBK()
 
@@ -51,6 +53,9 @@ else
 	--Custom Items
 	Tracker:AddItems("items/chest_proxies.json")
 
+	DoorDungeonSelect()
+	DoorTotalChest()
+	
 	WorldStateMode("")
 	WorldStateMode("_small")
 	KeysanityMode(Tracker.ActiveVariantUID, "")
