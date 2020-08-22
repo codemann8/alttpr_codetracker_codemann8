@@ -22,8 +22,10 @@ ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
 ScriptHost:LoadScript("scripts/custom/doordungeonselect.lua")
 ScriptHost:LoadScript("scripts/custom/doortotalchest.lua")
+ScriptHost:LoadScript("scripts/custom/dynamicrequirement.lua")
 
 loadMCBK()
+loadDynamicRequirement()
 
 if Tracker.ActiveVariantUID == "items_only" then
 	Tracker:AddLayouts("layouts/layouts_base_custom.json")

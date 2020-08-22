@@ -47,6 +47,114 @@
 			]
 		]
     },
+    "shared_lw_dynreq": {
+        "type": "container",
+        "margin": 6,
+        "content": [
+            {
+                "type": "item",
+                "item": "dynreq_hc1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_hc2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_ep1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_ep2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_dp1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_dp2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_toh1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_toh2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_at1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_at2_sur"
+            }
+        ]
+    },
+    "shared_dw_dynreq": {
+        "type": "container",
+        "margin": 6,
+        "content": [
+            {
+                "type": "item",
+                "item": "dynreq_pod1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_pod2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_sp1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_sp2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_tt1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_tt2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_ip1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_ip2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_mm1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_mm2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_tr1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_tr2_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_gt1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_gt2_sur"
+            }
+        ]
+    },
     "shared_doorrando_egmap": {
         "type": "itemgrid",
         "h_alignment": "center",

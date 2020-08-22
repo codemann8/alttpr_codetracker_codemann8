@@ -29,6 +29,35 @@ function loadMCBK()
     MapCompassBK("Ganon's Tower Map/Compass/Big Key", "gt")
 end
 
+function loadDynamicRequirement()
+    DynamicRequirement("hc",    "hc",       1, 923,  983)
+    DynamicRequirement("hc",    "hc",       2, 1008, 983)
+    DynamicRequirement("ep",    "eppod",    1, 1840, 862)
+    DynamicRequirement("ep",    "eppod",    2, 1925, 862)
+    DynamicRequirement("dp",    "dpmm",     1, 89,   1742)
+    DynamicRequirement("dp",    "dpmm",     2, 174,  1742)
+    DynamicRequirement("toh",   "tohgt",    1, 1056, 115)
+    DynamicRequirement("toh",   "tohgt",    2, 1141, 115)
+    DynamicRequirement("at",    "at",       1, 923,  627)
+    DynamicRequirement("at",    "at",       2, 1008, 862)
+    DynamicRequirement("pod",   "eppod",    1, 1840, 862)
+    DynamicRequirement("pod",   "eppod",    2, 1925, 862)
+    DynamicRequirement("sp",    "sp",       1, 860,  1910)
+    DynamicRequirement("sp",    "sp",       2, 945,  1910)
+    DynamicRequirement("sw",    "sw",       1, 2,    158)
+    DynamicRequirement("sw",    "sw",       2, 87,   158)
+    DynamicRequirement("tt",    "tt",       1, 174,  1018)
+    DynamicRequirement("tt",    "tt",       2, 259,  1018)
+    DynamicRequirement("ip",    "ip",       1, 1519, 1785)
+    DynamicRequirement("ip",    "ip",       2, 1604, 1785)
+    DynamicRequirement("mm",    "dpmm",     1, 89,   1742)
+    DynamicRequirement("mm",    "dpmm",     2, 174,  1742)
+    DynamicRequirement("tr",    "tr",       1, 1809, 196)
+    DynamicRequirement("tr",    "tr",       2, 1889, 196)
+    DynamicRequirement("gt",    "tohgt",    1, 1056, 115)
+    DynamicRequirement("gt",    "tohgt",    2, 1141, 115)
+end
+
 function updateIcons()
     local dungeons = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
     for i = 1, 13 do
@@ -84,6 +113,17 @@ function updateIcons()
             
             item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0059.png")
             item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
+        end
+
+        if EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then
+            local dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "1_sur")
+            if dyn then
+                dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+            end
+            dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "2_sur")
+            if dyn then
+                dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+            end
         end
     end
 
