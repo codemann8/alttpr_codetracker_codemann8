@@ -604,50 +604,50 @@ function updateBossChestCountFromRoom(segment, locationRef, roomSlot)
 end
 
 function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
-	local location = Tracker:FindObjectForCode(locationRef)
-	if location then
-		-- Do not auto-track this the user has manually modified it
-		--if location.Owner.ModifiedByUser then
-		--	return
-		--end
-		
-		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 then
-			if SEGMENT_DUNGEONKEYS then
-				location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
-			end
-		else
-			local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
-			if chest then
-				local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
-				local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
-				local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
-				local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
-				local dungeonItems = 0
-				
-				if bigkey and bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 then
-					if dungeonPrefix ~= "hc" then
+	if OBJ_RACEMODE.CurrentStage == 0 then
+		local location = Tracker:FindObjectForCode(locationRef)
+		if location then
+			-- Do not auto-track this the user has manually modified it
+			--if location.Owner.ModifiedByUser then
+			--	return
+			--end
+			
+			if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 then
+				if SEGMENT_DUNGEONKEYS then
+					location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
+				end
+			else
+				local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
+				if chest then
+					local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
+					local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
+					local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
+					local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
+					local dungeonItems = 0
+					
+					if bigkey and bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 and dungeonPrefix ~= "hc" then
 						dungeonItems = dungeonItems + 1
 					end
+					
+					if map and map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
+						dungeonItems = dungeonItems + 1
+					end
+					
+					if compass and compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
+						dungeonItems = dungeonItems + 1
+					end
+					
+					if smallkey and smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
+						dungeonItems = dungeonItems + smallkey.AcquiredCount
+					end
+					
+					if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+						print(dungeonPrefix.." Items", dungeonItems)
+						print(dungeonPrefix.." Chests", chest.MaxCount - chest.AcquiredCount)
+					end
+					
+					location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
 				end
-				
-				if map and map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
-					dungeonItems = dungeonItems + 1
-				end
-				
-				if compass and compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
-					dungeonItems = dungeonItems + 1
-				end
-				
-				if smallkey and smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
-					dungeonItems = dungeonItems + smallkey.AcquiredCount
-				end
-				
-				if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-					print(dungeonPrefix.." Items", dungeonItems)
-					print(dungeonPrefix.." Chests", chest.MaxCount - chest.AcquiredCount)
-				end
-				
-				location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
 			end
 		end
 	end
@@ -1014,100 +1014,102 @@ function updateDungeonItemsFromMemorySegment(segment)
 		updateDungeonChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "gt_chest", { { 140, 10 }, { 123, 4 }, { 123, 5 }, { 123, 6 }, { 123, 7 }, { 139, 4 }, { 125, 4 }, { 124, 4 }, { 124, 5 }, { 124, 6 }, { 124, 7 }, { 140, 4 }, { 140, 5 }, { 140, 6 }, { 140, 7 }, { 28, 4 }, { 28, 5 }, { 28, 6 }, { 141, 4 }, { 157, 4 }, { 157, 5 }, { 157, 6 }, { 157, 7 }, { 61, 4 }, { 61, 5 }, { 61, 6 }, { 77, 4 } })
 
 		--Keysanity Dungeon Map Locations
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/First", { { 114, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Boomerang\\Prison", { { 113, 4 }, { 128, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Dark Cross", { { 50, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Back", { { 17, 4 }, { 17, 5 }, { 17, 6 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Sanctuary", { { 18, 4 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Front", { { 185, 4 }, { 170, 4 }, { 168, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Big Chest", { { 169, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Big Key Chest", { { 184, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Armos", { { 200, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Eyegore Room", { { 116, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Popo Chest", { { 133, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Cannonball Chest", { { 117, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Torch", { { 115, 10 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Big Chest", { { 115, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Lanmolas", { { 51, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Lobby\\Cage", { { 135, 10 }, { 119, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Basement", { { 135, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Compass Chest", { { 39, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Big Chest", { { 39, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Moldorm", { { 7, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Front", { { 224, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Back", { { 208, 4 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Shooter Chest", { { 9, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Bow Side", { { 43, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Arena Ledge", { { 42, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Arena Chest", { { 42, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Stalfos Basement", { { 10, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Big Key Chest", { { 58, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Dark Maze", { { 25, 4 }, { 25, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Big Chest", { { 26, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Turtle Room", { { 26, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Rupee Basement", { { 106, 4 }, { 106, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Harmless Hellway", {  { 26, 6 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Helmasaur", { { 90, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Entrance Chest", { { 40, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Bomb Wall", { { 55, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Left\\South Side", { { 53, 4 }, { 52, 4 }, { 70, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Big Chest", { { 54, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Back", { { 118, 4 }, { 118, 5 }, { 102, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Arrghus", { { 6, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Front", { { 103, 4 }, { 104, 4 }, { 87, 4 }, { 87, 5 }, { 88, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Big Chest", { { 88, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Bridge", { { 89, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Mothula", { { 41, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Front", { { 219, 4 }, { 219, 5 }, { 203, 4 }, { 220, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Attic Chest", { { 101, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Prison Cell", { { 69, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Big Chest", { { 68, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Blind", { { 172, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Pengator Room", { { 46, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Spike Room", { { 95, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Ice Breaker", { { 31, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Tongue Pull", { { 63, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Freezor Chest", { { 126, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Ice T", { { 174, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Big Chest", { { 158, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Khold", { { 222, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Front", { { 162, 4 }, { 179, 4 }, { 194, 4 }, { 195, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Left Side", { { 193, 4 }, { 209, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Big Chest", { { 195, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Vitreous", { { 144, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Compass Room", { { 214, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Roller Room", { { 183, 4 }, { 183, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Chain Chomp", { { 182, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Lava Chest", { { 20, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Big Chest", { { 36, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Crystaroller Chest", { { 4, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Laser Bridge", { { 213, 4 }, { 213, 5 }, { 213, 6 }, { 213, 7 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Trinexx", { { 164, 11 } })
-		
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Hope Room", { { 140, 5 }, { 140, 6 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Torch", { { 140, 3 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Stalfos Room", { { 123, 4 }, { 123, 5 }, { 123, 6 }, { 123, 7 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Map Chest", { { 139, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Firesnake\\Rando", { { 125, 4 }, { 124, 4 }, { 124, 5 }, { 124, 6 }, { 124, 7 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Compass Room", { { 157, 4 }, { 157, 5 }, { 157, 6 }, { 157, 7 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Bob\\Ice Armos", { { 140, 7 }, { 28, 4 }, { 28, 5 }, { 28, 6 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Tile Room", { { 141, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Big Chest", { { 140, 4 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Mini Helmasaur", { { 61, 4 }, { 61, 5 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Pre-Moldorm", { { 61, 6 } })
-		updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Validation", { { 77, 4 } })
-		
+		if OBJ_RACEMODE.CurrentStage == 0 then
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/First", { { 114, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Boomerang\\Prison", { { 113, 4 }, { 128, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Dark Cross", { { 50, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Back", { { 17, 4 }, { 17, 5 }, { 17, 6 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Hyrule Castle & Sanctuary/Sanctuary", { { 18, 4 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Front", { { 185, 4 }, { 170, 4 }, { 168, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Big Chest", { { 169, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Big Key Chest", { { 184, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Eastern Palace/Armos", { { 200, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Eyegore Room", { { 116, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Popo Chest", { { 133, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Cannonball Chest", { { 117, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Torch", { { 115, 10 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Big Chest", { { 115, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Desert Palace/Lanmolas", { { 51, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Lobby\\Cage", { { 135, 10 }, { 119, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Basement", { { 135, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Compass Chest", { { 39, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Big Chest", { { 39, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Tower of Hera/Moldorm", { { 7, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Front", { { 224, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Agahnim's Tower/Back", { { 208, 4 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Shooter Chest", { { 9, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Bow Side", { { 43, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Arena Ledge", { { 42, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Arena Chest", { { 42, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Stalfos Basement", { { 10, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Big Key Chest", { { 58, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Dark Maze", { { 25, 4 }, { 25, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Big Chest", { { 26, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Turtle Room", { { 26, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Rupee Basement", { { 106, 4 }, { 106, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Harmless Hellway", {  { 26, 6 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Palace of Darkness/Helmasaur", { { 90, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Entrance Chest", { { 40, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Bomb Wall", { { 55, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Left\\South Side", { { 53, 4 }, { 52, 4 }, { 70, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Big Chest", { { 54, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Back", { { 118, 4 }, { 118, 5 }, { 102, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Swamp Palace/Arrghus", { { 6, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Front", { { 103, 4 }, { 104, 4 }, { 87, 4 }, { 87, 5 }, { 88, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Big Chest", { { 88, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Bridge", { { 89, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Skull Woods/Mothula", { { 41, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Front", { { 219, 4 }, { 219, 5 }, { 203, 4 }, { 220, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Attic Chest", { { 101, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Prison Cell", { { 69, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Big Chest", { { 68, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Thieves Town/Blind", { { 172, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Pengator Room", { { 46, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Spike Room", { { 95, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Ice Breaker", { { 31, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Tongue Pull", { { 63, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Freezor Chest", { { 126, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Ice T", { { 174, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Big Chest", { { 158, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ice Palace/Khold", { { 222, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Front", { { 162, 4 }, { 179, 4 }, { 194, 4 }, { 195, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Left Side", { { 193, 4 }, { 209, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Big Chest", { { 195, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Misery Mire/Vitreous", { { 144, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Compass Room", { { 214, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Roller Room", { { 183, 4 }, { 183, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Chain Chomp", { { 182, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Lava Chest", { { 20, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Big Chest", { { 36, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Crystaroller Chest", { { 4, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Laser Bridge", { { 213, 4 }, { 213, 5 }, { 213, 6 }, { 213, 7 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Turtle Rock/Trinexx", { { 164, 11 } })
+			
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Hope Room", { { 140, 5 }, { 140, 6 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Torch", { { 140, 3 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Stalfos Room", { { 123, 4 }, { 123, 5 }, { 123, 6 }, { 123, 7 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Map Chest", { { 139, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Firesnake\\Rando", { { 125, 4 }, { 124, 4 }, { 124, 5 }, { 124, 6 }, { 124, 7 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Compass Room", { { 157, 4 }, { 157, 5 }, { 157, 6 }, { 157, 7 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Bob\\Ice Armos", { { 140, 7 }, { 28, 4 }, { 28, 5 }, { 28, 6 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Tile Room", { { 141, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Big Chest", { { 140, 4 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Mini Helmasaur", { { 61, 4 }, { 61, 5 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Pre-Moldorm", { { 61, 6 } })
+			updateSectionChestCountFromRoomSlotList(SEGMENT_ROOMDATA, "@Ganon's Tower/Validation", { { 77, 4 } })
+		end
+
 		--Marking Bosses as Complete
 		updateBossChestCountFromRoom(SEGMENT_ROOMDATA, "@Eastern Palace/Armos", { 200, 11 })
 		updateBossChestCountFromRoom(SEGMENT_ROOMDATA, "@Desert Palace/Lanmolas", { 51, 11 })
@@ -1230,11 +1232,11 @@ function updateDungeonFromMemorySegment(segment)
 		if owarea == 0 and roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
 			roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
 		end
-
+		
 		if room.AcquiredCount ~= roomLocal then
 			room.AcquiredCount = roomLocal
 		end
-
+		
 		if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
 			dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
 		end
@@ -1242,8 +1244,8 @@ function updateDungeonFromMemorySegment(segment)
 		if dungeonLocal ~= 0xfe and dungeon.AcquiredCount ~= dungeonLocal then
 			dungeon.AcquiredCount = dungeonLocal
 		end
-
-		if (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage > 0 then
+		
+		if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage > 0 then
 			if owarea > 0 and overworldMap[owarea] then
 				local region = Tracker:FindObjectForCode(overworldMap[owarea])
 				if region then
@@ -1363,6 +1365,10 @@ function updateGTBKFromMemorySegment(segment)
 	end
 	
 	if not (SEGMENT_GTTORCHROOM and SEGMENT_GTBIGKEYCOUNT) then
+		return false
+	end
+
+	if OBJ_RACEMODE.CurrentStage > 0 then
 		return false
 	end
 	

@@ -725,6 +725,25 @@
 			}
         ]
 	},
+	// Race Mode
+    {
+        "name": "Race Mode",
+        "type": "progressive",
+		"allow_disabled": false,
+        "loop": true,
+        "stages": [
+			{
+				"img": "images/mode_race_off.png",
+				"codes": "race_mode,race_mode_off",
+				"inherit_codes": false
+			},
+			{
+				"img": "images/mode_race_on.png",
+				"codes": "race_mode,race_mode_on",
+				"inherit_codes": false
+			}
+        ]
+	},
 	// Current Dungeon/Room
 	{
 		"name": "Current Dungeon Room",
