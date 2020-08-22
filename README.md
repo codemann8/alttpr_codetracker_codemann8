@@ -9,6 +9,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Small keys and dungeon chests are auto-tracked in both Standard and Keysanity
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
+- A `Race Mode` has been added to disable autotracking features that have been disallowed per racing council rules. To enable this, click the Gear in the `Items` section. A checkered flag icon will replace the GT Big Key guessing game icon to indicate its activation.
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
 - MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it.
@@ -71,7 +72,7 @@ Maps help with putting as much info on your stream so viewers ask less questions
 
 #### Door Rando
 - In the map area of the tracker, there is a new tab called `Dungeon` which shows all the rooms in the game. These can be marked off as they are found. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the rooms. If not, there are separate tabs for each of the dungeons. Rooms with chests are marked with a GREEN square, rooms with a boss are marked with an ORANGE square.
-- In Crossed Dungeon Door Rando, dungeon chests default to a count of 0 and increment when you collect chests, as the total number of chests in dungeons is unknown. It is possible in a future version of door rando code, where we might be able to read the total number of chests in a dungeon (like when you get the compass for a dungeon) but it is currently impossible to do in door rando's current version.
+- In Crossed Dungeon Door Rando, dungeon chests default to a count of 0 and increment when you collect chests, as the total number of chests in dungeons is unknown. It is possible in a future version of door rando code, where we might be able to read the total number of chests in a dungeon (like when you get the compass for a dungeon) but it is currently impossible to do in door rando's current version. The total number of chests can be manually changed per the `Dungeon Selector` and `Total Chests` icons in the lower right corner of the `Dungeons` section. The `Dungeon Selector` will cycle thru the dungeons and will display each dungeons' total chests. Left clicking the `Total Chests` will increment the max count, right clicking will reset it to unknown.
 
 ## Customization:
 EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
@@ -81,5 +82,7 @@ For instance, there is a settings file that can be modified to enable or disable
 #### Settings:
 - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
 - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance rando)
+
 - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
 - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
+- EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door rando, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.
