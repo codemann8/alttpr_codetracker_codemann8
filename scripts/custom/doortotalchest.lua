@@ -17,7 +17,7 @@ function DoorTotalChest:updateIcon()
     if OBJ_DOORSHUFFLE.CurrentStage == 2 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/0058.png")
         if self:getState() == 99 then
-            self.ItemInstance.BadgeText = "0"
+            self.ItemInstance.BadgeText = "?"
         else
             self.ItemInstance.BadgeText = string.format("%i", self:getState())
         end
