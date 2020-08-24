@@ -91,6 +91,7 @@ end
 
 --Load Functions
 ScriptHost:LoadScript("scripts/auto/itemupdates.lua")
+ScriptHost:LoadScript("scripts/auto/sharedtypeupdates.lua")
 ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
 
 --Add Memory Watches
