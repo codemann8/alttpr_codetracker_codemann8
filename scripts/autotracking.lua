@@ -104,9 +104,8 @@ ScriptHost:AddMemoryWatch("LTTP NPC Item Data", 0x7ef410, 2, updateNPCItemFlagsF
 ScriptHost:AddMemoryWatch("LTTP Heart Piece Data", 0x7ef448, 1, updateHeartPiecesFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartContainersFromMemorySegment)
 
-SEGMENT_ROOMDATA = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef000, 0x250, updateDungeonItemsFromMemorySegment)
-SEGMENT_DUNGEONITEMS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
-SEGMENT_DUNGEONKEYS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonItemsFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
+SEGMENT_DUNGEONKEYS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
 --ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e040c, 1, updateDungeonFromMemorySegment) --switch to this if memory address becomes available
 SEGMENT_OWID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e008a, 2, updateDungeonFromMemorySegment)
 SEGMENT_LASTROOMID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e00a0, 2, updateDungeonFromMemorySegment)
