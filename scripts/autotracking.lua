@@ -132,9 +132,12 @@ function updateAga1(segment)
 	local value = ReadU8(segment, 0x7ef3c5)
 	if value >= 3 then
 		item.Active = true
-		local worldState = Tracker:FindObjectForCode("world_state_mode")
-		if worldState.CurrentStage > 0 then
-			item = Tracker:FindObjectForCode("castle_top")
+		if OBJ_WORLDSTATE.CurrentStage == 1 then
+			if OBJ_DOORSHUFFLE.CurrentStage == 0 then
+				item = Tracker:FindObjectForCode("castle_top")
+			else
+				item = Tracker:FindObjectForCode("light_world")
+			end
 		else
 			item = Tracker:FindObjectForCode("dw_east")
 		end
@@ -617,12 +620,12 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
 					location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
 				end
 			else
-				local chest = Tracker:FindObjectForCode(dungeonPrefix.."_chest")
+				local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
 				if chest then
-					local bigkey = Tracker:FindObjectForCode(dungeonPrefix.."_bigkey")
-					local map = Tracker:FindObjectForCode(dungeonPrefix.."_map")
-					local compass = Tracker:FindObjectForCode(dungeonPrefix.."_compass")
-					local smallkey = Tracker:FindObjectForCode(dungeonPrefix.."_smallkey")
+					local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+					local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+					local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
+					local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
 					local dungeonItems = 0
 					
 					if bigkey and bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 and dungeonPrefix ~= "hc" then
@@ -1220,12 +1223,10 @@ function updateDungeonFromMemorySegment(segment)
 		[0x7b] = "dw_south"
 	}
 	
-	local room = Tracker:FindObjectForCode("dungeonroom")
-	local dungeon = Tracker:FindObjectForCode("dungeon")
 	local roomLocal = 0xff
 	local dungeonLocal = 0xff
 
-	if dungeon then
+	if OBJ_DUNGEON then
 		--dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
 		
 		local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
@@ -1233,19 +1234,19 @@ function updateDungeonFromMemorySegment(segment)
 			roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
 		end
 		
-		if room.AcquiredCount ~= roomLocal then
-			room.AcquiredCount = roomLocal
+		if OBJ_ROOM.AcquiredCount ~= roomLocal then
+			OBJ_ROOM.AcquiredCount = roomLocal
 		end
 		
 		if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
 			dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
 		end
 		
-		if dungeonLocal ~= 0xfe and dungeon.AcquiredCount ~= dungeonLocal then
-			dungeon.AcquiredCount = dungeonLocal
+		if dungeonLocal ~= 0xfe and OBJ_DUNGEON.AcquiredCount ~= dungeonLocal then
+			OBJ_DUNGEON.AcquiredCount = dungeonLocal
 		end
 		
-		if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage > 0 then
+		if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
 			if owarea > 0 and overworldMap[owarea] then
 				local region = Tracker:FindObjectForCode(overworldMap[owarea])
 				if region then
@@ -1255,8 +1256,8 @@ function updateDungeonFromMemorySegment(segment)
 		end
 		
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-			print("CURRENT DUNGEON:", dungeon.AcquiredCount, owarea)
-			print("CURRENT ROOM ORIGDUNGEON:", room.AcquiredCount, owarea)
+			print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount, owarea)
+			print("CURRENT ROOM ORIGDUNGEON:", OBJ_ROOM.AcquiredCount, owarea)
 		end
 	end
 end
@@ -1303,8 +1304,7 @@ function updateModuleFromMemorySegment(segment, moduleId)
 
 	--update dungeon image
 	if moduleId == 0x07 then --underworld
-		local dungeon = Tracker:FindObjectForCode("dungeon")
-		local dungeonId = dungeons[dungeon.AcquiredCount]
+		local dungeonId = dungeons[OBJ_DUNGEON.AcquiredCount]
 
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("DUNGEON: ", dungeonId)
@@ -1328,8 +1328,8 @@ function updateModuleFromMemorySegment(segment, moduleId)
 				[24] = 11,
 				[26] = 12
 			}
-			if dungeon.AcquiredCount < 255 then
-				OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[dungeon.AcquiredCount])
+			if OBJ_DUNGEON.AcquiredCount < 255 then
+				OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
 			end
 			if string.find(Tracker.ActiveVariantUID, "er_") then
 				sendExternalMessage("dungeon", "er-"..dungeonId)
@@ -1376,7 +1376,7 @@ function updateGTBKFromMemorySegment(segment)
 	
 	if gtBK and OBJ_DUNGEON.AcquiredCount == 26 then --if in GT
 		local gtTorchRoom = 0
-		if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage < 2 then
+		if OBJ_DOORSHUFFLE.CurrentStage < 2 then
 			gtTorchRoom = ReadU16(SEGMENT_GTTORCHROOM, 0x7ef118) --TODO: Fix this so then the torch can count in crossed door shuffle
 		end
 		local gtCount = ReadU8(SEGMENT_GTBIGKEYCOUNT, 0x7ef42a) & 0x1f

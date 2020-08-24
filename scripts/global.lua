@@ -2,8 +2,10 @@ START_CLOCK = os.clock()
 
 function initGlobalVars()
     OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
+    OBJ_ROOM = Tracker:FindObjectForCode("dungeonroom")
 
     if Tracker.ActiveVariantUID ~= "items_only" then
+        OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
         OBJ_KEYSANITY = Tracker:FindObjectForCode("keysanity_mode")
         OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
