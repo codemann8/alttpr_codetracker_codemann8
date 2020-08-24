@@ -699,7 +699,7 @@
         "initial_active_state": true,
         "loop": true,
         "codes": "dropdown_ganon"
-    }
+    },
     
     // GT Required Crystals
     {
@@ -869,18 +869,18 @@
 
     // Grouped Criteria
     {
-      "name": "Non-Full Keysanity",
-      "access_rules": [
-        "keysanity_standard",
-        "keysanity_mapsanity",
-        "keysanity_smallsanity"
-      ]
+        "name": "Non-Full Keysanity",
+        "access_rules": [
+            "keysanity_standard",
+            "keysanity_mapsanity",
+            "keysanity_smallsanity"
+        ]
     },
     {
-      "name": "Non-Key Keysanity",
-      "access_rules": [
-        "keysanity_standard",
-        "keysanity_mapsanity"
-      ]
+        "name": "Non-Key Keysanity",
+        "access_rules": [
+            "keysanity_standard",
+            "keysanity_mapsanity"
+        ]
     }
 ]
