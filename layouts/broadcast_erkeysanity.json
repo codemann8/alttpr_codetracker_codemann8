@@ -1,115 +1,115 @@
 {
-	"item_grid": {
-		"type": "itemgrid",
-		"h_alignment": "left",
-		"item_margin": "0,0,2,8",
-		"rows": [
-			[
-				"bow",
-				"boomerangs",
-				"hookshot",
-				"powder",
-				"mushroom"
-			],
-			[
-				"firerod",
-				"icerod",
-				"bombos",
-				"ether",
-				"quake"
-			],
-			[
-				"lamp",
-				"hammer",
-				"ocarina",
-				"net",
-				"book"
-			],
-			[
-				"bottle",
-				"somaria",
-				"byrna",
-				"cape",
-				"mirror"
-			],
-			[
-				"boots",
-				"lift1",
-				"flippers",
-				"pearl",
-				"shovel"
-			],
-			[
-				"owsword",
-				"shield",
-				"armor",
-				"halfmagic",
-				"gomode"
-			]
-		]
-	},
-	"tracker_broadcast": {
-		"type": "array",
-		"dropshadow": true,
-		"margin": "10",
-		"content": [
-			{
-				"type": "array",
-				"orientation": "vertical",
-				"content": [
-					{
-						"type": "array",
-						"orientation": "horizontal",
-						"margin": "0,0,0,0",
-						"content": [
-							{
-								"type": "map",
-								"maps": [ "lightworld", "darkworld" ],
-								"width": 500,
-								"height": 250
-							},
-							{
-								"type": "itemgrid",
-								"h_alignment": "center",
-								"item_margin": "0,0,0,0",
-								"item_size": 40,
-								"badge_font_size": 18,
-								"background": "#3F000000",
-								"rows": [
-									[ "gt_crystals_surrogate" ],
-									[ "goal_setting" ],
-									[ "dam" ],
-									[ "attic" ],
-									[ "agas" ],
-									[ "gt_bkgame" ]
-								]
-							}
-						]
-					},
-					{
-						"type": "array",
-						"orientation": "horizontal",
-						"content": [
-							{
-								"type": "layout",
-								"key": "item_grid",
-								"background": "#3F000000"
-							},
-							{
-								"type": "array",
-								"orientation": "vertical",
-								"content": [
-									{
-										"type": "layout",
-										"key": "keys_grid",
-										"background": "#3F000000"
-									}
-								]
-							}
-						]
-					}
-				]
-			}
-		]
-	}
+    "item_grid": {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "0,0,2,8",
+        "rows": [
+            [
+                "bow",
+                "boomerangs",
+                "hookshot",
+                "powder",
+                "mushroom"
+            ],
+            [
+                "firerod",
+                "icerod",
+                "bombos",
+                "ether",
+                "quake"
+            ],
+            [
+                "lamp",
+                "hammer",
+                "ocarina",
+                "net",
+                "book"
+            ],
+            [
+                "bottle",
+                "somaria",
+                "byrna",
+                "cape",
+                "mirror"
+            ],
+            [
+                "boots",
+                "lift1",
+                "flippers",
+                "pearl",
+                "shovel"
+            ],
+            [
+                "owsword",
+                "shield",
+                "armor",
+                "halfmagic",
+                "gomode"
+            ]
+        ]
+    },
+    "tracker_broadcast": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": "10",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": "0,0,0,0",
+                        "content": [
+                            {
+                                "type": "map",
+                                "maps": [ "lightworld", "darkworld" ],
+                                "width": 500,
+                                "height": 250
+                            },
+                            {
+                                "type": "itemgrid",
+                                "h_alignment": "center",
+                                "item_margin": "0,0,0,0",
+                                "item_size": 40,
+                                "badge_font_size": 18,
+                                "background": "#3F000000",
+                                "rows": [
+                                    [ "gt_crystals_surrogate" ],
+                                    [ "goal_setting" ],
+                                    [ "dam" ],
+                                    [ "attic" ],
+                                    [ "agas" ],
+                                    [ "gt_bkgame" ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "item_grid",
+                                "background": "#3F000000"
+                            },
+                            {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "key": "keys_grid",
+                                        "background": "#3F000000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }

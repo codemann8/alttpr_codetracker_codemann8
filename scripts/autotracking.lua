@@ -5,19 +5,20 @@ print("Enable Item Tracking:       ", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
 print("Enable Location Tracking:   ", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
 print("Enable Region Tracking:     ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-	print("Enable Debug Logging:       ", "true")
+    print("Enable Debug Logging:       ", "true")
 end
 print("---------------------------------------------------------------------")
 print("")
 
 function autotracker_started()
-	-- Invoked when the auto-tracker is activated/connected
-	START_TIME = os.time()
+    -- Invoked when the auto-tracker is activated/connected
+    START_TIME = os.time()
 end
 
 AUTOTRACKER_IS_IN_TRIFORCE_ROOM = false
 AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY = false
-AUTOTRACKER_STATS_MARKDOWN_FORMAT = [===[
+AUTOTRACKER_STATS_MARKDOWN_FORMAT =
+    [===[
 ### Post-Game Summary
 
 Stat | Value
@@ -36,26 +37,26 @@ U16_READ_CACHE_ADDRESS = 0
 
 --Shared Functions
 function InvalidateReadCaches()
-	U8_READ_CACHE_ADDRESS = 0
-	U16_READ_CACHE_ADDRESS = 0
+    U8_READ_CACHE_ADDRESS = 0
+    U16_READ_CACHE_ADDRESS = 0
 end
 
 function ReadU8(segment, address)
-	if U8_READ_CACHE_ADDRESS ~= address then
-		U8_READ_CACHE = segment:ReadUInt8(address)
-		U8_READ_CACHE_ADDRESS = address				
-	end
+    if U8_READ_CACHE_ADDRESS ~= address then
+        U8_READ_CACHE = segment:ReadUInt8(address)
+        U8_READ_CACHE_ADDRESS = address
+    end
 
-	return U8_READ_CACHE
+    return U8_READ_CACHE
 end
 
 function ReadU16(segment, address)
-	if U16_READ_CACHE_ADDRESS ~= address then
-		U16_READ_CACHE = segment:ReadUInt16(address)
-		U16_READ_CACHE_ADDRESS = address				
-	end
+    if U16_READ_CACHE_ADDRESS ~= address then
+        U16_READ_CACHE = segment:ReadUInt16(address)
+        U16_READ_CACHE_ADDRESS = address
+    end
 
-	return U16_READ_CACHE
+    return U16_READ_CACHE
 end
 
 function testFlag(segment, address, flag)
@@ -66,27 +67,27 @@ function testFlag(segment, address, flag)
         return true
     else
         return false
-    end    
+    end
 end
 
 function isInGame()
-	local module = AutoTracker:ReadU8(0x7e0010, 0)
-	return module > 0x05 and module < 0x55
+    local module = AutoTracker:ReadU8(0x7e0010, 0)
+    return module > 0x05 and module < 0x55
 end
 
 function read32BitTimer(segment, baseAddress)
-	local timer = 0;
-	timer = timer | (ReadU8(segment, baseAddress + 3) << 24)
-	timer = timer | (ReadU8(segment, baseAddress + 2) << 16)
-	timer = timer | (ReadU8(segment, baseAddress + 1) << 8)
-	timer = timer | (ReadU8(segment, baseAddress + 0) << 0)
+    local timer = 0
+    timer = timer | (ReadU8(segment, baseAddress + 3) << 24)
+    timer = timer | (ReadU8(segment, baseAddress + 2) << 16)
+    timer = timer | (ReadU8(segment, baseAddress + 1) << 8)
+    timer = timer | (ReadU8(segment, baseAddress + 0) << 0)
 
-	local hours = timer // (60 * 60 * 60)
-	local minutes = (timer % (60 * 60 * 60)) // (60 * 60)
-	local seconds = (timer % (60 * 60)) // (60)
-	local frames = timer % 60
+    local hours = timer // (60 * 60 * 60)
+    local minutes = (timer % (60 * 60 * 60)) // (60 * 60)
+    local seconds = (timer % (60 * 60)) // (60)
+    local frames = timer % 60
 
-	return hours, minutes, seconds, frames
+    return hours, minutes, seconds, frames
 end
 
 --Load Functions

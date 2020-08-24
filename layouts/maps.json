@@ -1,12 +1,12 @@
 {
     "map_grid": {
-		"type": "container",
-		"margin": "0,0,0,0",
-		"width": 175,
-		"height": 350,
-		"content": {
-			"type": "map",
-			"maps": [ "lightworld", "darkworld" ]
-		}
-	}
+        "type": "container",
+        "margin": "0,0,0,0",
+        "width": 175,
+        "height": 350,
+        "content": {
+            "type": "map",
+            "maps": [ "lightworld", "darkworld" ]
+        }
+    }
 }

@@ -36,36 +36,36 @@ function loadMCBK()
 end
 
 function loadDynamicRequirement()
-    DynamicRequirement("hc",    "hc",       1, 923,  983)
-    DynamicRequirement("hc",    "hc",       2, 1008, 983)
-    DynamicRequirement("ep",    "eppod",    1, 1840, 862)
-    DynamicRequirement("ep",    "eppod",    2, 1925, 862)
-    DynamicRequirement("dp",    "dpmm",     1, 89,   1742)
-    DynamicRequirement("dp",    "dpmm",     2, 174,  1742)
-    DynamicRequirement("toh",   "tohgt",    1, 1056, 115)
-    DynamicRequirement("toh",   "tohgt",    2, 1141, 115)
-    DynamicRequirement("at",    "at",       1, 923,  627)
-    DynamicRequirement("at",    "at",       2, 1008, 862)
-    DynamicRequirement("pod",   "eppod",    1, 1840, 862)
-    DynamicRequirement("pod",   "eppod",    2, 1925, 862)
-    DynamicRequirement("sp",    "sp",       1, 860,  1910)
-    DynamicRequirement("sp",    "sp",       2, 945,  1910)
-    DynamicRequirement("sw",    "sw",       1, 2,    158)
-    DynamicRequirement("sw",    "sw",       2, 87,   158)
-    DynamicRequirement("tt",    "tt",       1, 174,  1018)
-    DynamicRequirement("tt",    "tt",       2, 259,  1018)
-    DynamicRequirement("ip",    "ip",       1, 1519, 1785)
-    DynamicRequirement("ip",    "ip",       2, 1604, 1785)
-    DynamicRequirement("mm",    "dpmm",     1, 89,   1742)
-    DynamicRequirement("mm",    "dpmm",     2, 174,  1742)
-    DynamicRequirement("tr",    "tr",       1, 1809, 196)
-    DynamicRequirement("tr",    "tr",       2, 1889, 196)
-    DynamicRequirement("gt",    "tohgt",    1, 1056, 115)
-    DynamicRequirement("gt",    "tohgt",    2, 1141, 115)
+    DynamicRequirement("hc", "hc", 1, 923, 983)
+    DynamicRequirement("hc", "hc", 2, 1008, 983)
+    DynamicRequirement("ep", "eppod", 1, 1840, 862)
+    DynamicRequirement("ep", "eppod", 2, 1925, 862)
+    DynamicRequirement("dp", "dpmm", 1, 89, 1742)
+    DynamicRequirement("dp", "dpmm", 2, 174, 1742)
+    DynamicRequirement("toh", "tohgt", 1, 1056, 115)
+    DynamicRequirement("toh", "tohgt", 2, 1141, 115)
+    DynamicRequirement("at", "at", 1, 923, 627)
+    DynamicRequirement("at", "at", 2, 1008, 862)
+    DynamicRequirement("pod", "eppod", 1, 1840, 862)
+    DynamicRequirement("pod", "eppod", 2, 1925, 862)
+    DynamicRequirement("sp", "sp", 1, 860, 1910)
+    DynamicRequirement("sp", "sp", 2, 945, 1910)
+    DynamicRequirement("sw", "sw", 1, 2, 158)
+    DynamicRequirement("sw", "sw", 2, 87, 158)
+    DynamicRequirement("tt", "tt", 1, 174, 1018)
+    DynamicRequirement("tt", "tt", 2, 259, 1018)
+    DynamicRequirement("ip", "ip", 1, 1519, 1785)
+    DynamicRequirement("ip", "ip", 2, 1604, 1785)
+    DynamicRequirement("mm", "dpmm", 1, 89, 1742)
+    DynamicRequirement("mm", "dpmm", 2, 174, 1742)
+    DynamicRequirement("tr", "tr", 1, 1809, 196)
+    DynamicRequirement("tr", "tr", 2, 1889, 196)
+    DynamicRequirement("gt", "tohgt", 1, 1056, 115)
+    DynamicRequirement("gt", "tohgt", 2, 1141, 115)
 end
 
 function updateIcons()
-    local dungeons = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
+    local dungeons = {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
     for i = 1, 13 do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
@@ -79,11 +79,12 @@ function updateIcons()
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
             if dungeons[i] == "hc" or dungeons[i] == "at" then
-                Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
+                Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon =
+                    ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
             end
         else
             local chestkey = Tracker:FindObjectForCode(dungeons[i] .. "_chestkey")
-            
+
             if key.MaxCount == 0 then
                 key.Icon = ""
             end
@@ -116,7 +117,7 @@ function updateIcons()
                     item.Section.ChestCount = item.Section.ChestCount - 2
                 end
             end
-            
+
             item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0059.png")
             item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
         end

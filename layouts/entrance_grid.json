@@ -1,131 +1,119 @@
 {
     "shared_entrance_grid": {
-		"type": "dock",
-		"dock": "bottom",
-		"content": [
-			{
-				"type": "group",
-				"header": "Dropdowns",
-				"margin": "0,0,3,0",
-				"dock": "left",
-				"content": {
-					"type": "itemgrid",
-					"h_alignment": "left",
-					"v_alignment": "center",
-					"item_margin": "1,1",
-					"item_size": 40,
-					"rows": [
-						[
-							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
-						]
-					]
-				}
-			},
-			{
-				"type": "group",
-				"header": "Modes",
-				"margin": "0,0,3,0",
-				"dock": "left",
-				"content": {
-					"type": "itemgrid",
-					"h_alignment": "left",
-					"v_alignment": "center",
-					"item_margin": "1,1",
-					"item_size": 40,
-					"badge_font_size": 24,
-					"rows": [
-						[
-							"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting"
-						]
-					]
-				}
-			},
-			{
-				"type": "group",
-				"header": "Miscellaneous",
-				"margin": "0,0,3,0",
-				"dock": "left",
-				"content": {
-					"type": "itemgrid",
-					"h_alignment": "left",
-					"v_alignment": "center",
-					"item_margin": "1,1",
-					"item_size": 40,
-					"badge_font_size": 24,
-					"rows": [
-						[
-							"dam", "attic", "gt_bkgame"
-						]
-					]
-				}
-			}
-		]
-	},
-	"shared_entrance_v_grid": {
-		"type": "array",
-		"orientation": "vertical",
-		"content": [
-			{
-				"type": "dock",
-				"dock": "left",
-				"content": [
-					{
-						"type": "group",
-						"header": "Modes",
-						"margin": "0,0,3,0",
-						"content": {
-							"type": "itemgrid",
-							"h_alignment": "left",
-							"v_alignment": "center",
-							"item_margin": "1,1",
-							"item_size": 40,
-							"badge_font_size": 24,
-							"rows": [
-								[
-									"world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting"
-								]
-							]
-						}
-					},
-					{
-						"type": "group",
-						"header": "Miscellaneous",
-						"margin": "0,0,0,0",
-						"dock": "left",
-						"content": {
-							"type": "itemgrid",
-							"h_alignment": "left",
-							"v_alignment": "center",
-							"item_margin": "1,1",
-							"item_size": 40,
-							"badge_font_size": 24,
-							"rows": [
-								[
-									"dam", "attic", "gt_bkgame"
-								]
-							]
-						}
-					}
-				]
-			},
-			{
-				"type": "group",
-				"header": "Dropdowns",
-				"margin": "0,0,0,0",
-				"dock": "left",
-				"content": {
-					"type": "itemgrid",
-					"h_alignment": "center",
-					"v_alignment": "center",
-					"item_margin": "1,1",
-					"item_size": 44,
-					"rows": [
-						[
-							"dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon"
-						]
-					]
-				}
-			}
-		]
-	}
+        "type": "dock",
+        "dock": "bottom",
+        "content": [
+            {
+                "type": "group",
+                "header": "Dropdowns",
+                "margin": "0,0,3,0",
+                "dock": "left",
+                "content": {
+                    "type": "itemgrid",
+                    "h_alignment": "left",
+                    "v_alignment": "center",
+                    "item_margin": "1,1",
+                    "item_size": 40,
+                    "rows": [
+                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
+                    ]
+                }
+            },
+            {
+                "type": "group",
+                "header": "Modes",
+                "margin": "0,0,3,0",
+                "dock": "left",
+                "content": {
+                    "type": "itemgrid",
+                    "h_alignment": "left",
+                    "v_alignment": "center",
+                    "item_margin": "1,1",
+                    "item_size": 40,
+                    "badge_font_size": 24,
+                    "rows": [
+                        [ "world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
+                    ]
+                }
+            },
+            {
+                "type": "group",
+                "header": "Miscellaneous",
+                "margin": "0,0,3,0",
+                "dock": "left",
+                "content": {
+                    "type": "itemgrid",
+                    "h_alignment": "left",
+                    "v_alignment": "center",
+                    "item_margin": "1,1",
+                    "item_size": 40,
+                    "badge_font_size": 24,
+                    "rows": [
+                        [ "dam", "attic", "gt_bkgame" ]
+                    ]
+                }
+            }
+        ]
+    },
+    "shared_entrance_v_grid": {
+        "type": "array",
+        "orientation": "vertical",
+        "content": [
+            {
+                "type": "dock",
+                "dock": "left",
+                "content": [
+                    {
+                        "type": "group",
+                        "header": "Modes",
+                        "margin": "0,0,3,0",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "left",
+                            "v_alignment": "center",
+                            "item_margin": "1,1",
+                            "item_size": 40,
+                            "badge_font_size": 24,
+                            "rows": [
+                                [ "world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "header": "Miscellaneous",
+                        "margin": "0,0,0,0",
+                        "dock": "left",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "left",
+                            "v_alignment": "center",
+                            "item_margin": "1,1",
+                            "item_size": 40,
+                            "badge_font_size": 24,
+                            "rows": [
+                                [ "dam", "attic", "gt_bkgame" ]
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "header": "Dropdowns",
+                "margin": "0,0,0,0",
+                "dock": "left",
+                "content": {
+                    "type": "itemgrid",
+                    "h_alignment": "center",
+                    "v_alignment": "center",
+                    "item_margin": "1,1",
+                    "item_size": 44,
+                    "rows": [
+                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
+                    ]
+                }
+            }
+        ]
+    }
 }

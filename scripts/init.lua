@@ -29,73 +29,73 @@ loadMCBK()
 loadDynamicRequirement()
 
 if Tracker.ActiveVariantUID == "items_only" then
-	Tracker:AddLayouts("layouts/layouts_base_custom.json")
-	Tracker:AddLayouts("layouts/layouts_base_shared.json")
-	Tracker:AddLayouts("layouts/layouts_custom.json")
-	Tracker:AddLayouts("layouts/layouts_shared.json")
-	Tracker:AddLayouts("layouts/dungeon_grid.json")
-	Tracker:AddLayouts("layouts/tracker.json")
-	Tracker:AddLayouts("layouts/broadcast_standard.json")
+    Tracker:AddLayouts("layouts/layouts_base_custom.json")
+    Tracker:AddLayouts("layouts/layouts_base_shared.json")
+    Tracker:AddLayouts("layouts/layouts_custom.json")
+    Tracker:AddLayouts("layouts/layouts_shared.json")
+    Tracker:AddLayouts("layouts/dungeon_grid.json")
+    Tracker:AddLayouts("layouts/tracker.json")
+    Tracker:AddLayouts("layouts/broadcast_standard.json")
 else
-	--Maps
-	Tracker:AddMaps("maps/maps.json")
-	Tracker:AddItems("items/rooms.json")
+    --Maps
+    Tracker:AddMaps("maps/maps.json")
+    Tracker:AddItems("items/rooms.json")
 
-	--Layouts
-	Tracker:AddLayouts("layouts/layouts_capture.json")
+    --Layouts
+    Tracker:AddLayouts("layouts/layouts_capture.json")
 
-	--Map Locations
-	ScriptHost:LoadScript("scripts/logic_common.lua")
-	ScriptHost:LoadScript("scripts/logic_custom.lua")
-	
-	Tracker:AddLocations("locations/regions.json")
-	Tracker:AddLocations("locations/dungeons.json")
-	Tracker:AddLocations("locations/underworld.json")
-	Tracker:AddLocations("locations/overworld.json")
-	
-	--Custom Items
-	Tracker:AddItems("items/chest_proxies.json")
+    --Map Locations
+    ScriptHost:LoadScript("scripts/logic_common.lua")
+    ScriptHost:LoadScript("scripts/logic_custom.lua")
 
-	DoorDungeonSelect()
-	DoorTotalChest()
-	
-	WorldStateMode("")
-	WorldStateMode("_small")
-	KeysanityMode(Tracker.ActiveVariantUID, "")
-	KeysanityMode(Tracker.ActiveVariantUID, "_small")
-	EntranceShuffleMode("")
-	EntranceShuffleMode("_small")
-	DoorShuffleMode("")
-	DoorShuffleMode("_small")
-	RaceMode()
+    Tracker:AddLocations("locations/regions.json")
+    Tracker:AddLocations("locations/dungeons.json")
+    Tracker:AddLocations("locations/underworld.json")
+    Tracker:AddLocations("locations/overworld.json")
 
-	GTCrystalReq()
-	GoalSetting()
+    --Custom Items
+    Tracker:AddItems("items/chest_proxies.json")
 
-	--Tracker Layout
-	Tracker:AddLayouts("layouts/layouts_base_custom.json") --anything defined here overrides layouts defined in 'layouts_base_shared'
-	Tracker:AddLayouts("layouts/layouts_base_shared.json")
+    DoorDungeonSelect()
+    DoorTotalChest()
 
-	Tracker:AddLayouts("layouts/layouts_custom.json") --anything defined here overrides layouts defined in 'layouts_shared'
-	Tracker:AddLayouts("layouts/layouts_shared.json")
+    WorldStateMode("")
+    WorldStateMode("_small")
+    KeysanityMode(Tracker.ActiveVariantUID, "")
+    KeysanityMode(Tracker.ActiveVariantUID, "_small")
+    EntranceShuffleMode("")
+    EntranceShuffleMode("_small")
+    DoorShuffleMode("")
+    DoorShuffleMode("_small")
+    RaceMode()
 
-	Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
-	Tracker:AddLayouts("layouts/entrance_grid.json")
+    GTCrystalReq()
+    GoalSetting()
 
-	Tracker:AddLayouts("layouts/tracker.json")
+    --Tracker Layout
+    Tracker:AddLayouts("layouts/layouts_base_custom.json") --anything defined here overrides layouts defined in 'layouts_base_shared'
+    Tracker:AddLayouts("layouts/layouts_base_shared.json")
 
-	--Broadcast Layout
-	Tracker:AddLayouts("layouts/keys.json")
-	if Tracker.ActiveVariantUID == "mystery" or Tracker.ActiveVariantUID == "items_only_keys" then
-		Tracker:AddLayouts("layouts/broadcast_keysanity.json")
-	else
-		Tracker:AddLayouts("layouts/maps.json")
-		if string.find(Tracker.ActiveVariantUID, "er_") then
-			Tracker:AddLayouts("layouts/broadcast_erkeysanity.json")
-		else
-			Tracker:AddLayouts("layouts/broadcast_keysanity.json")
-		end
-	end
+    Tracker:AddLayouts("layouts/layouts_custom.json") --anything defined here overrides layouts defined in 'layouts_shared'
+    Tracker:AddLayouts("layouts/layouts_shared.json")
+
+    Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
+    Tracker:AddLayouts("layouts/entrance_grid.json")
+
+    Tracker:AddLayouts("layouts/tracker.json")
+
+    --Broadcast Layout
+    Tracker:AddLayouts("layouts/keys.json")
+    if Tracker.ActiveVariantUID == "mystery" or Tracker.ActiveVariantUID == "items_only_keys" then
+        Tracker:AddLayouts("layouts/broadcast_keysanity.json")
+    else
+        Tracker:AddLayouts("layouts/maps.json")
+        if string.find(Tracker.ActiveVariantUID, "er_") then
+            Tracker:AddLayouts("layouts/broadcast_erkeysanity.json")
+        else
+            Tracker:AddLayouts("layouts/broadcast_keysanity.json")
+        end
+    end
 end
 
 --Load Global Variables
@@ -106,8 +106,8 @@ Tracker.DisplayAllLocations = true
 Tracker.AlwaysAllowClearing = true
 
 if _VERSION == "Lua 5.3" then
-	ScriptHost:LoadScript("scripts/fileio.lua")
-	ScriptHost:LoadScript("scripts/autotracking.lua")
+    ScriptHost:LoadScript("scripts/fileio.lua")
+    ScriptHost:LoadScript("scripts/autotracking.lua")
 else
-	print("Auto-tracker is unsupported by your tracker version")
+    print("Auto-tracker is unsupported by your tracker version")
 end

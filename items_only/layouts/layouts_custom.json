@@ -2,45 +2,27 @@
     "shared_lw_grid": {
         "type": "itemgrid",
         "h_alignment": "center",
-		"v_alignment": "center",
-		"item_margin": "1,2",
-		"item_size": 50,
-		"badge_font_size": 24,
-		"rows": [
-			[
-				"", "towerofhera", ""
-			],
-			[
-				"desertpalace", "easternpalace"
-			],
-			[
-				"gt_crystals", "ganon_crystals"
-			]
-		]
-	},
-	"shared_dw_grid": {
+        "v_alignment": "center",
+        "item_margin": "1,2",
+        "item_size": 50,
+        "badge_font_size": 24,
+        "rows": [
+            [ "", "towerofhera", "" ],
+            [ "desertpalace", "easternpalace" ],
+            [ "gt_crystals", "ganon_crystals" ]
+        ]
+    },
+    "shared_dw_grid": {
         "type": "itemgrid",
         "h_alignment": "center",
-		"v_alignment": "center",
-		"item_margin": "1,2",
-		"item_size": 50,
-		"badge_font_size": 24,
-		"rows": [
-			[
-				"skullwoods",
-				"",
-				"turtlerock"
-			],
-			[
-				"thievestown",
-				"",
-				"palaceofdarkness"
-			],
-			[
-				"miserymire",
-				"swamppalace",
-				"icepalace"
-			]
-		]
+        "v_alignment": "center",
+        "item_margin": "1,2",
+        "item_size": 50,
+        "badge_font_size": 24,
+        "rows": [
+            [ "skullwoods", "", "turtlerock" ],
+            [ "thievestown", "", "palaceofdarkness" ],
+            [ "miserymire", "swamppalace", "icepalace" ]
+        ]
     }
 }
