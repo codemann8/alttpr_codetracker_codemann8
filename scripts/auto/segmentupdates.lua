@@ -884,6 +884,8 @@ function updateDungeonFromMemorySegment(segment)
 	if not isInGame() then
 		return false
 	end
+
+	InvalidateReadCaches()
 	
 	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return false
@@ -1001,6 +1003,8 @@ function updateModuleFromMemorySegment(segment, moduleId)
 	if not isInGame() then
 		return false
 	end
+
+	InvalidateReadCaches()
 	
 	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
 		return false
@@ -1098,6 +1102,8 @@ function updateGTBKFromMemorySegment(segment)
 	if not isInGame() then
 		return false
 	end
+
+	InvalidateReadCaches()
 	
 	if not (SEGMENT_GTTORCHROOM and SEGMENT_GTBIGKEYCOUNT) then
 		return false
@@ -1167,7 +1173,6 @@ function updateHeartContainersFromMemorySegment(segment)
 end
 
 function updateStatisticsFromMemorySegment(segment)
-
 	if not isInGame() then
 		return false
 	end
