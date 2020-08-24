@@ -101,6 +101,10 @@ end
 --Load Global Variables
 initGlobalVars()
 
+--Default Settings
+Tracker.DisplayAllLocations = true
+Tracker.AlwaysAllowClearing = true
+
 if _VERSION == "Lua 5.3" then
 	ScriptHost:LoadScript("scripts/fileio.lua")
 	ScriptHost:LoadScript("scripts/autotracking.lua")
