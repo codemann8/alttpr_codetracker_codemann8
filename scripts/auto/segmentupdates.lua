@@ -22,10 +22,9 @@ function updateInGameStatusFromMemorySegment(segment)
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         if mainModuleIdx > 0x05 then
-        --print("Current Room Index: ", segment:ReadUInt16(0x7e00a0))
-        --print("Current OW	 Index: ", segment:ReadUInt16(0x7e008a))
+            --print("Current Room Index: ", segment:ReadUInt16(0x7e00a0))
+            --print("Current OW     Index: ", segment:ReadUInt16(0x7e008a))
         end
-    --return false
     end
 
     return true
@@ -87,8 +86,8 @@ function updateItemsFromMemorySegment(segment)
         return true
     end
 
-    --	It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
-    --	which makes it more efficient to update them here.
+    --    It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
+    --    which makes it more efficient to update them here.
     updateSectionChestCountFromByteAndFlag(segment, "@Secret Passage/Uncle", 0x7ef3c6, 0x01)
     updateSectionChestCountFromByteAndFlag(segment, "@Hobo/Under The Bridge", 0x7ef3c9, 0x01)
     updateSectionChestCountFromByteAndFlag(segment, "@Bottle Vendor/This Jerk", 0x7ef3c9, 0x02)
@@ -142,30 +141,24 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home", 0x7ef410, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora", 0x7ef410, 0x02)
-    updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed", 0x7ef410, 0x04)
-    updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell", 0x7ef410, 0x08)
-    updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala", 0x7ef410, 0x10)
-    updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones", 0x7ef410, 0x20)
+    updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home",          0x7ef410, 0x01)
+    updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora",         0x7ef410, 0x02)
+    updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed",             0x7ef410, 0x04)
+    updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell",                 0x7ef410, 0x08)
+    updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala",       0x7ef410, 0x10)
+    updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones",          0x7ef410, 0x20)
     -- 0x40 is unused
-    updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf", 0x7ef410, 0x80)
+    updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf",            0x7ef410, 0x80)
 
-    updateSectionChestCountFromByteAndFlag(segment, "@Ether Tablet/Tablet", 0x7ef411, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet", 0x7ef411, 0x02)
-    updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home", 0x7ef411, 0x04)
+    updateSectionChestCountFromByteAndFlag(segment, "@Ether Tablet/Tablet",             0x7ef411, 0x01)
+    updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet",            0x7ef411, 0x02)
+    updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home",   0x7ef411, 0x04)
     -- 0x08 is no longer relevant
-    updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot", 0x7ef411, 0x10)
-    updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom", 0x7ef411, 0x10)
-    updateSectionChestCountFromByteAndFlag(
-        segment,
-        "@Potion Shop/Assistant",
-        0x7ef411,
-        0x20,
-        updateMushroomIndicatorStatus
-    )
+    updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot",        0x7ef411, 0x10)
+    updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom",            0x7ef411, 0x10)
+    updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant",           0x7ef411, 0x20, updateMushroomIndicatorStatus)
     -- 0x40 is unused
-    updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl", 0x7ef411, 0x80, updateBatIndicatorStatus)
+    updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl",            0x7ef411, 0x80, updateBatIndicatorStatus)
 end
 
 function updateRoomsFromMemorySegment(segment)
@@ -179,50 +172,18 @@ function updateRoomsFromMemorySegment(segment)
     if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
         if OBJ_DOORSHUFFLE.CurrentStage == 0 then
             --Doors Opened
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "hc_door",
-                {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}}
-            )
+            updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
             updateDoorKeyCountFromRoomSlotList(segment, "toh_door", {{119, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "at_door", {{224, 13}, {208, 15}, {192, 13}, {176, 13}})
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "pod_door",
-                {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}}
-            )
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "sp_door",
-                {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}}
-            )
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "sw_door",
-                {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}}
-            )
+            updateDoorKeyCountFromRoomSlotList(segment, "pod_door", {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sp_door", {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sw_door", {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}})
             updateDoorKeyCountFromRoomSlotList(segment, "tt_door", {{188, 15}, {171, 15}, {68, 14}})
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "ip_door",
-                {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}}
-            )
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "mm_door",
-                {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}}
-            )
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "tr_door",
-                {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}}
-            )
-            updateDoorKeyCountFromRoomSlotList(
-                segment,
-                "gt_door",
-                {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}}
-            )
+            updateDoorKeyCountFromRoomSlotList(segment, "ip_door", {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "mm_door", {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "tr_door", {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
 
             --Pot and Enemy Keys
             updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {33, 10}})
@@ -256,29 +217,20 @@ function updateRoomsFromMemorySegment(segment)
 
     if OBJ_RACEMODE.CurrentStage == 0 then
         --Dungeon Chests
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
+        updateDungeonChestCountFromRoomSlotList(segment,
             "hc_chest",
-            {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
+            {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}})
+        updateDungeonChestCountFromRoomSlotList(segment,
             "ep_chest",
-            {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
+            {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment,
             "dp_chest",
-            {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
+            {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment,
             "toh_chest",
-            {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}}
-        )
+            {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}})
         updateDungeonChestCountFromRoomSlotList(segment, "at_chest", {{224, 4}, {208, 4}})
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
+        updateDungeonChestCountFromRoomSlotList(segment,
             "pod_chest",
             {
                 {9, 4},
@@ -295,92 +247,18 @@ function updateRoomsFromMemorySegment(segment)
                 {106, 4},
                 {106, 5},
                 {90, 11}
-            }
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "sp_chest",
-            {{40, 4}, {55, 4}, {54, 4}, {53, 4}, {52, 4}, {70, 4}, {118, 4}, {118, 5}, {102, 4}, {6, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "sw_chest",
-            {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 4}, {88, 5}, {89, 4}, {41, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "tt_chest",
-            {{219, 4}, {219, 5}, {203, 4}, {220, 4}, {101, 4}, {69, 4}, {68, 4}, {172, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "ip_chest",
-            {{46, 4}, {63, 4}, {31, 4}, {95, 4}, {126, 4}, {174, 4}, {158, 4}, {222, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "mm_chest",
-            {{162, 4}, {179, 4}, {194, 4}, {193, 4}, {209, 4}, {195, 4}, {195, 5}, {144, 11}}
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "tr_chest",
-            {
-                {214, 4},
-                {183, 4},
-                {183, 5},
-                {182, 4},
-                {20, 4},
-                {36, 4},
-                {4, 4},
-                {213, 4},
-                {213, 5},
-                {213, 6},
-                {213, 7},
-                {164, 11}
-            }
-        )
-        updateDungeonChestCountFromRoomSlotList(
-            segment,
-            "gt_chest",
-            {
-                {140, 10},
-                {123, 4},
-                {123, 5},
-                {123, 6},
-                {123, 7},
-                {139, 4},
-                {125, 4},
-                {124, 4},
-                {124, 5},
-                {124, 6},
-                {124, 7},
-                {140, 4},
-                {140, 5},
-                {140, 6},
-                {140, 7},
-                {28, 4},
-                {28, 5},
-                {28, 6},
-                {141, 4},
-                {157, 4},
-                {157, 5},
-                {157, 6},
-                {157, 7},
-                {61, 4},
-                {61, 5},
-                {61, 6},
-                {77, 4}
-            }
-        )
+            })
+        updateDungeonChestCountFromRoomSlotList(segment, "sp_chest", {{40, 4}, {55, 4}, {54, 4}, {53, 4}, {52, 4}, {70, 4}, {118, 4}, {118, 5}, {102, 4}, {6, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "sw_chest", {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 4}, {88, 5}, {89, 4}, {41, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "tt_chest", {{219, 4}, {219, 5}, {203, 4}, {220, 4}, {101, 4}, {69, 4}, {68, 4}, {172, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "ip_chest", {{46, 4}, {63, 4}, {31, 4}, {95, 4}, {126, 4}, {174, 4}, {158, 4}, {222, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "mm_chest", {{162, 4}, {179, 4}, {194, 4}, {193, 4}, {209, 4}, {195, 4}, {195, 5}, {144, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "tr_chest", {{214, 4}, {183, 4}, {183, 5}, {182, 4}, {20, 4}, {36, 4}, {4, 4}, {213, 4}, {213, 5}, {213, 6}, {213, 7}, {164, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "gt_chest", {{140, 10}, {123, 4}, {123, 5}, {123, 6}, {123, 7}, {139, 4}, {125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}, {140, 4}, {140, 5}, {140, 6}, {140, 7}, {28, 4}, {28, 5}, {28, 6}, {141, 4}, {157, 4}, {157, 5}, {157, 6}, {157, 7}, {61, 4}, {61, 5}, {61, 6}, {77, 4}})
 
         --Keysanity Dungeon Map Locations
         updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/First", {{114, 4}})
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Hyrule Castle & Sanctuary/Boomerang\\Prison",
-            {{113, 4}, {128, 4}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Boomerang\\Prison", {{113, 4}, {128, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Dark Cross", {{50, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Back", {{17, 4}, {17, 5}, {17, 6}})
         updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Sanctuary", {{18, 4}})
@@ -426,20 +304,12 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Back", {{118, 4}, {118, 5}, {102, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Arrghus", {{6, 11}})
 
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Skull Woods/Front",
-            {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 5}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/Front", {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 5}})
         updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/Big Chest", {{88, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/Bridge", {{89, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/Mothula", {{41, 11}})
 
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Thieves Town/Front",
-            {{219, 4}, {219, 5}, {203, 4}, {220, 4}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Front", {{219, 4}, {219, 5}, {203, 4}, {220, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Attic Chest", {{101, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Prison Cell", {{69, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Big Chest", {{68, 4}})
@@ -465,36 +335,16 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Lava Chest", {{20, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Big Chest", {{36, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Crystaroller Chest", {{4, 4}})
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Turtle Rock/Laser Bridge",
-            {{213, 4}, {213, 5}, {213, 6}, {213, 7}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Laser Bridge", {{213, 4}, {213, 5}, {213, 6}, {213, 7}})
         updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Trinexx", {{164, 11}})
 
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Hope Room", {{140, 5}, {140, 6}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Torch", {{140, 3}})
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Ganon's Tower/Stalfos Room",
-            {{123, 4}, {123, 5}, {123, 6}, {123, 7}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Stalfos Room", {{123, 4}, {123, 5}, {123, 6}, {123, 7}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Map Chest", {{139, 4}})
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Ganon's Tower/Firesnake\\Rando",
-            {{125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}}
-        )
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Ganon's Tower/Compass Room",
-            {{157, 4}, {157, 5}, {157, 6}, {157, 7}}
-        )
-        updateSectionChestCountFromRoomSlotList(
-            segment,
-            "@Ganon's Tower/Bob\\Ice Armos",
-            {{140, 7}, {28, 4}, {28, 5}, {28, 6}}
-        )
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Firesnake\\Rando", {{125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Compass Room", {{157, 4}, {157, 5}, {157, 6}, {157, 7}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Bob\\Ice Armos", {{140, 7}, {28, 4}, {28, 5}, {28, 6}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Tile Room", {{141, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Big Chest", {{140, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Mini Helmasaur", {{61, 4}, {61, 5}})
@@ -531,11 +381,7 @@ function updateRoomsFromMemorySegment(segment)
     updateSectionChestCountFromRoomSlotList(segment, "@Forest Hideout/Cave", {{225, 9, 4}})
     updateSectionChestCountFromRoomSlotList(segment, "@Lumberjack Cave/Cave", {{226, 9}})
     updateSectionChestCountFromRoomSlotList(segment, "@Spectacle Rock/Cave", {{234, 10, 2}})
-    updateSectionChestCountFromRoomSlotList(
-        segment,
-        "@Paradox Cave/Top",
-        {{239, 4}, {239, 5}, {239, 6}, {239, 7}, {239, 8}}
-    )
+    updateSectionChestCountFromRoomSlotList(segment, "@Paradox Cave/Top", {{239, 4}, {239, 5}, {239, 6}, {239, 7}, {239, 8}})
     updateSectionChestCountFromRoomSlotList(segment, "@Super-Bunny Cave/Cave", {{248, 4}, {248, 5}})
     updateSectionChestCountFromRoomSlotList(segment, "@Spiral Cave/Cave", {{254, 4}})
     updateSectionChestCountFromRoomSlotList(segment, "@Paradox Cave/Bottom", {{255, 4}, {255, 5}})
@@ -556,23 +402,11 @@ function updateRoomsFromMemorySegment(segment)
     updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", {{283, 9, 8}})
     updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", {{283, 10}}) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
     updateSectionChestCountFromRoomSlotList(segment, "@C-Shaped House/House", {{284, 4}})
-    updateSectionChestCountFromRoomSlotList(
-        segment,
-        "@Blind's House/Basement",
-        {{285, 5}, {285, 6}, {285, 7}, {285, 8}}
-    )
+    updateSectionChestCountFromRoomSlotList(segment, "@Blind's House/Basement", {{285, 5}, {285, 6}, {285, 7}, {285, 8}})
     updateSectionChestCountFromRoomSlotList(segment, "@Blind's House/Bombable Wall", {{285, 4}})
-    updateSectionChestCountFromRoomSlotList(
-        segment,
-        "@Hype Cave/Cave",
-        {{286, 4}, {286, 5}, {286, 6}, {286, 7}, {286, 10}}
-    )
+    updateSectionChestCountFromRoomSlotList(segment, "@Hype Cave/Cave", {{286, 4}, {286, 5}, {286, 6}, {286, 7}, {286, 10}})
     updateSectionChestCountFromRoomSlotList(segment, "@Ice Rod Cave/Cave", {{288, 4}})
-    updateSectionChestCountFromRoomSlotList(
-        segment,
-        "@Mini Moldorm Cave/Cave",
-        {{291, 4}, {291, 5}, {291, 6}, {291, 7}, {291, 10}}
-    )
+    updateSectionChestCountFromRoomSlotList(segment, "@Mini Moldorm Cave/Cave", {{291, 4}, {291, 5}, {291, 6}, {291, 7}, {291, 10}})
     updateSectionChestCountFromRoomSlotList(segment, "@Bonk Rocks/Cave", {{292, 4}})
     updateSectionChestCountFromRoomSlotList(segment, "@Checkerboard Cave/Cave", {{294, 9, 1}})
     updateSectionChestCountFromRoomSlotList(segment, "@Hammer Pegs/Cave", {{295, 10, 2}})
@@ -719,421 +553,57 @@ function updateDungeonFromMemorySegment(segment)
         return false
     end
 
-    local roomMap = {
-        [0x01] = 2,
-        [0x02] = 0,
-        [0x04] = 24,
-        [0x06] = 10,
-        [0x07] = 20,
-        [0x09] = 12,
-        [0x0a] = 12,
-        [0x0b] = 12,
-        [0x0c] = 26,
-        [0x0d] = 26,
-        [0x0e] = 18,
-        [0x11] = 0,
-        [0x12] = 0,
-        [0x13] = 24,
-        [0x14] = 24,
-        [0x15] = 24,
-        [0x16] = 10,
-        [0x17] = 20,
-        [0x19] = 12,
-        [0x1a] = 12,
-        [0x1b] = 12,
-        [0x1c] = 26,
-        [0x1d] = 26,
-        [0x1e] = 18,
-        [0x1f] = 18,
-        [0x20] = 8,
-        [0x21] = 0,
-        [0x22] = 0,
-        [0x23] = 24,
-        [0x24] = 24,
-        [0x26] = 10,
-        [0x27] = 20,
-        [0x28] = 10,
-        [0x29] = 16,
-        [0x2a] = 12,
-        [0x2b] = 12,
-        [0x2e] = 18,
-        [0x30] = 8,
-        [0x31] = 20,
-        [0x32] = 0,
-        [0x33] = 6,
-        [0x34] = 10,
-        [0x35] = 10,
-        [0x36] = 10,
-        [0x37] = 10,
-        [0x38] = 10,
-        [0x39] = 16,
-        [0x3a] = 12,
-        [0x3b] = 12,
-        [0x3d] = 26,
-        [0x3e] = 18,
-        [0x3f] = 18,
-        [0x40] = 8,
-        [0x41] = 0,
-        [0x42] = 0,
-        [0x43] = 6,
-        [0x44] = 22,
-        [0x45] = 22,
-        [0x46] = 10,
-        [0x49] = 16,
-        [0x4a] = 12,
-        [0x4b] = 12,
-        [0x4c] = 26,
-        [0x4d] = 26,
-        [0x4e] = 18,
-        [0x4f] = 18,
-        [0x50] = 2,
-        [0x51] = 2,
-        [0x52] = 2,
-        [0x53] = 6,
-        [0x54] = 10,
-        [0x56] = 16,
-        [0x57] = 16,
-        [0x58] = 16,
-        [0x59] = 16,
-        [0x5a] = 12,
-        [0x5b] = 26,
-        [0x5c] = 26,
-        [0x5d] = 26,
-        [0x5e] = 18,
-        [0x5f] = 18,
-        [0x60] = 2,
-        [0x61] = 2,
-        [0x62] = 2,
-        [0x63] = 6,
-        [0x64] = 22,
-        [0x65] = 22,
-        [0x66] = 10,
-        [0x67] = 16,
-        [0x68] = 16,
-        [0x6a] = 12,
-        [0x6b] = 26,
-        [0x6c] = 26,
-        [0x6d] = 26,
-        [0x6e] = 18,
-        [0x70] = 2,
-        [0x71] = 2,
-        [0x72] = 2,
-        [0x73] = 6,
-        [0x74] = 6,
-        [0x75] = 6,
-        [0x76] = 10,
-        [0x77] = 20,
-        [0x7b] = 26,
-        [0x7c] = 26,
-        [0x7d] = 26,
-        [0x7e] = 18,
-        [0x7f] = 18,
-        [0x80] = 2,
-        [0x81] = 2,
-        [0x82] = 2,
-        [0x83] = 6,
-        [0x84] = 6,
-        [0x85] = 6,
-        [0x87] = 20,
-        [0x89] = 4,
-        [0x8b] = 26,
-        [0x8c] = 26,
-        [0x8d] = 26,
-        [0x8e] = 18,
-        [0x90] = 14,
-        [0x91] = 14,
-        [0x92] = 14,
-        [0x93] = 14,
-        [0x95] = 26,
-        [0x96] = 26,
-        [0x97] = 14,
-        [0x98] = 14,
-        [0x99] = 4,
-        [0x9b] = 26,
-        [0x9c] = 26,
-        [0x9d] = 26,
-        [0x9e] = 18,
-        [0x9f] = 18,
-        [0xa0] = 14,
-        [0xa1] = 14,
-        [0xa2] = 14,
-        [0xa3] = 14,
-        [0xa4] = 24,
-        [0xa5] = 26,
-        [0xa6] = 26,
-        [0xa7] = 20,
-        [0xa8] = 4,
-        [0xa9] = 4,
-        [0xaa] = 4,
-        [0xab] = 22,
-        [0xac] = 22,
-        [0xae] = 18,
-        [0xaf] = 18,
-        [0xb0] = 8,
-        [0xb1] = 14,
-        [0xb2] = 14,
-        [0xb3] = 14,
-        [0xb4] = 24,
-        [0xb5] = 24,
-        [0xb6] = 24,
-        [0xb7] = 24,
-        [0xb8] = 4,
-        [0xb9] = 4,
-        [0xba] = 4,
-        [0xbb] = 22,
-        [0xbc] = 22,
-        [0xbe] = 18,
-        [0xbf] = 18,
-        [0xc0] = 8,
-        [0xc1] = 14,
-        [0xc2] = 14,
-        [0xc3] = 14,
-        [0xc4] = 24,
-        [0xc5] = 24,
-        [0xc6] = 24,
-        [0xc7] = 24,
-        [0xc8] = 4,
-        [0xc9] = 4,
-        [0xcb] = 22,
-        [0xcc] = 22,
-        [0xce] = 18,
-        [0xd0] = 8,
-        [0xd1] = 14,
-        [0xd2] = 14,
-        [0xd5] = 24,
-        [0xd6] = 24,
-        [0xd8] = 4,
-        [0xd9] = 4,
-        [0xda] = 4,
-        [0xdb] = 22,
-        [0xdc] = 22,
-        [0xde] = 18,
+    local roomMap =
+    {
+                     [0x01] = 2,  [0x02] = 0,               [0x04] = 24,              [0x06] = 10, [0x07] = 20,              [0x09] = 12, [0x0a] = 12, [0x0b] = 12, [0x0c] = 26, [0x0d] = 26, [0x0e] = 18,
+                     [0x11] = 0,  [0x12] = 0,  [0x13] = 24, [0x14] = 24, [0x15] = 24, [0x16] = 10, [0x17] = 20,              [0x19] = 12, [0x1a] = 12, [0x1b] = 12, [0x1c] = 26, [0x1d] = 26, [0x1e] = 18, [0x1f] = 18,
+        [0x20] = 8,  [0x21] = 0,  [0x22] = 0,  [0x23] = 24, [0x24] = 24,              [0x26] = 10, [0x27] = 20, [0x28] = 10, [0x29] = 16, [0x2a] = 12, [0x2b] = 12,                           [0x2e] = 18,
+        [0x30] = 8,  [0x31] = 20, [0x32] = 0,  [0x33] = 6,  [0x34] = 10, [0x35] = 10, [0x36] = 10, [0x37] = 10, [0x38] = 10, [0x39] = 16, [0x3a] = 12, [0x3b] = 12,              [0x3d] = 26, [0x3e] = 18, [0x3f] = 18,
+        [0x40] = 8,  [0x41] = 0,  [0x42] = 0,  [0x43] = 6,  [0x44] = 22, [0x45] = 22, [0x46] = 10,                           [0x49] = 16, [0x4a] = 12, [0x4b] = 12, [0x4c] = 26, [0x4d] = 26, [0x4e] = 18, [0x4f] = 18,
+        [0x50] = 2,  [0x51] = 2,  [0x52] = 2,  [0x53] = 6,  [0x54] = 10,              [0x56] = 16, [0x57] = 16, [0x58] = 16, [0x59] = 16, [0x5a] = 12, [0x5b] = 26, [0x5c] = 26, [0x5d] = 26, [0x5e] = 18, [0x5f] = 18,
+        [0x60] = 2,  [0x61] = 2,  [0x62] = 2,  [0x63] = 6,  [0x64] = 22, [0x65] = 22, [0x66] = 10, [0x67] = 16, [0x68] = 16,              [0x6a] = 12, [0x6b] = 26, [0x6c] = 26, [0x6d] = 26, [0x6e] = 18,
+        [0x70] = 2,  [0x71] = 2,  [0x72] = 2,  [0x73] = 6,  [0x74] = 6,  [0x75] = 6,  [0x76] = 10, [0x77] = 20,                                        [0x7b] = 26, [0x7c] = 26, [0x7d] = 26, [0x7e] = 18, [0x7f] = 18,
+        [0x80] = 2,  [0x81] = 2,  [0x82] = 2,  [0x83] = 6,  [0x84] = 6,  [0x85] = 6,               [0x87] = 20,              [0x89] = 4,               [0x8b] = 26, [0x8c] = 26, [0x8d] = 26, [0x8e] = 18,
+        [0x90] = 14, [0x91] = 14, [0x92] = 14, [0x93] = 14,              [0x95] = 26, [0x96] = 26, [0x97] = 14, [0x98] = 14, [0x99] = 4,               [0x9b] = 26, [0x9c] = 26, [0x9d] = 26, [0x9e] = 18, [0x9f] = 18,
+        [0xa0] = 14, [0xa1] = 14, [0xa2] = 14, [0xa3] = 14, [0xa4] = 24, [0xa5] = 26, [0xa6] = 26, [0xa7] = 20, [0xa8] = 4,  [0xa9] = 4,  [0xaa] = 4,  [0xab] = 22, [0xac] = 22,              [0xae] = 18, [0xaf] = 18,
+        [0xb0] = 8,  [0xb1] = 14, [0xb2] = 14, [0xb3] = 14, [0xb4] = 24, [0xb5] = 24, [0xb6] = 24, [0xb7] = 24, [0xb8] = 4,  [0xb9] = 4,  [0xba] = 4,  [0xbb] = 22, [0xbc] = 22,              [0xbe] = 18, [0xbf] = 18,
+        [0xc0] = 8,  [0xc1] = 14, [0xc2] = 14, [0xc3] = 14, [0xc4] = 24, [0xc5] = 24, [0xc6] = 24, [0xc7] = 24, [0xc8] = 4,  [0xc9] = 4,               [0xcb] = 22, [0xcc] = 22,              [0xce] = 18,
+        [0xd0] = 8,  [0xd1] = 14, [0xd2] = 14,                           [0xd5] = 24, [0xd6] = 24,              [0xd8] = 4,  [0xd9] = 4,  [0xda] = 4,  [0xdb] = 22, [0xdc] = 22,              [0xde] = 18,
         [0xe0] = 8
     }
 
-    local dungeonMap = {
-        [0x01] = 254,
-        [0x02] = 254,
-        [0x04] = 254,
-        [0x06] = 254,
-        [0x07] = 254,
-        [0x09] = 254,
-        [0x0a] = 254,
-        [0x0b] = 254,
-        [0x0c] = 26,
-        [0x0d] = 254,
-        [0x0e] = 18,
-        [0x11] = 0,
-        [0x12] = 0,
-        [0x13] = 254,
-        [0x14] = 254,
-        [0x15] = 254,
-        [0x16] = 254,
-        [0x17] = 254,
-        [0x19] = 254,
-        [0x1a] = 254,
-        [0x1b] = 254,
-        [0x1c] = 254,
-        [0x1d] = 254,
-        [0x1e] = 254,
-        [0x1f] = 254,
-        [0x20] = 254,
-        [0x21] = 254,
-        [0x22] = 254,
-        [0x23] = 24,
-        [0x24] = 24,
-        [0x26] = 254,
-        [0x27] = 254,
-        [0x28] = 10,
-        [0x29] = 254,
-        [0x2a] = 254,
-        [0x2b] = 254,
-        [0x2e] = 254,
-        [0x30] = 254,
-        [0x31] = 254,
-        [0x32] = 254,
-        [0x33] = 254,
-        [0x34] = 254,
-        [0x35] = 254,
-        [0x36] = 254,
-        [0x37] = 254,
-        [0x38] = 254,
-        [0x39] = 254,
-        [0x3a] = 254,
-        [0x3b] = 254,
-        [0x3d] = 254,
-        [0x3e] = 254,
-        [0x3f] = 254,
-        [0x40] = 254,
-        [0x41] = 254,
-        [0x42] = 254,
-        [0x43] = 254,
-        [0x44] = 254,
-        [0x45] = 254,
-        [0x46] = 254,
-        [0x49] = 254,
-        [0x4a] = 12,
-        [0x4b] = 254,
-        [0x4c] = 254,
-        [0x4d] = 254,
-        [0x4e] = 254,
-        [0x4f] = 254,
-        [0x50] = 254,
-        [0x51] = 254,
-        [0x52] = 254,
-        [0x53] = 254,
-        [0x54] = 254,
-        [0x56] = 16,
-        [0x57] = 16,
-        [0x58] = 16,
-        [0x59] = 16,
-        [0x5a] = 254,
-        [0x5b] = 254,
-        [0x5c] = 254,
-        [0x5d] = 254,
-        [0x5e] = 254,
-        [0x5f] = 254,
-        [0x60] = 2,
-        [0x61] = 2,
-        [0x62] = 2,
-        [0x63] = 6,
-        [0x64] = 254,
-        [0x65] = 254,
-        [0x66] = 254,
-        [0x67] = 16,
-        [0x68] = 16,
-        [0x6a] = 254,
-        [0x6b] = 254,
-        [0x6c] = 254,
-        [0x6d] = 254,
-        [0x6e] = 254,
-        [0x70] = 254,
-        [0x71] = 254,
-        [0x72] = 254,
-        [0x73] = 254,
-        [0x74] = 254,
-        [0x75] = 254,
-        [0x76] = 254,
-        [0x77] = 20,
-        [0x7b] = 254,
-        [0x7c] = 254,
-        [0x7d] = 254,
-        [0x7e] = 254,
-        [0x7f] = 254,
-        [0x80] = 254,
-        [0x81] = 254,
-        [0x82] = 254,
-        [0x83] = 6,
-        [0x84] = 6,
-        [0x85] = 6,
-        [0x87] = 254,
-        [0x89] = 254,
-        [0x8b] = 254,
-        [0x8c] = 254,
-        [0x8d] = 254,
-        [0x8e] = 254,
-        [0x90] = 254,
-        [0x91] = 254,
-        [0x92] = 254,
-        [0x93] = 254,
-        [0x95] = 254,
-        [0x96] = 254,
-        [0x97] = 254,
-        [0x98] = 14,
-        [0x99] = 254,
-        [0x9b] = 254,
-        [0x9c] = 254,
-        [0x9d] = 254,
-        [0x9e] = 254,
-        [0x9f] = 254,
-        [0xa0] = 254,
-        [0xa1] = 254,
-        [0xa2] = 254,
-        [0xa3] = 254,
-        [0xa4] = 254,
-        [0xa5] = 254,
-        [0xa6] = 254,
-        [0xa7] = 254,
-        [0xa8] = 254,
-        [0xa9] = 254,
-        [0xaa] = 254,
-        [0xab] = 254,
-        [0xac] = 254,
-        [0xae] = 254,
-        [0xaf] = 254,
-        [0xb0] = 254,
-        [0xb1] = 254,
-        [0xb2] = 254,
-        [0xb3] = 254,
-        [0xb4] = 254,
-        [0xb5] = 254,
-        [0xb6] = 254,
-        [0xb7] = 254,
-        [0xb8] = 254,
-        [0xb9] = 254,
-        [0xba] = 254,
-        [0xbb] = 254,
-        [0xbc] = 254,
-        [0xbe] = 254,
-        [0xbf] = 254,
-        [0xc0] = 254,
-        [0xc1] = 254,
-        [0xc2] = 254,
-        [0xc3] = 254,
-        [0xc4] = 254,
-        [0xc5] = 254,
-        [0xc6] = 254,
-        [0xc7] = 254,
-        [0xc8] = 254,
-        [0xc9] = 4,
-        [0xcb] = 254,
-        [0xcc] = 254,
-        [0xce] = 254,
-        [0xd0] = 254,
-        [0xd1] = 254,
-        [0xd2] = 254,
-        [0xd5] = 24,
-        [0xd6] = 24,
-        [0xd8] = 254,
-        [0xd9] = 254,
-        [0xda] = 254,
-        [0xdb] = 22,
-        [0xdc] = 254,
-        [0xde] = 254,
+    local dungeonMap =
+    {
+                      [0x01] = 254, [0x02] = 254,               [0x04] = 254,               [0x06] = 254, [0x07] = 254,               [0x09] = 254, [0x0a] = 254, [0x0b] = 254, [0x0c] = 26,  [0x0d] = 254, [0x0e] = 18,
+                      [0x11] = 0,   [0x12] = 0,   [0x13] = 254, [0x14] = 254, [0x15] = 254, [0x16] = 254, [0x17] = 254,               [0x19] = 254, [0x1a] = 254, [0x1b] = 254, [0x1c] = 254, [0x1d] = 254, [0x1e] = 254, [0x1f] = 254,
+        [0x20] = 254, [0x21] = 254, [0x22] = 254, [0x23] = 24,  [0x24] = 24,                [0x26] = 254, [0x27] = 254, [0x28] = 10,  [0x29] = 254, [0x2a] = 254, [0x2b] = 254,                             [0x2e] = 254,
+        [0x30] = 254, [0x31] = 254, [0x32] = 254, [0x33] = 254, [0x34] = 254, [0x35] = 254, [0x36] = 254, [0x37] = 254, [0x38] = 254, [0x39] = 254, [0x3a] = 254, [0x3b] = 254,               [0x3d] = 254, [0x3e] = 254, [0x3f] = 254,
+        [0x40] = 254, [0x41] = 254, [0x42] = 254, [0x43] = 254, [0x44] = 254, [0x45] = 254, [0x46] = 254,                             [0x49] = 254, [0x4a] = 12,  [0x4b] = 254, [0x4c] = 254, [0x4d] = 254, [0x4e] = 254, [0x4f] = 254,
+        [0x50] = 254, [0x51] = 254, [0x52] = 254, [0x53] = 254, [0x54] = 254,               [0x56] = 16,  [0x57] = 16,  [0x58] = 16,  [0x59] = 16,  [0x5a] = 254, [0x5b] = 254, [0x5c] = 254, [0x5d] = 254, [0x5e] = 254, [0x5f] = 254,
+        [0x60] = 2,   [0x61] = 2,   [0x62] = 2,   [0x63] = 6,   [0x64] = 254, [0x65] = 254, [0x66] = 254, [0x67] = 16,  [0x68] = 16,                [0x6a] = 254, [0x6b] = 254, [0x6c] = 254, [0x6d] = 254, [0x6e] = 254,
+        [0x70] = 254, [0x71] = 254, [0x72] = 254, [0x73] = 254, [0x74] = 254, [0x75] = 254, [0x76] = 254, [0x77] = 20,                                            [0x7b] = 254, [0x7c] = 254, [0x7d] = 254, [0x7e] = 254, [0x7f] = 254,
+        [0x80] = 254, [0x81] = 254, [0x82] = 254, [0x83] = 6,   [0x84] = 6,   [0x85] = 6,                 [0x87] = 254,               [0x89] = 254,               [0x8b] = 254, [0x8c] = 254, [0x8d] = 254, [0x8e] = 254,
+        [0x90] = 254, [0x91] = 254, [0x92] = 254, [0x93] = 254,               [0x95] = 254, [0x96] = 254, [0x97] = 254, [0x98] = 14,  [0x99] = 254,               [0x9b] = 254, [0x9c] = 254, [0x9d] = 254, [0x9e] = 254, [0x9f] = 254,
+        [0xa0] = 254, [0xa1] = 254, [0xa2] = 254, [0xa3] = 254, [0xa4] = 254, [0xa5] = 254, [0xa6] = 254, [0xa7] = 254, [0xa8] = 254, [0xa9] = 254, [0xaa] = 254, [0xab] = 254, [0xac] = 254,               [0xae] = 254, [0xaf] = 254,
+        [0xb0] = 254, [0xb1] = 254, [0xb2] = 254, [0xb3] = 254, [0xb4] = 254, [0xb5] = 254, [0xb6] = 254, [0xb7] = 254, [0xb8] = 254, [0xb9] = 254, [0xba] = 254, [0xbb] = 254, [0xbc] = 254,               [0xbe] = 254, [0xbf] = 254,
+        [0xc0] = 254, [0xc1] = 254, [0xc2] = 254, [0xc3] = 254, [0xc4] = 254, [0xc5] = 254, [0xc6] = 254, [0xc7] = 254, [0xc8] = 254, [0xc9] = 4,                 [0xcb] = 254, [0xcc] = 254,               [0xce] = 254,
+        [0xd0] = 254, [0xd1] = 254, [0xd2] = 254,                             [0xd5] = 24,  [0xd6] = 24,                [0xd8] = 254, [0xd9] = 254, [0xda] = 254, [0xdb] = 22,  [0xdc] = 254,               [0xde] = 254,
         [0xe0] = 8
     }
 
-    local overworldMap = {
-        [0x02] = "light_world",
-        [0x03] = "dm_west_bottom",
-        [0x11] = "light_world",
-        [0x13] = "light_world",
-        [0x15] = "light_world",
-        [0x11] = "lw_witch",
-        [0x22] = "light_world",
-        [0x1e] = "light_world",
-        [0x28] = "light_world",
-        [0x29] = "light_world",
-        [0x2b] = "light_world",
-        [0x2c] = "light_world",
-        [0x32] = "light_world",
-        [0x34] = "light_world",
-        [0x37] = "light_world",
-        [0x3a] = "light_world",
-        [0x3b] = "light_world",
-        [0x42] = "dw_west",
-        [0x43] = "ddm_west",
-        [0x47] = "ddm_top",
-        [0x51] = "dw_west",
-        [0x53] = "dw_west",
-        [0x56] = "dw_witch",
+    local overworldMap =
+    {
+        [0x02] = "light_world", [0x03] = "dm_west_bottom",
+        [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x11] = "lw_witch",
+        [0x22] = "light_world", [0x1e] = "light_world",
+        [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
+        [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
+        [0x3a] = "light_world", [0x3b] = "light_world",
+        [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
+        [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
         [0x5a] = "dw_west", --[0x5b] = "dw_east", [0x5e] = "dw_east", --one of these two are automarking during S+Q
-        [0x69] = "dw_south",
-        [0x6b] = "dw_south",
-        [0x6c] = "dw_south",
-        [0x70] = "mire_area",
-        [0x74] = "dw_south",
-        [0x77] = "dw_southeast",
+        [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
+        [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
         [0x7b] = "dw_south"
     }
 

@@ -170,7 +170,7 @@ function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots
 
             if (roomData & (1 << slot[2])) ~= 0 then
                 clearedCount = clearedCount + 1
-            elseif OBJ_ENTRANCE and OBJ_ENTRANCE.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
+            elseif OBJ_ENTRANCE.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
                 clearedCount = clearedCount + 1
             end
         end
@@ -268,8 +268,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
                 local currentKeys = 0
 
                 local dungeons = {
-                    [0] = "hc",
-                     --sewer
+                    [0] = "hc", --sewer
                     [2] = "hc",
                     [4] = "ep",
                     [6] = "dp",
@@ -347,7 +346,7 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
     if location then
         -- Do not auto-track this the user has manually modified it
         --if location.Owner.ModifiedByUser then
-        --	return
+        --    return
         --end
 
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
@@ -384,8 +383,7 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
                     print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
                 end
 
-                location.AvailableChestCount =
-                    math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+                location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
             end
         end
     end
@@ -411,8 +409,7 @@ function updateIdsFromModule(moduleId)
     end
 
     local dungeons = {
-        [0] = "hc",
-         --sewer
+        [0] = "hc", --sewer
         [2] = "hc",
         [4] = "ep",
         [6] = "dp",

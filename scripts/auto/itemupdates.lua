@@ -47,7 +47,7 @@ function updateProgressiveMirror(segment)
         if testFlag(segment, 0x7ef353, 0x1) then
             item.Stages[item.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
             item.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
-            if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 then
+            if OBJ_DOORSHUFFLE.CurrentStage == 0 then
                 OBJ_DOORSHUFFLE.CurrentStage = 1
             end
         else
