@@ -465,12 +465,12 @@ function updateIdsFromModule(moduleId)
             end
         end
     elseif moduleId == 0x09 then --overworld
-        LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
+        local owarea = ReadU8(SEGMENT_OWID, 0x7e008a)
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("OW: ", ReadU8(SEGMENT_OWID, 0x7e008a))
+            print("OW: ", owarea)
         end
 
-        if ReadU8(SEGMENT_OWID, 0x7e008a) >= 0x40 and ReadU8(SEGMENT_OWID, 0x7e008a) < 0x80 then
+        if owarea >= 0x40 and owarea < 0x80 then
             if string.find(Tracker.ActiveVariantUID, "er_") then
                 sendExternalMessage("dungeon", "er-dw")
             else

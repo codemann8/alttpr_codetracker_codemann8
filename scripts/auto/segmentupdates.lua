@@ -217,37 +217,12 @@ function updateRoomsFromMemorySegment(segment)
 
     if OBJ_RACEMODE.CurrentStage == 0 then
         --Dungeon Chests
-        updateDungeonChestCountFromRoomSlotList(segment,
-            "hc_chest",
-            {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}})
-        updateDungeonChestCountFromRoomSlotList(segment,
-            "ep_chest",
-            {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}})
-        updateDungeonChestCountFromRoomSlotList(segment,
-            "dp_chest",
-            {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}})
-        updateDungeonChestCountFromRoomSlotList(segment,
-            "toh_chest",
-            {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "hc_chest", {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}})
+        updateDungeonChestCountFromRoomSlotList(segment, "ep_chest", {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "dp_chest", {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}})
+        updateDungeonChestCountFromRoomSlotList(segment, "toh_chest", {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}})
         updateDungeonChestCountFromRoomSlotList(segment, "at_chest", {{224, 4}, {208, 4}})
-        updateDungeonChestCountFromRoomSlotList(segment,
-            "pod_chest",
-            {
-                {9, 4},
-                {43, 4},
-                {42, 4},
-                {42, 5},
-                {58, 4},
-                {10, 4},
-                {26, 4},
-                {26, 5},
-                {26, 6},
-                {25, 4},
-                {25, 5},
-                {106, 4},
-                {106, 5},
-                {90, 11}
-            })
+        updateDungeonChestCountFromRoomSlotList(segment, "pod_chest", {{9, 4}, {43, 4}, {42, 4}, {42, 5}, {58, 4}, {10, 4}, {26, 4}, {26, 5}, {26, 6}, {25, 4},  {25, 5}, {106, 4}, {106, 5}, {90, 11}})
         updateDungeonChestCountFromRoomSlotList(segment, "sp_chest", {{40, 4}, {55, 4}, {54, 4}, {53, 4}, {52, 4}, {70, 4}, {118, 4}, {118, 5}, {102, 4}, {6, 11}})
         updateDungeonChestCountFromRoomSlotList(segment, "sw_chest", {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 4}, {88, 5}, {89, 4}, {41, 11}})
         updateDungeonChestCountFromRoomSlotList(segment, "tt_chest", {{219, 4}, {219, 5}, {203, 4}, {220, 4}, {101, 4}, {69, 4}, {68, 4}, {172, 11}})
@@ -545,7 +520,7 @@ function updateDungeonFromMemorySegment(segment)
         return false
     end
 
-    if (string.find(Tracker.ActiveVariantUID, "items_only")) then
+    if string.find(Tracker.ActiveVariantUID, "items_only") then
         return false
     end
 
@@ -610,42 +585,44 @@ function updateDungeonFromMemorySegment(segment)
     local roomLocal = 0xff
     local dungeonLocal = 0xff
 
-    if OBJ_DUNGEON then
-        --dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
+    --dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
 
-        local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
-        if owarea == 0 and roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
-            roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
-        end
+    local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
+    if owarea == 0 and roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
+        roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
+    end
 
-        if OBJ_ROOM.AcquiredCount ~= roomLocal then
-            OBJ_ROOM.AcquiredCount = roomLocal
-        end
+    if OBJ_ROOM.AcquiredCount ~= roomLocal then
+        OBJ_ROOM.AcquiredCount = roomLocal
+    end
 
-        if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
-            dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
-        end
+    if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
+        dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
+    end
 
-        if dungeonLocal ~= 0xfe and OBJ_DUNGEON.AcquiredCount ~= dungeonLocal then
-            OBJ_DUNGEON.AcquiredCount = dungeonLocal
-        end
+    if dungeonLocal ~= 0xfe and OBJ_DUNGEON.AcquiredCount ~= dungeonLocal then
+        OBJ_DUNGEON.AcquiredCount = dungeonLocal
+    end
 
-        if
-            OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and
-                OBJ_ENTRANCE.CurrentStage > 0
-         then
-            if owarea > 0 and overworldMap[owarea] then
-                local region = Tracker:FindObjectForCode(overworldMap[owarea])
-                if region then
-                    region.Active = true
-                end
+    if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
+        if owarea > 0 and overworldMap[owarea] then
+            local region = Tracker:FindObjectForCode(overworldMap[owarea])
+            if region then
+                region.Active = true
             end
         end
+    end
 
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount, owarea)
-            print("CURRENT ROOM ORIGDUNGEON:", OBJ_ROOM.AcquiredCount, owarea)
-        end
+    if owarea ~= 0 and owarea ~= PREV_OWAREAID then
+        updateIdsFromModule(0x09)
+    end
+
+    PREV_OWAREAID = owarea
+    PREV_ROOMID = roomLocal
+
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+        print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount, owarea)
+        print("CURRENT ROOM ORIGDUNGEON:", OBJ_ROOM.AcquiredCount, owarea)
     end
 end
 
@@ -738,17 +715,7 @@ function updateStatisticsFromMemorySegment(segment)
         local deaths = ReadU8(segment, 0x7ef449)
         local bonks = ReadU8(segment, 0x7ef420)
 
-        local markdown =
-            string.format(
-            AUTOTRACKER_STATS_MARKDOWN_FORMAT,
-            collection_rate,
-            deaths,
-            bonks,
-            hours,
-            minutes,
-            seconds,
-            frames
-        )
+        local markdown = string.format(AUTOTRACKER_STATS_MARKDOWN_FORMAT, collection_rate, deaths, bonks, hours, minutes, seconds, frames)
         ScriptHost:PushMarkdownNotification(NotificationType.Celebration, markdown)
     end
 
