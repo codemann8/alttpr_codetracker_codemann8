@@ -24,8 +24,6 @@ function DynamicRequirement:getState()
 end
 
 function DynamicRequirement:updateIcon()
-	--local item = Tracker:FindObjectForCode("dynreq_" .. dungeonCode .. number)
-	--item.CurrentStage = self:getState()
 	local items =
 	{
 		[1] = "capture",

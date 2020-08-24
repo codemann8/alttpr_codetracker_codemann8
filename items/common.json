@@ -744,6 +744,7 @@
 			}
         ]
 	},
+	
 	// Current Dungeon/Room
 	{
 		"name": "Current Dungeon Room",
@@ -758,5 +759,22 @@
 		"codes": "dungeon",
 		"max_quantity": 255,
 		"initial_quantity": 255
+	},
+
+	// Grouped Criteria
+	{
+	  "name": "Non-Full Keysanity",
+	  "access_rules": [
+		"keysanity_standard",
+		"keysanity_mapsanity",
+		"keysanity_smallsanity"
+	  ]
+	},
+	{
+	  "name": "Non-Key Keysanity",
+	  "access_rules": [
+		"keysanity_standard",
+		"keysanity_mapsanity"
+	  ]
 	}
 ]

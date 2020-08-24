@@ -399,22 +399,5 @@
         ]
       }
     ]
-  },
-
-  // Grouped Criteria
-  {
-    "name": "Non-Full Keysanity",
-    "access_rules": [
-      "keysanity_standard",
-      "keysanity_mapsanity",
-      "keysanity_smallsanity"
-    ]
-  },
-  {
-    "name": "Non-Key Keysanity",
-    "access_rules": [
-      "keysanity_standard",
-      "keysanity_mapsanity"
-    ]
   }
 ]
