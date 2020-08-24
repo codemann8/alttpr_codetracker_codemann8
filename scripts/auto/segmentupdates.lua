@@ -576,7 +576,7 @@ function updateDungeonFromMemorySegment(segment)
         [0x3a] = "light_world", [0x3b] = "light_world",
         [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
         [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-        [0x5a] = "dw_west", --[0x5b] = "dw_east", [0x5e] = "dw_east", --one of these two are automarking during S+Q
+        [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east", --one of these two are automarking during S+Q
         [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
         [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
         [0x7b] = "dw_south"
@@ -588,20 +588,38 @@ function updateDungeonFromMemorySegment(segment)
     --dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
 
     local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
-    if owarea == 0 and roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
-        roomLocal = roomMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
+    if owarea > 0 and OBJ_OWAREA.AcquiredCount ~= owarea then
+        OBJ_OWAREA.AcquiredCount = owarea
+        updateIdsFromModule(0x09)
+
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT OW:", OBJ_OWAREA.AcquiredCount)
+        end
+    end
+
+    if owarea == 0 then
+        roomLocal = ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)
+
+        if dungeonMap[roomLocal] then
+            dungeonLocal = dungeonMap[roomLocal]
+        end
     end
 
     if OBJ_ROOM.AcquiredCount ~= roomLocal then
         OBJ_ROOM.AcquiredCount = roomLocal
-    end
 
-    if owarea == 0 and dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)] then
-        dungeonLocal = dungeonMap[ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)]
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT ROOM:", OBJ_ROOM.AcquiredCount)
+            print("CURRENT ROOM ORIGDUNGEON:", roomMap[OBJ_ROOM.AcquiredCount])
+        end
     end
 
     if dungeonLocal ~= 0xfe and OBJ_DUNGEON.AcquiredCount ~= dungeonLocal then
         OBJ_DUNGEON.AcquiredCount = dungeonLocal
+
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount)
+        end
     end
 
     if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
@@ -611,18 +629,6 @@ function updateDungeonFromMemorySegment(segment)
                 region.Active = true
             end
         end
-    end
-
-    if owarea ~= 0 and owarea ~= PREV_OWAREAID then
-        updateIdsFromModule(0x09)
-    end
-
-    PREV_OWAREAID = owarea
-    PREV_ROOMID = roomLocal
-
-    if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount, owarea)
-        print("CURRENT ROOM ORIGDUNGEON:", OBJ_ROOM.AcquiredCount, owarea)
     end
 end
 

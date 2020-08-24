@@ -1,8 +1,9 @@
 START_CLOCK = os.clock()
 
 function initGlobalVars()
+    OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
     OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
-    OBJ_ROOM = Tracker:FindObjectForCode("dungeonroom")
+    OBJ_ROOM = Tracker:FindObjectForCode("room")
 
     if Tracker.ActiveVariantUID ~= "items_only" then
         OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")

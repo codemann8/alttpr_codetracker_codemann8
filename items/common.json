@@ -853,9 +853,16 @@
     
     // Current Dungeon/Room
     {
-        "name": "Current Dungeon Room",
+        "name": "Current OW Area",
         "type": "consumable",
-        "codes": "dungeonroom",
+        "codes": "owarea",
+        "max_quantity": 255,
+        "initial_quantity": 255
+    },
+    {
+        "name": "Current Room",
+        "type": "consumable",
+        "codes": "room",
         "max_quantity": 255,
         "initial_quantity": 255
     },
