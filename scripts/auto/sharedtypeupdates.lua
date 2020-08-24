@@ -391,3 +391,102 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
 		end
 	end
 end
+
+function updateIdsFromModule(moduleId)
+	if not isInGame() then
+		return false
+	end
+
+	InvalidateReadCaches()
+	
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+		return false
+	end
+	
+	if (string.find(Tracker.ActiveVariantUID, "items_only")) then
+		return false
+	end
+
+	if not (SEGMENT_LASTROOMID and SEGMENT_OWID) then
+		return false
+	end
+
+	local dungeons =
+	{
+		[0] = "hc",--sewer
+		[2] = "hc",
+		[4] = "ep",
+		[6] = "dp",
+		[8] = "at",
+		[10] = "sp",
+		[12] = "pod",
+		[14] = "mm",
+		[16] = "sw",
+		[18] = "ip",
+		[20] = "toh",
+		[22] = "tt",
+		[24] = "tr",
+		[26] = "gt",
+		[255] = "OW"
+	}
+
+	if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+		print("MODULE: ", moduleId)
+	end
+
+	--update dungeon image
+	if moduleId == 0x07 then --underworld
+		local dungeonId = dungeons[OBJ_DUNGEON.AcquiredCount]
+
+		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+			print("DUNGEON: ", dungeonId)
+		end
+
+		if dungeonId then
+			local dungeonSelect =
+			{
+				[0] = 0,
+				[2] = 0,
+				[4] = 1,
+				[6] = 2,
+				[8] = 4,
+				[10] = 6,
+				[12] = 5,
+				[14] = 10,
+				[16] = 7,
+				[18] = 9,
+				[20] = 3,
+				[22] = 8,
+				[24] = 11,
+				[26] = 12
+			}
+			if OBJ_DUNGEON.AcquiredCount < 255 then
+				OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
+			end
+			if string.find(Tracker.ActiveVariantUID, "er_") then
+				sendExternalMessage("dungeon", "er-"..dungeonId)
+			else
+				sendExternalMessage("dungeon", dungeonId)
+			end
+		end
+	elseif moduleId == 0x09 then --overworld
+		LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
+		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+			print("OW: ", ReadU8(SEGMENT_OWID, 0x7e008a))
+		end
+
+		if ReadU8(SEGMENT_OWID, 0x7e008a) >= 0x40 and ReadU8(SEGMENT_OWID, 0x7e008a) < 0x80 then
+			if string.find(Tracker.ActiveVariantUID, "er_") then
+				sendExternalMessage("dungeon", "er-dw")
+			else
+				sendExternalMessage("dungeon", "dw")
+			end
+		else
+			if string.find(Tracker.ActiveVariantUID, "er_") then
+				sendExternalMessage("dungeon", "er-lw")
+			else
+				sendExternalMessage("dungeon", "lw")
+			end
+		end
+	end
+end

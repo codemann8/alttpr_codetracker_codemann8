@@ -6,8 +6,8 @@ function updateInGameStatusFromMemorySegment(segment)
 	end
 
 	if mainModuleIdx ~= PREV_MODULEID then
-		if (mainModuleIdx == 0x07 or mainModuleIdx == 0x09) then
-			updateModuleFromMemorySegment(segment, mainModuleIdx)
+		if mainModuleIdx == 0x07 or mainModuleIdx == 0x09 then
+			updateIdsFromModule(mainModuleIdx)
 		end
 	end
 
@@ -31,35 +31,68 @@ function updateInGameStatusFromMemorySegment(segment)
 	return true
 end
 
-function updateNPCItemFlagsFromMemorySegment(segment)
+function updateItemsFromMemorySegment(segment)
 	if not isInGame() then
 		return false
 	end
 
-	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
-		return true
-	end
-
 	InvalidateReadCaches()
 
-	updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home", 0x7ef410, 0x01)
-	updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora", 0x7ef410, 0x02)
-	updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed", 0x7ef410, 0x04)
-	updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell", 0x7ef410, 0x08)
-	updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala", 0x7ef410, 0x10)
-	updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones", 0x7ef410, 0x20)
-	-- 0x40 is unused
-	updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf", 0x7ef410, 0x80)
+	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
+		updateProgressiveItemFromByte(segment, "sword",	0x7ef359, 1)
+		updateProgressiveItemFromByte(segment, "shield", 0x7ef35a, 0)
+		updateProgressiveItemFromByte(segment, "armor",	0x7ef35b, 0)
+		updateProgressiveItemFromByte(segment, "gloves", 0x7ef354, 0)
+		updateProgressiveItemFromByte(segment, "halfmagic",	0x7ef37b)
+		
+		updateToggleItemFromByte(segment, "hookshot",	0x7ef342)
+		updateToggleItemFromByte(segment, "bombs",		 0x7ef343)
+		updateToggleItemFromByte(segment, "firerod",	 0x7ef345)
+		updateToggleItemFromByte(segment, "icerod",		0x7ef346)
+		updateToggleItemFromByte(segment, "bombos",		0x7ef347)
+		updateToggleItemFromByte(segment, "ether",		 0x7ef348)
+		updateToggleItemFromByte(segment, "quake",		 0x7ef349)
+		updateToggleItemFromByte(segment, "lamp",			0x7ef34a)
+		updateToggleItemFromByte(segment, "hammer",		0x7ef34b)
+		updateToggleItemFromByte(segment, "net",			 0x7ef34d)
+		updateToggleItemFromByte(segment, "book",			0x7ef34e)
+		updateToggleItemFromByte(segment, "somaria",	 0x7ef350)
+		updateToggleItemFromByte(segment, "byrna",		 0x7ef351)
+		updateToggleItemFromByte(segment, "cape",			0x7ef352)
+		updateToggleItemFromByte(segment, "boots",		 0x7ef355)
+		updateToggleItemFromByte(segment, "flippers",	0x7ef356)
+		updateToggleItemFromByte(segment, "pearl",		 0x7ef357)
+		
+		if Tracker.ActiveVariantUID == "items_only" then
+			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef341, 0x01)
+			updateToggleItemFromByteAndFlag(segment, "red_boomerang", 0x7ef341, 0x02)
+			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
+			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef344, 0x2)
+		else
+			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
+			updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
+			updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
+			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
+			updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
+		end
 
-	updateSectionChestCountFromByteAndFlag(segment, "@Ether Tablet/Tablet", 0x7ef411, 0x01)
-	updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet", 0x7ef411, 0x02)
-	updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home", 0x7ef411, 0x04)
-	-- 0x08 is no longer relevant
-	updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot", 0x7ef411, 0x10)
-	updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom", 0x7ef411, 0x10)
-	updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant", 0x7ef411, 0x20, updateMushroomIndicatorStatus)
-	-- 0x40 is unused
-	updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl", 0x7ef411, 0x80, updateBatIndicatorStatus)
+		updateProgressiveBow(segment)
+		updateFlute(segment)
+		updateProgressiveMirror(segment)
+		updateBottles(segment)
+		updateAga1(segment)
+	end
+
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+		return true
+	end		
+
+	--	It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
+	--	which makes it more efficient to update them here.		
+	updateSectionChestCountFromByteAndFlag(segment, "@Secret Passage/Uncle", 0x7ef3c6, 0x01)
+	updateSectionChestCountFromByteAndFlag(segment, "@Hobo/Under The Bridge", 0x7ef3c9, 0x01)
+	updateSectionChestCountFromByteAndFlag(segment, "@Bottle Vendor/This Jerk", 0x7ef3c9, 0x02)
+	updateSectionChestCountFromByteAndFlag(segment, "@Purple Chest/Middle-Aged Man", 0x7ef3c9, 0x10)
 end
 
 function updateOverworldEventsFromMemorySegment(segment)
@@ -91,6 +124,37 @@ function updateOverworldEventsFromMemorySegment(segment)
 	--updateAga2(segment) --TODO: Find better way to determine Pyramid Hole
 	updateBigBomb(segment)
 	updateDam(segment)
+end
+
+function updateNPCItemFlagsFromMemorySegment(segment)
+	if not isInGame() then
+		return false
+	end
+
+	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+		return true
+	end
+
+	InvalidateReadCaches()
+
+	updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home", 0x7ef410, 0x01)
+	updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora", 0x7ef410, 0x02)
+	updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed", 0x7ef410, 0x04)
+	updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell", 0x7ef410, 0x08)
+	updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala", 0x7ef410, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones", 0x7ef410, 0x20)
+	-- 0x40 is unused
+	updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf", 0x7ef410, 0x80)
+
+	updateSectionChestCountFromByteAndFlag(segment, "@Ether Tablet/Tablet", 0x7ef411, 0x01)
+	updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet", 0x7ef411, 0x02)
+	updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home", 0x7ef411, 0x04)
+	-- 0x08 is no longer relevant
+	updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot", 0x7ef411, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom", 0x7ef411, 0x10)
+	updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant", 0x7ef411, 0x20, updateMushroomIndicatorStatus)
+	-- 0x40 is unused
+	updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl", 0x7ef411, 0x80, updateBatIndicatorStatus)
 end
 
 function updateRoomsFromMemorySegment(segment)
@@ -156,70 +220,6 @@ function updateRoomsFromMemorySegment(segment)
 	updateSectionChestCountFromRoomSlotList(segment, "@Bonk Rocks/Cave", { { 292, 4 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Checkerboard Cave/Cave", { { 294, 9, 1 } })
 	updateSectionChestCountFromRoomSlotList(segment, "@Hammer Pegs/Cave", { { 295, 10, 2 } })
-end
-
-function updateItemsFromMemorySegment(segment)
-	if not isInGame() then
-		return false
-	end
-
-	InvalidateReadCaches()
-
-	if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-		updateProgressiveItemFromByte(segment, "sword",	0x7ef359, 1)
-		updateProgressiveItemFromByte(segment, "shield", 0x7ef35a, 0)
-		updateProgressiveItemFromByte(segment, "armor",	0x7ef35b, 0)
-		updateProgressiveItemFromByte(segment, "gloves", 0x7ef354, 0)
-		updateProgressiveItemFromByte(segment, "halfmagic",	0x7ef37b)
-		
-		updateToggleItemFromByte(segment, "hookshot",	0x7ef342)
-		updateToggleItemFromByte(segment, "bombs",		 0x7ef343)
-		updateToggleItemFromByte(segment, "firerod",	 0x7ef345)
-		updateToggleItemFromByte(segment, "icerod",		0x7ef346)
-		updateToggleItemFromByte(segment, "bombos",		0x7ef347)
-		updateToggleItemFromByte(segment, "ether",		 0x7ef348)
-		updateToggleItemFromByte(segment, "quake",		 0x7ef349)
-		updateToggleItemFromByte(segment, "lamp",			0x7ef34a)
-		updateToggleItemFromByte(segment, "hammer",		0x7ef34b)
-		updateToggleItemFromByte(segment, "net",			 0x7ef34d)
-		updateToggleItemFromByte(segment, "book",			0x7ef34e)
-		updateToggleItemFromByte(segment, "somaria",	 0x7ef350)
-		updateToggleItemFromByte(segment, "byrna",		 0x7ef351)
-		updateToggleItemFromByte(segment, "cape",			0x7ef352)
-		updateToggleItemFromByte(segment, "boots",		 0x7ef355)
-		updateToggleItemFromByte(segment, "flippers",	0x7ef356)
-		updateToggleItemFromByte(segment, "pearl",		 0x7ef357)
-		
-		if Tracker.ActiveVariantUID == "items_only" then
-			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef341, 0x01)
-			updateToggleItemFromByteAndFlag(segment, "red_boomerang", 0x7ef341, 0x02)
-			updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
-			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef344, 0x2)
-		else
-			updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
-			updateToggleItemFromByteAndFlag(segment, "red_boomerang",	0x7ef38c, 0x40)
-			updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
-			updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
-			updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
-		end
-
-		updateProgressiveBow(segment)
-		updateFlute(segment)
-		updateProgressiveMirror(segment)
-		updateBottles(segment)
-		updateAga1(segment)
-	end
-
-	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
-		return true
-	end		
-
-	--	It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
-	--	which makes it more efficient to update them here.		
-	updateSectionChestCountFromByteAndFlag(segment, "@Secret Passage/Uncle", 0x7ef3c6, 0x01)
-	updateSectionChestCountFromByteAndFlag(segment, "@Hobo/Under The Bridge", 0x7ef3c9, 0x01)
-	updateSectionChestCountFromByteAndFlag(segment, "@Bottle Vendor/This Jerk", 0x7ef3c9, 0x02)
-	updateSectionChestCountFromByteAndFlag(segment, "@Purple Chest/Middle-Aged Man", 0x7ef3c9, 0x10)
 end
 
 function updateDungeonItemsFromMemorySegment(segment)
@@ -601,105 +601,6 @@ function updateDungeonFromMemorySegment(segment)
 		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
 			print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount, owarea)
 			print("CURRENT ROOM ORIGDUNGEON:", OBJ_ROOM.AcquiredCount, owarea)
-		end
-	end
-end
-
-function updateModuleFromMemorySegment(segment, moduleId)
-	if not isInGame() then
-		return false
-	end
-
-	InvalidateReadCaches()
-	
-	if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
-		return false
-	end
-	
-	if (string.find(Tracker.ActiveVariantUID, "items_only")) then
-		return false
-	end
-
-	if not (SEGMENT_LASTROOMID and SEGMENT_OWID) then
-		return false
-	end
-
-	local dungeons =
-	{
-		[0] = "hc",--sewer
-		[2] = "hc",
-		[4] = "ep",
-		[6] = "dp",
-		[8] = "at",
-		[10] = "sp",
-		[12] = "pod",
-		[14] = "mm",
-		[16] = "sw",
-		[18] = "ip",
-		[20] = "toh",
-		[22] = "tt",
-		[24] = "tr",
-		[26] = "gt",
-		[255] = "OW"
-	}
-
-	if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-		print("MODULE: ", moduleId)
-	end
-
-	--update dungeon image
-	if moduleId == 0x07 then --underworld
-		local dungeonId = dungeons[OBJ_DUNGEON.AcquiredCount]
-
-		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-			print("DUNGEON: ", dungeonId)
-		end
-
-		if dungeonId then
-			local dungeonSelect =
-			{
-				[0] = 0,
-				[2] = 0,
-				[4] = 1,
-				[6] = 2,
-				[8] = 4,
-				[10] = 6,
-				[12] = 5,
-				[14] = 10,
-				[16] = 7,
-				[18] = 9,
-				[20] = 3,
-				[22] = 8,
-				[24] = 11,
-				[26] = 12
-			}
-			if OBJ_DUNGEON.AcquiredCount < 255 then
-				OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
-			end
-			if string.find(Tracker.ActiveVariantUID, "er_") then
-				sendExternalMessage("dungeon", "er-"..dungeonId)
-			else
-				sendExternalMessage("dungeon", dungeonId)
-			end
-		end
-	elseif moduleId == 0x09 then --overworld
-		LASTOWID = ReadU8(SEGMENT_OWID, 0x7e008a)
-		if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-			print("OW: ", ReadU8(SEGMENT_OWID, 0x7e008a))
-		end
-
-		if ReadU8(SEGMENT_OWID, 0x7e008a) >= 0x40 and ReadU8(SEGMENT_OWID, 0x7e008a) < 0x80 then
-			if string.find(Tracker.ActiveVariantUID, "er_") then
-				sendExternalMessage("dungeon", "er-dw")
-			else
-				sendExternalMessage("dungeon", "dw")
-			end
-		else
-			if string.find(Tracker.ActiveVariantUID, "er_") then
-				sendExternalMessage("dungeon", "er-lw")
-			else
-				sendExternalMessage("dungeon", "lw")
-			end
 		end
 	end
 end
