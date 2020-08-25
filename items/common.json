@@ -853,6 +853,13 @@
     
     // Current Dungeon/Room
     {
+        "name": "Current Module",
+        "type": "consumable",
+        "codes": "module",
+        "max_quantity": 255,
+        "initial_quantity": 255
+    },
+    {
         "name": "Current OW Area",
         "type": "consumable",
         "codes": "owarea",
@@ -863,8 +870,8 @@
         "name": "Current Room",
         "type": "consumable",
         "codes": "room",
-        "max_quantity": 255,
-        "initial_quantity": 255
+        "max_quantity": 65535,
+        "initial_quantity": 65535
     },
     {
         "name": "Current Dungeon",

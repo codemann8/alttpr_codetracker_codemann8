@@ -1,6 +1,7 @@
 START_CLOCK = os.clock()
 
 function initGlobalVars()
+    OBJ_MODULE = Tracker:FindObjectForCode("module")
     OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
     OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
     OBJ_ROOM = Tracker:FindObjectForCode("room")

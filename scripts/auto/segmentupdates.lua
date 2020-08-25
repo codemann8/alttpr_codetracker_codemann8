@@ -1,13 +1,19 @@
-function updateInGameStatusFromMemorySegment(segment)
+function updateModuleIdFromMemorySegment(segment)
     local mainModuleIdx = segment:ReadUInt8(0x7e0010)
 
     if mainModuleIdx == 0 then
         START_TIME = os.time()
     end
 
-    if mainModuleIdx ~= PREV_MODULEID then
+    if mainModuleIdx ~= OBJ_MODULE.AcquiredCount then
+        OBJ_MODULE.AcquiredCount = mainModuleIdx
+
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT MODULE:", mainModuleIdx, string.format("0x%2X", mainModuleIdx))
+        end
+
         if mainModuleIdx == 0x07 or mainModuleIdx == 0x09 then
-            updateIdsFromModule(mainModuleIdx)
+            updateDungeonFromStatus(false)
         end
     end
 
@@ -18,8 +24,6 @@ function updateInGameStatusFromMemorySegment(segment)
         ScriptHost:AddMemoryWatch("LTTP Statistics", 0x7ef420, 0x46, updateStatisticsFromMemorySegment)
     end
 
-    PREV_MODULEID = mainModuleIdx
-
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         if mainModuleIdx > 0x05 then
             --print("Current Room Index: ", segment:ReadUInt16(0x7e00a0))
@@ -28,6 +32,36 @@ function updateInGameStatusFromMemorySegment(segment)
     end
 
     return true
+end
+
+function updateOverworldIdFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    InvalidateReadCaches()
+
+    local owarea = ReadU16(segment, 0x7e008a)
+
+    if OBJ_OWAREA.AcquiredCount ~= owarea then
+        if owarea > 0 and OBJ_OWAREA.AcquiredCount > 0 then
+            updateDungeonFromStatus(true)
+        else
+            OBJ_OWAREA.AcquiredCount = owarea
+        end
+    end
+end
+
+function updateRoomIdFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    InvalidateReadCaches()
+
+    OBJ_ROOM.AcquiredCount = ReadU16(segment, 0x7e00a0)
+
+    --updateDungeonFromStatus(true) --call if wanting to track room changes within a dungeon
 end
 
 function updateItemsFromMemorySegment(segment)
@@ -506,129 +540,6 @@ function updateDungeonKeysFromMemorySegment(segment)
         updateSectionChestCountFromDungeon("@MM/Items", "mm", 0x7ef4c6)
         updateSectionChestCountFromDungeon("@TR/Items", "tr", 0x7ef4cb)
         updateSectionChestCountFromDungeon("@GT/Items", "gt", 0x7ef4cc)
-    end
-end
-
-function updateDungeonFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-
-    InvalidateReadCaches()
-
-    if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
-        return false
-    end
-
-    if string.find(Tracker.ActiveVariantUID, "items_only") then
-        return false
-    end
-
-    if not (SEGMENT_LASTROOMID and SEGMENT_OWID) then
-        return false
-    end
-
-    local roomMap =
-    {
-                     [0x01] = 2,  [0x02] = 0,               [0x04] = 24,              [0x06] = 10, [0x07] = 20,              [0x09] = 12, [0x0a] = 12, [0x0b] = 12, [0x0c] = 26, [0x0d] = 26, [0x0e] = 18,
-                     [0x11] = 0,  [0x12] = 0,  [0x13] = 24, [0x14] = 24, [0x15] = 24, [0x16] = 10, [0x17] = 20,              [0x19] = 12, [0x1a] = 12, [0x1b] = 12, [0x1c] = 26, [0x1d] = 26, [0x1e] = 18, [0x1f] = 18,
-        [0x20] = 8,  [0x21] = 0,  [0x22] = 0,  [0x23] = 24, [0x24] = 24,              [0x26] = 10, [0x27] = 20, [0x28] = 10, [0x29] = 16, [0x2a] = 12, [0x2b] = 12,                           [0x2e] = 18,
-        [0x30] = 8,  [0x31] = 20, [0x32] = 0,  [0x33] = 6,  [0x34] = 10, [0x35] = 10, [0x36] = 10, [0x37] = 10, [0x38] = 10, [0x39] = 16, [0x3a] = 12, [0x3b] = 12,              [0x3d] = 26, [0x3e] = 18, [0x3f] = 18,
-        [0x40] = 8,  [0x41] = 0,  [0x42] = 0,  [0x43] = 6,  [0x44] = 22, [0x45] = 22, [0x46] = 10,                           [0x49] = 16, [0x4a] = 12, [0x4b] = 12, [0x4c] = 26, [0x4d] = 26, [0x4e] = 18, [0x4f] = 18,
-        [0x50] = 2,  [0x51] = 2,  [0x52] = 2,  [0x53] = 6,  [0x54] = 10,              [0x56] = 16, [0x57] = 16, [0x58] = 16, [0x59] = 16, [0x5a] = 12, [0x5b] = 26, [0x5c] = 26, [0x5d] = 26, [0x5e] = 18, [0x5f] = 18,
-        [0x60] = 2,  [0x61] = 2,  [0x62] = 2,  [0x63] = 6,  [0x64] = 22, [0x65] = 22, [0x66] = 10, [0x67] = 16, [0x68] = 16,              [0x6a] = 12, [0x6b] = 26, [0x6c] = 26, [0x6d] = 26, [0x6e] = 18,
-        [0x70] = 2,  [0x71] = 2,  [0x72] = 2,  [0x73] = 6,  [0x74] = 6,  [0x75] = 6,  [0x76] = 10, [0x77] = 20,                                        [0x7b] = 26, [0x7c] = 26, [0x7d] = 26, [0x7e] = 18, [0x7f] = 18,
-        [0x80] = 2,  [0x81] = 2,  [0x82] = 2,  [0x83] = 6,  [0x84] = 6,  [0x85] = 6,               [0x87] = 20,              [0x89] = 4,               [0x8b] = 26, [0x8c] = 26, [0x8d] = 26, [0x8e] = 18,
-        [0x90] = 14, [0x91] = 14, [0x92] = 14, [0x93] = 14,              [0x95] = 26, [0x96] = 26, [0x97] = 14, [0x98] = 14, [0x99] = 4,               [0x9b] = 26, [0x9c] = 26, [0x9d] = 26, [0x9e] = 18, [0x9f] = 18,
-        [0xa0] = 14, [0xa1] = 14, [0xa2] = 14, [0xa3] = 14, [0xa4] = 24, [0xa5] = 26, [0xa6] = 26, [0xa7] = 20, [0xa8] = 4,  [0xa9] = 4,  [0xaa] = 4,  [0xab] = 22, [0xac] = 22,              [0xae] = 18, [0xaf] = 18,
-        [0xb0] = 8,  [0xb1] = 14, [0xb2] = 14, [0xb3] = 14, [0xb4] = 24, [0xb5] = 24, [0xb6] = 24, [0xb7] = 24, [0xb8] = 4,  [0xb9] = 4,  [0xba] = 4,  [0xbb] = 22, [0xbc] = 22,              [0xbe] = 18, [0xbf] = 18,
-        [0xc0] = 8,  [0xc1] = 14, [0xc2] = 14, [0xc3] = 14, [0xc4] = 24, [0xc5] = 24, [0xc6] = 24, [0xc7] = 24, [0xc8] = 4,  [0xc9] = 4,               [0xcb] = 22, [0xcc] = 22,              [0xce] = 18,
-        [0xd0] = 8,  [0xd1] = 14, [0xd2] = 14,                           [0xd5] = 24, [0xd6] = 24,              [0xd8] = 4,  [0xd9] = 4,  [0xda] = 4,  [0xdb] = 22, [0xdc] = 22,              [0xde] = 18,
-        [0xe0] = 8
-    }
-
-    local dungeonMap =
-    {
-                      [0x01] = 254, [0x02] = 254,               [0x04] = 254,               [0x06] = 254, [0x07] = 254,               [0x09] = 254, [0x0a] = 254, [0x0b] = 254, [0x0c] = 26,  [0x0d] = 254, [0x0e] = 18,
-                      [0x11] = 0,   [0x12] = 0,   [0x13] = 254, [0x14] = 254, [0x15] = 254, [0x16] = 254, [0x17] = 254,               [0x19] = 254, [0x1a] = 254, [0x1b] = 254, [0x1c] = 254, [0x1d] = 254, [0x1e] = 254, [0x1f] = 254,
-        [0x20] = 254, [0x21] = 254, [0x22] = 254, [0x23] = 24,  [0x24] = 24,                [0x26] = 254, [0x27] = 254, [0x28] = 10,  [0x29] = 254, [0x2a] = 254, [0x2b] = 254,                             [0x2e] = 254,
-        [0x30] = 254, [0x31] = 254, [0x32] = 254, [0x33] = 254, [0x34] = 254, [0x35] = 254, [0x36] = 254, [0x37] = 254, [0x38] = 254, [0x39] = 254, [0x3a] = 254, [0x3b] = 254,               [0x3d] = 254, [0x3e] = 254, [0x3f] = 254,
-        [0x40] = 254, [0x41] = 254, [0x42] = 254, [0x43] = 254, [0x44] = 254, [0x45] = 254, [0x46] = 254,                             [0x49] = 254, [0x4a] = 12,  [0x4b] = 254, [0x4c] = 254, [0x4d] = 254, [0x4e] = 254, [0x4f] = 254,
-        [0x50] = 254, [0x51] = 254, [0x52] = 254, [0x53] = 254, [0x54] = 254,               [0x56] = 16,  [0x57] = 16,  [0x58] = 16,  [0x59] = 16,  [0x5a] = 254, [0x5b] = 254, [0x5c] = 254, [0x5d] = 254, [0x5e] = 254, [0x5f] = 254,
-        [0x60] = 2,   [0x61] = 2,   [0x62] = 2,   [0x63] = 6,   [0x64] = 254, [0x65] = 254, [0x66] = 254, [0x67] = 16,  [0x68] = 16,                [0x6a] = 254, [0x6b] = 254, [0x6c] = 254, [0x6d] = 254, [0x6e] = 254,
-        [0x70] = 254, [0x71] = 254, [0x72] = 254, [0x73] = 254, [0x74] = 254, [0x75] = 254, [0x76] = 254, [0x77] = 20,                                            [0x7b] = 254, [0x7c] = 254, [0x7d] = 254, [0x7e] = 254, [0x7f] = 254,
-        [0x80] = 254, [0x81] = 254, [0x82] = 254, [0x83] = 6,   [0x84] = 6,   [0x85] = 6,                 [0x87] = 254,               [0x89] = 254,               [0x8b] = 254, [0x8c] = 254, [0x8d] = 254, [0x8e] = 254,
-        [0x90] = 254, [0x91] = 254, [0x92] = 254, [0x93] = 254,               [0x95] = 254, [0x96] = 254, [0x97] = 254, [0x98] = 14,  [0x99] = 254,               [0x9b] = 254, [0x9c] = 254, [0x9d] = 254, [0x9e] = 254, [0x9f] = 254,
-        [0xa0] = 254, [0xa1] = 254, [0xa2] = 254, [0xa3] = 254, [0xa4] = 254, [0xa5] = 254, [0xa6] = 254, [0xa7] = 254, [0xa8] = 254, [0xa9] = 254, [0xaa] = 254, [0xab] = 254, [0xac] = 254,               [0xae] = 254, [0xaf] = 254,
-        [0xb0] = 254, [0xb1] = 254, [0xb2] = 254, [0xb3] = 254, [0xb4] = 254, [0xb5] = 254, [0xb6] = 254, [0xb7] = 254, [0xb8] = 254, [0xb9] = 254, [0xba] = 254, [0xbb] = 254, [0xbc] = 254,               [0xbe] = 254, [0xbf] = 254,
-        [0xc0] = 254, [0xc1] = 254, [0xc2] = 254, [0xc3] = 254, [0xc4] = 254, [0xc5] = 254, [0xc6] = 254, [0xc7] = 254, [0xc8] = 254, [0xc9] = 4,                 [0xcb] = 254, [0xcc] = 254,               [0xce] = 254,
-        [0xd0] = 254, [0xd1] = 254, [0xd2] = 254,                             [0xd5] = 24,  [0xd6] = 24,                [0xd8] = 254, [0xd9] = 254, [0xda] = 254, [0xdb] = 22,  [0xdc] = 254,               [0xde] = 254,
-        [0xe0] = 8
-    }
-
-    local overworldMap =
-    {
-        [0x02] = "light_world", [0x03] = "dm_west_bottom",
-        [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x11] = "lw_witch",
-        [0x22] = "light_world", [0x1e] = "light_world",
-        [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
-        [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
-        [0x3a] = "light_world", [0x3b] = "light_world",
-        [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
-        [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-        [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east", --one of these two are automarking during S+Q
-        [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
-        [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
-        [0x7b] = "dw_south"
-    }
-
-    local roomLocal = 0xff
-    local dungeonLocal = 0xff
-
-    --dungeon.AcquiredCount = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
-
-    local owarea = ReadU16(SEGMENT_OWID, 0x7e008a)
-    if owarea > 0 and OBJ_OWAREA.AcquiredCount ~= owarea then
-        OBJ_OWAREA.AcquiredCount = owarea
-        updateIdsFromModule(0x09)
-
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("CURRENT OW:", OBJ_OWAREA.AcquiredCount)
-        end
-    end
-
-    if owarea == 0 then
-        roomLocal = ReadU16(SEGMENT_LASTROOMID, 0x7e00a0)
-
-        if dungeonMap[roomLocal] then
-            dungeonLocal = dungeonMap[roomLocal]
-        end
-    end
-
-    if OBJ_ROOM.AcquiredCount ~= roomLocal then
-        OBJ_ROOM.AcquiredCount = roomLocal
-
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("CURRENT ROOM:", OBJ_ROOM.AcquiredCount)
-            print("CURRENT ROOM ORIGDUNGEON:", roomMap[OBJ_ROOM.AcquiredCount])
-        end
-    end
-
-    if dungeonLocal ~= 0xfe and OBJ_DUNGEON.AcquiredCount ~= dungeonLocal then
-        OBJ_DUNGEON.AcquiredCount = dungeonLocal
-
-        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("CURRENT DUNGEON:", OBJ_DUNGEON.AcquiredCount)
-        end
-    end
-
-    if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
-        if owarea > 0 and overworldMap[owarea] then
-            local region = Tracker:FindObjectForCode(overworldMap[owarea])
-            if region then
-                region.Active = true
-            end
-        end
     end
 end
 

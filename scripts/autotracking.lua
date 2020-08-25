@@ -97,7 +97,8 @@ ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
 
 --Add Memory Watches
 -- Run the in-game status check more frequently (every 250ms) to catch save/quit scenarios more effectively
-ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x1, updateInGameStatusFromMemorySegment, 250)
+--ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x1, updateModuleIdFromMemorySegment, 250)
+ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x1, updateModuleIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Item Data", 0x7ef340, 0x90, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Overworld Event Data", 0x7ef280, 0x82, updateOverworldEventsFromMemorySegment)
@@ -108,8 +109,8 @@ ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartC
 ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
 SEGMENT_DUNGEONKEYS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
 --ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e040c, 1, updateDungeonFromMemorySegment) --switch to this if memory address becomes available
-SEGMENT_OWID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e008a, 2, updateDungeonFromMemorySegment)
-SEGMENT_LASTROOMID = ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e00a0, 2, updateDungeonFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Overworld Id", 0x7e008a, 2, updateOverworldIdFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
 SEGMENT_GTBIGKEYCOUNT = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef42a, 1, updateGTBKFromMemorySegment)
 SEGMENT_GTTORCHROOM = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef118, 2, updateGTBKFromMemorySegment) --GT Torch Visit
 ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef0d6, 2, updateGTBKFromMemorySegment) --GT Gauntlet Climb Update
