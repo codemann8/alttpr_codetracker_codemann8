@@ -72,7 +72,7 @@ end
 
 function isInGame()
     local module = AutoTracker:ReadU8(0x7e0010, 0)
-    return module > 0x05 and module < 0x55
+    return module > 0x05 and module < 0x55 and module ~= 0x14
 end
 
 function read32BitTimer(segment, baseAddress)
