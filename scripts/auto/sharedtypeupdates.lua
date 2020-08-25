@@ -98,7 +98,7 @@ function updateDungeonFromStatus(areaChanged)
         end
 
         local dungeonId = 0xff
-        --dungeonId = ReadU8(segment, 0x7e040c) --to be used if 0x7e040c becomes unblocked
+        --dungeonId = AutoTracker:ReadU8(0x7e040c) --to be used if 0x7e040c becomes unblocked
 
         if dungeonMap[OBJ_ROOM.AcquiredCount] then
             dungeonId = dungeonMap[OBJ_ROOM.AcquiredCount]
@@ -115,9 +115,9 @@ function updateDungeonFromStatus(areaChanged)
 
             --Update Dungeon Image
             if string.find(Tracker.ActiveVariantUID, "er_") then
-                sendExternalMessage("dungeon", "er-" .. OBJ_DUNGEON.AcquiredCount)
+                sendExternalMessage("dungeon", "er-" .. dungeons[OBJ_DUNGEON.AcquiredCount])
             else
-                sendExternalMessage("dungeon", OBJ_DUNGEON.AcquiredCount)
+                sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
             end
         end
     elseif OBJ_MODULE.AcquiredCount == 0x09 then --overworld
@@ -432,8 +432,32 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
             return
         end
 
-        if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
-            chestKeys.AcquiredCount = ReadU8(segment, address)
+    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
+        chestKeys.AcquiredCount = ReadU8(segment, address)
+    else
+        local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
+        local currentKeys = 0
+
+        local dungeons = {
+            [0] = "hc", --sewer
+            [2] = "hc",
+            [4] = "ep",
+            [6] = "dp",
+            [8] = "at",
+            [10] = "sp",
+            [12] = "pod",
+            [14] = "mm",
+            [16] = "sw",
+            [18] = "ip",
+            [20] = "toh",
+            [22] = "tt",
+            [24] = "tr",
+            [26] = "gt",
+            [255] = "OW"
+        }
+
+        if dungeons[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
+            currentKeys = ReadU8(segment, 0x7ef36f)
         else
             local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
             if doorsOpened then
