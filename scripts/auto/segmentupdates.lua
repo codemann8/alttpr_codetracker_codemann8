@@ -143,12 +143,7 @@ function updateOverworldEventsFromMemorySegment(segment)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spec Rock/Up On Top", 3)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Floating Island/Island", 5)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Race Game/Take This Trash", 40)
-    updateSectionChestCountFromOverworldIndexAndFlag(
-        segment,
-        "@Grove Digging Spot/Hidden Treasure",
-        42,
-        updateShovelIndicatorStatus
-    )
+    updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure", 42, updateShovelIndicatorStatus)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Desert Ledge/Ledge", 48)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Lake Hylia Island/Island", 53)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Dam/Outside", 59)
