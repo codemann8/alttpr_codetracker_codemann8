@@ -54,8 +54,6 @@ else
     Tracker:AddLocations("locations/overworld.json")
 
     --Custom Items
-    Tracker:AddItems("items/chest_proxies.json")
-
     DoorDungeonSelect()
     DoorTotalChest()
 

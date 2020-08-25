@@ -107,7 +107,7 @@ ScriptHost:AddMemoryWatch("LTTP Heart Piece Data", 0x7ef448, 1, updateHeartPiece
 ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartContainersFromMemorySegment)
 
 ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
-SEGMENT_DUNGEONKEYS = ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
 --ScriptHost:AddMemoryWatch("LTTP Dungeon", 0x7e040c, 1, updateDungeonFromMemorySegment) --switch to this if memory address becomes available
 ScriptHost:AddMemoryWatch("LTTP Overworld Id", 0x7e008a, 2, updateOverworldIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)

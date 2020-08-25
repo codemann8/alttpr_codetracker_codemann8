@@ -304,6 +304,151 @@
         "increment": -1
     },
     
+    // Items
+    {
+        "name": "Hyrule Castle Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "hc_item",
+        "max_quantity": 6,
+        "initial_quantity": 6,
+        "increment": -1
+    },
+    {
+        "name": "Eastern Palace Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "ep_item",
+        "max_quantity": 3,
+        "initial_quantity": 3,
+        "increment": -1
+    },
+    {
+        "name": "Desert Palace Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "dp_item",
+        "max_quantity": 2,
+        "initial_quantity": 2,
+        "increment": -1
+    },
+    {
+        "name": "Tower of Hera Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "toh_item",
+        "max_quantity": 2,
+        "initial_quantity": 2,
+        "increment": -1
+    },
+    {
+        "name": "Aga Tower Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "at_item",
+        "max_quantity": 0,
+        "initial_quantity": 0,
+        "increment": -1
+    },
+    {
+        "name": "Palace of Darkness Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "pod_item",
+        "max_quantity": 5,
+        "initial_quantity": 5,
+        "increment": -1
+    },
+    {
+        "name": "Swamp Palace Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "sp_item",
+        "max_quantity": 6,
+        "initial_quantity": 6,
+        "increment": -1
+    },
+    {
+        "name": "Skull Woods Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "sw_item",
+        "max_quantity": 2,
+        "initial_quantity": 2,
+        "increment": -1
+    },
+    {
+        "name": "Thieves Town Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "tt_item",
+        "max_quantity": 4,
+        "initial_quantity": 4,
+        "increment": -1
+    },
+    {
+        "name": "Ice Palace Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "ip_item",
+        "max_quantity": 3,
+        "initial_quantity": 3,
+        "increment": -1
+    },
+    {
+        "name": "Misery Mire Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "mm_item",
+        "max_quantity": 2,
+        "initial_quantity": 2,
+        "increment": -1
+    },
+    {
+        "name": "Turtle Rock Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "tr_item",
+        "max_quantity": 5,
+        "initial_quantity": 5,
+        "increment": -1
+    },
+    {
+        "name": "Ganon's Tower Items",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "disabled_img": "images/0059.png",
+        "disabled_img_mods": "",
+        "codes": "gt_item",
+        "max_quantity": 20,
+        "initial_quantity": 20,
+        "increment": -1
+    },
+    
     // Doors
     {
         "name": "Hyrule Castle Door",

@@ -46,10 +46,10 @@ function DoorTotalChest:onLeftClick()
         }
         local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item")
         if self:getState() == 99 then
-            item.Section.ChestCount = item.Section.AvailableChestCount
-            self:setState(item.Section.ChestCount)
+            item.MaxCount = item.AcquiredCount
+            self:setState(item.MaxCount)
         else
-            item.Section.ChestCount = item.Section.ChestCount + 1
+            item.MaxCount = item.MaxCount + 1
             item.BadgeTextColor = "orange"
             self:setState(self:getState() + 1)
         end
@@ -74,7 +74,7 @@ function DoorTotalChest:onRightClick()
             [12] = "gt"
         }
         local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item")
-        item.Section.ChestCount = 99
+        item.MaxCount = 99
         item.BadgeTextColor = "white"
         self:setState(99)
     end

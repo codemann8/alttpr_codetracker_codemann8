@@ -68,15 +68,16 @@ end
 
 function updateIcons()
     local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
-    local chestkeys = { 1,    0,    1,    1,    2,    6,     3,    3,    2,    1,     1,    4,    4  }
+    local chestkeys = { 1,    0,    1,    2,    2,    6,     3,    3,    2,    1,     1,    4,    4  }
     for i = 1, 13 do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-            if item.Section.ChestCount ~= 99 then
-                item.Section.ChestCount = 99
-                item.Section.AvailableChestCount = 0
-                item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0058.png")
+            if item.MaxCount ~= 99 then
+                item.MaxCount = 99
+                item.AcquiredCount = 0
+                item.SwapActions = true
+                item.Icon = ImageReference:FromPackRelativePath("images/0058.png")
             end
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
@@ -98,28 +99,28 @@ function updateIcons()
             end
 
             local found = 0
-            if item.Section.ChestCount ~= 99 then
-                found = item.Section.ChestCount - item.Section.AvailableChestCount
+            if item.MaxCount ~= 99 then
+                found = item.MaxCount - item.AcquiredCount
             end
 
             local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
-            item.Section.ChestCount = chest.MaxCount
+            item.MaxCount = chest.MaxCount
             if OBJ_KEYSANITY.CurrentStage <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
-                item.Section.ChestCount = item.Section.ChestCount - 1
+                item.MaxCount = item.MaxCount - 1
             end
             if OBJ_KEYSANITY.CurrentStage <= 1 and key then
-                item.Section.ChestCount = item.Section.ChestCount - key.MaxCount
+                item.MaxCount = item.MaxCount - key.MaxCount
             end
             if OBJ_KEYSANITY.CurrentStage == 0 then
                 if dungeons[i] == "hc" then
-                    item.Section.ChestCount = item.Section.ChestCount - 1
+                    item.MaxCount = item.MaxCount - 1
                 elseif dungeons[i] ~= "at" then
-                    item.Section.ChestCount = item.Section.ChestCount - 2
+                    item.MaxCount = item.MaxCount - 2
                 end
             end
 
-            item.Section.Owner.OpenChestImage = ImageReference:FromPackRelativePath("images/0059.png")
-            item.Section.AvailableChestCount = math.max(item.Section.ChestCount - found, 0)
+            item.SwapActions = false
+            item.AcquiredCount = math.max(item.MaxCount - found, 0)
         end
 
         if EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then

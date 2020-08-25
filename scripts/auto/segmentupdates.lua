@@ -523,20 +523,20 @@ function updateDungeonKeysFromMemorySegment(segment)
     end
 
     if OBJ_RACEMODE.CurrentStage == 0 then
-        --Collected Chests In Dungeons
-        updateSectionChestCountFromDungeon("@HC/Items", "hc", 0x7ef4c0)
-        updateSectionChestCountFromDungeon("@EP/Items", "ep", 0x7ef4c1)
-        updateSectionChestCountFromDungeon("@DP/Items", "dp", 0x7ef4c2)
-        updateSectionChestCountFromDungeon("@ToH/Items", "toh", 0x7ef4c9)
-        updateSectionChestCountFromDungeon("@AT/Items", "at", 0x7ef4c3)
-        updateSectionChestCountFromDungeon("@PoD/Items", "pod", 0x7ef4c5)
-        updateSectionChestCountFromDungeon("@SP/Items", "sp", 0x7ef4c4)
-        updateSectionChestCountFromDungeon("@SW/Items", "sw", 0x7ef4c7)
-        updateSectionChestCountFromDungeon("@TT/Items", "tt", 0x7ef4ca)
-        updateSectionChestCountFromDungeon("@IP/Items", "ip", 0x7ef4c8)
-        updateSectionChestCountFromDungeon("@MM/Items", "mm", 0x7ef4c6)
-        updateSectionChestCountFromDungeon("@TR/Items", "tr", 0x7ef4cb)
-        updateSectionChestCountFromDungeon("@GT/Items", "gt", 0x7ef4cc)
+        --Collected Chests/Items In Dungeons
+        updateChestCountFromDungeon(segment, "hc", 0x7ef4c0)
+        updateChestCountFromDungeon(segment, "ep", 0x7ef4c1)
+        updateChestCountFromDungeon(segment, "dp", 0x7ef4c2)
+        updateChestCountFromDungeon(segment, "toh", 0x7ef4c9)
+        updateChestCountFromDungeon(segment, "at", 0x7ef4c3)
+        updateChestCountFromDungeon(segment, "pod", 0x7ef4c5)
+        updateChestCountFromDungeon(segment, "sp", 0x7ef4c4)
+        updateChestCountFromDungeon(segment, "sw", 0x7ef4c7)
+        updateChestCountFromDungeon(segment, "tt", 0x7ef4ca)
+        updateChestCountFromDungeon(segment, "ip", 0x7ef4c8)
+        updateChestCountFromDungeon(segment, "mm", 0x7ef4c6)
+        updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
+        updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
     end
 end
 

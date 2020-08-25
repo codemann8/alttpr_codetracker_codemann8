@@ -33,7 +33,7 @@ function DoorDungeonSelect:updateIcon()
             [12] = "gt"
         }
         local item = Tracker:FindObjectForCode(dungeons[self:getState()] .. "_item")
-        OBJ_DOORCHEST.ItemState:setState(item.Section.ChestCount)
+        OBJ_DOORCHEST.ItemState:setState(item.MaxCount)
 
         if self:getState() == 0 then
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/HC.png")

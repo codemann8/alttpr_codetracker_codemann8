@@ -310,7 +310,8 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
                 callback(true)
             end
         else
-            location.AvailableChestCount = location.ChestCount
+            location.AvailableChestCount = location.AvailableChestCount
+
             if callback then
                 callback(false)
             end
@@ -458,40 +459,13 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         if dungeons[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
             currentKeys = ReadU8(segment, 0x7ef36f)
         else
-            local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
-            if doorsOpened then
-                local currentKeys = 0
-
-                local dungeons = {
-                    [0] = "hc", --sewer
-                    [2] = "hc",
-                    [4] = "ep",
-                    [6] = "dp",
-                    [8] = "at",
-                    [10] = "sp",
-                    [12] = "pod",
-                    [14] = "mm",
-                    [16] = "sw",
-                    [18] = "ip",
-                    [20] = "toh",
-                    [22] = "tt",
-                    [24] = "tr",
-                    [26] = "gt",
-                    [255] = "OW"
-                }
-
-                if dungeons[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
-                    currentKeys = ReadU8(segment, 0x7ef36f)
-                else
-                    currentKeys = ReadU8(segment, address)
-                end
-                local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-                if potKeys then
-                    chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
-                else
-                    chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
-                end
-            end
+            currentKeys = ReadU8(segment, address)
+        end
+        local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
+        if potKeys then
+            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
+        else
+            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
         end
     end
 
@@ -536,24 +510,18 @@ function updateBossChestCountFromRoom(segment, locationRef, roomSlot)
     end
 end
 
-function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
-    local location = Tracker:FindObjectForCode(locationRef)
-    if location then
-        -- Do not auto-track this the user has manually modified it
-        --if location.Owner.ModifiedByUser then
-        --    return
-        --end
-
+function updateChestCountFromDungeon(segment, dungeonPrefix, address)
+    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item")
+    if item then
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-            if SEGMENT_DUNGEONKEYS then
-                location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
+            if segment then
+                item.AcquiredCount = ReadU8(segment, address)
                 if item.MaxCount < 99 and item.AcquiredCount < item.MaxCount then
                     item.BadgeTextColor = "orange"
                 end
             end
         else
             local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
-
             local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
             local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
             local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
@@ -576,11 +544,12 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
                 dungeonItems = dungeonItems + smallkey.AcquiredCount
             end
 
-                location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
                 print(dungeonPrefix .. " Dungeon Items", dungeonItems)
                 print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
             end
+
+            item.AcquiredCount = math.max(item.MaxCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
         end
     end
 end
