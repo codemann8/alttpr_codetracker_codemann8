@@ -16,6 +16,8 @@ function initGlobalVars()
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
         OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
 
+        updateIcons()
+
         local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
         ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
     end
