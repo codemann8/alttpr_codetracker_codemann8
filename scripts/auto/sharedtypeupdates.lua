@@ -548,6 +548,7 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if SEGMENT_DUNGEONKEYS then
                 location.AvailableChestCount = ReadU8(SEGMENT_DUNGEONKEYS, address)
+                    item.BadgeTextColor = "orange"
             end
         else
             local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")

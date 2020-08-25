@@ -50,6 +50,7 @@ function DoorTotalChest:onLeftClick()
             self:setState(item.Section.ChestCount)
         else
             item.Section.ChestCount = item.Section.ChestCount + 1
+            item.BadgeTextColor = "orange"
             self:setState(self:getState() + 1)
         end
     end
@@ -74,6 +75,7 @@ function DoorTotalChest:onRightClick()
         }
         local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item")
         item.Section.ChestCount = 99
+        item.BadgeTextColor = "white"
         self:setState(99)
     end
 end
