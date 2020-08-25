@@ -67,7 +67,8 @@ function loadDynamicRequirement()
 end
 
 function updateIcons()
-    local dungeons = {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+    local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+    local chestkeys = { 1,    0,    1,    1,    2,    6,     3,    3,    2,    1,     1,    4,    4  }
     for i = 1, 13 do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
@@ -85,12 +86,10 @@ function updateIcons()
                     ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
             end
         else
-            local chestkey = Tracker:FindObjectForCode(dungeons[i] .. "_chestkey")
-
             if key.MaxCount == 0 then
                 key.Icon = ""
             end
-            key.MaxCount = chestkey.MaxCount
+            key.MaxCount = chestkeys[i]
 
             if dungeons[i] == "hc" or dungeons[i] == "at" then
                 local bk = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
