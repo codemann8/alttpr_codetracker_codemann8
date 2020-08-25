@@ -426,11 +426,10 @@ end
 
 function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
     local chestKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-    if chestKeys then
-        -- Do not auto-track this the user has manually modified it
-        if chestKeys.Owner.ModifiedByUser then
-            return
-        end
+    -- Do not auto-track this the user has manually modified it
+    if chestKeys.Owner.ModifiedByUser then
+        return
+    end
 
     if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
         chestKeys.AcquiredCount = ReadU8(segment, address)
@@ -552,35 +551,33 @@ function updateSectionChestCountFromDungeon(locationRef, dungeonPrefix, address)
             end
         else
             local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
-            if chest then
-                local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
-                local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
-                local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
-                local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-                local dungeonItems = 0
 
-                if bigkey and bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 and dungeonPrefix ~= "hc" then
-                    dungeonItems = dungeonItems + 1
-                end
+            local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+            local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+            local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
+            local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+            local dungeonItems = 0
 
-                if map and map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
-                    dungeonItems = dungeonItems + 1
-                end
+            if bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 and dungeonPrefix ~= "hc" then
+                dungeonItems = dungeonItems + 1
+            end
 
-                if compass and compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
-                    dungeonItems = dungeonItems + 1
-                end
+            if map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
+                dungeonItems = dungeonItems + 1
+            end
 
-                if smallkey and smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
-                    dungeonItems = dungeonItems + smallkey.AcquiredCount
-                end
+            if compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
+                dungeonItems = dungeonItems + 1
+            end
 
-                if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " Items", dungeonItems)
-                    print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
-                end
+            if smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
+                dungeonItems = dungeonItems + smallkey.AcquiredCount
+            end
 
                 location.AvailableChestCount = math.max(location.ChestCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                print(dungeonPrefix .. " Dungeon Items", dungeonItems)
+                print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
             end
         end
     end
