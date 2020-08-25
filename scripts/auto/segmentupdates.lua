@@ -116,7 +116,7 @@ function updateItemsFromMemorySegment(segment)
         updateAga1(segment)
     end
 
-    if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+    if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
         return true
     end
 
@@ -133,7 +133,7 @@ function updateOverworldEventsFromMemorySegment(segment)
         return false
     end
 
-    if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+    if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
         return true
     end
 
@@ -164,7 +164,7 @@ function updateNPCItemFlagsFromMemorySegment(segment)
         return false
     end
 
-    if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+    if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
         return true
     end
 
@@ -199,7 +199,7 @@ function updateRoomsFromMemorySegment(segment)
 
     --Dungeon Data
     if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-        if OBJ_DOORSHUFFLE.CurrentStage == 0 then
+        if OBJ_DOORSHUFFLE.CurrentStage == 0 and Tracker.ActiveVariantUID ~= "items_only" then
             --Doors Opened
             updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
@@ -240,7 +240,7 @@ function updateRoomsFromMemorySegment(segment)
         updateToggleFromRoomSlot(segment, "tr", {164, 11})
     end
 
-    if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
+    if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
         return true
     end
 
@@ -424,7 +424,7 @@ function updateDungeonItemsFromMemorySegment(segment)
     InvalidateReadCaches()
 
     --Dungeon Data
-    if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
+    if not AUTOTRACKER_DISABLE_ITEM_TRACKING and Tracker.ActiveVariantUID ~= "items_only"then
         --Dungeon Items
         updateToggleItemFromByteAndFlag(segment, "gt_bigkey", 0x7ef366, 0x04)
         updateToggleItemFromByteAndFlag(segment, "tr_bigkey", 0x7ef366, 0x08)
@@ -495,25 +495,27 @@ function updateDungeonKeysFromMemorySegment(segment)
         return false
     end
 
+    if AUTOTRACKER_DISABLE_ITEM_TRACKING or Tracker.ActiveVariantUID == "items_only" then
+        return true
+    end
+
     InvalidateReadCaches()
 
-    if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-        --Small Keys
-        if SEGMENT_DUNGEONKEYS and OBJ_DOORSHUFFLE.CurrentStage > 0 then
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "hc", 0x7ef4e1)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "ep", 0x7ef4e2)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "dp", 0x7ef4e3)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "toh", 0x7ef4ea)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "at", 0x7ef4e4)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "pod", 0x7ef4e6)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "sp", 0x7ef4e5)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "sw", 0x7ef4e8)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "tt", 0x7ef4eb)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "ip", 0x7ef4e9)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "mm", 0x7ef4e7)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "tr", 0x7ef4ec)
-            updateDungeonKeysFromPrefix(SEGMENT_DUNGEONKEYS, "gt", 0x7ef4ed)
-        end
+    --Small Keys
+    if segment and OBJ_DOORSHUFFLE.CurrentStage > 0 then
+        updateDungeonKeysFromPrefix(segment, "hc", 0x7ef4e1)
+        updateDungeonKeysFromPrefix(segment, "ep", 0x7ef4e2)
+        updateDungeonKeysFromPrefix(segment, "dp", 0x7ef4e3)
+        updateDungeonKeysFromPrefix(segment, "toh", 0x7ef4ea)
+        updateDungeonKeysFromPrefix(segment, "at", 0x7ef4e4)
+        updateDungeonKeysFromPrefix(segment, "pod", 0x7ef4e6)
+        updateDungeonKeysFromPrefix(segment, "sp", 0x7ef4e5)
+        updateDungeonKeysFromPrefix(segment, "sw", 0x7ef4e8)
+        updateDungeonKeysFromPrefix(segment, "tt", 0x7ef4eb)
+        updateDungeonKeysFromPrefix(segment, "ip", 0x7ef4e9)
+        updateDungeonKeysFromPrefix(segment, "mm", 0x7ef4e7)
+        updateDungeonKeysFromPrefix(segment, "tr", 0x7ef4ec)
+        updateDungeonKeysFromPrefix(segment, "gt", 0x7ef4ed)
     end
 
     if AUTOTRACKER_DISABLE_LOCATION_TRACKING then
@@ -549,8 +551,8 @@ function updateGTBKFromMemorySegment(segment)
         return false
     end
 
-    if OBJ_RACEMODE.CurrentStage > 0 then
-        return false
+    if OBJ_RACEMODE.CurrentStage > 0 or Tracker.ActiveVariantUID == "items_only" then
+        return true
     end
 
     local gtBK = Tracker:FindObjectForCode("gt_bkgame")
