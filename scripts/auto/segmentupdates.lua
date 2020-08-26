@@ -438,7 +438,7 @@ function updateDungeonItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "at_bigkey", 0x7ef367, 0x08)
         updateToggleItemFromByteAndFlag(segment, "dp_bigkey", 0x7ef367, 0x10)
         updateToggleItemFromByteAndFlag(segment, "ep_bigkey", 0x7ef367, 0x20)
-        updateToggleItemFromByteAndFlag(segment, "hc_bigkey", 0x7ef367, 0x40)
+        updateToggleItemFromByteAndFlag(segment, "hc_bigkey", 0x7ef367, 0xc0)
 
         updateToggleItemFromByteAndFlag(segment, "gt_map", 0x7ef368, 0x04)
         updateToggleItemFromByteAndFlag(segment, "tr_map", 0x7ef368, 0x08)
@@ -452,7 +452,7 @@ function updateDungeonItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "at_map", 0x7ef369, 0x08)
         updateToggleItemFromByteAndFlag(segment, "dp_map", 0x7ef369, 0x10)
         updateToggleItemFromByteAndFlag(segment, "ep_map", 0x7ef369, 0x20)
-        updateToggleItemFromByteAndFlag(segment, "hc_map", 0x7ef369, 0x40)
+        updateToggleItemFromByteAndFlag(segment, "hc_map", 0x7ef369, 0xc0)
 
         updateToggleItemFromByteAndFlag(segment, "gt_compass", 0x7ef364, 0x04)
         updateToggleItemFromByteAndFlag(segment, "tr_compass", 0x7ef364, 0x08)
@@ -466,7 +466,7 @@ function updateDungeonItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "at_compass", 0x7ef365, 0x08)
         updateToggleItemFromByteAndFlag(segment, "dp_compass", 0x7ef365, 0x10)
         updateToggleItemFromByteAndFlag(segment, "ep_compass", 0x7ef365, 0x20)
-        updateToggleItemFromByteAndFlag(segment, "hc_compass", 0x7ef365, 0x40)
+        updateToggleItemFromByteAndFlag(segment, "hc_compass", 0x7ef365, 0xc0)
 
         --Small Keys
         if OBJ_DOORSHUFFLE.CurrentStage == 0 then
