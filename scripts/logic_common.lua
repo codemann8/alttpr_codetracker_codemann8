@@ -113,6 +113,42 @@ function hasSeenTurtleMedallion()
     return 0
 end
 
+function hasNotSeenMireMedallion()
+    if hasSeenMireMedallion() == 1 then
+        return 0
+    else
+        local medallion = Tracker:FindObjectForCode("bombos")
+        if medallion.Active then
+            medallion = Tracker:FindObjectForCode("ether")
+            if medallion.Active then
+                medallion = Tracker:FindObjectForCode("quake")
+                if medallion.Active then
+                    return 0
+                end
+            end
+        end
+        return 1
+    end
+end
+
+function hasNotSeenTurtleMedallion()
+    if hasSeenTurtleMedallion() == 1 then
+        return 0
+    else
+        local medallion = Tracker:FindObjectForCode("bombos")
+        if medallion.Active then
+            medallion = Tracker:FindObjectForCode("ether")
+            if medallion.Active then
+                medallion = Tracker:FindObjectForCode("quake")
+                if medallion.Active then
+                    return 0
+                end
+            end
+        end
+        return 1
+    end
+end
+
 function gtCrystalCount()
     local reqCount = Tracker:ProviderCountForCode("gt_crystals")
     local count = Tracker:ProviderCountForCode("crystal")
