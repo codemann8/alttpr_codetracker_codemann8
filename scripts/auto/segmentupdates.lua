@@ -154,7 +154,6 @@ function updateOverworldEventsFromMemorySegment(segment)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Master Sword Pedestal/Pedestal", 128)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Zora's Domain/Ledge", 129)
 
-    --updateAga2(segment) --TODO: Find better way to determine Pyramid Hole
     updateBigBomb(segment)
     updateDam(segment)
 end
@@ -373,6 +372,7 @@ function updateRoomsFromMemorySegment(segment)
 
     --Miscellaneous
     updateToggleItemFromByteAndFlag(segment, "attic", 0x7ef0cb, 0x01)
+    updateToggleItemFromByteAndFlag(segment, "aga2", 0x7ef01b, 0x08)
 
     --Underworld Locations
     updateSectionChestCountFromRoomSlotList(segment, "@Link's House/By The Door", {{0, 10}})

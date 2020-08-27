@@ -161,12 +161,6 @@ function updateAga1(segment)
     end
 end
 
-function updateAga2(segment)
-    local item = Tracker:FindObjectForCode("aga2")
-    local value = ReadU8(segment, 0x7ef2db)
-    item.Active = value & 0x20 > 0
-end
-
 function updateDam(segment)
     local item = Tracker:FindObjectForCode("dam")
     local value = ReadU8(segment, 0x7ef2bb)
