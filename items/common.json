@@ -568,6 +568,27 @@
         "img": "images/redrupee.png",
         "codes": "rupee"
     },
+    // Star
+    {
+        "name": "Star",
+        "type": "toggle",
+        "img": "images/star.png",
+        "codes": "star"
+    },
+    // Map
+    {
+        "name": "Map",
+        "type": "toggle",
+        "img": "images/map.png",
+        "codes": "map"
+    },
+    // Compass
+    {
+        "name": "Compass",
+        "type": "toggle",
+        "img": "images/compass.png",
+        "codes": "compass"
+    },
     // GT BK Game
     {
         "name": "Ganon's Tower Big Key Game",

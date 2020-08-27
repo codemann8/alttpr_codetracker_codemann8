@@ -7,9 +7,9 @@
             "item_margin": "1,2",
             "item_size": 40,
             "rows": [
-                [ "bow", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "bomb" ],
-                [ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "rupee" ],
-                [ "lamp", "hammer", "ocarina", "net", "book", "shovel", "" ],
+                [ "bow", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "star" ],
+                [ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "map" ],
+                [ "lamp", "hammer", "ocarina", "net", "book", "shovel", "compass" ],
                 [ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
                 [ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor" ]
             ]
