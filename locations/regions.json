@@ -144,7 +144,8 @@
                     "world_state_inverted,ip_area,[flippers],hammer,lift2",
                     "world_state_inverted,dw_south,lift2",
                     "world_state_inverted,dw_south,hammer,hookshot",
-                    "world_state_inverted,dw_south,[flippers],hookshot"
+                    "world_state_inverted,dw_south,[flippers],hookshot",
+                    "entrance_shuffle_crossed,sw_area"
                 ]
             },
             {
