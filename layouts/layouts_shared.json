@@ -10,7 +10,8 @@
                 "content":[
                     {
                         "type": "item",
-                        "margin": "-5,-1,-5,-5",
+                        "margin": "-5,-5,-5,-1",
+                        "height": "48",
                         "item": "world_state_mode_surrogate"
                     }
                 ]
@@ -22,7 +23,8 @@
                 "content":[
                     {
                         "type": "item",
-                        "margin": "-5,-1,-5,-5",
+                        "margin": "-5,-5,-5,-1",
+                        "height": "48",
                         "item": "keysanity_mode_surrogate"
                     }
                 ]
@@ -34,7 +36,8 @@
                 "content":[
                     {
                         "type": "item",
-                        "margin": "-5,-1,-5,-5",
+                        "margin": "-5,-5,-5,-1",
+                        "height": "48",
                         "item": "entrance_shuffle_surrogate"
                     }
                 ]
@@ -46,7 +49,8 @@
                 "content":[
                     {
                         "type": "item",
-                        "margin": "-5,-1,-5,-5",
+                        "margin": "-5,-5,-5,-1",
+                        "height": "48",
                         "item": "door_shuffle_surrogate"
                     }
                 ]
@@ -58,7 +62,8 @@
                 "content":[
                     {
                         "type": "item",
-                        "margin": "-5,-1,-5,-5",
+                        "margin": "-5,-5,-5,-5",
+                        "height": "48",
                         "item": "race_mode_surrogate"
                     }
                 ]
