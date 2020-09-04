@@ -21,11 +21,11 @@ function EntranceShuffleMode:updateIcon()
     item.CurrentStage = self:getState()
 
     if self:getState() == 0 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_off" .. self.suffix .. ".png")
-    else
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_on" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_off" .. self.suffix .. ".png")
+    elseif self:getState() == 1 then
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_on" .. self.suffix .. ".png")
+    else 
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
     end
 
     --Sync other surrogates
@@ -42,7 +42,7 @@ function EntranceShuffleMode:updateIcon()
         end
     end
     if item and self:getState() ~= state then
-        if (self:getState() - state) % 2 == 1 then
+        if (self:getState() - state) % 3 == 1 then
             item:OnLeftClick()
         else
             item:OnRightClick()
@@ -51,11 +51,11 @@ function EntranceShuffleMode:updateIcon()
 end
 
 function EntranceShuffleMode:onLeftClick()
-    self:setState((self:getState() + 1) % 2)
+    self:setState((self:getState() + 1) % 3)
 end
 
 function EntranceShuffleMode:onRightClick()
-    self:setState((self:getState() - 1) % 2)
+    self:setState((self:getState() - 1) % 3)
 end
 
 function EntranceShuffleMode:canProvideCode(code)
@@ -75,7 +75,7 @@ end
 
 function EntranceShuffleMode:advanceToCode(code)
     if code == nil or code == self.code .. self.suffix then
-        self:setState((self:getState() + 1) % 2)
+        self:setState((self:getState() + 1) % 3)
     end
 end
 

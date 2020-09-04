@@ -825,6 +825,11 @@
                 "img": "images/mode_entrance_shuffle_on.png",
                 "codes": "entrance_shuffle,entrance_shuffle_on",
                 "inherit_codes": false
+            },
+            {
+                "img": "images/mode_entrance_shuffle_insanity.png",
+                "codes": "entrance_shuffle,entrance_shuffle_insanity",
+                "inherit_codes": true
             }
         ]
     },

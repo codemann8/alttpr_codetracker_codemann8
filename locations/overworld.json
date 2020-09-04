@@ -93,6 +93,27 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_dropdown",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 382,
+                "y": 255,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Forest Hideout Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -101,14 +122,14 @@
             {
                 "map": "lightworld",
                 "x": 370,
-                "y": 260,
+                "y": 305,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
     {
-        "name": "Lumberjack Dropdown",
+        "name": "Lumberjack Tree Dropdown",
         "short_name": "Aga Tree",
         "parent": "Light World",
         "access_rules": [
@@ -138,6 +159,28 @@
                 "y": 145,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack Tree Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 663,
+                "y": 60,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -317,10 +360,32 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 47,
+                "x": 46,
                 "y": 833,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Well Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 95,
+                "y": 857,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -556,7 +621,7 @@
             {
                 "map": "lightworld",
                 "x": 615,
-                "y": 1055,
+                "y": 1052,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -590,9 +655,31 @@
             {
                 "map": "lightworld",
                 "x": 650,
-                "y": 1127,
+                "y": 1150,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 635,
+                "y": 1106,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -726,7 +813,7 @@
         ]
     },
     {
-        "name": "Castle Secret Entrance",
+        "name": "Castle Secret Dropdown",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -750,6 +837,31 @@
                 "y": 834,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle Secret Entrance",
+        "parent": "Light World",
+        "access_rules": [
+            "world_state_open",
+            "world_state_inverted,pearl"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1105,
+                "y": 858,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -1247,6 +1359,28 @@
         ]
     },
     {
+        "name": "Houlihan Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1341,
+                "y": 558,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
         "name": "Sanctuary Grave",
         "parent": "Light World",
         "access_rules": [
@@ -1276,6 +1410,28 @@
                 "y": 590,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Entrance",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 922,
+                "y": 540,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -1461,6 +1617,27 @@
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle Hole Return",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 858,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity,world_state_inverted" ]
             }
         ]
     },
@@ -2594,6 +2771,31 @@
                 "y": 820,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Hole Entrance",
+        "parent": "East Dark World",
+        "access_rules": [
+            "nothing"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dw_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 874,
+                "y": 976,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity,world_state_open" ]
             }
         ]
     },
