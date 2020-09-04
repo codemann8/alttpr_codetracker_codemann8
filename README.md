@@ -19,7 +19,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
 - Backwards compatibility to v30 logic with non-progressive bow, so modes like legacy versions of multiworld properly shows silvers without bow
 - Blips on the map have been made bigger to show up better on Broadcast View
-- Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found
+- Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found. The exits to dropdowns are shown when in `Insanity` mode
 - Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
 - Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Door rando, an Attic icon has been added for when you bomb the Attic floor in cross dungeon door rando, this is auto-tracked
