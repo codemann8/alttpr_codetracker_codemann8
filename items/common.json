@@ -823,13 +823,13 @@
             },
             {
                 "img": "images/mode_entrance_shuffle_on.png",
-                "codes": "entrance_shuffle,entrance_shuffle_on",
+                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_crossed",
                 "inherit_codes": false
             },
             {
                 "img": "images/mode_entrance_shuffle_insanity.png",
-                "codes": "entrance_shuffle,entrance_shuffle_insanity",
-                "inherit_codes": true
+                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_insanity",
+                "inherit_codes": false
             }
         ]
     },

@@ -2187,7 +2187,7 @@
     // Dark World
     {
         "name": "Skull Woods Back",
-        "parent": "Northwest Dark World",
+        "parent": "Skull Woods Back Area",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted"
@@ -2200,7 +2200,8 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "item_count": 1
+                "item_count": 1,
+                "hosted_item": "sw_area"
             }
         ],
         "map_locations": [
@@ -2210,6 +2211,53 @@
                 "y": 110,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Back South",
+        "parent": "Skull Woods Back Area",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "sw_area"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 118,
+                "y": 254,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Back Dropdown",
+        "parent": "Skull Woods Back Area",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "access_rules": [
+                    "world_state_open,[pearl]",
+                    "world_state_inverted"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 244,
+                "y": 174,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -2234,7 +2282,119 @@
                 "x": 350,
                 "y": 275,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ],
+                "force_invisibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front East",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dw_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 369,
+                "y": 297,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front West",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dw_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 290,
+                "y": 285,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front East Dropdown",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 392,
+                "y": 345,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front West Dropdown",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 314,
+                "y": 354,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Big Chest Dropdown",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "access_rules": [
+                    "world_state_open,[pearl]",
+                    "world_state_inverted"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 380,
+                "y": 249,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },

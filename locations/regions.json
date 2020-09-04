@@ -13,6 +13,10 @@
         "color": "#345a99"
     },
     {
+        "name": "Skull Woods Area Color",
+        "color": "#2a4820"
+    },
+    {
         "name": "Mire Area Color",
         "color": "#02473f"
     },
@@ -234,6 +238,16 @@
                     "world_state_inverted,@Light World,mirror"
                 ]
             }
+        ]
+    },
+    {
+        "name": "Skull Woods Back Area",
+        "parent": "Skull Woods Area Color",
+        "always_allow_chest_manipulation": true,
+        "access_rules": [
+            "sw_area",
+            "entrance_shuffle_crossed,@Northwest Dark World",
+            "entrance_shuffle_insanity,world_state_inverted,@Light World,mirror"
         ]
     },
     {

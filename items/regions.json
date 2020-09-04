@@ -109,6 +109,12 @@
         "codes": "dw_southeast"
     },
     {
+        "name": "Skull Woods Back Access",
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "sw_area"
+    },
+    {
         "name": "Mire Access",
         "type": "toggle",
         "img": "images/0062.png",
