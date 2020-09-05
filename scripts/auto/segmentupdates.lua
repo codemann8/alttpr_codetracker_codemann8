@@ -12,6 +12,10 @@ function updateModuleIdFromMemorySegment(segment)
             print("CURRENT MODULE:", mainModuleIdx, string.format("0x%2X", mainModuleIdx))
         end
 
+        if mainModuleIdx == 0x12 then
+            sendExternalMessage("health", "dead")
+        end
+
         if mainModuleIdx == 0x07 or mainModuleIdx == 0x09 then
             updateDungeonFromStatus(false)
         end
@@ -22,6 +26,7 @@ function updateModuleIdFromMemorySegment(segment)
 
     if AUTOTRACKER_IS_IN_TRIFORCE_ROOM and not wasInTriforceRoom then
         ScriptHost:AddMemoryWatch("LTTP Statistics", 0x7ef420, 0x46, updateStatisticsFromMemorySegment)
+        updateHealth(nil)
     end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -114,6 +119,7 @@ function updateItemsFromMemorySegment(segment)
         updateProgressiveMirror(segment)
         updateBottles(segment)
         updateAga1(segment)
+        updateHealth(segment)
     end
 
     if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then

@@ -166,3 +166,33 @@ function updateDam(segment)
     local value = ReadU8(segment, 0x7ef2bb)
     item.Active = value & 0x20 > 0
 end
+
+function updateHealth(segment)
+    if segment ~= nil then
+        local maxHealth = ReadU8(segment, 0x7ef36c)
+        local curHealth = ReadU8(segment, 0x7ef36d)
+        local stage = 0
+        local message = "dead"
+
+        if curHealth > 0 then
+            if curHealth == maxHealth then
+                stage = 3
+                message = "happy"
+            elseif (maxHealth >= 0x78 and curHealth <= 0x18) or (maxHealth >= 0x40 and curHealth <= 0x10) or curHealth <= 0x08 then
+                stage = 2
+                message = "sad"
+            else
+                stage = 1
+                message = "normal"
+            end
+        end
+
+        if HEALTH_STATE ~= stage then
+            HEALTH_STATE = stage
+            sendExternalMessage("health", message)
+        end
+    else
+        HEALTH_STATE = 3
+        sendExternalMessage("health", "win")
+    end
+end

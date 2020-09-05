@@ -53,9 +53,9 @@ end
 
 function sendExternalMessage(filename, value)
     if value then
-        if
-            (filename == "item" and AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE) or
-                (filename == "dungeon" and AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE)
+        if (filename == "item" and AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE)
+        or (filename == "dungeon" and AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE)
+        or (filename == "health" and AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE)
          then
             local file =
                 io.open("C:/Users/" .. os.getenv("USERNAME") .. "/Documents/EmoTracker/" .. filename .. ".txt", "w+")
