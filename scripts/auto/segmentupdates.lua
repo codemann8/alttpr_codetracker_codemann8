@@ -12,12 +12,10 @@ function updateModuleIdFromMemorySegment(segment)
             print("CURRENT MODULE:", mainModuleIdx, string.format("0x%2X", mainModuleIdx))
         end
 
-        if mainModuleIdx == 0x12 then
-            sendExternalMessage("health", "dead")
-        end
-
         if mainModuleIdx == 0x07 or mainModuleIdx == 0x09 then
             updateDungeonFromStatus(false)
+        elseif mainModuleIdx == 0x12 then
+            sendExternalMessage("health", "dead")
         end
     end
 
@@ -25,8 +23,8 @@ function updateModuleIdFromMemorySegment(segment)
     AUTOTRACKER_IS_IN_TRIFORCE_ROOM = (mainModuleIdx == 0x19 or mainModuleIdx == 0x1a)
 
     if AUTOTRACKER_IS_IN_TRIFORCE_ROOM and not wasInTriforceRoom then
-        ScriptHost:AddMemoryWatch("LTTP Statistics", 0x7ef420, 0x46, updateStatisticsFromMemorySegment)
         updateHealth(nil)
+        ScriptHost:AddMemoryWatch("LTTP Statistics", 0x7ef420, 0x46, updateStatisticsFromMemorySegment)
     end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
