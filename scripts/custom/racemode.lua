@@ -24,9 +24,11 @@ function RaceMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_race_off.png")
         item.Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
+        item.IgnoreUserInput = false;
     else
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_race_on.png")
         item.Icon = ImageReference:FromPackRelativePath("images/race-flag.png")
+        item.IgnoreUserInput = true;
     end
 end
 
