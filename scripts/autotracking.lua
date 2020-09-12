@@ -71,8 +71,7 @@ function testFlag(segment, address, flag)
 end
 
 function isInGame()
-    local module = AutoTracker:ReadU8(0x7e0010, 0)
-    return module > 0x05 and module < 0x55 and module ~= 0x14
+    return OBJ_MODULE.AcquiredCount > 0x05 and OBJ_MODULE.AcquiredCount < 0x55 and OBJ_MODULE.AcquiredCount ~= 0x14
 end
 
 function read32BitTimer(segment, baseAddress)
@@ -96,9 +95,9 @@ ScriptHost:LoadScript("scripts/auto/sharedtypeupdates.lua")
 ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
 
 --Add Memory Watches
--- Run the in-game status check more frequently (every 250ms) to catch save/quit scenarios more effectively
---ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x1, updateModuleIdFromMemorySegment, 250)
-ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 0x1, updateModuleIdFromMemorySegment)
+-- Run the in-game status check more frequently (every 150ms) to catch save/quit scenarios more effectively
+ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 2, updateModuleIdFromMemorySegment, 150)
+--ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 2, updateModuleIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Item Data", 0x7ef340, 0x90, updateItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Overworld Event Data", 0x7ef280, 0x82, updateOverworldEventsFromMemorySegment)

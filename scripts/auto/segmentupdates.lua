@@ -5,7 +5,7 @@ function updateModuleIdFromMemorySegment(segment)
         START_TIME = os.time()
     end
 
-    if mainModuleIdx ~= OBJ_MODULE.AcquiredCount then
+    if mainModuleIdx ~= OBJ_MODULE.AcquiredCount and mainModuleIdx ~= 0x0e then
         OBJ_MODULE.AcquiredCount = mainModuleIdx
 
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -30,7 +30,7 @@ function updateModuleIdFromMemorySegment(segment)
     end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-        if mainModuleIdx > 0x05 then
+        if isInGame() then
             --print("Current Room Index: ", segment:ReadUInt16(0x7e00a0))
             --print("Current OW     Index: ", segment:ReadUInt16(0x7e008a))
         end
