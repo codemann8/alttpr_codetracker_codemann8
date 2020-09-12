@@ -2243,7 +2243,7 @@
             {
                 "name": "Dropdown",
                 "access_rules": [
-                    "world_state_open,[pearl]",
+                    "world_state_open,pearl",
                     "world_state_inverted"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -2380,7 +2380,7 @@
             {
                 "name": "Dropdown",
                 "access_rules": [
-                    "world_state_open,[pearl]",
+                    "world_state_open,pearl",
                     "world_state_inverted"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
