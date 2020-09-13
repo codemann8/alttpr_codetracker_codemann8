@@ -140,7 +140,7 @@ function updateDungeonFromStatus(areaChanged)
         end
 
         --Region Autotracking
-        if OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
+        if Tracker.ActiveVariantUID ~= "items_only" and OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and OBJ_ENTRANCE.CurrentStage > 0 then
             if OBJ_OWAREA.AcquiredCount < 0xff and overworldMap[OBJ_OWAREA.AcquiredCount] then
                 local region = Tracker:FindObjectForCode(overworldMap[OBJ_OWAREA.AcquiredCount])
                 if region then

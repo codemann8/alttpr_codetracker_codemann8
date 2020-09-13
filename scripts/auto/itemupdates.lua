@@ -144,7 +144,7 @@ function updateAga1(segment)
     local value = ReadU8(segment, 0x7ef3c5)
     if value >= 3 then
         item.Active = true
-        if OBJ_RACEMODE.CurrentStage == 0 then
+        if Tracker.ActiveVariantUID ~= "items_only" and OBJ_RACEMODE.CurrentStage == 0 then
             if OBJ_WORLDSTATE.CurrentStage == 1 then
                 if OBJ_DOORSHUFFLE.CurrentStage == 0 then
                     item = Tracker:FindObjectForCode("castle_top")

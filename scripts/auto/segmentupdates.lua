@@ -202,7 +202,7 @@ function updateRoomsFromMemorySegment(segment)
 
     --Dungeon Data
     if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
-        if OBJ_DOORSHUFFLE.CurrentStage == 0 and Tracker.ActiveVariantUID ~= "items_only" then
+        if Tracker.ActiveVariantUID ~= "items_only" and OBJ_DOORSHUFFLE.CurrentStage == 0 then
             --Doors Opened
             updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
@@ -555,7 +555,7 @@ function updateGTBKFromMemorySegment(segment)
         return false
     end
 
-    if OBJ_RACEMODE.CurrentStage > 0 or Tracker.ActiveVariantUID == "items_only" then
+    if Tracker.ActiveVariantUID == "items_only" or OBJ_RACEMODE.CurrentStage > 0 then
         return true
     end
 
