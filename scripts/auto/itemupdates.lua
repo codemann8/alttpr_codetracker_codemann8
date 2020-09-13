@@ -107,8 +107,8 @@ function updateBatIndicatorStatus(status)
     end
 end
 
-function updateMushroomIndicatorStatus(status)
-    local item = Tracker:FindObjectForCode("mushroom")
+function updateShovelIndicatorStatus(status)
+    local item = Tracker:FindObjectForCode("shovel")
     if item then
         if status then
             item.CurrentStage = 1
@@ -118,10 +118,11 @@ function updateMushroomIndicatorStatus(status)
     end
 end
 
-function updateShovelIndicatorStatus(status)
-    local item = Tracker:FindObjectForCode("shovel")
-    if item then
-        if status then
+function updateMushroomIndicator(segment)
+    local item = Tracker:FindObjectForCode("mushroom")
+    if item and segment then
+        local value = ReadU8(segment, 0x7ef212)
+        if value & 0x80 > 0 then
             item.CurrentStage = 1
         else
             item.CurrentStage = 0

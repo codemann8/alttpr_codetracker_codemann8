@@ -102,14 +102,16 @@ function updateItemsFromMemorySegment(segment)
         if Tracker.ActiveVariantUID == "items_only" then
             updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef341, 0x01)
             updateToggleItemFromByteAndFlag(segment, "red_boomerang", 0x7ef341, 0x02)
-            updatePseudoProgressiveItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
+            updateToggleItemFromByteAndValue(segment, "shovel", 0x7ef34c, 0x01)
+            updateToggleItemFromByteAndFlag(segment, "flute", 0x7ef34c, 0x02)
+            updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef344, 0x1)
             updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef344, 0x2)
         else
             updateToggleItemFromByteAndFlag(segment, "blue_boomerang", 0x7ef38c, 0x80)
             updateToggleItemFromByteAndFlag(segment, "red_boomerang", 0x7ef38c, 0x40)
             updateToggleItemFromByteAndFlag(segment, "shovel", 0x7ef38c, 0x04)
-            updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
             updateToggleItemFromByteAndFlag(segment, "mushroom", 0x7ef38c, 0x20)
+            updateToggleItemFromByteAndFlag(segment, "powder", 0x7ef38c, 0x10)
         end
 
         updateProgressiveBow(segment)
@@ -188,7 +190,7 @@ function updateNPCItemFlagsFromMemorySegment(segment)
     -- 0x08 is no longer relevant
     updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot",        0x7ef411, 0x10)
     updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom",            0x7ef411, 0x10)
-    updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant",           0x7ef411, 0x20, updateMushroomIndicatorStatus)
+    updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant",           0x7ef411, 0x20)
     -- 0x40 is unused
     updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl",            0x7ef411, 0x80, updateBatIndicatorStatus)
 end
@@ -241,6 +243,9 @@ function updateRoomsFromMemorySegment(segment)
         updateToggleFromRoomSlot(segment, "ip", {222, 11})
         updateToggleFromRoomSlot(segment, "mm", {144, 11})
         updateToggleFromRoomSlot(segment, "tr", {164, 11})
+
+        --Mushroom
+        updateMushroomIndicator(segment)
     end
 
     if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then

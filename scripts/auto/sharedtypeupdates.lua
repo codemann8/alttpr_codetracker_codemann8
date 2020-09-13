@@ -236,6 +236,36 @@ function updateToggleItemFromByteAndFlag(segment, code, address, flag)
     end
 end
 
+function updateToggleItemFromByteAndValue(segment, code, address, value)
+    local item = Tracker:FindObjectForCode(code)
+    if item then
+        -- Do not auto-track this the user has manually modified it
+        if item.Owner.ModifiedByUser then
+            return
+        end
+
+        local slotValue = ReadU8(segment, address)
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print(item.Name, code, flag)
+        end
+
+        print("Shovel: " .. slotValue) 
+
+        if slotValue == value then
+            if not item.Active then
+                itemFlippedOn(code)
+            end
+            item.Active = true
+        else
+            item.Active = false
+        end
+    else
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("Cannot find item", code)
+        end
+    end
+end
+
 function updateToggleFromRoomSlot(segment, code, slot)
     local item = Tracker:FindObjectForCode(code)
     if item then
