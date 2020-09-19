@@ -88,11 +88,11 @@ function updateIcons()
                 Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
             end
         else
+            key.MaxCount = chestkeys[i]
             if key.MaxCount == 0 then
                 key.Icon = ""
             end
-            key.MaxCount = chestkeys[i]
-
+            
             if dungeons[i] == "hc" or dungeons[i] == "at" then
                 local bk = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
                 if bk.Icon ~= "" then
