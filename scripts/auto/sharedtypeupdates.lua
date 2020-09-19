@@ -462,6 +462,8 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         return
     end
 
+    InvalidateReadCaches()
+
     if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
         chestKeys.AcquiredCount = ReadU8(segment, address)
     else
