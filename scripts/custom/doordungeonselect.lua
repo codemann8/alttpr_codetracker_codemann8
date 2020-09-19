@@ -101,15 +101,11 @@ function DoorDungeonSelect:advanceToCode(code)
 end
 
 function DoorDungeonSelect:save()
-    local saveData = {}
-    saveData["state"] = self:getState()
-    return saveData
+    return {}
 end
 
 function DoorDungeonSelect:load(data)
-    if data["state"] ~= nil then
-        self:setState(data["state"])
-    end
+    self:updateIcon()
     return true
 end
 

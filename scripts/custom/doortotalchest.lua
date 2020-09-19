@@ -102,15 +102,11 @@ function DoorTotalChest:advanceToCode(code)
 end
 
 function DoorTotalChest:save()
-    local saveData = {}
-    saveData["state"] = self:getState()
-    return saveData
+    return {}
 end
 
 function DoorTotalChest:load(data)
-    if data["state"] ~= nil then
-        self:setState(data["state"])
-    end
+    self:updateIcon()
     return true
 end
 
