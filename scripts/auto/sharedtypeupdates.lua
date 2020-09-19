@@ -111,7 +111,9 @@ function updateDungeonFromStatus(areaChanged)
                 print("CURRENT DUNGEON:", dungeons[OBJ_DUNGEON.AcquiredCount], OBJ_DUNGEON.AcquiredCount, string.format("0x%2X", OBJ_DUNGEON.AcquiredCount))
             end
 
-            OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
+            if Tracker.ActiveVariantUID ~= "items_only" then
+                OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
+            end
 
             --Update Dungeon Image
             if string.find(Tracker.ActiveVariantUID, "er_") then
@@ -248,8 +250,6 @@ function updateToggleItemFromByteAndValue(segment, code, address, value)
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
             print(item.Name, code, flag)
         end
-
-        print("Shovel: " .. slotValue) 
 
         if slotValue == value then
             if not item.Active then
