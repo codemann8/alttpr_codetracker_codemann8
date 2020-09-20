@@ -1,19 +1,4 @@
 [
-    // Dungeon Items
-    { "name": "HC", "sections": [ { "name": "Items", "item_count": 6 } ] },
-    { "name": "EP", "sections": [ { "name": "Items", "item_count": 3 } ] },
-    { "name": "DP", "sections": [ { "name": "Items", "item_count": 2 } ] },
-    { "name": "ToH", "sections": [ { "name": "Items", "item_count": 2 } ] },
-    { "name": "AT", "sections": [ { "name": "Items", "item_count": 2 } ] },
-    { "name": "PoD", "sections": [ { "name": "Items", "item_count": 5 } ] },
-    { "name": "SP", "sections": [ { "name": "Items", "item_count": 6 } ] },
-    { "name": "SW", "sections": [ { "name": "Items", "item_count": 2 } ] },
-    { "name": "TT", "sections": [ { "name": "Items", "item_count": 4 } ] },
-    { "name": "IP", "sections": [ { "name": "Items", "item_count": 3 } ] },
-    { "name": "MM", "sections": [ { "name": "Items", "item_count": 2 } ] },
-    { "name": "TR", "sections": [ { "name": "Items", "item_count": 5 } ] },
-    { "name": "GT", "sections": [ { "name": "Items", "item_count": 20 } ] },
-
     {
         "name": "HC Access",
         "parent": "Semi-Dungeon Color",
