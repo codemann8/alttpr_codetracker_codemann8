@@ -2,7 +2,7 @@
   "name": "CodeTracker Full Tracker",
   "game_name": "A Link to the Past Randomizer",
   "platform": "snes",
-  "package_version": "2.0.5.1",
+  "package_version": "2.1.0.0",
   "package_uid": "alttpr_codetracker_codemann8",
   "author": "codemann8",
   "variants": {
@@ -15,11 +15,11 @@
     "er_mystery": {
       "display_name": "Map Tracker (ER Broadcast)"
     },
-    "items_only": {
-      "display_name": "Vanilla/ROM Hack Item Tracker"
-    },
     "items_only_keys": {
       "display_name": "Item/Key Tracker"
+    },
+    "items_only": {
+      "display_name": "Vanilla/ROM Hack Item Tracker"
     }
   }
 }

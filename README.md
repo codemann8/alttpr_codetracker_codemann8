@@ -9,6 +9,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Small keys and dungeon chests are auto-tracked in both Standard and Keysanity
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
+- Dungeon Item Shuffles (Keysanity options) are separated as individual toggles (Map, Compass, Small Keys, Big Key). Left click toggles each type, right click enables everything up to that point. (ie. right click on Big Key effectively sets it to Full Keysanity)
 - A `Race Mode` has been added to disable autotracking features that have been disallowed per racing council rules. To enable this, click the Gear in the `Items` section. A checkered flag icon will replace the GT Big Key guessing game icon to indicate its activation.
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
