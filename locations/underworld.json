@@ -863,7 +863,7 @@
         "parent": "Death Mountain East Top",
         "access_rules": [
             "world_state_open,@TR Main Entrance,pearl,somaria,tr_smallkey:2,mirror",
-            "world_state_open,@TR Main Entrance,pearl,somaria,[firerod],@Non-Key Keysanity,mirror",
+            "world_state_open,@TR Main Entrance,pearl,somaria,[firerod],keysanity_smallkey_off,mirror",
             "world_state_inverted,@Death Mountain East Top,pearl"
         ],
         "sections": [

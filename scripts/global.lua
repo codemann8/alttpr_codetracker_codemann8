@@ -8,13 +8,21 @@ function initGlobalVars()
 
     if Tracker.ActiveVariantUID ~= "items_only" then
         OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
-        OBJ_KEYSANITY = Tracker:FindObjectForCode("keysanity_mode")
+        OBJ_KEYSANITY_SMALL = Tracker:FindObjectForCode("keysanity_smallkey")
+        OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
         OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
         OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
         OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+
+        if Tracker.ActiveVariantUID == "items_only_keys" then
+            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
+        end
 
         updateIcons()
 
@@ -107,18 +115,17 @@ function updateIcons()
 
             local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
             item.MaxCount = chest.MaxCount
-            if OBJ_KEYSANITY.CurrentStage <= 2 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+            if Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 and dungeons[i] ~= "at" then
                 item.MaxCount = item.MaxCount - 1
             end
-            if OBJ_KEYSANITY.CurrentStage <= 1 and key then
+            if Tracker:FindObjectForCode("keysanity_compass").CurrentStage == 0 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+                item.MaxCount = item.MaxCount - 1
+            end
+            if OBJ_KEYSANITY_SMALL.CurrentStage == 0 and key then
                 item.MaxCount = item.MaxCount - key.MaxCount
             end
-            if OBJ_KEYSANITY.CurrentStage == 0 then
-                if dungeons[i] == "hc" then
-                    item.MaxCount = item.MaxCount - 1
-                elseif dungeons[i] ~= "at" then
-                    item.MaxCount = item.MaxCount - 2
-                end
+            if OBJ_KEYSANITY_BIG.CurrentStage == 0 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+                item.MaxCount = item.MaxCount - 1
             end
 
             item.SwapActions = false

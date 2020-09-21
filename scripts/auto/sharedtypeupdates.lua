@@ -554,26 +554,26 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             end
         else
             local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
-            local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
             local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
             local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
             local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+            local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
             local dungeonItems = 0
 
-            if bigkey.Active and OBJ_KEYSANITY.CurrentStage < 3 and dungeonPrefix ~= "hc" then
+            if map.Active and Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 then
                 dungeonItems = dungeonItems + 1
             end
 
-            if map.Active and OBJ_KEYSANITY.CurrentStage < 1 then
+            if compass.Active and Tracker:FindObjectForCode("keysanity_compass").CurrentStage == 0 then
                 dungeonItems = dungeonItems + 1
             end
 
-            if compass.Active and OBJ_KEYSANITY.CurrentStage < 1 then
-                dungeonItems = dungeonItems + 1
-            end
-
-            if smallkey.AcquiredCount and OBJ_KEYSANITY.CurrentStage < 2 then
+            if smallkey.AcquiredCount and OBJ_KEYSANITY_SMALL.CurrentStage == 0 then
                 dungeonItems = dungeonItems + smallkey.AcquiredCount
+            end
+
+            if bigkey.Active and OBJ_KEYSANITY_BIG.CurrentStage == 0 and dungeonPrefix ~= "hc" then
+                dungeonItems = dungeonItems + 1
             end
 
             if AUTOTRACKER_ENABLE_DEBUG_LOGGING then

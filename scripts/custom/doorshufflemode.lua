@@ -23,25 +23,21 @@ function DoorShuffleMode:updateIcon()
     local item = Tracker:FindObjectForCode("gt_bkgame")
 
     if self:getState() == 0 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_off" .. self.suffix .. ".png")
         item.MaxCount = 22
         if mirror.CurrentStage == 0 then
-            mirror.Stages[mirror.CurrentStage].Icon =
-                ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
+            mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
             mirror.Icon = ImageReference:FromPackRelativePath("images/0018.png", "@disabled")
         end
     elseif self:getState() == 1 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_basic" .. self.suffix .. ".png")
         item.MaxCount = 27
         if mirror.CurrentStage == 0 then
             mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
             mirror.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
         end
     else
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_door_shuffle_crossed" .. self.suffix .. ".png")
         item.MaxCount = 99
         if mirror.CurrentStage == 0 then
             mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
@@ -70,16 +66,11 @@ function DoorShuffleMode:updateIcon()
         end
     end
 
-    if self.suffix == "" and OBJ_KEYSANITY and OBJ_DOORSHUFFLE then
+    if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-            local message =
-                "NEW FEATURE: For Crossed Door Rando, new icons have been added to the lower right of the Dungeons section."
-            message =
-                message ..
-                "\n\nThe Dungeon Selector icon will cycle thru each dungeon and Total Chests icon will set the total number of chests for that particular dungeon."
-            message =
-                message ..
-                " Left click will increment the total chests and right click will reset it to 'unknown amount'."
+            local message = "NEW FEATURE: For Crossed Door Rando, new icons have been added to the lower right of the Dungeons section."
+            message = message .. "\n\nThe Dungeon Selector icon will cycle thru each dungeon and Total Chests icon will set the total number of chests for that particular dungeon."
+            message = message .. " Left click will increment the total chests and right click will reset it to 'unknown amount'."
             ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
         end
 

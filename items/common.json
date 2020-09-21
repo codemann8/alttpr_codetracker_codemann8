@@ -782,29 +782,69 @@
     },
     // Keysanity Mode
     {
-        "name": "Dungeon Items",
+        "name": "Keysanity Map",
         "type": "progressive",
         "allow_disabled": false,
-        "loop": true,
         "stages": [
             {
-                "img": "images/mode_keysanity_standard.png",
-                "codes": "keysanity_mode,keysanity_standard,",
+                "img": "images/mode_keysanity_map.png",
+                "codes": "keysanity_map,keysanity_map_off",
                 "inherit_codes": false
             },
             {
-                "img": "images/mode_keysanity_mapsanity.png",
-                "codes": "keysanity_mode,keysanity_mapsanity,",
+                "img": "images/mode_keysanity_map.png",
+                "codes": "keysanity_map,keysanity_map_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Compass",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/mode_keysanity_compass.png",
+                "codes": "keysanity_compass,keysanity_compass_off",
                 "inherit_codes": false
             },
             {
-                "img": "images/mode_keysanity_smallsanity.png",
-                "codes": "keysanity_mode,keysanity_smallsanity,",
+                "img": "images/mode_keysanity_compass.png",
+                "codes": "keysanity_compass,keysanity_compass_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Small Key",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/mode_keysanity_smallkey.png",
+                "codes": "keysanity_smallkey,keysanity_smallkey_off",
                 "inherit_codes": false
             },
             {
-                "img": "images/mode_keysanity_full.png",
-                "codes": "keysanity_mode,keysanity_full,",
+                "img": "images/mode_keysanity_smallkey.png",
+                "codes": "keysanity_smallkey,keysanity_smallkey_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Big Key",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/mode_keysanity_bigkey.png",
+                "codes": "keysanity_bigkey,keysanity_bigkey_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_keysanity_bigkey.png",
+                "codes": "keysanity_bigkey,keysanity_bigkey_on",
                 "inherit_codes": false
             }
         ]

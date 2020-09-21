@@ -1,15 +1,15 @@
 KeysanityMode = CustomItem:extend()
 
-function KeysanityMode:init(variant, suffix)
-    self:createItem("Dungeon Items" .. suffix)
-    self.code = "keysanity_mode_surrogate"
+function KeysanityMode:init(item, suffix)
+    self.item = item
+    self.itemCode = item:lower():gsub(" ", "")
     self.suffix = suffix
 
-    if variant == "items_only_keys" then
-        self:setState(3)
-    else
-        self:setState(0)
-    end
+    self:createItem(self.item .. " Shuffle" .. self.suffix)
+    self.code = "keysanity_" .. self.itemCode .. "_surrogate"
+    
+    self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
+    self:setState(0)
 end
 
 function KeysanityMode:setState(state)
@@ -21,20 +21,12 @@ function KeysanityMode:getState()
 end
 
 function KeysanityMode:updateIcon()
-    Tracker:FindObjectForCode("keysanity_mode").CurrentStage = self:getState()
+    Tracker:FindObjectForCode("keysanity_" .. self.itemCode).CurrentStage = self:getState()
 
     if self:getState() == 0 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_keysanity_standard" .. self.suffix .. ".png")
-    elseif self:getState() == 1 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_keysanity_mapsanity" .. self.suffix .. ".png")
-    elseif self:getState() == 2 then
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_keysanity_smallsanity" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
     else
-        self.ItemInstance.Icon =
-            ImageReference:FromPackRelativePath("images/mode_keysanity_full" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png")
     end
 
     --Sync other surrogates
@@ -51,24 +43,29 @@ function KeysanityMode:updateIcon()
         end
     end
     if item and self:getState() ~= state then
-        if (self:getState() - state) % 4 == 1 then
-            item:OnLeftClick()
-        else
-            item:OnRightClick()
-        end
+        item:OnLeftClick()
     end
 
-    if self.suffix == "" and OBJ_KEYSANITY and OBJ_DOORSHUFFLE then
+    if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
         updateIcons()
     end
 end
 
 function KeysanityMode:onLeftClick()
-    self:setState((self:getState() + 1) % 4)
+    self:setState((self:getState() + 1) % 2)
 end
 
 function KeysanityMode:onRightClick()
-    self:setState((self:getState() - 1) % 4)
+    local items =  { "map", "compass", "smallkey", "bigkey" }
+    local state = 1
+    for i = 1, 4 do
+        if items[i] == self.itemCode then
+            self:setState(state)
+            state = 0
+        else
+            Tracker:FindObjectForCode("keysanity_" .. items[i] .. "_surrogate").ItemState:setState(state)
+        end
+    end
 end
 
 function KeysanityMode:canProvideCode(code)
@@ -88,7 +85,7 @@ end
 
 function KeysanityMode:advanceToCode(code)
     if code == nil or code == self.code .. self.suffix then
-        self:setState((self:getState() + 1) % 4)
+        self:setState((self:getState() + 1) % 2)
     end
 end
 
@@ -97,7 +94,7 @@ function KeysanityMode:save()
 end
 
 function KeysanityMode:load(data)
-    local item = Tracker:FindObjectForCode("keysanity_mode")
+    local item = Tracker:FindObjectForCode("keysanity_" .. self.itemCode)
     self:setState(item.CurrentStage)
     return true
 end

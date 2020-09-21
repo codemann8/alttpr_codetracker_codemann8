@@ -1,4 +1,41 @@
 {
+    "shared_mode_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "h_alignment": "left",
+        "v_alignment": "center",
+        "margin": 0,
+        "content": [
+            {
+                "type": "itemgrid",
+                "margin": 0,
+                "item_margin": "1,0",
+                "item_size": 40,
+                "rows": [
+                    [ "world_state_mode_surrogate_small" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "margin": "0.5,0",
+                "item_margin": 0,
+                "item_size": 20,
+                "rows": [
+                    [ "keysanity_map_surrogate_small", "keysanity_compass_surrogate_small" ],
+                    [ "keysanity_smallkey_surrogate_small", "keysanity_bigkey_surrogate_small" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "margin": 0,
+                "item_margin": "1,0",
+                "item_size": 40,
+                "rows": [
+                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
+                ]
+            }
+        ]
+    },
     "shared_entrance_grid": {
         "type": "dock",
         "dock": "bottom",
@@ -25,15 +62,8 @@
                 "margin": "0,0,3,0",
                 "dock": "left",
                 "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "left",
-                    "v_alignment": "center",
-                    "item_margin": "1,1",
-                    "item_size": 40,
-                    "badge_font_size": 24,
-                    "rows": [
-                        [ "world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
-                    ]
+                    "type": "layout",
+                    "key": "shared_mode_grid"
                 }
             },
             {
@@ -68,15 +98,8 @@
                         "header": "Modes",
                         "margin": "0,0,3,0",
                         "content": {
-                            "type": "itemgrid",
-                            "h_alignment": "left",
-                            "v_alignment": "center",
-                            "item_margin": "1,1",
-                            "item_size": 40,
-                            "badge_font_size": 24,
-                            "rows": [
-                                [ "world_state_mode_surrogate_small", "keysanity_mode_surrogate_small", "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
-                            ]
+                            "type": "layout",
+                            "key": "shared_mode_grid"
                         }
                     },
                     {
