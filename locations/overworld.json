@@ -2920,8 +2920,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown",
-                "hosted_item": "dw_east"
+                "capture_item_layout": "tracker_capture_dropdown"
             }
         ],
         "map_locations": [
