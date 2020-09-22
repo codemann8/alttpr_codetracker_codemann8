@@ -27,6 +27,7 @@
                                     },
                                     "content": {
                                         "type": "layout",
+                                        "margin": "0,-6,0,-6",
                                         "key": "shared_item_grid"
                                     }
                                 },
@@ -35,6 +36,7 @@
                                     "header": "Dungeons",
                                     "content": {
                                         "type": "layout",
+                                        "margin": "0,-2,0,-4",
                                         "key": "shared_dungeon_v_grid"
                                     }
                                 },
@@ -54,7 +56,7 @@
                                 "h_alignment": "left",
                                 "v_alignment": "left",
                                 "orientation": "horizontal",
-                                "scale": 1.25,
+                                "scale": 1.15,
                                 "compact": true
                             }
                         }
@@ -127,7 +129,7 @@
                                         "h_alignment": "stretch",
                                         "v_alignment": "stretch",
                                         "orientation": "horizontal",
-                                        "scale": 1.25,
+                                        "scale": 1.15,
                                         "compact": true
                                     }
                                 }

@@ -1,61 +1,8 @@
 {
-    "shared_mode_grid": {
-        "type": "array",
-        "orientation": "horizontal",
-        "h_alignment": "left",
-        "v_alignment": "center",
-        "margin": 0,
-        "content": [
-            {
-                "type": "itemgrid",
-                "margin": 0,
-                "item_margin": "1,0",
-                "item_size": 40,
-                "rows": [
-                    [ "world_state_mode_surrogate_small" ]
-                ]
-            },
-            {
-                "type": "itemgrid",
-                "margin": "0.5,0",
-                "item_margin": 0,
-                "item_size": 20,
-                "rows": [
-                    [ "keysanity_map_surrogate_small", "keysanity_compass_surrogate_small" ],
-                    [ "keysanity_smallkey_surrogate_small", "keysanity_bigkey_surrogate_small" ]
-                ]
-            },
-            {
-                "type": "itemgrid",
-                "margin": 0,
-                "item_margin": "1,0",
-                "item_size": 40,
-                "rows": [
-                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
-                ]
-            }
-        ]
-    },
     "shared_entrance_grid": {
         "type": "dock",
         "dock": "bottom",
         "content": [
-            {
-                "type": "group",
-                "header": "Dropdowns",
-                "margin": "0,0,3,0",
-                "dock": "left",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "left",
-                    "v_alignment": "center",
-                    "item_margin": "1,1",
-                    "item_size": 40,
-                    "rows": [
-                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
-                    ]
-                }
-            },
             {
                 "type": "group",
                 "header": "Modes",
@@ -63,6 +10,7 @@
                 "dock": "left",
                 "content": {
                     "type": "layout",
+                    "margin": "0,0,3,0",
                     "key": "shared_mode_grid"
                 }
             },
@@ -72,14 +20,25 @@
                 "margin": "0,0,3,0",
                 "dock": "left",
                 "content": {
+                    "type": "layout",
+                    "margin": "0,1,0,0",
+                    "key": "shared_misc_grid"
+                }
+            },
+            {
+                "type": "group",
+                "header": "Dropdowns",
+                "margin": "0,0,3,0",
+                "dock": "left",
+                "content": {
                     "type": "itemgrid",
                     "h_alignment": "left",
                     "v_alignment": "center",
+                    "margin": 0,
                     "item_margin": "1,1",
                     "item_size": 40,
-                    "badge_font_size": 24,
                     "rows": [
-                        [ "dam", "attic", "gt_bkgame" ]
+                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon","dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
                     ]
                 }
             }
@@ -96,46 +55,49 @@
                     {
                         "type": "group",
                         "header": "Modes",
-                        "margin": "0,0,3,0",
+                        "margin": "0,0,0,0",
                         "content": {
                             "type": "layout",
                             "key": "shared_mode_grid"
-                        }
-                    },
-                    {
-                        "type": "group",
-                        "header": "Miscellaneous",
-                        "margin": "0,0,0,0",
-                        "dock": "left",
-                        "content": {
-                            "type": "itemgrid",
-                            "h_alignment": "left",
-                            "v_alignment": "center",
-                            "item_margin": "1,1",
-                            "item_size": 40,
-                            "badge_font_size": 24,
-                            "rows": [
-                                [ "dam", "attic", "gt_bkgame" ]
-                            ]
                         }
                     }
                 ]
             },
             {
-                "type": "group",
-                "header": "Dropdowns",
-                "margin": "0,0,0,0",
+                "type": "container",
                 "dock": "left",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "v_alignment": "center",
-                    "item_margin": "1,1",
-                    "item_size": 44,
-                    "rows": [
-                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
-                    ]
-                }
+                "height": 157,
+                "content": [
+                    {
+                        "type": "group",
+                        "header": "Dropdowns",
+                        "margin": "0,-4,0,0",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "v_alignment": "top",
+                            "margin": 0,
+                            "item_margin": "1,4",
+                            "item_size": 44,
+                            "rows": [
+                                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
+                                [ "","","","","","","","" ]
+                            ]
+                        }
+                    },
+                    {
+                        "type": "group",
+                        "header": "Miscellaneous",
+                        "margin": "0,80,0,0",
+                        "width": 190,
+                        "h_alignment": "left",
+                        "background": "#00000000",
+                        "content": {
+                            "type": "layout",
+                            "key": "shared_misc_grid"
+                        }
+                    }
+                ]
             }
         ]
     }
