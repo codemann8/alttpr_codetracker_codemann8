@@ -71,7 +71,8 @@ else
     EntranceShuffleMode("_small")
     DoorShuffleMode("")
     DoorShuffleMode("_small")
-    RaceMode()
+    RaceMode("")
+    RaceMode("_small")
 
     GTCrystalReq()
     GoalSetting()
