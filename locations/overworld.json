@@ -1784,16 +1784,14 @@
     {
         "name": "Upgrade Fairy",
         "parent": "Water Areas",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
         "sections": [
             {
                 "name": "Entrance",
                 "access_rules": [
-                    "[flippers]",
-                    "world_state_open,ip_area,mirror"
+                    "world_state_open,[flippers]",
+                    "world_state_open,ip_area,mirror",
+                    "world_state_inverted,@Light World,pearl,[flippers]",
+                    "world_state_inverted,[flippers],lift2"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
