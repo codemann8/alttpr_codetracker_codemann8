@@ -40,7 +40,7 @@ function updateDungeonFromStatus(areaChanged)
     local overworldMap =
     {
         [0x02] = "light_world", [0x03] = "dm_west_bottom",
-        [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x11] = "lw_witch",
+        [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
         [0x22] = "light_world", [0x1e] = "light_world",
         [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
         [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
