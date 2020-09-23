@@ -4,29 +4,31 @@ function updateProgressiveBow(segment)
     if Tracker.ActiveVariantUID == "items_only" then
         if ReadU8(segment, 0x7ef340) > 2 then
             item.Active = true
-            item.CurrentStage = 1
+            item.CurrentStage = 2
         elseif ReadU8(segment, 0x7ef340) > 0 then
             item.Active = true
-            item.CurrentStage = 0
+            item.CurrentStage = 1
         else
             item.Active = false
             item.CurrentStage = 0
         end
     else
-        if testFlag(segment, 0x7ef38e, 0x40) then
-            if testFlag(segment, 0x7ef38e, 0x80) then
-                item.Active = true
-                item.CurrentStage = 1
-            else
-                item.Active = false
-                item.CurrentStage = 1
-            end
-        elseif testFlag(segment, 0x7ef38e, 0x80) then
+        if testFlag(segment, 0x7ef38e, 0x80) then
             item.Active = true
-            item.CurrentStage = 0
         else
             item.Active = false
+        end
+
+        if testFlag(segment, 0x7ef38e, 0x40) then
+            if OBJ_RETRO.CurrentStage > 0 and ReadU8(segment, 0x7ef377) == 0 then
+                item.CurrentStage = 0
+            else
+                item.CurrentStage = 2
+            end
+        elseif OBJ_RETRO.CurrentStage > 0 and ReadU8(segment, 0x7ef377) == 0 then
             item.CurrentStage = 0
+        else
+            item.CurrentStage = 1
         end
     end
 

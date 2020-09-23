@@ -6,15 +6,23 @@
         "stages": [
             {
                 "img": "images/bow.png",
+                "disabled_img": "images/bow.png",
                 "codes": "bow",
                 "secondary_codes": "none,default,clear"
+            },
+            {
+                "img": "images/bow.png",
+                "img_mods": "overlay|images/arrows.png",
+                "disabled_img": "images/bow.png",
+                "disabled_img_mods": "@disabled,overlay|images/arrows.png",
+                "codes": "bow,arrows,quivers"
             },
             {
                 "img": "images/bow.png",
                 "img_mods": "overlay|images/silver_arrow.png",
                 "disabled_img": "images/bow.png",
                 "disabled_img_mods": "@disabled,overlay|images/silver_arrow.png",
-                "codes": "bow",
+                "codes": "bow,arrows,quivers",
                 "secondary_codes": "silvers,silverarrows"
             }
         ]
@@ -937,6 +945,25 @@
             {
                 "img": "images/mode_door_shuffle_crossed.png",
                 "codes": "door_shuffle,door_shuffle_on,door_shuffle_crossed",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Retro Mode
+    {
+        "name": "Retro Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_retro_off.png",
+                "codes": "retro_mode,retro_mode_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_retro_on.png",
+                "codes": "retro_mode,retro_mode_on",
                 "inherit_codes": false
             }
         ]

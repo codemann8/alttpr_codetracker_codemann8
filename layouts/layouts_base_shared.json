@@ -50,14 +50,14 @@
     "shared_mode_grid": {
         "type": "array",
         "orientation": "horizontal",
-        "h_alignment": "left",
+        "h_alignment": "center",
         "v_alignment": "center",
-        "margin": "0,1,1,3",
+        "margin": "4.5,1,1,4",
         "content": [
             {
                 "type": "itemgrid",
                 "margin": 0,
-                "item_margin": "2,0",
+                "item_margin": "1,0",
                 "item_size": 40,
                 "rows": [
                     [ "world_state_mode_surrogate_small" ]
@@ -65,7 +65,7 @@
             },
             {
                 "type": "itemgrid",
-                "margin": "1,0,0.5,0",
+                "margin": "0.45,0,0.25,0",
                 "item_margin": "0.5,0",
                 "item_size": 20,
                 "rows": [
@@ -76,10 +76,10 @@
             {
                 "type": "itemgrid",
                 "margin": 0,
-                "item_margin": "2,0",
+                "item_margin": "1,0",
                 "item_size": 40,
                 "rows": [
-                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "gt_crystals_surrogate", "goal_setting", "race_mode_surrogate_small" ]
+                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "retro_mode_surrogate_small", "gt_crystals_surrogate", "goal_setting", "race_mode_surrogate_small" ]
                 ]
             }
         ]

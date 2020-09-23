@@ -67,6 +67,19 @@
             },
             {
                 "type": "group",
+                "header": "Retro Mode",
+                "header_background": "#3e4b57",
+                "content":[
+                    {
+                        "type": "item",
+                        "margin": "-5,-5,-5,-1",
+                        "height": "48",
+                        "item": "retro_mode_surrogate"
+                    }
+                ]
+            },
+            {
+                "type": "group",
                 "header": "Race Mode",
                 "header_background": "#3e4b57",
                 "content":[

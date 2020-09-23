@@ -40,7 +40,9 @@ function canDamageArmos()
         return 1
     elseif Tracker:ProviderCountForCode("hammer") > 0 then
         return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 then
+    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") == 0 then
+        return 1
+    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") > 0 and Tracker:ProviderCountForCode("arrows") > 0 then
         return 1
     else
         return Tracker:ProviderCountForCode("boomerang")

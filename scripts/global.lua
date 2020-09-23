@@ -12,6 +12,7 @@ function initGlobalVars()
         OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
         OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
+        OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
         OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
