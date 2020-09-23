@@ -721,6 +721,50 @@
         "loop": true,
         "codes": "dropdown_ganon"
     },
+    {
+        "name": "SW Pinball Dropdown",
+        "type": "toggle",
+        "img": "images/drop-swpinball.png",
+        "img_mods": "",
+        "disabled_img": "images/drop-swpinball.png",
+        "disabled_img_mods": "overlay|images/overlayX.png",
+        "initial_active_state": true,
+        "loop": true,
+        "codes": "dropdown_swpinball"
+    },
+    {
+        "name": "SW Compass Dropdown",
+        "type": "toggle",
+        "img": "images/drop-swcompass.png",
+        "img_mods": "",
+        "disabled_img": "images/drop-swcompass.png",
+        "disabled_img_mods": "overlay|images/overlayX.png",
+        "initial_active_state": true,
+        "loop": true,
+        "codes": "dropdown_swcompass"
+    },
+    {
+        "name": "SW Big Chest Dropdown",
+        "type": "toggle",
+        "img": "images/drop-swbigchest.png",
+        "img_mods": "",
+        "disabled_img": "images/drop-swbigchest.png",
+        "disabled_img_mods": "overlay|images/overlayX.png",
+        "initial_active_state": true,
+        "loop": true,
+        "codes": "dropdown_swbigchest"
+    },
+    {
+        "name": "SW Hazard Dropdown",
+        "type": "toggle",
+        "img": "images/drop-swhazard.png",
+        "img_mods": "",
+        "disabled_img": "images/drop-swhazard.png",
+        "disabled_img_mods": "overlay|images/overlayX.png",
+        "initial_active_state": true,
+        "loop": true,
+        "codes": "dropdown_swhazard"
+    },
     
     // GT Required Crystals
     {

@@ -38,7 +38,7 @@
                     "item_margin": "1,1",
                     "item_size": 40,
                     "rows": [
-                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon","dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
+                        [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon","dropdown_swhazard","dropdown_swbigchest","dropdown_swcompass","dropdown_swpinball" ]
                     ]
                 }
             }
@@ -81,7 +81,7 @@
                             "item_size": 44,
                             "rows": [
                                 [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief","dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
-                                [ "","","","","","","","" ]
+                                [ "","","","","dropdown_swhazard","dropdown_swbigchest","dropdown_swcompass","dropdown_swpinball" ]
                             ]
                         }
                     },
@@ -89,7 +89,7 @@
                         "type": "group",
                         "header": "Miscellaneous",
                         "margin": "0,80,0,0",
-                        "width": 190,
+                        "width": 180,
                         "h_alignment": "left",
                         "background": "#00000000",
                         "content": {
