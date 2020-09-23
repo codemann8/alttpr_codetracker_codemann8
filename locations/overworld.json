@@ -556,6 +556,27 @@
         ]
     },
     {
+        "name": "Kakariko Shop",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 220,
+                "y": 1175,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+            }
+        ]
+    },
+    {
         "name": "Bomb Hut",
         "parent": "Light World",
         "access_rules": [
@@ -972,6 +993,27 @@
                 "y": 1540,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Shop",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1460,
+                "y": 1540,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -2391,7 +2433,7 @@
         "parent": "Northwest Dark World",
         "sections": [
             {
-                "name": "Entrances",
+                "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
@@ -2405,6 +2447,27 @@
                 "y": 115,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Lumberjack Shop",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 675,
+                "y": 115,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -2449,6 +2512,27 @@
                 "y": 912,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 912,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -2602,6 +2686,36 @@
         ]
     },
     {
+        "name": "Village of Outcasts Shop",
+        "parent": "Northwest Dark World",
+        "access_rules": [
+            "world_state_open,pearl",
+            "world_state_inverted"
+        ],
+        "sections": [
+            {
+                "name": "Shop",
+                "access_rules": [
+                    "hammer",
+                    "world_state_inverted,@Light World,pearl,mirror",
+                    "world_state_inverted,grass_house,mirror"
+                ],
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 408,
+                "y": 1069,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+            }
+        ]
+    },
+    {
         "name": "Dwarven Smiths",
         "short_name": "Smiths",
         "parent": "Northwest Dark World",
@@ -2657,6 +2771,27 @@
                 "y": 668,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch's Hut Shop",
+        "parent": "Northeast Dark World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1616,
+                "y": 668,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -2870,7 +3005,7 @@
         ]
     },
     {
-        "name": "Dark Lake Fortune Teller",
+        "name": "Dark Lake Shop",
         "parent": "South Dark World",
         "sections": [
             {
@@ -2888,6 +3023,27 @@
                 "y": 1615,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Lake Shop",
+        "parent": "South Dark World",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1300,
+                "y": 1615,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -3836,6 +3992,27 @@
         ]
     },
     {
+        "name": "Paradox Shop",
+        "parent": "Death Mountain East Bottom",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1735,
+                "y": 290,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+            }
+        ]
+    },
+    {
         "name": "Paradox Cave Bottom",
         "parent": "Death Mountain East Bottom",
         "sections": [
@@ -4298,7 +4475,7 @@
         ]
     },
     {
-        "name": "Death Mountain Shop",
+        "name": "Dark Death Mountain Shop",
         "parent": "Dark Death Mountain East",
         "sections": [
             {
@@ -4316,6 +4493,27 @@
                 "y": 295,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Death Mountain Shop",
+        "parent": "Dark Death Mountain East",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1734,
+                "y": 295,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     }

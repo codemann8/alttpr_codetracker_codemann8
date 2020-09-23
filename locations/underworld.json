@@ -830,8 +830,8 @@
             },
             {
                 "map": "lightworld",
-                "x": 1714,
-                "y": 293,
+                "x": 1731,
+                "y": 108,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
@@ -966,7 +966,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1695,
+                "x": 1670,
                 "y": 290,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
