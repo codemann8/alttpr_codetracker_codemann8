@@ -148,8 +148,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_dropdown",
-                "item_count": 1,
-                "hosted_item": "light_world"
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -353,8 +352,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown",
-                "hosted_item": "light_world"
+                "capture_item_layout": "tracker_capture_dropdown"
             }
         ],
         "map_locations": [
@@ -647,8 +645,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_dropdown",
-                "item_count": 1,
-                "hosted_item": "light_world"
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -826,8 +823,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown",
-                "hosted_item": "light_world"
+                "capture_item_layout": "tracker_capture_dropdown"
             }
         ],
         "map_locations": [
@@ -1344,8 +1340,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_dropdown",
-                "item_count": 1,
-                "hosted_item": "light_world"
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1399,8 +1394,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_dropdown",
-                "item_count": 1,
-                "hosted_item": "light_world"
+                "item_count": 1
             }
         ],
         "map_locations": [
