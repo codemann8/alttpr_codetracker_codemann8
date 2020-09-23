@@ -451,7 +451,7 @@
                 "x": 256,
                 "y": 964,
                 "size": 48,
-                "restrict_visibility_rules": [ "@Light World,flute" ],
+                "restrict_visibility_rules": [ "@Light World,pearl,flute", "world_state_open,@Light World,flute" ],
                 "force_invisibility_rules": [ "activated_flute" ]
             }
         ]
