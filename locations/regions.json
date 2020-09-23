@@ -366,7 +366,6 @@
                     "world_state_open,ddm_tr_safety,mirror",
                     "world_state_inverted,dm_east_mimic",
                     "world_state_inverted,@Death Mountain West Bottom,pearl,hookshot",
-                    "world_state_inverted,@Death Mountain West Bottom,lift2",
                     "world_state_inverted,ddm_east,lift2",
                     "world_state_inverted,ddm_top,lift2",
                     "world_state_inverted,ddm_west,lift2",
