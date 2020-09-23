@@ -103,7 +103,7 @@ end
 
 function DoorShuffleMode:advanceToCode(code)
     if code == nil or code == self.code .. self.suffix then
-        self:setState((self:getState() + 1) % 3)
+        self:OnLeftClick()
     end
 end
 

@@ -75,7 +75,7 @@ end
 
 function WorldStateMode:advanceToCode(code)
     if code == nil or code == self.code .. self.suffix then
-        self:setState((self:getState() + 1) % 2)
+        self:OnLeftClick()
     end
 end
 
