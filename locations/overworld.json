@@ -1702,19 +1702,15 @@
     {
         "name": "Lake Hylia Island",
         "parent": "Water Areas",
-        "access_rules": [
-            "world_state_open,@East Dark World,mirror",
-            "world_state_inverted,@Light World",
-            "{world_state_open}",
-            "{world_state_inverted,@Light World}"
-        ],
         "sections": [
             {
                 "name": "Island",
                 "access_rules": [
-                    "world_state_open,pearl,flippers",
-                    "world_state_inverted,pearl,[flippers]",
-                    "{}"
+                    "world_state_open,@East Dark World,pearl,flippers,mirror",
+                    "world_state_open,@South Dark World,pearl,flippers,mirror",
+                    "world_state_inverted,@Light World,pearl,[flippers]",
+                    "{world_state_open}",
+                    "{world_state_inverted,@Light World}"
                 ],
                 "capture_item": true,
                 "item_count": 1
