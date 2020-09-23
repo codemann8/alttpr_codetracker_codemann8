@@ -2609,17 +2609,13 @@
         "name": "Dwarven Smiths",
         "short_name": "Smiths",
         "parent": "Northwest Dark World",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
-        ],
         "sections": [
             {
                 "name": "Bring Him Home",
                 "access_rules": [
-                    "world_state_open,lift2",
+                    "@Light World,pearl,lift2",
                     "world_state_inverted,@Light World,pearl,mirror",
-                    "world_state_inverted,@Light World,lift2"
+                    "world_state_inverted,lift2,aga"
                 ],
                 "item_count": 1
             }
@@ -3172,16 +3168,13 @@
     {
         "name": "Purple Chest",
         "parent": "Hammer Pegs Area",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
-        ],
         "sections": [
             {
                 "name": "Middle-Aged Man",
                 "access_rules": [
-                    "@Light World,lift2",
-                    "world_state_inverted,@Light World,pearl,mirror"
+                    "@Light World,pearl,lift2",
+                    "world_state_inverted,@Light World,pearl,mirror",
+                    "world_state_inverted,lift2,aga"
                 ],
                 "item_count": 1
             }
