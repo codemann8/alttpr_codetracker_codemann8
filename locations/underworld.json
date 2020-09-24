@@ -46,8 +46,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 633,
-                "y": 117,
+                "x": 600,
+                "y": 137,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
@@ -364,8 +364,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1815,
-                "y": 1547,
+                "x": 1785,
+                "y": 1537,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
