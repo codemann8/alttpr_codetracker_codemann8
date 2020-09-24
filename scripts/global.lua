@@ -80,7 +80,7 @@ end
 function updateIcons()
     local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
     local chestkeys = { 1,    0,    1,    2,    1,    6,     3,    3,    2,    1,     1,    4,    4  }
-    for i = 1, 13 do
+    for i = 1, #dungeons do
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then

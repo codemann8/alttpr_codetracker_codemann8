@@ -65,7 +65,7 @@ end
 function KeysanityMode:onRightClick()
     local items =  { "map", "compass", "smallkey", "bigkey" }
     local state = 1
-    for i = 1, 4 do
+    for i = 1, #items do
         if items[i] == self.itemCode then
             if items[i] == "smallkey" and OBJ_RETRO.CurrentStage > 0 then
                 self:setState(2)
