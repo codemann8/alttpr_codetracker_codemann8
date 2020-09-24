@@ -5060,7 +5060,7 @@
         ]
     },
     {
-        "name": "Dark Mountain Fairy",
+        "name": "Mountain Fairy",
         "parent": "Dark Death Mountain Color",
         "access_rules": [
             "world_state_open,@Dark Death Mountain West,[nothing]",
