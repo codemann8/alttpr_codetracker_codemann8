@@ -24,6 +24,8 @@ function RetroMode:updateIcon()
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_retro_off" .. self.suffix .. ".png")
     else
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_retro_on" .. self.suffix .. ".png")
+        Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(2)
+
     end
 
     --Sync other surrogates

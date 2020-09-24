@@ -7,6 +7,11 @@ function KeysanityMode:init(item, suffix)
 
     self:createItem(self.item .. " Shuffle" .. self.suffix)
     self.code = "keysanity_" .. self.itemCode .. "_surrogate"
+
+    self.numStates = 2
+    if self.itemCode == "smallkey" then
+        self.numStates = 3
+    end
     
     self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
     self:setState(0)
@@ -25,6 +30,8 @@ function KeysanityMode:updateIcon()
 
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
+    elseif self.itemCode == "smallkey" and self:getState() == 2 then
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. "_universal" .. self.suffix .. ".png")
     else
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png")
     end
@@ -34,16 +41,16 @@ function KeysanityMode:updateIcon()
     if self.suffix == "" then
         item = Tracker:FindObjectForCode(self.code .. "_small")
         if item then
-            state = item:ProvidesCode(self.code .. "_small")
+            state = item.ItemState:getState()
         end
     else
         item = Tracker:FindObjectForCode(self.code)
         if item then
-            state = item:ProvidesCode(self.code)
+            state = item.ItemState:getState()
         end
     end
     if item and self:getState() ~= state then
-        item:OnLeftClick()
+        item.ItemState:setState(self:getState())
     end
 
     if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
@@ -52,7 +59,7 @@ function KeysanityMode:updateIcon()
 end
 
 function KeysanityMode:onLeftClick()
-    self:setState((self:getState() + 1) % 2)
+    self:setState((self:getState() + 1) % self.numStates)
 end
 
 function KeysanityMode:onRightClick()
@@ -60,10 +67,18 @@ function KeysanityMode:onRightClick()
     local state = 1
     for i = 1, 4 do
         if items[i] == self.itemCode then
-            self:setState(state)
+            if items[i] == "smallkey" and OBJ_RETRO.CurrentStage > 0 then
+                self:setState(2)
+            else
+                self:setState(state)
+            end
             state = 0
         else
-            Tracker:FindObjectForCode("keysanity_" .. items[i] .. "_surrogate").ItemState:setState(state)
+            if items[i] == "smallkey" and OBJ_RETRO.CurrentStage > 0 then
+                Tracker:FindObjectForCode("keysanity_" .. items[i] .. "_surrogate").ItemState:setState(2)
+            else
+                Tracker:FindObjectForCode("keysanity_" .. items[i] .. "_surrogate").ItemState:setState(state)
+            end
         end
     end
 end

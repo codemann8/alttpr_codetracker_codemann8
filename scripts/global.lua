@@ -143,6 +143,18 @@ function updateIcons()
                 dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
             end
         end
+
+        if OBJ_KEYSANITY_SMALL.CurrentStage == 2 then
+            key.Icon = ""
+            key.BadgeText = nil
+            key.IgnoreUserInput = true
+        else
+            if key.MaxCount > 0 then
+                key.DisplayAsFractionOfMax = true
+                key.DisplayAsFractionOfMax = false
+            end
+            key.IgnoreUserInput = false
+        end
     end
 
     OBJ_DOORDUNGEON.ItemState:updateIcon()

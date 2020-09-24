@@ -466,7 +466,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 
     if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 then
         chestKeys.AcquiredCount = ReadU8(segment, address)
-    else
+    elseif OBJ_KEYSANITY_SMALL.CurrentStage < 2 then
         local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
         local currentKeys = 0
 

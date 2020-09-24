@@ -881,6 +881,11 @@
                 "img": "images/mode_keysanity_smallkey.png",
                 "codes": "keysanity_smallkey,keysanity_smallkey_on",
                 "inherit_codes": false
+            },
+            {
+                "img": "images/mode_keysanity_smallkey_universal.png",
+                "codes": "keysanity_smallkey,keysanity_smallkey_off,keysanity_smallkey_universal",
+                "inherit_codes": false
             }
         ]
     },
