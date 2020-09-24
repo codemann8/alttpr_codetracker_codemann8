@@ -13,7 +13,7 @@ function updateProgressiveBow(segment)
             item.CurrentStage = 0
         end
     else
-        if testFlag(segment, 0x7ef38e, 0x80) then
+        if testFlag(segment, 0x7ef38e, 0x80) and ReadU8(segment, 0x7ef340) > 0 then
             item.Active = true
         else
             item.Active = false
