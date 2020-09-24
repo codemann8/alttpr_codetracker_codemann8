@@ -28,20 +28,16 @@ function EntranceShuffleMode:updateIcon()
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
     end
 
-    if self:getState() > 1 then
-        Tracker:FindObjectForCode("dropdown_swpinball").ActiveIcon = ImageReference:FromPackRelativePath("images/drop-swpinball.png")
-        Tracker:FindObjectForCode("dropdown_swcompass").ActiveIcon = ImageReference:FromPackRelativePath("images/drop-swcompass.png")
-        Tracker:FindObjectForCode("dropdown_swbigchest").ActiveIcon = ImageReference:FromPackRelativePath("images/drop-swbigchest.png")
-        Tracker:FindObjectForCode("dropdown_swhazard").ActiveIcon = ImageReference:FromPackRelativePath("images/drop-swhazard.png")
-    else
-        Tracker:FindObjectForCode("dropdown_swpinball").ActiveIcon = ""
-        Tracker:FindObjectForCode("dropdown_swcompass").ActiveIcon = ""
-        Tracker:FindObjectForCode("dropdown_swbigchest").ActiveIcon = ""
-        Tracker:FindObjectForCode("dropdown_swhazard").ActiveIcon = ""
-        Tracker:FindObjectForCode("dropdown_swpinball").Icon = ""
-        Tracker:FindObjectForCode("dropdown_swcompass").Icon = ""
-        Tracker:FindObjectForCode("dropdown_swbigchest").Icon = ""
-        Tracker:FindObjectForCode("dropdown_swhazard").Icon = ""
+    local drops =  { "swpinball", "swcompass", "swbigchest", "swhazard" }
+    for i = 1, #drops do
+        local drop = Tracker:FindObjectForCode("dropdown_" .. drops[i])
+        if self:getState() > 1 then
+            drop.ActiveIcon = drop.ActiveIcon
+            drop.IgnoreUserInput = false
+        else
+            drop.Icon = ""
+            drop.IgnoreUserInput = true
+        end
     end
 
     --Sync other surrogates
