@@ -57,7 +57,7 @@ function DoorTotalChest:onLeftClick()
 end
 
 function DoorTotalChest:onRightClick()
-    if OBJ_DOORSHUFFLE.CurrentStage == 2 then
+    if OBJ_DOORSHUFFLE.CurrentStage == 2 and self:getState() < 99 then
         local dungeons = {
             [0] = "hc",
             [1] = "ep",
