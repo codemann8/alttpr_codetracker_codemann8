@@ -5061,7 +5061,11 @@
     },
     {
         "name": "Dark Mountain Fairy",
-        "parent": "Dark Death Mountain West",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "world_state_open,@Dark Death Mountain West,[nothing]",
+            "world_state_inverted,@Death Mountain West Bottom,[nothing]"
+        ],
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -5077,7 +5081,14 @@
                 "x": 815,
                 "y": 376,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off,retro_mode_on" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 816,
+                "y": 378,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
