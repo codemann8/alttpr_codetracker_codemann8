@@ -11,8 +11,12 @@ print("---------------------------------------------------------------------")
 print("")
 
 function autotracker_started()
-    -- Invoked when the auto-tracker is activated/connected
+    AUTOTRACKER_ON = true
     START_TIME = os.time()
+end
+
+function autotracker_stopped()
+    AUTOTRACKER_ON = false
 end
 
 AUTOTRACKER_IS_IN_TRIFORCE_ROOM = false
