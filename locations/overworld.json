@@ -909,11 +909,11 @@
         ]
     },
     {
-        "name": "Race House Left",
+        "name": "Quarreling Brothers Left",
         "parent": "Light World",
         "access_rules": [
             "race_game",
-            "world_state_open,@Northwest Dark World,mirror"
+            "world_state_open,@South Dark World,mirror"
         ],
         "sections": [
             {
@@ -935,7 +935,7 @@
         ]
     },
     {
-        "name": "Race House Right",
+        "name": "Quarreling Brothers Right",
         "parent": "Light World",
         "sections": [
             {
