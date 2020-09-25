@@ -622,7 +622,7 @@
         ]
     },
     
-    //Locational Toggles
+    //Locational Items
     {
         "name": "Dam",
         "type": "toggle",
@@ -639,6 +639,54 @@
         "img": "images/attic-opened.png",
         "codes": "attic"
     },
+    {
+        "name": "Take Any Caves",
+        "type": "progressive_toggle",
+        "loop": false,
+        "stages": [
+            {
+                "img": "images/takeanycave.png",
+                "img_mods": "overlay|images/overlaySword-left.png",
+                "disabled_img": "images/takeanycave.png",
+                "disabled_img_mods": "",
+                "codes": "takeanycave",
+                "secondary_codes": "none,default,clear"
+            },
+            {
+                "img": "images/takeanycave.png",
+                "img_mods": "overlay|images/overlaySword-left.png,overlay|images/overlayHeart1.png",
+                "disabled_img": "images/takeanycave.png",
+                "disabled_img_mods": "overlay|images/overlayHeart1.png",
+                "codes": "takeanycave",
+                "secondary_codes": "1,one"
+            },
+            {
+                "img": "images/takeanycave.png",
+                "img_mods": "overlay|images/overlaySword-left.png,overlay|images/overlayHeart2.png",
+                "disabled_img": "images/takeanycave.png",
+                "disabled_img_mods": "overlay|images/overlayHeart2.png",
+                "codes": "takeanycave",
+                "secondary_codes": "2,two"
+            },
+            {
+                "img": "images/takeanycave.png",
+                "img_mods": "overlay|images/overlaySword-left.png,overlay|images/overlayHeart3.png",
+                "disabled_img": "images/takeanycave.png",
+                "disabled_img_mods": "overlay|images/overlayHeart3.png",
+                "codes": "takeanycave",
+                "secondary_codes": "3,three"
+            },
+            {
+                "img": "images/takeanycave.png",
+                "img_mods": "overlay|images/overlaySword-left.png,overlay|images/overlayHeart4.png",
+                "disabled_img": "images/takeanycave.png",
+                "disabled_img_mods": "overlay|images/overlayHeart4.png",
+                "codes": "takeanycave",
+                "secondary_codes": "4,four"
+            }
+        ]
+    },
+    
 
     //Dropdowns
     {

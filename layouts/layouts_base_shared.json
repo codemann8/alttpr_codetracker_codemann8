@@ -93,7 +93,7 @@
         "item_size": 40,
         "badge_font_size": 24,
         "rows": [
-            [ "dam", "attic", "gt_bkgame" ]
+            [ "dam", "attic", "takeanycave", "gt_bkgame" ]
         ]
     },
     "shared_lw_dynreq": {
