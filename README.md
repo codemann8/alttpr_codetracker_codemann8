@@ -15,7 +15,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon locations having a larger blip on the map compared to other locations
 - MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it.
 - In `Door Rando Mode`, under the `Dungeon` tab, maps are available and are able to be manually checked off when a room is found
-- In `Retro Mode`, when not in Entrance Shuffle, Shops and Take Any Caves show up as smaller blips on the map. Take Any Caves show up as yellow instead of green as they aren't as essential as the Shops. Universal keys can be set without Retro Mode active, simply disabling Small Key Shuffle is the correct way to handle this scenario.
+- In `Retro Mode`, when not in Entrance Shuffle, Shops and Take Any Caves show up as smaller blips on the map. Take Any Caves show up as yellow instead of green as they aren't as essential as the Shops. Universal keys can be set without Retro Mode active, simply disabling Small Key Shuffle is the correct way to handle this scenario. An icon in the `Misc` section allows the user to track the Take Any Caves as they are found.
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - GT Big Key Guessing Game, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
