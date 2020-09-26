@@ -25,7 +25,7 @@ function updateProgressiveBow(segment)
             else
                 item.CurrentStage = 2
             end
-        elseif OBJ_RETRO.CurrentStage > 0 and ReadU8(segment, 0x7ef377) == 0 then
+        elseif OBJ_RETRO.CurrentStage == 0 or (OBJ_RETRO.CurrentStage > 0 and ReadU8(segment, 0x7ef377) == 0) then
             item.CurrentStage = 0
         else
             item.CurrentStage = 1
