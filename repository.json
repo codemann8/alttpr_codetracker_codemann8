@@ -6,7 +6,7 @@
             "author": "codemann8",
             "game_name": "A Link to the Past Randomizer",
             "version": "2.2.0.0",
-            "flags": [ "map", "pins", "chathud", "autotrack" ],
+            "flags": [ "map", "pins", "chathud", "autotracker" ],
             "required_app_version": "2.3.8.6",
             "uid": "alttpr_codetracker_codemann8",
             "link": "https://github.com/codemann8/alttpr_codetracker_codemann8/releases/download/2.2.0.0/alttpr_codetracker_codemann8.zip",
@@ -14,23 +14,23 @@
             "variants": [
                 {
                     "name": "Map Tracker",
-                    "flags": [ "map", "pins", "chathud" ]
+                    "flags": [ "map", "pins", "chathud", "autotracker" ]
                 },
                 {
                     "name": "Map Tracker (Map Broadcast)",
-                    "flags": [ "map", "pins", "chathud" ]
+                    "flags": [ "map", "pins", "chathud", "autotracker" ]
                 },
                 {
                     "name": "Map Tracker (ER Broadcast)",
-                    "flags": [ "map", "pins", "chathud" ]
+                    "flags": [ "map", "pins", "chathud", "autotracker" ]
                 },
                 {
                     "name": "Item Tracker",
-                    "flags": [ "chathud" ]
+                    "flags": [ "chathud", "autotracker" ]
                 },
                 {
                     "name": "Item/Key Tracker",
-                    "flags": [ "chathud" ]
+                    "flags": [ "chathud", "autotracker" ]
                 }
             ]
         }
