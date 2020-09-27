@@ -6,7 +6,7 @@
             "author": "codemann8",
             "game_name": "A Link to the Past Randomizer",
             "version": "2.2.0.0",
-            "flags": [ "map", "pins", "chathud" ],
+            "flags": [ "map", "pins", "chathud", "auto" ],
             "required_app_version": "2.3.8.6",
             "uid": "alttpr_codetracker_codemann8",
             "link": "https://github.com/codemann8/alttpr_codetracker_codemann8/releases/download/2.2.0.0/alttpr_codetracker_codemann8.zip",
