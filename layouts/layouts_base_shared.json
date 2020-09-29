@@ -164,6 +164,14 @@
             },
             {
                 "type": "item",
+                "item": "dynreq_sw1_sur"
+            },
+            {
+                "type": "item",
+                "item": "dynreq_sw2_sur"
+            },
+            {
+                "type": "item",
                 "item": "dynreq_tt1_sur"
             },
             {
