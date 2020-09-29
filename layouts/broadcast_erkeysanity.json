@@ -1,51 +1,80 @@
 {
     "item_grid": {
-        "type": "itemgrid",
-        "h_alignment": "left",
-        "item_margin": "0,0,2,8",
-        "rows": [
-            [
-                "bow",
-                "boomerangs",
-                "hookshot",
-                "powder",
-                "mushroom"
-            ],
-            [
-                "firerod",
-                "icerod",
-                "bombos",
-                "ether",
-                "quake"
-            ],
-            [
-                "lamp",
-                "hammer",
-                "ocarina",
-                "net",
-                "book"
-            ],
-            [
-                "bottle",
-                "somaria",
-                "byrna",
-                "cape",
-                "mirror"
-            ],
-            [
-                "boots",
-                "lift1",
-                "flippers",
-                "pearl",
-                "shovel"
-            ],
-            [
-                "owsword",
-                "shield",
-                "armor",
-                "halfmagic",
-                "gomode"
-            ]
+        "type": "container",
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "left",
+                "item_margin": "0,0,2,8",
+                "rows": [
+                    [
+                        "bow",
+                        "boomerangs",
+                        "hookshot",
+                        "bomb",
+                        ""
+                    ],
+                    [
+                        "firerod",
+                        "icerod",
+                        "bombos",
+                        "ether",
+                        "quake"
+                    ],
+                    [
+                        "lamp",
+                        "hammer",
+                        "",
+                        "net",
+                        "book"
+                    ],
+                    [
+                        "bottle",
+                        "somaria",
+                        "byrna",
+                        "cape",
+                        "mirror"
+                    ],
+                    [
+                        "boots",
+                        "lift1",
+                        "flippers",
+                        "pearl",
+                        "halfmagic"
+                    ],
+                    [
+                        "owsword",
+                        "shield",
+                        "armor",
+                        "agas",
+                        "gomode"
+                    ]
+                ]
+            },
+            {
+                "type": "item",
+                "item": "flute",
+                "width": 24,
+                "margin": "-16,84,0,0"
+            },
+            {
+                "type": "item",
+                "item": "shovel",
+                "width": 24,
+                "margin": "14,96,0,0"
+            },
+            {
+                "type": "item",
+                "item": "powder",
+                "width": 24,
+                "margin": "118,4,0,0"
+            },
+            {
+                "type": "item",
+                "item": "mushroom",
+                "width": 24,
+                "margin": "156,18,0,0"
+            }
         ]
     },
     "tracker_broadcast": {
@@ -71,7 +100,7 @@
                             {
                                 "type": "itemgrid",
                                 "h_alignment": "center",
-                                "item_margin": "0,0,0,0",
+                                "item_margin": "0,7,0,0",
                                 "item_size": 40,
                                 "badge_font_size": 18,
                                 "background": "#3F000000",
@@ -80,7 +109,6 @@
                                     [ "goal_setting" ],
                                     [ "dam" ],
                                     [ "attic" ],
-                                    [ "agas" ],
                                     [ "gt_bkgame" ]
                                 ]
                             }

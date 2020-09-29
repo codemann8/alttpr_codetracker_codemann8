@@ -1,4 +1,76 @@
 {
+    "item_grid": {
+        "type": "container",
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_margin": "0,0,2,10",
+                "rows": [
+                    [
+                        "bow",
+                        "boomerangs",
+                        "hookshot",
+                        "bomb",
+                        "",
+                        "boots",
+                        "owsword"
+                    ],
+                    [
+                        "firerod",
+                        "icerod",
+                        "bombos",
+                        "ether",
+                        "quake",
+                        "lift1",
+                        "shield"
+                    ],
+                    [
+                        "lamp",
+                        "hammer",
+                        "",
+                        "net",
+                        "book",
+                        "flippers",
+                        "armor"
+                    ],
+                    [
+                        "bottle",
+                        "somaria",
+                        "byrna",
+                        "cape",
+                        "mirror",
+                        "pearl",
+                        "gomode"
+                    ]
+                ]
+            },
+            {
+                "type": "item",
+                "item": "flute",
+                "width": 24,
+                "margin": "-88,90,0,0"
+            },
+            {
+                "type": "item",
+                "item": "shovel",
+                "width": 24,
+                "margin": "-56,98,0,0"
+            },
+            {
+                "type": "item",
+                "item": "powder",
+                "width": 24,
+                "margin": "50,4,0,0"
+            },
+            {
+                "type": "item",
+                "item": "mushroom",
+                "width": 24,
+                "margin": "88,18,0,0"
+            }
+        ]
+    },
     "tracker_broadcast": {
         "type": "array",
         "dropshadow": true,
@@ -28,47 +100,8 @@
                                 "background": "#3F000000",
                                 "content": [
                                     {
-                                        "type": "itemgrid",
-                                        "h_alignment": "center",
-                                        "item_margin": "0,0,2,10",
-                                        "rows": [
-                                            [
-                                                "bow",
-                                                "boomerangs",
-                                                "hookshot",
-                                                "powder",
-                                                "mushroom",
-                                                "boots",
-                                                "owsword"
-                                            ],
-                                            [
-                                                "firerod",
-                                                "icerod",
-                                                "bombos",
-                                                "ether",
-                                                "quake",
-                                                "lift1",
-                                                "shield"
-                                            ],
-                                            [
-                                                "lamp",
-                                                "hammer",
-                                                "ocarina",
-                                                "shovel",
-                                                "book",
-                                                "flippers",
-                                                "armor"
-                                            ],
-                                            [
-                                                "bottle",
-                                                "somaria",
-                                                "byrna",
-                                                "cape",
-                                                "mirror",
-                                                "pearl",
-                                                "gomode"
-                                            ]
-                                        ]
+                                        "type": "layout",
+                                        "key": "item_grid"
                                     },
                                     {
                                         "type": "container",
