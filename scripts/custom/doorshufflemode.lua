@@ -1,24 +1,17 @@
-DoorShuffleMode = CustomItem:extend()
+DoorShuffleMode = SurrogateItem:extend()
 
-function DoorShuffleMode:init(suffix)
-    self:createItem("Door Shuffle" .. suffix)
-    self.code = "door_shuffle_surrogate"
-    self.suffix = suffix
+function DoorShuffleMode:init(isAlt)
+    self.baseCode = "door_shuffle"
+    self.label = "Door Shuffle"
 
+    self:initSuffix(isAlt)
+    self:initCode()
+
+    self:setCount(3)
     self:setState(0)
 end
 
-function DoorShuffleMode:setState(state)
-    self:setProperty("state", state)
-end
-
-function DoorShuffleMode:getState()
-    return self:getProperty("state")
-end
-
 function DoorShuffleMode:updateIcon()
-    Tracker:FindObjectForCode("door_shuffle").CurrentStage = self:getState()
-
     local mirror = Tracker:FindObjectForCode("mirror")
     local item = Tracker:FindObjectForCode("gt_bkgame")
 
@@ -44,28 +37,9 @@ function DoorShuffleMode:updateIcon()
             mirror.Icon = ImageReference:FromPackRelativePath("images/mirrorscroll.png")
         end
     end
+end
 
-    --Sync other surrogates
-    local state = -1
-    if self.suffix == "" then
-        item = Tracker:FindObjectForCode(self.code .. "_small")
-        if item then
-            state = item:ProvidesCode(self.code .. "_small")
-        end
-    else
-        item = Tracker:FindObjectForCode(self.code)
-        if item then
-            state = item:ProvidesCode(self.code)
-        end
-    end
-    if item and self:getState() ~= state then
-        if (self:getState() - state) % 3 == 1 then
-            item:OnLeftClick()
-        else
-            item:OnRightClick()
-        end
-    end
-
+function DoorShuffleMode:postUpdate()
     if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             local message = "NEW FEATURE: For Crossed Door Rando, new icons have been added to the lower right of the Dungeons section."
@@ -75,50 +49,5 @@ function DoorShuffleMode:updateIcon()
         end
 
         updateIcons()
-    end
-end
-
-function DoorShuffleMode:onLeftClick()
-    self:setState((self:getState() + 1) % 3)
-end
-
-function DoorShuffleMode:onRightClick()
-    self:setState((self:getState() - 1) % 3)
-end
-
-function DoorShuffleMode:canProvideCode(code)
-    if code == self.code .. self.suffix then
-        return true
-    else
-        return false
-    end
-end
-
-function DoorShuffleMode:providesCode(code)
-    if code == self.code .. self.suffix and self:getState() ~= 0 then
-        return self:getState()
-    end
-    return 0
-end
-
-function DoorShuffleMode:advanceToCode(code)
-    if code == nil or code == self.code .. self.suffix then
-        self:OnLeftClick()
-    end
-end
-
-function DoorShuffleMode:save()
-    return {}
-end
-
-function DoorShuffleMode:load(data)
-    local item = Tracker:FindObjectForCode("door_shuffle")
-    self:setState(item.CurrentStage)
-    return true
-end
-
-function DoorShuffleMode:propertyChanged(key, value)
-    if key == "state" then
-        self:updateIcon()
     end
 end
