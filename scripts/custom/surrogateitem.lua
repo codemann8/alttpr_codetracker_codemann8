@@ -29,6 +29,11 @@ function SurrogateItem:initSuffix(isAlt)
     end
 end
 
+function SurrogateItem:linkSurrogate(item)
+    self.linkedItem = item
+    item.linkedItem = self
+end
+
 function SurrogateItem:getState()
     return self:getProperty("state")
 end
@@ -53,21 +58,8 @@ function SurrogateItem:updateIcon()
 end
 
 function SurrogateItem:updateSurrogate()
-    local item = nil
-    local state = -1
-    if self.suffix == "" then
-        item = Tracker:FindObjectForCode(self.code .. "_small")
-        if item then
-            state = item.ItemState:getState()
-        end
-    else
-        item = Tracker:FindObjectForCode(self.code)
-        if item then
-            state = item.ItemState:getState()
-        end
-    end
-    if item and self:getState() ~= state then
-        item.ItemState:setState(self:getState())
+    if self.linkedItem and self:getState() ~= self.linkedItem:getState() then
+        self.linkedItem:setState(self:getState())
     end
 end
 
