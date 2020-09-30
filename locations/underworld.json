@@ -437,7 +437,10 @@
             {
                 "name": "Sahasrala",
                 "short_name": "Sah",
-                "access_rules": [ "greenpendant" ],
+                "access_rules": [
+                    "greenpendant",
+                    "prize:10"
+                ],
                 "item_count": 1
             }
         ],
@@ -695,16 +698,18 @@
         "name": "Pyramid Fairy",
         "parent": "East Dark World",
         "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_open,pearl,crystal56:2",
+            "world_state_open,pearl,prize:10",
+            "world_state_inverted,crystal56:2",
+            "world_state_inverted,prize:10"
         ],
         "sections": [
             {
                 "name": "Big Bomb Spot",
                 "access_rules": [
-                    "world_state_open,@South Dark World,crystal56:2,[hammer]",
-                    "world_state_open,@South Dark World,crystal56:2,[mirror],[aga]",
-                    "world_state_inverted,@Light World,crystal56:2,mirror"
+                    "world_state_open,@South Dark World,[hammer]",
+                    "world_state_open,@South Dark World,[mirror],[aga]",
+                    "world_state_inverted,@Light World,mirror"
                 ],
                 "item_count": 2
             }

@@ -154,8 +154,9 @@ end
 function gtCrystalCount()
     local reqCount = Tracker:ProviderCountForCode("gt_crystals")
     local count = Tracker:ProviderCountForCode("crystal")
+    local prizes = Tracker:ProviderCountForCode("prize")
 
-    if count >= reqCount then
+    if count >= reqCount or prizes == 10 then
         return 1
     else
         return 0
@@ -165,8 +166,9 @@ end
 function ganonCrystalCount()
     local reqCount = Tracker:ProviderCountForCode("ganon_crystals")
     local count = Tracker:ProviderCountForCode("crystal")
+    local prizes = Tracker:ProviderCountForCode("prize")
 
-    if count >= reqCount then
+    if count >= reqCount or prizes == 10 then
         return 1
     else
         return 0

@@ -9,6 +9,7 @@
                 "name": "Pedestal",
                 "access_rules": [
                     "greenpendant,pendant:2",
+                    "prize:10",
                     "{book}"
                 ],
                 "capture_item": true,
@@ -3618,7 +3619,8 @@
         "name": "Pyramid Fairy Entrance",
         "parent": "East Dark World",
         "access_rules": [
-            "crystal56:2"
+            "crystal56:2",
+            "prize:10"
         ],
         "sections": [
             {
