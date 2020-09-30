@@ -13,7 +13,12 @@ end
 
 function SurrogateItem:initCode()
     self.code = self.baseCode .. "_surrogate"
-    self:createItem(self.label .. self.suffix)
+    
+    if self.suffix == "" then
+        self:createItem(self.label .. " Base")
+    else
+        self:createItem(self.label)
+    end
 end
 
 function SurrogateItem:initSuffix(isAlt)
