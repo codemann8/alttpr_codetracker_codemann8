@@ -157,6 +157,7 @@
                     "world_state_open,dw_east,pearl,hammer",
                     "world_state_open,dw_southeast,pearl,[flippers],hammer",
                     "world_state_open,ip_area,pearl,[flippers],hammer",
+                    "world_state_open,aga,pearl,hammer",
                     "world_state_inverted,dw_witch,hammer",
                     "world_state_inverted,dw_east,hammer",
                     "world_state_inverted,dw_southeast,[flippers],hammer",
