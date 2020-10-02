@@ -710,7 +710,7 @@
                 "x": 220,
                 "y": 1175,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -1247,7 +1247,7 @@
                 "x": 1460,
                 "y": 1540,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -2867,7 +2867,7 @@
                 "x": 675,
                 "y": 115,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -2954,7 +2954,7 @@
                 "x": 665,
                 "y": 912,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -3155,7 +3155,7 @@
                 "x": 408,
                 "y": 1069,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -3235,7 +3235,7 @@
                 "x": 1616,
                 "y": 668,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -3535,7 +3535,7 @@
                 "x": 1300,
                 "y": 1615,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -4703,7 +4703,7 @@
                 "x": 1735,
                 "y": 290,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     },
@@ -5241,7 +5241,7 @@
                 "x": 1734,
                 "y": 295,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
         ]
     }
