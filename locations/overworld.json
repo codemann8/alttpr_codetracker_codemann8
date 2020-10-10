@@ -3168,8 +3168,8 @@
                 "name": "Bring Him Home",
                 "access_rules": [
                     "@Light World,pearl,lift2",
-                    "world_state_inverted,@Light World,pearl,mirror",
-                    "world_state_inverted,lift2,aga"
+                    "world_state_inverted,@Light World,mirror",
+                    "world_state_inverted,@Light World,lift2"
                 ],
                 "item_count": 1
             }
