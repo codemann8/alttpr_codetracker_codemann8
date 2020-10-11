@@ -2102,6 +2102,7 @@
                 "access_rules": [
                     "world_state_open,@East Dark World,pearl,flippers,mirror",
                     "world_state_open,@South Dark World,pearl,flippers,mirror",
+                    "world_state_open,@South Dark World,pearl,boots,[flippers],mirror",
                     "world_state_inverted,@Light World,pearl,[flippers]",
                     "{world_state_open}",
                     "{world_state_inverted,@Light World}"
