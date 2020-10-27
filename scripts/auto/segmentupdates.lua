@@ -418,20 +418,11 @@ function updateRoomsFromMemorySegment(segment)
     updateSectionChestCountFromRoomSlotList(segment, "@Ice Rod Cave/Cave", {{288, 4}})
     updateSectionChestCountFromRoomSlotList(segment, "@Mini Moldorm Cave/Cave", {{291, 4}, {291, 5}, {291, 6}, {291, 7}, {291, 10}})
     updateSectionChestCountFromRoomSlotList(segment, "@Bonk Rocks/Cave", {{292, 4}})
-	
-	if OBJ_RACEMODE.CurrentStage == 0 then
-		updateSectionChestCountFromRoomSlotList(segment, "@Checkerboard Cave/Cave", {{294, 9, 1}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Hammer Pegs/Cave", {{295, 10, 2}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", {{283, 9, 8}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Spectacle Rock/Cave", {{234, 10, 2}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", {{283, 10}}) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
-	else
-		updateSectionChestCountFromRoomSlotList(segment, "@Checkerboard Cave/Cave", {{294, 9}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Hammer Pegs/Cave", {{295, 10}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", {{283, 9}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Spectacle Rock/Cave", {{234, 10}})
-		updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", {{283, 10}}) --2, seperated this out in case a fix for cave 45 ever comes out.
-	end
+	updateSectionChestCountFromRoomSlotList(segment, "@Checkerboard Cave/Cave", {{294, 9, 1}})
+	updateSectionChestCountFromRoomSlotList(segment, "@Hammer Pegs/Cave", {{295, 10, 2}})
+	updateSectionChestCountFromRoomSlotList(segment, "@Graveyard Ledge/Cave", {{283, 9, 8}})
+	updateSectionChestCountFromRoomSlotList(segment, "@Spectacle Rock/Cave", {{234, 10, 2}})
+	updateSectionChestCountFromRoomSlotList(segment, "@Cave 45/Circle of Bushes", {{283, 10}}) --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
 end
 
 function updateDungeonItemsFromMemorySegment(segment)
