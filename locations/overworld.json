@@ -66,6 +66,7 @@
                 "chest_opened_img": "images/door_open.png",
                 "short_name": "Entrance",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -138,6 +139,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -193,6 +195,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -215,6 +218,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -260,6 +264,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -305,6 +310,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -328,6 +334,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -351,6 +358,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -374,6 +382,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -440,6 +449,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -485,6 +495,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -532,6 +543,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -580,6 +592,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "grass_house"
             }
         ],
@@ -658,6 +671,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -680,6 +694,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -727,6 +742,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "bomb_hut"
             }
         ],
@@ -775,6 +791,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -797,6 +814,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -852,6 +870,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -874,6 +893,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -922,6 +942,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "race_game"
             }
         ],
@@ -944,6 +965,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1003,6 +1025,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1055,6 +1078,7 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -1077,6 +1101,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1099,6 +1124,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1125,6 +1151,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1173,6 +1200,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1217,6 +1245,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1267,6 +1296,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1352,6 +1382,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1374,6 +1405,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1421,6 +1453,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1447,6 +1480,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1469,6 +1503,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1520,6 +1555,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1574,6 +1610,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "lw_witch"
             }
         ],
@@ -1596,6 +1633,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1618,6 +1656,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1662,6 +1701,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1706,6 +1746,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1756,6 +1797,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1810,6 +1852,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1839,6 +1882,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -1869,6 +1913,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "kings_tomb"
             }
         ],
@@ -1895,6 +1940,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "graveyard_ledge"
             }
         ],
@@ -1919,6 +1965,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "castle_top"
             }
         ],
@@ -1941,6 +1988,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "castle_top"
             }
         ],
@@ -1968,6 +2016,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "castle_top"
             }
         ],
@@ -2016,6 +2065,7 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2046,6 +2096,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "zora_area"
             }
         ],
@@ -2187,6 +2238,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "upgrade_fairy"
             }
         ],
@@ -2210,6 +2262,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "desert_ledge"
             }
         ],
@@ -2240,6 +2293,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "desert_back"
             }
         ],
@@ -2295,6 +2349,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -2321,6 +2376,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "desert_front"
             }
         ],
@@ -2343,6 +2399,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -2365,6 +2422,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -2416,6 +2474,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -2468,6 +2527,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "light_world"
             }
         ],
@@ -2559,6 +2619,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "lw_dmentry"
                     }
                 ],
@@ -2592,6 +2653,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "lw_dmentry"
                     }
                 ],
@@ -2632,6 +2694,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "sw_area"
             }
         ],
@@ -2654,6 +2717,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "sw_area"
             }
         ],
@@ -2679,6 +2743,7 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2704,6 +2769,7 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2727,6 +2793,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -2749,6 +2816,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -2770,6 +2838,7 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2791,6 +2860,7 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2816,6 +2886,7 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
                 "item_count": 1
             }
         ],
@@ -2838,6 +2909,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -2881,6 +2953,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -2925,6 +2998,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -2968,6 +3042,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -3012,6 +3087,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -3038,6 +3114,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -3060,6 +3137,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -3086,6 +3164,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_west"
             }
         ],
@@ -3117,6 +3196,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "hammer_house"
             }
         ],
@@ -3206,6 +3286,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_witch"
             }
         ],
@@ -3308,6 +3389,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3388,6 +3470,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3436,6 +3519,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3462,6 +3546,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3484,6 +3569,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3506,6 +3592,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_south"
             }
         ],
@@ -3578,6 +3665,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3629,6 +3717,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3651,6 +3740,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3695,6 +3785,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3743,6 +3834,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3765,6 +3857,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_east"
             }
         ],
@@ -3813,6 +3906,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_southeast"
             }
         ],
@@ -3861,6 +3955,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_southeast"
             }
         ],
@@ -3912,6 +4007,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dw_southeast"
             }
         ],
@@ -4006,6 +4102,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "hammer_pegs"
             }
         ],
@@ -4034,6 +4131,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "bumper_cave"
                     }
                 ],
@@ -4067,6 +4165,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "bumper_entrance"
                     }
                 ],
@@ -4138,6 +4237,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ip_area"
             }
         ],
@@ -4171,6 +4271,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "mire_area"
             }
         ],
@@ -4219,6 +4320,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "mire_area"
             }
         ],
@@ -4241,6 +4343,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "mire_area"
             }
         ],
@@ -4285,6 +4388,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "mire_area"
             }
         ],
@@ -4364,6 +4468,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_top"
             }
         ],
@@ -4386,6 +4491,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_top"
             }
         ],
@@ -4454,6 +4560,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4476,6 +4583,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4498,6 +4606,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4520,6 +4629,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4542,6 +4652,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4564,6 +4675,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4586,6 +4698,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_west_bottom"
             }
         ],
@@ -4608,6 +4721,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_bottom"
             }
         ],
@@ -4630,6 +4744,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_bottom"
             }
         ],
@@ -4674,6 +4789,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_bottom"
             }
         ],
@@ -4717,6 +4833,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_bottom"
             }
         ],
@@ -4744,6 +4861,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_connect"
             }
         ],
@@ -4770,6 +4888,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_spiral"
             }
         ],
@@ -4796,6 +4915,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_mimic"
             }
         ],
@@ -4826,6 +4946,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "dm_east_bottom"
             }
         ],
@@ -4878,6 +4999,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_floating"
             }
         ],
@@ -4904,6 +5026,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_top"
             }
         ],
@@ -4933,6 +5056,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_top"
             }
         ],
@@ -4955,6 +5079,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_top"
             }
         ],
@@ -4987,6 +5112,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_top"
             }
         ],
@@ -5032,6 +5158,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_west"
             }
         ],
@@ -5054,6 +5181,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_west"
             }
         ],
@@ -5118,6 +5246,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "ddm_tr_bridge"
                     }
                 ],
@@ -5139,6 +5268,7 @@
                         "chest_unopened_img": "images/door_closed.png",
                         "chest_opened_img": "images/door_open.png",
                         "item_count": 1,
+                        "capture_item": true,
                         "hosted_item": "ddm_tr_bridge"
                     }
                 ],
@@ -5168,6 +5298,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_tr_safety"
             }
         ],
@@ -5190,6 +5321,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_east"
             }
         ],
@@ -5212,6 +5344,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
+                "capture_item": true,
                 "hosted_item": "ddm_east"
             }
         ],
