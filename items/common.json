@@ -1021,6 +1021,25 @@
             }
         ]
     },
+    // Pool Mode
+    {
+        "name": "Pool Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_pool_chest.png",
+                "codes": "pool_mode,pool_mode_chest",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_pool_chestkeydrop.png",
+                "codes": "pool_mode,pool_mode_chestkeydrop",
+                "inherit_codes": false
+            }
+        ]
+    },
     // Race Mode
     {
         "name": "Race Mode",

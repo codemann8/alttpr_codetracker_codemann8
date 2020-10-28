@@ -493,8 +493,9 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         else
             currentKeys = ReadU8(segment, address)
         end
+        
         local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-        if potKeys then
+        if potKeys and OBJ_POOL.CurrentStage == 0 then
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
         else
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
@@ -566,6 +567,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
             local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
             local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+            local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
             local dungeonItems = 0
 
             if map.Active and Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 then
@@ -589,7 +591,18 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
             end
 
-            item.AcquiredCount = math.max(item.MaxCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+            if potkey and OBJ_POOL.CurrentStage > 0 then
+                local addedKeys = potkey.AcquiredCount
+                if OBJ_KEYSANITY_SMALL.CurrentStage == 1 then
+                    --addedKeys = potKey.MaxCount
+                end
+                if dungeonPrefix == "hc" and bigkey.Active then
+                    addedKeys = addedKeys - 1
+                end
+                item.AcquiredCount = math.max(item.MaxCount - (((chest.MaxCount - chest.AcquiredCount) - dungeonItems) + addedKeys), 0)
+            else
+                item.AcquiredCount = math.max(item.MaxCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+            end
         end
     end
 end

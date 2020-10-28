@@ -207,6 +207,7 @@ function updateRoomsFromMemorySegment(segment)
         if Tracker.ActiveVariantUID ~= "items_only" and OBJ_DOORSHUFFLE.CurrentStage == 0 then
             --Doors Opened
             updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ep_door", {{186, 15, 185, 15}, {153, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
             updateDoorKeyCountFromRoomSlotList(segment, "toh_door", {{119, 15}})
             updateDoorKeyCountFromRoomSlotList(segment, "at_door", {{224, 13}, {208, 15}, {192, 13}, {176, 13}})
@@ -220,7 +221,8 @@ function updateRoomsFromMemorySegment(segment)
             updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
 
             --Pot and Enemy Keys
-            updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {33, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}, {153, 10}})
             updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
             updateDoorKeyCountFromRoomSlotList(segment, "at_potkey", {{192, 10}, {176, 10}})
             updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
@@ -269,18 +271,19 @@ function updateRoomsFromMemorySegment(segment)
         updateDungeonChestCountFromRoomSlotList(segment, "gt_chest", {{140, 10}, {123, 4}, {123, 5}, {123, 6}, {123, 7}, {139, 4}, {125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}, {140, 4}, {140, 5}, {140, 6}, {140, 7}, {28, 4}, {28, 5}, {28, 6}, {141, 4}, {157, 4}, {157, 5}, {157, 6}, {157, 7}, {61, 4}, {61, 5}, {61, 6}, {77, 4}})
 
         --Keysanity Dungeon Map Locations
-        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/First", {{114, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Boomerang\\Prison", {{113, 4}, {128, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Dark Cross", {{50, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Back", {{17, 4}, {17, 5}, {17, 6}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Sanctuary/Sanctuary", {{18, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/First", {{114, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Boomerang", {{113, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Prison", {{128, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Dark Cross", {{50, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Back", {{17, 4}, {17, 5}, {17, 6}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Sanctuary", {{18, 4}})
 
         updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Front", {{185, 4}, {170, 4}, {168, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Big Chest", {{169, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Big Key Chest", {{184, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Armos", {{200, 11}})
 
-        updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Eyegore Room", {{116, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Eyegore Switch", {{116, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Popo Chest", {{133, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Cannonball Chest", {{117, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Torch", {{115, 10}})
@@ -293,8 +296,8 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Tower of Hera/Big Chest", {{39, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Tower of Hera/Moldorm", {{7, 11}})
 
-        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Front", {{224, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Back", {{208, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Lobby", {{224, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Dark Chest", {{208, 4}})
 
         updateSectionChestCountFromRoomSlotList(segment, "@Palace of Darkness/Shooter Chest", {{9, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Palace of Darkness/Bow Side", {{43, 4}})
@@ -311,7 +314,8 @@ function updateRoomsFromMemorySegment(segment)
 
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Entrance Chest", {{40, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Bomb Wall", {{55, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Left\\South Side", {{53, 4}, {52, 4}, {70, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/South Side", {{70, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Left Side", {{53, 4}, {52, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Big Chest", {{54, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Back", {{118, 4}, {118, 5}, {102, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Arrghus", {{6, 11}})
@@ -336,8 +340,11 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Big Chest", {{158, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Khold", {{222, 11}})
 
-        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Front", {{162, 4}, {179, 4}, {194, 4}, {195, 5}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Spike Switch", {{179, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Bridge", {{162, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Main Hub", {{194, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Left Side", {{193, 4}, {209, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Blue Peg Chest", {{195, 5}})
         updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Big Chest", {{195, 4}})
         updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Vitreous", {{144, 11}})
 
@@ -354,7 +361,8 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Torch", {{140, 3}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Stalfos Room", {{123, 4}, {123, 5}, {123, 6}, {123, 7}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Map Chest", {{139, 4}})
-        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Firesnake\\Rando", {{125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Firesnake", {{125, 4}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Rando Room", {{124, 4}, {124, 5}, {124, 6}, {124, 7}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Compass Room", {{157, 4}, {157, 5}, {157, 6}, {157, 7}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Bob\\Ice Armos", {{140, 7}, {28, 4}, {28, 5}, {28, 6}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Tile Room", {{141, 4}})
@@ -362,6 +370,51 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Mini Helmasaur", {{61, 4}, {61, 5}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Pre-Moldorm", {{61, 6}})
         updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Validation", {{77, 4}})
+
+        --Key Drop Locations
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Key Guard", {{114, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Boomerang Guard", {{113, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Ball 'N Chain Guard", {{128, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Hyrule Castle & Escape/Key Rat", {{33, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Dark Pot Key", {{186, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Eastern Palace/Dark Eyegore", {{153, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Back Lobby Key", {{99, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Beamos Hall Key", {{83, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Desert Palace/Back Tiles Key", {{67, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Bow Guard", {{192, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Agahnim's Tower/Circle of Pots Key", {{176, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Pot Row Key", {{56, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Front Flood Key", {{55, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Hookshot Key", {{54, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Left Flood Key", {{53, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Swamp Palace/Waterway Key", {{22, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/West Lobby Key", {{86, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Skull Woods/Gibdo Key", {{57, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Hallway Key", {{188, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Thieves Town/Spike Switch Key", {{171, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Lobby Key", {{14, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Conveyor Key", {{62, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Boulder Key", {{63, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ice Palace/Ice Hell Key", {{159, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Spike Key", {{179, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Fishbone Key", {{161, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Misery Mire/Conveyor Jelly", {{193, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Chain Chomp Pokey", {{182, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Turtle Rock/Lava Pokey", {{19, 10}})
+
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Conveyor Bumper Key", {{139, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Double Switch Key", {{155, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Post-Compass Key", {{123, 10}})
+        updateSectionChestCountFromRoomSlotList(segment, "@Ganon's Tower/Mini Helmasaur Key", {{61, 10}})
     end
 
     --Marking Bosses as Complete

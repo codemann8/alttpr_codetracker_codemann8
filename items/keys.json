@@ -3,6 +3,7 @@
     {
         "name": "Hyrule Castle Big Key",
         "type": "toggle",
+        "img": "images/BigKey.png",
         "codes": "hc_bigkey"
     },
     {
@@ -26,6 +27,7 @@
     {
         "name": "Aganihm's Tower Big Key",
         "type": "toggle",
+        "img": "images/BigKey.png",
         "codes": "at_bigkey"
     },
     {
