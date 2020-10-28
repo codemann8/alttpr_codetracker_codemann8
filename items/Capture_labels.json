@@ -1,0 +1,787 @@
+[
+
+ // Dungeon Labels
+
+  // HC Label
+  {
+    "name": "Hyrule Castle",
+    "type": "toggle",
+    "img": "images/Capture/CapHC.png",
+    "codes": "cap_hclabel"
+  },
+  {
+    "name": "Hyrule Castle West",
+    "type": "toggle",
+    "img": "images/Capture/CapHCW.png",
+    "codes": "cap_hcwlabel"
+  },
+  {
+    "name": "Hyrule Castle East",
+    "type": "toggle",
+    "img": "images/Capture/CapHCE.png",
+    "codes": "cap_hcelabel"
+  },
+  // AT Label
+  {
+    "name": "Aganhim's Tower",
+    "type": "toggle",
+    "img": "images/Capture/CapAT.png",
+    "codes": "cap_atlabel"
+  },
+  // EP Label
+  {
+    "name": "Eastern Palace",
+    "type": "toggle",
+    "img": "images/Capture/CapEP.png",
+    "codes": "cap_eplabel"
+  },
+  // DP Label
+  {
+    "name": "Desert Palace",
+    "type": "toggle",
+    "img": "images/Capture/CapDP.png",
+    "codes": "cap_dplabel"
+  },
+
+  {
+    "name": "Desert Palace Back",
+    "type": "toggle",
+    "img": "images/Capture/CapDPB.png",
+    "codes": "cap_dpblabel"
+  },
+
+  {
+    "name": "Desert Palace West",
+    "type": "toggle",
+    "img": "images/Capture/CapDPW.png",
+    "codes": "cap_dpwlabel"
+  },
+
+  {
+    "name": "Desert Palace East",
+    "type": "toggle",
+    "img": "images/Capture/CapDPE.png",
+    "codes": "cap_dpelabel"
+  },
+  // TOH Label
+  {
+    "name": "Tower of Hera",
+    "type": "toggle",
+    "img": "images/Capture/CapTOH.png",
+    "codes": "cap_tohlabel"
+  },
+  // POD Label
+  {
+    "name": "Palace of Darkness",
+    "type": "toggle",
+    "img": "images/Capture/CapPD.png",
+    "codes": "cap_podlabel"
+  },
+  // SP Label
+  {
+    "name": "Swamp Palace",
+    "type": "toggle",
+    "img": "images/Capture/CapSP.png",
+    "codes": "cap_splabel"
+  },
+  // SW Label
+  {
+    "name": "Skull Woods",
+    "type": "toggle",
+    "img": "images/Capture/CapSW.png",
+    "codes": "cap_swlabel"
+  },
+  {
+    "name": "Skull Woods Back",
+    "type": "toggle",
+    "img": "images/Capture/CapSWB.png",
+    "codes": "cap_swblabel"
+  },
+  // TT Label
+  {
+    "name": "Thieves Town",
+    "type": "toggle",
+    "img": "images/Capture/CapTT.png",
+    "codes": "cap_ttlabel"
+  },
+  // IP Label
+  {
+    "name": "Ice Palace",
+    "type": "toggle",
+    "img": "images/Capture/CapIP.png",
+    "codes": "cap_iplabel"
+  },
+  // MM Label
+  {
+    "name": "Misery Mire",
+    "type": "toggle",
+    "img": "images/Capture/CapMM.png",
+    "codes": "cap_mmlabel"
+  },
+  // TR Label
+  {
+    "name": "Turtle Rock",
+    "type": "toggle",
+    "img": "images/Capture/CapTR.png",
+    "codes": "cap_trlabel"
+  },
+  {
+    "name": "Turtle Rock Back",
+    "type": "toggle",
+    "img": "images/Capture/CapTRB.png",
+    "codes": "cap_trblabel"
+  },
+  {
+    "name": "Turtle Rock Ledge West",
+    "type": "toggle",
+    "img": "images/Capture/CapTRLW.png",
+    "codes": "cap_trlwlabel"
+  },
+  {
+    "name": "Turtle Rock Ledge East",
+    "type": "toggle",
+    "img": "images/Capture/CapTRLE.png",
+    "codes": "cap_trlelabel"
+  },
+  // GT Label
+  {
+    "name": "Ganon's Tower",
+    "type": "toggle",
+    "img": "images/Capture/CapGT.png",
+    "codes": "cap_gtlabel"
+  },
+ // Ganon Label
+  {
+    "name": "Ganon",
+    "type": "toggle",
+    "img": "images/Capture/CapGan.png",
+    "codes": "cap_ganlabel"
+  },
+
+  //Common Items Lebels
+
+  {
+    "name": "Half Magic",
+    "type": "toggle",
+    "img": "images/Capture/CapHalfM.png",
+    "codes": "cap_halfm"
+  },
+
+  {
+    "name": "Bow",
+    "type": "toggle",
+    "img": "images/Capture/CapBow.png",
+    "codes": "cap_bow"
+  },
+
+  {
+    "name": "Silvers",
+    "type": "toggle",
+    "img": "images/Capture/CapBowSilver.png",
+    "codes": "cap_bowsilver"
+  },
+
+  {
+    "name": "Red Boomerang",
+    "type": "toggle",
+    "img": "images/Capture/CapRangRed.png",
+    "codes": "cap_rred"
+  },
+
+  {
+    "name": "Blue Boomerang",
+    "type": "toggle",
+    "img": "images/Capture/CapRangBlue.png",
+    "codes": "cap_rblue"
+  },
+
+  {
+    "name": "Hookshot",
+    "type": "toggle",
+    "img": "images/Capture/CapHookshot.png",
+    "codes": "cap_hook"
+  },
+
+  {
+    "name": "Bomb",
+    "type": "toggle",
+    "img": "images/Capture/CapBomb.png",
+    "codes": "cap_bomb"
+  },
+
+  {
+    "name": "Powder",
+    "type": "toggle",
+    "img": "images/Capture/CapPowder.png",
+    "codes": "cap_powder"
+  },
+
+  {
+    "name": "Bottle",
+    "type": "toggle",
+    "img": "images/Capture/CapBottle.png",
+    "codes": "cap_bottle"
+  },
+
+  {
+    "name": "Fire Rod",
+    "type": "toggle",
+    "img": "images/Capture/CapFRod.png",
+    "codes": "cap_frod"
+  },
+
+  {
+    "name": "Ice Rod",
+    "type": "toggle",
+    "img": "images/Capture/CapIRod.png",
+    "codes": "cap_irod"
+  },
+
+  {
+    "name": "Bombos",
+    "type": "toggle",
+    "img": "images/Capture/CapBombos.png",
+    "codes": "cap_bombos"
+  },
+
+  {
+    "name": "Ether",
+    "type": "toggle",
+    "img": "images/Capture/CapEther.png",
+    "codes": "cap_ether"
+  },
+
+  {
+    "name": "Quake",
+    "type": "toggle",
+    "img": "images/Capture/CapQuake.png",
+    "codes": "cap_quake"
+  },
+
+  {
+    "name": "Lamp",
+    "type": "toggle",
+    "img": "images/Capture/CapLamp.png",
+    "codes": "cap_lamp"
+  },
+
+  {
+    "name": "Hammer",
+    "type": "toggle",
+    "img": "images/Capture/CapHammer.png",
+    "codes": "cap_hammer"
+  },
+
+  {
+    "name": "Flute",
+    "type": "toggle",
+    "img": "images/Capture/CapFlute.png",
+    "codes": "cap_Flute"
+  },
+
+  {
+    "name": "Bug Net",
+    "type": "toggle",
+    "img": "images/Capture/CapNet.png",
+    "codes": "cap_net"
+  },
+
+  {
+    "name": "Book of Madora",
+    "type": "toggle",
+    "img": "images/Capture/CapBook.png",
+    "codes": "cap_book"
+  },
+
+  {
+    "name": "Shovel",
+    "type": "toggle",
+    "img": "images/Capture/CapShovel.png",
+    "codes": "cap_shoval"
+  },
+
+  {
+    "name": "Cane of Sumaria",
+    "type": "toggle",
+    "img": "images/Capture/CapCaneS.png",
+    "codes": "cap_caneS"
+  },
+
+  {
+    "name": "Cane of Burna",
+    "type": "toggle",
+    "img": "images/Capture/CapCaneB.png",
+    "codes": "cap_caneB"
+  },
+
+  {
+    "name": "Magic Cape",
+    "type": "toggle",
+    "img": "images/Capture/CapCape.png",
+    "codes": "cap_cape"
+  },
+
+  {
+    "name": "Magic Mirror",
+    "type": "toggle",
+    "img": "images/Capture/CapMirror.png",
+    "codes": "cap_mirror"
+  },
+
+  {
+    "name": "Boots",
+    "type": "toggle",
+    "img": "images/Capture/CapBoots.png",
+    "codes": "cap_boots"
+  },
+
+  {
+    "name": "Lift Gloves",
+    "type": "toggle",
+    "img": "images/Capture/CapGloves.png",
+    "codes": "cap_gloves"
+  },
+
+  {
+    "name": "Titans Mitts",
+    "type": "toggle",
+    "img": "images/Capture/CapMitts.png",
+    "codes": "cap_mitts"
+  },
+
+  {
+    "name": "Flippers",
+    "type": "toggle",
+    "img": "images/Capture/CapFlippers.png",
+    "codes": "cap_flippers"
+  },
+
+  {
+    "name": "Moon Pearl",
+    "type": "toggle",
+    "img": "images/Capture/CapPearl.png",
+    "codes": "cap_pearl"
+  },
+
+  {
+    "name": "Fighters Sword",
+    "type": "toggle",
+    "img": "images/Capture/CapFSword.png",
+    "codes": "cap_fsword"
+  },
+
+  {
+    "name": "Master Sword",
+    "type": "toggle",
+    "img": "images/Capture/CapMSword.png",
+    "codes": "cap_msword"
+  },
+
+  {
+    "name": "Tempered Sword",
+    "type": "toggle",
+    "img": "images/Capture/CapTSword.png",
+    "codes": "cap_tsword"
+  },
+
+  {
+    "name": "Butter Sword",
+    "type": "toggle",
+    "img": "images/Capture/CapBSword.png",
+    "codes": "cap_bsword"
+  },
+
+  {
+    "name": "Shield",
+    "type": "toggle",
+    "img": "images/Capture/CapShield.png",
+    "codes": "cap_shield"
+  },
+
+  {
+    "name": "Red Shield",
+    "type": "toggle",
+    "img": "images/Capture/CapRedShield.png",
+    "codes": "cap_redshield"
+  },
+
+  {
+    "name": "Mirror Shield",
+    "type": "toggle",
+    "img": "images/Capture/CapMShield.png",
+    "codes": "cap_mshield"
+  },
+
+  {
+    "name": "Blue Mail",
+    "type": "toggle",
+    "img": "images/Capture/CapBMail.png",
+    "codes": "cap_bmail"
+  },
+
+  {
+    "name": "Red Mail",
+    "type": "toggle",
+    "img": "images/Capture/CapRMail.png",
+    "codes": "cap_rmail"
+  },
+
+  {
+    "name": "Small Key",
+    "type": "toggle",
+    "img": "images/Capture/CapSmallKey.png",
+    "codes": "cap_smallkey"
+  },
+
+  {
+    "name": "Big Key",
+    "type": "toggle",
+    "img": "images/Capture/CapBigKey.png",
+    "codes": "cap_bigkey"
+  },
+
+  {
+    "name": "Bomb Farm Location",
+    "type": "toggle",
+    "img": "images/Capture/CapBFM.png",
+    "codes": "cap_bfm"
+  },
+
+  {
+    "name": "Rupee Farm Location",
+    "type": "toggle",
+    "img": "images/Capture/CapRFM.png",
+    "codes": "cap_rfm"
+  },
+
+  {
+    "name": "Sahasrahla's Hut",
+    "type": "toggle",
+    "img": "images/Capture/CapSAH.png",
+    "codes": "cap_sah"
+  },
+  
+  // Misc Location Labels
+
+  {
+    "name": "Dead Ent",
+    "type": "toggle",
+    "img": "images/Capture/CapDead.png",
+    "codes": "cap_dead"
+  },
+
+  {
+    "name": "Kakariko Well",
+    "type": "toggle",
+    "img": "images/Capture/CapWell.png",
+    "codes": "cap_well"
+  },
+
+  {
+    "name": "Library",
+    "type": "toggle",
+    "img": "images/Capture/CapLibrary.png",
+    "codes": "cap_library"
+  },
+
+  {
+    "name": "Thief Hidout",
+    "type": "toggle",
+    "img": "images/Capture/CapTH.png",
+    "codes": "cap_thief"
+  },
+
+  {
+    "name": "Lumberjack",
+    "type": "toggle",
+    "img": "images/Capture/CapLJ.png",
+    "codes": "cap_lj"
+  },
+
+  {
+    "name": "Old Man Get Left",
+    "type": "toggle",
+    "img": "images/Capture/CapOldML.png",
+    "codes": "cap_oml"
+  },
+
+  {
+    "name": "Old Man Get Right",
+    "type": "toggle",
+    "img": "images/Capture/CapOldMR.png",
+    "codes": "cap_omr"
+  },
+
+  {
+    "name": "Old Man Home",
+    "type": "toggle",
+    "img": "images/Capture/CapOM.png",
+    "codes": "cap_om"
+  },
+
+  {
+    "name": "Old Man Home Back",
+    "type": "toggle",
+    "img": "images/Capture/CapOldManBack.png",
+    "codes": "cap_omb"
+  },
+
+  {
+    "name": "Death Mountain Exit Left",
+    "type": "toggle",
+    "img": "images/Capture/CapDeathMEL.png",
+    "codes": "cap_dmel"
+  },
+
+  {
+    "name": "Death Mountain Exit Right",
+    "type": "toggle",
+    "img": "images/Capture/CapDeathMER.png",
+    "codes": "cap_dmer"
+  },
+
+  {
+    "name": "Mimic Cave",
+    "type": "toggle",
+    "img": "images/Capture/CapMimic.png",
+    "codes": "cap_mimic"
+  },
+
+  {
+    "name": "Spectical Rock Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapSpecUp.png",
+    "codes": "cap_specup"
+  },
+
+  {
+    "name": "Spectical Rock Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapSpecLow.png",
+    "codes": "cap_speclow"
+  },
+
+  {
+    "name": "Spectical Rock Left",
+    "type": "toggle",
+    "img": "images/Capture/CapSpecLeft.png",
+    "codes": "cap_specleft"
+  },
+
+  {
+    "name": "Spectical Rock Right",
+    "type": "toggle",
+    "img": "images/Capture/CapSpecRight.png",
+    "codes": "cap_specright"
+  },
+
+  {
+    "name": "Paradox Cave Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapParUp.png",
+    "codes": "cap_parup"
+  },
+
+  {
+    "name": "Paradox Mid",
+    "type": "toggle",
+    "img": "images/Capture/CapParMid.png",
+    "codes": "cap_parmid"
+  },
+
+  {
+    "name": "Pardox Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapParLow.png",
+    "codes": "cap_parlow"
+  },
+
+  {
+    "name": "Super Bunny Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapSuperBU.png",
+    "codes": "cap_supbunup"
+  },
+
+  {
+    "name": "Super Bunny Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapSuperBL.png",
+    "codes": "cap_supbunlow"
+  },
+
+  {
+    "name": "Spiral Cave Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapSpiralUp.png",
+    "codes": "cap_spiralup"
+  },
+
+  {
+    "name": "Spiral Cave Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapSpiralDn.png",
+    "codes": "cap_spirallow"
+  },
+
+  {
+    "name": "Bumper Cave Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapBumpCaveUp.png",
+    "codes": "cap_bumpup"
+  },
+
+  {
+    "name": "Bumper Cave Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapBumpCaveDn.png",
+    "codes": "cap_bumplow"
+  },
+
+  {
+    "name": "Spike Cave",
+    "type": "toggle",
+    "img": "images/Capture/CapSPK.png",
+    "codes": "cap_spk"
+  },
+
+  {
+    "name": "Hookshot Cave Front",
+    "type": "toggle",
+    "img": "images/Capture/CapHSFront.png",
+    "codes": "cap_hsfront"
+  },
+
+  {
+    "name": "Hook Shot Cave Back",
+    "type": "toggle",
+    "img": "images/Capture/CapHSBack.png",
+    "codes": "cap_hsback"
+  },
+
+  {
+    "name": "Fairy Ascension Cave Upper",
+    "type": "toggle",
+    "img": "images/Capture/CapFairyACU.png",
+    "codes": "cap_fairyacu"
+  },
+
+  {
+    "name": "Fairy Ascension Cave Lower",
+    "type": "toggle",
+    "img": "images/Capture/CapFairyACL.png",
+    "codes": "cap_fairyacl"
+  },
+
+  {
+    "name": "Race House Left",
+    "type": "toggle",
+    "img": "images/Capture/CapRaceHL.png",
+    "codes": "cap_racehl"
+  },
+
+  {
+    "name": "Race House Right",
+    "type": "toggle",
+    "img": "images/Capture/CapRaceHR.png",
+    "codes": "cap_racehr"
+  },
+
+  {
+    "name": "Elder Door Left",
+    "type": "toggle",
+    "img": "images/Capture/CapElderDL.png",
+    "codes": "cap_elderdl"
+  },
+
+  {
+    "name": "Elder Door Right",
+    "type": "toggle",
+    "img": "images/Capture/CapElderDR.png",
+    "codes": "cap_elderdr"
+  },
+
+  {
+    "name": "Sick Kid",
+    "type": "toggle",
+    "img": "images/Capture/CapSickKid.png",
+    "codes": "cap_sickkid"
+  },
+
+  {
+    "name": "Shop",
+    "type": "toggle",
+    "img": "images/Capture/CapShop.png",
+    "codes": "cap_shop"
+  },
+
+  {
+    "name": "Potion Shop",
+    "type": "toggle",
+    "img": "images/Capture/CapPShop.png",
+    "codes": "cap_pshop"
+  },
+
+  {
+    "name": "Smith House",
+    "type": "toggle",
+    "img": "images/Capture/CapSmith.png",
+    "codes": "cap_smith"
+  },
+
+  {
+    "name": "Bat",
+    "type": "toggle",
+    "img": "images/Capture/CapBat.png",
+    "codes": "cap_bat"
+  },
+
+  {
+    "name": "Dam",
+    "type": "toggle",
+    "img": "images/Capture/CapDam.png",
+    "codes": "cap_dam"
+  },
+
+  {
+    "name": "Luck Fairy",
+    "type": "toggle",
+    "img": "images/Capture/CapLF.png",
+    "codes": "cap_lf"
+  },
+
+  {
+    "name": "Bomb Shop",
+    "type": "toggle",
+    "img": "images/Capture/CapBombShop.png",
+    "codes": "cap_bombshop"
+  },
+
+  {
+    "name": "Arrow Game",
+    "type": "toggle",
+    "img": "images/Capture/CapArrowGM.png",
+    "codes": "cap_arwgme"
+  },
+
+  {
+    "name": "Sanctuary",
+    "type": "toggle",
+    "img": "images/Capture/CapSanc.png",
+    "codes": "cap_sanc"
+  },
+
+  {
+    "name": "Dark Cave",
+    "type": "toggle",
+    "img": "images/Capture/CapDKCave.png",
+    "codes": "cap_dkcave"
+  },
+
+  {
+    "name": "Mini Moldorm Cave",
+    "type": "toggle",
+    "img": "images/Capture/CapMiniMcave.png",
+    "codes": "cap_mmcave"
+  }
+]
