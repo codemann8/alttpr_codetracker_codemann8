@@ -22,7 +22,7 @@
                 "img_mods": "overlay|images/silver_arrow.png",
                 "disabled_img": "images/bow.png",
                 "disabled_img_mods": "@disabled,overlay|images/silver_arrow.png",
-                "codes": "bow,arrows,quivers",
+                "codes": "bow,arrows,quivers,silvers",
                 "secondary_codes": "silvers,silverarrows"
             }
         ]
