@@ -121,6 +121,28 @@ function updateDungeonFromStatus(areaChanged)
             else
                 sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
             end
+
+            if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON then
+                local dungeonLocations = {
+                    [0] = "@Hyrule Castle & Escape", --sewer
+                    [2] = "@Hyrule Castle & Escape",
+                    [4] = "@Eastern Palace",
+                    [6] = "@Desert Palace",
+                    [8] = "@Agahnim's Tower",
+                    [10] = "@Swamp Palace",
+                    [12] = "@Palace of Darkness",
+                    [14] = "@Misery Mire",
+                    [16] = "@Skull Woods",
+                    [18] = "@Ice Palace",
+                    [20] = "@Tower of Hera",
+                    [22] = "@Thieves Town",
+                    [24] = "@Turtle Rock",
+                    [26] = "@Ganon's Tower"
+                }
+                for i = 0, 26, 2 do
+                    Tracker:FindObjectForCode(dungeonLocations[i]).Pinned = dungeonLocations[i] == dungeonLocations[OBJ_DUNGEON.AcquiredCount]
+                end
+            end
         end
     elseif OBJ_MODULE.AcquiredCount == 0x09 then --overworld
         OBJ_ROOM.AcquiredCount = 0xffff
