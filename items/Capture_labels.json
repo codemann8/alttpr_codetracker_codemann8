@@ -462,7 +462,94 @@
   },
   
   // Misc Location Labels
+  
+  // Dropdowns
 
+  {
+    "name": "Secret Passage Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-uncle.png",
+    "codes": "cap_dropdown_uncle"
+  },
+
+  {
+    "name": "Sanctuary Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-sanc.png",
+    "codes": "cap_dropdown_sanc"
+  },
+
+  {
+    "name": "Lumberjack Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-lumberjack.png",
+    "codes": "cap_dropdown_lumberjack"
+  },
+
+  {
+    "name": "Thieves Hideout Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-thief.png",
+    "codes": "cap_dropdown_thief"
+  },
+
+  {
+    "name": "Kakariko Well Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-well.png",
+    "codes": "cap_dropdown_well"
+  },
+
+  {
+    "name": "Magic Bat Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-bat.png",
+    "codes": "cap_dropdown_bat"
+  },
+
+  {
+    "name": "Fairy Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-fairy.png",
+    "codes": "cap_dropdown_fairy"
+  },
+
+  {
+    "name": "Ganon Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-ganon.png",
+    "codes": "cap_dropdown_ganon"
+  },
+
+  {
+    "name": "SW Pinball Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-swpinball.png",
+    "codes": "cap_dropdown_swpinball"
+  },
+
+  {
+    "name": "SW Compass Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-swcompass.png",
+    "codes": "cap_dropdown_swcompass"
+  },
+
+  {
+    "name": "SW Big Chest Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-swbigchest.png",
+    "codes": "cap_dropdown_swbigchest"
+  },
+
+  {
+    "name": "SW Hazard Dropdown",
+    "type": "toggle",
+    "img": "images/Capture/drop-swhazard.png",
+    "codes": "cap_dropdown_swhazard"
+  },
+
+  // Locations
   {
     "name": "Dead Ent",
     "type": "toggle",
