@@ -625,9 +625,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
 
             if potkey and OBJ_POOL.CurrentStage > 0 then
                 local addedKeys = potkey.AcquiredCount
-                if OBJ_KEYSANITY_SMALL.CurrentStage == 1 then
-                    --addedKeys = potKey.MaxCount
-                end
                 if dungeonPrefix == "hc" and bigkey.Active then
                     addedKeys = addedKeys - 1
                 end
