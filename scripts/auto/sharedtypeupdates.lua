@@ -518,7 +518,17 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         
         local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
         if potKeys and OBJ_POOL.CurrentStage == 0 then
-            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
+            local offsetKey = 0
+            if dungeonPrefix == "hc" then
+                print(currentKeys)
+                print(doorsOpened.AcquiredCount)
+                print(potKeys.AcquiredCount)
+                print(Tracker:FindObjectForCode("hc_bigkey").Active)
+            end
+            if dungeonPrefix == "hc" and Tracker:FindObjectForCode("hc_bigkey").Active then
+                offsetKey = 1
+            end
+            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - (potKeys.AcquiredCount - offsetKey)
         else
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
         end
