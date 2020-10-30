@@ -10,6 +10,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests and keys are laid out in a more visual manner, as the dungeons exist on the world map
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes
 - Dungeon Item Shuffles (Keysanity options) are separated as individual toggles (Map, Compass, Small Keys, Big Key). Left click toggles each type, right click enables everything up to that point. (ie. right click on Big Key effectively sets it to Full Keysanity)
+- Key Drop Shuffle (Pool Mode) is a mode where pot keys and enemy drop keys are shuffled into the standard item pool, this affects the dungeon item counts along with dungeon key counts
 - A `Race Mode` has been added to disable autotracking features that have been disallowed per racing council rules. A checkered flag icon will replace the GT Big Key guessing game icon to indicate its activation.
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
@@ -26,6 +27,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Door rando, an Attic icon has been added for when you bomb the Attic floor in cross dungeon door rando, this is auto-tracked
 - An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon, autotracking this is disabled as it can spoil Fast Ganon in Mystery seeds
+- The current dungeon is auto-pinned when player enters a dungeon, feature is disabled by default
 - Advanced development feature, in Beta and disabled by default, output file when certain items are obtained
 - Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld
 
@@ -85,6 +87,7 @@ For instance, there is a settings file that can be modified to enable or disable
 - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
 - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance rando)
 
+- AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
 - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
 - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
 - AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
