@@ -11,6 +11,7 @@ Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
+Tracker:AddItems("items/Capture_labels.json")
 
 --Custom Items
 ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
@@ -57,7 +58,7 @@ else
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
-
+    ScriptHost:LoadScript("scripts/capturebadgeer.lua")
     --Custom Items
     DoorDungeonSelect()
     DoorTotalChest()
