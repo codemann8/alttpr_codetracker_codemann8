@@ -122,7 +122,7 @@ function updateDungeonFromStatus(areaChanged)
                 sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
             end
 
-            if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON then
+            if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE.CurrentStage < 2 then
                 local dungeonLocations = {
                     [0] = "@Hyrule Castle & Escape", --sewer
                     [2] = "@Hyrule Castle & Escape",
