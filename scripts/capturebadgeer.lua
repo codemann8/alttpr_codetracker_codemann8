@@ -44,8 +44,6 @@ function tracker_on_accessibility_updated()
 
     for i,section in pairs(CaptureBadgeSections) do
         local tempSection = section:gsub("/", " Ghost/")
-        print(section)
-        print(tempSection)
         local target = Tracker:FindObjectForCode(section)
         local hiddenTarget = Tracker:FindObjectForCode(tempSection)
         -- Has the captured item for this section changed since last update
