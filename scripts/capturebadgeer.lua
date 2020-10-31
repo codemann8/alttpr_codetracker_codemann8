@@ -1,21 +1,66 @@
 CaptureBadgeCache = {}
 
 function tracker_on_accessibility_updated()
+    if OBJ_ENTRANCE.CurrentStage == 0 then
+        for i,section in pairs(CaptureBadgeEntrances) do
+            local tempSection = section:gsub("/", " Ghost/")
+            local target = Tracker:FindObjectForCode(section)
+            local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+            -- Has the captured item for this section changed since last update
+            if target == nil or hiddenTarget == nil then
+                print("Failed to resolve " .. section .. " please check for typos.")
+            elseif CaptureBadgeCache[target] then
+                -- Does the location that owns this section already have a badge, if so remove it
+                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                CaptureBadgeCache[target] = nil
+            end
+        end
+    else
+        for i,section in pairs(CaptureBadgeEntrances) do
+            local tempSection = section:gsub("/", " Ghost/")
+            local target = Tracker:FindObjectForCode(section)
+            local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+            -- Has the captured item for this section changed since last update
+            if target == nil or hiddenTarget == nil then
+                print("Failed to resolve " .. section .. " please check for typos.")
+            elseif target.CapturedItem ~= CaptureBadgeCache[target] then
+                -- Does the location that owns this section already have a badge, if so remove it
+                if CaptureBadgeCache[target.Owner] then
+                    hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                    CaptureBadgeCache[target.Owner] = nil
+                    CaptureBadgeCache[target] = nil
+                end
+                -- Check if a captured item exists, add as badge to the sections owner if it does
+                if target.CapturedItem then
+                    CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                    CaptureBadgeCache[target] = target.CapturedItem
+                    target.AvailableChestCount = 0
+                    target.HostedItem.Active = true
+                    target.CapturedItem = CaptureBadgeCache[target]
+                end
+            end
+        end
+    end
+
     for i,section in pairs(CaptureBadgeSections) do
+        local tempSection = section:gsub("/", " Ghost/")
+        print(section)
+        print(tempSection)
         local target = Tracker:FindObjectForCode(section)
+        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
         -- Has the captured item for this section changed since last update
-        if target == nil then
+        if target == nil or hiddenTarget == nil then
             print("Failed to resolve " .. section .. " please check for typos.")
         elseif target.CapturedItem ~= CaptureBadgeCache[target] then
             -- Does the location that owns this section already have a badge, if so remove it
             if CaptureBadgeCache[target.Owner] then
-                target.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
                 CaptureBadgeCache[target.Owner] = nil
                 CaptureBadgeCache[target] = nil
             end
             -- Check if a captured item exists, add as badge to the sections owner if it does
             if target.CapturedItem then
-                CaptureBadgeCache[target.Owner] = target.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
                 CaptureBadgeCache[target] = target.CapturedItem
             end
         end
@@ -24,13 +69,7 @@ end
 
 --If you want to use this code for your tracker, copy-paste all of the code above into it's own lua file (like you see here)
 
-
-CaptureBadgeSections = {
-
-    --List out all of the locations that can be capturable
-
-    --Format: 
-    --"@Title of Location/Name of Section with Capture Item"
+CaptureBadgeEntrances = {
     "@Master Sword Pedestal/Pedestal",
     "@Lumberjack House/Entrance",
     "@Lumberjack Tree Dropdown/Dropdown",
@@ -88,7 +127,6 @@ CaptureBadgeSections = {
     "@Houlihan Entrance/Entrance",
     "@King's Tomb Entrance/Entrance",
     "@Graveyard Ledge Entrance/Entrance",
-    "@Desert Ledge/Ledge",
     "@Desert Left Entrance/Entrance",
     "@Desert Back Entrance/Entrance",
     "@Desert Right Entrance/Entrance",
@@ -172,9 +210,21 @@ CaptureBadgeSections = {
     "@Turtle Rock Entrance/Entrance",
     "@Mimic Cave Entrance/Entrance",
     "@Ganon's Tower Entrance/Entrance"
+}
+
+CaptureBadgeSections = {
+    "@Desert Ledge/Ledge"
+}
+-- CaptureBadgeSections = {
+
+--     --List out all of the locations that can be capturable
+
+--     --Format: 
+--     --"@Title of Location/Name of Section with Capture Item"
+    
 
 
    
     
     
-}
+-- }

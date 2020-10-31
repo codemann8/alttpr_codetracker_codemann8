@@ -58,6 +58,7 @@ else
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
+    Tracker:AddLocations("locations/overworldghost.json")
     ScriptHost:LoadScript("scripts/capturebadgeer.lua")
     --Custom Items
     DoorDungeonSelect()
