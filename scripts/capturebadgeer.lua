@@ -67,7 +67,7 @@ end
 
 --If you want to use this code for your tracker, copy-paste all of the code above into it's own lua file (like you see here)
 
-CaptureBadgeEntrances = {
+CaptureBadgeSections = {
     "@Master Sword Pedestal/Pedestal",
     "@Lumberjack House/Entrance",
     "@Lumberjack Tree Dropdown/Dropdown",
@@ -116,7 +116,6 @@ CaptureBadgeEntrances = {
     "@South of Grove/Entrance",
     "@Witch's Hut/Entrance",
     "@Waterfall Fairy Entrance/Entrance",
-    "@Zora's Domain/Ledge",
     "@Sahasrala's Hut Entrance/Entrance",
     "@Trees Fairy Cave/Entrance",
     "@Long Fairy Cave/Entrance",
@@ -142,7 +141,6 @@ CaptureBadgeEntrances = {
     "@Hammer Pegs Entrance/Entrance",
     "@Bumper Cave Top/Entrance",
     "@Bumper Cave Bottom/Entrance",
-    "@Bumper Ledge/Ledge",
     "@Dark Bonk Rocks/Entrance",
     "@Dam Entrance/Entrance",
     "@Hype Fairy Cave/Entrance",
@@ -169,7 +167,6 @@ CaptureBadgeEntrances = {
     "@Old Man Home/Entrance",
     "@Old Man Back Door/Entrance",
     "@Death Mountain Exit Front/Entrance",
-    "@Spectacle Rock/Up On Top",
     "@Spectacle Rock Top/Entrance",
     "@Spectacle Rock Left/Entrance",
     "@Spectacle Rock Right/Entrance",
@@ -191,7 +188,6 @@ CaptureBadgeEntrances = {
     "@Hookshot Cave Top/Entrance",
     "@TR Bridge Left/Entrance",
     "@TR Safety Door/Entrance",
-    "@Floating Island/Island",
     "@Castle Main Entrance/Entrance",
     "@Sanctuary Entrance/Entrance",
     "@Sanctuary Grave/Dropdown",
@@ -207,22 +203,26 @@ CaptureBadgeEntrances = {
     "@Tower of Hera Entrance/Entrance",
     "@Turtle Rock Entrance/Entrance",
     "@Mimic Cave Entrance/Entrance",
-    "@Ganon's Tower Entrance/Entrance"
+    "@Ganon's Tower Entrance/Entrance",
+
+     --Item Spots--
+
+    "@Desert Ledge/Ledge",
+    "@Floating Island/Island",
+    "@Spectacle Rock/Up On Top",
+    "@Bumper Ledge/Ledge",
+    "@Zora's Domain/Ledge",
+    "@Library/On The Shelf"
+ 
 }
 
-CaptureBadgeSections = {
-    "@Desert Ledge/Ledge"
-}
--- CaptureBadgeSections = {
 
---     --List out all of the locations that can be capturable
 
---     --Format: 
---     --"@Title of Location/Name of Section with Capture Item"
-    
+   
+
+
 
 
    
     
     
--- }
