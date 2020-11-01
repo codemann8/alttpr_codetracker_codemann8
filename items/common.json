@@ -22,7 +22,7 @@
                 "img_mods": "overlay|images/silver_arrow.png",
                 "disabled_img": "images/bow.png",
                 "disabled_img_mods": "@disabled,overlay|images/silver_arrow.png",
-                "codes": "bow,arrows,quivers",
+                "codes": "bow,arrows,quivers,silvers",
                 "secondary_codes": "silvers,silverarrows"
             }
         ]
@@ -1017,6 +1017,25 @@
             {
                 "img": "images/mode_retro_on.png",
                 "codes": "retro_mode,retro_mode_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode
+    {
+        "name": "Pool Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_pool_chest.png",
+                "codes": "pool_mode,pool_mode_chest",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_pool_chestkeydrop.png",
+                "codes": "pool_mode,pool_mode_chestkeydrop",
                 "inherit_codes": false
             }
         ]

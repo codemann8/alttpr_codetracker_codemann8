@@ -79,7 +79,7 @@
                 "item_margin": "1,0",
                 "item_size": 40,
                 "rows": [
-                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "retro_mode_surrogate_small", "gt_crystals_surrogate", "goal_setting", "race_mode_surrogate_small" ]
+                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "retro_mode_surrogate_small", "pool_mode_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
                 ]
             }
         ]

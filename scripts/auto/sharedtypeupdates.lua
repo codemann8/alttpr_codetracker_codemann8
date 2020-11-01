@@ -121,6 +121,28 @@ function updateDungeonFromStatus(areaChanged)
             else
                 sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
             end
+
+            if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE.CurrentStage < 2 then
+                local dungeonLocations = {
+                    [0] = "@Hyrule Castle & Escape", --sewer
+                    [2] = "@Hyrule Castle & Escape",
+                    [4] = "@Eastern Palace",
+                    [6] = "@Desert Palace",
+                    [8] = "@Agahnim's Tower",
+                    [10] = "@Swamp Palace",
+                    [12] = "@Palace of Darkness",
+                    [14] = "@Misery Mire",
+                    [16] = "@Skull Woods",
+                    [18] = "@Ice Palace",
+                    [20] = "@Tower of Hera",
+                    [22] = "@Thieves Town",
+                    [24] = "@Turtle Rock",
+                    [26] = "@Ganon's Tower"
+                }
+                for i = 0, 26, 2 do
+                    Tracker:FindObjectForCode(dungeonLocations[i]).Pinned = dungeonLocations[i] == dungeonLocations[OBJ_DUNGEON.AcquiredCount]
+                end
+            end
         end
     elseif OBJ_MODULE.AcquiredCount == 0x09 then --overworld
         OBJ_ROOM.AcquiredCount = 0xffff
@@ -493,9 +515,20 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         else
             currentKeys = ReadU8(segment, address)
         end
+        
         local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-        if potKeys then
-            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - potKeys.AcquiredCount
+        if potKeys and OBJ_POOL.CurrentStage == 0 then
+            local offsetKey = 0
+            if dungeonPrefix == "hc" then
+                print(currentKeys)
+                print(doorsOpened.AcquiredCount)
+                print(potKeys.AcquiredCount)
+                print(Tracker:FindObjectForCode("hc_bigkey").Active)
+            end
+            if dungeonPrefix == "hc" and Tracker:FindObjectForCode("hc_bigkey").Active then
+                offsetKey = 1
+            end
+            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - (potKeys.AcquiredCount - offsetKey)
         else
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
         end
@@ -566,6 +599,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
             local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
             local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+            local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
             local dungeonItems = 0
 
             if map.Active and Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 then
@@ -589,7 +623,15 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 print(dungeonPrefix .. " Chests", chest.MaxCount - chest.AcquiredCount)
             end
 
-            item.AcquiredCount = math.max(item.MaxCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+            if potkey and OBJ_POOL.CurrentStage > 0 then
+                local addedKeys = potkey.AcquiredCount
+                if dungeonPrefix == "hc" and bigkey.Active then
+                    addedKeys = addedKeys - 1
+                end
+                item.AcquiredCount = math.max(item.MaxCount - (((chest.MaxCount - chest.AcquiredCount) - dungeonItems) + addedKeys), 0)
+            else
+                item.AcquiredCount = math.max(item.MaxCount - ((chest.MaxCount - chest.AcquiredCount) - dungeonItems), 0)
+            end
         end
     end
 end
