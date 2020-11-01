@@ -1139,23 +1139,6 @@
         ]
     },
     {
-        "name": "Link's House Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1060,
-                "y": 1374,
-                "size": 0
-            }
-        ]
-    },
-    {
         "name": "Hype Fairy Cave",
         "parent": "Light World",
         "access_rules": [
