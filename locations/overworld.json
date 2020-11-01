@@ -2338,23 +2338,6 @@
         ]
     },
     {
-        "name": "Desert Ledge Ghost",
-        "sections": [
-            {
-                "name": "Ledge",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 40,
-                "y": 1835,
-                "size": 0
-            }
-        ]
-    },
-    {
         "name": "Desert Right Entrance",
         "parent": "Desert Area",
         "sections": [

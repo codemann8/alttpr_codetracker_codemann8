@@ -1,22 +1,49 @@
 CaptureBadgeCache = {}
 
 function tracker_on_accessibility_updated()
-    if OBJ_ENTRANCE.CurrentStage == 0 then
-        for i,section in pairs(CaptureBadgeEntrances) do
-            local tempSection = section:gsub("/", " Ghost/")
-            local target = Tracker:FindObjectForCode(section)
-            local hiddenTarget = Tracker:FindObjectForCode(tempSection)
-            -- Has the captured item for this section changed since last update
-            if target == nil or hiddenTarget == nil then
-                print("Failed to resolve " .. section .. " please check for typos.")
-            elseif CaptureBadgeCache[target] then
-                -- Does the location that owns this section already have a badge, if so remove it
-                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-                CaptureBadgeCache[target] = nil
+    if OBJ_ENTRANCE then
+        if OBJ_ENTRANCE.CurrentStage == 0 then
+            for i,section in pairs(CaptureBadgeEntrances) do
+                local tempSection = section:gsub("/", " Ghost/")
+                local target = Tracker:FindObjectForCode(section)
+                local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+                -- Has the captured item for this section changed since last update
+                if target == nil or hiddenTarget == nil then
+                    print("Failed to resolve " .. section .. " please check for typos.")
+                elseif CaptureBadgeCache[target] then
+                    -- Does the location that owns this section already have a badge, if so remove it
+                    hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                    CaptureBadgeCache[target] = nil
+                end
+            end
+        else
+            for i,section in pairs(CaptureBadgeEntrances) do
+                local tempSection = section:gsub("/", " Ghost/")
+                local target = Tracker:FindObjectForCode(section)
+                local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+                -- Has the captured item for this section changed since last update
+                if target == nil or hiddenTarget == nil then
+                    print("Failed to resolve " .. section .. " please check for typos.")
+                elseif target.CapturedItem ~= CaptureBadgeCache[target] then
+                    -- Does the location that owns this section already have a badge, if so remove it
+                    if CaptureBadgeCache[target.Owner] then
+                        hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                        CaptureBadgeCache[target.Owner] = nil
+                        CaptureBadgeCache[target] = nil
+                    end
+                    -- Check if a captured item exists, add as badge to the sections owner if it does
+                    if target.CapturedItem then
+                        CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                        CaptureBadgeCache[target] = target.CapturedItem
+                        target.AvailableChestCount = 0
+                        target.HostedItem.Active = true
+                        target.CapturedItem = CaptureBadgeCache[target]
+                    end
+                end
             end
         end
-    else
-        for i,section in pairs(CaptureBadgeEntrances) do
+
+        for i,section in pairs(CaptureBadgeItems) do
             local tempSection = section:gsub("/", " Ghost/")
             local target = Tracker:FindObjectForCode(section)
             local hiddenTarget = Tracker:FindObjectForCode(tempSection)
@@ -34,32 +61,7 @@ function tracker_on_accessibility_updated()
                 if target.CapturedItem then
                     CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
                     CaptureBadgeCache[target] = target.CapturedItem
-                    target.AvailableChestCount = 0
-                    target.HostedItem.Active = true
-                    target.CapturedItem = CaptureBadgeCache[target]
                 end
-            end
-        end
-    end
-
-    for i,section in pairs(CaptureBadgeSections) do
-        local tempSection = section:gsub("/", " Ghost/")
-        local target = Tracker:FindObjectForCode(section)
-        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
-        -- Has the captured item for this section changed since last update
-        if target == nil or hiddenTarget == nil then
-            print("Failed to resolve " .. section .. " please check for typos.")
-        elseif target.CapturedItem ~= CaptureBadgeCache[target] then
-            -- Does the location that owns this section already have a badge, if so remove it
-            if CaptureBadgeCache[target.Owner] then
-                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-                CaptureBadgeCache[target.Owner] = nil
-                CaptureBadgeCache[target] = nil
-            end
-            -- Check if a captured item exists, add as badge to the sections owner if it does
-            if target.CapturedItem then
-                CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-                CaptureBadgeCache[target] = target.CapturedItem
             end
         end
     end
@@ -67,8 +69,7 @@ end
 
 --If you want to use this code for your tracker, copy-paste all of the code above into it's own lua file (like you see here)
 
-CaptureBadgeSections = {
-    "@Master Sword Pedestal/Pedestal",
+CaptureBadgeEntrances = {
     "@Lumberjack House/Entrance",
     "@Lumberjack Tree Dropdown/Dropdown",
     "@Lumberjack Tree Entrance/Entrance",
@@ -93,9 +94,7 @@ CaptureBadgeSections = {
     "@Magic Bat Entrance/Entrance",
     "@Kakariko Chest Game/Entrance",
     "@Quarreling Brothers Right/Entrance",
-    "@Race Game/Take This Trash",
     "@Library Entrance/Entrance",
-    "@Library/On The Shelf",
     "@Forest Hideout Entrance/Entrance",
     "@Forest Hideout Dropdown/Dropdown",
     "@Forest Chest Game/Tree",
@@ -112,7 +111,6 @@ CaptureBadgeSections = {
     "@Pyramid Fairy Entrance/Entrance",
     "@Pyramid Hole/Dropdown",
     "@Hype Cave Entrance/Entrance",
-    "@Bombos Tablet/Tablet",
     "@South of Grove/Entrance",
     "@Witch's Hut/Entrance",
     "@Waterfall Fairy Entrance/Entrance",
@@ -158,7 +156,6 @@ CaptureBadgeSections = {
     "@Dark Lake Hylia Fairy/Entrance",
     "@Hamburger Helper Cave/Entrance",
     "@Spike Hint Cave/Entrance",
-    "@Lake Hylia Island/Island",
     "@Mire Shed Entrance/Entrance",
     "@Mire Fairy/Entrance",
     "@Mire Hint Cave/Entrance",
@@ -171,7 +168,6 @@ CaptureBadgeSections = {
     "@Spectacle Rock Left/Entrance",
     "@Spectacle Rock Right/Entrance",
     "@Dark Mountain Fairy/Entrance",
-    "@Ether Tablet/Tablet",
     "@Spike Cave Entrance/Entrance",
     "@Spiral Cave Top/Entrance",
     "@Paradox Cave Middle/Entrance",
@@ -203,26 +199,20 @@ CaptureBadgeSections = {
     "@Tower of Hera Entrance/Entrance",
     "@Turtle Rock Entrance/Entrance",
     "@Mimic Cave Entrance/Entrance",
-    "@Ganon's Tower Entrance/Entrance",
+    "@Ganon's Tower Entrance/Entrance"
+}
 
      --Item Spots--
-
+CaptureBadgeItems = {
+    "@Master Sword Pedestal/Pedestal",
+    "@Bombos Tablet/Tablet",
+    "@Ether Tablet/Tablet",
     "@Desert Ledge/Ledge",
     "@Floating Island/Island",
+    "@Lake Hylia Island/Island",
     "@Spectacle Rock/Up On Top",
     "@Bumper Ledge/Ledge",
     "@Zora's Domain/Ledge",
-    "@Library/On The Shelf"
- 
+    "@Library/On The Shelf",
+    "@Race Game/Take This Trash"
 }
-
-
-
-   
-
-
-
-
-   
-    
-    

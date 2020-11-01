@@ -59,7 +59,6 @@ else
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
     Tracker:AddLocations("locations/overworldghost.json")
-    ScriptHost:LoadScript("scripts/capturebadgeer.lua")
     --Custom Items
     DoorDungeonSelect()
     DoorTotalChest()
@@ -113,6 +112,7 @@ Tracker.AlwaysAllowClearing = true
 
 if _VERSION == "Lua 5.3" then
     ScriptHost:LoadScript("scripts/fileio.lua")
+    ScriptHost:LoadScript("scripts/capturebadgeer.lua")
     ScriptHost:LoadScript("scripts/autotracking.lua")
 else
     print("Auto-tracker is unsupported by your tracker version")

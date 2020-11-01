@@ -2,7 +2,6 @@
     // Light World
     {
         "name": "Forest Chest Game Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Tree",
@@ -20,8 +19,6 @@
     },
     {
         "name": "Forest Hideout Dropdown Ghost",
-        "parent": "Light World",
-        
         "sections": [
             {
                 "name": "Dropdown",
@@ -39,11 +36,10 @@
     },
     {
         "name": "Forest Hideout Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -57,8 +53,6 @@
     },
     {
         "name": "Lumberjack Tree Dropdown Ghost",
-        "short_name": "Aga Tree",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Dropdown",
@@ -76,7 +70,6 @@
     },
     {
         "name": "Lumberjack Tree Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -94,11 +87,10 @@
     },
     {
         "name": "Lumberjack House Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -112,8 +104,6 @@
     },
     {
         "name": "Kakariko Fortune Teller Ghost",
-        "short_name": "Kak Fortune",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -131,8 +121,6 @@
     },
     {
         "name": "Elder Left Door Ghost",
-        "short_name": "Elder Left",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -150,8 +138,6 @@
     },
     {
         "name": "Elder Right Door Ghost",
-        "short_name": "Elder Right",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -169,8 +155,6 @@
     },
     {
         "name": "Left Snitch House Ghost",
-        "short_name": "Left Snitch",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -188,8 +172,6 @@
     },
     {
         "name": "Right Snitch House Ghost",
-        "short_name": "Right Snitch",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -207,7 +189,6 @@
     },
     {
         "name": "Blind's House Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -225,7 +206,6 @@
     },
     {
         "name": "Kakariko Well Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Dropdown",
@@ -243,11 +223,10 @@
     },
     {
         "name": "Kakariko Well Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -261,7 +240,6 @@
     },
     {
         "name": "Chicken House Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -279,7 +257,6 @@
     },
     {
         "name": "Grass House Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -297,7 +274,6 @@
     },
     {
         "name": "Front Tavern Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -315,7 +291,6 @@
     },
     {
         "name": "Kakariko Shop Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -333,7 +308,6 @@
     },
     {
         "name": "Bomb Hut Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -351,7 +325,6 @@
     },
     {
         "name": "Sick Kid Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -369,7 +342,6 @@
     },
     {
         "name": "Smith's House Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -387,7 +359,6 @@
     },
     {
         "name": "Magic Bat Dropdown Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Dropdown",
@@ -405,7 +376,6 @@
     },
     {
         "name": "Magic Bat Entrance Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -423,7 +393,6 @@
     },
     {
         "name": "Kakariko Chest Game Ghost",
-        "parent": "Light World",
         "sections": [
             {
                 "name": "Entrance",
@@ -1141,8 +1110,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 2,
-                "y": 1843,
+                "x": 40,
+                "y": 1835,
                 "size": 0
             }
         ]
@@ -1246,55 +1215,40 @@
                 "x": 316,
                 "y": 1568,
                 "size": 0
-            },
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
             {
                 "map": "darkworld",
-                "x": 316,
-                "y": 1568,
+                "x": 679,
+                "y": 366,
                 "size": 0
             }
         ]
     },
-   
     {
-        "name": "DM Access Entrances",
-        "parent": "Light World Color",
-        "children": [
+        "name": "Death Mountain Exit Back Ghost",
+        "sections": [
             {
-                "name": "Death Mountain Entry Cave Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "color": "#35046b",
-                        "x": 679,
-                        "y": 366,
-                        "size": 0
-                    }
-                ]
-            },
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
             {
-                "name": "Death Mountain Exit Back Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "color": "#35046b",
-                        "x": 690,
-                        "y": 313,
-                        "size": 0
-                    }
-                ]
+                "map": "darkworld",
+                "x": 690,
+                "y": 313,
+                "size": 0
             }
         ]
     },
@@ -1747,8 +1701,9 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "item_count": 1,
-
+                "item_count": 1
+            }
+        ],
         "map_locations": [
             {
                 "map": "darkworld",
@@ -1797,7 +1752,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1811,7 +1766,6 @@
     },
     {
         "name": "Dark Sahasrahla Ghost",
-        "parent": "East Dark World",
         "sections": [
             {
                 "name": "Entrance",
@@ -1930,61 +1884,53 @@
         ]
     },
     {
-        "name": "Bumper Cave Entrances",
-        "parent": "Dark World Color",
-        "children": [
+        "name": "Bumper Cave Top Ghost",
+        "sections": [
             {
-                "name": "Bumper Cave Top Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "lightworld",
-                        "color": "#059134",
-                        "x": 682,
-                        "y": 313,
-                        "size": 0
-                    }
-                ]
-            },
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
             {
-                "name": "Bumper Cave Bottom Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "lightworld",
-                        "color": "#059134",
-                        "x": 677,
-                        "y": 365,
-                        "size": 0
-                    }
-                ]
-            },
+                "map": "lightworld",
+                "x": 682,
+                "y": 313,
+                "size": 0
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Bottom Ghost",
+        "sections": [
             {
-                "name": "Bumper Ledge Ghost",
-                "sections": [
-                    {
-                        "name": "Ledge",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 637,
-                        "y": 323,
-                        "size": 0
-                    }
-                ]
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 677,
+                "y": 365,
+                "size": 0
+            }
+        ]
+    },
+    {
+        "name": "Bumper Ledge Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 637,
+                "y": 323,
+                "size": 0
             }
         ]
     },
@@ -2042,7 +1988,6 @@
     },
     {
         "name": "Mire Fairy Ghost",
-        "parent": "Mire Area",
         "sections": [
             {
                 "name": "Entrance",
@@ -2121,7 +2066,7 @@
         ],
         "map_locations": [
             {
-                "map": "darkworld",
+                "map": "lightworld",
                 "x": 1589,
                 "y": 48,
                 "size": 0
@@ -2167,7 +2112,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -2538,41 +2483,36 @@
         ]
     },
     {
-        "name": "Dark Death Mountain TR Bridge",
-        "children": [
+        "name": "TR Bridge Left Ghost",
+        "sections": [
             {
-                "name": "TR Bridge Left Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 1560,
-                        "y": 190,
-                        "size": 0
-                    }
-                ]
-            },
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
             {
-                "name": "TR Bridge Right Ghost",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 1656,
-                        "y": 190,
-                        "size": 0
-                    }
-                ]
+                "map": "darkworld",
+                "x": 1560,
+                "y": 190,
+                "size": 0
+            }
+        ]
+    },
+    {
+        "name": "TR Bridge Right Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1656,
+                "y": 190,
+                "size": 0
             }
         ]
     },
@@ -2615,7 +2555,7 @@
         "name": "Dark Death Mountain Shop Ghost",
         "sections": [
             {
-                "name": "Shop",
+                "name": "Entrance",
                 "item_count": 1
             }
         ],
@@ -2627,7 +2567,5 @@
                 "size": 0
             }
         ]
-    }
-]
     }
 ]
