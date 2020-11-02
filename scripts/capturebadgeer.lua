@@ -210,7 +210,7 @@ CaptureBadgeItems = {
     "@Desert Ledge/Ledge",
     "@Floating Island/Island",
     "@Lake Hylia Island/Island",
-    "@Spectacle Rock/Up On Top",
+    "@Spec Rock/Up On Top",
     "@Bumper Ledge/Ledge",
     "@Zora's Domain/Ledge",
     "@Library/On The Shelf",

@@ -341,7 +341,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 370,
+                "x": 352,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -456,7 +456,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 225,
+                "x": 253,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -1487,8 +1487,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1770,
-                "y": 1525,
+                "x": 1790,
+                "y": 1545,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1511,7 +1511,7 @@
             {
                 "map": "lightworld",
                 "x": 1835,
-                "y": 1525,
+                "y": 1545,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1562,7 +1562,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1770,
+                "x": 1810,
                 "y": 1590,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -3913,8 +3913,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1770,
-                "y": 1525,
+                "x": 1790,
+                "y": 1545,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -3963,7 +3963,7 @@
             {
                 "map": "darkworld",
                 "x": 1835,
-                "y": 1525,
+                "y": 1545,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -4014,7 +4014,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1770,
+                "x": 1810,
                 "y": 1590,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
