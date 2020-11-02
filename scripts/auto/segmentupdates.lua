@@ -433,9 +433,9 @@ function updateRoomsFromMemorySegment(segment)
     updateDungeonKeysFromMemorySegment(nil)
 
     --Miscellaneous
-	if OBJ_RACEMODE.CurrentStage == 0 then
-		updateToggleItemFromByteAndFlag(segment, "attic", 0x7ef0cb, 0x01)
-	end
+    if OBJ_RACEMODE.CurrentStage == 0 then
+        updateToggleItemFromByteAndFlag(segment, "attic", 0x7ef0cb, 0x01)
+    end
     updateToggleItemFromByteAndFlag(segment, "aga2", 0x7ef01b, 0x08)
 
     --Underworld Locations
