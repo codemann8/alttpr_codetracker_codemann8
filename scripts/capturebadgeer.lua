@@ -16,6 +16,32 @@ function tracker_on_accessibility_updated()
                     CaptureBadgeCache[target] = nil
                 end
             end
+            for i,section in pairs(CaptureBadgeUnderworld) do
+                local tempSection = section:gsub("/", " Ghost/")
+                local target = Tracker:FindObjectForCode(section)
+                local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+                -- Has the captured item for this section changed since last update
+                if target == nil or hiddenTarget == nil then
+                    print("Failed to resolve " .. section .. " please check for typos.")
+                elseif target.CapturedItem ~= CaptureBadgeCache[target] then
+                    -- Does the location that owns this section already have a badge, if so remove it
+                    if CaptureBadgeCache[target.Owner] then
+                        hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                        CaptureBadgeCache[target.Owner] = nil
+                        CaptureBadgeCache[target] = nil
+                    end
+                    -- Check if a captured item exists, add as badge to the sections owner if it does
+                    if target.CapturedItem then
+                        CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                        CaptureBadgeCache[target] = target.CapturedItem
+                        target.AvailableChestCount = 0
+                        if target.HostedItem then
+                            target.HostedItem.Active = true
+                        end
+                        target.CapturedItem = CaptureBadgeCache[target]
+                    end
+                end
+            end
         else
             for i,section in pairs(CaptureBadgeEntrances) do
                 local tempSection = section:gsub("/", " Ghost/")
@@ -36,9 +62,24 @@ function tracker_on_accessibility_updated()
                         CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
                         CaptureBadgeCache[target] = target.CapturedItem
                         target.AvailableChestCount = 0
-                        target.HostedItem.Active = true
+                        if target.HostedItem then
+                            target.HostedItem.Active = true
+                        end
                         target.CapturedItem = CaptureBadgeCache[target]
                     end
+                end
+            end
+            for i,section in pairs(CaptureBadgeUnderworld) do
+                local tempSection = section:gsub("/", " Ghost/")
+                local target = Tracker:FindObjectForCode(section)
+                local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+                -- Has the captured item for this section changed since last update
+                if target == nil or hiddenTarget == nil then
+                    print("Failed to resolve " .. section .. " please check for typos.")
+                elseif CaptureBadgeCache[target] then
+                    -- Does the location that owns this section already have a badge, if so remove it
+                    hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                    CaptureBadgeCache[target] = nil
                 end
             end
         end
@@ -213,6 +254,10 @@ CaptureBadgeItems = {
     "@Spec Rock/Up On Top",
     "@Bumper Ledge/Ledge",
     "@Zora's Domain/Ledge",
-    "@Library/On The Shelf",
     "@Race Game/Take This Trash"
+}
+
+CaptureBadgeUnderworld = {
+    "@Library/On The Shelf",
+    "@Lost Woods/Forest Hideout"
 }
