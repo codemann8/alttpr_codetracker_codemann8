@@ -747,6 +747,10 @@
                 "sections": [
                     {
                         "name": "Entrance Chest",
+                        "access_rules": [
+                            "door_shuffle_off,flippers",
+                            "door_shuffle_on"
+                        ],
                         "item_count": 1
                     },
                     {
