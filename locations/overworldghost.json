@@ -155,7 +155,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 295,
+                "x": 306,
                 "y": 860,
                 "size": 0,
                 "badge_size": 90
@@ -2962,6 +2962,24 @@
                 "x": 250,
                 "y": 188,
                 "size":0,
+                "badge_size":90
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Ghost",
+        "sections": [
+            {
+                "name": "Up On Top",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 186,
+                "size": 0,
                 "badge_size":90
             }
         ]
