@@ -2967,6 +2967,24 @@
         ]
     },
     {
+        "name": "Lumberjack Cave Ghost",
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 600,
+                "y": 145,
+                "size": 0,
+                "badge_size":90
+            }
+        ]
+    },
+    {
         "name": "Spectacle Rock Ghost",
         "sections": [
             {

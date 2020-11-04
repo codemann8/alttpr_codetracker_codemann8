@@ -257,9 +257,11 @@ CaptureBadgeItems = {
     "@Zora's Domain/Ledge",
     "@Race Game/Take This Trash",
     "@Lost Woods/Forest Hideout",
-    "@Lost Woods./Mushroom Spot"
+    "@Lost Woods./Mushroom Spot",
+    "@Lumberjack Cave/Cave"
 }
 
 CaptureBadgeUnderworld = {
     "@Library/On The Shelf",
+    
 }
