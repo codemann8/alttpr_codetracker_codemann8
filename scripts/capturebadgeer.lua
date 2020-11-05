@@ -34,7 +34,6 @@ function tracker_on_accessibility_updated()
                     if target.CapturedItem then
                         CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
                         CaptureBadgeCache[target] = target.CapturedItem
-                        target.AvailableChestCount = 0
                         if target.HostedItem then
                             target.HostedItem.Active = true
                         end
@@ -110,6 +109,8 @@ end
 
 --If you want to use this code for your tracker, copy-paste all of the code above into it's own lua file (like you see here)
 
+
+--Apon capture the Map Location will Clear (Badge only shown when an Entrance game mode is selected)--
 CaptureBadgeEntrances = {
     "@Lumberjack House/Entrance",
     "@Lumberjack Tree Dropdown/Dropdown",
@@ -243,7 +244,7 @@ CaptureBadgeEntrances = {
     "@Ganon's Tower Entrance/Entrance"
 }
 
-     --Item Spots--
+--Apon capture the location will remain uncleared (Badge will persist to show through any game mode selection)--
 CaptureBadgeItems = {
     "@Master Sword Pedestal/Pedestal",
     "@Bombos Tablet/Tablet",
@@ -251,8 +252,6 @@ CaptureBadgeItems = {
     "@Desert Ledge/Ledge",
     "@Floating Island/Island",
     "@Lake Hylia Island/Island",
-    "@Spectacle Rock/Up On Top",
-    "@Spec Rock/Up On Top",
     "@Bumper Ledge/Ledge",
     "@Zora's Domain/Ledge",
     "@Race Game/Take This Trash",
@@ -260,8 +259,10 @@ CaptureBadgeItems = {
     "@Lost Woods./Mushroom Spot",
     "@Lumberjack Cave/Cave"
 }
-
+--Apon capture the location will remain uncleared (Badge will only show in the game mode selection that the location is set to display in)
 CaptureBadgeUnderworld = {
     "@Library/On The Shelf",
+    "@Spectacle Rock/Up On Top",
+    "@Spec Rock/Up On Top"
     
 }

@@ -821,6 +821,13 @@
                 "x": 980,
                 "y": 178,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1020,
+                "y": 170,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
