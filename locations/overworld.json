@@ -43,10 +43,17 @@
                     "world_state_inverted,pearl",
                     "{world_state_inverted}"
                 ],
+                "capture_item": true,
                 "item_count": 1
             }
         ],
         "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 250,
+                "y": 180,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
             {
                 "map": "lightworld",
                 "x": 250,
@@ -4534,6 +4541,42 @@
         ]
     },
     {
+        "name": "Spectacle Rock",
+        "parent": "Death Mountain West Bottom",
+        "sections": [
+            {
+                "name": "Cave",
+                "visibility_rules": [ "entrance_shuffle_off" ],
+                "item_count": 1
+            },
+            {
+                "name": "Up On Top",
+                "access_rules": [
+                    "world_state_open,@Death Mountain West Bottom,mirror",
+                    "world_state_inverted,@Death Mountain West Top",
+                    "{@Death Mountain West Bottom}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 198,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1020,
+                "y": 170,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
         "name": "Spectacle Rock Left",
         "parent": "Death Mountain West Bottom",
         "sections": [
@@ -4834,31 +4877,6 @@
                 "map": "lightworld",
                 "x": 1645,
                 "y": 275,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Spec Rock",
-        "parent": "Death Mountain West Bottom",
-        "access_rules": [
-            "world_state_open,@Death Mountain West Bottom,mirror",
-            "world_state_inverted,@Death Mountain West Top",
-            "{@Death Mountain West Bottom}"
-        ],
-        "sections": [
-            {
-                "name": "Up On Top",
-                "capture_item": true,
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1020,
-                "y": 170,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
