@@ -166,9 +166,7 @@ end
 
 function updateDam(segment)
 	if OBJ_RACEMODE.CurrentStage == 0 then
-		local item = Tracker:FindObjectForCode("dam")
-		local value = ReadU8(segment, 0x7ef2bb)
-		item.Active = value & 0x20 > 0
+		Tracker:FindObjectForCode("dam").Active = ReadU8(segment, 0x7ef2bb) & 0x20 > 0
 	end
 end
 
