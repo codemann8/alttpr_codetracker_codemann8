@@ -119,8 +119,8 @@ function updateIcons()
             if item.MaxCount ~= 99 then
                 item.MaxCount = 99
                 item.AcquiredCount = 0
-                item.SwapActions = true
             end
+            item.SwapActions = true
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
