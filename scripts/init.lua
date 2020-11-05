@@ -19,6 +19,7 @@ Tracker:AddItems("items/labels.json")
 
 --Custom Items
 ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
+ScriptHost:LoadScript("scripts/custom/extconsumableitem.lua")
 
 ScriptHost:LoadScript("scripts/custom/surrogateitem.lua")
 ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
@@ -36,6 +37,7 @@ ScriptHost:LoadScript("scripts/custom/doortotalchest.lua")
 ScriptHost:LoadScript("scripts/custom/dynamicrequirement.lua")
 
 loadMCBK()
+loadDungeonChests()
 loadDynamicRequirement()
 
 if Tracker.ActiveVariantUID == "items_only" then

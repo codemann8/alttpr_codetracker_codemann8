@@ -35,6 +35,22 @@ function initGlobalVars()
     end
 end
 
+function loadDungeonChests()
+    ExtendedConsumableItem("Hyrule Castle Items", "hc")
+    ExtendedConsumableItem("Eastern Palace Items", "ep")
+    ExtendedConsumableItem("Desert Palace Items", "dp")
+    ExtendedConsumableItem("Tower of Hera Items", "toh")
+    ExtendedConsumableItem("Aganihm's Tower Items", "at")
+    ExtendedConsumableItem("Palace of Darkness Items", "pod")
+    ExtendedConsumableItem("Swamp Palace Items", "sp")
+    ExtendedConsumableItem("Skull Woods Items", "sw")
+    ExtendedConsumableItem("Thieves Town Items", "tt")
+    ExtendedConsumableItem("Ice Palace Items", "ip")
+    ExtendedConsumableItem("Misery Mire Items", "mm")
+    ExtendedConsumableItem("Turtle Rock Items", "tr")
+    ExtendedConsumableItem("Ganon's Tower Items", "gt")
+end
+
 function loadMCBK()
     MapCompassBK("Hyrule Castle Map/Compass/Big Key", "hc")
     MapCompassBK("Eastern Palace Map/Compass/Big Key", "ep")
@@ -85,7 +101,7 @@ function updateIcons()
     local chestkeys = { 1,    0,    1,    2,    1,    6,     3,    3,    2,    1,     1,    4,    4  }
     local keydrops =  { 3,    2,    3,    2,    5,    0,     3,    2,    4,    0,     2,    2,    4  }
     for i = 1, #dungeons do
-        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
+        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if item.MaxCount ~= 99 then
@@ -189,7 +205,6 @@ function updateIcons()
     else
         gtbk.MaxCount = 99
     end
-
 
     OBJ_DOORDUNGEON.ItemState:updateIcon()
     OBJ_DOORCHEST.ItemState:updateIcon()

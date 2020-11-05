@@ -374,7 +374,7 @@ function updateBossChestCountFromRoom(segment, locationRef, roomSlot)
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
-    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item")
+    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
     if item then
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if segment then

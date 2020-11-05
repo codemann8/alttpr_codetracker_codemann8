@@ -44,7 +44,7 @@ function DoorTotalChest:onLeftClick()
             [11] = "tr",
             [12] = "gt"
         }
-        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item")
+        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item").ItemState
         if self:getState() == 99 then
             item.MaxCount = item.AcquiredCount
             if item.MaxCount == 0 then
@@ -83,7 +83,7 @@ function DoorTotalChest:onRightClick()
             [11] = "tr",
             [12] = "gt"
         }
-        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item")
+        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item").ItemState
         if AUTOTRACKER_ON then
             item.AcquiredCount = item.MaxCount - item.AcquiredCount
             item.Icon = ImageReference:FromPackRelativePath("images/0058.png")

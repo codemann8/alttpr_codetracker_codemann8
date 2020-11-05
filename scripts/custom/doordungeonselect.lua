@@ -32,7 +32,7 @@ function DoorDungeonSelect:updateIcon()
             [11] = "tr",
             [12] = "gt"
         }
-        local item = Tracker:FindObjectForCode(dungeons[self:getState()] .. "_item")
+        local item = Tracker:FindObjectForCode(dungeons[self:getState()] .. "_item").ItemState
         OBJ_DOORCHEST.ItemState:setState(item.MaxCount)
 
         if self:getState() == 0 then
