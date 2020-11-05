@@ -1,12 +1,15 @@
 --Config
 ScriptHost:LoadScript("scripts/settings.lua")
 
---Items
+--Essentials
 ScriptHost:LoadScript("scripts/global.lua")
-ScriptHost:LoadScript("scripts/class.lua")
-ScriptHost:LoadScript("scripts/custom_item.lua")
 ScriptHost:LoadScript("scripts/events.lua")
 
+--SDK
+ScriptHost:LoadScript("scripts/sdk/class.lua")
+ScriptHost:LoadScript("scripts/sdk/custom_item.lua")
+
+--Items
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
