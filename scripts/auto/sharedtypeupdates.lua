@@ -380,15 +380,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             if segment then
                 local chestCount = ReadU8(segment, address)
                 if item.MaxCount < 99 and chestCount < item.MaxCount then
-                    item.BadgeTextColor = "orange"
                     item.AcquiredCount = item.MaxCount - chestCount
                 else
                     item.AcquiredCount = chestCount
-                    if chestCount == 0 then
-                        item.Icon = ImageReference:FromPackRelativePath("images/0058.png")
-                    elseif chestCount == item.MaxCount then
-                        item.Icon = ImageReference:FromPackRelativePath("images/0059.png")
-                    end
                 end
             end
         else

@@ -30,25 +30,32 @@ function initGlobalVars()
 
         updateIcons()
 
+        --Link Dungeon Locations to Chest Items
+        local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+        for i = 1, #dungeons do
+            local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
+            item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+        end
+
         local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
         ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
     end
 end
 
 function loadDungeonChests()
-    ExtendedConsumableItem("Hyrule Castle Items", "hc")
-    ExtendedConsumableItem("Eastern Palace Items", "ep")
-    ExtendedConsumableItem("Desert Palace Items", "dp")
-    ExtendedConsumableItem("Tower of Hera Items", "toh")
-    ExtendedConsumableItem("Aganihm's Tower Items", "at")
-    ExtendedConsumableItem("Palace of Darkness Items", "pod")
-    ExtendedConsumableItem("Swamp Palace Items", "sp")
-    ExtendedConsumableItem("Skull Woods Items", "sw")
-    ExtendedConsumableItem("Thieves Town Items", "tt")
-    ExtendedConsumableItem("Ice Palace Items", "ip")
-    ExtendedConsumableItem("Misery Mire Items", "mm")
-    ExtendedConsumableItem("Turtle Rock Items", "tr")
-    ExtendedConsumableItem("Ganon's Tower Items", "gt")
+    ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
+    ExtendedConsumableItem("Eastern Palace Items", "ep", "@Eastern Palace")
+    ExtendedConsumableItem("Desert Palace Items", "dp", "@Desert Palace")
+    ExtendedConsumableItem("Tower of Hera Items", "toh", "@Tower of Hera")
+    ExtendedConsumableItem("Aganihm's Tower Items", "at", "@Agahnim's Tower")
+    ExtendedConsumableItem("Palace of Darkness Items", "pod", "@Palace of Darkness")
+    ExtendedConsumableItem("Swamp Palace Items", "sp", "@Swamp Palace")
+    ExtendedConsumableItem("Skull Woods Items", "sw", "@Skull Woods")
+    ExtendedConsumableItem("Thieves Town Items", "tt", "@Thieves Town")
+    ExtendedConsumableItem("Ice Palace Items", "ip", "@Ice Palace")
+    ExtendedConsumableItem("Misery Mire Items", "mm", "@Misery Mire")
+    ExtendedConsumableItem("Turtle Rock Items", "tr", "@Turtle Rock")
+    ExtendedConsumableItem("Ganon's Tower Items", "gt", "@Ganon's Tower")
 end
 
 function loadMCBK()
@@ -108,7 +115,6 @@ function updateIcons()
                 item.MaxCount = 99
                 item.AcquiredCount = 0
                 item.SwapActions = true
-                item.Icon = ImageReference:FromPackRelativePath("images/0058.png")
             end
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
