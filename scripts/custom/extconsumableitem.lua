@@ -48,12 +48,12 @@ function ExtendedConsumableItem:UpdateBadgeAndIcon()
         end
     elseif self.SwapActions then
         if self.MaxCount == 99 then
-            self.ItemInstance.BadgeTextColor = "DarkOrange"
+            self.ItemInstance.BadgeTextColor = "Yellow"
         else
             if self.AcquiredCount >= self.MaxCount then
                 self.ItemInstance.BadgeTextColor = "#ff3030"
             else
-                self.ItemInstance.BadgeTextColor = "#00ff00"
+                self.ItemInstance.BadgeTextColor = "DarkOrange"
             end
         end
     else
