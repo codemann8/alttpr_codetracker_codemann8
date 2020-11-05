@@ -95,7 +95,7 @@ end
 
 function DynamicRequirement:save()
     local saveData = {}
-    saveData["state"] = self.getState()
+    saveData["state"] = self:getState()
     return saveData
 end
 

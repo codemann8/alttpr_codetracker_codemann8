@@ -323,7 +323,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 295,
+                "x": 306,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]

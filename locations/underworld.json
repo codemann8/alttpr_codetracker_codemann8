@@ -57,15 +57,6 @@
         "parent": "Light World",
         "sections": [
             {
-                "name": "Mushroom Spot",
-                "short_name": "Shroom",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl"
-                ],
-                "item_count": 1
-            },
-            {
                 "name": "Forest Hideout",
                 "access_rules": [
                     "world_state_open",
@@ -79,8 +70,32 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 280,
-                "y": 220,
+                "x": 382,
+                "y": 255,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods.",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Mushroom Spot",
+                "short_name": "Shroom",
+                "access_rules": [
+                    "world_state_open",
+                    "world_state_inverted,pearl"
+                ],
+                "item_count": 1,
+                "capture_item": true
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 250,
+                "y": 180,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
@@ -806,6 +821,13 @@
                 "x": 980,
                 "y": 178,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1020,
+                "y": 170,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },

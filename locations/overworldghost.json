@@ -155,7 +155,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 295,
+                "x": 306,
                 "y": 860,
                 "size": 0,
                 "badge_size": 90
@@ -777,7 +777,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "item_count": 1,
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -2924,6 +2924,81 @@
                 "size": 0,
                 "badge_size": 90
 
+            }
+        ]
+    },
+
+    //Underworld//
+
+    {
+        "name": "Lost Woods Ghost",
+        "sections": [
+            {
+                "name": "Forest Hideout",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 382,
+                "y": 263,
+                "size":0,
+                "badge_size":90
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods. Ghost",
+        "sections": [
+            {
+                "name": "Mushroom Spot",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 250,
+                "y": 188,
+                "size":0,
+                "badge_size":90
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack Cave Ghost",
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 600,
+                "y": 145,
+                "size": 0,
+                "badge_size":90
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Ghost",
+        "sections": [
+            {
+                "name": "Up On Top",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 186,
+                "size": 0,
+                "badge_size":90
             }
         ]
     }
