@@ -8,6 +8,7 @@ ScriptHost:LoadScript("scripts/events.lua")
 --SDK
 ScriptHost:LoadScript("scripts/sdk/class.lua")
 ScriptHost:LoadScript("scripts/sdk/custom_item.lua")
+ScriptHost:LoadScript("scripts/sdk/consumableitem.lua")
 
 --Items
 Tracker:AddItems("items/common.json")
