@@ -5,6 +5,7 @@ ScriptHost:LoadScript("scripts/settings.lua")
 ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/class.lua")
 ScriptHost:LoadScript("scripts/custom_item.lua")
+ScriptHost:LoadScript("scripts/events.lua")
 
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
