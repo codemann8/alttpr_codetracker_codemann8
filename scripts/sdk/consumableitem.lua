@@ -3,7 +3,7 @@ ConsumableItem:set {
     FullIcon = ImageReference:FromPackRelativePath("images/0058.png"),
     EmptyIcon = ImageReference:FromPackRelativePath("images/0059.png"),
     MaxCount = {
-        value = 0x7ffffff,
+        value = 0x7fffffff,
         afterSet = function(self)
                 self.AcquiredCount = self.AcquiredCount
                 self.ConsumedCount = self.ConsumedCount
@@ -19,7 +19,7 @@ ConsumableItem:set {
             end
     },
     AcquiredCount = {
-        value = 0x7ffffff,
+        value = 0x7fffffff,
         set = function(self, value) return math.min(math.max(math.max(value, self.ConsumedCount), self.MinCount), self.MaxCount) end,
         afterSet = function(self)
                 self:UpdateBadgeAndIcon()
@@ -47,7 +47,7 @@ ConsumableItem:set {
 
 function ConsumableItem:init(name, code, count)
     count = count or self.MaxCount
-    
+
     self:createItem(name)
     self.code = code
 
