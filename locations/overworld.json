@@ -3816,6 +3816,8 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "mire_area"
             }
@@ -3842,6 +3844,8 @@
                 "access_rules": [
                     "{}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
             }
         ],
@@ -4596,6 +4600,8 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "ddm_top"
             }
@@ -4619,6 +4625,8 @@
         "sections": [
             {
                 "name": "Medallion",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
             }
         ],
