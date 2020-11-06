@@ -1,4 +1,9 @@
+function tracker_on_begin_loading_save_file()
+    LOADING_IN_PROGRESS = true
+end
+
 function tracker_on_finish_loading_save_file()
+    LOADING_IN_PROGRESS = false
     if OBJ_RETRO then
         Tracker:FindObjectForCode("retro_mode_surrogate").ItemState:updateIcon()
     end
@@ -11,6 +16,35 @@ function tracker_on_accessibility_updated()
             local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
             if item then
                 item:UpdateBadgeAndIcon()
+            end
+        end
+    end
+
+    if false and OBJ_ENTRANCE then
+        local medallion = Tracker:FindObjectForCode("bombos")
+        local medallionFlag = medallion.CurrentStage & 0x3
+        if medallionFlag ~= 0x3 then
+            medallion = Tracker:FindObjectForCode("ether")
+            medallionFlag = medallionFlag | medallion.CurrentStage
+            if medallionFlag ~= 0x3 then
+                medallion = Tracker:FindObjectForCode("quake")
+                medallionFlag = medallionFlag | medallion.CurrentStage
+            end
+        end
+
+        local loc = nil
+        if medallionFlag & 0x1 == 0 then
+            loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Misery Mire Medallion Check/Medallion" or "@Misery Mire Entrance/Entrance").CapturedItem
+            if loc then
+                medallion = Tracker:FindObjectForCode(string.lower(loc.Name))
+                medallion.CurrentStage = medallion.CurrentStage | 0x1
+            end
+        end
+        if medallionFlag & 0x2 == 0 then
+            loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Turtle Rock Medallion Check/Medallion" or "@Turtle Rock Entrance/Entrance").CapturedItem
+            if loc then
+                medallion = Tracker:FindObjectForCode(string.lower(loc.Name))
+                medallion.CurrentStage = medallion.CurrentStage | 0x2
             end
         end
     end

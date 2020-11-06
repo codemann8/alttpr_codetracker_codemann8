@@ -127,7 +127,14 @@
                         "x": 1003,
                         "y": 942,
                         "size": 64,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
+                    },
+                    {
+                        "map": "lightworld",
+                        "x": 1003,
+                        "y": 962,
+                        "size": 64,
+                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     },
                     {
                         "map": "erlightdungeon",
@@ -1860,7 +1867,7 @@
                     {
                         "map": "lightworld",
                         "x": 1003,
-                        "y": 737,
+                        "y": 717,
                         "size": 64,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     },
