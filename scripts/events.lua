@@ -1,4 +1,9 @@
+function tracker_on_begin_loading_save_file()
+    LOADING_IN_PROGRESS = true
+end
+
 function tracker_on_finish_loading_save_file()
+    LOADING_IN_PROGRESS = false
     if OBJ_RETRO then
         Tracker:FindObjectForCode("retro_mode_surrogate").ItemState:updateIcon()
     end

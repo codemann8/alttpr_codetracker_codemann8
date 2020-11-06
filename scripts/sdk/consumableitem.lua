@@ -163,14 +163,14 @@ function ConsumableItem:load(data)
     if num < 0 or num2 < 0 then
         return false
     end
-    self.AcquiredCount = num
-    self.ConsumedCount = num2
     if data["max_count"] ~= nil then
         self.MaxCount = data["max_count"]
     end
     if data["min_count"] ~= nil then
         self.MinCount = data["min_count"]
     end
+    self.AcquiredCount = num
+    self.ConsumedCount = num2
     return true
 end
 

@@ -116,7 +116,7 @@ function updateIcons()
         local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-            if item.MaxCount ~= 99 then
+            if item.MaxCount ~= 99 and not LOADING_IN_PROGRESS then
                 item.MaxCount = 99
                 item.AcquiredCount = 99
             end
@@ -148,32 +148,35 @@ function updateIcons()
                 end
             end
 
-            local found = 0
-            if item.MaxCount ~= 99 then
-                found = item.MaxCount - item.AcquiredCount
-            end
+            if not LOADING_IN_PROGRESS then
+                local found = 0
+                if item.MaxCount ~= 99 then
+                    found = item.MaxCount - item.AcquiredCount
+                end
 
-            local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
-            item.MaxCount = chest.MaxCount
-            if OBJ_POOL.CurrentStage > 0 then
-                item.MaxCount = item.MaxCount + keydrops[i] + (dungeons[i] == "hc" and 1 or 0)
-            end
+                local chest = Tracker:FindObjectForCode(dungeons[i] .. "_chest")
+                item.MaxCount = chest.MaxCount
+                if OBJ_POOL.CurrentStage > 0 then
+                    item.MaxCount = item.MaxCount + keydrops[i] + (dungeons[i] == "hc" and 1 or 0)
+                end
 
-            if Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 and dungeons[i] ~= "at" then
-                item.MaxCount = item.MaxCount - 1
-            end
-            if Tracker:FindObjectForCode("keysanity_compass").CurrentStage == 0 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
-                item.MaxCount = item.MaxCount - 1
-            end
-            if OBJ_KEYSANITY_SMALL.CurrentStage == 0 and key then
-                item.MaxCount = item.MaxCount - key.MaxCount
-            end
-            if OBJ_KEYSANITY_BIG.CurrentStage == 0 and dungeons[i] ~= "at" and not (dungeons[i] == "hc" and OBJ_POOL.CurrentStage == 0) then
-                item.MaxCount = item.MaxCount - 1
+                if Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 and dungeons[i] ~= "at" then
+                    item.MaxCount = item.MaxCount - 1
+                end
+                if Tracker:FindObjectForCode("keysanity_compass").CurrentStage == 0 and dungeons[i] ~= "hc" and dungeons[i] ~= "at" then
+                    item.MaxCount = item.MaxCount - 1
+                end
+                if OBJ_KEYSANITY_SMALL.CurrentStage == 0 and key then
+                    item.MaxCount = item.MaxCount - key.MaxCount
+                end
+                if OBJ_KEYSANITY_BIG.CurrentStage == 0 and dungeons[i] ~= "at" and not (dungeons[i] == "hc" and OBJ_POOL.CurrentStage == 0) then
+                    item.MaxCount = item.MaxCount - 1
+                end
+
+                item.AcquiredCount = math.max(item.MaxCount - found, 0)
             end
 
             item.SwapActions = false
-            item.AcquiredCount = math.max(item.MaxCount - found, 0)
         end
 
         if EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then
