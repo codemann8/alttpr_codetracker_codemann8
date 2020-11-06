@@ -491,453 +491,463 @@
         ]
     },
     "shared_v_doorrando": {
-        "type": "tabbed",
-        "tabs": [
+        "type": "scroll",
+        "content": [
             {
-                "title": "All",
-                "content": {
-                    "type": "layout",
-                    "key": "shared_doorrando_egmap"
-                }
-            },
-            {
-                "title": "HC",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "hc_sanc_hideaway", "hc_escape_back", "" ],
-                        [ "hc_sanc", "hc_escape_keyrat", "hc_escape_sewer" ],
-                        [ "", "hc_escape_trap", "hc_escape_darkcross" ],
-                        [ "", "hc_throne", "hc_escape_snake" ],
-                        [ "hc_hallway_west", "hc_hallway_back", "hc_hallway_east" ],
-                        [ "hc_lobby_west", "hc_lobby_main", "hc_lobby_east" ],
-                        [ "hc_basement_stairs", "hc_basement_second", "hc_basement_first" ],
-                        [ "hc_basement_prison", "hc_basement_stealth_left", "hc_basement_stealth_right" ]
-                    ]
-                }
-            },
-            {
-                "title": "EP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "ep_bossroom", "", "" ],
-                        [ "ep_redeyegore", "ep_eyegorecannon", "ep_potroom" ],
-                        [ "", "ep_darkeyegore", "" ],
-                        [ "ep_stalfos", "ep_bigchest", "ep_maproom" ],
-                        [ "ep_bigkeyroom", "ep_cannonball", "ep_darkkey" ],
-                        [ "", "ep_lobby", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "DP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "dp_bossroom", "" ],
-                        [ "", "dp_stonewall", "" ],
-                        [ "", "dp_popogenocide", "" ],
-                        [ "", "dp_lobby_back", "" ],
-                        [ "dp_torch", "dp_maproom", "dp_cannonball" ],
-                        [ "dp_lobby_west", "dp_lobby_main", "dp_lobby_east" ]
-                    ]
-                }
-            },
-            {
-                "title": "ToH",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "toh_bossroom" ],
-                        [ "toh_premoldorm" ],
-                        [ "toh_pettingzoo" ],
-                        [ "toh_beetles" ],
-                        [ "toh_lobby" ],
-                        [ "toh_basement" ]
-                    ]
-                }
-            },
-            {
-                "title": "AT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "at_bossroom" ],
-                        [ "at_chamber" ],
-                        [ "at_pitroom" ],
-                        [ "at_potcircle" ],
-                        [ "at_dark_melancholy" ],
-                        [ "at_dark_despair" ],
-                        [ "at_lobby" ]
-                    ]
-                }
-            },
-            {
-                "title": "PoD",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "pod_bossroom", "" ],
-                        [ "", "pod_rupeebasement", "pod_turtlebasement" ],
-                        [ "pod_darkmaze", "pod_hammeryump", "pod_mimicstatue" ],
-                        [ "", "pod_arena", "pod_statue" ],
-                        [ "pod_stalfos", "pod_mainhub", "pod_conveyor" ],
-                        [ "pod_shooter", "pod_lobby", "pod_hallway" ]
-                    ]
-                }
-            },
-            {
-                "title": "SP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "sp_bossroom", "", "" ],
-                        [ "", "", "sp_swim", "sp_waterfall", "" ],
-                        [ "sp_leftsidedropdown", "", "sp_statue", "sp_waterdrain", "sp_lobby" ],
-                        [ "sp_leftside", "sp_pegswaterflood", "sp_mainhub", "sp_hammerwaterflood", "sp_keypot" ],
-                        [ "", "", "sp_southloop", "", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "SW",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "sw_bossroom", "", "" ],
-                        [ "sw_mothdropdown", "", "" ],
-                        [ "sw_torch", "", "" ],
-                        [ "sw_lobby_north", "", "" ],
-                        [ "sw_lobby_west", "sw_lobby_central", "sw_lobby_east" ],
-                        [ "", "sw_compassroom", "sw_pinball" ]
-                    ]
-                }
-            },
-            {
-                "title": "TT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "tt_attic_left", "tt_attic_right" ],
-                        [ "tt_pegswitch", "tt_bossroom" ],
-                        [ "tt_hellway", "tt_stalfoshallway" ],
-                        [ "tt_front_northwest", "tt_front_northeast" ],
-                        [ "tt_lobby", "tt_front_southeast" ],
-                        [ "tt_bigchest", "tt_prison" ]
-                    ]
-                }
-            },
-            {
-                "title": "IP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "ip_lobby", "", "ip_freezor", "ip_hookshotpass" ],
-                        [ "ip_blockcross", "ip_icebreaker", "ip_freezorzol", "" ],
-                        [ "ip_compassroom", "", "ip_bigchest", "ip_frozenkey" ],
-                        [ "ip_conveyor", "ip_maproom", "ip_icet", "ip_icepit" ],
-                        [ "ip_ipbj", "", "ip_blockswitch", "ip_fairy" ],
-                        [ "ip_spikecross", "ip_spike", "ip_prekholdstare", "" ],
-                        [ "ip_pengatorline", "", "ip_bossroom", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "MM",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "mm_bossroom", "", "", "" ],
-                        [ "mm_previtreous", "mm_rainingzols", "mm_spookyswitch", "mm_darkswitch" ],
-                        [ "", "mm_fishbone", "mm_bridges", "mm_lbridge" ],
-                        [ "", "mm_spikepass", "mm_shootingtorches", "mm_spikechest" ],
-                        [ "", "mm_tile", "mm_mainhub", "mm_fallingbridge" ],
-                        [ "mm_wallslide", "mm_conveyorslug", "mm_mire2", "" ],
-                        [ "", "", "mm_lobby", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "TR",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "tr_crystaroller", "" ],
-                        [ "", "tr_pokeysteal", "tr_lava", "tr_pipes" ],
-                        [ "tr_bossroom", "tr_lobby_west", "tr_lobby_east", "" ],
-                        [ "tr_pretrinexx", "tr_darkroom", "tr_chainchomps", "tr_roller" ],
-                        [ "tr_switchroom", "tr_minihelmbridge", "tr_mainhub", "tr_torches" ],
-                        [ "", "tr_lobby_laserbridge", "tr_lobby_main", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "GT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "", "gt_bossroom" ],
-                        [ "gt_conveyorbridge", "gt_firebartorches", "gt_climbtreasure", "gt_preaganihm" ],
-                        [ "gt_wizrobes", "gt_icebumperdash", "gt_moldorm", "gt_spikeshame" ],
-                        [ "gt_eyegoreswitch", "gt_cannonball", "gt_gauntlet_front", "" ],
-                        [ "gt_mimics", "gt_lanmola", "gt_gauntlet_ice", "" ],
-                        [ "gt_stalfos", "gt_rando", "gt_firesnake", "" ],
-                        [ "gt_hookshotpit", "gt_multipurpose", "gt_tile", "" ],
-                        [ "gt_pegswitch", "gt_invisifloor", "gt_compassroom", "" ],
-                        [ "gt_lobby", "gt_icearmos", "", "" ]
-                    ]
-                }
+                "type": "tabbed",
+                "tabs": [
+                    {
+                        "title": "All",
+                        "content": {
+                            "type": "layout",
+                            "key": "shared_doorrando_egmap"
+                        }
+                    },
+                    {
+                        "title": "HC",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "hc_sanc_hideaway", "hc_escape_back", "" ],
+                                [ "hc_sanc", "hc_escape_keyrat", "hc_escape_sewer" ],
+                                [ "", "hc_escape_trap", "hc_escape_darkcross" ],
+                                [ "", "hc_throne", "hc_escape_snake" ],
+                                [ "hc_hallway_west", "hc_hallway_back", "hc_hallway_east" ],
+                                [ "hc_lobby_west", "hc_lobby_main", "hc_lobby_east" ],
+                                [ "hc_basement_stairs", "hc_basement_second", "hc_basement_first" ],
+                                [ "hc_basement_prison", "hc_basement_stealth_left", "hc_basement_stealth_right" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "EP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "ep_bossroom", "", "" ],
+                                [ "ep_redeyegore", "ep_eyegorecannon", "ep_potroom" ],
+                                [ "", "ep_darkeyegore", "" ],
+                                [ "ep_stalfos", "ep_bigchest", "ep_maproom" ],
+                                [ "ep_bigkeyroom", "ep_cannonball", "ep_darkkey" ],
+                                [ "", "ep_lobby", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "DP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "dp_bossroom", "" ],
+                                [ "", "dp_stonewall", "" ],
+                                [ "", "dp_popogenocide", "" ],
+                                [ "", "dp_lobby_back", "" ],
+                                [ "dp_torch", "dp_maproom", "dp_cannonball" ],
+                                [ "dp_lobby_west", "dp_lobby_main", "dp_lobby_east" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "ToH",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "toh_bossroom" ],
+                                [ "toh_premoldorm" ],
+                                [ "toh_pettingzoo" ],
+                                [ "toh_beetles" ],
+                                [ "toh_lobby" ],
+                                [ "toh_basement" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "AT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "at_bossroom" ],
+                                [ "at_chamber" ],
+                                [ "at_pitroom" ],
+                                [ "at_potcircle" ],
+                                [ "at_dark_melancholy" ],
+                                [ "at_dark_despair" ],
+                                [ "at_lobby" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "PoD",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "pod_bossroom", "" ],
+                                [ "", "pod_rupeebasement", "pod_turtlebasement" ],
+                                [ "pod_darkmaze", "pod_hammeryump", "pod_mimicstatue" ],
+                                [ "", "pod_arena", "pod_statue" ],
+                                [ "pod_stalfos", "pod_mainhub", "pod_conveyor" ],
+                                [ "pod_shooter", "pod_lobby", "pod_hallway" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "SP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "sp_bossroom", "", "" ],
+                                [ "", "", "sp_swim", "sp_waterfall", "" ],
+                                [ "sp_leftsidedropdown", "", "sp_statue", "sp_waterdrain", "sp_lobby" ],
+                                [ "sp_leftside", "sp_pegswaterflood", "sp_mainhub", "sp_hammerwaterflood", "sp_keypot" ],
+                                [ "", "", "sp_southloop", "", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "SW",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "sw_bossroom", "", "" ],
+                                [ "sw_mothdropdown", "", "" ],
+                                [ "sw_torch", "", "" ],
+                                [ "sw_lobby_north", "", "" ],
+                                [ "sw_lobby_west", "sw_lobby_central", "sw_lobby_east" ],
+                                [ "", "sw_compassroom", "sw_pinball" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "TT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "tt_attic_left", "tt_attic_right" ],
+                                [ "tt_pegswitch", "tt_bossroom" ],
+                                [ "tt_hellway", "tt_stalfoshallway" ],
+                                [ "tt_front_northwest", "tt_front_northeast" ],
+                                [ "tt_lobby", "tt_front_southeast" ],
+                                [ "tt_bigchest", "tt_prison" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "IP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "ip_lobby", "", "ip_freezor", "ip_hookshotpass" ],
+                                [ "ip_blockcross", "ip_icebreaker", "ip_freezorzol", "" ],
+                                [ "ip_compassroom", "", "ip_bigchest", "ip_frozenkey" ],
+                                [ "ip_conveyor", "ip_maproom", "ip_icet", "ip_icepit" ],
+                                [ "ip_ipbj", "", "ip_blockswitch", "ip_fairy" ],
+                                [ "ip_spikecross", "ip_spike", "ip_prekholdstare", "" ],
+                                [ "ip_pengatorline", "", "ip_bossroom", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "MM",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "mm_bossroom", "", "", "" ],
+                                [ "mm_previtreous", "mm_rainingzols", "mm_spookyswitch", "mm_darkswitch" ],
+                                [ "", "mm_fishbone", "mm_bridges", "mm_lbridge" ],
+                                [ "", "mm_spikepass", "mm_shootingtorches", "mm_spikechest" ],
+                                [ "", "mm_tile", "mm_mainhub", "mm_fallingbridge" ],
+                                [ "mm_wallslide", "mm_conveyorslug", "mm_mire2", "" ],
+                                [ "", "", "mm_lobby", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "TR",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "tr_crystaroller", "" ],
+                                [ "", "tr_pokeysteal", "tr_lava", "tr_pipes" ],
+                                [ "tr_bossroom", "tr_lobby_west", "tr_lobby_east", "" ],
+                                [ "tr_pretrinexx", "tr_darkroom", "tr_chainchomps", "tr_roller" ],
+                                [ "tr_switchroom", "tr_minihelmbridge", "tr_mainhub", "tr_torches" ],
+                                [ "", "tr_lobby_laserbridge", "tr_lobby_main", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "GT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "", "gt_bossroom" ],
+                                [ "gt_conveyorbridge", "gt_firebartorches", "gt_climbtreasure", "gt_preaganihm" ],
+                                [ "gt_wizrobes", "gt_icebumperdash", "gt_moldorm", "gt_spikeshame" ],
+                                [ "gt_eyegoreswitch", "gt_cannonball", "gt_gauntlet_front", "" ],
+                                [ "gt_mimics", "gt_lanmola", "gt_gauntlet_ice", "" ],
+                                [ "gt_stalfos", "gt_rando", "gt_firesnake", "" ],
+                                [ "gt_hookshotpit", "gt_multipurpose", "gt_tile", "" ],
+                                [ "gt_pegswitch", "gt_invisifloor", "gt_compassroom", "" ],
+                                [ "gt_lobby", "gt_icearmos", "", "" ]
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     },
     "shared_doorrando": {
-        "type": "tabbed",
-        "tabs": [
+        "type": "scroll",
+        "content": [
             {
-                "title": "All",
-                "content": {
-                    "type": "layout",
-                    "key": "shared_doorrando_egmap"
-                }
-            },
-            {
-                "title": "HC",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "hc_sanc_hideaway", "hc_escape_back", "", "", "hc_throne", "" ],
-                        [ "hc_sanc", "hc_escape_keyrat", "hc_escape_sewer", "hc_hallway_west", "hc_hallway_back", "hc_hallway_east" ],
-                        [ "", "", "hc_escape_darkcross", "hc_lobby_west", "hc_lobby_main", "hc_lobby_east" ],
-                        [ "", "", "hc_escape_snake", "hc_basement_stairs", "hc_basement_second", "hc_basement_first" ],
-                        [ "", "", "hc_escape_trap", "hc_basement_prison", "hc_basement_stealth_left", "hc_basement_stealth_right" ]
-                    ]
-                }
-            },
-            {
-                "title": "EP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "ep_bossroom", "", "", "", "" ],
-                        [ "ep_redeyegore", "ep_eyegorecannon", "ep_potroom", "ep_darkeyegore", "" ],
-                        [ "", "", "ep_stalfos", "ep_bigchest", "ep_maproom" ],
-                        [ "", "", "ep_bigkeyroom", "ep_cannonball", "ep_darkkey" ],
-                        [ "", "", "", "ep_lobby", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "DP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "dp_bossroom", "", "", "" ],
-                        [ "dp_stonewall", "", "", "" ],
-                        [ "dp_popogenocide", "dp_torch", "dp_maproom", "dp_cannonball" ],
-                        [ "dp_lobby_back", "dp_lobby_west", "dp_lobby_main", "dp_lobby_east" ]
-                    ]
-                }
-            },
-            {
-                "title": "ToH",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "toh_bossroom" ],
-                        [ "toh_beetles", "toh_premoldorm" ],
-                        [ "toh_lobby", "toh_pettingzoo" ],
-                        [ "toh_basement", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "AT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "at_bossroom" ],
-                        [ "at_dark_melancholy", "at_chamber" ],
-                        [ "at_dark_despair", "at_pitroom" ],
-                        [ "at_lobby", "at_potcircle" ]
-                    ]
-                }
-            },
-            {
-                "title": "PoD",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "pod_darkmaze", "pod_hammeryump", "pod_mimicstatue", "pod_turtlebasement" ],
-                        [ "", "pod_arena", "pod_statue", "" ],
-                        [ "pod_stalfos", "pod_mainhub", "pod_conveyor", "pod_bossroom" ],
-                        [ "pod_shooter", "pod_lobby", "pod_hallway", "pod_rupeebasement" ]
-                    ]
-                }
-            },
-            {
-                "title": "SP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "sp_bossroom", "", "" ],
-                        [ "", "", "sp_swim", "sp_waterfall", "" ],
-                        [ "sp_leftsidedropdown", "", "sp_statue", "sp_waterdrain", "sp_lobby" ],
-                        [ "sp_leftside", "sp_pegswaterflood", "sp_mainhub", "sp_hammerwaterflood", "sp_keypot" ],
-                        [ "", "", "sp_southloop", "", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "SW",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "sw_mothdropdown", "sw_bossroom", "", "" ],
-                        [ "sw_torch", "", "", "" ],
-                        [ "sw_lobby_north", "sw_lobby_west", "sw_lobby_central", "sw_lobby_east" ],
-                        [ "", "", "sw_compassroom", "sw_pinball" ]
-                    ]
-                }
-            },
-            {
-                "title": "TT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "tt_attic_left", "tt_attic_right", "tt_pegswitch", "tt_bossroom" ],
-                        [ "", "", "tt_hellway", "tt_stalfoshallway" ],
-                        [ "", "", "tt_front_northwest", "tt_front_northeast" ],
-                        [ "tt_bigchest", "tt_prison", "tt_lobby", "tt_front_southeast" ]
-                    ]
-                }
-            },
-            {
-                "title": "IP",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "ip_lobby", "ip_blockcross", "ip_icebreaker", "ip_conveyor", "ip_maproom", "ip_spikecross", "ip_spike" ],
-                        [ "", "ip_compassroom", "", "ip_ipbj", "", "ip_pengatorline", "" ],
-                        [ "", "ip_freezor", "ip_hookshotpass", "ip_bigchest", "ip_frozenkey", "ip_blockswitch", "ip_fairy" ],
-                        [ "", "ip_freezorzol", "", "ip_icet", "ip_icepit", "ip_prekholdstare", "ip_bossroom" ]
-                    ]
-                }
-            },
-            {
-                "title": "MM",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "", "", "mm_fishbone", "mm_bridges", "mm_lbridge" ],
-                        [ "", "", "", "", "mm_spikepass", "mm_shootingtorches", "mm_spikechest" ],
-                        [ "mm_bossroom", "", "", "mm_wallslide", "mm_tile", "mm_mainhub", "mm_fallingbridge" ],
-                        [ "mm_previtreous", "mm_rainingzols", "mm_spookyswitch", "mm_darkswitch", "mm_conveyorslug", "mm_mire2", "mm_lobby" ]
-                    ]
-                }
-            },
-            {
-                "title": "TR",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "tr_bossroom", "", "", "", "", "", "" ],
-                        [ "tr_pretrinexx", "tr_darkroom", "", "tr_crystaroller", "", "tr_chainchomps", "tr_roller" ],
-                        [ "tr_switchroom", "tr_minihelmbridge", "tr_pokeysteal", "tr_lava", "tr_pipes", "tr_mainhub", "tr_torches" ],
-                        [ "", "tr_lobby_laserbridge", "tr_lobby_west", "tr_lobby_east", "", "tr_lobby_main", "" ]
-                    ]
-                }
-            },
-            {
-                "title": "GT",
-                "content": {
-                    "type": "itemgrid",
-                    "h_alignment": "center",
-                    "item_margin": "1,2",
-                    "item_size": 100,
-                    "rows": [
-                        [ "", "", "", "", "", "", "gt_bossroom" ],
-                        [ "gt_stalfos", "gt_rando", "gt_firesnake", "gt_conveyorbridge", "gt_firebartorches", "gt_climbtreasure", "gt_preaganihm" ],
-                        [ "gt_hookshotpit", "gt_multipurpose", "gt_tile", "gt_wizrobes", "gt_icebumperdash", "gt_moldorm", "gt_spikeshame" ],
-                        [ "gt_pegswitch", "gt_invisifloor", "gt_compassroom", "gt_eyegoreswitch", "gt_cannonball", "gt_gauntlet_front", "" ],
-                        [ "gt_lobby", "gt_icearmos", "", "gt_mimics", "gt_lanmola", "gt_gauntlet_ice", "" ]
-                    ]
-                }
+                "type": "tabbed",
+                "tabs": [
+                    {
+                        "title": "All",
+                        "content": {
+                            "type": "layout",
+                            "key": "shared_doorrando_egmap"
+                        }
+                    },
+                    {
+                        "title": "HC",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "hc_sanc_hideaway", "hc_escape_back", "", "", "hc_throne", "" ],
+                                [ "hc_sanc", "hc_escape_keyrat", "hc_escape_sewer", "hc_hallway_west", "hc_hallway_back", "hc_hallway_east" ],
+                                [ "", "", "hc_escape_darkcross", "hc_lobby_west", "hc_lobby_main", "hc_lobby_east" ],
+                                [ "", "", "hc_escape_snake", "hc_basement_stairs", "hc_basement_second", "hc_basement_first" ],
+                                [ "", "", "hc_escape_trap", "hc_basement_prison", "hc_basement_stealth_left", "hc_basement_stealth_right" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "EP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "ep_bossroom", "", "", "", "" ],
+                                [ "ep_redeyegore", "ep_eyegorecannon", "ep_potroom", "ep_darkeyegore", "" ],
+                                [ "", "", "ep_stalfos", "ep_bigchest", "ep_maproom" ],
+                                [ "", "", "ep_bigkeyroom", "ep_cannonball", "ep_darkkey" ],
+                                [ "", "", "", "ep_lobby", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "DP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "dp_bossroom", "", "", "" ],
+                                [ "dp_stonewall", "", "", "" ],
+                                [ "dp_popogenocide", "dp_torch", "dp_maproom", "dp_cannonball" ],
+                                [ "dp_lobby_back", "dp_lobby_west", "dp_lobby_main", "dp_lobby_east" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "ToH",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "toh_bossroom" ],
+                                [ "toh_beetles", "toh_premoldorm" ],
+                                [ "toh_lobby", "toh_pettingzoo" ],
+                                [ "toh_basement", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "AT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "at_bossroom" ],
+                                [ "at_dark_melancholy", "at_chamber" ],
+                                [ "at_dark_despair", "at_pitroom" ],
+                                [ "at_lobby", "at_potcircle" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "PoD",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "pod_darkmaze", "pod_hammeryump", "pod_mimicstatue", "pod_turtlebasement" ],
+                                [ "", "pod_arena", "pod_statue", "" ],
+                                [ "pod_stalfos", "pod_mainhub", "pod_conveyor", "pod_bossroom" ],
+                                [ "pod_shooter", "pod_lobby", "pod_hallway", "pod_rupeebasement" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "SP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "sp_bossroom", "", "" ],
+                                [ "", "", "sp_swim", "sp_waterfall", "" ],
+                                [ "sp_leftsidedropdown", "", "sp_statue", "sp_waterdrain", "sp_lobby" ],
+                                [ "sp_leftside", "sp_pegswaterflood", "sp_mainhub", "sp_hammerwaterflood", "sp_keypot" ],
+                                [ "", "", "sp_southloop", "", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "SW",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "sw_mothdropdown", "sw_bossroom", "", "" ],
+                                [ "sw_torch", "", "", "" ],
+                                [ "sw_lobby_north", "sw_lobby_west", "sw_lobby_central", "sw_lobby_east" ],
+                                [ "", "", "sw_compassroom", "sw_pinball" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "TT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "tt_attic_left", "tt_attic_right", "tt_pegswitch", "tt_bossroom" ],
+                                [ "", "", "tt_hellway", "tt_stalfoshallway" ],
+                                [ "", "", "tt_front_northwest", "tt_front_northeast" ],
+                                [ "tt_bigchest", "tt_prison", "tt_lobby", "tt_front_southeast" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "IP",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "ip_lobby", "ip_blockcross", "ip_icebreaker", "ip_conveyor", "ip_maproom", "ip_spikecross", "ip_spike" ],
+                                [ "", "ip_compassroom", "", "ip_ipbj", "", "ip_pengatorline", "" ],
+                                [ "", "ip_freezor", "ip_hookshotpass", "ip_bigchest", "ip_frozenkey", "ip_blockswitch", "ip_fairy" ],
+                                [ "", "ip_freezorzol", "", "ip_icet", "ip_icepit", "ip_prekholdstare", "ip_bossroom" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "MM",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "", "", "mm_fishbone", "mm_bridges", "mm_lbridge" ],
+                                [ "", "", "", "", "mm_spikepass", "mm_shootingtorches", "mm_spikechest" ],
+                                [ "mm_bossroom", "", "", "mm_wallslide", "mm_tile", "mm_mainhub", "mm_fallingbridge" ],
+                                [ "mm_previtreous", "mm_rainingzols", "mm_spookyswitch", "mm_darkswitch", "mm_conveyorslug", "mm_mire2", "mm_lobby" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "TR",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "tr_bossroom", "", "", "", "", "", "" ],
+                                [ "tr_pretrinexx", "tr_darkroom", "", "tr_crystaroller", "", "tr_chainchomps", "tr_roller" ],
+                                [ "tr_switchroom", "tr_minihelmbridge", "tr_pokeysteal", "tr_lava", "tr_pipes", "tr_mainhub", "tr_torches" ],
+                                [ "", "tr_lobby_laserbridge", "tr_lobby_west", "tr_lobby_east", "", "tr_lobby_main", "" ]
+                            ]
+                        }
+                    },
+                    {
+                        "title": "GT",
+                        "content": {
+                            "type": "itemgrid",
+                            "h_alignment": "center",
+                            "item_margin": "1,2",
+                            "item_size": 100,
+                            "rows": [
+                                [ "", "", "", "", "", "", "gt_bossroom" ],
+                                [ "gt_stalfos", "gt_rando", "gt_firesnake", "gt_conveyorbridge", "gt_firebartorches", "gt_climbtreasure", "gt_preaganihm" ],
+                                [ "gt_hookshotpit", "gt_multipurpose", "gt_tile", "gt_wizrobes", "gt_icebumperdash", "gt_moldorm", "gt_spikeshame" ],
+                                [ "gt_pegswitch", "gt_invisifloor", "gt_compassroom", "gt_eyegoreswitch", "gt_cannonball", "gt_gauntlet_front", "" ],
+                                [ "gt_lobby", "gt_icearmos", "", "gt_mimics", "gt_lanmola", "gt_gauntlet_ice", "" ]
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     }
