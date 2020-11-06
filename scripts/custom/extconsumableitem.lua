@@ -17,10 +17,22 @@ function ExtendedConsumableItem:UpdateBadgeAndIcon()
         else
             self.ItemInstance.Icon = self.FullIcon
         end
-        if not self.DisplayAsFractionOfMax or self.MaxCount == 0x7fffffff then
-            self.ItemInstance.BadgeText = tostring(math.floor(self.AvailableCount))
+        local text = nil
+        if self.SwapActions then
+            if self.MaxCount == 99 then
+                text = tostring(math.floor(self.MaxCount - self.AcquiredCount))
+            elseif self.AcquiredCount == self.MaxCount then
+                text = tostring(math.floor(self.MaxCount))
+            else
+                text = tostring(math.floor(self.MaxCount - self.AcquiredCount))
+            end
         else
-            self.ItemInstance.BadgeText = tostring(math.floor(self.AvailableCount)) .. "/" .. tostring(math.floor(self.MaxCount))
+            text = tostring(math.floor(self.AvailableCount))
+        end
+        if not self.DisplayAsFractionOfMax or self.MaxCount == 0x7fffffff or (self.SwapActions and self.MaxCount == 99) then
+            self.ItemInstance.BadgeText = text
+        else
+            self.ItemInstance.BadgeText = text .. "/" .. tostring(math.floor(self.MaxCount))
         end
     end
     if not self.SwapActions and self:getProperty("section") then
@@ -62,5 +74,21 @@ function ExtendedConsumableItem:UpdateBadgeAndIcon()
         else
             self.ItemInstance.BadgeTextColor = "WhiteSmoke"
         end
+    end
+end
+
+function ExtendedConsumableItem:onLeftClick()
+    if self.SwapActions and self.MaxCount ~= 99 then
+        self:Increment(1)
+    else
+        self:Decrement(1)
+    end
+end
+
+function ExtendedConsumableItem:onRightClick()
+    if self.SwapActions and self.MaxCount ~= 99 then
+        self:Decrement(1)
+    else
+        self:Increment(1)
     end
 end

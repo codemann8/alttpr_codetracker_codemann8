@@ -118,7 +118,7 @@ function updateIcons()
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if item.MaxCount ~= 99 then
                 item.MaxCount = 99
-                item.AcquiredCount = 0
+                item.AcquiredCount = 99
             end
             item.SwapActions = true
             key.MaxCount = 99
