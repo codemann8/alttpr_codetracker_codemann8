@@ -173,7 +173,3 @@ function ConsumableItem:load(data)
     self.ConsumedCount = num2
     return true
 end
-
-function ConsumableItem:propertyChanged(key, value)
-    self:UpdateBadgeAndIcon()
-end

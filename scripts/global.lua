@@ -35,6 +35,7 @@ function initGlobalVars()
         for i = 1, #dungeons do
             local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
             item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+            item:UpdateBadgeAndIcon()
         end
 
         --Auto-Toggle Race Mode
