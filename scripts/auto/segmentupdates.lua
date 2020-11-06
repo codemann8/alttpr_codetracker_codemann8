@@ -13,7 +13,6 @@ function updateModuleIdFromMemorySegment(segment)
         end
 
         if mainModuleIdx == 0x07 or mainModuleIdx == 0x09 then
-            updateDungeonFromStatus(false)
         elseif mainModuleIdx == 0x12 then
             sendExternalMessage("health", "dead")
         end
@@ -44,13 +43,156 @@ function updateOverworldIdFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    local owarea = ReadU16(segment, 0x7e008a)
+    local owarea = ReadU8(segment, 0x7e008a)
+    if not (OBJ_DUNGEON.AcquiredCount == 0xff and OBJ_MODULE.AcquiredCount == 0x09) then --force OW transitions to retain OW ID
+        if (owarea == 0 and (OBJ_MODULE.AcquiredCount == 0x06 or OBJ_MODULE.AcquiredCount == 0x0f)) --transitioning into dungeons
+                or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
+            owarea = 0xff
+        end
+    end
 
     if OBJ_OWAREA.AcquiredCount ~= owarea then
-        if owarea > 0 and OBJ_OWAREA.AcquiredCount > 0 then
-            updateDungeonFromStatus(true)
+        --Update Dungeon Image (Prep)
+        local updateImage = false
+        if OBJ_OWAREA.AcquiredCount == 255
+                or (owarea >= 0x40 and owarea < 0x80 and OBJ_OWAREA.AcquiredCount < 0x40) 
+                or (owarea < 0x40 and OBJ_OWAREA.AcquiredCount >= 0x40 and OBJ_OWAREA.AcquiredCount < 0x80) then
+            updateImage = true
+        end
+
+        OBJ_OWAREA.AcquiredCount = owarea
+
+        if OBJ_OWAREA.AcquiredCount < 0xff then
+            --Region Autotracking
+            if OBJ_ENTRANCE.CurrentStage > 0 and OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and Tracker.ActiveVariantUID ~= "items_only" then
+                local overworldMap =
+                {
+                    [0x02] = "light_world", [0x03] = "dm_west_bottom",
+                    [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
+                    [0x22] = "light_world", [0x1e] = "light_world",
+                    [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
+                    [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
+                    [0x3a] = "light_world", [0x3b] = "light_world",
+                    [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
+                    [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
+                    [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
+                    [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
+                    [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
+                    [0x7b] = "dw_south"
+                }
+                if OBJ_OWAREA.AcquiredCount < 0xff and overworldMap[OBJ_OWAREA.AcquiredCount] then
+                    local region = Tracker:FindObjectForCode(overworldMap[OBJ_OWAREA.AcquiredCount])
+                    if region then
+                        region.Active = true
+                    end
+                end
+            end
+
+            --Update Dungeon Image
+            if updateImage then
+                if OBJ_OWAREA.AcquiredCount >= 0x40 and OBJ_OWAREA.AcquiredCount < 0x80 then
+                    if string.find(Tracker.ActiveVariantUID, "er_") then
+                        sendExternalMessage("dungeon", "er-dw")
+                    else
+                        sendExternalMessage("dungeon", "dw")
+                    end
+                else
+                    if string.find(Tracker.ActiveVariantUID, "er_") then
+                        sendExternalMessage("dungeon", "er-lw")
+                    else
+                        sendExternalMessage("dungeon", "lw")
+                    end
+                end
+            end
+
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                print("CURRENT OW:", OBJ_OWAREA.AcquiredCount, string.format("0x%2X", OBJ_OWAREA.AcquiredCount))
+            end
+        end
+    end
+end
+
+function updateDungeonIdFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    InvalidateReadCaches()
+
+    OBJ_DUNGEON.AcquiredCount = ReadU8(segment, 0x7e040c)
+
+    if OBJ_DUNGEON.AcquiredCount < 0xff then
+        local dungeons = {
+            [0] = "hc", --sewer
+            [2] = "hc",
+            [4] = "ep",
+            [6] = "dp",
+            [8] = "at",
+            [10] = "sp",
+            [12] = "pod",
+            [14] = "mm",
+            [16] = "sw",
+            [18] = "ip",
+            [20] = "toh",
+            [22] = "tt",
+            [24] = "tr",
+            [26] = "gt",
+            [255] = "OW"
+        }
+        
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT DUNGEON:", dungeons[OBJ_DUNGEON.AcquiredCount], OBJ_DUNGEON.AcquiredCount, string.format("0x%2X", OBJ_DUNGEON.AcquiredCount))
+        end
+
+        --Set Door Dungeon Selector
+        if Tracker.ActiveVariantUID ~= "items_only" then
+            local dungeonSelect = {
+                [0] = 0,
+                [2] = 0,
+                [4] = 1,
+                [6] = 2,
+                [8] = 4,
+                [10] = 6,
+                [12] = 5,
+                [14] = 10,
+                [16] = 7,
+                [18] = 9,
+                [20] = 3,
+                [22] = 8,
+                [24] = 11,
+                [26] = 12
+            }
+            OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
+        end
+
+        --Update Dungeon Image
+        if string.find(Tracker.ActiveVariantUID, "er_") then
+            sendExternalMessage("dungeon", "er-" .. dungeons[OBJ_DUNGEON.AcquiredCount])
         else
-            OBJ_OWAREA.AcquiredCount = owarea
+            sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
+        end
+
+        --Auto-pin Dungeon Chests
+        if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE.CurrentStage < 2 then
+            local dungeonLocations = {
+                [0] = "@Hyrule Castle & Escape", --sewer
+                [2] = "@Hyrule Castle & Escape",
+                [4] = "@Eastern Palace",
+                [6] = "@Desert Palace",
+                [8] = "@Agahnim's Tower",
+                [10] = "@Swamp Palace",
+                [12] = "@Palace of Darkness",
+                [14] = "@Misery Mire",
+                [16] = "@Skull Woods",
+                [18] = "@Ice Palace",
+                [20] = "@Tower of Hera",
+                [22] = "@Thieves Town",
+                [24] = "@Turtle Rock",
+                [26] = "@Ganon's Tower"
+            }
+            for i = 0, 26, 2 do
+                Tracker:FindObjectForCode(dungeonLocations[i]).Pinned = dungeonLocations[i] == dungeonLocations[OBJ_DUNGEON.AcquiredCount]
+            end
         end
     end
 end
@@ -64,7 +206,47 @@ function updateRoomIdFromMemorySegment(segment)
 
     OBJ_ROOM.AcquiredCount = ReadU16(segment, 0x7e00a0)
 
-    --updateDungeonFromStatus(true) --call if wanting to track room changes within a dungeon
+    local roomMap =
+    {
+                     [0x01] = 2,  [0x02] = 0,               [0x04] = 24,              [0x06] = 10, [0x07] = 20,              [0x09] = 12, [0x0a] = 12, [0x0b] = 12, [0x0c] = 26, [0x0d] = 26, [0x0e] = 18,
+                     [0x11] = 0,  [0x12] = 0,  [0x13] = 24, [0x14] = 24, [0x15] = 24, [0x16] = 10, [0x17] = 20,              [0x19] = 12, [0x1a] = 12, [0x1b] = 12, [0x1c] = 26, [0x1d] = 26, [0x1e] = 18, [0x1f] = 18,
+        [0x20] = 8,  [0x21] = 0,  [0x22] = 0,  [0x23] = 24, [0x24] = 24,              [0x26] = 10, [0x27] = 20, [0x28] = 10, [0x29] = 16, [0x2a] = 12, [0x2b] = 12,                           [0x2e] = 18,
+        [0x30] = 8,  [0x31] = 20, [0x32] = 0,  [0x33] = 6,  [0x34] = 10, [0x35] = 10, [0x36] = 10, [0x37] = 10, [0x38] = 10, [0x39] = 16, [0x3a] = 12, [0x3b] = 12,              [0x3d] = 26, [0x3e] = 18, [0x3f] = 18,
+        [0x40] = 8,  [0x41] = 0,  [0x42] = 0,  [0x43] = 6,  [0x44] = 22, [0x45] = 22, [0x46] = 10,                           [0x49] = 16, [0x4a] = 12, [0x4b] = 12, [0x4c] = 26, [0x4d] = 26, [0x4e] = 18, [0x4f] = 18,
+        [0x50] = 2,  [0x51] = 2,  [0x52] = 2,  [0x53] = 6,  [0x54] = 10,              [0x56] = 16, [0x57] = 16, [0x58] = 16, [0x59] = 16, [0x5a] = 12, [0x5b] = 26, [0x5c] = 26, [0x5d] = 26, [0x5e] = 18, [0x5f] = 18,
+        [0x60] = 2,  [0x61] = 2,  [0x62] = 2,  [0x63] = 6,  [0x64] = 22, [0x65] = 22, [0x66] = 10, [0x67] = 16, [0x68] = 16,              [0x6a] = 12, [0x6b] = 26, [0x6c] = 26, [0x6d] = 26, [0x6e] = 18,
+        [0x70] = 2,  [0x71] = 2,  [0x72] = 2,  [0x73] = 6,  [0x74] = 6,  [0x75] = 6,  [0x76] = 10, [0x77] = 20,                                        [0x7b] = 26, [0x7c] = 26, [0x7d] = 26, [0x7e] = 18, [0x7f] = 18,
+        [0x80] = 2,  [0x81] = 2,  [0x82] = 2,  [0x83] = 6,  [0x84] = 6,  [0x85] = 6,               [0x87] = 20,              [0x89] = 4,               [0x8b] = 26, [0x8c] = 26, [0x8d] = 26, [0x8e] = 18,
+        [0x90] = 14, [0x91] = 14, [0x92] = 14, [0x93] = 14,              [0x95] = 26, [0x96] = 26, [0x97] = 14, [0x98] = 14, [0x99] = 4,               [0x9b] = 26, [0x9c] = 26, [0x9d] = 26, [0x9e] = 18, [0x9f] = 18,
+        [0xa0] = 14, [0xa1] = 14, [0xa2] = 14, [0xa3] = 14, [0xa4] = 24, [0xa5] = 26, [0xa6] = 26, [0xa7] = 20, [0xa8] = 4,  [0xa9] = 4,  [0xaa] = 4,  [0xab] = 22, [0xac] = 22,              [0xae] = 18, [0xaf] = 18,
+        [0xb0] = 8,  [0xb1] = 14, [0xb2] = 14, [0xb3] = 14, [0xb4] = 24, [0xb5] = 24, [0xb6] = 24, [0xb7] = 24, [0xb8] = 4,  [0xb9] = 4,  [0xba] = 4,  [0xbb] = 22, [0xbc] = 22,              [0xbe] = 18, [0xbf] = 18,
+        [0xc0] = 8,  [0xc1] = 14, [0xc2] = 14, [0xc3] = 14, [0xc4] = 24, [0xc5] = 24, [0xc6] = 24, [0xc7] = 24, [0xc8] = 4,  [0xc9] = 4,               [0xcb] = 22, [0xcc] = 22,              [0xce] = 18,
+        [0xd0] = 8,  [0xd1] = 14, [0xd2] = 14,                           [0xd5] = 24, [0xd6] = 24,              [0xd8] = 4,  [0xd9] = 4,  [0xda] = 4,  [0xdb] = 22, [0xdc] = 22,              [0xde] = 18,
+        [0xe0] = 8
+    }
+    
+    local dungeons = {
+        [0] = "hc", --sewer
+        [2] = "hc",
+        [4] = "ep",
+        [6] = "dp",
+        [8] = "at",
+        [10] = "sp",
+        [12] = "pod",
+        [14] = "mm",
+        [16] = "sw",
+        [18] = "ip",
+        [20] = "toh",
+        [22] = "tt",
+        [24] = "tr",
+        [26] = "gt",
+        [255] = "OW"
+    }
+
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+        print("CURRENT ROOM:", OBJ_ROOM.AcquiredCount, string.format("0x%4X", OBJ_ROOM.AcquiredCount))
+        print("CURRENT ROOM ORIGDUNGEON:", dungeons[roomMap[OBJ_ROOM.AcquiredCount]], roomMap[OBJ_ROOM.AcquiredCount], string.format("0x%2X", roomMap[OBJ_ROOM.AcquiredCount]))
+    end
 end
 
 function updateItemsFromMemorySegment(segment)
@@ -146,7 +328,6 @@ function updateOverworldEventsFromMemorySegment(segment)
     InvalidateReadCaches()
 
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spectacle Rock/Up On Top", 3)
-    updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Spec Rock/Up On Top", 3)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Floating Island/Island", 5)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Race Game/Take This Trash", 40)
     updateSectionChestCountFromOverworldIndexAndFlag(segment, "@Grove Digging Spot/Hidden Treasure", 42, updateShovelIndicatorStatus)
@@ -188,7 +369,6 @@ function updateNPCItemFlagsFromMemorySegment(segment)
     updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet",            0x7ef411, 0x02)
     updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home",   0x7ef411, 0x04)
     -- 0x08 is no longer relevant
-    updateSectionChestCountFromByteAndFlag(segment, "@Lost Woods/Mushroom Spot",        0x7ef411, 0x10)
     updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom",            0x7ef411, 0x10)
     updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant",           0x7ef411, 0x20)
     -- 0x40 is unused
@@ -433,9 +613,9 @@ function updateRoomsFromMemorySegment(segment)
     updateDungeonKeysFromMemorySegment(nil)
 
     --Miscellaneous
-	if OBJ_RACEMODE.CurrentStage == 0 then
-		updateToggleItemFromByteAndFlag(segment, "attic", 0x7ef0cb, 0x01)
-	end
+    if OBJ_RACEMODE.CurrentStage == 0 then
+        updateToggleItemFromByteAndFlag(segment, "attic", 0x7ef0cb, 0x01)
+    end
     updateToggleItemFromByteAndFlag(segment, "aga2", 0x7ef01b, 0x08)
 
     --Underworld Locations

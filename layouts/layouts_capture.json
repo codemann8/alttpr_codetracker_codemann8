@@ -27,5 +27,19 @@
                 [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
             ]
         }
+    },
+    "tracker_capture_dropdown_insanity": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 60,
+            "rows": [
+                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
+                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
+                [ "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
+            ]
+        }
     }
 }

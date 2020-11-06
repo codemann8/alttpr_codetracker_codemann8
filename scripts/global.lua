@@ -30,9 +30,37 @@ function initGlobalVars()
 
         updateIcons()
 
+        --Link Dungeon Locations to Chest Items
+        local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+        for i = 1, #dungeons do
+            local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
+            item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+        end
+
+        --Auto-Toggle Race Mode
+        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
+            Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
+        end
+
         local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
         ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
     end
+end
+
+function loadDungeonChests()
+    ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
+    ExtendedConsumableItem("Eastern Palace Items", "ep", "@Eastern Palace")
+    ExtendedConsumableItem("Desert Palace Items", "dp", "@Desert Palace")
+    ExtendedConsumableItem("Tower of Hera Items", "toh", "@Tower of Hera")
+    ExtendedConsumableItem("Aganihm's Tower Items", "at", "@Agahnim's Tower")
+    ExtendedConsumableItem("Palace of Darkness Items", "pod", "@Palace of Darkness")
+    ExtendedConsumableItem("Swamp Palace Items", "sp", "@Swamp Palace")
+    ExtendedConsumableItem("Skull Woods Items", "sw", "@Skull Woods")
+    ExtendedConsumableItem("Thieves Town Items", "tt", "@Thieves Town")
+    ExtendedConsumableItem("Ice Palace Items", "ip", "@Ice Palace")
+    ExtendedConsumableItem("Misery Mire Items", "mm", "@Misery Mire")
+    ExtendedConsumableItem("Turtle Rock Items", "tr", "@Turtle Rock")
+    ExtendedConsumableItem("Ganon's Tower Items", "gt", "@Ganon's Tower")
 end
 
 function loadMCBK()
@@ -85,15 +113,14 @@ function updateIcons()
     local chestkeys = { 1,    0,    1,    2,    1,    6,     3,    3,    2,    1,     1,    4,    4  }
     local keydrops =  { 3,    2,    3,    2,    5,    0,     3,    2,    4,    0,     2,    2,    4  }
     for i = 1, #dungeons do
-        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item")
+        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
         local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if item.MaxCount ~= 99 then
                 item.MaxCount = 99
                 item.AcquiredCount = 0
-                item.SwapActions = true
-                item.Icon = ImageReference:FromPackRelativePath("images/0058.png")
             end
+            item.SwapActions = true
             key.MaxCount = 99
             key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
@@ -189,7 +216,6 @@ function updateIcons()
     else
         gtbk.MaxCount = 99
     end
-
 
     OBJ_DOORDUNGEON.ItemState:updateIcon()
     OBJ_DOORCHEST.ItemState:updateIcon()

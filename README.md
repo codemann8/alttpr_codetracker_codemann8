@@ -39,12 +39,10 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Item/Key Tracker
 
 ## Installation:
-Normally, an EmoTracker package is installed through the EmoTracker program itself. However, the submission has been denied by EmoTracker staff for unknown/unclarified reasons. Thus, the only way to enjoy this package is to manually install it. To install, you will need to perform the following steps:
-1) You will need to modify a settings file in your local EmoTracker working directory, located in `C:/Users/<user>/Documents/EmoTracker/application_settings.json`. Open this file in your favorite text editor (Notepad if you don't have any).
-2) There is a line labeled `"package_repositories": []`, you will need to add a link to my repository, which is what informs EmoTracker to download a new update to the tracker package. The resulting line should be `"package_repositories": ["https://raw.githubusercontent.com/codemann8/alttpr_codetracker_codemann8/master/repository.json"]`. Save the file.
-3) If EmoTracker is open, close and reopen it. From here, the new tracker package should now be a package that shows in the default `Package Manager` alongside all the other packages you can install. You will see `CodeTracker Full Tracker` as a new option to install.
-4) Click `Install`. From now on, EmoTracker will show a yellow/green cloud icon when there is a new version of this tracker to install.
-5) Beat the pig ;) See Usage section for further info, if needed
+To install, you will need to perform the following steps:
+1) Open EmoTracker, in the default `Package Manager` under the ALTTPR section, you will see `CodeTracker Full Tracker` as an option to install.
+2) Click `Install`. From now on, EmoTracker will show a yellow/green cloud icon when there is a new version of this tracker to install.
+3) Beat the pig ;) See Usage section for further info, if needed
 
 ## Usage:
 #### Tracker Layout
@@ -87,8 +85,10 @@ For instance, there is a settings file that can be modified to enable or disable
 - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
 - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance rando)
 
-- AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
 - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
 - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
 - AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
+
+- AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
+- AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT - This will enable Race Mode every time you start a new tracking instance
 - EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door rando, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.

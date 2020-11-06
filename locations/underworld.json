@@ -57,20 +57,11 @@
         "parent": "Light World",
         "sections": [
             {
-                "name": "Mushroom Spot",
-                "short_name": "Shroom",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl"
-                ],
-                "item_count": 1
-            },
-            {
                 "name": "Forest Hideout",
                 "access_rules": [
                     "world_state_open",
                     "world_state_inverted,pearl",
-                    "{}"
+                    "{world_state_inverted}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -79,8 +70,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 280,
-                "y": 220,
+                "x": 364,
+                "y": 280,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
@@ -778,34 +769,6 @@
                 "x": 900,
                 "y": 440,
                 "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_off" ]
-            }
-        ]
-    },
-    {
-        "name": "Spectacle Rock",
-        "parent": "Death Mountain West Bottom",
-        "sections": [
-            {
-                "name": "Cave",
-                "item_count": 1
-            },
-            {
-                "name": "Up On Top",
-                "access_rules": [
-                    "world_state_open,mirror",
-                    "world_state_inverted,@Death Mountain West Top",
-                    "{}"
-                ],
-                "capture_item": true,
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 980,
-                "y": 178,
-                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
     },

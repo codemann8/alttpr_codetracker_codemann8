@@ -165,9 +165,9 @@ function updateAga1(segment)
 end
 
 function updateDam(segment)
-	if OBJ_RACEMODE.CurrentStage == 0 then
-		Tracker:FindObjectForCode("dam").Active = ReadU8(segment, 0x7ef2bb) & 0x20 > 0
-	end
+    if OBJ_RACEMODE.CurrentStage == 0 then
+        Tracker:FindObjectForCode("dam").Active = ReadU8(segment, 0x7ef2bb) & 0x20 > 0
+    end
 end
 
 function updateHealth(segment)

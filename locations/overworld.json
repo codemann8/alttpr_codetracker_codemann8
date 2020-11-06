@@ -43,10 +43,17 @@
                     "world_state_inverted,pearl",
                     "{world_state_inverted}"
                 ],
+                "capture_item": true,
                 "item_count": 1
             }
         ],
         "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 250,
+                "y": 180,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
             {
                 "map": "lightworld",
                 "x": 250,
@@ -61,10 +68,18 @@
         "parent": "Light World",
         "sections": [
             {
-                "name": "Tree",
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
+                "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "short_name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -75,29 +90,10 @@
                 "x": 370,
                 "y": 40,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Forest Chest Game",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 370,
-                "y": 40,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -123,7 +119,7 @@
             {
                 "map": "lightworld",
                 "x": 382,
-                "y": 255,
+                "y": 246,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -145,7 +141,7 @@
             {
                 "map": "lightworld",
                 "x": 370,
-                "y": 305,
+                "y": 314,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -200,7 +196,7 @@
             {
                 "map": "lightworld",
                 "x": 663,
-                "y": 60,
+                "y": 50,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -211,9 +207,18 @@
         "parent": "Light World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -222,31 +227,12 @@
             {
                 "map": "lightworld",
                 "x": 671,
-                "y": 120,
+                "y": 126,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Lumberjack House",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 671,
-                "y": 120,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -256,9 +242,18 @@
         "parent": "Light World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -269,29 +264,32 @@
                 "x": 375,
                 "y": 635,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
     {
-        "name": "Kakariko Fortune Teller",
+        "name": "Blind's House Entrance",
         "parent": "Light World",
         "sections": [
             {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 375,
-                "y": 635,
+                "x": 230,
+                "y": 840,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -311,7 +309,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 306,
+                "x": 298,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -334,7 +332,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 352,
+                "x": 366,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -347,9 +345,18 @@
         "parent": "Light World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -360,7 +367,10 @@
                 "x": 100,
                 "y": 940,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -370,9 +380,18 @@
         "parent": "Light World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -383,73 +402,10 @@
                 "x": 415,
                 "y": 965,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Left Snitch House",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 100,
-                "y": 940,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Right Snitch House",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 415,
-                "y": 965,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Blind's House Entrance",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 253,
-                "y": 840,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -469,7 +425,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 46,
+                "x": 40,
                 "y": 833,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -491,7 +447,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 95,
+                "x": 108,
                 "y": 857,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
@@ -576,9 +532,18 @@
         ],
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "grass_house"
             }
@@ -589,33 +554,10 @@
                 "x": 410,
                 "y": 1070,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Grass House",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 410,
-                "y": 1070,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -676,9 +618,17 @@
         "parent": "Light World",
         "sections": [
             {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -689,28 +639,10 @@
                 "x": 220,
                 "y": 1175,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Kakariko Shop",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 220,
-                "y": 1175,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -723,9 +655,18 @@
         ],
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "bomb_hut"
             }
@@ -736,33 +677,10 @@
                 "x": 55,
                 "y": 1195,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Bomb Hut",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open,",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 55,
-                "y": 1195,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -806,7 +724,14 @@
                 "x": 615,
                 "y": 1052,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 615,
+                "y": 1044,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -839,7 +764,14 @@
                 "x": 650,
                 "y": 1150,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 650,
+                "y": 1180,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -859,31 +791,9 @@
             {
                 "map": "lightworld",
                 "x": 635,
-                "y": 1106,
+                "y": 1112,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
-            }
-        ]
-    },
-    {
-        "name": "Kakariko Chest Game",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 432,
-                "y": 1400,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -896,7 +806,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -905,7 +824,10 @@
                 "x": 432,
                 "y": 1400,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -928,7 +850,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 220,
+                "x": 210,
                 "y": 1435,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -950,7 +872,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 280,
+                "x": 290,
                 "y": 1435,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -1121,37 +1043,20 @@
         ],
         "sections": [
             {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1200,
-                "y": 1565,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Hype Fairy Cave",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
                 "name": "Take Any Cave",
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1160,29 +1065,10 @@
                 "x": 1200,
                 "y": 1565,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Lake Fortune Teller",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1300,
-                "y": 1615,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1195,7 +1081,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1204,29 +1099,10 @@
                 "x": 1300,
                 "y": 1615,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Lake Shop",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1460,
-                "y": 1540,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1238,7 +1114,16 @@
                 "name": "Shop",
                 "chest_unopened_img": "images/potionshop.png",
                 "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1247,36 +1132,10 @@
                 "x": 1460,
                 "y": 1540,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
-            }
-        ]
-    },
-    {
-        "name": "Central Bonk Rocks",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Entrance",
-                "access_rules": [
-                    "boots"
-                ],
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 945,
-                "y": 1310,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1290,10 +1149,24 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [ "boots,[nothing]" ],
+                "access_rules": [
+                    "boots,[nothing]"
+                ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "access_rules": [
+                    "boots"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1302,7 +1175,10 @@
                 "x": 945,
                 "y": 1310,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1453,30 +1329,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1790,
-                "y": 1545,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Cold Bee Cave",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1835,
-                "y": 1545,
+                "x": 1786,
+                "y": 1535,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1491,34 +1345,14 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1850,
-                "y": 1545,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Twenty Rupee Cave",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
+            },
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "lift1"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -1526,10 +1360,13 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1810,
-                "y": 1590,
+                "x": 1859,
+                "y": 1535,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1546,16 +1383,31 @@
                 "access_rules": [ "lift1,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "access_rules": [
+                    "lift1"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1810,
+                "x": 1820,
                 "y": 1600,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1614,33 +1466,20 @@
         "parent": "Light World",
         "sections": [
             {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1650,
-                "y": 1295,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Trees Fairy Cave",
-        "parent": "Light World",
-        "sections": [
-            {
                 "name": "Take Any Cave",
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1649,29 +1488,10 @@
                 "x": 1650,
                 "y": 1295,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Long Fairy Cave",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1970,
-                "y": 1405,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -1684,7 +1504,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "light_world"
             }
         ],
         "map_locations": [
@@ -1693,7 +1522,10 @@
                 "x": 1970,
                 "y": 1405,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2247,7 +2079,7 @@
             {
                 "map": "lightworld",
                 "x": 148,
-                "y": 1540,
+                "y": 1525,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2361,9 +2193,18 @@
         "parent": "Desert Area",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -2374,29 +2215,10 @@
                 "x": 555,
                 "y": 1790,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Desert Fairy Cave",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 555,
-                "y": 1790,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2409,12 +2231,21 @@
         ],
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "lift1,[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "access_rules": [
                     "lift1"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "light_world"
             }
@@ -2425,33 +2256,10 @@
                 "x": 625,
                 "y": 1920,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Fifty Rupees Cave",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "lift1,[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 625,
-                "y": 1920,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2565,16 +2373,16 @@
                 "map_locations": [
                     {
                         "map": "lightworld",
-                        "x": 715,
-                        "y": 357,
+                        "x": 714,
+                        "y": 366,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
                     },
                     {
                         "map": "darkworld",
                         "color": "#35046b",
-                        "x": 717,
-                        "y": 358,
+                        "x": 726,
+                        "y": 366,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     }
@@ -2599,7 +2407,7 @@
                     {
                         "map": "lightworld",
                         "x": 720,
-                        "y": 305,
+                        "y": 300,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
                     },
@@ -2607,7 +2415,7 @@
                         "map": "darkworld",
                         "color": "#35046b",
                         "x": 728,
-                        "y": 305,
+                        "y": 300,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     }
@@ -2733,8 +2541,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 369,
-                "y": 297,
+                "x": 362,
+                "y": 292,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -2755,8 +2563,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 290,
-                "y": 285,
+                "x": 286,
+                "y": 284,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -2777,7 +2585,7 @@
             {
                 "map": "darkworld",
                 "x": 392,
-                "y": 345,
+                "y": 354,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -2823,7 +2631,7 @@
             {
                 "map": "darkworld",
                 "x": 380,
-                "y": 249,
+                "y": 230,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -2834,32 +2642,19 @@
         "parent": "Northwest Dark World",
         "sections": [
             {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_west"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 675,
-                "y": 115,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Lumberjack Shop",
-        "parent": "Northwest Dark World",
-        "sections": [
-            {
                 "name": "Shop",
                 "chest_unopened_img": "images/potionshop.png",
                 "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_west"
             }
         ],
         "map_locations": [
@@ -2868,29 +2663,10 @@
                 "x": 675,
                 "y": 115,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Chapel",
-        "parent": "Northwest Dark World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_west"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 924,
-                "y": 551,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2903,7 +2679,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "world_state_open,entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_west"
             }
         ],
         "map_locations": [
@@ -2912,29 +2697,10 @@
                 "x": 924,
                 "y": 551,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Shield Shop",
-        "parent": "Northwest Dark World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_west"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 665,
-                "y": 912,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "world_state_open,entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2946,7 +2712,16 @@
                 "name": "Shop",
                 "chest_unopened_img": "images/potionshop.png",
                 "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_west"
             }
         ],
         "map_locations": [
@@ -2955,29 +2730,10 @@
                 "x": 665,
                 "y": 912,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Village Fortune Teller",
-        "parent": "Northwest Dark World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_west"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 377,
-                "y": 635,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -2990,7 +2746,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_west"
             }
         ],
         "map_locations": [
@@ -2999,7 +2764,10 @@
                 "x": 377,
                 "y": 635,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3108,37 +2876,6 @@
         ],
         "sections": [
             {
-                "name": "Entrance",
-                "access_rules": [
-                    "hammer",
-                    "world_state_inverted,@Light World,pearl,mirror",
-                    "world_state_inverted,grass_house,mirror"
-                ],
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "hammer_house"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 408,
-                "y": 1069,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Village of Outcasts Shop",
-        "parent": "Northwest Dark World",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
-        ],
-        "sections": [
-            {
                 "name": "Shop",
                 "access_rules": [
                     "hammer",
@@ -3147,16 +2884,33 @@
                 ],
                 "chest_unopened_img": "images/potionshop.png",
                 "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "access_rules": [
+                    "hammer",
+                    "world_state_inverted,@Light World,pearl,mirror",
+                    "world_state_inverted,grass_house,mirror"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "hammer_house"
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 408,
+                "x": 414,
                 "y": 1069,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3202,9 +2956,17 @@
         "parent": "Northeast Dark World",
         "sections": [
             {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_witch"
             }
@@ -3215,28 +2977,10 @@
                 "x": 1616,
                 "y": 668,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Witch's Hut Shop",
-        "parent": "Northeast Dark World",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1616,
-                "y": 668,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3304,9 +3048,18 @@
         "parent": "South Dark World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_south"
             }
@@ -3317,29 +3070,10 @@
                 "x": 431,
                 "y": 1400,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Archery Game",
-        "parent": "South Dark World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 431,
-                "y": 1400,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3381,12 +3115,21 @@
         ],
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "boots,[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "access_rules": [
                     "boots"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_south"
             }
@@ -3397,33 +3140,10 @@
                 "x": 945,
                 "y": 1310,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Bonk Rocks",
-        "parent": "South Dark World",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
-        ],
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "boots,[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 945,
-                "y": 1310,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3502,9 +3222,17 @@
         "parent": "South Dark World",
         "sections": [
             {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_south"
             }
@@ -3515,28 +3243,10 @@
                 "x": 1300,
                 "y": 1615,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Lake Shop",
-        "parent": "South Dark World",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1300,
-                "y": 1615,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3584,7 +3294,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 874,
+                "x": 870,
                 "y": 976,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity,world_state_open" ]
@@ -3635,7 +3345,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 940,
+                "x": 950,
                 "y": 976,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -3647,33 +3357,20 @@
         "parent": "East Dark World",
         "sections": [
             {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_east"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1656,
-                "y": 1296,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Trees Fairy",
-        "parent": "East Dark World",
-        "sections": [
-            {
                 "name": "Take Any Cave",
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_east"
             }
         ],
         "map_locations": [
@@ -3682,29 +3379,10 @@
                 "x": 1656,
                 "y": 1296,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Sahasrahla",
-        "parent": "East Dark World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_east"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1706,
-                "y": 1008,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3717,7 +3395,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_east"
             }
         ],
         "map_locations": [
@@ -3726,7 +3413,10 @@
                 "x": 1706,
                 "y": 1008,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3761,9 +3451,18 @@
         "parent": "East Dark World",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_east"
             }
@@ -3774,55 +3473,10 @@
                 "x": 1968,
                 "y": 1405,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "East Storyteller Cave",
-        "parent": "East Dark World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1968,
-                "y": 1405,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Lake Hylia Fairy",
-        "parent": "Southeast Dark World",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted"
-        ],
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dw_southeast"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1790,
-                "y": 1545,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3839,27 +3493,14 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1790,
-                "y": 1545,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Hamburger Helper Cave",
-        "parent": "Southeast Dark World",
-        "sections": [
+            },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_southeast"
             }
@@ -3867,10 +3508,13 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1835,
-                "y": 1545,
+                "x": 1786,
+                "y": 1535,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3883,16 +3527,28 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dw_southeast"
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1835,
-                "y": 1545,
+                "x": 1859,
+                "y": 1535,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -3904,6 +3560,14 @@
             "world_state_inverted"
         ],
         "sections": [
+            {
+                "name": "Take Any Cave",
+                "access_rules": [ "lift1,[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
             {
                 "name": "Entrance",
                 "access_rules": [
@@ -3911,6 +3575,7 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "dw_southeast"
             }
@@ -3918,32 +3583,13 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1810,
-                "y": 1590,
+                "x": 1820,
+                "y": 1600,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Spike Hint Cave",
-        "parent": "Southeast Dark World",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "lift1,[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1810,
-                "y": 1590,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -4041,7 +3687,7 @@
                     {
                         "map": "darkworld",
                         "x": 728,
-                        "y": 305,
+                        "y": 300,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
                     },
@@ -4049,7 +3695,7 @@
                         "map": "lightworld",
                         "color": "#059134",
                         "x": 720,
-                        "y": 305,
+                        "y": 300,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     }
@@ -4073,16 +3719,16 @@
                 "map_locations": [
                     {
                         "map": "darkworld",
-                        "x": 717,
-                        "y": 358,
+                        "x": 726,
+                        "y": 366,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
                     },
                     {
                         "map": "lightworld",
                         "color": "#059134",
-                        "x": 715,
-                        "y": 357,
+                        "x": 714,
+                        "y": 366,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
                     }
@@ -4113,7 +3759,7 @@
                     },
                     {
                         "map": "darkworld",
-                        "x": 675,
+                        "x": 669,
                         "y": 315,
                         "size": 48,
                         "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -4237,33 +3883,20 @@
         "parent": "Mire Area",
         "sections": [
             {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "mire_area"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 220,
-                "y": 1600,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Mire Fairy",
-        "parent": "Mire Area",
-        "sections": [
-            {
                 "name": "Take Any Cave",
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "mire_area"
             }
         ],
         "map_locations": [
@@ -4272,29 +3905,10 @@
                 "x": 220,
                 "y": 1600,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Mire Hint Cave",
-        "parent": "Mire Area",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "mire_area"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 400,
-                "y": 1655,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -4307,7 +3921,16 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "mire_area"
             }
         ],
         "map_locations": [
@@ -4316,7 +3939,10 @@
                 "x": 400,
                 "y": 1655,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     },
@@ -4393,7 +4019,7 @@
             {
                 "map": "lightworld",
                 "x": 1725,
-                "y": 125,
+                "y": 115,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -4434,13 +4060,6 @@
                 "y": 40,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 1627,
-                "y": 40,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
             }
         ]
     },
@@ -4534,6 +4153,42 @@
         ]
     },
     {
+        "name": "Spectacle Rock",
+        "parent": "Death Mountain West Bottom",
+        "sections": [
+            {
+                "name": "Cave",
+                "visibility_rules": [ "entrance_shuffle_off" ],
+                "item_count": 1
+            },
+            {
+                "name": "Up On Top",
+                "access_rules": [
+                    "world_state_open,@Death Mountain West Bottom,mirror",
+                    "world_state_inverted,@Death Mountain West Top",
+                    "{@Death Mountain West Bottom}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 198,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1030,
+                "y": 160,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
         "name": "Spectacle Rock Left",
         "parent": "Death Mountain West Bottom",
         "sections": [
@@ -4548,7 +4203,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 920,
+                "x": 910,
                 "y": 280,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -4570,7 +4225,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 980,
+                "x": 978,
                 "y": 290,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -4592,166 +4247,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 975,
-                "y": 205,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Spiral Cave Bottom",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dm_east_bottom"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1597,
-                "y": 260,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Hookshot Fairy Cave",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dm_east_bottom"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1690,
-                "y": 290,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Hookshot Fairy Cave",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1690,
-                "y": 290,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Paradox Cave Middle",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dm_east_bottom"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1735,
-                "y": 290,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Paradox Shop",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1735,
-                "y": 290,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
-            }
-        ]
-    },
-    {
-        "name": "Paradox Cave Bottom",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dm_east_bottom"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1731,
-                "y": 434,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "EDM Connector Top",
-        "parent": "Death Mountain East Bottom",
-        "access_rules": [
-            "dm_east_connect",
-            "@Death Mountain East Top",
-            "world_state_open,ddm_tr_safety,mirror"
-        ],
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "dm_east_connect"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1645,
-                "y": 230,
+                "x": 978,
+                "y": 215,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -4810,6 +4307,55 @@
         ]
     },
     {
+        "name": "EDM Connector Top",
+        "parent": "Death Mountain East Bottom",
+        "access_rules": [
+            "dm_east_connect",
+            "@Death Mountain East Top",
+            "world_state_open,ddm_tr_safety,mirror"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dm_east_connect"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1645,
+                "y": 232,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave Bottom",
+        "parent": "Death Mountain East Bottom",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dm_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1566,
+                "y": 280,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
         "name": "EDM Connector Bottom",
         "parent": "Death Mountain East Bottom",
         "access_rules": [
@@ -4832,33 +4378,97 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1645,
-                "y": 275,
+                "x": 1627,
+                "y": 295,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
     {
-        "name": "Spec Rock",
-        "parent": "Death Mountain West Bottom",
-        "access_rules": [
-            "world_state_open,@Death Mountain West Bottom,mirror",
-            "world_state_inverted,@Death Mountain West Top",
-            "{@Death Mountain West Bottom}"
-        ],
+        "name": "Hookshot Fairy Cave",
+        "parent": "Death Mountain East Bottom",
         "sections": [
             {
-                "name": "Up On Top",
-                "capture_item": true,
+                "name": "Take Any Cave",
+                "access_rules": [ "[nothing]" ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dm_east_bottom"
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1020,
-                "y": 170,
+                "x": 1688,
+                "y": 310,
+                "size": 48,
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Middle",
+        "parent": "Death Mountain East Bottom",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/potionshop.png",
+                "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
+                "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "dm_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1749,
+                "y": 310,
+                "size": 48,
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Bottom",
+        "parent": "Death Mountain East Bottom",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "dm_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 434,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -4884,7 +4494,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1627,
+                "x": 1610,
                 "y": 40,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -4939,15 +4549,15 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1670,
-                "y": 126,
+                "x": 1654,
+                "y": 122,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
     {
-        "name": "Super-Bunny Cave Top",
+        "name": "Superbunny Cave Top",
         "parent": "Dark Death Mountain Top",
         "sections": [
             {
@@ -4961,7 +4571,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1725,
+                "x": 1730,
                 "y": 115,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -5047,12 +4657,27 @@
     },
     {
         "name": "Dark Mountain Fairy",
-        "parent": "Dark Death Mountain West",
+        "parent": "Dark Death Mountain Color",
         "sections": [
             {
+                "name": "Take Any Cave",
+                "access_rules": [
+                    "world_state_open,@Dark Death Mountain West,[nothing]",
+                    "world_state_inverted,@Light World,pearl,lift1,cape,mirror,[nothing]"
+                ],
+                "chest_unopened_img": "images/takeanycave.png",
+                "chest_opened_img": "images/takeanycave.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Entrance",
+                "access_rules": [
+                    "@Dark Death Mountain West"
+                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1,
                 "hosted_item": "ddm_west"
             }
@@ -5063,7 +4688,17 @@
                 "x": 815,
                 "y": 376,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [
+                    "world_state_open,entrance_shuffle_off,retro_mode_on",
+                    "entrance_shuffle_on"
+                ]
+            },
+            {
+                "map": "darkworld",
+                "x": 737,
+                "y": 305,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_off,retro_mode_on" ]
             }
         ]
     },
@@ -5075,13 +4710,7 @@
             "world_state_inverted,@Light World,pearl,lift1,cape,mirror,[nothing]"
         ],
         "sections": [
-            {
-                "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
-                "chest_unopened_img": "images/takeanycave.png",
-                "chest_opened_img": "images/takeanycave.png",
-                "item_count": 1
-            }
+            
         ],
         "map_locations": [
             {
@@ -5175,14 +4804,14 @@
             {
                 "map": "darkworld",
                 "x": 1648,
-                "y": 229,
+                "y": 232,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
     {
-        "name": "Super-Bunny Cave Bottom",
+        "name": "Superbunny Cave Bottom",
         "parent": "Dark Death Mountain East",
         "sections": [
             {
@@ -5196,29 +4825,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1680,
-                "y": 295,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Death Mountain Shop",
-        "parent": "Dark Death Mountain East",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
-                "hosted_item": "ddm_east"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1728,
+                "x": 1676,
                 "y": 295,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -5233,16 +4840,28 @@
                 "name": "Shop",
                 "chest_unopened_img": "images/potionshop.png",
                 "chest_opened_img": "images/potionshop.png",
+                "visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ],
                 "item_count": 1
+            },
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1,
+                "hosted_item": "ddm_east"
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1734,
+                "x": 1744,
                 "y": 295,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
+                    "entrance_shuffle_on"
+                ]
             }
         ]
     }

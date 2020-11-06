@@ -385,7 +385,7 @@
                 "access_rules": [
                     "ddm_top",
                     "ddm_floating",
-                    "world_state_open,@Death Mountain East Top,lift2,hammer",
+                    "world_state_open,@Death Mountain East Top,lift2,hammer,pearl",
                     "world_state_open,entrance_shuffle_off,@Death Mountain East Bottom,lift2",
                     "world_state_inverted,@Mountain Access",
                     "world_state_inverted,@Death Mountain East Top,mirror",

@@ -1,11 +1,16 @@
 --Config
 ScriptHost:LoadScript("scripts/settings.lua")
 
---Items
+--Essentials
 ScriptHost:LoadScript("scripts/global.lua")
-ScriptHost:LoadScript("scripts/class.lua")
-ScriptHost:LoadScript("scripts/custom_item.lua")
+ScriptHost:LoadScript("scripts/events.lua")
 
+--SDK
+ScriptHost:LoadScript("scripts/sdk/class.lua")
+ScriptHost:LoadScript("scripts/sdk/custom_item.lua")
+ScriptHost:LoadScript("scripts/sdk/consumableitem.lua")
+
+--Items
 Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
@@ -14,6 +19,7 @@ Tracker:AddItems("items/labels.json")
 
 --Custom Items
 ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
+ScriptHost:LoadScript("scripts/custom/extconsumableitem.lua")
 
 ScriptHost:LoadScript("scripts/custom/surrogateitem.lua")
 ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
@@ -31,6 +37,7 @@ ScriptHost:LoadScript("scripts/custom/doortotalchest.lua")
 ScriptHost:LoadScript("scripts/custom/dynamicrequirement.lua")
 
 loadMCBK()
+loadDungeonChests()
 loadDynamicRequirement()
 
 if Tracker.ActiveVariantUID == "items_only" then
