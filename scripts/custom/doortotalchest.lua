@@ -73,9 +73,13 @@ function DoorTotalChest:onRightClick()
             [12] = "gt"
         }
         local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item").ItemState
-        item.MaxCount = 99
-        item.AcquiredCount = item.MaxCount - item.AcquiredCount
-        self:setState(99)
+        if item.MaxCount == item.AcquiredCount then
+            item.MaxCount = 99
+            item.AcquiredCount = item.MaxCount - item.AcquiredCount
+        else
+            item.MaxCount = item.MaxCount - 1
+        end
+        self:setState(item.MaxCount)
     end
 end
 
