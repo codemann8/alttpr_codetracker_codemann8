@@ -1,49 +1,8 @@
 START_CLOCK = os.clock()
 TRACKER_READY = false
 
-function initGlobalVars()
-    AUTOTRACKER_ON = false
 
-    OBJ_MODULE = Tracker:FindObjectForCode("module")
-    OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
-    OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
-    OBJ_ROOM = Tracker:FindObjectForCode("room")
 
-    if Tracker.ActiveVariantUID ~= "items_only" then
-        OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
-        OBJ_KEYSANITY_SMALL = Tracker:FindObjectForCode("keysanity_smallkey")
-        OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
-        OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
-        OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
-        OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
-        OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
-        OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
-
-        OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
-        OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
-
-        if Tracker.ActiveVariantUID == "items_only_keys" then
-            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
-        end
-
-        TRACKER_READY = true
-
-        updateIcons()
-
-        --Auto-Toggle Race Mode
-        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
-            Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
-        end
-
-        local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
-        ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
-    end
-
-    TRACKER_READY = true
-end
 
 function loadDungeonChests()
     ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
@@ -104,6 +63,50 @@ function loadDynamicRequirement()
     DynamicRequirement("tr", "tr", 2, 1889, 196)
     DynamicRequirement("gt", "tohgt", 1, 1056, 115)
     DynamicRequirement("gt", "tohgt", 2, 1141, 115)
+end
+
+function initGlobalVars()
+    AUTOTRACKER_ON = false
+
+    OBJ_MODULE = Tracker:FindObjectForCode("module")
+    OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
+    OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
+    OBJ_ROOM = Tracker:FindObjectForCode("room")
+
+    if Tracker.ActiveVariantUID ~= "items_only" then
+        OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
+        OBJ_KEYSANITY_SMALL = Tracker:FindObjectForCode("keysanity_smallkey")
+        OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
+        OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
+        OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
+        OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
+        OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
+        OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
+
+        OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
+        OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+
+        if Tracker.ActiveVariantUID == "items_only_keys" then
+            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
+        end
+
+        TRACKER_READY = true
+
+        updateIcons()
+
+        --Auto-Toggle Race Mode
+        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
+            Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
+        end
+
+        local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
+        ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
+    end
+
+    TRACKER_READY = true
 end
 
 function updateIcons()
