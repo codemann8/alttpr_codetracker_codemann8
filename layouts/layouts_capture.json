@@ -15,6 +15,24 @@
             ]
         }
     },
+    "tracker_capture_entrance": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 40,
+            "rows": [
+                [ "cap_hcwlabel", "cap_hclabel", "cap_hcelabel", "cap_eplabel", "cap_dplabel", "cap_dpblabel", "cap_dpelabel", "cap_dpwlabel", "cap_tohlabel", "cap_podlabel" ],
+                [ "cap_splabel", "cap_swlabel", "cap_swblabel", "cap_ttlabel", "cap_iplabel", "cap_mmlabel", "cap_trlabel", "cap_trblabel", "cap_trlwlabel", "cap_trlelabel"],
+                [ "cap_atlabel", "cap_gtlabel", "cap_ganlabel", "cap_thief", "cap_lj", "cap_oml", "cap_omr","cap_om", "cap_omb", "cap_dmel"],
+                [ "cap_dmer", "cap_specup", "cap_speclow", "cap_specleft", "cap_parup", "cap_parmid", "cap_parlow", "cap_supbunup", "cap_supbunlow", "cap_spiralup"],
+                [ "cap_spirallow", "cap_bumpup","cap_bumplow", "cap_spk", "cap_hsfront", "cap_hsback", "cap_fairyacu", "cap_fairyacl", "cap_racehl", "cap_racehr" ],
+                [ "cap_elderdl", "cap_elderdr", "cap_sickkid", "cap_shop", "cap_pshop", "cap_smith", "cap_bat", "cap_dam",  "cap_lf", "cap_bombshop" ],
+                [ "cap_arwgme", "cap_library", "cap_sah", "cap_bfm", "cap_rfm", "cap_sanc","cap_mmcave","cap_dkcave", "cap_mimic", "cap_dead" ]
+            ]
+        }
+    },
     "tracker_capture_dropdown": {
         "type": "container",
         "content": {

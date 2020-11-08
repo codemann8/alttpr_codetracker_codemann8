@@ -53,5 +53,14 @@ function EntranceShuffleMode:updateIcon()
                 drop.ItemCaptureLayout = "tracker_capture_dropdown"
             end
         end
+
+        --Remove Ghost Badges
+        if TRACKER_READY then
+            if self:getState() == 0 then
+                removeGhosts(CaptureBadgeEntrances)
+            else
+                removeGhosts(CaptureBadgeUnderworld)
+            end
+        end
     end
 end

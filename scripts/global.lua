@@ -1,8 +1,159 @@
 START_CLOCK = os.clock()
 TRACKER_READY = false
 
+CaptureBadgeEntrances = {
+    "@Lumberjack House/Entrance",
+    "@Lumberjack Tree Dropdown/Dropdown",
+    "@Lumberjack Tree Entrance/Entrance",
+    "@Death Mountain Entry Cave/Entrance",
+    "@Death Mountain Exit Back/Entrance",
+    "@Kakariko Fortune Teller/Entrance",
+    "@Elder Left Door/Entrance",
+    "@Elder Right Door/Entrance",
+    "@Left Snitch House/Entrance",
+    "@Right Snitch House/Entrance",
+    "@Blind's House Entrance/Entrance",
+    "@Kakariko Well/Dropdown",
+    "@Kakariko Well Entrance/Entrance",
+    "@Chicken House Entrance/Entrance",
+    "@Grass House/Entrance",
+    "@Front Tavern/Entrance",
+    "@Kakariko Shop/Entrance",
+    "@Bomb Hut/Entrance",
+    "@Sick Kid Entrance/Entrance",
+    "@Smith's House/Entrance",
+    "@Magic Bat Dropdown/Dropdown",
+    "@Magic Bat Entrance/Entrance",
+    "@Kakariko Chest Game/Entrance",
+    "@Quarreling Brothers Right/Entrance",
+    "@Library Entrance/Entrance",
+    "@Forest Hideout Entrance/Entrance",
+    "@Forest Hideout Dropdown/Dropdown",
+    "@Forest Chest Game/Entrance",
+    "@Castle Secret Dropdown/Dropdown",
+    "@Castle Secret Entrance/Entrance",
+    "@Castle Left Entrance/Entrance",
+    "@Castle Right Entrance/Entrance",
+    "@Link's House Entrance/Entrance",
+    "@Central Bonk Rocks/Entrance",
+    "@Dark Trees Fairy/Entrance",
+    "@Dark Witch's Hut/Entrance",
+    "@East Storyteller Cave/Entrance",
+    "@Dark Sahasrahla/Entrance",
+    "@Pyramid Fairy Entrance/Entrance",
+    "@Pyramid Hole/Dropdown",
+    "@Hype Cave Entrance/Entrance",
+    "@South of Grove/Entrance",
+    "@Witch's Hut/Entrance",
+    "@Waterfall Fairy Entrance/Entrance",
+    "@Sahasrala's Hut Entrance/Entrance",
+    "@Trees Fairy Cave/Entrance",
+    "@Long Fairy Cave/Entrance",
+    "@North Bonk Rocks/Entrance",
+    "@Houlihan Hole/Dropdown",
+    "@Houlihan Entrance/Entrance",
+    "@King's Tomb Entrance/Entrance",
+    "@Graveyard Ledge Entrance/Entrance",
+    "@Desert Left Entrance/Entrance",
+    "@Desert Back Entrance/Entrance",
+    "@Desert Right Entrance/Entrance",
+    "@Desert Fairy Cave/Entrance",
+    "@Fifty Rupee Cave/Entrance",
+    "@Aginah's Cave Entrance/Entrance",
+    "@Hammer House/Entrance",
+    "@Dark Village Fortune Teller/Entrance",
+    "@Dark Chapel/Entrance",
+    "@Shield Shop/Entrance",
+    "@Dark Lumberjack/Entrance",
+    "@C-Shaped House Entrance/Entrance",
+    "@Chest Game Entrance/Entrance",
+    "@Brewery Entrance/Entrance",
+    "@Hammer Pegs Entrance/Entrance",
+    "@Bumper Cave Top/Entrance",
+    "@Bumper Cave Bottom/Entrance",
+    "@Dark Bonk Rocks/Entrance",
+    "@Dam Entrance/Entrance",
+    "@Hype Fairy Cave/Entrance",
+    "@Lake Fortune Teller/Entrance",
+    "@Lake Shop/Entrance",
+    "@Upgrade Fairy/Entrance",
+    "@Bomb Shop/Entrance",
+    "@Archery Game/Entrance",
+    "@Quarreling Brothers Left/Entrance",
+    "@Dark Lake Shop/Entrance",
+    "@Mini Moldorm Cave Entrance/Entrance",
+    "@Ice Rod Cave Entrance/Entrance",
+    "@Cold Bee Cave/Entrance",
+    "@Twenty Rupee Cave/Entrance",
+    "@Dark Lake Hylia Fairy/Entrance",
+    "@Hamburger Helper Cave/Entrance",
+    "@Spike Hint Cave/Entrance",
+    "@Mire Shed Entrance/Entrance",
+    "@Mire Fairy/Entrance",
+    "@Mire Hint Cave/Entrance",
+    "@Checkerboard Cave Entrance/Entrance",
+    "@Death Mountain Entry Back/Entrance",
+    "@Old Man Home/Entrance",
+    "@Old Man Back Door/Entrance",
+    "@Death Mountain Exit Front/Entrance",
+    "@Spectacle Rock Top/Entrance",
+    "@Spectacle Rock Left/Entrance",
+    "@Spectacle Rock Right/Entrance",
+    "@Dark Mountain Fairy/Entrance",
+    "@Spike Cave Entrance/Entrance",
+    "@Spiral Cave Top/Entrance",
+    "@Paradox Cave Middle/Entrance",
+    "@Paradox Cave Bottom/Entrance",
+    "@EDM Connector Bottom/Entrance",
+    "@EDM Connector Top/Entrance",
+    "@Paradox Cave Top/Entrance",
+    "@Spiral Cave Bottom/Entrance",
+    "@Hookshot Fairy Cave/Entrance",
+    "@Superbunny Cave Bottom/Entrance",
+    "@Dark Death Mountain Shop/Entrance",
+    "@Superbunny Cave Top/Entrance",
+    "@Hookshot Cave Entrance/Entrance",
+    "@Hookshot Cave Top/Entrance",
+    "@TR Bridge Left/Entrance",
+    "@TR Bridge Right/Entrance",
+    "@TR Safety Door/Entrance",
+    "@Castle Main Entrance/Entrance",
+    "@Sanctuary Entrance/Entrance",
+    "@Sanctuary Grave/Dropdown",
+    "@Agahnim's Tower Entrance/Entrance",
+    "@Eastern Palace Entrance/Entrance",
+    "@Desert Front Entrance/Entrance",
+    "@Palace of Darkness Entrance/Entrance",
+    "@Swamp Palace Entrance/Entrance",
+    "@Skull Woods Back/Entrance",
+    "@Thieves Town Entrance/Entrance",
+    "@Ice Palace Entrance/Entrance",
+    "@Misery Mire Entrance/Entrance",
+    "@Tower of Hera Entrance/Entrance",
+    "@Turtle Rock Entrance/Entrance",
+    "@Mimic Cave Entrance/Entrance",
+    "@Ganon's Tower Entrance/Entrance"
+}
 
+CaptureBadgeOverworld = {
+    "@Master Sword Pedestal/Pedestal",
+    "@Bombos Tablet/Tablet",
+    "@Ether Tablet/Tablet",
+    "@Desert Ledge/Ledge",
+    "@Floating Island/Island",
+    "@Lake Hylia Island/Island",
+    "@Bumper Ledge/Ledge",
+    "@Zora's Domain/Ledge",
+    "@Race Game/Take This Trash",
+    "@Mushroom Spot/Shroom",
+    "@Spectacle Rock/Up On Top"
+}
 
+CaptureBadgeUnderworld = {
+    "@Library/On The Shelf",
+    "@Lost Woods/Forest Hideout",
+    "@Lumberjack Cave/Cave"
+}
 
 function loadDungeonChests()
     ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
@@ -85,6 +236,8 @@ function initGlobalVars()
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
         OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+
+        CaptureBadgeCache = {}
 
         if Tracker.ActiveVariantUID == "items_only_keys" then
             Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
@@ -226,5 +379,51 @@ function updateIcons()
 
         OBJ_DOORDUNGEON.ItemState:updateIcon()
         OBJ_DOORCHEST.ItemState:updateIcon()
+    end
+end
+
+function updateGhosts(list, clearSection, markHostedItem)
+    for i,section in pairs(list) do
+        local tempSection = section:gsub("/", " Ghost/")
+        local target = Tracker:FindObjectForCode(section)
+        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+
+        if target == nil or hiddenTarget == nil then
+            print("Failed to resolve " .. section .. " please check for typos.")
+        elseif target.CapturedItem ~= CaptureBadgeCache[target] then
+            if CaptureBadgeCache[target.Owner] then
+                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+                CaptureBadgeCache[target.Owner] = nil
+                CaptureBadgeCache[target] = nil
+            end
+            if target.CapturedItem then
+                CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+                CaptureBadgeCache[target] = target.CapturedItem
+                if clearSection then
+                    target.AvailableChestCount = 0
+                    target.CapturedItem = CaptureBadgeCache[target]
+                end
+                if markHostedItem then
+                    if target.HostedItem then
+                        target.HostedItem.Active = true
+                    end
+                end
+            end
+        end
+    end
+end
+
+function removeGhosts(list)
+    for i,section in pairs(list) do
+        local tempSection = section:gsub("/", " Ghost/")
+        local target = Tracker:FindObjectForCode(section)
+        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+
+        if target == nil or hiddenTarget == nil then
+            print("Failed to resolve " .. section .. " please check for typos.")
+        elseif CaptureBadgeCache[target] then
+            hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+            CaptureBadgeCache[target] = nil
+        end
     end
 end

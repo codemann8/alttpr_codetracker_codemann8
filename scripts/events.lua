@@ -53,5 +53,16 @@ function tracker_on_accessibility_updated()
                 end
             end
         end
+
+        --Update Ghost Badges
+        if OBJ_ENTRANCE then
+            if OBJ_ENTRANCE.CurrentStage == 0 then
+                updateGhosts(CaptureBadgeUnderworld, false, true)
+            else
+                updateGhosts(CaptureBadgeEntrances, true, true)
+            end
+    
+            updateGhosts(CaptureBadgeOverworld, false, false)
+        end
     end
 end
