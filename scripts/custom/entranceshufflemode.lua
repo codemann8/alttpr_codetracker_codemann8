@@ -56,22 +56,5 @@ function EntranceShuffleMode:updateIcon()
     end
 
     local locations = {
-        "@Forest Hideout Dropdown/Dropdown",
-        "@Lumberjack Tree Dropdown/Dropdown",
-        "@Kakariko Well/Dropdown",
-        "@Magic Bat Dropdown/Dropdown",
-        "@Castle Secret Dropdown/Dropdown",
-        "@Houlihan Hole/Dropdown",
-        "@Sanctuary Grave/Dropdown",
-        "@Castle Hole/Dropdown",
-        "@Pyramid Hole/Dropdown"
-    }
-    for i = 1, #locations do
-        local drop = Tracker:FindObjectForCode(locations[i])
-        if self:getState() > 1 then
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
-        else
-            drop.ItemCaptureLayout = "tracker_capture_dropdown"
-        end
     end
 end
