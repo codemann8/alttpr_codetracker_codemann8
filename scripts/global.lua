@@ -155,6 +155,13 @@ CaptureBadgeUnderworld = {
     "@Lumberjack Cave/Cave"
 }
 
+CaptureBadgeInverted = {
+    ["@Death Mountain Exit Back/Entrance"] = "@Bumper Cave Top/Entrance",
+    ["@Death Mountain Entry Cave/Entrance"] = "@Bumper Cave Bottom/Entrance",
+    ["@Bumper Cave Top/Entrance"] = "@Death Mountain Exit Back/Entrance",
+    ["@Bumper Cave Bottom/Entrance"] = "@Death Mountain Entry Cave/Entrance"
+}
+
 function loadDungeonChests()
     ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
     ExtendedConsumableItem("Eastern Palace Items", "ep", "@Eastern Palace")
@@ -385,6 +392,9 @@ end
 function updateGhosts(list, clearSection, markHostedItem)
     for i,section in pairs(list) do
         local tempSection = section:gsub("/", " Ghost/")
+        if OBJ_WORLDSTATE and OBJ_WORLDSTATE.CurrentStage > 0 and CaptureBadgeInverted[section] then
+            tempSection = CaptureBadgeInverted[section]:gsub("/", " Ghost/")
+        end
         local target = Tracker:FindObjectForCode(section)
         local hiddenTarget = Tracker:FindObjectForCode(tempSection)
 
@@ -413,9 +423,12 @@ function updateGhosts(list, clearSection, markHostedItem)
     end
 end
 
-function removeGhosts(list)
+function removeGhosts(list, swapInverted)
     for i,section in pairs(list) do
         local tempSection = section:gsub("/", " Ghost/")
+        if swapInverted and CaptureBadgeInverted[section] then
+            tempSection = CaptureBadgeInverted[section]:gsub("/", " Ghost/")
+        end
         local target = Tracker:FindObjectForCode(section)
         local hiddenTarget = Tracker:FindObjectForCode(tempSection)
 

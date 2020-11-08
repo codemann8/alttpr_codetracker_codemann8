@@ -2067,7 +2067,7 @@
         ],
         "map_locations": [
             {
-                "map": "lightworld",
+                "map": "darkworld",
                 "x": 728,
                 "y": 313,
                 "size": 0,
@@ -2085,7 +2085,7 @@
         ],
         "map_locations": [
             {
-                "map": "lightworld",
+                "map": "darkworld",
                 "x": 717,
                 "y": 365,
                 "size": 0,
