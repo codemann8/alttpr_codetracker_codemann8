@@ -103,7 +103,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "{}"
+            "{entrance_shuffle_crossed}"
         ],
         "sections": [
             {
@@ -154,14 +154,14 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "{}"
+            "{entrance_shuffle_crossed}"
         ],
         "sections": [
             {
                 "name": "Dropdown",
                 "access_rules": [
                     "aga,boots",
-                    "{}"
+                    "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -417,9 +417,9 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown"
+                "capture_item_layout": "tracker_capture_dropdown",
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -741,7 +741,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "{}"
+            "{entrance_shuffle_crossed}"
         ],
         "sections": [
             {
@@ -749,7 +749,7 @@
                 "access_rules": [
                     "hammer",
                     "world_state_open,pearl,lift2,mirror",
-                    "{}"
+                    "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -950,9 +950,9 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown"
+                "capture_item_layout": "tracker_capture_dropdown",
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1564,7 +1564,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "{}"
+            "{entrance_shuffle_crossed}"
         ],
         "sections": [
             {
@@ -1614,14 +1614,14 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "{}"
+            "{entrance_shuffle_crossed}"
         ],
         "sections": [
             {
                 "name": "Dropdown",
                 "access_rules": [
                     "lift1",
-                    "{}"
+                    "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -1829,10 +1829,10 @@
     },
     {
         "name": "Castle Hole",
-        "parent": "Castle Second Floor",
+        "parent": "Light World",
         "access_rules": [
             "aga2",
-            "{}"
+            "{entrance_shuffle_crossed,@Light World}"
         ],
         "sections": [
             {
@@ -2501,6 +2501,8 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_dropdown_insanity",
                 "item_count": 1
             }
         ],
@@ -2592,6 +2594,8 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_dropdown_insanity",
                 "item_count": 1
             }
         ],
@@ -2613,6 +2617,8 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_dropdown_insanity",
                 "item_count": 1
             }
         ],
@@ -2638,6 +2644,8 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_dropdown_insanity",
                 "item_count": 1
             }
         ],
@@ -3275,9 +3283,9 @@
                 "name": "Dropdown",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "item_count": 1,
                 "capture_item": true,
-                "capture_item_layout": "tracker_capture_dropdown"
+                "capture_item_layout": "tracker_capture_dropdown",
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -3750,16 +3758,16 @@
             },
             {
                 "name": "Bumper Ledge",
-                "access_rules": [
-                    "world_state_open,entrance_shuffle_off,@Northwest Dark World,pearl,lift1,cape",
-                    "world_state_open,bumper_cave",
-                    "world_state_inverted,entrance_shuffle_off,@Light World,pearl,lift1,cape,mirror",
-                    "world_state_inverted,bumper_cave,mirror",
-                    "{@Northwest Dark World}"
-                ],
                 "sections": [
                     {
                         "name": "Ledge",
+                        "access_rules": [
+                            "world_state_open,entrance_shuffle_off,@Northwest Dark World,pearl,lift1,cape",
+                            "world_state_open,bumper_cave",
+                            "world_state_inverted,entrance_shuffle_off,@Light World,pearl,lift1,cape,mirror",
+                            "world_state_inverted,bumper_cave,mirror",
+                            "{@Northwest Dark World}"
+                        ],
                         "capture_item": true,
                         "item_count": 1
                     }
@@ -3825,39 +3833,21 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,mm_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{$hasNotSeenMireMedallion}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "mire_area"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 148,
-                "y": 1610,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Misery Mire Medallion Check",
-        "parent": "Dungeon Color",
-        "access_rules": [
-            "{entrance_shuffle_off,@Mire Area}"
-        ],
-        "sections": [
+            },
             {
                 "name": "Medallion",
                 "access_rules": [
-                    "{}"
+                    "{$hasNotSeenMireMedallion}"
                 ],
+                "visibility_rules": [ "$hasNotSeenMireMedallion" ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
@@ -3867,10 +3857,9 @@
             {
                 "map": "darkworld",
                 "x": 148,
-                "y": 1694,
+                "y": 1610,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,@Mire Area" ],
-                "force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake", "$hasSeenMireMedallion" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -3969,15 +3958,15 @@
         "name": "Ether Tablet",
         "parent": "Death Mountain West Top",
         "access_rules": [
-            "book"
+            "@Death Mountain West Top",
+            "{}"
         ],
         "sections": [
             {
                 "name": "Tablet",
                 "access_rules": [
-                    "world_state_open,$canActivateTablets",
-                    "world_state_inverted,pearl,$canActivateTablets",
-                    "{}"
+                    "book,$canActivateTablets",
+                    "{book}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -4046,15 +4035,15 @@
     {
         "name": "Floating Island",
         "parent": "Death Mountain Color",
-        "access_rules": [
-            "world_state_open,ddm_floating,mirror",
-            "world_state_open,entrance_shuffle_off,@Dark Death Mountain Top,pearl,lift1,mirror",
-            "world_state_inverted,@Death Mountain East Top",
-            "{@Death Mountain East Top}"
-        ],
         "sections": [
             {
                 "name": "Island",
+                "access_rules": [
+                    "world_state_open,ddm_floating,mirror",
+                    "world_state_open,entrance_shuffle_off,@Dark Death Mountain Top,pearl,lift1,mirror",
+                    "world_state_inverted,@Death Mountain East Top",
+                    "{@Death Mountain East Top}"
+                ],
                 "capture_item": true,
                 "item_count": 1
             }
@@ -4082,7 +4071,7 @@
         ]
     },
     {
-        "name": "Death Moutain Entry Back",
+        "name": "Death Mountain Entry Back",
         "short_name": "DM Entry Back",
         "parent": "Death Mountain West Bottom",
         "sections": [
@@ -4609,36 +4598,21 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,tr_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{$hasNotSeenTurtleMedallion}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "ddm_top"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1890,
-                "y": 165,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Turtle Rock Medallion Check",
-        "parent": "Dungeon Color",
-        "access_rules": [
-            "{entrance_shuffle_off,@Dark Death Mountain Top}"
-        ],
-        "sections": [
+            },
             {
                 "name": "Medallion",
+                "access_rules": [
+                    "{$hasNotSeenTurtleMedallion}"
+                ],
+                "visibility_rules": [ "$hasNotSeenTurtleMedallion" ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
@@ -4648,10 +4622,9 @@
             {
                 "map": "darkworld",
                 "x": 1890,
-                "y": 124,
+                "y": 165,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,@Dark Death Mountain Top" ],
-                "force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake", "$hasSeenTurtleMedallion" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },

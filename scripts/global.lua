@@ -93,14 +93,14 @@ function initGlobalVars()
             Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
         end
 
-        TRACKER_READY = true
-
-        updateIcons()
-
         --Auto-Toggle Race Mode
         if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
         end
+
+        TRACKER_READY = true
+
+        updateIcons()
 
         local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
         ScriptHost:PushMarkdownNotification(NotificationType.Message, message)

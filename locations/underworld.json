@@ -211,14 +211,6 @@
             "world_state_inverted,pearl",
             "{}"
         ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 313,
-                "y": 1310,
-                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
-            }
-        ],
         "sections": [
             {
                 "name": "On The Shelf",
@@ -228,6 +220,14 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 313,
+                "y": 1310,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
     },
@@ -262,14 +262,19 @@
         "name": "Cave 45",
         "parent": "Light World",
         "access_rules": [
-            "world_state_open,@South Dark World,mirror",
+            "world_state_open",
             "world_state_inverted,pearl",
-            "world_state_inverted,[pearl],mirror",
             "{world_state_inverted}"
         ],
         "sections": [
             {
                 "name": "Circle of Bushes",
+                "access_rules": [
+                    "world_state_open,@South Dark World,mirror",
+                    "world_state_inverted,pearl",
+                    "world_state_inverted,[pearl],mirror",
+                    "{world_state_inverted}"
+                ],
                 "capture_item": true,
                 "item_count": 1
             }
