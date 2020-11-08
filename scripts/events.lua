@@ -14,6 +14,7 @@ end
 function tracker_on_accessibility_updated()
     if TRACKER_READY then
         if OBJ_WORLDSTATE then
+            --Update Dungeon Chest Icons
             local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
             for i = 1, #dungeons do
                 local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
