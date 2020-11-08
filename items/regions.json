@@ -85,6 +85,12 @@
         "codes": "lw_dmentry"
     },
     {
+        "name": "DM Exit Access",
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "lw_dmexit"
+    },
+    {
         "name": "Northwest Dark World",
         "type": "toggle",
         "img": "images/0062.png",
