@@ -54,7 +54,4 @@ function EntranceShuffleMode:updateIcon()
             end
         end
     end
-
-    local locations = {
-    end
 end
