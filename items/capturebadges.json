@@ -551,6 +551,13 @@
    
      // Locations
      {
+      "name": "Badge Alignment Target",
+      "type": "toggle",
+      "img": "images/capture/TargetAlignmentBadge.png",
+      "codes": "cap_align"
+     },
+
+     {
        "name": "Dead Ent",
        "type": "toggle",
        "img": "images/capture/CapDead.png",
