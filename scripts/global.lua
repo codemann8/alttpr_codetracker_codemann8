@@ -1,52 +1,8 @@
 START_CLOCK = os.clock()
+TRACKER_READY = false
 
-function initGlobalVars()
-    AUTOTRACKER_ON = false
 
-    OBJ_MODULE = Tracker:FindObjectForCode("module")
-    OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
-    OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
-    OBJ_ROOM = Tracker:FindObjectForCode("room")
 
-    if Tracker.ActiveVariantUID ~= "items_only" then
-        OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
-        OBJ_KEYSANITY_SMALL = Tracker:FindObjectForCode("keysanity_smallkey")
-        OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
-        OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
-        OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
-        OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
-        OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
-        OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
-
-        OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
-        OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
-
-        if Tracker.ActiveVariantUID == "items_only_keys" then
-            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
-        end
-
-        updateIcons()
-
-        --Link Dungeon Locations to Chest Items
-        local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
-        for i = 1, #dungeons do
-            local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
-            item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
-            item:UpdateBadgeAndIcon()
-        end
-
-        --Auto-Toggle Race Mode
-        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
-            Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
-        end
-
-        local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
-        ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
-    end
-end
 
 function loadDungeonChests()
     ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
@@ -109,47 +65,91 @@ function loadDynamicRequirement()
     DynamicRequirement("gt", "tohgt", 2, 1141, 115)
 end
 
+function initGlobalVars()
+    AUTOTRACKER_ON = false
+
+    OBJ_MODULE = Tracker:FindObjectForCode("module")
+    OBJ_OWAREA = Tracker:FindObjectForCode("owarea")
+    OBJ_DUNGEON = Tracker:FindObjectForCode("dungeon")
+    OBJ_ROOM = Tracker:FindObjectForCode("room")
+
+    if Tracker.ActiveVariantUID ~= "items_only" then
+        OBJ_WORLDSTATE = Tracker:FindObjectForCode("world_state_mode")
+        OBJ_KEYSANITY_SMALL = Tracker:FindObjectForCode("keysanity_smallkey")
+        OBJ_KEYSANITY_BIG = Tracker:FindObjectForCode("keysanity_bigkey")
+        OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
+        OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
+        OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
+        OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
+        OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
+
+        OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
+        OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+
+        if Tracker.ActiveVariantUID == "items_only_keys" then
+            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
+            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
+        end
+
+        TRACKER_READY = true
+
+        updateIcons()
+
+        --Auto-Toggle Race Mode
+        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
+            Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
+        end
+
+        local message = "To get started: Select a Game Mode by clicking the Gear icon in the Items pane"
+        ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
+    end
+
+    TRACKER_READY = true
+end
+
 function updateIcons()
-    local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
-    local chestkeys = { 1,    0,    1,    2,    1,    6,     3,    3,    2,    1,     1,    4,    4  }
-    local keydrops =  { 3,    2,    3,    2,    5,    0,     3,    2,    4,    0,     2,    2,    4  }
-    for i = 1, #dungeons do
-        local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
-        local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
-        if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-            if item.MaxCount ~= 99 and not LOADING_IN_PROGRESS then
-                item.MaxCount = 99
-                item.AcquiredCount = 99
-            end
-            item.SwapActions = true
-            key.MaxCount = 99
-            key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
-
-            if (OBJ_POOL.CurrentStage == 0 and dungeons[i] == "hc") or dungeons[i] == "at" then
-                Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
-            end
-        else
-            key.MaxCount = chestkeys[i]
-            if OBJ_POOL.CurrentStage > 0 then
-                key.MaxCount = key.MaxCount + keydrops[i]
-            end
-
-            if key.MaxCount == 0 then
-                key.Icon = ""
-            end
-
-            if OBJ_POOL.CurrentStage > 0 and dungeons[i] == "hc" then
-                Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", (not Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Active and "@disabled" or ""))
-            end
-            
-            if (OBJ_POOL.CurrentStage == 0 and dungeons[i] == "hc") or dungeons[i] == "at" then
-                local bk = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
-                if bk.Icon ~= "" then
-                    bk.Icon = ""
+    if TRACKER_READY then
+        local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+        local chestkeys = { 1,    0,    1,    2,    1,    6,     3,    3,    2,    1,     1,    4,    4  }
+        local keydrops =  { 3,    2,    3,    2,    5,    0,     3,    2,    4,    0,     2,    2,    4  }
+        for i = 1, #dungeons do
+            local item = Tracker:FindObjectForCode(dungeons[i] .. "_item").ItemState
+            local key = Tracker:FindObjectForCode(dungeons[i] .. "_smallkey")
+            if OBJ_DOORSHUFFLE.CurrentStage == 2 then
+                if item.MaxCount ~= 99 then
+                    item.MaxCount = 99
+                    item.AcquiredCount = 99
                 end
-            end
+                item.SwapActions = true
+                key.MaxCount = 99
+                key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
-            if not LOADING_IN_PROGRESS then
+                if (OBJ_POOL.CurrentStage == 0 and dungeons[i] == "hc") or dungeons[i] == "at" then
+                    Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
+                end
+            else
+                key.MaxCount = chestkeys[i]
+                if OBJ_POOL.CurrentStage > 0 then
+                    key.MaxCount = key.MaxCount + keydrops[i]
+                end
+
+                if key.MaxCount == 0 then
+                    key.Icon = ""
+                end
+
+                if OBJ_POOL.CurrentStage > 0 and dungeons[i] == "hc" then
+                    Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", (not Tracker:FindObjectForCode(dungeons[i] .. "_bigkey").Active and "@disabled" or ""))
+                end
+                
+                if (OBJ_POOL.CurrentStage == 0 and dungeons[i] == "hc") or dungeons[i] == "at" then
+                    local bk = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
+                    if bk.Icon ~= "" then
+                        bk.Icon = ""
+                    end
+                end
+
                 local found = 0
                 if item.MaxCount ~= 99 then
                     found = item.MaxCount - item.AcquiredCount
@@ -175,52 +175,56 @@ function updateIcons()
                 end
 
                 item.AcquiredCount = math.max(item.MaxCount - found, 0)
+
+                --Link Dungeon Locations to Chest Items
+                item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+                item:UpdateBadgeAndIcon()
+
+                item.SwapActions = false
             end
 
-            item.SwapActions = false
+            if EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then
+                local dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "1_sur")
+                if dyn then
+                    dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+                end
+                dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "2_sur")
+                if dyn then
+                    dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+                end
+            end
+
+            if OBJ_KEYSANITY_SMALL.CurrentStage == 2 then
+                key.Icon = ""
+                key.BadgeText = nil
+                key.IgnoreUserInput = true
+            else
+                if key.MaxCount > 0 then
+                    key.DisplayAsFractionOfMax = true
+                    key.DisplayAsFractionOfMax = false
+                end
+                key.IgnoreUserInput = false
+            end
         end
 
-        if EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then
-            local dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "1_sur")
-            if dyn then
-                dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+        local gtbk = Tracker:FindObjectForCode("gt_bkgame")
+        if OBJ_DOORSHUFFLE.CurrentStage == 0 then
+            if OBJ_POOL.CurrentStage == 0 then
+                gtbk.MaxCount = 22
+            else
+                gtbk.MaxCount = 25
             end
-            dyn = Tracker:FindObjectForCode("dynreq_" .. dungeons[i] .. "2_sur")
-            if dyn then
-                dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
+        elseif OBJ_DOORSHUFFLE.CurrentStage == 1 then
+            if OBJ_POOL.CurrentStage == 0 then
+                gtbk.MaxCount = 27
+            else
+                gtbk.MaxCount = 31
             end
-        end
-
-        if OBJ_KEYSANITY_SMALL.CurrentStage == 2 then
-            key.Icon = ""
-            key.BadgeText = nil
-            key.IgnoreUserInput = true
         else
-            if key.MaxCount > 0 then
-                key.DisplayAsFractionOfMax = true
-                key.DisplayAsFractionOfMax = false
-            end
-            key.IgnoreUserInput = false
+            gtbk.MaxCount = 99
         end
+
+        OBJ_DOORDUNGEON.ItemState:updateIcon()
+        OBJ_DOORCHEST.ItemState:updateIcon()
     end
-
-    local gtbk = Tracker:FindObjectForCode("gt_bkgame")
-    if OBJ_DOORSHUFFLE.CurrentStage == 0 then
-        if OBJ_POOL.CurrentStage == 0 then
-            gtbk.MaxCount = 22
-        else
-            gtbk.MaxCount = 25
-        end
-    elseif OBJ_DOORSHUFFLE.CurrentStage == 1 then
-        if OBJ_POOL.CurrentStage == 0 then
-            gtbk.MaxCount = 27
-        else
-            gtbk.MaxCount = 31
-        end
-    else
-        gtbk.MaxCount = 99
-    end
-
-    OBJ_DOORDUNGEON.ItemState:updateIcon()
-    OBJ_DOORCHEST.ItemState:updateIcon()
 end
