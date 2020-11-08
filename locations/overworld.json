@@ -3825,39 +3825,21 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,mm_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{$hasNotSeenMireMedallion}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "mire_area"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 148,
-                "y": 1610,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Misery Mire Medallion Check",
-        "parent": "Dungeon Color",
-        "access_rules": [
-            "{entrance_shuffle_off,@Mire Area}"
-        ],
-        "sections": [
+            },
             {
                 "name": "Medallion",
                 "access_rules": [
-                    "{}"
+                    "{$hasNotSeenMireMedallion}"
                 ],
+                "visibility_rules": [ "$hasNotSeenMireMedallion" ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
@@ -3867,10 +3849,9 @@
             {
                 "map": "darkworld",
                 "x": 148,
-                "y": 1694,
+                "y": 1610,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,@Mire Area" ],
-                "force_invisibility_rules": [ "mm_medallion", "bombos,ether,quake", "$hasSeenMireMedallion" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -4609,36 +4590,21 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,tr_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{$hasNotSeenTurtleMedallion}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1,
                 "hosted_item": "ddm_top"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1890,
-                "y": 165,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Turtle Rock Medallion Check",
-        "parent": "Dungeon Color",
-        "access_rules": [
-            "{entrance_shuffle_off,@Dark Death Mountain Top}"
-        ],
-        "sections": [
+            },
             {
                 "name": "Medallion",
+                "access_rules": [
+                    "{$hasNotSeenTurtleMedallion}"
+                ],
+                "visibility_rules": [ "$hasNotSeenTurtleMedallion" ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_medallion",
                 "item_count": 1
@@ -4648,10 +4614,9 @@
             {
                 "map": "darkworld",
                 "x": 1890,
-                "y": 124,
+                "y": 165,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,@Dark Death Mountain Top" ],
-                "force_invisibility_rules": [ "tr_medallion", "bombos,ether,quake", "$hasSeenTurtleMedallion" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },

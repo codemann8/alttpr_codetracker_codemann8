@@ -23,6 +23,7 @@ function tracker_on_accessibility_updated()
             end
         end
 
+        --Auto-Mark Medallions On Capture
         if false and OBJ_ENTRANCE then
             local medallion = Tracker:FindObjectForCode("bombos")
             local medallionFlag = medallion.CurrentStage & 0x3
@@ -37,14 +38,14 @@ function tracker_on_accessibility_updated()
 
             local loc = nil
             if medallionFlag & 0x1 == 0 then
-                loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Misery Mire Medallion Check/Medallion" or "@Misery Mire Entrance/Entrance").CapturedItem
+                loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Misery Mire/Medallion" or "@Misery Mire Entrance/Entrance").CapturedItem
                 if loc then
                     medallion = Tracker:FindObjectForCode(string.lower(loc.Name))
                     medallion.CurrentStage = medallion.CurrentStage | 0x1
                 end
             end
             if medallionFlag & 0x2 == 0 then
-                loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Turtle Rock Medallion Check/Medallion" or "@Turtle Rock Entrance/Entrance").CapturedItem
+                loc = Tracker:FindObjectForCode(OBJ_ENTRANCE.CurrentStage == 0 and "@Turtle Rock/Medallion" or "@Turtle Rock Entrance/Entrance").CapturedItem
                 if loc then
                     medallion = Tracker:FindObjectForCode(string.lower(loc.Name))
                     medallion.CurrentStage = medallion.CurrentStage | 0x2
