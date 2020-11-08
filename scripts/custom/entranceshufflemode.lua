@@ -19,7 +19,9 @@ function EntranceShuffleMode:updateIcon()
     else 
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
     end
+end
 
+function EntranceShuffleMode:postUpdate()
     if self.suffix == "" then
         local drops =  { "swpinball", "swcompass", "swbigchest", "swhazard" }
         for i = 1, #drops do
@@ -56,11 +58,13 @@ function EntranceShuffleMode:updateIcon()
 
         --Remove Ghost Badges
         if TRACKER_READY then
+            TRACKER_READY = false
             if self:getState() == 0 then
                 removeGhosts(CaptureBadgeEntrances)
             else
                 removeGhosts(CaptureBadgeUnderworld)
             end
+            TRACKER_READY = true
         end
     end
 end
