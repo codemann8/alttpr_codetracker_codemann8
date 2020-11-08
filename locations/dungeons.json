@@ -269,7 +269,8 @@
                     {
                         "name": "Torch",
                         "access_rules": [
-                            "boots"
+                            "boots",
+                            "{}"
                         ],
                         "capture_item": true,
                         "item_count": 1
@@ -1732,7 +1733,8 @@
                     {
                         "name": "Torch",
                         "access_rules": [
-                            "boots"
+                            "boots",
+                            "{}"
                         ],
                         "capture_item": true,
                         "item_count": 1
