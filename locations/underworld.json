@@ -211,14 +211,6 @@
             "world_state_inverted,pearl",
             "{}"
         ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 313,
-                "y": 1310,
-                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
-            }
-        ],
         "sections": [
             {
                 "name": "On The Shelf",
@@ -228,6 +220,14 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 313,
+                "y": 1310,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             }
         ]
     },
