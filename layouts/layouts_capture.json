@@ -11,7 +11,7 @@
                 [ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "map" ],
                 [ "lamp", "hammer", "ocarina", "net", "book", "shovel", "compass" ],
                 [ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
-                [ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor", "cap_align" ]
+                [ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor" ]
             ]
         }
     },
@@ -29,7 +29,7 @@
                 [ "cap_dmer", "cap_specup", "cap_speclow", "cap_specleft", "cap_parup", "cap_parmid", "cap_parlow", "cap_supbunup", "cap_supbunlow", "cap_spiralup"],
                 [ "cap_spirallow", "cap_bumpup","cap_bumplow", "cap_spk", "cap_hsfront", "cap_hsback", "cap_fairyacu", "cap_fairyacl", "cap_racehl", "cap_racehr" ],
                 [ "cap_elderdl", "cap_elderdr", "cap_sickkid", "cap_shop", "cap_pshop", "cap_smith", "cap_bat", "cap_dam",  "cap_lf", "cap_bombshop" ],
-                [ "cap_arwgme", "cap_library", "cap_sah", "cap_bfm", "cap_rfm", "cap_sanc","cap_mmcave","cap_dkcave", "cap_mimic", "cap_dead", "cap_align" ]
+                [ "cap_arwgme", "cap_library", "cap_sah", "cap_bfm", "cap_rfm", "cap_sanc","cap_mmcave","cap_dkcave", "cap_mimic", "cap_dead", ]
             ]
         }
     },
@@ -42,7 +42,7 @@
             "item_size": 60,
             "rows": [
                 [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
-                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon", "cap_align" ]
+                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
             ]
         }
     },
@@ -56,7 +56,7 @@
             "rows": [
                 [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
                 [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
-                [ "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard", "cap_align" ]
+                [ "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
             ]
         }
     },
