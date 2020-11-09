@@ -1069,6 +1069,7 @@
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "world_state_inverted" ],
                 "item_count": 1
             }
         ],
@@ -1865,6 +1866,7 @@
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "world_state_open" ],
                 "item_count": 1
             }
         ],

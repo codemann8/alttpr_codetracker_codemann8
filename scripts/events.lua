@@ -59,6 +59,9 @@ function tracker_on_accessibility_updated()
             if OBJ_ENTRANCE.CurrentStage == 0 then
                 updateGhosts(CaptureBadgeUnderworld, false, true)
             else
+                if OBJ_ENTRANCE.CurrentStage == 2 then
+                    updateGhosts(CaptureBadgeInsanity, true, true)
+                end
                 updateGhosts(CaptureBadgeEntrances, true, true)
             end
     

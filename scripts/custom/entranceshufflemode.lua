@@ -61,7 +61,11 @@ function EntranceShuffleMode:postUpdate()
             TRACKER_READY = false
             if self:getState() == 0 then
                 removeGhosts(CaptureBadgeEntrances)
+                removeGhosts(CaptureBadgeInsanity)
             else
+                if self:getState() == 1 then
+                    removeGhosts(CaptureBadgeInsanity)
+                end
                 removeGhosts(CaptureBadgeUnderworld)
             end
             TRACKER_READY = true
