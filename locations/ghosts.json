@@ -2070,8 +2070,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 733,
-                "y": 290,
+                "x": 728,
+                "y": 313,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2088,8 +2088,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 727,
-                "y": 368,
+                "x": 717,
+                "y": 365,
                 "size": 0,
                 "badge_size": 96
             }
