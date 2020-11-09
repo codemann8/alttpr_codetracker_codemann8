@@ -42,6 +42,7 @@ CaptureBadgeEntrances = {
     "@Dark Sahasrahla/Entrance",
     "@Pyramid Fairy Entrance/Entrance",
     "@Pyramid Hole/Dropdown",
+    "@Pyramid Hole Entrance/Entrance",
     "@Hype Cave Entrance/Entrance",
     "@South of Grove/Entrance",
     "@Witch's Hut/Entrance",
@@ -125,14 +126,24 @@ CaptureBadgeEntrances = {
     "@Desert Front Entrance/Entrance",
     "@Palace of Darkness Entrance/Entrance",
     "@Swamp Palace Entrance/Entrance",
+    "@Skull Woods Area/Entrance",
     "@Skull Woods Back/Entrance",
+    "@Skull Woods Back South/Entrance",
+    "@Skull Woods Front East/Entrance",
+    "@Skull Woods Front West/Entrance",
+    "@Skull Woods Back Dropdown/Dropdown",
+    "@Skull Woods Big Chest Dropdown/Dropdown",
+    "@Skull Woods Front East Dropdown/Dropdown",
+    "@Skull Woods Front West Dropdown/Dropdown",
     "@Thieves Town Entrance/Entrance",
     "@Ice Palace Entrance/Entrance",
     "@Misery Mire Entrance/Entrance",
     "@Tower of Hera Entrance/Entrance",
     "@Turtle Rock Entrance/Entrance",
     "@Mimic Cave Entrance/Entrance",
-    "@Ganon's Tower Entrance/Entrance"
+    "@Ganon's Tower Entrance/Entrance",
+    "@Castle Hole/Dropdown",
+    "@Castle Hole Return/Entrance"
 }
 
 CaptureBadgeOverworld = {
