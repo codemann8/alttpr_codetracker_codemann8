@@ -555,7 +555,7 @@
                     {
                         "map": "lightworld",
                         "x": 1003,
-                        "y": 717,
+                        "y": 737,
                         "size": 64,
                         "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
                     },

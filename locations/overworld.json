@@ -817,9 +817,16 @@
             {
                 "map": "lightworld",
                 "x": 615,
+                "y": 1052,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 615,
                 "y": 1044,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_crossed", "entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -849,10 +856,17 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 680,
-                "y": 1112,
+                "x": 650,
+                "y": 1150,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_crossed", "entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 650,
+                "y": 1180,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
         ]
     },
@@ -873,7 +887,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 625,
+                "x": 635,
                 "y": 1112,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
@@ -1957,9 +1971,16 @@
             {
                 "map": "lightworld",
                 "x": 1003,
+                "y": 794,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1003,
                 "y": 774,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
             }
         ]
     },
@@ -2612,7 +2633,6 @@
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
                 "item_count": 1
             }
         ],
