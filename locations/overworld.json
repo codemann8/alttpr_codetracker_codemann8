@@ -245,6 +245,65 @@
         ]
     },
     {
+        "name": "Death Mountain Exit Back",
+        "short_name": "DM Exit",
+        "parent": "Light World",
+        "access_rules": [
+            "world_state_open,bumper_cave,mirror",
+            "world_state_inverted,nothing"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "lw_dmexit"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 720,
+                "y": 300,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Cave",
+        "short_name": "DM Entry",
+        "parent": "Light World",
+        "access_rules": [
+            "world_state_open,bumper_entrance,mirror",
+            "world_state_open,lift1",
+            "world_state_inverted,pearl,lift1"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "lw_dmentry"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 714,
+                "y": 366,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
         "name": "Kakariko Fortune Teller",
         "short_name": "Kak Fortune",
         "parent": "Light World",
@@ -2458,88 +2517,6 @@
             }
         ]
     },
-    {
-        "name": "DM Access Entrances",
-        "parent": "Light World Color",
-        "children": [
-            {
-                "name": "Death Mountain Entry Cave",
-                "short_name": "DM Entry",
-                "access_rules": [
-                    "bumper_entrance,mirror",
-                    "world_state_open",
-                    "world_state_inverted,@Northwest Dark World"
-                ],
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "access_rules": [
-                            "lift1",
-                            "bumper_entrance,mirror"
-                        ],
-                        "chest_unopened_img": "images/door_closed.png",
-                        "chest_opened_img": "images/door_open.png",
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "item_count": 1,
-                        "hosted_item": "lw_dmentry"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "lightworld",
-                        "x": 714,
-                        "y": 366,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
-                    },
-                    {
-                        "map": "darkworld",
-                        "color": "#35046b",
-                        "x": 726,
-                        "y": 366,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
-                    }
-                ]
-            },
-            {
-                "name": "Death Mountain Exit Back",
-                "short_name": "DM Exit",
-                "access_rules": [
-                    "bumper_cave,mirror"
-                ],
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "chest_unopened_img": "images/door_closed.png",
-                        "chest_opened_img": "images/door_open.png",
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "item_count": 1,
-                        "hosted_item": "lw_dmentry"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "lightworld",
-                        "x": 720,
-                        "y": 300,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
-                    },
-                    {
-                        "map": "darkworld",
-                        "color": "#35046b",
-                        "x": 728,
-                        "y": 300,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
-                    }
-                ]
-            }
-        ]
-    },
     // Dark World
     {
         "name": "Skull Woods Back",
@@ -2803,6 +2780,96 @@
                     "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
                     "entrance_shuffle_on"
                 ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Top",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "access_rules": [
+                    "world_state_open,nothing",
+                    "world_state_inverted,lw_dmexit,mirror"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "hosted_item": "bumper_cave"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 300,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Bottom",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "access_rules": [
+                    "world_state_open,pearl,lift1",
+                    "world_state_inverted,lift1",
+                    "world_state_inverted,lw_dmentry,mirror"
+                ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "hosted_item": "bumper_entrance"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 726,
+                "y": 366,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Ledge",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Ledge",
+                "access_rules": [
+                    "world_state_open,entrance_shuffle_off,pearl,lift1,cape",
+                    "world_state_open,bumper_cave",
+                    "world_state_inverted,entrance_shuffle_off,@Light World,pearl,lift1,cape,mirror",
+                    "world_state_inverted,bumper_cave,mirror",
+                    "{}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 669,
+                "y": 315,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 669,
+                "y": 315,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -3848,113 +3915,6 @@
                 "y": 1214,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Bumper Cave Entrances",
-        "parent": "Dark World Color",
-        "children": [
-            {
-                "name": "Bumper Cave Top",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "access_rules": [
-                            "nothing"
-                        ],
-                        "chest_unopened_img": "images/door_closed.png",
-                        "chest_opened_img": "images/door_open.png",
-                        "item_count": 1,
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "hosted_item": "bumper_cave"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 728,
-                        "y": 300,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "color": "#059134",
-                        "x": 720,
-                        "y": 300,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
-                    }
-                ]
-            },
-            {
-                "name": "Bumper Cave Bottom",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "access_rules": [
-                            "world_state_open,@Northwest Dark World,pearl,lift1",
-                            "world_state_inverted,@Light World,pearl,lift1"
-                        ],
-                        "chest_unopened_img": "images/door_closed.png",
-                        "chest_opened_img": "images/door_open.png",
-                        "item_count": 1,
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "hosted_item": "bumper_entrance"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 726,
-                        "y": 366,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "color": "#059134",
-                        "x": 714,
-                        "y": 366,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
-                    }
-                ]
-            },
-            {
-                "name": "Bumper Ledge",
-                "sections": [
-                    {
-                        "name": "Ledge",
-                        "access_rules": [
-                            "world_state_open,entrance_shuffle_off,@Northwest Dark World,pearl,lift1,cape",
-                            "world_state_open,bumper_cave",
-                            "world_state_inverted,entrance_shuffle_off,@Light World,pearl,lift1,cape,mirror",
-                            "world_state_inverted,bumper_cave,mirror",
-                            "{@Northwest Dark World}"
-                        ],
-                        "capture_item": true,
-                        "item_count": 1
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 669,
-                        "y": 315,
-                        "restrict_visibility_rules": [ "entrance_shuffle_off" ]
-                    },
-                    {
-                        "map": "darkworld",
-                        "x": 669,
-                        "y": 315,
-                        "size": 48,
-                        "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-                    }
-                ]
             }
         ]
     },

@@ -2,7 +2,6 @@ START_CLOCK = os.clock()
 TRACKER_READY = false
 
 CaptureBadgeEntrances = {
-    "@Lumberjack House/Entrance",
     "@Lumberjack Tree Dropdown/Dropdown",
     "@Lumberjack Tree Entrance/Entrance",
     "@Death Mountain Entry Cave/Entrance",
@@ -14,7 +13,6 @@ CaptureBadgeEntrances = {
     "@Right Snitch House/Entrance",
     "@Blind's House Entrance/Entrance",
     "@Kakariko Well/Dropdown",
-    "@Kakariko Well Entrance/Entrance",
     "@Chicken House Entrance/Entrance",
     "@Grass House/Entrance",
     "@Front Tavern/Entrance",
@@ -23,11 +21,9 @@ CaptureBadgeEntrances = {
     "@Sick Kid Entrance/Entrance",
     "@Smith's House/Entrance",
     "@Magic Bat Dropdown/Dropdown",
-    "@Magic Bat Entrance/Entrance",
     "@Kakariko Chest Game/Entrance",
     "@Quarreling Brothers Right/Entrance",
     "@Library Entrance/Entrance",
-    "@Forest Hideout Entrance/Entrance",
     "@Forest Hideout Dropdown/Dropdown",
     "@Forest Chest Game/Entrance",
     "@Castle Secret Dropdown/Dropdown",
@@ -52,7 +48,6 @@ CaptureBadgeEntrances = {
     "@Long Fairy Cave/Entrance",
     "@North Bonk Rocks/Entrance",
     "@Houlihan Hole/Dropdown",
-    "@Houlihan Entrance/Entrance",
     "@King's Tomb Entrance/Entrance",
     "@Graveyard Ledge Entrance/Entrance",
     "@Desert Left Entrance/Entrance",
@@ -119,7 +114,6 @@ CaptureBadgeEntrances = {
     "@TR Bridge Right/Entrance",
     "@TR Safety Door/Entrance",
     "@Castle Main Entrance/Entrance",
-    "@Sanctuary Entrance/Entrance",
     "@Sanctuary Grave/Dropdown",
     "@Agahnim's Tower Entrance/Entrance",
     "@Eastern Palace Entrance/Entrance",
@@ -141,9 +135,27 @@ CaptureBadgeEntrances = {
     "@Tower of Hera Entrance/Entrance",
     "@Turtle Rock Entrance/Entrance",
     "@Mimic Cave Entrance/Entrance",
-    "@Ganon's Tower Entrance/Entrance",
     "@Castle Hole/Dropdown",
-    "@Castle Hole Return/Entrance"
+    "@Ganon's Tower Entrance/Entrance"
+}
+
+CaptureBadgeInsanity = {
+    "@Castle Secret Entrance/Entrance",
+    "@Sanctuary Entrance/Entrance",
+    "@Lumberjack House/Entrance",
+    "@Forest Hideout Entrance/Entrance",
+    "@Kakariko Well Entrance/Entrance",
+    "@Magic Bat Entrance/Entrance",
+    "@Houlihan Entrance/Entrance",
+    "@Pyramid Hole Entrance/Entrance",
+    "@Castle Hole Return/Entrance",
+    "@Skull Woods Back South/Entrance",
+    "@Skull Woods Front East/Entrance",
+    "@Skull Woods Front West/Entrance",
+    "@Skull Woods Back Dropdown/Dropdown",
+    "@Skull Woods Big Chest Dropdown/Dropdown",
+    "@Skull Woods Front East Dropdown/Dropdown",
+    "@Skull Woods Front West Dropdown/Dropdown"
 }
 
 CaptureBadgeOverworld = {
@@ -164,6 +176,14 @@ CaptureBadgeUnderworld = {
     "@Library/On The Shelf",
     "@Lost Woods/Forest Hideout",
     "@Lumberjack Cave/Cave"
+}
+
+CaptureBadgeInverted = {
+    "@Castle Hole/Dropdown"
+}
+
+CaptureBadgeOpen = {
+    "@Castle Hole/Dropdown"
 }
 
 function loadDungeonChests()
@@ -401,13 +421,15 @@ function updateGhosts(list, clearSection, markHostedItem)
 
         if target == nil or hiddenTarget == nil then
             print("Failed to resolve " .. section .. " please check for typos.")
+        elseif target.CapturedItem and CaptureBadgeCache[target] and not hiddenTarget.Visible then
+            removeGhost(section)
         elseif target.CapturedItem ~= CaptureBadgeCache[target] then
             if CaptureBadgeCache[target.Owner] then
                 hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
                 CaptureBadgeCache[target.Owner] = nil
                 CaptureBadgeCache[target] = nil
             end
-            if target.CapturedItem then
+            if target.CapturedItem and hiddenTarget.Visible then
                 CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
                 CaptureBadgeCache[target] = target.CapturedItem
                 if clearSection then
@@ -424,17 +446,21 @@ function updateGhosts(list, clearSection, markHostedItem)
     end
 end
 
-function removeGhosts(list)
+function removeGhosts(list, swapInverted)
     for i,section in pairs(list) do
-        local tempSection = section:gsub("/", " Ghost/")
-        local target = Tracker:FindObjectForCode(section)
-        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+        removeGhost(section)
+    end
+end
 
-        if target == nil or hiddenTarget == nil then
-            print("Failed to resolve " .. section .. " please check for typos.")
-        elseif CaptureBadgeCache[target] then
-            hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-            CaptureBadgeCache[target] = nil
-        end
+function removeGhost(section)
+    local tempSection = section:gsub("/", " Ghost/")
+    local target = Tracker:FindObjectForCode(section)
+    local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+
+    if target == nil or hiddenTarget == nil then
+        print("Failed to resolve " .. section .. " please check for typos.")
+    elseif CaptureBadgeCache[target] then
+        hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+        CaptureBadgeCache[target] = nil
     end
 end

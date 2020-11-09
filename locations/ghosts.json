@@ -407,8 +407,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 690,
-                "y": 1112,
+                "x": 650,
+                "y": 1180,
                 "size": 0,
                 "badge_size": 96
             }
@@ -425,7 +425,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 615,
+                "x": 635,
                 "y": 1112,
                 "size": 0,
                 "badge_size": 96
@@ -1069,6 +1069,7 @@
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "world_state_inverted" ],
                 "item_count": 1
             }
         ],
@@ -1441,24 +1442,6 @@
                 "map": "darkworld",
                 "x": 244,
                 "y": 174,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Skull Woods Area Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 350,
-                "y": 275,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1866,6 +1849,7 @@
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "world_state_open" ],
                 "item_count": 1
             }
         ],

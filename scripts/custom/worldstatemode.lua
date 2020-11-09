@@ -18,3 +18,13 @@ function WorldStateMode:updateIcon()
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_world_state_inverted" .. self.suffix .. ".png")
     end
 end
+
+function WorldStateMode:postUpdate()
+    if self.suffix == "" then
+        if TRACKER_READY then
+            TRACKER_READY = false
+            updateGhosts(CaptureBadgeEntrances, true, true)
+            TRACKER_READY = true
+        end
+    end
+end
