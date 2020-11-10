@@ -1058,7 +1058,7 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 766,
+                "y": 776,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2054,8 +2054,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 728,
-                "y": 313,
+                "x": 733,
+                "y": 290,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2072,8 +2072,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 717,
-                "y": 365,
+                "x": 727,
+                "y": 368,
                 "size": 0,
                 "badge_size": 96
             }
