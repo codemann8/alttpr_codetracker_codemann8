@@ -3,7 +3,7 @@ TRACKER_READY = false
 
 CaptureBadgeEntrances = {
     "@Lumberjack Tree Dropdown/Dropdown",
-    "@Lumberjack Tree Entrance/Entrance",
+    "@Lumberjack House/Entrance",
     "@Death Mountain Entry Cave/Entrance",
     "@Death Mountain Exit Back/Entrance",
     "@Kakariko Fortune Teller/Entrance",
@@ -133,7 +133,7 @@ CaptureBadgeEntrances = {
 CaptureBadgeInsanity = {
     "@Castle Secret Entrance/Entrance",
     "@Sanctuary Entrance/Entrance",
-    "@Lumberjack House/Entrance",
+    "@Lumberjack Tree Entrance/Entrance",
     "@Forest Hideout Entrance/Entrance",
     "@Kakariko Well Entrance/Entrance",
     "@Magic Bat Entrance/Entrance",
