@@ -20,7 +20,7 @@
             {
                 "map": "lightworld",
                 "x": 83,
-                "y": 101,
+                "y": 100,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             },
             {
@@ -85,7 +85,7 @@
             {
                 "map": "lightworld",
                 "x": 382,
-                "y": 246,
+                "y": 242,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -109,7 +109,7 @@
             {
                 "map": "lightworld",
                 "x": 370,
-                "y": 314,
+                "y": 318,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -177,7 +177,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 600,
+                "x": 595,
                 "y": 145,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -202,7 +202,7 @@
             {
                 "map": "lightworld",
                 "x": 663,
-                "y": 50,
+                "y": 48,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -234,8 +234,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 671,
-                "y": 126,
+                "x": 673,
+                "y": 132,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -321,8 +321,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 108,
-                "y": 857,
+                "x": 112,
+                "y": 856,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -356,7 +356,7 @@
             {
                 "map": "lightworld",
                 "x": 100,
-                "y": 940,
+                "y": 944,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -429,7 +429,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 230,
+                "x": 226,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -479,7 +479,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 366,
+                "x": 370,
                 "y": 840,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -514,7 +514,7 @@
             {
                 "map": "lightworld",
                 "x": 415,
-                "y": 965,
+                "y": 956,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -540,8 +540,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 202,
-                "y": 1076,
+                "x": 196,
+                "y": 1070,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -565,7 +565,7 @@
             {
                 "map": "lightworld",
                 "x": 310,
-                "y": 1072,
+                "y": 1070,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -641,7 +641,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 55,
+                "x": 56,
                 "y": 1195,
                 "size": 48,
                 "restrict_visibility_rules": [
@@ -676,8 +676,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 220,
-                "y": 1175,
+                "x": 218,
+                "y": 1185,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
@@ -733,7 +733,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 320,
+                "x": 322,
                 "y": 1195,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -757,14 +757,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 615,
+                "x": 613,
                 "y": 1052,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
-                "x": 615,
+                "x": 613,
                 "y": 1044,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
@@ -859,14 +859,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 100,
-                "y": 1374,
+                "x": 80,
+                "y": 1380,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             },
             {
                 "map": "lightworld",
                 "x": 80,
-                "y": 1394,
+                "y": 1386,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -894,7 +894,7 @@
             {
                 "map": "lightworld",
                 "x": 210,
-                "y": 1435,
+                "y": 1428,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -918,7 +918,7 @@
             {
                 "map": "lightworld",
                 "x": 290,
-                "y": 1435,
+                "y": 1428,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -941,7 +941,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 313,
+                "x": 310,
                 "y": 1320,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -975,7 +975,7 @@
             {
                 "map": "lightworld",
                 "x": 432,
-                "y": 1400,
+                "y": 1404,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -1065,8 +1065,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 900,
-                "y": 470,
+                "x": 902,
+                "y": 460,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1090,7 +1090,7 @@
             {
                 "map": "lightworld",
                 "x": 922,
-                "y": 540,
+                "y": 548,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -1209,8 +1209,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1290,
-                "y": 625,
+                "x": 1295,
+                "y": 626,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1234,7 +1234,7 @@
             {
                 "map": "lightworld",
                 "x": 1341,
-                "y": 558,
+                "y": 538,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -1257,8 +1257,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 900,
-                "y": 780,
+                "x": 901,
+                "y": 770,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1287,14 +1287,14 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 794,
+                "y": 785,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
             },
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 774,
+                "y": 776,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
             }
@@ -1318,7 +1318,7 @@
             {
                 "map": "lightworld",
                 "x": 1105,
-                "y": 780,
+                "y": 770,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1345,7 +1345,7 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 840,
+                "y": 841,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ]
             }
@@ -1368,7 +1368,7 @@
             {
                 "map": "lightworld",
                 "x": 901,
-                "y": 864,
+                "y": 868,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity,world_state_inverted" ]
             }
@@ -1392,7 +1392,7 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 886,
+                "y": 897,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on,world_state_open" ]
             },
@@ -1426,7 +1426,7 @@
             {
                 "map": "lightworld",
                 "x": 1105,
-                "y": 864,
+                "y": 868,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -1600,7 +1600,7 @@
             {
                 "map": "lightworld",
                 "x": 1970,
-                "y": 1405,
+                "y": 1392,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -1635,7 +1635,7 @@
             {
                 "map": "lightworld",
                 "x": 148,
-                "y": 1525,
+                "y": 1521,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1658,7 +1658,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 70,
+                "x": 66,
                 "y": 1590,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -1687,7 +1687,7 @@
             {
                 "map": "lightworld",
                 "x": 148,
-                "y": 1600,
+                "y": 1610,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1713,7 +1713,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 225,
+                "x": 230,
                 "y": 1590,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -1803,7 +1803,7 @@
             {
                 "map": "lightworld",
                 "x": 400,
-                "y": 1655,
+                "y": 1672,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1830,8 +1830,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 532,
-                "y": 1663,
+                "x": 542,
+                "y": 1653,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -1860,8 +1860,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 455,
-                "y": 1860,
+                "x": 448,
+                "y": 1852,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             },
             {
@@ -1872,8 +1872,8 @@
             },
             {
                 "map": "lightworld",
-                "x": 440,
-                "y": 1845,
+                "x": 448,
+                "y": 1852,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             },
@@ -1978,7 +1978,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 895,
+                "x": 886,
                 "y": 1860,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -2108,7 +2108,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1200,
+                "x": 1190,
                 "y": 1565,
                 "size": 48,
                 "restrict_visibility_rules": [
@@ -2144,7 +2144,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1300,
+                "x": 1302,
                 "y": 1615,
                 "size": 48,
                 "restrict_visibility_rules": [
@@ -2348,8 +2348,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1786,
-                "y": 1535,
+                "x": 1785,
+                "y": 1530,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2382,7 +2382,7 @@
             {
                 "map": "lightworld",
                 "x": 1859,
-                "y": 1535,
+                "y": 1530,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -2424,8 +2424,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1820,
-                "y": 1600,
+                "x": 1822,
+                "y": 1602,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -2451,8 +2451,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 790,
-                "y": 275,
+                "x": 796,
+                "y": 272,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2480,8 +2480,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 720,
-                "y": 300,
+                "x": 714,
+                "y": 284,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2511,7 +2511,7 @@
             {
                 "map": "lightworld",
                 "x": 714,
-                "y": 366,
+                "y": 370,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2535,7 +2535,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 816,
+                "x": 808,
                 "y": 378,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
@@ -2653,8 +2653,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 978,
-                "y": 215,
+                "x": 980,
+                "y": 210,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2677,8 +2677,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 910,
-                "y": 280,
+                "x": 904,
+                "y": 288,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2701,8 +2701,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 978,
-                "y": 290,
+                "x": 983,
+                "y": 300,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2726,7 +2726,7 @@
             {
                 "map": "lightworld",
                 "x": 1075,
-                "y": 325,
+                "y": 333,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2788,7 +2788,7 @@
             {
                 "map": "lightworld",
                 "x": 1725,
-                "y": 115,
+                "y": 108,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2816,7 +2816,7 @@
             {
                 "map": "lightworld",
                 "x": 1600,
-                "y": 180,
+                "y": 172,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2844,7 +2844,7 @@
             {
                 "map": "lightworld",
                 "x": 1695,
-                "y": 180,
+                "y": 172,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2873,7 +2873,7 @@
             {
                 "map": "lightworld",
                 "x": 1645,
-                "y": 232,
+                "y": 234,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2896,8 +2896,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1566,
-                "y": 280,
+                "x": 1554,
+                "y": 285,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2928,8 +2928,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1627,
-                "y": 295,
+                "x": 1623,
+                "y": 300,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
@@ -2961,67 +2961,13 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1688,
-                "y": 310,
+                "x": 1692,
+                "y": 315,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
                     "entrance_shuffle_on"
                 ]
-            }
-        ]
-    },
-    {
-        "name": "Paradox Cave Bottom",
-        "parent": "Death Mountain East Bottom",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_entrance",
-                "item_count": 1,
-                "hosted_item": "dm_east_bottom"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1731,
-                "y": 434,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Waterfall Fairy Cave",
-        "parent": "Zora Area",
-        "access_rules": [
-            "world_state_open,flippers",
-            "world_state_open,[flippers],pearl",
-            "world_state_open,[flippers],boots",
-            "world_state_inverted,@Zora Area,pearl,[flippers]"
-        ],
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_entrance",
-                "item_count": 1,
-                "hosted_item": "zora_area"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1806,
-                "y": 286,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -3050,13 +2996,67 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1749,
-                "y": 310,
+                "x": 1761,
+                "y": 315,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal",
                     "entrance_shuffle_on"
                 ]
+            }
+        ]
+    },
+    {
+        "name": "Waterfall Fairy Cave",
+        "parent": "Zora Area",
+        "access_rules": [
+            "world_state_open,flippers",
+            "world_state_open,[flippers],pearl",
+            "world_state_open,[flippers],boots",
+            "world_state_inverted,@Zora Area,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "zora_area"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1820,
+                "y": 286,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Bottom",
+        "parent": "Death Mountain East Bottom",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "dm_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 434,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_on" ]
             }
         ]
     },
@@ -4458,7 +4458,7 @@
             {
                 "map": "darkworld",
                 "x": 1786,
-                "y": 1535,
+                "y": 1530,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
@@ -4494,7 +4494,7 @@
             {
                 "map": "darkworld",
                 "x": 1859,
-                "y": 1535,
+                "y": 1530,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "entrance_shuffle_off,retro_mode_on",
