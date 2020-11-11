@@ -466,8 +466,27 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 613,
-                "y": 1044,
+                "x": 612,
+                "y": 1030,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1105,
                 "size": 0,
                 "badge_size": 96
             }
@@ -487,25 +506,6 @@
                 "map": "lightworld",
                 "x": 650,
                 "y": 1180,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Magic Bat Exit Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 635,
-                "y": 1112,
                 "size": 0,
                 "badge_size": 96
             }

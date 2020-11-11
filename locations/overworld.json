@@ -757,15 +757,39 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 613,
-                "y": 1052,
+                "x": 612,
+                "y": 1040,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
-                "x": 613,
-                "y": 1044,
+                "x": 612,
+                "y": 1040,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Exit",
+        "parent": "Light World",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "light_world"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1112,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
@@ -798,7 +822,7 @@
             {
                 "map": "lightworld",
                 "x": 650,
-                "y": 1150,
+                "y": 1166,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
             },
@@ -806,30 +830,6 @@
                 "map": "lightworld",
                 "x": 650,
                 "y": 1180,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
-            }
-        ]
-    },
-    {
-        "name": "Magic Bat Exit",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_entrance",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 635,
-                "y": 1112,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_insanity" ]
             }
