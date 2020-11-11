@@ -409,31 +409,37 @@ end
 
 function updateGhosts(list, clearSection, markHostedItem)
     for i,section in pairs(list) do
-        local tempSection = section:gsub("/", " Ghost/")
-        local target = Tracker:FindObjectForCode(section)
-        local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+        updateGhost(section, clearSection, markHostedItem)
+    end
+end
 
-        if target == nil or hiddenTarget == nil then
-            print("Failed to resolve " .. section .. " please check for typos.")
-        elseif target.CapturedItem and CaptureBadgeCache[target] and not hiddenTarget.Visible then
-            removeGhost(section)
-        elseif target.CapturedItem ~= CaptureBadgeCache[target] then
-            if CaptureBadgeCache[target.Owner] then
-                hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
-                CaptureBadgeCache[target.Owner] = nil
-                CaptureBadgeCache[target] = nil
+function updateGhost(section, clearSection, markHostedItem)
+    local tempSection = section:gsub("/", " Ghost/")
+    local target = Tracker:FindObjectForCode(section)
+    local hiddenTarget = Tracker:FindObjectForCode(tempSection)
+
+    if target == nil or hiddenTarget == nil then
+        print("Failed to resolve " .. section .. " please check for typos.")
+        return false
+    elseif target.CapturedItem and CaptureBadgeCache[target] and not hiddenTarget.Visible then
+        removeGhost(section)
+    end
+    if target.CapturedItem ~= CaptureBadgeCache[target] and hiddenTarget.Visible then
+        if CaptureBadgeCache[target.Owner] then
+            hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+            CaptureBadgeCache[target.Owner] = nil
+            CaptureBadgeCache[target] = nil
+        end
+        if target.CapturedItem and hiddenTarget.Visible then
+            CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+            CaptureBadgeCache[target] = target.CapturedItem
+            if clearSection then
+                target.AvailableChestCount = 0
+                target.CapturedItem = CaptureBadgeCache[target]
             end
-            if target.CapturedItem and hiddenTarget.Visible then
-                CaptureBadgeCache[target.Owner] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-                CaptureBadgeCache[target] = target.CapturedItem
-                if clearSection then
-                    target.AvailableChestCount = 0
-                    target.CapturedItem = CaptureBadgeCache[target]
-                end
-                if markHostedItem then
-                    if target.HostedItem then
-                        target.HostedItem.Active = true
-                    end
+            if markHostedItem then
+                if target.HostedItem then
+                    target.HostedItem.Active = true
                 end
             end
         end
