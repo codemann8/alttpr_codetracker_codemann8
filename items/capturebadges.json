@@ -182,6 +182,13 @@
      },
    
      //Common Items Lebels
+     {
+      "name": "Chest",
+      "type": "static",
+      "img": "images/capture/CapChest.png",
+      "capturable": true,
+      "codes": "cap_chest"
+     },
    
      {
        "name": "Half Magic",
@@ -628,13 +635,6 @@
      },
    
      // Locations
-     {
-       "name": "Dead Ent",
-       "type": "static",
-       "img": "images/capture/CapDead.png",
-       "capturable": true,
-       "codes": "cap_dead"
-     },
    
      {
        "name": "Kakariko Well",
@@ -701,19 +701,11 @@
      },
    
      {
-       "name": "Death Mountain Exit Left",
+       "name": "Death Mountain Exit Connector",
        "type": "static",
        "img": "images/capture/CapDeathMEL.png",
        "capturable": true,
-       "codes": "cap_dmel"
-     },
-   
-     {
-       "name": "Death Mountain Exit Right",
-       "type": "static",
-       "img": "images/capture/CapDeathMER.png",
-       "capturable": true,
-       "codes": "cap_dmer"
+       "codes": "cap_dmec"
      },
    
      {
@@ -869,35 +861,19 @@
      },
    
      {
-       "name": "Race House Left",
+       "name": "Quarreling Brothers",
        "type": "static",
-       "img": "images/capture/CapRaceHL.png",
+       "img": "images/capture/CapBrother.png",
        "capturable": true,
-       "codes": "cap_racehl"
+       "codes": "cap_quarbro"
      },
    
      {
-       "name": "Race House Right",
+       "name": "Elder's Hut Connector",
        "type": "static",
-       "img": "images/capture/CapRaceHR.png",
+       "img": "images/capture/CapElderHut.png",
        "capturable": true,
-       "codes": "cap_racehr"
-     },
-   
-     {
-       "name": "Elder Door Left",
-       "type": "static",
-       "img": "images/capture/CapElderDL.png",
-       "capturable": true,
-       "codes": "cap_elderdl"
-     },
-   
-     {
-       "name": "Elder Door Right",
-       "type": "static",
-       "img": "images/capture/CapElderDR.png",
-       "capturable": true,
-       "codes": "cap_elderdr"
+       "codes": "cap_elderhut"
      },
    
      {
