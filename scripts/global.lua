@@ -180,16 +180,6 @@ CaptureBadgeUnderworld = {
     "@Library/On The Shelf"
 }
 
-CaptureBadgeInverted = {
-    "@Castle Hole/Dropdown",
-    "@Castle Hole Exit/Entrance"
-}
-
-CaptureBadgeOpen = {
-    "@Pyramid Hole/Dropdown",
-    "@Pyramid Hole Exit/Entrance"
-}
-
 function loadDungeonChests()
     ExtendedConsumableItem("Hyrule Castle Items", "hc", "@Hyrule Castle & Escape")
     ExtendedConsumableItem("Eastern Palace Items", "ep", "@Eastern Palace")
@@ -447,12 +437,6 @@ function updateGhosts(list, clearSection, markHostedItem)
                 end
             end
         end
-    end
-end
-
-function removeGhosts(list, swapInverted)
-    for i,section in pairs(list) do
-        removeGhost(section)
     end
 end
 
