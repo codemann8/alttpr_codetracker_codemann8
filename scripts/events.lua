@@ -63,6 +63,7 @@ function tracker_on_accessibility_updated()
                     updateGhosts(CaptureBadgeInsanity, true, true)
                 end
                 updateGhosts(CaptureBadgeEntrances, true, true)
+                updateGhosts(CaptureBadgeDropdowns, true, true)
             end
     
             updateGhosts(CaptureBadgeOverworld, false, false)
