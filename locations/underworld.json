@@ -1,11 +1,11 @@
 [
     //Light World
     {
-        "name": "Lost Woods",
+        "name": "Forest Hideout",
         "parent": "Light World",
         "sections": [
             {
-                "name": "Forest Hideout",
+                "name": "Stash",
                 "access_rules": [
                     "world_state_open",
                     "world_state_inverted,pearl",
@@ -52,7 +52,7 @@
         ]
     },
     {
-        "name": "The Well",
+        "name": "Kakariko Well",
         "parent": "Light World",
         "sections": [
             {
@@ -922,7 +922,7 @@
         ]
     },
     {
-        "name": "Super-Bunny Cave",
+        "name": "Superbunny Cave",
         "parent": "Dark Death Mountain East",
         "access_rules": [
             "world_state_open,[pearl]",

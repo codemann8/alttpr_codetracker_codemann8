@@ -37,12 +37,12 @@ function EntranceShuffleMode:postUpdate()
 
         --Change Dropdown Capture Layouts
         local locations = {
-            "@Forest Hideout Dropdown/Dropdown",
-            "@Lumberjack Tree Dropdown/Dropdown",
-            "@Kakariko Well/Dropdown",
-            "@Magic Bat Dropdown/Dropdown",
-            "@Castle Secret Dropdown/Dropdown",
-            "@Houlihan Hole/Dropdown",
+            "@Forest Hideout Drop/Dropdown",
+            "@Lumberjack Tree/Dropdown",
+            "@Kakariko Well Drop/Dropdown",
+            "@Magic Bat Drop/Dropdown",
+            "@Secret Passage Drop/Dropdown",
+            "@Useless Fairy Drop/Dropdown",
             "@Sanctuary Grave/Dropdown",
             "@Castle Hole/Dropdown",
             "@Pyramid Hole/Dropdown"

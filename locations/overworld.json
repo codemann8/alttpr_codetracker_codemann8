@@ -64,7 +64,7 @@
         ]
     },
     {
-        "name": "Forest Hideout Dropdown",
+        "name": "Forest Hideout Drop",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -92,7 +92,7 @@
         ]
     },
     {
-        "name": "Forest Hideout Entrance",
+        "name": "Forest Hideout Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "name": "Lumberjack Tree Dropdown",
+        "name": "Lumberjack Tree",
         "short_name": "Aga Tree",
         "parent": "Light World",
         "access_rules": [
@@ -185,7 +185,7 @@
         ]
     },
     {
-        "name": "Lumberjack Tree Entrance",
+        "name": "Lumberjack Tree Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -282,7 +282,7 @@
         ]
     },
     {
-        "name": "Kakariko Well",
+        "name": "Kakariko Well Drop",
         "parent": "Light World",
         "sections": [
             {
@@ -305,7 +305,7 @@
         ]
     },
     {
-        "name": "Kakariko Well Entrance",
+        "name": "Kakariko Well Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -717,7 +717,7 @@
         ]
     },
     {
-        "name": "Front Tavern",
+        "name": "Tavern Entrance",
         "parent": "Light World",
         "sections": [
             {
@@ -772,7 +772,7 @@
         ]
     },
     {
-        "name": "Magic Bat Dropdown",
+        "name": "Magic Bat Drop",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -812,7 +812,7 @@
         ]
     },
     {
-        "name": "Magic Bat Entrance",
+        "name": "Magic Bat Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -1073,7 +1073,7 @@
         ]
     },
     {
-        "name": "Sanctuary Entrance",
+        "name": "Sanctuary Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -1129,7 +1129,7 @@
         ]
     },
     {
-        "name": "Graveyard Ledge Entrance",
+        "name": "Graveyard Ledge Cave",
         "parent": "Light World",
         "access_rules": [
             "world_state_open,@Northwest Dark World,pearl,mirror",
@@ -1157,7 +1157,7 @@
         ]
     },
     {
-        "name": "King's Tomb Entrance",
+        "name": "King's Tomb Grave",
         "parent": "Light World",
         "access_rules": [
             "world_state_open,lift2",
@@ -1189,7 +1189,7 @@
         ]
     },
     {
-        "name": "Houlihan Hole",
+        "name": "Useless Fairy Drop",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -1217,7 +1217,7 @@
         ]
     },
     {
-        "name": "Houlihan Entrance",
+        "name": "Useless Fairy Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -1352,7 +1352,7 @@
         ]
     },
     {
-        "name": "Castle Hole Return",
+        "name": "Castle Hole Exit",
         "parent": "Light World",
         "sections": [
             {
@@ -1406,7 +1406,7 @@
         ]
     },
     {
-        "name": "Castle Secret Entrance",
+        "name": "Secret Passage Exit",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -1433,7 +1433,7 @@
         ]
     },
     {
-        "name": "Castle Secret Dropdown",
+        "name": "Secret Passage Drop",
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
@@ -1810,7 +1810,7 @@
         ]
     },
     {
-        "name": "South of Grove",
+        "name": "Cave 45 Entrance",
         "parent": "Light World",
         "access_rules": [
             "world_state_open,@South Dark World,mirror",
@@ -2685,7 +2685,7 @@
         ]
     },
     {
-        "name": "Spectacle Rock Right",
+        "name": "Spectacle Rock Bottom",
         "parent": "Death Mountain West Bottom",
         "sections": [
             {
@@ -2996,7 +2996,7 @@
         ]
     },
     {
-        "name": "Waterfall Fairy Entrance",
+        "name": "Waterfall Fairy Cave",
         "parent": "Zora Area",
         "access_rules": [
             "world_state_open,flippers",
@@ -3151,7 +3151,7 @@
         ]
     },
     {
-        "name": "Skull Woods Back Dropdown",
+        "name": "Skull Woods Back Drop",
         "parent": "Skull Woods Back Area",
         "sections": [
             {
@@ -3228,7 +3228,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West Dropdown",
+        "name": "Skull Woods Front West Drop",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3251,7 +3251,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East Dropdown",
+        "name": "Skull Woods Front East Drop",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3298,7 +3298,7 @@
         ]
     },
     {
-        "name": "Skull Woods Big Chest Dropdown",
+        "name": "Skull Woods Big Chest Drop",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3431,7 +3431,7 @@
         ]
     },
     {
-        "name": "Dark Village Fortune Teller",
+        "name": "Village of Outkasts Fortune Teller",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3663,7 +3663,7 @@
         ]
     },
     {
-        "name": "Hammer Pegs Entrance",
+        "name": "Hammer Pegs Cave",
         "parent": "Hammer Pegs Area",
         "access_rules": [
             "world_state_open,pearl",
@@ -3851,7 +3851,7 @@
         ]
     },
     {
-        "name": "Pyramid Hole Entrance",
+        "name": "Pyramid Hole Exit",
         "parent": "East Dark World",
         "access_rules": [
             "nothing"
@@ -3878,7 +3878,7 @@
         ]
     },
     {
-        "name": "Pyramid Fairy Entrance",
+        "name": "Pyramid Fairy Cave",
         "parent": "East Dark World",
         "access_rules": [
             "crystal56:2",
@@ -4102,7 +4102,7 @@
         ]
     },
     {
-        "name": "Mire Shed Entrance",
+        "name": "Mire Shed Cave",
         "parent": "Mire Area",
         "sections": [
             {
@@ -4738,7 +4738,7 @@
         ]
     },
     {
-        "name": "Hookshot Cave Top",
+        "name": "Hookshot Cave Island",
         "parent": "Dark Death Mountain",
         "access_rules": [
             "ddm_floating",
@@ -4831,7 +4831,7 @@
         ],
         "children": [
             {
-                "name": "TR Bridge Left",
+                "name": "Turtle Ledge Left Entrance",
                 "sections": [
                     {
                         "name": "Entrance",
@@ -4854,7 +4854,7 @@
                 ]
             },
             {
-                "name": "TR Bridge Right",
+                "name": "Turtle Ledge Right Entrance",
                 "sections": [
                     {
                         "name": "Entrance",
@@ -4879,7 +4879,7 @@
         ]
     },
     {
-        "name": "TR Safety Door",
+        "name": "Turtle Laser Bridge Entrance",
         "parent": "Dark Death Mountain",
         "access_rules": [
             "ddm_tr_safety",

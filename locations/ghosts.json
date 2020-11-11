@@ -37,10 +37,10 @@
         ]
     },
     {
-        "name": "Lost Woods Ghost",
+        "name": "Forest Hideout Ghost",
         "sections": [
             {
-                "name": "Forest Hideout",
+                "name": "Stash",
                 "item_count": 1
             }
         ],
@@ -55,7 +55,7 @@
         ]
     },
     {
-        "name": "Forest Hideout Dropdown Ghost",
+        "name": "Forest Hideout Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "name": "Forest Hideout Entrance Ghost",
+        "name": "Forest Hideout Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -127,7 +127,7 @@
         ]
     },
     {
-        "name": "Lumberjack Tree Dropdown Ghost",
+        "name": "Lumberjack Tree Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -145,7 +145,7 @@
         ]
     },
     {
-        "name": "Lumberjack Tree Entrance Ghost",
+        "name": "Lumberjack Tree Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -199,7 +199,7 @@
         ]
     },
     {
-        "name": "Kakariko Well Ghost",
+        "name": "Kakariko Well Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -217,7 +217,7 @@
         ]
     },
     {
-        "name": "Kakariko Well Entrance Ghost",
+        "name": "Kakariko Well Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -415,7 +415,7 @@
         ]
     },
     {
-        "name": "Front Tavern Ghost",
+        "name": "Tavern Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -451,7 +451,7 @@
         ]
     },
     {
-        "name": "Magic Bat Dropdown Ghost",
+        "name": "Magic Bat Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -469,7 +469,7 @@
         ]
     },
     {
-        "name": "Magic Bat Entrance Ghost",
+        "name": "Magic Bat Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -631,7 +631,7 @@
         ]
     },
     {
-        "name": "Sanctuary Entrance Ghost",
+        "name": "Sanctuary Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -667,7 +667,7 @@
         ]
     },
     {
-        "name": "Graveyard Ledge Entrance Ghost",
+        "name": "Graveyard Ledge Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -685,7 +685,7 @@
         ]
     },
     {
-        "name": "King's Tomb Entrance Ghost",
+        "name": "King's Tomb Grave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -703,7 +703,7 @@
         ]
     },
     {
-        "name": "Houlihan Hole Ghost",
+        "name": "Useless Fairy Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -721,7 +721,7 @@
         ]
     },
     {
-        "name": "Houlihan Entrance Ghost",
+        "name": "Useless Fairy Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -812,7 +812,7 @@
         ]
     },
     {
-        "name": "Castle Hole Return Ghost",
+        "name": "Castle Hole Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -848,7 +848,7 @@
         ]
     },
     {
-        "name": "Castle Secret Entrance Ghost",
+        "name": "Secret Passage Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -866,7 +866,7 @@
         ]
     },
     {
-        "name": "Castle Secret Dropdown Ghost",
+        "name": "Secret Passage Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -1100,7 +1100,7 @@
         ]
     },
     {
-        "name": "South of Grove Ghost",
+        "name": "Cave 45 Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1550,7 +1550,7 @@
         ]
     },
     {
-        "name": "Spectacle Rock Right Ghost",
+        "name": "Spectacle Rock Bottom Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1748,7 +1748,7 @@
         ]
     },
     {
-        "name": "Waterfall Fairy Entrance Ghost",
+        "name": "Waterfall Fairy Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1839,7 +1839,7 @@
         ]
     },
     {
-        "name": "Skull Woods Back Dropdown Ghost",
+        "name": "Skull Woods Back Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -1875,7 +1875,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West Dropdown Ghost",
+        "name": "Skull Woods Front West Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -1893,7 +1893,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East Dropdown Ghost",
+        "name": "Skull Woods Front East Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -1929,7 +1929,7 @@
         ]
     },
     {
-        "name": "Skull Woods Big Chest Dropdown Ghost",
+        "name": "Skull Woods Big Chest Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -2002,7 +2002,7 @@
         ]
     },
     {
-        "name": "Dark Village Fortune Teller Ghost",
+        "name": "Village of Outkasts Fortune Teller Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2110,7 +2110,7 @@
         ]
     },
     {
-        "name": "Hammer Pegs Entrance Ghost",
+        "name": "Hammer Pegs Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2165,7 +2165,7 @@
         ]
     },
     {
-        "name": "Pyramid Hole Entrance Ghost",
+        "name": "Pyramid Hole Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2183,7 +2183,7 @@
         ]
     },
     {
-        "name": "Pyramid Fairy Entrance Ghost",
+        "name": "Pyramid Fairy Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2291,7 +2291,7 @@
         ]
     },
     {
-        "name": "Mire Shed Entrance Ghost",
+        "name": "Mire Shed Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2633,7 +2633,7 @@
         ]
     },
     {
-        "name": "Hookshot Cave Top Ghost",
+        "name": "Hookshot Cave Island Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2687,7 +2687,7 @@
         ]
     },
     {
-        "name": "TR Bridge Left Ghost",
+        "name": "Turtle Ledge Left Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2705,7 +2705,7 @@
         ]
     },
     {
-        "name": "TR Bridge Right Ghost",
+        "name": "Turtle Ledge Right Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2723,7 +2723,7 @@
         ]
     },
     {
-        "name": "TR Safety Door Ghost",
+        "name": "Turtle Laser Bridge Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",

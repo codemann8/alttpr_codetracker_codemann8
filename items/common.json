@@ -756,7 +756,7 @@
         "codes": "dropdown_bat"
     },
     {
-        "name": "Fairy Dropdown",
+        "name": "Useless Fairy Dropdown",
         "type": "toggle",
         "img": "images/drop-fairy.png",
         "img_mods": "",
