@@ -12,7 +12,7 @@
             {
                 "map": "lightworld",
                 "x": 83,
-                "y": 100,
+                "y": 148,
                 "size": 0,
                 "badge_size": 96
             }
@@ -29,36 +29,38 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 200,
-                "y": 180,
+                "x": 250,
+                "y": 228,
                 "size":0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Lost Woods Ghost",
+        "name": "Forest Hideout Ghost",
         "sections": [
             {
-                "name": "Forest Hideout",
+                "name": "Stash",
+                "visibility_rules": [ "entrance_shuffle_off,world_state_inverted" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 322,
-                "y": 279,
+                "x": 364,
+                "y": 328,
                 "size":0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Forest Hideout Dropdown Ghost",
+        "name": "Forest Hideout Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -66,17 +68,18 @@
             {
                 "map": "lightworld",
                 "x": 382,
-                "y": 245,
+                "y": 236,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Forest Hideout Entrance Ghost",
+        "name": "Forest Hideout Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -84,7 +87,7 @@
             {
                 "map": "lightworld",
                 "x": 370,
-                "y": 315,
+                "y": 324,
                 "size": 0,
                 "badge_size": 96
             }
@@ -95,6 +98,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1       
             }
         ],
@@ -102,9 +106,9 @@
             {
                 "map": "lightworld",
                 "x": 370,
-                "y": 38,
+                "y": 40,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -113,31 +117,33 @@
         "sections": [
             {
                 "name": "Cave",
+                "visibility_rules": [ "entrance_shuffle_off" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 560,
-                "y": 141,
+                "x": 600,
+                "y": 185,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Lumberjack Tree Dropdown Ghost",
+        "name": "Lumberjack Tree Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 585,
+                "x": 590,
                 "y": 145,
                 "size": 0,
                 "badge_size": 96
@@ -145,10 +151,11 @@
         ]
     },
     {
-        "name": "Lumberjack Tree Entrance Ghost",
+        "name": "Lumberjack Tree Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -156,7 +163,7 @@
             {
                 "map": "lightworld",
                 "x": 663,
-                "y": 50,
+                "y": 46,
                 "size": 0,
                 "badge_size": 96
             }
@@ -167,14 +174,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 671,
-                "y": 125,
+                "x": 678,
+                "y": 134,
                 "size": 0,
                 "badge_size": 96
             }
@@ -185,6 +193,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -194,22 +203,23 @@
                 "x": 375,
                 "y": 635,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Kakariko Well Ghost",
+        "name": "Kakariko Well Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 40,
+                "x": 32,
                 "y": 833,
                 "size": 0,
                 "badge_size": 96
@@ -217,18 +227,19 @@
         ]
     },
     {
-        "name": "Kakariko Well Entrance Ghost",
+        "name": "Kakariko Well Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 108,
-                "y": 857,
+                "x": 120,
+                "y": 856,
                 "size": 0,
                 "badge_size": 96
             }
@@ -239,6 +250,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -246,7 +258,7 @@
             {
                 "map": "lightworld",
                 "x": 100,
-                "y": 940,
+                "y": 944,
                 "size": 0,
                 "badge_size": 96
             }
@@ -257,14 +269,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 223,
-                "y": 838,
+                "x": 214,
+                "y": 840,
                 "size": 0,
                 "badge_size": 96
             }
@@ -275,14 +288,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 306,
-                "y": 838,
+                "x": 298,
+                "y": 840,
                 "size": 0,
                 "badge_size": 96
             }
@@ -293,14 +307,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 375,
-                "y": 838,
+                "x": 382,
+                "y": 840,
                 "size": 0,
                 "badge_size": 96
             }
@@ -311,6 +326,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -318,9 +334,9 @@
             {
                 "map": "lightworld",
                 "x": 415,
-                "y": 965,
+                "y": 956,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -329,14 +345,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 202,
-                "y": 1076,
+                "x": 196,
+                "y": 1070,
                 "size": 0,
                 "badge_size": 96
             }
@@ -347,6 +364,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -354,7 +372,7 @@
             {
                 "map": "lightworld",
                 "x": 310,
-                "y": 1073,
+                "y": 1070,
                 "size": 0,
                 "badge_size": 96
             }
@@ -365,6 +383,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -383,16 +402,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 55,
+                "x": 56,
                 "y": 1195,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -401,31 +421,33 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 220,
-                "y": 1175,
+                "x": 218,
+                "y": 1185,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Front Tavern Ghost",
+        "name": "Tavern Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 320,
+                "x": 322,
                 "y": 1195,
                 "size": 0,
                 "badge_size": 96
@@ -437,24 +459,45 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 615,
-                "y": 1045,
+                "x": 612,
+                "y": 1030,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Magic Bat Dropdown Ghost",
+        "name": "Magic Bat Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1105,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -463,24 +506,6 @@
                 "map": "lightworld",
                 "x": 650,
                 "y": 1180,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Magic Bat Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 635,
-                "y": 1112,
                 "size": 0,
                 "badge_size": 96
             }
@@ -497,8 +522,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 35,
-                "y": 1396,
+                "x": 80,
+                "y": 1332,
                 "size": 0,
                 "badge_size": 96
             }
@@ -509,14 +534,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 210,
-                "y": 1437,
+                "x": 206,
+                "y": 1428,
                 "size": 0,
                 "badge_size": 96
             }
@@ -527,14 +553,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 290,
-                "y": 1437,
+                "x": 294,
+                "y": 1428,
                 "size": 0,
                 "badge_size": 96
             }
@@ -545,14 +572,15 @@
         "sections": [
             {
                 "name": "On The Shelf",
+                "visibility_rules": [ "entrance_shuffle_off" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 290,
-                "y": 1310,
+                "x": 313,
+                "y": 1358,
                 "size":0,
                 "badge_size": 96
             }
@@ -563,16 +591,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 313,
+                "x": 310,
                 "y": 1320,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -581,6 +610,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -588,9 +618,9 @@
             {
                 "map": "lightworld",
                 "x": 432,
-                "y": 1400,
+                "y": 1404,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -599,6 +629,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -608,7 +639,7 @@
                 "x": 777,
                 "y": 600,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -617,24 +648,26 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 900,
-                "y": 458,
+                "x": 902,
+                "y": 460,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Sanctuary Entrance Ghost",
+        "name": "Sanctuary Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -642,7 +675,7 @@
             {
                 "map": "lightworld",
                 "x": 922,
-                "y": 540,
+                "y": 548,
                 "size": 0,
                 "badge_size": 96
             }
@@ -653,6 +686,7 @@
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -667,17 +701,18 @@
         ]
     },
     {
-        "name": "Graveyard Ledge Entrance Ghost",
+        "name": "Graveyard Ledge Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1132,
+                "x": 1126,
                 "y": 549,
                 "size": 0,
                 "badge_size": 96
@@ -685,17 +720,18 @@
         ]
     },
     {
-        "name": "King's Tomb Entrance Ghost",
+        "name": "King's Tomb Grave Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1207,
+                "x": 1213,
                 "y": 598,
                 "size": 0,
                 "badge_size": 96
@@ -703,28 +739,30 @@
         ]
     },
     {
-        "name": "Houlihan Hole Ghost",
+        "name": "Useless Fairy Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1290,
-                "y": 625,
+                "x": 1299,
+                "y": 626,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Houlihan Entrance Ghost",
+        "name": "Useless Fairy Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -732,7 +770,7 @@
             {
                 "map": "lightworld",
                 "x": 1341,
-                "y": 558,
+                "y": 538,
                 "size": 0,
                 "badge_size": 96
             }
@@ -743,14 +781,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 900,
-                "y": 780,
+                "x": 901,
+                "y": 770,
                 "size": 0,
                 "badge_size": 96
             }
@@ -761,6 +800,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -768,7 +808,7 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 776,
+                "y": 771,
                 "size": 0,
                 "badge_size": 96
             }
@@ -779,6 +819,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -786,7 +827,7 @@
             {
                 "map": "lightworld",
                 "x": 1105,
-                "y": 780,
+                "y": 770,
                 "size": 0,
                 "badge_size": 96
             }
@@ -797,7 +838,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "world_state_inverted" ],
+                "visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ],
                 "item_count": 1
             }
         ],
@@ -805,17 +846,18 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 840,
+                "y": 841,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Castle Hole Return Ghost",
+        "name": "Castle Hole Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity,world_state_inverted" ],
                 "item_count": 1
             }
         ],
@@ -823,7 +865,7 @@
             {
                 "map": "lightworld",
                 "x": 901,
-                "y": 866,
+                "y": 868,
                 "size": 0,
                 "badge_size": 96
             }
@@ -834,6 +876,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -841,17 +884,18 @@
             {
                 "map": "lightworld",
                 "x": 1003,
-                "y": 913,
+                "y": 911,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Castle Secret Entrance Ghost",
+        "name": "Secret Passage Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -859,17 +903,18 @@
             {
                 "map": "lightworld",
                 "x": 1105,
-                "y": 863,
+                "y": 868,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Castle Secret Dropdown Ghost",
+        "name": "Secret Passage Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -888,6 +933,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -897,7 +943,7 @@
                 "x": 1607,
                 "y": 670,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -906,6 +952,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -915,7 +962,7 @@
                 "x": 1625,
                 "y": 900,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -924,6 +971,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -933,7 +981,7 @@
                 "x": 1924,
                 "y": 830,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -942,6 +990,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -951,7 +1000,7 @@
                 "x": 1650,
                 "y": 1295,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -960,6 +1009,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -967,9 +1017,9 @@
             {
                 "map": "lightworld",
                 "x": 1970,
-                "y": 1405,
+                "y": 1392,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -978,6 +1028,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -985,7 +1036,7 @@
             {
                 "map": "lightworld",
                 "x": 148,
-                "y": 1520,
+                "y": 1521,
                 "size": 0,
                 "badge_size": 96
             }
@@ -996,6 +1047,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1014,6 +1066,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1021,7 +1074,7 @@
             {
                 "map": "lightworld",
                 "x": 148,
-                "y": 1608,
+                "y": 1610,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1032,13 +1085,14 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 235,
+                "x": 234,
                 "y": 1590,
                 "size": 0,
                 "badge_size": 96
@@ -1056,7 +1110,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 75,
+                "x": 88,
                 "y": 1835,
                 "size": 0,
                 "badge_size": 96
@@ -1068,6 +1122,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1075,9 +1130,9 @@
             {
                 "map": "lightworld",
                 "x": 354,
-                "y": 1560,
+                "y": 1556,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1086,6 +1141,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1093,27 +1149,28 @@
             {
                 "map": "lightworld",
                 "x": 400,
-                "y": 1655,
+                "y": 1672,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "South of Grove Ghost",
+        "name": "Cave 45 Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 532,
-                "y": 1663,
+                "x": 542,
+                "y": 1653,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1128,8 +1185,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 472,
-                "y": 1845,
+                "x": 400,
+                "y": 1852,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1140,6 +1197,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1149,7 +1207,7 @@
                 "x": 555,
                 "y": 1790,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1158,6 +1216,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1167,7 +1226,7 @@
                 "x": 625,
                 "y": 1920,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1176,16 +1235,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 942,
+                "x": 948,
                 "y": 1880,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1194,6 +1254,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1203,7 +1264,7 @@
                 "x": 945,
                 "y": 1310,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1212,16 +1273,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1099,
+                "x": 1098,
                 "y": 1382,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1230,16 +1292,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1200,
-                "y": 1565,
+                "x": 1182,
+                "y": 1560,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1248,16 +1311,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1300,
+                "x": 1310,
                 "y": 1615,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1266,6 +1330,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1275,7 +1340,7 @@
                 "x": 1309,
                 "y": 1887,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1290,8 +1355,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1405,
-                "y": 1666,
+                "x": 1450,
+                "y": 1714,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1302,6 +1367,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1311,7 +1377,7 @@
                 "x": 1460,
                 "y": 1540,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1320,6 +1386,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1329,7 +1396,7 @@
                 "x": 1595,
                 "y": 1710,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1338,14 +1405,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1780,
-                "y": 1535,
+                "x": 1779,
+                "y": 1522,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1356,6 +1424,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1363,7 +1432,7 @@
             {
                 "map": "lightworld",
                 "x": 1865,
-                "y": 1535,
+                "y": 1522,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1374,14 +1443,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1820,
-                "y": 1603,
+                "x": 1822,
+                "y": 1610,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1392,14 +1462,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 785,
-                "y": 283,
+                "x": 796,
+                "y": 272,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1410,14 +1481,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 710,
-                "y": 290,
+                "x": 714,
+                "y": 284,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1428,14 +1500,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 715,
-                "y": 374,
+                "x": 714,
+                "y": 370,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1446,14 +1519,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 816,
-                "y": 386,
+                "x": 808,
+                "y": 378,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1470,8 +1544,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 894,
-                "y": 46,
+                "x": 844,
+                "y": 86,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1482,6 +1556,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1506,8 +1581,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1010,
-                "y": 148,
+                "x": 1030,
+                "y": 112,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1518,14 +1593,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 975,
-                "y": 213,
+                "x": 980,
+                "y": 210,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1536,32 +1612,34 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 905,
-                "y": 280,
+                "x": 901,
+                "y": 288,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Spectacle Rock Right Ghost",
+        "name": "Spectacle Rock Bottom Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 980,
-                "y": 298,
+                "x": 989,
+                "y": 300,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1572,13 +1650,14 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1075,
+                "x": 1077,
                 "y": 333,
                 "size": 0,
                 "badge_size": 96
@@ -1596,7 +1675,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1577,
+                "x": 1579,
                 "y": 40,
                 "size": 0,
                 "badge_size": 96
@@ -1608,14 +1687,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1735,
-                "y": 105,
+                "x": 1725,
+                "y": 88,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1626,6 +1706,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1633,7 +1714,7 @@
             {
                 "map": "lightworld",
                 "x": 1590,
-                "y": 180,
+                "y": 162,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1644,14 +1725,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1700,
-                "y": 180,
+                "x": 1715,
+                "y": 162,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1662,6 +1744,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1669,7 +1752,7 @@
             {
                 "map": "lightworld",
                 "x": 1645,
-                "y": 230,
+                "y": 238,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1680,14 +1763,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1550,
-                "y": 279,
+                "x": 1540,
+                "y": 285,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1698,14 +1782,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1625,
-                "y": 303,
+                "x": 1614,
+                "y": 312,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1716,50 +1801,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1690,
-                "y": 308,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Paradox Cave Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1731,
-                "y": 434,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Waterfall Fairy Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1814,
-                "y": 280,
+                "x": 1688,
+                "y": 322,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1770,16 +1820,55 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1755,
-                "y": 315,
+                "x": 1762,
+                "y": 322,
                 "size": 0,
                 "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Waterfall Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1836,
+                "y": 286,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 434,
+                "size": 0,
+                "badge_size": 128
             }
         ]
     },
@@ -1794,8 +1883,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1955,
-                "y": 273,
+                "x": 1920,
+                "y": 321,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1807,6 +1896,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1816,7 +1906,7 @@
                 "x": 80,
                 "y": 110,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1825,6 +1915,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -1834,15 +1925,16 @@
                 "x": 118,
                 "y": 254,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Skull Woods Back Dropdown Ghost",
+        "name": "Skull Woods Back Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -1850,9 +1942,9 @@
             {
                 "map": "darkworld",
                 "x": 244,
-                "y": 174,
+                "y": 164,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1861,6 +1953,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -1868,35 +1961,37 @@
             {
                 "map": "darkworld",
                 "x": 282,
-                "y": 285,
+                "y": 278,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Skull Woods Front West Dropdown Ghost",
+        "name": "Skull Woods Front West Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 314,
-                "y": 362,
+                "x": 308,
+                "y": 368,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Skull Woods Front East Dropdown Ghost",
+        "name": "Skull Woods Front East Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -1904,7 +1999,7 @@
             {
                 "map": "darkworld",
                 "x": 402,
-                "y": 363,
+                "y": 368,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1915,24 +2010,26 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 369,
-                "y": 297,
+                "x": 372,
+                "y": 292,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "Skull Woods Big Chest Dropdown Ghost",
+        "name": "Skull Woods Big Chest Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
                 "item_count": 1
             }
         ],
@@ -1940,7 +2037,7 @@
             {
                 "map": "darkworld",
                 "x": 380,
-                "y": 222,
+                "y": 216,
                 "size": 0,
                 "badge_size": 96
                 
@@ -1952,6 +2049,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1961,7 +2059,7 @@
                 "x": 675,
                 "y": 115,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1970,6 +2068,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1979,7 +2078,7 @@
                 "x": 924,
                 "y": 551,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -1988,6 +2087,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -1997,15 +2097,16 @@
                 "x": 665,
                 "y": 912,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Dark Village Fortune Teller Ghost",
+        "name": "Village of Outkasts Fortune Teller Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2015,7 +2116,7 @@
                 "x": 377,
                 "y": 635,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2024,6 +2125,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2033,7 +2135,7 @@
                 "x": 100,
                 "y": 936,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2042,6 +2144,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2051,7 +2154,7 @@
                 "x": 255,
                 "y": 975,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2060,6 +2163,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2067,9 +2171,9 @@
             {
                 "map": "darkworld",
                 "x": 414,
-                "y": 969,
+                "y": 961,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2078,6 +2182,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2085,9 +2190,9 @@
             {
                 "map": "darkworld",
                 "x": 414,
-                "y": 1068,
+                "y": 1077,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2096,6 +2201,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2105,15 +2211,16 @@
                 "x": 219,
                 "y": 1171,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Hammer Pegs Entrance Ghost",
+        "name": "Hammer Pegs Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2123,7 +2230,7 @@
                 "x": 636,
                 "y": 1214,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2132,6 +2239,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2141,7 +2249,7 @@
                 "x": 431,
                 "y": 1400,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2150,7 +2258,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "world_state_open" ],
+                "visibility_rules": [ "entrance_shuffle_on,world_state_open" ],
                 "item_count": 1
             }
         ],
@@ -2158,24 +2266,25 @@
             {
                 "map": "darkworld",
                 "x": 1000,
-                "y": 823,
+                "y": 820,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Pyramid Hole Entrance Ghost",
+        "name": "Pyramid Hole Exit Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity,world_state_open" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 870,
+                "x": 864,
                 "y": 976,
                 "size": 0,
                 "badge_size": 96
@@ -2183,17 +2292,18 @@
         ]
     },
     {
-        "name": "Pyramid Fairy Entrance Ghost",
+        "name": "Pyramid Fairy Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 948,
+                "x": 956,
                 "y": 976,
                 "size": 0,
                 "badge_size": 96
@@ -2205,6 +2315,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2212,9 +2323,9 @@
             {
                 "map": "darkworld",
                 "x": 1616,
-                "y": 669,
+                "y": 668,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2223,6 +2334,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2232,7 +2344,7 @@
                 "x": 1706,
                 "y": 1008,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2241,6 +2353,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2250,7 +2363,7 @@
                 "x": 1924,
                 "y": 830,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2259,6 +2372,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2268,7 +2382,7 @@
                 "x": 1656,
                 "y": 1296,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2277,6 +2391,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2284,24 +2399,25 @@
             {
                 "map": "darkworld",
                 "x": 1968,
-                "y": 1405,
+                "y": 1392,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Mire Shed Entrance Ghost",
+        "name": "Mire Shed Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 70,
+                "x": 62,
                 "y": 1600,
                 "size": 0,
                 "badge_size": 96
@@ -2313,6 +2429,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2320,7 +2437,7 @@
             {
                 "map": "darkworld",
                 "x": 148,
-                "y": 1618,
+                "y": 1610,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2331,13 +2448,14 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 228,
+                "x": 234,
                 "y": 1600,
                 "size": 0,
                 "badge_size": 96
@@ -2349,6 +2467,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2358,7 +2477,7 @@
                 "x": 400,
                 "y": 1655,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2367,6 +2486,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2376,7 +2496,7 @@
                 "x": 940,
                 "y": 1877,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2385,6 +2505,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2394,7 +2515,7 @@
                 "x": 945,
                 "y": 1310,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2403,16 +2524,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1099,
-                "y": 1383,
+                "x": 1098,
+                "y": 1382,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2421,16 +2543,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1200,
+                "x": 1182,
                 "y": 1560,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2439,16 +2562,17 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1300,
+                "x": 1310,
                 "y": 1615,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2457,6 +2581,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2466,7 +2591,7 @@
                 "x": 1600,
                 "y": 1737,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2475,14 +2600,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1780,
-                "y": 1535,
+                "x": 1779,
+                "y": 1522,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2493,6 +2619,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2500,7 +2627,7 @@
             {
                 "map": "darkworld",
                 "x": 1865,
-                "y": 1535,
+                "y": 1522,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2511,14 +2638,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1820,
-                "y": 1603,
+                "x": 1822,
+                "y": 1610,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2535,8 +2663,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 619,
-                "y": 313,
+                "x": 621,
+                "y": 315,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2547,14 +2675,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 733,
-                "y": 290,
+                "x": 726,
+                "y": 282,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2565,14 +2694,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 727,
-                "y": 368,
+                "x": 722,
+                "y": 372,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2583,6 +2713,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2601,6 +2732,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2610,7 +2742,7 @@
                 "x": 1151,
                 "y": 294,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
@@ -2619,6 +2751,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2628,15 +2761,16 @@
                 "x": 1125,
                 "y": 76,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     },
     {
-        "name": "Hookshot Cave Top Ghost",
+        "name": "Hookshot Cave Island Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2644,7 +2778,7 @@
             {
                 "map": "darkworld",
                 "x": 1609,
-                "y": 40,
+                "y": 30,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2655,14 +2789,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1650,
-                "y": 114,
+                "x": 1648,
+                "y": 106,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2673,24 +2808,26 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1733,
-                "y": 115,
+                "x": 1734,
+                "y": 98,
                 "size": 0,
                 "badge_size": 96
             }
         ]
     },
     {
-        "name": "TR Bridge Left Ghost",
+        "name": "Turtle Ledge Left Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2705,10 +2842,11 @@
         ]
     },
     {
-        "name": "TR Bridge Right Ghost",
+        "name": "Turtle Ledge Right Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2723,10 +2861,11 @@
         ]
     },
     {
-        "name": "TR Safety Door Ghost",
+        "name": "Turtle Laser Bridge Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2734,7 +2873,7 @@
             {
                 "map": "darkworld",
                 "x": 1648,
-                "y": 238,
+                "y": 258,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2745,14 +2884,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1670,
-                "y": 310,
+                "x": 1658,
+                "y": 334,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2764,14 +2904,15 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1748,
-                "y": 310,
+                "x": 1750,
+                "y": 334,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2782,6 +2923,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
                 "item_count": 1
             }
         ],
@@ -2791,7 +2933,7 @@
                 "x": 1890,
                 "y": 165,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128
             }
         ]
     }

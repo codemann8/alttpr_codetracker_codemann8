@@ -36,39 +36,13 @@ function EntranceShuffleMode:postUpdate()
         end
 
         --Change Dropdown Capture Layouts
-        local locations = {
-            "@Forest Hideout Dropdown/Dropdown",
-            "@Lumberjack Tree Dropdown/Dropdown",
-            "@Kakariko Well/Dropdown",
-            "@Magic Bat Dropdown/Dropdown",
-            "@Castle Secret Dropdown/Dropdown",
-            "@Houlihan Hole/Dropdown",
-            "@Sanctuary Grave/Dropdown",
-            "@Castle Hole/Dropdown",
-            "@Pyramid Hole/Dropdown"
-        }
-        for i = 1, #locations do
-            local drop = Tracker:FindObjectForCode(locations[i])
+        for i = 1, #CaptureBadgeDropdowns do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeDropdowns[i])
             if self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
             else
                 drop.ItemCaptureLayout = "tracker_capture_dropdown"
             end
-        end
-
-        --Remove Ghost Badges
-        if TRACKER_READY then
-            TRACKER_READY = false
-            if self:getState() == 0 then
-                removeGhosts(CaptureBadgeEntrances)
-                removeGhosts(CaptureBadgeInsanity)
-            else
-                if self:getState() == 1 then
-                    removeGhosts(CaptureBadgeInsanity)
-                end
-                removeGhosts(CaptureBadgeUnderworld)
-            end
-            TRACKER_READY = true
         end
     end
 end
