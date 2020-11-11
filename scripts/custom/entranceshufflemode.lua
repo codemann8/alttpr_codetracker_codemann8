@@ -36,7 +36,7 @@ function EntranceShuffleMode:postUpdate()
         end
 
         --Change Dropdown Capture Layouts
-        for i = 1, #locations do
+        for i = 1, #CaptureBadgeDropdowns do
             local drop = Tracker:FindObjectForCode(CaptureBadgeDropdowns[i])
             if self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
