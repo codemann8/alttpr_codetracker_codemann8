@@ -423,10 +423,8 @@ function updateGhosts(list, clearSection, markHostedItem)
         local target = Tracker:FindObjectForCode(section)
         local hiddenTarget = Tracker:FindObjectForCode(tempSection)
 
-        if target == nil then
+        if target == nil or hiddenTarget == nil then
             print("Failed to resolve " .. section .. " please check for typos.")
-        elseif target == nil or hiddenTarget == nil then
-            --print("Failed to resolve " .. section .. " please check for typos.")
         elseif target.CapturedItem and CaptureBadgeCache[target] and not hiddenTarget.Visible then
             removeGhost(section)
         elseif target.CapturedItem ~= CaptureBadgeCache[target] then
