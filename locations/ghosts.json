@@ -1,0 +1,2940 @@
+[
+    //Light World
+    {
+        "name": "Master Sword Pedestal Ghost",
+        "sections": [
+            {
+                "name": "Pedestal",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 83,
+                "y": 148,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Mushroom Spot Ghost",
+        "sections": [
+            {
+                "name": "Shroom",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 250,
+                "y": 228,
+                "size":0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Forest Hideout Ghost",
+        "sections": [
+            {
+                "name": "Stash",
+                "visibility_rules": [ "entrance_shuffle_off,world_state_inverted" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 364,
+                "y": 328,
+                "size":0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Forest Hideout Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 382,
+                "y": 236,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Forest Hideout Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 370,
+                "y": 324,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Forest Chest Game Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1       
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 370,
+                "y": 40,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack Cave Ghost",
+        "sections": [
+            {
+                "name": "Cave",
+                "visibility_rules": [ "entrance_shuffle_off" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 600,
+                "y": 185,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack Tree Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 590,
+                "y": 145,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack Tree Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 663,
+                "y": 46,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 678,
+                "y": 134,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Fortune Teller Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 375,
+                "y": 635,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Well Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 32,
+                "y": 833,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Well Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 120,
+                "y": 856,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Left Snitch House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 100,
+                "y": 944,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Blind's House Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 214,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Elder Left Door Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 298,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Elder Right Door Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 382,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Right Snitch House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 415,
+                "y": 956,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Chicken House Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 196,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Sick Kid Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 310,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Grass House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 410,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Bomb Hut Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 56,
+                "y": 1195,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 218,
+                "y": 1185,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Tavern Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 322,
+                "y": 1201,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Smith's House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 612,
+                "y": 1030,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1105,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Magic Bat Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 650,
+                "y": 1180,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Race Game Ghost",
+        "sections": [
+            {
+                "name": "Take This Trash",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 80,
+                "y": 1332,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Quarreling Brothers Left Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 206,
+                "y": 1428,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Quarreling Brothers Right Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 294,
+                "y": 1428,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Library Ghost",
+        "sections": [
+            {
+                "name": "On The Shelf",
+                "visibility_rules": [ "entrance_shuffle_off" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 313,
+                "y": 1358,
+                "size":0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Library Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 310,
+                "y": 1320,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Chest Game Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 432,
+                "y": 1404,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "North Bonk Rocks Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 777,
+                "y": 600,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Old Man Home Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 902,
+                "y": 460,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 922,
+                "y": 548,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Grave Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1040,
+                "y": 590,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Graveyard Ledge Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1126,
+                "y": 549,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "King's Tomb Grave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1213,
+                "y": 598,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Useless Fairy Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1299,
+                "y": 626,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Useless Fairy Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1341,
+                "y": 538,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Castle Left Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Agahnim's Tower Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1003,
+                "y": 771,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Castle Right Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1105,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Castle Hole Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on,world_state_inverted" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1003,
+                "y": 841,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Castle Hole Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity,world_state_inverted" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 868,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Castle Main Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1003,
+                "y": 911,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1105,
+                "y": 868,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1196,
+                "y": 834,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Witch's Hut Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1607,
+                "y": 670,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Sahasrala's Hut Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1625,
+                "y": 900,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Eastern Palace Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 830,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Trees Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1650,
+                "y": 1295,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Long Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1970,
+                "y": 1392,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Desert Back Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 148,
+                "y": 1521,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Desert Left Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 62,
+                "y": 1590,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Desert Front Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 148,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Desert Right Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 234,
+                "y": 1590,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Desert Ledge Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 88,
+                "y": 1835,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Checkerboard Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 354,
+                "y": 1556,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Aginah's Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1672,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Cave 45 Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 542,
+                "y": 1653,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Bombos Tablet Ghost",
+        "sections": [
+            {
+                "name": "Tablet",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1852,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Desert Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 555,
+                "y": 1790,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Fifty Rupee Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 625,
+                "y": 1920,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dam Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 948,
+                "y": 1880,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 945,
+                "y": 1310,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Link's House Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1098,
+                "y": 1382,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Hype Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1182,
+                "y": 1560,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Lake Fortune Teller Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1310,
+                "y": 1615,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Mini Moldorm Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1309,
+                "y": 1887,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia Island Ghost",
+        "sections": [
+            {
+                "name": "Island",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1450,
+                "y": 1714,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Lake Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1460,
+                "y": 1540,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Upgrade Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1595,
+                "y": 1710,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Ice Rod Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1779,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Cold Bee Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1865,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Twenty Rupee Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Exit Front Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 796,
+                "y": 272,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Exit Back Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 714,
+                "y": 284,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 714,
+                "y": 370,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Back Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 808,
+                "y": 378,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Ether Tablet Ghost",
+        "sections": [
+            {
+                "name": "Tablet",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 844,
+                "y": 86,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Tower of Hera Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Ghost",
+        "sections": [
+            {
+                "name": "Up On Top",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1034,
+                "y": 112,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 210,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Left Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 288,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 989,
+                "y": 300,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Old Man Back Door Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1077,
+                "y": 333,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Floating Island Ghost",
+        "sections": [
+            {
+                "name": "Island",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1579,
+                "y": 40,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1725,
+                "y": 88,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1590,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Mimic Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1715,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "EDM Connector Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1645,
+                "y": 238,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1541,
+                "y": 285,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "EDM Connector Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1617,
+                "y": 312,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Hookshot Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1693,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Middle Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1769,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Waterfall Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1845,
+                "y": 286,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 434,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Zora's Domain Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1920,
+                "y": 321,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    //Dark World
+    {
+        "name": "Skull Woods Back Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 80,
+                "y": 110,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Back South Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 118,
+                "y": 254,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Back Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 244,
+                "y": 164,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front West Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 282,
+                "y": 278,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front West Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 308,
+                "y": 368,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front East Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 402,
+                "y": 368,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Front East Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 372,
+                "y": 292,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Big Chest Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 380,
+                "y": 216,
+                "size": 0,
+                "badge_size": 96
+                
+            }
+        ]
+    },
+    {
+        "name": "Dark Lumberjack Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 675,
+                "y": 115,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Chapel Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 924,
+                "y": 551,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 912,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Village of Outkasts Fortune Teller Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 377,
+                "y": 635,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Chest Game Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 100,
+                "y": 936,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Thieves Town Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 255,
+                "y": 975,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "C-Shaped House Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 961,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Hammer House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1077,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Brewery Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 219,
+                "y": 1171,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Hammer Pegs Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 636,
+                "y": 1214,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Archery Game Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 431,
+                "y": 1400,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Hole Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_on,world_state_open" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1000,
+                "y": 820,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Hole Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity,world_state_open" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 864,
+                "y": 976,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 956,
+                "y": 976,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch's Hut Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1616,
+                "y": 668,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Sahasrahla Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1706,
+                "y": 1008,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Palace of Darkness Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1924,
+                "y": 830,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Trees Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1656,
+                "y": 1296,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "East Storyteller Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1968,
+                "y": 1392,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Mire Shed Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 62,
+                "y": 1600,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Misery Mire Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 148,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Mire Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 234,
+                "y": 1600,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Mire Hint Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1655,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Swamp Palace Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 940,
+                "y": 1877,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 945,
+                "y": 1310,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1098,
+                "y": 1382,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Hype Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1182,
+                "y": 1560,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Lake Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1310,
+                "y": 1615,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Ice Palace Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1600,
+                "y": 1737,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Lake Hylia Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1779,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Hamburger Helper Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1865,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spike Hint Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Bumper Ledge Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 621,
+                "y": 315,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 730,
+                "y": 282,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 722,
+                "y": 372,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Dark Mountain Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 815,
+                "y": 384,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Spike Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1151,
+                "y": 294,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Ganon's Tower Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Hookshot Cave Island Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1609,
+                "y": 30,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Hookshot Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1648,
+                "y": 106,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Superbunny Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1734,
+                "y": 98,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Turtle Ledge Left Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1598,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Turtle Ledge Right Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Turtle Laser Bridge Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1648,
+                "y": 258,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Superbunny Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1658,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+   
+    {
+        "name": "Dark Death Mountain Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1750,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Turtle Rock Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1890,
+                "y": 165,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    }
+]

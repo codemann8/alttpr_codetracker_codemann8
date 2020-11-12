@@ -19,7 +19,9 @@ function EntranceShuffleMode:updateIcon()
     else 
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
     end
+end
 
+function EntranceShuffleMode:postUpdate()
     if self.suffix == "" then
         local drops =  { "swpinball", "swcompass", "swbigchest", "swhazard" }
         for i = 1, #drops do
@@ -34,23 +36,22 @@ function EntranceShuffleMode:updateIcon()
         end
 
         --Change Dropdown Capture Layouts
-        local locations = {
-            "@Forest Hideout Dropdown/Dropdown",
-            "@Lumberjack Tree Dropdown/Dropdown",
-            "@Kakariko Well/Dropdown",
-            "@Magic Bat Dropdown/Dropdown",
-            "@Castle Secret Dropdown/Dropdown",
-            "@Houlihan Hole/Dropdown",
-            "@Sanctuary Grave/Dropdown",
-            "@Castle Hole/Dropdown",
-            "@Pyramid Hole/Dropdown"
-        }
-        for i = 1, #locations do
-            local drop = Tracker:FindObjectForCode(locations[i])
+        for i = 1, #CaptureBadgeDropdowns do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeDropdowns[i])
             if self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
             else
                 drop.ItemCaptureLayout = "tracker_capture_dropdown"
+            end
+        end
+
+        --Change Entrance Capture Layouts
+        for i = 1, #CaptureBadgeEntrances do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeEntrances[i])
+            if self:getState() > 1 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
+            else
+                drop.ItemCaptureLayout = "tracker_capture_entrance"
             end
         end
     end

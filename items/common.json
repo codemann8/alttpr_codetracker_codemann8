@@ -756,7 +756,7 @@
         "codes": "dropdown_bat"
     },
     {
-        "name": "Fairy Dropdown",
+        "name": "Useless Fairy Dropdown",
         "type": "toggle",
         "img": "images/drop-fairy.png",
         "img_mods": "",
@@ -769,9 +769,9 @@
     {
         "name": "Ganon Dropdown",
         "type": "toggle",
-        "img": "images/ganon.png",
+        "img": "images/drop-ganon.png",
         "img_mods": "",
-        "disabled_img": "images/ganon.png",
+        "disabled_img": "images/drop-ganon.png",
         "disabled_img_mods": "overlay|images/overlayX.png",
         "initial_active_state": true,
         "loop": true,
