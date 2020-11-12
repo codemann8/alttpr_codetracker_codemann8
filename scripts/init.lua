@@ -118,6 +118,7 @@ initGlobalVars()
 Tracker.DisplayAllLocations = true
 Tracker.AlwaysAllowClearing = true
 Tracker.PinLocationsOnItemCapture = false
+Tracker.AutoUnpinLocationsOnClear = false
 
 if _VERSION == "Lua 5.3" then
     ScriptHost:LoadScript("scripts/fileio.lua")
