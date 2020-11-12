@@ -44,5 +44,15 @@ function EntranceShuffleMode:postUpdate()
                 drop.ItemCaptureLayout = "tracker_capture_dropdown"
             end
         end
+
+        --Change Entrance Capture Layouts
+        for i = 1, #CaptureBadgeEntrances do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeEntrances[i])
+            if self:getState() > 1 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
+            else
+                drop.ItemCaptureLayout = "tracker_capture_entrance"
+            end
+        end
     end
 end
