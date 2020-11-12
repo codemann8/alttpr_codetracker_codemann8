@@ -3044,8 +3044,8 @@
             },
             {
                 "map": "lightworld",
-                "x": 1692,
-                "y": 315,
+                "x": 1685,
+                "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on" ]
             }
@@ -3083,8 +3083,8 @@
             },
             {
                 "map": "lightworld",
-                "x": 1761,
-                "y": 315,
+                "x": 1738,
+                "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
@@ -5120,7 +5120,7 @@
             {
                 "map": "darkworld",
                 "x": 1744,
-                "y": 320,
+                "y": 296,
                 "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_off,retro_mode_on", "entrance_shuffle_off,keysanity_smallkey_universal" ]
             }
