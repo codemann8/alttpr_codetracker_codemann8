@@ -331,6 +331,13 @@
         "capturable": true,
         "codes": "cap_spike"
     },
+    {
+        "name": "Link's House",
+        "type": "static",
+        "img": "images/capture/cap-location-link.png",
+        "capturable": true,
+        "codes": "cap_link"
+    },
     //Connectors
     {
         "name": "Old Man Fetch Cave",
