@@ -378,7 +378,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
     if item then
         if OBJ_DOORSHUFFLE.CurrentStage == 2 then
             if segment then
-                local chestCount = ReadU8(segment, address + 1)
+                local chestCount = ReadU8(segment, address)
                 if item.MaxCount < 99 then
                     item.AcquiredCount = chestCount
                 else
