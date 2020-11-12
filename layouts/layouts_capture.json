@@ -23,13 +23,12 @@
             "item_margin": "1,2",
             "item_size": 40,
             "rows": [
-                [ "cap_hcwlabel", "cap_hclabel", "cap_hcelabel", "cap_eplabel", "cap_dplabel", "cap_dpblabel", "cap_dpelabel", "cap_dpwlabel", "cap_tohlabel", "cap_podlabel" ],
-                [ "cap_splabel", "cap_swlabel", "cap_swblabel", "cap_ttlabel", "cap_iplabel", "cap_mmlabel", "cap_trlabel", "cap_trblabel", "cap_trlwlabel", "cap_trlelabel"],
-                [ "cap_atlabel", "cap_gtlabel", "cap_ganlabel", "cap_thief", "cap_lj", "cap_oml", "cap_omr","cap_om", "cap_omb", "cap_dmel"],
-                [ "cap_dmer", "cap_specup", "cap_speclow", "cap_specleft", "cap_parup", "cap_parmid", "cap_parlow", "cap_supbunup", "cap_supbunlow", "cap_spiralup"],
-                [ "cap_spirallow", "cap_bumpup","cap_bumplow", "cap_spk", "cap_hsfront", "cap_hsback", "cap_fairyacu", "cap_fairyacl", "cap_racehl", "cap_racehr" ],
-                [ "cap_elderdl", "cap_elderdr", "cap_sickkid", "cap_shop", "cap_pshop", "cap_smith", "cap_bat", "cap_dam",  "cap_lf", "cap_bombshop" ],
-                [ "cap_arwgme", "cap_library", "cap_sah", "cap_bfm", "cap_rfm", "cap_sanc","cap_mmcave","cap_dkcave", "cap_mimic", "cap_dead" ]
+                [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
+                [ "cap_pod", "cap_sp", "cap_sw", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
+                [ "cap_granny", "cap_brother", "cap_oldman", "cap_mtncave", "cap_mtncave_back", "cap_spec_top", "cap_spec_bottom", "cap_spec_left", "cap_spiral_top", "cap_spiral_bottom" ],
+                [ "cap_paradox_top", "cap_paradox_middle", "cap_paradox_bottom", "cap_fairyascension", "cap_bumper_top","cap_bumper", "cap_bunny_top", "cap_bunny_bottom", "cap_hookcave", "cap_darkmountain" ],
+                [ "cap_sickkid", "cap_library", "cap_sah", "cap_potionshop", "cap_smith", "cap_redbomb", "cap_spike", "cap_mimic", "cap_dam" ],
+                [ "cap_chest", "cap_pearl", "cap_bottle", "cap_bombfarm", "cap_rupee", "cap_fairycave", "cap_shop", "cap_dead"  ]
             ]
         }
     },
@@ -41,8 +40,8 @@
             "item_margin": "1,2",
             "item_size": 60,
             "rows": [
-                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
-                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
+                [ "cap_drop_uncle", "cap_drop_sanc", "cap_drop_lumberjack", "cap_drop_hideout" ],
+                [ "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ]
             ]
         }
     },
@@ -54,9 +53,9 @@
             "item_margin": "1,2",
             "item_size": 60,
             "rows": [
-                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
-                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
-                [ "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
+                [ "cap_drop_uncle", "cap_drop_sanc", "cap_drop_lumberjack", "cap_drop_hideout" ],
+                [ "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ],
+                [ "cap_drop_swpinball", "cap_drop_swcompass", "cap_drop_swbigchest", "cap_drop_swhazard" ]
             ]
         }
     },

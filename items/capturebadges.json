@@ -1,998 +1,743 @@
 [
-
-    // Dungeon Labels
-   
-     // HC Label
-     {
-       "name": "Hyrule Castle",
-       "type": "static",
-       "img": "images/capture/CapHC.png",
-       "capturable": true,
-       "codes": "cap_hclabel"
-     },
-     {
-       "name": "Hyrule Castle West",
-       "type": "static",
-       "img": "images/capture/CapHCW.png",
-       "capturable": true,
-       "codes": "cap_hcwlabel"
-     },
-     {
-       "name": "Hyrule Castle East",
-       "type": "static",
-       "img": "images/capture/CapHCE.png",
-       "capturable": true,
-       "codes": "cap_hcelabel"
-     },
-     // AT Label
-     {
-       "name": "Aganhim's Tower",
-       "type": "static",
-       "img": "images/capture/CapAT.png",
-       "capturable": true,
-       "codes": "cap_atlabel"
-     },
-     // EP Label
-     {
-       "name": "Eastern Palace",
-       "type": "static",
-       "img": "images/capture/CapEP.png",
-       "capturable": true,
-       "codes": "cap_eplabel"
-     },
-     // DP Label
-     {
-       "name": "Desert Palace",
-       "type": "static",
-       "img": "images/capture/CapDP.png",
-       "capturable": true,
-       "codes": "cap_dplabel"
-     },
-   
-     {
-       "name": "Desert Palace Back",
-       "type": "static",
-       "img": "images/capture/CapDPB.png",
-       "capturable": true,
-       "codes": "cap_dpblabel"
-     },
-   
-     {
-       "name": "Desert Palace West",
-       "type": "static",
-       "img": "images/capture/CapDPW.png",
-       "capturable": true,
-       "codes": "cap_dpwlabel"
-     },
-   
-     {
-       "name": "Desert Palace East",
-       "type": "static",
-       "img": "images/capture/CapDPE.png",
-       "capturable": true,
-       "codes": "cap_dpelabel"
-     },
-     // TOH Label
-     {
-       "name": "Tower of Hera",
-       "type": "static",
-       "img": "images/capture/CapTOH.png",
-       "capturable": true,
-       "codes": "cap_tohlabel"
-     },
-     // POD Label
-     {
-       "name": "Palace of Darkness",
-       "type": "static",
-       "img": "images/capture/CapPD.png",
-       "capturable": true,
-       "codes": "cap_podlabel"
-     },
-     // SP Label
-     {
-       "name": "Swamp Palace",
-       "type": "static",
-       "img": "images/capture/CapSP.png",
-       "capturable": true,
-       "codes": "cap_splabel"
-     },
-     // SW Label
-     {
-       "name": "Skull Woods",
-       "type": "static",
-       "img": "images/capture/CapSW.png",
-       "capturable": true,
-       "codes": "cap_swlabel"
-     },
-     {
-       "name": "Skull Woods Back",
-       "type": "static",
-       "img": "images/capture/CapSWB.png",
-       "capturable": true,
-       "codes": "cap_swblabel"
-     },
-     // TT Label
-     {
-       "name": "Thieves Town",
-       "type": "static",
-       "img": "images/capture/CapTT.png",
-       "capturable": true,
-       "codes": "cap_ttlabel"
-     },
-     // IP Label
-     {
-       "name": "Ice Palace",
-       "type": "static",
-       "img": "images/capture/CapIP.png",
-       "capturable": true,
-       "codes": "cap_iplabel"
-     },
-     // MM Label
-     {
-       "name": "Misery Mire",
-       "type": "static",
-       "img": "images/capture/CapMM.png",
-       "capturable": true,
-       "codes": "cap_mmlabel"
-     },
-     // TR Label
-     {
-       "name": "Turtle Rock",
-       "type": "static",
-       "img": "images/capture/CapTR.png",
-       "capturable": true,
-       "codes": "cap_trlabel"
-     },
-     {
-       "name": "Turtle Rock Back",
-       "type": "static",
-       "img": "images/capture/CapTRB.png",
-       "capturable": true,
-       "codes": "cap_trblabel"
-     },
-     {
-       "name": "Turtle Rock Ledge West",
-       "type": "static",
-       "img": "images/capture/CapTRLW.png",
-       "capturable": true,
-       "codes": "cap_trlwlabel"
-     },
-     {
-       "name": "Turtle Rock Ledge East",
-       "type": "static",
-       "img": "images/capture/CapTRLE.png",
-       "capturable": true,
-       "codes": "cap_trlelabel"
-     },
-     // GT Label
-     {
-       "name": "Ganon's Tower",
-       "type": "static",
-       "img": "images/capture/CapGT.png",
-       "capturable": true,
-       "codes": "cap_gtlabel"
-     },
-    // Ganon Label
-     {
-       "name": "Ganon",
-       "type": "static",
-       "img": "images/capture/CapGan.png",
-       "capturable": true,
-       "codes": "cap_ganlabel"
-     },
-   
-     //Common Items Lebels
-   
-     {
-       "name": "Half Magic",
-       "type": "static",
-       "img": "images/capture/CapHalfM.png",
-       "capturable": true,
-       "codes": "cap_halfm"
-     },
-   
-     {
-       "name": "Bow",
-       "type": "static",
-       "img": "images/capture/CapBow.png",
-       "capturable": true,
-       "codes": "cap_bow"
-     },
-   
-     {
-       "name": "Silvers",
-       "type": "static",
-       "img": "images/capture/CapBowSilver.png",
-       "capturable": true,
-       "codes": "cap_bowsilver"
-     },
-   
-     {
-       "name": "Red Boomerang",
-       "type": "static",
-       "img": "images/capture/CapRangRed.png",
-       "capturable": true,
-       "codes": "cap_rred"
-     },
-   
-     {
-       "name": "Blue Boomerang",
-       "type": "static",
-       "img": "images/capture/CapRangBlue.png",
-       "capturable": true,
-       "codes": "cap_rblue"
-     },
-   
-     {
-       "name": "Hookshot",
-       "type": "static",
-       "img": "images/capture/CapHookshot.png",
-       "capturable": true,
-       "codes": "cap_hook"
-     },
-   
-     {
-       "name": "Bomb",
-       "type": "static",
-       "img": "images/capture/CapBomb.png",
-       "capturable": true,
-       "codes": "cap_bomb"
-     },
-   
-     {
-       "name": "Powder",
-       "type": "static",
-       "img": "images/capture/CapPowder.png",
-       "capturable": true,
-       "codes": "cap_powder"
-     },
-   
-     {
-       "name": "Bottle",
-       "type": "static",
-       "img": "images/capture/CapBottle.png",
-       "capturable": true,
-       "codes": "cap_bottle"
-     },
-   
-     {
-       "name": "Fire Rod",
-       "type": "static",
-       "img": "images/capture/CapFRod.png",
-       "capturable": true,
-       "codes": "cap_frod"
-     },
-   
-     {
-       "name": "Ice Rod",
-       "type": "static",
-       "img": "images/capture/CapIRod.png",
-       "capturable": true,
-       "codes": "cap_irod"
-     },
-   
-     {
-       "name": "Bombos",
-       "type": "static",
-       "img": "images/capture/CapBombos.png",
-       "capturable": true,
-       "codes": "cap_bombos"
-     },
-   
-     {
-       "name": "Ether",
-       "type": "static",
-       "img": "images/capture/CapEther.png",
-       "capturable": true,
-       "codes": "cap_ether"
-     },
-   
-     {
-       "name": "Quake",
-       "type": "static",
-       "img": "images/capture/CapQuake.png",
-       "capturable": true,
-       "codes": "cap_quake"
-     },
-   
-     {
-       "name": "Lamp",
-       "type": "static",
-       "img": "images/capture/CapLamp.png",
-       "capturable": true,
-       "codes": "cap_lamp"
-     },
-   
-     {
-       "name": "Hammer",
-       "type": "static",
-       "img": "images/capture/CapHammer.png",
-       "capturable": true,
-       "codes": "cap_hammer"
-     },
-   
-     {
-       "name": "Flute",
-       "type": "static",
-       "img": "images/capture/CapFlute.png",
-       "capturable": true,
-       "codes": "cap_Flute"
-     },
-   
-     {
-       "name": "Bug Net",
-       "type": "static",
-       "img": "images/capture/CapNet.png",
-       "capturable": true,
-       "codes": "cap_net"
-     },
-   
-     {
-       "name": "Book of Madora",
-       "type": "static",
-       "img": "images/capture/CapBook.png",
-       "capturable": true,
-       "codes": "cap_book"
-     },
-   
-     {
-       "name": "Shovel",
-       "type": "static",
-       "img": "images/capture/CapShovel.png",
-       "capturable": true,
-       "codes": "cap_shoval"
-     },
-   
-     {
-       "name": "Cane of Sumaria",
-       "type": "static",
-       "img": "images/capture/CapCaneS.png",
-       "capturable": true,
-       "codes": "cap_caneS"
-     },
-   
-     {
-       "name": "Cane of Burna",
-       "type": "static",
-       "img": "images/capture/CapCaneB.png",
-       "capturable": true,
-       "codes": "cap_caneB"
-     },
-   
-     {
-       "name": "Magic Cape",
-       "type": "static",
-       "img": "images/capture/CapCape.png",
-       "capturable": true,
-       "codes": "cap_cape"
-     },
-   
-     {
-       "name": "Magic Mirror",
-       "type": "static",
-       "img": "images/capture/CapMirror.png",
-       "capturable": true,
-       "codes": "cap_mirror"
-     },
-   
-     {
-       "name": "Boots",
-       "type": "static",
-       "img": "images/capture/CapBoots.png",
-       "capturable": true,
-       "codes": "cap_boots"
-     },
-   
-     {
-       "name": "Lift Gloves",
-       "type": "static",
-       "img": "images/capture/CapGloves.png",
-       "capturable": true,
-       "codes": "cap_gloves"
-     },
-   
-     {
-       "name": "Titans Mitts",
-       "type": "static",
-       "img": "images/capture/CapMitts.png",
-       "capturable": true,
-       "codes": "cap_mitts"
-     },
-   
-     {
-       "name": "Flippers",
-       "type": "static",
-       "img": "images/capture/CapFlippers.png",
-       "capturable": true,
-       "codes": "cap_flippers"
-     },
-   
-     {
-       "name": "Moon Pearl",
-       "type": "static",
-       "img": "images/capture/CapPearl.png",
-       "capturable": true,
-       "codes": "cap_pearl"
-     },
-   
-     {
-       "name": "Fighters Sword",
-       "type": "static",
-       "img": "images/capture/CapFSword.png",
-       "capturable": true,
-       "codes": "cap_fsword"
-     },
-   
-     {
-       "name": "Master Sword",
-       "type": "static",
-       "img": "images/capture/CapMSword.png",
-       "capturable": true,
-       "codes": "cap_msword"
-     },
-   
-     {
-       "name": "Tempered Sword",
-       "type": "static",
-       "img": "images/capture/CapTSword.png",
-       "capturable": true,
-       "codes": "cap_tsword"
-     },
-   
-     {
-       "name": "Butter Sword",
-       "type": "static",
-       "img": "images/capture/CapBSword.png",
-       "capturable": true,
-       "codes": "cap_bsword"
-     },
-   
-     {
-       "name": "Shield",
-       "type": "static",
-       "img": "images/capture/CapShield.png",
-       "capturable": true,
-       "codes": "cap_shield"
-     },
-   
-     {
-       "name": "Red Shield",
-       "type": "static",
-       "img": "images/capture/CapRedShield.png",
-       "capturable": true,
-       "codes": "cap_redshield"
-     },
-   
-     {
-       "name": "Mirror Shield",
-       "type": "static",
-       "img": "images/capture/CapMShield.png",
-       "capturable": true,
-       "codes": "cap_mshield"
-     },
-   
-     {
-       "name": "Blue Mail",
-       "type": "static",
-       "img": "images/capture/CapBMail.png",
-       "capturable": true,
-       "codes": "cap_bmail"
-     },
-   
-     {
-       "name": "Red Mail",
-       "type": "static",
-       "img": "images/capture/CapRMail.png",
-       "capturable": true,
-       "codes": "cap_rmail"
-     },
-   
-     {
-       "name": "Small Key",
-       "type": "static",
-       "img": "images/capture/CapSmallKey.png",
-       "capturable": true,
-       "codes": "cap_smallkey"
-     },
-   
-     {
-       "name": "Big Key",
-       "type": "static",
-       "img": "images/capture/CapBigKey.png",
-       "capturable": true,
-       "codes": "cap_bigkey"
-     },
-   
-     {
-       "name": "Bomb Farm Location",
-       "type": "static",
-       "img": "images/capture/CapBFM.png",
-       "capturable": true,
-       "codes": "cap_bfm"
-     },
-   
-     {
-       "name": "Rupee Farm Location",
-       "type": "static",
-       "img": "images/capture/CapRFM.png",
-       "capturable": true,
-       "codes": "cap_rfm"
-     },
-   
-     {
-       "name": "Sahasrahla's Hut",
-       "type": "static",
-       "img": "images/capture/CapSAH.png",
-       "capturable": true,
-       "codes": "cap_sah"
-     },
-     
-     // Misc Location Labels
-     
-     // Dropdowns
-   
-     {
-       "name": "Secret Passage Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-uncle.png",
-       "capturable": true,
-       "codes": "cap_dropdown_uncle"
-     },
-   
-     {
-       "name": "Sanctuary Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-sanc.png",
-       "capturable": true,
-       "codes": "cap_dropdown_sanc"
-     },
-   
-     {
-       "name": "Lumberjack Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-lumberjack.png",
-       "capturable": true,
-       "codes": "cap_dropdown_lumberjack"
-     },
-   
-     {
-       "name": "Thieves Hideout Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-thief.png",
-       "capturable": true,
-       "codes": "cap_dropdown_thief"
-     },
-   
-     {
-       "name": "Kakariko Well Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-well.png",
-       "capturable": true,
-       "codes": "cap_dropdown_well"
-     },
-   
-     {
-       "name": "Magic Bat Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-bat.png",
-       "capturable": true,
-       "codes": "cap_dropdown_bat"
-     },
-   
-     {
-       "name": "Fairy Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-fairy.png",
-       "capturable": true,
-       "codes": "cap_dropdown_fairy"
-     },
-   
-     {
-       "name": "Ganon Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-ganon.png",
-       "capturable": true,
-       "codes": "cap_dropdown_ganon"
-     },
-   
-     {
-       "name": "SW Pinball Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-swpinball.png",
-       "capturable": true,
-       "codes": "cap_dropdown_swpinball"
-     },
-   
-     {
-       "name": "SW Compass Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-swcompass.png",
-       "capturable": true,
-       "codes": "cap_dropdown_swcompass"
-     },
-   
-     {
-       "name": "SW Big Chest Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-swbigchest.png",
-       "capturable": true,
-       "codes": "cap_dropdown_swbigchest"
-     },
-   
-     {
-       "name": "SW Hazard Dropdown",
-       "type": "static",
-       "img": "images/capture/drop-swhazard.png",
-       "capturable": true,
-       "codes": "cap_dropdown_swhazard"
-     },
-   
-     // Locations
-     {
-       "name": "Dead Ent",
-       "type": "static",
-       "img": "images/capture/CapDead.png",
-       "capturable": true,
-       "codes": "cap_dead"
-     },
-   
-     {
-       "name": "Kakariko Well",
-       "type": "static",
-       "img": "images/capture/CapWell.png",
-       "capturable": true,
-       "codes": "cap_well"
-     },
-   
-     {
-       "name": "Library",
-       "type": "static",
-       "img": "images/capture/CapLibrary.png",
-       "capturable": true,
-       "codes": "cap_library"
-     },
-   
-     {
-       "name": "Thief Hidout",
-       "type": "static",
-       "img": "images/capture/CapTH.png",
-       "capturable": true,
-       "codes": "cap_thief"
-     },
-   
-     {
-       "name": "Lumberjack",
-       "type": "static",
-       "img": "images/capture/CapLJ.png",
-       "capturable": true,
-       "codes": "cap_lj"
-     },
-   
-     {
-       "name": "Old Man Get Left",
-       "type": "static",
-       "img": "images/capture/CapOldML.png",
-       "capturable": true,
-       "codes": "cap_oml"
-     },
-   
-     {
-       "name": "Old Man Get Right",
-       "type": "static",
-       "img": "images/capture/CapOldMR.png",
-       "capturable": true,
-       "codes": "cap_omr"
-     },
-   
-     {
-       "name": "Old Man Home",
-       "type": "static",
-       "img": "images/capture/CapOM.png",
-       "capturable": true,
-       "codes": "cap_om"
-     },
-   
-     {
-       "name": "Old Man Home Back",
-       "type": "static",
-       "img": "images/capture/CapOldManBack.png",
-       "capturable": true,
-       "codes": "cap_omb"
-     },
-   
-     {
-       "name": "Death Mountain Exit Left",
-       "type": "static",
-       "img": "images/capture/CapDeathMEL.png",
-       "capturable": true,
-       "codes": "cap_dmel"
-     },
-   
-     {
-       "name": "Death Mountain Exit Right",
-       "type": "static",
-       "img": "images/capture/CapDeathMER.png",
-       "capturable": true,
-       "codes": "cap_dmer"
-     },
-   
-     {
-       "name": "Mimic Cave",
-       "type": "static",
-       "img": "images/capture/CapMimic.png",
-       "capturable": true,
-       "codes": "cap_mimic"
-     },
-   
-     {
-       "name": "Spectical Rock Upper",
-       "type": "static",
-       "img": "images/capture/CapSpecUp.png",
-       "capturable": true,
-       "codes": "cap_specup"
-     },
-   
-     {
-       "name": "Spectical Rock Lower",
-       "type": "static",
-       "img": "images/capture/CapSpecLow.png",
-       "capturable": true,
-       "codes": "cap_speclow"
-     },
-   
-     {
-       "name": "Spectical Rock Left",
-       "type": "static",
-       "img": "images/capture/CapSpecLeft.png",
-       "capturable": true,
-       "codes": "cap_specleft"
-     },
-   
-     {
-       "name": "Spectical Rock Right",
-       "type": "static",
-       "img": "images/capture/CapSpecRight.png",
-       "capturable": true,
-       "codes": "cap_specright"
-     },
-   
-     {
-       "name": "Paradox Cave Upper",
-       "type": "static",
-       "img": "images/capture/CapParUp.png",
-       "capturable": true,
-       "codes": "cap_parup"
-     },
-   
-     {
-       "name": "Paradox Mid",
-       "type": "static",
-       "img": "images/capture/CapParMid.png",
-       "capturable": true,
-       "codes": "cap_parmid"
-     },
-   
-     {
-       "name": "Pardox Lower",
-       "type": "static",
-       "img": "images/capture/CapParLow.png",
-       "capturable": true,
-       "codes": "cap_parlow"
-     },
-   
-     {
-       "name": "Super Bunny Upper",
-       "type": "static",
-       "img": "images/capture/CapSuperBU.png",
-       "capturable": true,
-       "codes": "cap_supbunup"
-     },
-   
-     {
-       "name": "Super Bunny Lower",
-       "type": "static",
-       "img": "images/capture/CapSuperBL.png",
-       "capturable": true,
-       "codes": "cap_supbunlow"
-     },
-   
-     {
-       "name": "Spiral Cave Upper",
-       "type": "static",
-       "img": "images/capture/CapSpiralUp.png",
-       "capturable": true,
-       "codes": "cap_spiralup"
-     },
-   
-     {
-       "name": "Spiral Cave Lower",
-       "type": "static",
-       "img": "images/capture/CapSpiralDn.png",
-       "capturable": true,
-       "codes": "cap_spirallow"
-     },
-   
-     {
-       "name": "Bumper Cave Upper",
-       "type": "static",
-       "img": "images/capture/CapBumpCaveUp.png",
-       "capturable": true,
-       "codes": "cap_bumpup"
-     },
-   
-     {
-       "name": "Bumper Cave Lower",
-       "type": "static",
-       "img": "images/capture/CapBumpCaveDn.png",
-       "capturable": true,
-       "codes": "cap_bumplow"
-     },
-   
-     {
-       "name": "Spike Cave",
-       "type": "static",
-       "img": "images/capture/CapSPK.png",
-       "capturable": true,
-       "codes": "cap_spk"
-     },
-   
-     {
-       "name": "Hookshot Cave Front",
-       "type": "static",
-       "img": "images/capture/CapHSFront.png",
-       "capturable": true,
-       "codes": "cap_hsfront"
-     },
-   
-     {
-       "name": "Hook Shot Cave Back",
-       "type": "static",
-       "img": "images/capture/CapHSBack.png",
-       "capturable": true,
-       "codes": "cap_hsback"
-     },
-   
-     {
-       "name": "Fairy Ascension Cave Upper",
-       "type": "static",
-       "img": "images/capture/CapFairyACU.png",
-       "capturable": true,
-       "codes": "cap_fairyacu"
-     },
-   
-     {
-       "name": "Fairy Ascension Cave Lower",
-       "type": "static",
-       "img": "images/capture/CapFairyACL.png",
-       "capturable": true,
-       "codes": "cap_fairyacl"
-     },
-   
-     {
-       "name": "Race House Left",
-       "type": "static",
-       "img": "images/capture/CapRaceHL.png",
-       "capturable": true,
-       "codes": "cap_racehl"
-     },
-   
-     {
-       "name": "Race House Right",
-       "type": "static",
-       "img": "images/capture/CapRaceHR.png",
-       "capturable": true,
-       "codes": "cap_racehr"
-     },
-   
-     {
-       "name": "Elder Door Left",
-       "type": "static",
-       "img": "images/capture/CapElderDL.png",
-       "capturable": true,
-       "codes": "cap_elderdl"
-     },
-   
-     {
-       "name": "Elder Door Right",
-       "type": "static",
-       "img": "images/capture/CapElderDR.png",
-       "capturable": true,
-       "codes": "cap_elderdr"
-     },
-   
-     {
-       "name": "Sick Kid",
-       "type": "static",
-       "img": "images/capture/CapSickKid.png",
-       "capturable": true,
-       "codes": "cap_sickkid"
-     },
-   
-     {
-       "name": "Shop",
-       "type": "static",
-       "img": "images/capture/CapShop.png",
-       "capturable": true,
-       "codes": "cap_shop"
-     },
-   
-     {
-       "name": "Potion Shop",
-       "type": "static",
-       "img": "images/capture/CapPShop.png",
-       "capturable": true,
-       "codes": "cap_pshop"
-     },
-   
-     {
-       "name": "Smith House",
-       "type": "static",
-       "img": "images/capture/CapSmith.png",
-       "capturable": true,
-       "codes": "cap_smith"
-     },
-   
-     {
-       "name": "Bat",
-       "type": "static",
-       "img": "images/capture/CapBat.png",
-       "capturable": true,
-       "codes": "cap_bat"
-     },
-   
-     {
-       "name": "Dam",
-       "type": "static",
-       "img": "images/capture/CapDam.png",
-       "capturable": true,
-       "codes": "cap_dam"
-     },
-   
-     {
-       "name": "Luck Fairy",
-       "type": "static",
-       "img": "images/capture/CapLF.png",
-       "capturable": true,
-       "codes": "cap_lf"
-     },
-   
-     {
-       "name": "Bomb Shop",
-       "type": "static",
-       "img": "images/capture/CapBombShop.png",
-       "capturable": true,
-       "codes": "cap_bombshop"
-     },
-   
-     {
-       "name": "Arrow Game",
-       "type": "static",
-       "img": "images/capture/CapArrowGM.png",
-       "capturable": true,
-       "codes": "cap_arwgme"
-     },
-   
-     {
-       "name": "Sanctuary",
-       "type": "static",
-       "img": "images/capture/CapSanc.png",
-       "capturable": true,
-       "codes": "cap_sanc"
-     },
-   
-     {
-       "name": "Dark Cave",
-       "type": "static",
-       "img": "images/capture/CapDKCave.png",
-       "capturable": true,
-       "codes": "cap_dkcave"
-     },
-   
-     {
-       "name": "Mini Moldorm Cave",
-       "type": "static",
-       "img": "images/capture/CapMiniMcave.png",
-       "capturable": true,
-       "codes": "cap_mmcave"
-     }
-   ]
+    //Dungeons
+    {
+        "name": "Hyrule Castle Main",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-hc-front.png",
+        "capturable": true,
+        "codes": "cap_hcmain"
+    },
+    {
+        "name": "Hyrule Castle Left",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-hc-left.png",
+        "capturable": true,
+        "codes": "cap_hcleft"
+    },
+    {
+        "name": "Hyrule Castle Right",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-hc-right.png",
+        "capturable": true,
+        "codes": "cap_hcright"
+    },
+    {
+        "name": "Hyrule Castle Sanctuary",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-hc-sanc.png",
+        "capturable": true,
+        "codes": "cap_hcsanc"
+    },
+    {
+        "name": "Eastern Palace",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-ep.png",
+        "capturable": true,
+        "codes": "cap_ep"
+    },
+    {
+        "name": "Desert Palace Main",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-dp-front.png",
+        "capturable": true,
+        "codes": "cap_dpmain"
+    },
+    {
+        "name": "Desert Palace Left",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-dp-left.png",
+        "capturable": true,
+        "codes": "cap_dpleft"
+    },
+    {
+        "name": "Desert Palace Right",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-dp-right.png",
+        "capturable": true,
+        "codes": "cap_dpright"
+    },
+    {
+        "name": "Desert Palace Back",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-dp-back.png",
+        "capturable": true,
+        "codes": "cap_dpback"
+    },
+    {
+        "name": "Tower of Hera",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-toh.png",
+        "capturable": true,
+        "codes": "cap_toh"
+    },
+    {
+        "name": "Agahnim's Tower",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-at.png",
+        "capturable": true,
+        "codes": "cap_at"
+    },
+    {
+        "name": "Palace of Darkness",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-pod.png",
+        "capturable": true,
+        "codes": "cap_pod"
+    },
+    {
+        "name": "Swamp Palace",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sp.png",
+        "capturable": true,
+        "codes": "cap_sp"
+    },
+    {
+        "name": "Skull Woods",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sw.png",
+        "capturable": true,
+        "codes": "cap_sw"
+    },
+    {
+        "name": "Skull Woods Front Right",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sw-frontright.png",
+        "capturable": true,
+        "codes": "cap_swfrontright"
+    },
+    {
+        "name": "Skull Woods Front Left",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sw-frontleft.png",
+        "capturable": true,
+        "codes": "cap_swfrontleft"
+    },
+    {
+        "name": "Skull Woods Back South",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sw-backsouth.png",
+        "capturable": true,
+        "codes": "cap_swbacksouth"
+    },
+    {
+        "name": "Skull Woods Back",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-sw-back.png",
+        "capturable": true,
+        "codes": "cap_swback"
+    },
+    {
+        "name": "Thieves' Town",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-tt.png",
+        "capturable": true,
+        "codes": "cap_tt"
+    },
+    {
+        "name": "Ice Palace",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-ip.png",
+        "capturable": true,
+        "codes": "cap_ip"
+    },
+    {
+        "name": "Misery Mire",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-mm.png",
+        "capturable": true,
+        "codes": "cap_mm"
+    },
+    {
+        "name": "Turtle Rock Main",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-tr-front.png",
+        "capturable": true,
+        "codes": "cap_trmain"
+    },
+    {
+        "name": "Turtle Rock Ledge Left",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-tr-left.png",
+        "capturable": true,
+        "codes": "cap_trleft"
+    },
+    {
+        "name": "Turtle Rock Ledge Right",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-tr-right.png",
+        "capturable": true,
+        "codes": "cap_trright"
+    },
+    {
+        "name": "Turtle Rock Laser Bridge",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-tr-boss.png",
+        "capturable": true,
+        "codes": "cap_trback"
+    },
+    {
+        "name": "Ganon's Tower",
+        "type": "static",
+        "img": "images/capture/cap-dungeon-gt.png",
+        "capturable": true,
+        "codes": "cap_gt"
+    },
+    //Dropdowns
+    {
+        "name": "Secret Passage Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-uncle.png",
+        "capturable": true,
+        "codes": "cap_drop_uncle"
+    },
+    {
+        "name": "Sanctuary Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-sanc.png",
+        "capturable": true,
+        "codes": "cap_drop_sanc"
+    },
+    {
+        "name": "Lumberjack Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-lumberjack.png",
+        "capturable": true,
+        "codes": "cap_drop_lumberjack"
+    },
+    {
+        "name": "Forest Hideout Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-hideout.png",
+        "capturable": true,
+        "codes": "cap_drop_hideout"
+    },
+    {
+        "name": "Kakariko Well Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-well.png",
+        "capturable": true,
+        "codes": "cap_drop_well"
+    },
+    {
+        "name": "Magic Bat Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-bat.png",
+        "capturable": true,
+        "codes": "cap_drop_bat"
+    },
+    {
+        "name": "Useless Fairy Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-fairy.png",
+        "capturable": true,
+        "codes": "cap_drop_fairy"
+    },
+    {
+        "name": "Ganon Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-ganon.png",
+        "capturable": true,
+        "codes": "cap_drop_ganon"
+    },
+    {
+        "name": "SW Pinball Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-swpinball.png",
+        "capturable": true,
+        "codes": "cap_drop_swpinball"
+    },
+    {
+        "name": "SW Compass Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-swcompass.png",
+        "capturable": true,
+        "codes": "cap_drop_swcompass"
+    },
+    {
+        "name": "SW Big Chest Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-swbigchest.png",
+        "capturable": true,
+        "codes": "cap_drop_swbigchest"
+    },
+    {
+        "name": "SW Hazard Dropdown",
+        "type": "static",
+        "img": "images/capture/cap-drop-swhazard.png",
+        "capturable": true,
+        "codes": "cap_drop_swhazard"
+    },
+    //Underworld
+    {
+        "name": "Sahasrahla's Hut",
+        "type": "static",
+        "img": "images/capture/cap-location-sah.png",
+        "capturable": true,
+        "codes": "cap_sah"
+    },
+    {
+        "name": "Library",
+        "type": "static",
+        "img": "images/capture/cap-location-library.png",
+        "capturable": true,
+        "codes": "cap_library"
+    },
+    {
+        "name": "Mimic Cave",
+        "type": "static",
+        "img": "images/capture/cap-location-mimic.png",
+        "capturable": true,
+        "codes": "cap_mimic"
+    },
+    {
+        "name": "Sick Kid",
+        "type": "static",
+        "img": "images/capture/cap-location-sickkid.png",
+        "capturable": true,
+        "codes": "cap_sickkid"
+    },
+    {
+        "name": "Potion Shop",
+        "type": "static",
+        "img": "images/capture/cap-location-potionshop.png",
+        "capturable": true,
+        "codes": "cap_potionshop"
+    },
+    {
+        "name": "Smith House",
+        "type": "static",
+        "img": "images/capture/cap-location-smith.png",
+        "capturable": true,
+        "codes": "cap_smith"
+    },
+    {
+        "name": "Dam",
+        "type": "static",
+        "img": "images/capture/cap-location-dam.png",
+        "capturable": true,
+        "codes": "cap_dam"
+    },
+    {
+        "name": "Bomb Shop",
+        "type": "static",
+        "img": "images/capture/cap-location-redbomb.png",
+        "capturable": true,
+        "codes": "cap_redbomb"
+    },
+    {
+        "name": "Spike Cave",
+        "type": "static",
+        "img": "images/capture/cap-location-spike.png",
+        "capturable": true,
+        "codes": "cap_spike"
+    },
+    //Connectors
+    {
+        "name": "Old Man Fetch Cave",
+        "type": "static",
+        "img": "images/capture/cap-connector-oldman.png",
+        "capturable": true,
+        "codes": "cap_oldman"
+    },
+    {
+        "name": "Mountain Cave",
+        "type": "static",
+        "img": "images/capture/cap-connector-mountaincave.png",
+        "capturable": true,
+        "codes": "cap_mtncave"
+    },
+    {
+        "name": "Mountain Cave Back",
+        "type": "static",
+        "img": "images/capture/cap-connector-mountaincaveback.png",
+        "capturable": true,
+        "codes": "cap_mtncave_back"
+    },
+    {
+        "name": "Spectacle Rock Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-spec-top.png",
+        "capturable": true,
+        "codes": "cap_spec_top"
+    },
+    {
+        "name": "Spectacle Rock Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-spec-bottom.png",
+        "capturable": true,
+        "codes": "cap_spec_bottom"
+    },
+    {
+        "name": "Spectacle Rock Left",
+        "type": "static",
+        "img": "images/capture/cap-connector-spec-left.png",
+        "capturable": true,
+        "codes": "cap_spec_left"
+    },
+    {
+        "name": "Paradox Cave Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-paradox-top.png",
+        "capturable": true,
+        "codes": "cap_paradox_top"
+    },
+    {
+        "name": "Paradox Middle",
+        "type": "static",
+        "img": "images/capture/cap-connector-paradox-middle.png",
+        "capturable": true,
+        "codes": "cap_paradox_middle"
+    },
+    {
+        "name": "Pardox Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-paradox-bottom.png",
+        "capturable": true,
+        "codes": "cap_paradox_bottom"
+    },
+    {
+        "name": "Superbunny Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-bunny-top.png",
+        "capturable": true,
+        "codes": "cap_bunny_top"
+    },
+    {
+        "name": "Superbunny Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-bunny-bottom.png",
+        "capturable": true,
+        "codes": "cap_bunny_bottom"
+    },
+    {
+        "name": "Spiral Cave Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-spiral-top.png",
+        "capturable": true,
+        "codes": "cap_spiral_top"
+    },
+    {
+        "name": "Spiral Cave Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-spiral-bottom.png",
+        "capturable": true,
+        "codes": "cap_spiral_bottom"
+    },
+    {
+        "name": "Bumper Cave Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-bumperhook.png",
+        "capturable": true,
+        "codes": "cap_bumper_top"
+    },
+    {
+        "name": "Bumper Cave Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-bumper.png",
+        "capturable": true,
+        "codes": "cap_bumper"
+    },
+    {
+        "name": "Hookshot Cave",
+        "type": "static",
+        "img": "images/capture/cap-item-hookshot.png",
+        "capturable": true,
+        "codes": "cap_hookcave"
+    },
+    {
+        "name": "Dark Mountain Connector",
+        "type": "static",
+        "img": "images/capture/cap-item-lamp.png",
+        "capturable": true,
+        "codes": "cap_darkmountain"
+    },
+    {
+        "name": "Fairy Ascension",
+        "type": "static",
+        "img": "images/capture/cap-drop-fairy.png",
+        "capturable": true,
+        "codes": "cap_fairyascension"
+    },
+    {
+        "name": "Quarreling Brothers House",
+        "type": "static",
+        "img": "images/capture/cap-connector-brother.png",
+        "capturable": true,
+        "codes": "cap_brother"
+    },
+    {
+        "name": "Elder House",
+        "type": "static",
+        "img": "images/capture/cap-connector-granny.png",
+        "capturable": true,
+        "codes": "cap_granny"
+    },
+    //Items
+    {
+        "name": "Bow Upgrade",
+        "type": "static",
+        "img": "images/capture/cap-item-bow.png",
+        "capturable": true,
+        "codes": "cap_bow"
+    },
+    {
+        "name": "Boomerang",
+        "type": "static",
+        "img": "images/capture/cap-item-redboomerang.png",
+        "capturable": true,
+        "codes": "cap_boomerang"
+    },
+    {
+        "name": "Magic Boomerang",
+        "type": "static",
+        "img": "images/capture/cap-item-boomerang.png",
+        "capturable": true,
+        "codes": "cap_redboomerang"
+    },
+    {
+        "name": "Hookshot",
+        "type": "static",
+        "img": "images/capture/cap-item-hookshot.png",
+        "capturable": true,
+        "codes": "cap_hookshot"
+    },
+    {
+        "name": "Bomb",
+        "type": "static",
+        "img": "images/capture/cap-item-bomb.png",
+        "capturable": true,
+        "codes": "cap_bomb"
+    },
+    {
+        "name": "Powder",
+        "type": "static",
+        "img": "images/capture/cap-item-powder.png",
+        "capturable": true,
+        "codes": "cap_powder"
+    },
+    {
+        "name": "Fire Rod",
+        "type": "static",
+        "img": "images/capture/cap-item-firerod.png",
+        "capturable": true,
+        "codes": "cap_frod"
+    },
+    {
+        "name": "Ice Rod",
+        "type": "static",
+        "img": "images/capture/cap-item-icerod.png",
+        "capturable": true,
+        "codes": "cap_irod"
+    },
+    {
+        "name": "Bombos",
+        "type": "static",
+        "img": "images/capture/cap-item-bombos.png",
+        "capturable": true,
+        "codes": "cap_bombos"
+    },
+    {
+        "name": "Ether",
+        "type": "static",
+        "img": "images/capture/cap-item-ether.png",
+        "capturable": true,
+        "codes": "cap_ether"
+    },
+    {
+        "name": "Quake",
+        "type": "static",
+        "img": "images/capture/cap-item-quake.png",
+        "capturable": true,
+        "codes": "cap_quake"
+    },
+    {
+        "name": "Lamp",
+        "type": "static",
+        "img": "images/capture/cap-item-lamp.png",
+        "capturable": true,
+        "codes": "cap_lamp"
+    },
+    {
+        "name": "Hammer",
+        "type": "static",
+        "img": "images/capture/cap-item-hammer.png",
+        "capturable": true,
+        "codes": "cap_hammer"
+    },
+    {
+        "name": "Flute",
+        "type": "static",
+        "img": "images/capture/cap-item-flute.png",
+        "capturable": true,
+        "codes": "cap_flute"
+    },
+    {
+        "name": "Bug Net",
+        "type": "static",
+        "img": "images/capture/cap-item-net.png",
+        "capturable": true,
+        "codes": "cap_net"
+    },
+    {
+        "name": "Book of Mudora",
+        "type": "static",
+        "img": "images/capture/cap-item-book.png",
+        "capturable": true,
+        "codes": "cap_book"
+    },
+    {
+        "name": "Bottle",
+        "type": "static",
+        "img": "images/capture/cap-item-bottle.png",
+        "capturable": true,
+        "codes": "cap_bottle"
+    },
+    {
+        "name": "Shovel",
+        "type": "static",
+        "img": "images/capture/cap-item-shovel.png",
+        "capturable": true,
+        "codes": "cap_shoval"
+    },
+    {
+        "name": "Cane of Somaria",
+        "type": "static",
+        "img": "images/capture/cap-item-somaria.png",
+        "capturable": true,
+        "codes": "cap_somaria"
+    },
+    {
+        "name": "Cane of Byrna",
+        "type": "static",
+        "img": "images/capture/cap-item-byrna.png",
+        "capturable": true,
+        "codes": "cap_byrna"
+    },
+    {
+        "name": "Magic Cape",
+        "type": "static",
+        "img": "images/capture/cap-item-cape.png",
+        "capturable": true,
+        "codes": "cap_cape"
+    },
+    {
+        "name": "Magic Mirror",
+        "type": "static",
+        "img": "images/capture/cap-item-mirror.png",
+        "capturable": true,
+        "codes": "cap_mirror"
+    },
+    {
+        "name": "Boots",
+        "type": "static",
+        "img": "images/capture/cap-item-boots.png",
+        "capturable": true,
+        "codes": "cap_boots"
+    },
+    {
+        "name": "Glove Upgrade",
+        "type": "static",
+        "img": "images/capture/cap-item-glove.png",
+        "capturable": true,
+        "codes": "cap_glove"
+    },
+    {
+        "name": "Flippers",
+        "type": "static",
+        "img": "images/capture/cap-item-flippers.png",
+        "capturable": true,
+        "codes": "cap_flippers"
+    },
+    {
+        "name": "Moon Pearl",
+        "type": "static",
+        "img": "images/capture/cap-item-pearl.png",
+        "capturable": true,
+        "codes": "cap_pearl"
+    },
+    {
+        "name": "Sword Upgrade",
+        "type": "static",
+        "img": "images/capture/cap-item-sword.png",
+        "capturable": true,
+        "codes": "cap_sword"
+    },
+    {
+        "name": "Shield Upgrade",
+        "type": "static",
+        "img": "images/capture/cap-item-shield.png",
+        "capturable": true,
+        "codes": "cap_shield"
+    },
+    {
+        "name": "Mail Upgrade",
+        "type": "static",
+        "img": "images/capture/cap-item-mail.png",
+        "capturable": true,
+        "codes": "cap_mail"
+    },
+    {
+        "name": "Half Magic",
+        "type": "static",
+        "img": "images/capture/cap-item-halfmagic.png",
+        "capturable": true,
+        "codes": "cap_halfmagic"
+    },
+    {
+        "name": "Big Key",
+        "type": "static",
+        "img": "images/capture/cap-item-bigkey.png",
+        "capturable": true,
+        "codes": "cap_bigkey"
+    },
+    {
+        "name": "Small Key",
+        "type": "static",
+        "img": "images/capture/cap-item-smallkey.png",
+        "capturable": true,
+        "codes": "cap_smallkey"
+    },
+    //Misc
+    {
+        "name": "Chest",
+        "type": "static",
+        "img": "images/capture/cap-misc-chest.png",
+        "capturable": true,
+        "codes": "cap_chest"
+    },
+    {
+        "name": "Bomb Farm",
+        "type": "static",
+        "img": "images/capture/cap-item-bomb.png",
+        "capturable": true,
+        "codes": "cap_bombfarm"
+    },
+    {
+        "name": "Rupee Farm",
+        "type": "static",
+        "img": "images/capture/cap-misc-rupee.png",
+        "capturable": true,
+        "codes": "cap_rupee"
+    },
+    {
+        "name": "Fairy Cave",
+        "type": "static",
+        "img": "images/capture/cap-misc-fairy.png",
+        "capturable": true,
+        "codes": "cap_fairycave"
+    },
+    {
+        "name": "Shop",
+        "type": "static",
+        "img": "images/capture/cap-misc-shop.png",
+        "capturable": true,
+        "codes": "cap_shop"
+    },
+    {
+        "name": "Dead Entrance",
+        "type": "static",
+        "img": "images/capture/cap-misc-x.png",
+        "capturable": true,
+        "codes": "cap_dead"
+    }
+]
