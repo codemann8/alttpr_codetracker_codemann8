@@ -459,6 +459,7 @@ function removeGhost(section)
         print("Failed to resolve " .. section .. " please check for typos.")
     elseif CaptureBadgeCache[target] then
         hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[target.Owner])
+        CaptureBadgeCache[target.Owner] = nil
         CaptureBadgeCache[target] = nil
     end
 end
