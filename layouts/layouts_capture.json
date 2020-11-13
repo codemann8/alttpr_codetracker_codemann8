@@ -7,11 +7,11 @@
             "item_margin": "1,2",
             "item_size": 40,
             "rows": [
-                [ "bow", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "star" ],
-                [ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "map" ],
-                [ "lamp", "hammer", "ocarina", "net", "book", "shovel", "compass" ],
-                [ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
-                [ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor" ]
+                [ "cap_bow", "cap_boomerang", "cap_redboomerang", "cap_hookshot", "cap_powder", "cap_mushroom", "cap_star" ],
+                [ "cap_firerod", "cap_icerod", "cap_bombos", "cap_ether", "cap_quake", "cap_halfmagic", "cap_map" ],
+                [ "cap_lamp", "cap_hammer", "cap_flute", "cap_net", "cap_book", "cap_shovel", "cap_compass" ],
+                [ "cap_bottle", "cap_somaria", "cap_byrna", "cap_cape", "cap_mirror", "cap_bigkey", "cap_smallkey" ],
+                [ "cap_boots", "cap_glove", "cap_flippers", "cap_pearl", "cap_sword", "cap_shield", "cap_mail" ]
             ]
         }
     },

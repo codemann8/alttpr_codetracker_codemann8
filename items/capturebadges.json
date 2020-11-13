@@ -516,6 +516,13 @@
         "codes": "cap_bomb"
     },
     {
+        "name": "Mushroom",
+        "type": "static",
+        "img": "images/capture/cap-item-mushroom.png",
+        "capturable": true,
+        "codes": "cap_mushroom"
+    },
+    {
         "name": "Powder",
         "type": "static",
         "img": "images/capture/cap-item-powder.png",
@@ -527,14 +534,14 @@
         "type": "static",
         "img": "images/capture/cap-item-firerod.png",
         "capturable": true,
-        "codes": "cap_frod"
+        "codes": "cap_firerod"
     },
     {
         "name": "Ice Rod",
         "type": "static",
         "img": "images/capture/cap-item-icerod.png",
         "capturable": true,
-        "codes": "cap_irod"
+        "codes": "cap_icerod"
     },
     {
         "name": "Bombos",
@@ -583,7 +590,7 @@
         "type": "static",
         "img": "images/capture/cap-item-shovel.png",
         "capturable": true,
-        "codes": "cap_shoval"
+        "codes": "cap_shovel"
     },
     {
         "name": "Bug Net",
@@ -703,6 +710,20 @@
         "img": "images/capture/cap-item-smallkey.png",
         "capturable": true,
         "codes": "cap_smallkey"
+    },
+    {
+        "name": "Compass",
+        "type": "static",
+        "img": "images/capture/cap-item-compass.png",
+        "capturable": true,
+        "codes": "cap_compass"
+    },
+    {
+        "name": "Map",
+        "type": "static",
+        "img": "images/capture/cap-item-map.png",
+        "capturable": true,
+        "codes": "cap_map"
     },
     //Misc
     {
