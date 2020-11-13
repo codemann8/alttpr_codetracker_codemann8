@@ -269,6 +269,13 @@
     },
     //Underworld
     {
+        "name": "Link's House",
+        "type": "static",
+        "img": "images/capture/cap-location-link.png",
+        "capturable": true,
+        "codes": "cap_link"
+    },
+    {
         "name": "Sahasrahla's Hut",
         "type": "static",
         "img": "images/capture/cap-location-sah.png",
@@ -283,13 +290,6 @@
         "codes": "cap_library"
     },
     {
-        "name": "Mimic Cave",
-        "type": "static",
-        "img": "images/capture/cap-location-mimic.png",
-        "capturable": true,
-        "codes": "cap_mimic"
-    },
-    {
         "name": "Sick Kid",
         "type": "static",
         "img": "images/capture/cap-location-sickkid.png",
@@ -297,18 +297,18 @@
         "codes": "cap_sickkid"
     },
     {
-        "name": "Potion Shop",
-        "type": "static",
-        "img": "images/capture/cap-location-potionshop.png",
-        "capturable": true,
-        "codes": "cap_potionshop"
-    },
-    {
         "name": "Smith House",
         "type": "static",
         "img": "images/capture/cap-location-smith.png",
         "capturable": true,
         "codes": "cap_smith"
+    },
+    {
+        "name": "Potion Shop",
+        "type": "static",
+        "img": "images/capture/cap-location-potionshop.png",
+        "capturable": true,
+        "codes": "cap_potionshop"
     },
     {
         "name": "Dam",
@@ -332,13 +332,27 @@
         "codes": "cap_spike"
     },
     {
-        "name": "Link's House",
+        "name": "Mimic Cave",
         "type": "static",
-        "img": "images/capture/cap-location-link.png",
+        "img": "images/capture/cap-location-mimic.png",
         "capturable": true,
-        "codes": "cap_link"
+        "codes": "cap_mimic"
     },
     //Connectors
+    {
+        "name": "Elder House",
+        "type": "static",
+        "img": "images/capture/cap-connector-granny.png",
+        "capturable": true,
+        "codes": "cap_granny"
+    },
+    {
+        "name": "Quarreling Brothers",
+        "type": "static",
+        "img": "images/capture/cap-connector-brother.png",
+        "capturable": true,
+        "codes": "cap_brother"
+    },
     {
         "name": "Old Man Fetch Cave",
         "type": "static",
@@ -396,25 +410,11 @@
         "codes": "cap_paradox_middle"
     },
     {
-        "name": "Pardox Bottom",
+        "name": "Paradox Bottom",
         "type": "static",
         "img": "images/capture/cap-connector-paradox-bottom.png",
         "capturable": true,
         "codes": "cap_paradox_bottom"
-    },
-    {
-        "name": "Superbunny Top",
-        "type": "static",
-        "img": "images/capture/cap-connector-bunny-top.png",
-        "capturable": true,
-        "codes": "cap_bunny_top"
-    },
-    {
-        "name": "Superbunny Bottom",
-        "type": "static",
-        "img": "images/capture/cap-connector-bunny-bottom.png",
-        "capturable": true,
-        "codes": "cap_bunny_bottom"
     },
     {
         "name": "Spiral Cave Top",
@@ -438,11 +438,32 @@
         "codes": "cap_bumper_top"
     },
     {
+        "name": "Fairy Ascension",
+        "type": "static",
+        "img": "images/capture/cap-drop-fairy.png",
+        "capturable": true,
+        "codes": "cap_fairyascension"
+    },
+    {
         "name": "Bumper Cave Bottom",
         "type": "static",
         "img": "images/capture/cap-connector-bumper.png",
         "capturable": true,
         "codes": "cap_bumper"
+    },
+    {
+        "name": "Superbunny Top",
+        "type": "static",
+        "img": "images/capture/cap-connector-bunny-top.png",
+        "capturable": true,
+        "codes": "cap_bunny_top"
+    },
+    {
+        "name": "Superbunny Bottom",
+        "type": "static",
+        "img": "images/capture/cap-connector-bunny-bottom.png",
+        "capturable": true,
+        "codes": "cap_bunny_bottom"
     },
     {
         "name": "Hookshot Cave",
@@ -457,27 +478,6 @@
         "img": "images/capture/cap-item-lamp.png",
         "capturable": true,
         "codes": "cap_darkmountain"
-    },
-    {
-        "name": "Fairy Ascension",
-        "type": "static",
-        "img": "images/capture/cap-drop-fairy.png",
-        "capturable": true,
-        "codes": "cap_fairyascension"
-    },
-    {
-        "name": "Quarreling Brothers House",
-        "type": "static",
-        "img": "images/capture/cap-connector-brother.png",
-        "capturable": true,
-        "codes": "cap_brother"
-    },
-    {
-        "name": "Elder House",
-        "type": "static",
-        "img": "images/capture/cap-connector-granny.png",
-        "capturable": true,
-        "codes": "cap_granny"
     },
     //Items
     {
@@ -579,6 +579,13 @@
         "codes": "cap_flute"
     },
     {
+        "name": "Shovel",
+        "type": "static",
+        "img": "images/capture/cap-item-shovel.png",
+        "capturable": true,
+        "codes": "cap_shoval"
+    },
+    {
         "name": "Bug Net",
         "type": "static",
         "img": "images/capture/cap-item-net.png",
@@ -598,13 +605,6 @@
         "img": "images/capture/cap-item-bottle.png",
         "capturable": true,
         "codes": "cap_bottle"
-    },
-    {
-        "name": "Shovel",
-        "type": "static",
-        "img": "images/capture/cap-item-shovel.png",
-        "capturable": true,
-        "codes": "cap_shoval"
     },
     {
         "name": "Cane of Somaria",
