@@ -442,6 +442,10 @@ function updateGhost(section, clearSection, markHostedItem)
                     target.HostedItem.Active = true
                 end
             end
+
+            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") then
+                target.Owner.Pinned = true
+            end
         end
     end
 end
