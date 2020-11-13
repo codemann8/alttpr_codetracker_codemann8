@@ -86,7 +86,7 @@
             "item_margin": "1,2",
             "item_size": 90,
             "rows": [
-                [ "bombos","ether","quake" ]
+                [ "cap_bombos","cap_ether","cap_quake" ]
             ]
         }
     }
