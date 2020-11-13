@@ -741,6 +741,13 @@
         "codes": "cap_shop"
     },
     {
+        "name": "Important Location",
+        "type": "static",
+        "img": "images/capture/cap-misc-star.png",
+        "capturable": true,
+        "codes": "cap_star"
+    },
+    {
         "name": "Dead Entrance",
         "type": "static",
         "img": "images/capture/cap-misc-x.png",
