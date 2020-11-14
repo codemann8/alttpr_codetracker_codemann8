@@ -992,7 +992,7 @@
         "name": "Misery Mire Bridges",
         "type": "toggle",
         "initial_active_state": true,
-        "img": "images/rooms/a2.png",
+        "img": "images/rooms/alt/a2.png",
         "codes": "mm_bridges"
     },
     {

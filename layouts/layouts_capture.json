@@ -7,11 +7,47 @@
             "item_margin": "1,2",
             "item_size": 40,
             "rows": [
-                [ "bow", "blue_boomerang", "red_boomerang", "hookshot", "powder", "mushroom", "star" ],
-                [ "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "map" ],
-                [ "lamp", "hammer", "ocarina", "net", "book", "shovel", "compass" ],
-                [ "bottle", "somaria", "byrna", "cape", "mirror", "generic_bigkey", "generic_smallkey" ],
-                [ "boots", "lift1", "flippers", "pearl", "owsword", "shield", "armor" ]
+                [ "cap_bow", "cap_boomerang", "cap_redboomerang", "cap_hookshot", "cap_powder", "cap_mushroom", "cap_star" ],
+                [ "cap_firerod", "cap_icerod", "cap_bombos", "cap_ether", "cap_quake", "cap_halfmagic", "cap_map" ],
+                [ "cap_lamp", "cap_hammer", "cap_flute", "cap_net", "cap_book", "cap_shovel", "cap_compass" ],
+                [ "cap_bottle", "cap_somaria", "cap_byrna", "cap_cape", "cap_mirror", "cap_bigkey", "cap_smallkey" ],
+                [ "cap_boots", "cap_glove", "cap_flippers", "cap_pearl", "cap_sword", "cap_shield", "cap_mail" ]
+            ]
+        }
+    },
+    "tracker_capture_entrance": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 40,
+            "rows": [
+                [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
+                [ "cap_pod", "cap_sp", "cap_sw", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
+                [ "cap_granny", "cap_brother", "cap_oldman", "cap_mtncave", "cap_mtncave_back", "cap_spec_top", "cap_spec_bottom", "cap_spec_left", "cap_spiral_top", "cap_spiral_bottom" ],
+                [ "cap_paradox_top", "cap_paradox_middle", "cap_paradox_bottom", "cap_fairyascension", "cap_bumper_top","cap_bumper", "cap_bunny_top", "cap_bunny_bottom", "cap_hookcave", "cap_darkmountain" ],
+                [ "cap_link", "cap_sickkid", "cap_library", "cap_sah", "cap_potionshop", "cap_smith", "cap_redbomb", "cap_spike", "cap_mimic", "cap_dam" ],
+                [ "cap_chest", "cap_pearl", "cap_bottle", "cap_bombfarm", "cap_rupee", "cap_fairycave", "cap_shop", "cap_star", "cap_dead"  ]
+            ]
+        }
+    },
+    "tracker_capture_entrance_insanity": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 40,
+            "rows": [
+                [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
+                [ "cap_pod", "cap_sp", "cap_swback", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
+                [ "", "cap_swbacksouth", "cap_swfrontleft", "cap_swfrontright", "", "", "", "", "", "", "" ],
+                [ "cap_drop_uncle", "cap_drop_lumberjack", "cap_drop_hideout", "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ],
+                [ "cap_granny", "cap_brother", "cap_oldman", "cap_mtncave", "cap_mtncave_back", "cap_spec_top", "cap_spec_bottom", "cap_spec_left", "cap_spiral_top", "cap_spiral_bottom" ],
+                [ "cap_paradox_top", "cap_paradox_middle", "cap_paradox_bottom", "cap_fairyascension", "cap_bumper_top","cap_bumper", "cap_bunny_top", "cap_bunny_bottom", "cap_hookcave", "cap_darkmountain" ],
+                [ "cap_link", "cap_sickkid", "cap_library", "cap_sah", "cap_potionshop", "cap_smith", "cap_redbomb", "cap_spike", "cap_mimic", "cap_dam" ],
+                [ "cap_chest", "cap_pearl", "cap_bottle", "cap_bombfarm", "cap_rupee", "cap_fairycave", "cap_shop", "cap_star", "cap_dead"  ]
             ]
         }
     },
@@ -23,8 +59,8 @@
             "item_margin": "1,2",
             "item_size": 60,
             "rows": [
-                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
-                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ]
+                [ "cap_drop_uncle", "cap_drop_sanc", "cap_drop_lumberjack", "cap_drop_hideout" ],
+                [ "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ]
             ]
         }
     },
@@ -36,9 +72,9 @@
             "item_margin": "1,2",
             "item_size": 60,
             "rows": [
-                [ "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief" ],
-                [ "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon" ],
-                [ "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard" ]
+                [ "cap_drop_uncle", "cap_drop_sanc", "cap_drop_lumberjack", "cap_drop_hideout" ],
+                [ "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ],
+                [ "cap_drop_swpinball", "cap_drop_swcompass", "cap_drop_swbigchest", "cap_drop_swhazard" ]
             ]
         }
     },
@@ -50,7 +86,7 @@
             "item_margin": "1,2",
             "item_size": 90,
             "rows": [
-                [ "bombos","ether","quake" ]
+                [ "cap_bombos","cap_ether","cap_quake" ]
             ]
         }
     }

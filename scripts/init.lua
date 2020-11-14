@@ -16,6 +16,7 @@ Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
 Tracker:AddItems("items/labels.json")
+Tracker:AddItems("items/capturebadges.json")
 
 --Custom Items
 ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
@@ -64,6 +65,7 @@ else
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
+    Tracker:AddLocations("locations/ghosts.json")
 
     --Custom Items
     DoorDungeonSelect()
@@ -115,6 +117,8 @@ initGlobalVars()
 --Default Settings
 Tracker.DisplayAllLocations = true
 Tracker.AlwaysAllowClearing = true
+Tracker.PinLocationsOnItemCapture = false
+Tracker.AutoUnpinLocationsOnClear = false
 
 if _VERSION == "Lua 5.3" then
     ScriptHost:LoadScript("scripts/fileio.lua")

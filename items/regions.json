@@ -85,6 +85,12 @@
         "codes": "lw_dmentry"
     },
     {
+        "name": "DM Exit Access",
+        "type": "toggle",
+        "img": "images/0062.png",
+        "codes": "lw_dmexit"
+    },
+    {
         "name": "Northwest Dark World",
         "type": "toggle",
         "img": "images/0062.png",
@@ -187,10 +193,10 @@
         "codes": "dm_east_mimic"
     },
     {
-        "name": "Death Mountain East Connector Top",
+        "name": "Death Mountain East Connector",
         "type": "toggle",
         "img": "images/0062.png",
-        "codes": "dm_east_connect_top"
+        "codes": "dm_east_connect"
     },
     {
         "name": "Death Mountain East Bottom",
