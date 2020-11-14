@@ -1,6 +1,10 @@
 # CodeTracker Full Tracker Package for EmoTracker
 Join the [Discord](https://discord.gg/Fk4wTn6) to get notified of updates and/or join the discussion of the various features!
 
+#### Special Thanks:
+- Kaesden - Taking ownership of anything Race Mode related
+- Neonnite - Playing a large role into adding entrance badge icons
+
 ## Overview:
 This package is meant to encompass all aspects that are desired or missing from the existing array of LttP packages. The intention of this package is to be a complete package, to include and cover almost all ways you can play the game, such as entrance rando, mystery multiworld, door rando, and custom ROM hacks.
 
