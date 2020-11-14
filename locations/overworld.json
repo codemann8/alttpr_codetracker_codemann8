@@ -4262,7 +4262,8 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,mm_medallion",
-                    "$canUseMedallions,bombos,ether,quake"
+                    "$canUseMedallions,bombos,ether,quake",
+                    "{nothing}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -5169,7 +5170,8 @@
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,tr_medallion",
-                    "$canUseMedallions,bombos,ether,quake"
+                    "$canUseMedallions,bombos,ether,quake",
+                    "{nothing}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
