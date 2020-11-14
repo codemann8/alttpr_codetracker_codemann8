@@ -22,8 +22,9 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
 - Backwards compatibility to v30 logic with non-progressive bow, so modes like legacy versions of multiworld properly shows silvers without bow
 - Blips on the map have been made bigger to show up better on Broadcast View
-- Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found. The exits to dropdowns are shown when in `Insanity` mode
-- Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
+- In Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found. The exits to dropdowns are shown when in `Insanity` mode
+- In Entrance rando, entrance tracking can be done by adding icons to the map. See `Usage` section below for more info.
+- In Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
 - Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Door rando, an Attic icon has been added for when you bomb the Attic floor in cross dungeon door rando, this is auto-tracked
 - An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon, autotracking this is disabled as it can spoil Fast Ganon in Mystery seeds
@@ -51,12 +52,12 @@ The first thing you may notice is that a few things are rearranged differently t
 - The items are laid out in a fashion that makes it easier to visually plan out menuing to different items before you open your menu. The dungeons are arranged in the way that you see the dungeons on the world map, to support the players who prefer a more visual approach to marking dungeons.
 - To set your game mode (Keysanity, Inverted, Entrance, Door Rando, etc) click the `Gear` icon in the `Items` section of the tracker; there you will see the various options that can be toggled.  Additionally, there are shortcut icons for these modes in the `Modes` section of the tracker.
 - The Big Key has been replaced with an icon that supports tracking Map, Compass, and Big Key, for those who wish to incorporate that into figuring out logic or determining whether a map check is worth it. (Left-click toggles BK, right-click cycles thru the combinations of Map and Compass)
-- For Entrance Rando, the Map area features an `Entrance` tab, which shows a map for showing entrances. There are also 8 Dropdown icons, indicating the 8 possible locations you can find thru a dropdown entrance. These can be used to mark the dropdowns you have found so you are aware of what is left to find. There is also a Dam icon, to indicate if the dam has been drained, this is used to indicate access to Swamp Palace and the item on the Overworld.
+- For Entrance Rando, there are 8 Dropdown icons, indicating the 8 possible locations you can find thru a dropdown entrance. These can be used to mark the dropdowns you have found so you are aware of what is left to find. There is also a Dam icon, to indicate if the dam has been drained, this is used to indicate access to Swamp Palace and the item on the Overworld.
 - For Door Rando, the Map area features a `Dungeon` tab, which shows all the dungeon rooms in the game. This is intended to be used to mark rooms off as you find them, or for reference
-- In Entrance Rando modes, it is recommended to use another tracker in conjunction with this one to note which entrances are useful. An example of a tracker is [CodeTracker](https://zelda.codemann8.com/ertracker/tracker.php), a browser-based tracker which features a broadcast view and a link that can be shared with viewers.
+- In Entrance Rando modes, each map location can be set to show an icon by left-hold clicking a blip and clicking the dashed box. Selecting an icon will place an image on the map for later reference. An alternative choice for tracking entrances is [CodeTracker](https://zelda.codemann8.com/ertracker/tracker.php), a browser-based tracker which features a broadcast view and a link that can be shared with viewers.
 
 #### Broadcast View
-There are 3 Map Tracker variants, each with a different Braodcast View.
+There are 3 Map Tracker variants, each with a different Broadcast View.
 - The default variant is the most universal, as it doesn't show a map, thus giving better Mystery support.
 - The Map Broadcast variant shows the regular map in addition to the items
 - The ER Broadcast variant shows the entrance map, which is a bit larger due to the smaller size of the colored dots.
