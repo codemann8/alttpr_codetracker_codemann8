@@ -62,8 +62,8 @@ CaptureBadgeEntrances = {
     "@Ice Rod Cave Entrance/Entrance",
     "@Cold Bee Cave/Entrance",
     "@Twenty Rupee Cave/Entrance",
-    "@Death Mountain Exit Front/Entrance",
-    "@Death Mountain Exit Back/Entrance",
+    "@Death Mountain Descent Front/Entrance",
+    "@Death Mountain Descent Back/Entrance",
     "@Death Mountain Entry Cave/Entrance",
     "@Death Mountain Entry Back/Entrance",
     "@Tower of Hera Entrance/Entrance",
@@ -152,12 +152,12 @@ CaptureBadgeInsanity = {
     "@Pyramid Hole Exit/Entrance",
     "@Castle Hole Exit/Entrance",
     "@Skull Woods Back South/Entrance",
-    "@Skull Woods Front East/Entrance",
-    "@Skull Woods Front West/Entrance",
+    "@Skull Woods Front Right/Entrance",
+    "@Skull Woods Front Left/Entrance",
     "@Skull Woods Back Drop/Dropdown",
     "@Skull Woods Big Chest Drop/Dropdown",
-    "@Skull Woods Front East Drop/Dropdown",
-    "@Skull Woods Front West Drop/Dropdown"
+    "@Skull Woods Front Right Drop/Dropdown",
+    "@Skull Woods Front Left Drop/Dropdown"
 }
 
 CaptureBadgeOverworld = {

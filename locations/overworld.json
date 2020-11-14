@@ -2511,7 +2511,7 @@
         ]
     },
     {
-        "name": "Death Mountain Exit Front",
+        "name": "Death Mountain Descent Front",
         "parent": "Death Mountain West Bottom",
         "sections": [
             {
@@ -2535,8 +2535,8 @@
         ]
     },
     {
-        "name": "Death Mountain Exit Back",
         "short_name": "DM Exit",
+        "name": "Death Mountain Descent Back",
         "parent": "Light World",
         "access_rules": [
             "world_state_open,bumper_cave,mirror",
@@ -3288,7 +3288,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West",
+        "name": "Skull Woods Front Left",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3312,7 +3312,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West Drop",
+        "name": "Skull Woods Front Left Drop",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3335,7 +3335,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East Drop",
+        "name": "Skull Woods Front Right Drop",
         "parent": "Northwest Dark World",
         "sections": [
             {
@@ -3358,7 +3358,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East",
+        "name": "Skull Woods Front Right",
         "parent": "Northwest Dark World",
         "sections": [
             {
