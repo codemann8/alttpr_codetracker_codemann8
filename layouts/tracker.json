@@ -135,6 +135,7 @@
                                 "h_alignment": "stretch",
                                 "v_alignment": "stretch",
                                 "orientation": "horizontal",
+                                "max_height": 250,
                                 "scale": 1.07,
                                 "compact": true
                             }
