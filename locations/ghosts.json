@@ -1458,7 +1458,7 @@
         ]
     },
     {
-        "name": "Death Mountain Exit Front Ghost",
+        "name": "Death Mountain Descent Front Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1477,7 +1477,7 @@
         ]
     },
     {
-        "name": "Death Mountain Exit Back Ghost",
+        "name": "Death Mountain Descent Back Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1949,7 +1949,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West Ghost",
+        "name": "Skull Woods Front Left Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1968,7 +1968,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front West Drop Ghost",
+        "name": "Skull Woods Front Left Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -1987,7 +1987,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East Drop Ghost",
+        "name": "Skull Woods Front Right Drop Ghost",
         "sections": [
             {
                 "name": "Dropdown",
@@ -2006,7 +2006,7 @@
         ]
     },
     {
-        "name": "Skull Woods Front East Ghost",
+        "name": "Skull Woods Front Right Ghost",
         "sections": [
             {
                 "name": "Entrance",

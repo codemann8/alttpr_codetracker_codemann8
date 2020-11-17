@@ -1,3 +1,29 @@
+function refreshMCBK()
+    local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
+    for i = 1, #dungeons do
+        local state = 0
+        local item = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
+        if item and item.Active then
+            state = state + 0x4
+        end
+
+        item = Tracker:FindObjectForCode(dungeons[i] .. "_compass")
+        if item and item.Active then
+            state = state + 0x2
+        end
+
+        item = Tracker:FindObjectForCode(dungeons[i] .. "_map")
+        if item and item.Active then
+            state = state + 0x1
+        end
+
+        item = Tracker:FindObjectForCode(dungeons[i] .. "_mcbk")
+        if item then
+            item:Set("state", state)
+        end
+    end
+end
+
 function updateProgressiveItemFromByte(segment, code, address, offset)
     local item = Tracker:FindObjectForCode(code)
     if item then
@@ -330,28 +356,6 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         else
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
         end
-    end
-
-    --update map/compass/big key
-    local state = 0
-    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
-    if item and item.Active then
-        state = state + 0x4
-    end
-
-    item = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
-    if item and item.Active then
-        state = state + 0x2
-    end
-
-    item = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
-    if item and item.Active then
-        state = state + 0x1
-    end
-
-    item = Tracker:FindObjectForCode(dungeonPrefix .. "_mcbk")
-    if item then
-        item:Set("state", state)
     end
 end
 

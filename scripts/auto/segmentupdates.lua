@@ -711,6 +711,8 @@ function updateDungeonItemsFromMemorySegment(segment)
         updateToggleItemFromByteAndFlag(segment, "ep_compass", 0x7ef365, 0x20)
         updateToggleItemFromByteAndFlag(segment, "hc_compass", 0x7ef365, 0xc0)
 
+        refreshMCBK()
+
         --Small Keys
         if OBJ_DOORSHUFFLE.CurrentStage == 0 then
             updateDungeonKeysFromPrefix(segment, "hc", 0x7ef37c)
