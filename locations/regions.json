@@ -146,7 +146,8 @@
                     "world_state_inverted,dw_south,lift2",
                     "world_state_inverted,dw_south,hammer,hookshot",
                     "world_state_inverted,dw_south,[flippers],hookshot",
-                    "entrance_shuffle_crossed,sw_area"
+                    "entrance_shuffle_dungeon,door_shuffle_sameset,sw_area",
+                    "entrance_shuffle_crossed,door_shuffle_sameset,sw_area"
                 ]
             },
             {
@@ -249,8 +250,9 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "sw_area",
-            "entrance_shuffle_crossed,@Northwest Dark World",
-            "entrance_shuffle_insanity,world_state_inverted,@Light World,mirror"
+            "world_state_inverted,@Light World,mirror",
+            "entrance_shuffle_singleentryvanilla,door_shuffle_sameset,@Northwest Dark World",
+            "entrance_shuffle_crossed,door_shuffle_sameset,@Northwest Dark World"
         ]
     },
     {

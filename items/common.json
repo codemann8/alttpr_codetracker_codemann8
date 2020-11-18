@@ -992,12 +992,12 @@
         "stages": [
             {
                 "img": "images/mode_door_shuffle_off.png",
-                "codes": "door_shuffle,door_shuffle_off",
+                "codes": "door_shuffle,door_shuffle_sameset,door_shuffle_off",
                 "inherit_codes": false
             },
             {
                 "img": "images/mode_door_shuffle_basic.png",
-                "codes": "door_shuffle,door_shuffle_on,door_shuffle_basic",
+                "codes": "door_shuffle,door_shuffle_on,door_shuffle_sameset,door_shuffle_basic",
                 "inherit_codes": false
             },
             {

@@ -3325,18 +3325,19 @@
         ]
     },
     {
-        "name": "Skull Woods Area",
+        "name": "Skull Woods Front Area",
         "parent": "Northwest Dark World",
         "sections": [
             {
-                "name": "Entrance",
+                "name": "Area",
                 "access_rules": [
                     "world_state_open,[pearl]",
                     "world_state_inverted"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "item_count": 1
+                "item_count": 1,
+                "hosted_item": "dw_west"
             }
         ],
         "map_locations": [
