@@ -17,7 +17,7 @@ function EntranceShuffleMode:updateIcon()
     elseif self:getState() == 1 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_dungeon" .. self.suffix .. ".png")
     elseif self:getState() == 2 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_crossed" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_entrance" .. self.suffix .. ".png")
     else 
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
     end
