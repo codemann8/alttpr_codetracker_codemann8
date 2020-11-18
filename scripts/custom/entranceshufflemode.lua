@@ -28,7 +28,7 @@ function EntranceShuffleMode:postUpdate()
         local drops =  { "swpinball", "swcompass", "swbigchest", "swhazard" }
         for i = 1, #drops do
             local drop = Tracker:FindObjectForCode("dropdown_" .. drops[i])
-            if self:getState() > 1 then
+            if self:getState() > 2 then
                 drop.ActiveIcon = drop.ActiveIcon
                 drop.IgnoreUserInput = false
             else
