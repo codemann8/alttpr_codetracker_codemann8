@@ -63,6 +63,7 @@ else
 
     Tracker:AddLocations("locations/regions.json")
     Tracker:AddLocations("locations/dungeons.json")
+    Tracker:AddLocations("locations/dungeonmap.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
     Tracker:AddLocations("locations/ghosts.json")

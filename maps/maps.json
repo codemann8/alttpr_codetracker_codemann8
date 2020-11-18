@@ -1,4 +1,5 @@
 ﻿[
+    //Overworld
     {
         "name": "lightworld",
         "location_size": 80,
@@ -22,5 +23,13 @@
         "location_size": 240,
         "location_border_thickness": 15,
         "img": "images/lttp_darkworld.png"
+    },
+
+    //Dungeons
+    {
+        "name": "egmap",
+        "location_size": 64,
+        "location_border_thickness": 5,
+        "img": "images/lttp_dungeon_eg.png"
     }
 ]
