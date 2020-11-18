@@ -50,9 +50,9 @@
             "race_game",
             "lw_dmentry",
             "lw_dmexit",
-            "world_state_inverted,entrance_shuffle_off,hammer,lift1,pearl",
-            "world_state_inverted,entrance_shuffle_off,lift2,pearl",
-            "world_state_inverted,entrance_shuffle_off,aga",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,hammer,lift1,pearl",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,lift2,pearl",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,aga",
             "world_state_inverted,grass_house,pearl",
             "world_state_inverted,bomb_hut,pearl",
             "world_state_inverted,lw_witch,pearl",
@@ -123,7 +123,7 @@
                     "world_state_open,dw_southeast,pearl,[flippers],hookshot",
                     "world_state_open,dw_south,pearl,hammer,hookshot",
                     "world_state_open,dw_south,pearl,[flippers],hookshot",
-                    "world_state_inverted,entrance_shuffle_off",
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla",
                     "world_state_inverted,@Light World,mirror",
                     "world_state_inverted,@Light World,pearl,flute",
                     "world_state_inverted,lm_dmentry,mirror",
@@ -146,7 +146,8 @@
                     "world_state_inverted,dw_south,lift2",
                     "world_state_inverted,dw_south,hammer,hookshot",
                     "world_state_inverted,dw_south,[flippers],hookshot",
-                    "entrance_shuffle_crossed,sw_area"
+                    "entrance_shuffle_dungeon,door_shuffle_sameset,sw_area",
+                    "entrance_shuffle_crossed,door_shuffle_sameset,sw_area"
                 ]
             },
             {
@@ -249,8 +250,9 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "sw_area",
-            "entrance_shuffle_crossed,@Northwest Dark World",
-            "entrance_shuffle_insanity,world_state_inverted,@Light World,mirror"
+            "world_state_inverted,@Light World,mirror",
+            "entrance_shuffle_singleentryvanilla,door_shuffle_sameset,@Northwest Dark World",
+            "entrance_shuffle_crossed,door_shuffle_sameset,@Northwest Dark World"
         ]
     },
     {
@@ -279,7 +281,7 @@
         "access_rules": [
             "world_state_open,flute",
             "world_state_inverted,@Light World,pearl,flute",
-            "entrance_shuffle_off,lift1,[lamp]"
+            "entrance_shuffle_singleentryvanilla,lift1,[lamp]"
         ]
     },
     {
@@ -292,7 +294,7 @@
                 "access_rules": [
                     "dm_west_top",
                     "world_state_open,@Mountain Access,mirror",
-                    "world_state_open,entrance_shuffle_off,@Mountain Access,hookshot,hammer",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,@Mountain Access,hookshot,hammer",
                     "world_state_open,dm_west_bottom,mirror",
                     "world_state_open,dm_east_bottom,hookshot,mirror",
                     "world_state_open,dm_east_top,hookshot,mirror",
@@ -306,8 +308,10 @@
                     "world_state_open,ddm_east,mirror,hookshot",
                     "world_state_open,ddm_tr_bridge,mirror,hookshot",
                     "world_state_open,ddm_tr_safety,mirror,hookshot",
-                    "world_state_inverted,entrance_shuffle_off,@Mountain Access,lift2,pearl,hammer",
-                    "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot,hammer",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror,hammer",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_safety,mirror,hammer",
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,lift2,pearl,hammer",
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot,hammer",
                     "world_state_inverted,dm_east_top,pearl,hammer",
                     "world_state_inverted,ddm_top,lift2,pearl,hammer",
                     "world_state_inverted,ddm_west,lift2,pearl,hammer",
@@ -318,14 +322,16 @@
                 "name": "Death Mountain East Top",
                 "access_rules": [
                     "dm_east_top",
-                    "world_state_open,entrance_shuffle_off,@Mountain Access,hookshot",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,@Mountain Access,hookshot",
                     "world_state_open,@Death Mountain West Top,hammer",
                     "world_state_open,ddm_floating,mirror",
                     "world_state_open,ddm_top,mirror",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_safety,mirror",
                     "world_state_inverted,@Death Mountain West Top,pearl,hammer",
                     "world_state_inverted,dm_west_top,pearl,hammer",
-                    "world_state_inverted,entrance_shuffle_off,@Mountain Access,pearl,hookshot",
-                    "world_state_inverted,entrance_shuffle_off,@Mountain Access,lift2"
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot",
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,lift2"
                 ]
             },
             {
@@ -387,7 +393,7 @@
                     "ddm_top",
                     "ddm_floating",
                     "world_state_open,@Death Mountain East Top,lift2,hammer,pearl",
-                    "world_state_open,entrance_shuffle_off,@Death Mountain East Bottom,lift2",
+                    "world_state_open,entrance_shuffle_singleentryvanilla,@Death Mountain East Bottom,lift2",
                     "world_state_inverted,@Mountain Access",
                     "world_state_inverted,@Death Mountain East Top,mirror",
                     "world_state_inverted,@Death Mountain West Bottom,mirror",

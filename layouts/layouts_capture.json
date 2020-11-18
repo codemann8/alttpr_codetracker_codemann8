@@ -15,6 +15,19 @@
             ]
         }
     },
+    "tracker_capture_entrance_dungeon": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 40,
+            "rows": [
+                [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
+                [ "cap_pod", "cap_sp", "cap_sw", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ]
+            ]
+        }
+    },
     "tracker_capture_entrance": {
         "type": "container",
         "content": {

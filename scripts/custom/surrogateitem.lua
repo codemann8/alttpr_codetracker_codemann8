@@ -75,15 +75,11 @@ function SurrogateItem:onRightClick()
 end
 
 function SurrogateItem:canProvideCode(code)
-    if code == self.code .. self.suffix then
-        return true
-    else
-        return false
-    end
+    return code == self.code .. self.suffix
 end
 
 function SurrogateItem:providesCode(code)
-    if code == self.code .. self.suffix and self:getState() ~= 0 then
+    if code == self.code .. self.suffix then
         return self:getState()
     end
     return 0
