@@ -963,17 +963,22 @@
         "stages": [
             {
                 "img": "images/mode_entrance_shuffle_off.png",
-                "codes": "entrance_shuffle,entrance_shuffle_off,",
+                "codes": "entrance_shuffle,entrance_shuffle_singleentryvanilla,entrance_shuffle_off",
                 "inherit_codes": false
             },
             {
-                "img": "images/mode_entrance_shuffle_on.png",
-                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_crossed",
+                "img": "images/mode_entrance_shuffle_dungeon.png",
+                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_singleentryvanilla,entrance_shuffle_dungeon",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_entrance_shuffle_crossed.png",
+                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_all,entrance_shuffle_crossed",
                 "inherit_codes": false
             },
             {
                 "img": "images/mode_entrance_shuffle_insanity.png",
-                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_insanity",
+                "codes": "entrance_shuffle,entrance_shuffle_on,entrance_shuffle_all,entrance_shuffle_insanity",
                 "inherit_codes": false
             }
         ]
