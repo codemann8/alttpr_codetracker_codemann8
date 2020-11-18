@@ -497,7 +497,7 @@
                 "title": "All",
                 "content": {
                     "type": "map",
-                    "maps": [ "egmap" ]
+                    "maps": [ "dungeon_egmap" ]
                 }
             },
             {
@@ -737,7 +737,7 @@
                 "title": "All",
                 "content": {
                     "type": "map",
-                    "maps": [ "egmap" ]
+                    "maps": [ "dungeon_egmap" ]
                 }
             },
             {

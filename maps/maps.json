@@ -4,32 +4,32 @@
         "name": "lightworld",
         "location_size": 80,
         "location_border_thickness": 5,
-        "img": "images/lttp_lightworld.png"
+        "img": "images/maps/lttp_lightworld.png"
     },
     {
         "name": "darkworld",
         "location_size": 80,
         "location_border_thickness": 5,
-        "img": "images/lttp_darkworld.png"
+        "img": "images/maps/lttp_darkworld.png"
     },
     {
         "name": "erlightdungeon",
         "location_size": 240,
         "location_border_thickness": 15,
-        "img": "images/lttp_lightworld.png"
+        "img": "images/maps/lttp_lightworld.png"
     },
     {
         "name": "erdarkdungeon",
         "location_size": 240,
         "location_border_thickness": 15,
-        "img": "images/lttp_darkworld.png"
+        "img": "images/maps/lttp_darkworld.png"
     },
 
     //Dungeons
     {
-        "name": "egmap",
+        "name": "dungeon_egmap",
         "location_size": 64,
         "location_border_thickness": 5,
-        "img": "images/lttp_dungeon_eg.png"
+        "img": "images/maps/dungeon_eg.png"
     }
 ]
