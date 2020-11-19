@@ -84,6 +84,37 @@
             }
         ]
     },
+    "shared_v_mode_grid": {
+        "type": "array",
+        "orientation": "vertical",
+        "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": "4.5,1,1,4",
+        "content": [
+            {
+                "type": "itemgrid",
+                "margin": "0.45,0,0.25,0",
+                "item_margin": "0.5,0",
+                "item_size": 20,
+                "rows": [
+                    [ "keysanity_map_surrogate_small", "keysanity_compass_surrogate_small" ],
+                    [ "keysanity_smallkey_surrogate_small", "keysanity_bigkey_surrogate_small" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "margin": 0,
+                "item_margin": "1,0",
+                "item_size": 40,
+                "rows": [
+                    [ "door_shuffle_surrogate_small"],
+                    [ "pool_mode_surrogate_small" ],
+                    [ "gt_crystals_surrogate" ],
+                    [ "goal_setting" ]
+                ]
+            }
+        ]
+    },
     "shared_misc_grid": {
         "type": "itemgrid",
         "h_alignment": "left",

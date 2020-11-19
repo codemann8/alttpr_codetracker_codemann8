@@ -264,13 +264,6 @@ function initGlobalVars()
 
         CaptureBadgeCache = {}
 
-        if Tracker.ActiveVariantUID == "items_only_keys" then
-            Tracker:FindObjectForCode("keysanity_map_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_compass_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(1)
-            Tracker:FindObjectForCode("keysanity_bigkey_surrogate").ItemState:setState(1)
-        end
-
         --Auto-Toggle Race Mode
         if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
