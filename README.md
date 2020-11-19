@@ -18,20 +18,19 @@ This package is meant to encompass all aspects that are desired or missing from 
 - A `Race Mode` has been added to disable autotracking features that have been disallowed per racing council rules. A checkered flag icon will replace the GT Big Key guessing game icon to indicate its activation.
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
-- MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it.
-- In `Door Rando Mode`, under the `Dungeon` tab, maps are available and are able to be manually checked off when a room is found
+- MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it
 - In `Retro Mode`, when not in Entrance Shuffle, Shops and Take Any Caves show up as smaller blips on the map. Take Any Caves show up as yellow instead of green as they aren't as essential as the Shops. Universal keys can be set without Retro Mode active, simply disabling Small Key Shuffle is the correct way to handle this scenario. An icon in the `Misc` section allows the user to track the Take Any Caves as they are found.
 - In Keysanity, Map/Compass/BK is trackable under one icon; left click toggles BK, right click cycles thru the combinations of Map and Compass.
 - GT Big Key Guessing Game, auto-tracks the GT Big Key Location, including when you look at the torch but don't get it
 - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu
 - Backwards compatibility to v30 logic with non-progressive bow, so modes like legacy versions of multiworld properly shows silvers without bow
 - Blips on the map have been made bigger to show up better on Broadcast View
-- In Entrance rando, has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found. The exits to dropdowns are shown when in `Insanity` mode
-- In Entrance rando, entrance tracking can be done by adding icons to the map. See `Usage` section below for more info.
+- Entrance rando has icons for the 8 dropdown entrances, to be marked as they are found, to show which dropdowns are left to be found. The exits to dropdowns are shown when in `Insanity` mode
+- In Entrance rando, entrance tracking can be done by adding icons to the map. See `Usage` section below for more info
+- Entrance rando has a mode for `Dungeon Shuffle` for modes where only the dungeon entrances are shuffled. This mode is also useful for Lobby Shuffle; the Sanctuary can be marked at the appropriate dungeon and will show the proper logical access it provides
 - In Entrance rando, a Dam icon has been added for when you drain the dam, this gives the player access to Swamp Palace and also the Dam item on the overworld, this is auto-tracked
-- Entrance rando, various bugs in the logic have been fixed and the logic has been updated to fit v31 scenarios
 - Door rando, an Attic icon has been added for when you bomb the Attic floor in cross dungeon door rando, this is auto-tracked
-- An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon, autotracking this is disabled as it can spoil Fast Ganon in Mystery seeds
+- An Aga2 icon has been added for when Aga2 is defeated, this is toggled by right-clicking the Aga icon
 - The current dungeon is auto-pinned when player enters a dungeon, feature is disabled by default
 - Advanced development feature, in Beta and disabled by default, output file when certain items are obtained
 - Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld
@@ -57,7 +56,7 @@ The first thing you may notice is that a few things are rearranged differently t
 - To set your game mode (Keysanity, Inverted, Entrance, Door Rando, etc) click the `Gear` icon in the `Items` section of the tracker; there you will see the various options that can be toggled.  Additionally, there are shortcut icons for these modes in the `Modes` section of the tracker.
 - The Big Key has been replaced with an icon that supports tracking Map, Compass, and Big Key, for those who wish to incorporate that into figuring out logic or determining whether a map check is worth it. (Left-click toggles BK, right-click cycles thru the combinations of Map and Compass)
 - For Entrance Rando, there are 8 Dropdown icons, indicating the 8 possible locations you can find thru a dropdown entrance. These can be used to mark the dropdowns you have found so you are aware of what is left to find. There is also a Dam icon, to indicate if the dam has been drained, this is used to indicate access to Swamp Palace and the item on the Overworld.
-- For Door Rando, the Map area features a `Dungeon` tab, which shows all the dungeon rooms in the game. This is intended to be used to mark rooms off as you find them, or for reference
+- For Door Rando, the Map area features a `Dungeon` tab, which shows all the dungeon rooms in the game and the locations of all the items, or for reference
 - In Entrance Rando modes, each map location can be set to show an icon by left-hold clicking a blip and clicking the dashed box. Selecting an icon will place an image on the map for later reference. An alternative choice for tracking entrances is [CodeTracker](https://zelda.codemann8.com/ertracker/tracker.php), a browser-based tracker which features a broadcast view and a link that can be shared with viewers.
 
 #### Broadcast View
