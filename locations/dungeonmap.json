@@ -22,12 +22,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 618,
                         "y": 1876
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 667,
                         "y": 1876,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -52,12 +52,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 422,
                         "y": 1996
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 478,
                         "y": 1996,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -78,7 +78,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 210,
                         "y": 2145
                     }
@@ -95,7 +95,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 164,
                         "y": 2090
                     }
@@ -112,7 +112,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 710,
                         "y": 880
                     }
@@ -132,7 +132,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 302,
                         "y": 574
                     }
@@ -149,7 +149,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 309,
                         "y": 401
                     }
@@ -166,7 +166,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 630,
                         "y": 301
                     }
@@ -190,7 +190,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2518,
                         "y": 2977
                     }
@@ -207,7 +207,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2791,
                         "y": 2759
                     }
@@ -224,7 +224,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2113,
                         "y": 2612
                     }
@@ -244,7 +244,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2799,
                         "y": 2880
                     }
@@ -261,7 +261,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2253,
                         "y": 2896
                     }
@@ -278,7 +278,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2441,
                         "y": 2681
                     }
@@ -298,7 +298,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2458,
                         "y": 2509
                     }
@@ -316,7 +316,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2248,
                         "y": 3281
                     }
@@ -340,7 +340,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1156,
                         "y": 1863
                     }
@@ -358,7 +358,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 935,
                         "y": 1854
                     }
@@ -375,7 +375,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1477,
                         "y": 2101
                     }
@@ -392,7 +392,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1477,
                         "y": 1845
                     }
@@ -409,7 +409,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 835,
                         "y": 1863
                     }
@@ -429,7 +429,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 800,
                         "y": 1643
                     }
@@ -449,7 +449,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 976,
                         "y": 1378
                     }
@@ -469,7 +469,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1000,
                         "y": 1193
                     }
@@ -487,7 +487,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 836,
                         "y": 968
                     }
@@ -511,7 +511,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1927,
                         "y": 1864
                     }
@@ -528,7 +528,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1863,
                         "y": 2265
                     }
@@ -545,7 +545,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1991,
                         "y": 2269
                     }
@@ -562,7 +562,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1927,
                         "y": 663
                     }
@@ -579,7 +579,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1927,
                         "y": 557
                     }
@@ -597,7 +597,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1927,
                         "y": 128
                     }
@@ -621,7 +621,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 220,
                         "y": 3693
                     }
@@ -638,7 +638,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 28,
                         "y": 3452
                     }
@@ -658,7 +658,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 164,
                         "y": 3182
                     }
@@ -678,7 +678,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 65,
                         "y": 3026
                     }
@@ -695,7 +695,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 65,
                         "y": 710
                     }
@@ -719,7 +719,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2413,
                         "y": 93
                     }
@@ -736,7 +736,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2892,
                         "y": 718
                     }
@@ -753,7 +753,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2813,
                         "y": 698
                     }
@@ -770,7 +770,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2745,
                         "y": 695
                     }
@@ -787,7 +787,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2694,
                         "y": 96
                     }
@@ -804,7 +804,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2698,
                         "y": 848
                     }
@@ -822,12 +822,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2449,
                         "y": 298
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2542,
                         "y": 474
                     }
@@ -844,7 +844,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2606,
                         "y": 388
                     }
@@ -861,7 +861,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2762,
                         "y": 326
                     }
@@ -879,12 +879,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2726,
                         "y": 1731
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2798,
                         "y": 1731
                     }
@@ -901,7 +901,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2730,
                         "y": 450
                     }
@@ -919,7 +919,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2763,
                         "y": 1482
                     }
@@ -943,7 +943,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2148,
                         "y": 567
                     }
@@ -960,7 +960,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1984,
                         "y": 840
                     }
@@ -980,7 +980,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2133,
                         "y": 931
                     }
@@ -1000,7 +1000,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1918,
                         "y": 823
                     }
@@ -1020,7 +1020,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1774,
                         "y": 903
                     }
@@ -1037,7 +1037,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1602,
                         "y": 1073
                     }
@@ -1054,7 +1054,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1666,
                         "y": 885
                     }
@@ -1074,7 +1074,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1429,
                         "y": 823
                     }
@@ -1091,7 +1091,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1124,
                         "y": 840
                     }
@@ -1108,7 +1108,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1361,
                         "y": 840
                     }
@@ -1126,7 +1126,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1726,
                         "y": 1972
                     }
@@ -1143,7 +1143,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1682,
                         "y": 1739
                     }
@@ -1163,7 +1163,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1771,
                         "y": 417
                     }
@@ -1181,7 +1181,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1607,
                         "y": 197
                     }
@@ -1205,7 +1205,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2284,
                         "y": 1450
                     }
@@ -1222,7 +1222,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1955,
                         "y": 1450
                     }
@@ -1239,7 +1239,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1995,
                         "y": 1659
                     }
@@ -1256,7 +1256,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2188,
                         "y": 1659
                     }
@@ -1273,7 +1273,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2120,
                         "y": 1464
                     }
@@ -1290,7 +1290,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1867,
                         "y": 1346
                     }
@@ -1310,7 +1310,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1571,
                         "y": 1450
                     }
@@ -1327,7 +1327,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2398,
                         "y": 1474
                     }
@@ -1347,7 +1347,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2362,
                         "y": 939
                     }
@@ -1365,7 +1365,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2505,
                         "y": 710
                     }
@@ -1389,7 +1389,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2895,
                         "y": 3426
                     }
@@ -1406,7 +1406,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2933,
                         "y": 3237
                     }
@@ -1423,7 +1423,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3180,
                         "y": 3494
                     }
@@ -1440,7 +1440,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3027,
                         "y": 3523
                     }
@@ -1460,7 +1460,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3293,
                         "y": 2864
                     }
@@ -1480,7 +1480,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2871,
                         "y": 2767
                     }
@@ -1497,7 +1497,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1441,
                         "y": 1707
                     }
@@ -1514,7 +1514,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1505,
                         "y": 1077
                     }
@@ -1531,7 +1531,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1092,
                         "y": 1219
                     }
@@ -1542,13 +1542,13 @@
                 "access_rules": [ "@Thieves Town/Blind" ],
                 "sections": [
                     {
-                        "name": "Chest",
+                        "name": "Prize",
                         "item_count": 1
                     }
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3277,
                         "y": 2747
                     }
@@ -1575,7 +1575,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3638,
                         "y": 209
                     }
@@ -1592,7 +1592,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3786,
                         "y": 599
                     }
@@ -1612,7 +1612,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3755,
                         "y": 956
                     }
@@ -1629,7 +1629,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3891,
                         "y": 1506
                     }
@@ -1654,12 +1654,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3964,
                         "y": 999
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3906,
                         "y": 960,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -1677,7 +1677,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 4039,
                         "y": 477
                     }
@@ -1694,7 +1694,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3658,
                         "y": 1996
                     }
@@ -1714,7 +1714,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3880,
                         "y": 2489
                     }
@@ -1731,7 +1731,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3762,
                         "y": 2663
                     }
@@ -1748,7 +1748,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3630,
                         "y": 2480
                     }
@@ -1765,7 +1765,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3791,
                         "y": 3410
                     }
@@ -1796,12 +1796,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 858,
                         "y": 3034
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 800,
                         "y": 2992,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -1819,7 +1819,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 707,
                         "y": 2647
                     }
@@ -1836,7 +1836,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 662,
                         "y": 3121
                     }
@@ -1856,7 +1856,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 305,
                         "y": 2626
                     }
@@ -1876,7 +1876,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 413,
                         "y": 3305
                     }
@@ -1893,7 +1893,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 321,
                         "y": 3145
                     }
@@ -1910,7 +1910,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 449,
                         "y": 3534
                     }
@@ -1927,7 +1927,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 807,
                         "y": 3153
                     }
@@ -1944,7 +1944,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 963,
                         "y": 3120
                     }
@@ -1961,7 +1961,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 65,
                         "y": 2490
                     }
@@ -1985,7 +1985,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1606,
                         "y": 3490
                     }
@@ -2003,7 +2003,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1864,
                         "y": 2872
                     }
@@ -2027,12 +2027,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1606,
                         "y": 2872
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1606,
                         "y": 3008,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -2053,7 +2053,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 941,
                         "y": 463
                     }
@@ -2070,7 +2070,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1136,
                         "y": 358
                     }
@@ -2087,7 +2087,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1220,
                         "y": 693
                     }
@@ -2104,7 +2104,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1056,
                         "y": 68
                     }
@@ -2122,22 +2122,22 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1385,
                         "y": 3403
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1313,
                         "y": 3435
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1385,
                         "y": 3466
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1313,
                         "y": 3498
                     }
@@ -2148,13 +2148,13 @@
                 "access_rules": [ "@Turtle Rock/Trinexx" ],
                 "sections": [
                     {
-                        "name": "Trinexx",
+                        "name": "Prize",
                         "item_count": 1
                     }
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 1093,
                         "y": 2759
                     }
@@ -2179,12 +2179,12 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3240,
                         "y": 2093
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3312,
                         "y": 2093
                     }
@@ -2201,7 +2201,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3160,
                         "y": 2118
                     }
@@ -2221,7 +2221,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3055,
                         "y": 2157
                     }
@@ -2239,7 +2239,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2892,
                         "y": 1980
                     }
@@ -2256,7 +2256,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3023,
                         "y": 2254
                     }
@@ -2276,7 +2276,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2927,
                         "y": 2414
                     }
@@ -2293,7 +2293,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3401,
                         "y": 1868
                     }
@@ -2311,7 +2311,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3276,
                         "y": 1879
                     }
@@ -2328,7 +2328,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3409,
                         "y": 2093
                     }
@@ -2346,7 +2346,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3405,
                         "y": 2382
                     }
@@ -2366,7 +2366,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 2959,
                         "y": 1835
                     }
@@ -2383,7 +2383,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3313,
                         "y": 2277
                     }
@@ -2401,9 +2401,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
-                        "x": 630,
-                        "y": 301
+                        "map": "dungeon_egmap",
+                        "x": 3276,
+                        "y": 306
                     }
                 ]
             },
@@ -2418,7 +2418,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3148,
                         "y": 2251
                     }
@@ -2443,17 +2443,17 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3498,
                         "y": 803
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3569,
                         "y": 803
                     },
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3534,
                         "y": 872,
                         "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
@@ -2471,7 +2471,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3401,
                         "y": 968
                     }
@@ -2488,7 +2488,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "egmap",
+                        "map": "dungeon_egmap",
                         "x": 3485,
                         "y": 1217
                     }
