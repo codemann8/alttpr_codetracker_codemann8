@@ -52,7 +52,6 @@ if Tracker.ActiveVariantUID == "items_only" then
 else
     --Maps
     Tracker:AddMaps("maps/maps.json")
-    Tracker:AddItems("items/rooms.json")
 
     --Layouts
     Tracker:AddLayouts("layouts/layouts_capture.json")
@@ -63,6 +62,7 @@ else
 
     Tracker:AddLocations("locations/regions.json")
     Tracker:AddLocations("locations/dungeons.json")
+    Tracker:AddLocations("locations/dungeonmap.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
     Tracker:AddLocations("locations/ghosts.json")

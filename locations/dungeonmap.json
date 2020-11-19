@@ -1,0 +1,3527 @@
+[
+    {
+        "name": "HC Chests",
+        "parent": "Semi-Dungeon Color",
+        "access_rules": [ "@HC Access" ],
+        "children": [
+            {
+                "name": "HC Key Guard",
+                "access_rules": [ "@Hyrule Castle & Escape/First" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Guard",
+                        "chest_unopened_img": "images/enemy-guard.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 618,
+                        "y": 1876
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 667,
+                        "y": 1876,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 749,
+                        "y": 727
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 799,
+                        "y": 727,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "HC Boomerang",
+                "access_rules": [ "@Hyrule Castle & Escape/Boomerang" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Guard",
+                        "chest_unopened_img": "images/enemy-guard.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 422,
+                        "y": 1996
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 478,
+                        "y": 1996,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 522,
+                        "y": 870
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 572,
+                        "y": 870,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "HC Ball 'N Chain",
+                "access_rules": [ "@Hyrule Castle & Escape/Ball 'N Chain Guard" ],
+                "sections": [
+                    {
+                        "name": "Guard",
+                        "chest_unopened_img": "images/enemy-chain.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 210,
+                        "y": 2145
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 252,
+                        "y": 1050
+                    }
+                ]
+            },
+            {
+                "name": "HC Prison",
+                "access_rules": [ "@Hyrule Castle & Escape/Prison" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 164,
+                        "y": 2090
+                    },
+                    {
+                        "map": "dungeon_hc",
+                        "x": 202,
+                        "y": 987
+                    }
+                ]
+            },
+            {
+                "name": "HC Dark Cross",
+                "access_rules": [ "@Hyrule Castle & Escape/Dark Cross" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 710,
+                        "y": 880
+                    },
+                    {
+                        "map": "dungeon_hc_escape",
+                        "x": 870,
+                        "y": 747
+                    }
+                ]
+            },
+            {
+                "name": "HC Key Rat",
+                "access_rules": [ "@Hyrule Castle & Escape/Key Rat" ],
+                "sections": [
+                    {
+                        "name": "Rat",
+                        "chest_unopened_img": "images/enemy-rat.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 302,
+                        "y": 574
+                    },
+                    {
+                        "map": "dungeon_hc_escape",
+                        "x": 379,
+                        "y": 381
+                    }
+                ]
+            },
+            {
+                "name": "HC Back",
+                "access_rules": [ "@Hyrule Castle & Escape/Back" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 3
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 309,
+                        "y": 401
+                    },
+                    {
+                        "map": "dungeon_hc_escape",
+                        "x": 389,
+                        "y": 173
+                    }
+                ]
+            },
+            {
+                "name": "HC Sanctuary",
+                "access_rules": [ "@Hyrule Castle & Escape/Sanctuary" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 630,
+                        "y": 301
+                    },
+                    {
+                        "map": "dungeon_hc_escape",
+                        "x": 139,
+                        "y": 362
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "EP Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@EP Access" ],
+        "children": [
+            {
+                "name": "EP Cannonball",
+                "access_rules": [ "@Eastern Palace/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2518,
+                        "y": 2977
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 1188,
+                        "y": 1121
+                    }
+                ]
+            },
+            {
+                "name": "EP Hook",
+                "access_rules": [ "@Eastern Palace/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2791,
+                        "y": 2759
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 1516,
+                        "y": 860
+                    }
+                ]
+            },
+            {
+                "name": "EP Stalfos Spawn",
+                "access_rules": [ "@Eastern Palace/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2113,
+                        "y": 2612
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 702,
+                        "y": 683
+                    }
+                ]
+            },
+            {
+                "name": "EP Dark Pot",
+                "access_rules": [ "@Eastern Palace/Dark Pot Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-lw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2799,
+                        "y": 2880
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 1525,
+                        "y": 1005
+                    }
+                ]
+            },
+            {
+                "name": "EP Big Key Chest",
+                "access_rules": [ "@Eastern Palace/Big Key Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2253,
+                        "y": 2896
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 870,
+                        "y": 1025
+                    }
+                ]
+            },
+            {
+                "name": "EP Big Chest",
+                "access_rules": [ "@Eastern Palace/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2441,
+                        "y": 2681
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 1097,
+                        "y": 767
+                    }
+                ]
+            },
+            {
+                "name": "EP Dark Eyegore",
+                "access_rules": [ "@Eastern Palace/Dark Eyegore" ],
+                "sections": [
+                    {
+                        "name": "Eyegore",
+                        "chest_unopened_img": "images/enemy-eyegore.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2458,
+                        "y": 2509
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 1111,
+                        "y": 565
+                    }
+                ]
+            },
+            {
+                "name": "EP Armos",
+                "access_rules": [ "@Eastern Palace/Armos" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "easternpalace",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2248,
+                        "y": 3281,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_ep",
+                        "x": 230,
+                        "y": 235,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "DP Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@DP Access" ],
+        "children": [
+            {
+                "name": "DP Eyegore Switch",
+                "access_rules": [ "@Desert Palace/Eyegore Switch" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1156,
+                        "y": 1863
+                    },
+                    {
+                        "map": "dungeon_dp",
+                        "x": 462,
+                        "y": 77
+                    }
+                ]
+            },
+            {
+                "name": "DP Torch",
+                "access_rules": [ "@Desert Palace/Torch" ],
+                "sections": [
+                    {
+                        "name": "Torch",
+                        "capture_item": true,
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 935,
+                        "y": 1854
+                    },
+                    {
+                        "map": "dungeon_dp",
+                        "x": 197,
+                        "y": 64
+                    }
+                ]
+            },
+            {
+                "name": "DP Popo Chest",
+                "access_rules": [ "@Desert Palace/Popo Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1477,
+                        "y": 2101
+                    },
+                    {
+                        "map": "dungeon_dp",
+                        "x": 847,
+                        "y": 361
+                    }
+                ]
+            },
+            {
+                "name": "DP Cannonball",
+                "access_rules": [ "@Desert Palace/Cannonball Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1477,
+                        "y": 1845
+                    },
+                    {
+                        "map": "dungeon_dp",
+                        "x": 847,
+                        "y": 53
+                    }
+                ]
+            },
+            {
+                "name": "DP Big Chest",
+                "access_rules": [ "@Desert Palace/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 835,
+                        "y": 1863
+                    },
+                    {
+                        "map": "dungeon_dp",
+                        "x": 77,
+                        "y": 75
+                    }
+                ]
+            },
+            {
+                "name": "DP Back Lobby",
+                "access_rules": [ "@Desert Palace/Back Lobby Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-lw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 800,
+                        "y": 1643
+                    },
+                    {
+                        "map": "dungeon_dp_back",
+                        "x": 38,
+                        "y": 1059
+                    }
+                ]
+            },
+            {
+                "name": "DP Beamos Hall",
+                "access_rules": [ "@Desert Palace/Beamos Hall Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-lw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 976,
+                        "y": 1378
+                    },
+                    {
+                        "map": "dungeon_dp_back",
+                        "x": 244,
+                        "y": 727
+                    }
+                ]
+            },
+            {
+                "name": "DP Back Tiles",
+                "access_rules": [ "@Desert Palace/Back Tiles Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-lw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1000,
+                        "y": 1193
+                    },
+                    {
+                        "map": "dungeon_dp_back",
+                        "x": 269,
+                        "y": 510
+                    }
+                ]
+            },
+            {
+                "name": "DP Lanmolas",
+                "access_rules": [ "@Desert Palace/Lanmolas" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "desertpalace",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 836,
+                        "y": 968,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_dp_back",
+                        "x": 77,
+                        "y": 236,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "ToH Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@ToH Access" ],
+        "children": [
+            {
+                "name": "TH Lobby",
+                "access_rules": [ "@Tower of Hera/Lobby\\Cage" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1927,
+                        "y": 1864
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 480,
+                        "y": 694
+                    }
+                ]
+            },
+            {
+                "name": "TH Cage",
+                "access_rules": [ "@Tower of Hera/Lobby\\Cage" ],
+                "sections": [
+                    {
+                        "name": "Item",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1863,
+                        "y": 2265
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 77,
+                        "y": 867
+                    }
+                ]
+            },
+            {
+                "name": "TH Basement",
+                "access_rules": [ "@Tower of Hera/Basement" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1991,
+                        "y": 2269
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 230,
+                        "y": 871
+                    }
+                ]
+            },
+            {
+                "name": "TH Compass Chest",
+                "access_rules": [ "@Tower of Hera/Compass Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1927,
+                        "y": 663
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 806,
+                        "y": 794
+                    }
+                ]
+            },
+            {
+                "name": "TH Big Chest",
+                "access_rules": [ "@Tower of Hera/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1927,
+                        "y": 557
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 806,
+                        "y": 668
+                    }
+                ]
+            },
+            {
+                "name": "TH Moldorm",
+                "access_rules": [ "@Tower of Hera/Moldorm" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "towerofhera",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1927,
+                        "y": 128,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_toh",
+                        "x": 806,
+                        "y": 154,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },              
+    {
+        "name": "AT Chests",
+        "parent": "Semi-Dungeon Color",
+        "access_rules": [ "@AT Access" ],
+        "children": [
+            {
+                "name": "AT Lobby",
+                "access_rules": [ "@Agahnim's Tower/Lobby" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 220,
+                        "y": 3693
+                    },
+                    {
+                        "map": "dungeon_at",
+                        "x": 264,
+                        "y": 1036
+                    }
+                ]
+            },
+            {
+                "name": "AT Dark Chest",
+                "access_rules": [ "@Agahnim's Tower/Dark Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 28,
+                        "y": 3452
+                    },
+                    {
+                        "map": "dungeon_at",
+                        "x": 35,
+                        "y": 747
+                    }
+                ]
+            },
+            {
+                "name": "AT Bow Guard",
+                "access_rules": [ "@Agahnim's Tower/Bow Guard" ],
+                "sections": [
+                    {
+                        "name": "Guard",
+                        "chest_unopened_img": "images/enemy-bowguard.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 164,
+                        "y": 3182
+                    },
+                    {
+                        "map": "dungeon_at",
+                        "x": 199,
+                        "y": 421
+                    }
+                ]
+            },
+            {
+                "name": "AT Circle of Pots",
+                "access_rules": [ "@Agahnim's Tower/Circle of Pots Key" ],
+                "sections": [
+                    {
+                        "name": "Guard",
+                        "chest_unopened_img": "images/enemy-redguard.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 65,
+                        "y": 3026
+                    },
+                    {
+                        "map": "dungeon_at",
+                        "x": 77,
+                        "y": 235
+                    }
+                ]
+            },
+            {
+                "name": "AT Agahnim",
+                "access_rules": [ "@Agahnim's Tower/Agahnim" ],
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "hosted_item": "aga"
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 65,
+                        "y": 710,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_at",
+                        "x": 403,
+                        "y": 237,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "PoD Access",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@PoD Access" ],
+        "children": [
+            {
+                "name": "PoD Shooter",
+                "access_rules": [ "@Palace of Darkness/Shooter Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2413,
+                        "y": 93
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 117,
+                        "y": 763
+                    }
+                ]
+            },
+            {
+                "name": "PoD Bow Side",
+                "access_rules": [ "@Palace of Darkness/Bow Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2892,
+                        "y": 718
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 712,
+                        "y": 554
+                    }
+                ]
+            },
+            {
+                "name": "PoD Arena Ledge",
+                "access_rules": [ "@Palace of Darkness/Arena Ledge" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2813,
+                        "y": 698
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 600,
+                        "y": 530
+                    }
+                ]
+            },
+            {
+                "name": "PoD Arena",
+                "access_rules": [ "@Palace of Darkness/Arena Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2745,
+                        "y": 695
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 552,
+                        "y": 525
+                    }
+                ]
+            },
+            {
+                "name": "PoD Stalfos Basement",
+                "access_rules": [ "@Palace of Darkness/Stalfos Basement" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2694,
+                        "y": 96
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 149,
+                        "y": 442
+                    }
+                ]
+            },
+            {
+                "name": "PoD Big Key Chest",
+                "access_rules": [ "@Palace of Darkness/Big Key Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2698,
+                        "y": 848
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 480,
+                        "y": 708
+                    }
+                ]
+            },
+            {
+                "name": "PoD Dark Maze",
+                "access_rules": [ "@Palace of Darkness/Dark Maze" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": false,
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2449,
+                        "y": 298
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2542,
+                        "y": 474
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 186,
+                        "y": 50
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 287,
+                        "y": 259
+                    }
+                ]
+            },
+            {
+                "name": "PoD Big Chest",
+                "access_rules": [ "@Palace of Darkness/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2606,
+                        "y": 388
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 370,
+                        "y": 157
+                    }
+                ]
+            },
+            {
+                "name": "PoD Turtle Room",
+                "access_rules": [ "@Palace of Darkness/Turtle Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2762,
+                        "y": 326
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 557,
+                        "y": 82
+                    }
+                ]
+            },
+            {
+                "name": "PoD Rupee Basement",
+                "access_rules": [ "@Palace of Darkness/Rupee Basement" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2726,
+                        "y": 1731
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2798,
+                        "y": 1731
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 1475,
+                        "y": 534
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 1561,
+                        "y": 534
+                    }
+                ]
+            },
+            {
+                "name": "PoD Harmless Hellway",
+                "access_rules": [ "@Palace of Darkness/Harmless Hellway" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2730,
+                        "y": 450
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 519,
+                        "y": 231
+                    }
+                ]
+            },
+            {
+                "name": "PoD Helmasaur",
+                "access_rules": [ "@Palace of Darkness/Helmasaur" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "palaceofdarkness",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2763,
+                        "y": 1482,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 1518,
+                        "y": 236,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "SP Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@SP Access" ],
+        "children": [
+            {
+                "name": "SP Entrance",
+                "access_rules": [ "@Swamp Palace/Entrance Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2148,
+                        "y": 567
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1378,
+                        "y": 679
+                    }
+                ]
+            },
+            {
+                "name": "SP Bomb Wall",
+                "access_rules": [ "@Swamp Palace/Bomb Wall" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1984,
+                        "y": 840
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1129,
+                        "y": 1025
+                    }
+                ]
+            },
+            {
+                "name": "SP Pot Row",
+                "access_rules": [ "@Swamp Palace/Pot Row Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2133,
+                        "y": 931
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1325,
+                        "y": 1135
+                    }
+                ]
+            },
+            {
+                "name": "SP Front Flood Pot",
+                "access_rules": [ "@Swamp Palace/Front Flood Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1918,
+                        "y": 823
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1078,
+                        "y": 1006
+                    }
+                ]
+            },
+            {
+                "name": "SP Hookshot Pot",
+                "access_rules": [ "@Swamp Palace/Hookshot Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1774,
+                        "y": 903
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 890,
+                        "y": 1102
+                    }
+                ]
+            },
+            {
+                "name": "SP South Side",
+                "access_rules": [ "@Swamp Palace/South Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1602,
+                        "y": 1073
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 689,
+                        "y": 1305
+                    }
+                ]
+            },
+            {
+                "name": "SP Big Chest",
+                "access_rules": [ "@Swamp Palace/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1666,
+                        "y": 885
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 766,
+                        "y": 1081
+                    }
+                ]
+            },
+            {
+                "name": "SP Left Flood Pot",
+                "access_rules": [ "@Swamp Palace/Left Flood Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1429,
+                        "y": 823
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 462,
+                        "y": 1006
+                    }
+                ]
+            },
+            {
+                "name": "SP Left Side Chest",
+                "access_rules": [ "@Swamp Palace/Left Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1124,
+                        "y": 840
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 115,
+                        "y": 1025
+                    }
+                ]
+            },
+            {
+                "name": "SP Big Key Chest",
+                "access_rules": [ "@Swamp Palace/Left Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1361,
+                        "y": 840
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 409,
+                        "y": 1025
+                    }
+                ]
+            },
+            {
+                "name": "SP Flooded Treasure",
+                "access_rules": [ "@Swamp Palace/Back" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1726,
+                        "y": 1972
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1164,
+                        "y": 824
+                    }
+                ]
+            },
+            {
+                "name": "SP Snake Waterfall",
+                "access_rules": [ "@Swamp Palace/Back" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1682,
+                        "y": 1739
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 1111,
+                        "y": 544
+                    }
+                ]
+            },
+            {
+                "name": "SP Waterway",
+                "access_rules": [ "@Swamp Palace/Waterway Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1771,
+                        "y": 417
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 890,
+                        "y": 505
+                    }
+                ]
+            },
+            {
+                "name": "SP Arrghus",
+                "access_rules": [ "@Swamp Palace/Arrghus" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "swamppalace",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1607,
+                        "y": 197,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_sp",
+                        "x": 694,
+                        "y": 236,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "SW Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@SW Access" ],
+        "children": [
+            {
+                "name": "SW Map Chest",
+                "access_rules": [ "@Skull Woods/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2284,
+                        "y": 1450
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 886,
+                        "y": 201
+                    }
+                ]
+            },
+            {
+                "name": "SW Gibdo Prison",
+                "access_rules": [ "@Skull Woods/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1955,
+                        "y": 1450
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 496,
+                        "y": 198
+                    }
+                ]
+            },
+            {
+                "name": "SW Compass Chest",
+                "access_rules": [ "@Skull Woods/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1995,
+                        "y": 1659
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 543,
+                        "y": 448
+                    }
+                ]
+            },
+            {
+                "name": "SW Pinball",
+                "access_rules": [ "@Skull Woods/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2188,
+                        "y": 1659
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 775,
+                        "y": 448
+                    }
+                ]
+            },
+            {
+                "name": "SW Big Chest",
+                "access_rules": [ "@Skull Woods/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2120,
+                        "y": 1464
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 694,
+                        "y": 214
+                    }
+                ]
+            },
+            {
+                "name": "SW Statue Switch",
+                "access_rules": [ "@Skull Woods/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1867,
+                        "y": 1346
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 390,
+                        "y": 72
+                    }
+                ]
+            },
+            {
+                "name": "SW West Lobby",
+                "access_rules": [ "@Skull Woods/West Lobby Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1571,
+                        "y": 1450
+                    },
+                    {
+                        "map": "dungeon_sw",
+                        "x": 37,
+                        "y": 201
+                    }
+                ]
+            },
+            {
+                "name": "SW Bridge",
+                "access_rules": [ "@Skull Woods/Bridge" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2398,
+                        "y": 1474
+                    },
+                    {
+                        "map": "dungeon_sw_back",
+                        "x": 101,
+                        "y": 1173
+                    }
+                ]
+            },
+            {
+                "name": "SW Gibdo",
+                "access_rules": [ "@Skull Woods/Gibdo Key" ],
+                "sections": [
+                    {
+                        "name": "Gibdo",
+                        "chest_unopened_img": "images/enemy-gibdo.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2362,
+                        "y": 939
+                    },
+                    {
+                        "map": "dungeon_sw_back",
+                        "x": 57,
+                        "y": 536
+                    }
+                ]
+            },
+            {
+                "name": "SW Mothula",
+                "access_rules": [ "@Skull Woods/Mothula" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "hosted_item": "skullwoods",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2505,
+                        "y": 710,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_sw_back",
+                        "x": 230,
+                        "y": 235,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TT Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@TT Access" ],
+        "children": [
+            {
+                "name": "TT Main Lobby",
+                "access_rules": [ "@Thieves Town/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2895,
+                        "y": 3426
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 82,
+                        "y": 1353
+                    }
+                ]
+            },
+            {
+                "name": "TT Ambush",
+                "access_rules": [ "@Thieves Town/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2933,
+                        "y": 3237
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 115,
+                        "y": 1126
+                    }
+                ]
+            },
+            {
+                "name": "TT SE Lobby",
+                "access_rules": [ "@Thieves Town/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3180,
+                        "y": 3494
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 424,
+                        "y": 1434
+                    }
+                ]
+            },
+            {
+                "name": "TT Big Key Chest",
+                "access_rules": [ "@Thieves Town/Front" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3027,
+                        "y": 3523
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 240,
+                        "y": 1468
+                    }
+                ]
+            },
+            {
+                "name": "TT Hallway",
+                "access_rules": [ "@Thieves Town/Hallway Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3293,
+                        "y": 2864
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 554,
+                        "y": 681
+                    }
+                ]
+            },
+            {
+                "name": "TT Spike Switch",
+                "access_rules": [ "@Thieves Town/Spike Switch Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2871,
+                        "y": 2767
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 53,
+                        "y": 561
+                    }
+                ]
+            },
+            {
+                "name": "TT Attic",
+                "access_rules": [ "@Thieves Town/Attic Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1441,
+                        "y": 1707
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 500,
+                        "y": 201
+                    }
+                ]
+            },
+            {
+                "name": "TT Prison Cell",
+                "access_rules": [ "@Thieves Town/Prison Cell" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1505,
+                        "y": 1077
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 1204,
+                        "y": 697
+                    }
+                ]
+            },
+            {
+                "name": "TT Big Chest",
+                "access_rules": [ "@Thieves Town/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1092,
+                        "y": 1219
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 712,
+                        "y": 863
+                    }
+                ]
+            },
+            {
+                "name": "TT Blind",
+                "access_rules": [ "@Thieves Town/Blind" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3277,
+                        "y": 2747,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_tt",
+                        "x": 539,
+                        "y": 547,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "IP Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@IP Access" ],
+        "children": [
+            {
+                "name": "IP Lobby",
+                "access_rules": [ "@Ice Palace/Lobby Key" ],
+                "sections": [
+                    {
+                        "name": "Bari",
+                        "chest_unopened_img": "images/enemy-jelly.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3638,
+                        "y": 209
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 48,
+                        "y": 559
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 48,
+                        "y": 250
+                    }
+                ]
+            },
+            {
+                "name": "IP Pengator Room",
+                "access_rules": [ "@Ice Palace/Pengator Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3786,
+                        "y": 599
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 226,
+                        "y": 1044
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 226,
+                        "y": 736
+                    }
+                ]
+            },
+            {
+                "name": "IP Conveyor",
+                "access_rules": [ "@Ice Palace/Conveyor Key" ],
+                "sections": [
+                    {
+                        "name": "Bari",
+                        "chest_unopened_img": "images/enemy-jelly.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3755,
+                        "y": 956
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 812,
+                        "y": 221
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 177,
+                        "y": 1182
+                    }
+                ]
+            },
+            {
+                "name": "IP Spike Room",
+                "access_rules": [ "@Ice Palace/Spike Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3891,
+                        "y": 1506
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 987,
+                        "y": 899
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 352,
+                        "y": 1860
+                    }
+                ]
+            },
+            {
+                "name": "IP Tongue Pull",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": [ "@Ice Palace/Tongue Pull" ],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Boulder",
+                        "access_rules": [ "@Ice Palace/Boulder Key" ],
+                        "chest_unopened_img": "images/pot-boulder.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3964,
+                        "y": 999
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3906,
+                        "y": 960,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1058,
+                        "y": 269
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1010,
+                        "y": 225,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 424,
+                        "y": 1229
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 374,
+                        "y": 1188,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "IP Ice Breaker",
+                "access_rules": [ "@Ice Palace/Ice Breaker" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 4039,
+                        "y": 477
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 529,
+                        "y": 899
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 529,
+                        "y": 590
+                    }
+                ]
+            },
+            {
+                "name": "IP Freezor",
+                "access_rules": [ "@Ice Palace/Freezor Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3658,
+                        "y": 1996
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1342,
+                        "y": 235
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 707,
+                        "y": 235
+                    }
+                ]
+            },
+            {
+                "name": "IP Hell on Ice",
+                "access_rules": [ "@Ice Palace/Ice Hell Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3880,
+                        "y": 2489
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1612,
+                        "y": 847
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 977,
+                        "y": 846
+                    }
+                ]
+            },
+            {
+                "name": "IP Ice T",
+                "access_rules": [ "@Ice Palace/Ice T" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3762,
+                        "y": 2663
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1466,
+                        "y": 1054
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 352,
+                        "y": 1860
+                    }
+                ]
+            },
+            {
+                "name": "IP Big Chest",
+                "access_rules": [ "@Ice Palace/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3630,
+                        "y": 2480
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 1309,
+                        "y": 835
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 673,
+                        "y": 834
+                    }
+                ]
+            },
+            {
+                "name": "IP Kholdstare",
+                "access_rules": [ "@Ice Palace/Kholdstare" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3791,
+                        "y": 3410,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_ip_horiz",
+                        "x": 2135,
+                        "y": 694,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_ip_vert",
+                        "x": 866,
+                        "y": 1962,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "MM Chests",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@MM Access" ],
+        "children": [
+            {
+                "name": "MM Spike Room",
+                "access_rules": [ "@Misery Mire/Spike Switch" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 858,
+                        "y": 3034
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 800,
+                        "y": 2992,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 1034,
+                        "y": 871
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 976,
+                        "y": 831,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "MM Bridge",
+                "access_rules": [ "@Misery Mire/Bridge" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 707,
+                        "y": 2647
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 865,
+                        "y": 418
+                    }
+                ]
+            },
+            {
+                "name": "MM Main Hub",
+                "access_rules": [ "@Misery Mire/Main Hub" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 662,
+                        "y": 3121
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 812,
+                        "y": 987
+                    }
+                ]
+            },
+            {
+                "name": "MM Fishbone Room",
+                "access_rules": [ "@Misery Mire/Fishbone Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 305,
+                        "y": 2626
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 383,
+                        "y": 393
+                    }
+                ]
+            },
+            {
+                "name": "MM Conveyor Switch",
+                "access_rules": [ "@Misery Mire/Conveyor Jelly" ],
+                "sections": [
+                    {
+                        "name": "Bari",
+                        "chest_unopened_img": "images/enemy-jelly.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 413,
+                        "y": 3305
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 518,
+                        "y": 1203
+                    }
+                ]
+            },
+            {
+                "name": "MM Torch Tiles",
+                "access_rules": [ "@Misery Mire/Left Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 321,
+                        "y": 3145
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 403,
+                        "y": 1015
+                    }
+                ]
+            },
+            {
+                "name": "MM Torch Cutscene",
+                "access_rules": [ "@Misery Mire/Left Side" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 449,
+                        "y": 3534
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 556,
+                        "y": 1483
+                    }
+                ]
+            },
+            {
+                "name": "MM Blue Pegs",
+                "access_rules": [ "@Misery Mire/Blue Peg Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 807,
+                        "y": 3153
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 986,
+                        "y": 1025
+                    }
+                ]
+            },
+            {
+                "name": "MM Big Chest",
+                "access_rules": [ "@Misery Mire/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 963,
+                        "y": 3120
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 1173,
+                        "y": 988
+                    }
+                ]
+            },
+            {
+                "name": "MM Vitreous",
+                "access_rules": [ "@Misery Mire/Vitreous" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 65,
+                        "y": 2490,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_mm",
+                        "x": 77,
+                        "y": 211,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TR Access",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@TR Access" ],
+        "children": [
+            {
+                "name": "TR Compass Chest",
+                "access_rules": [ "@Turtle Rock/Compass Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1606,
+                        "y": 3490
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1655,
+                        "y": 1103
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 712,
+                        "y": 1737
+                    }
+                ]
+            },
+            {
+                "name": "TR Roller Room",
+                "access_rules": [ "@Turtle Rock/Roller Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1864,
+                        "y": 2872
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1963,
+                        "y": 361
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 1021,
+                        "y": 996
+                    }
+                ]
+            },
+            {
+                "name": "TR Chain Chomp",
+                "access_rules": [ "@Turtle Rock/Chain Chomp" ],
+                "sections": [
+                    {
+                        "name": "Pokey",
+                        "chest_unopened_img": "images/enemy-pokey.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1606,
+                        "y": 2872
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1606,
+                        "y": 3008,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1655,
+                        "y": 361
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1655,
+                        "y": 516,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 712,
+                        "y": 996
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 712,
+                        "y": 1151,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "TR Lava Pokey",
+                "access_rules": [ "@Turtle Rock/Lava Pokey" ],
+                "sections": [
+                    {
+                        "name": "Pokey",
+                        "chest_unopened_img": "images/enemy-pokey.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 941,
+                        "y": 463
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 839,
+                        "y": 864
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 526,
+                        "y": 559
+                    }
+                ]
+            },
+            {
+                "name": "TR Lava",
+                "access_rules": [ "@Turtle Rock/Lava Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1136,
+                        "y": 358
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1073,
+                        "y": 737
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 765,
+                        "y": 428
+                    }
+                ]
+            },
+            {
+                "name": "TR Big Chest",
+                "access_rules": [ "@Turtle Rock/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1220,
+                        "y": 693
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 1174,
+                        "y": 1138
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 866,
+                        "y": 830
+                    }
+                ]
+            },
+            {
+                "name": "TR Crystaroller",
+                "access_rules": [ "@Turtle Rock/Crystaroller Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1056,
+                        "y": 68
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 977,
+                        "y": 390
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 673,
+                        "y": 82
+                    }
+                ]
+            },
+            {
+                "name": "TR Laser Bridge",
+                "access_rules": [ "@Turtle Rock/Laser Bridge" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 4
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1385,
+                        "y": 3403
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1313,
+                        "y": 3435
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1385,
+                        "y": 3466
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1313,
+                        "y": 3498
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 429,
+                        "y": 998
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 342,
+                        "y": 1036
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 429,
+                        "y": 1075
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 342,
+                        "y": 1113
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 429,
+                        "y": 1632
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 342,
+                        "y": 1670
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 429,
+                        "y": 1709
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 342,
+                        "y": 1747
+                    }
+                ]
+            },
+            {
+                "name": "TR Trinexx",
+                "access_rules": [ "@Turtle Rock/Trinexx" ],
+                "sections": [
+                    {
+                        "name": "Prize",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 1093,
+                        "y": 2759,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_tr_horiz",
+                        "x": 77,
+                        "y": 226,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_tr_vert",
+                        "x": 77,
+                        "y": 860,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "GT Access",
+        "parent": "Dungeon Color",
+        "access_rules": [ "@GT Access" ],
+        "children": [
+            {
+                "name": "GT Hope Room",
+                "access_rules": [ "@Ganon's Tower/Hope Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3240,
+                        "y": 2093
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3312,
+                        "y": 2093
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 822,
+                        "y": 388
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 908,
+                        "y": 388
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 840,
+                        "y": 1948
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 927,
+                        "y": 1948
+                    }
+                ]
+            },
+            {
+                "name": "GT Torch",
+                "access_rules": [ "@Ganon's Tower/Torch" ],
+                "sections": [
+                    {
+                        "name": "Torch",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3160,
+                        "y": 2118
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 726,
+                        "y": 419
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 744,
+                        "y": 1979
+                    }
+                ]
+            },
+            {
+                "name": "GT Conveyor Bumper",
+                "access_rules": [ "@Ganon's Tower/Conveyor Bumper Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3055,
+                        "y": 2157
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 596,
+                        "y": 461
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 613,
+                        "y": 2021
+                    }
+                ]
+            },
+            {
+                "name": "GT Stalfos Room",
+                "access_rules": [ "@Ganon's Tower/Stalfos Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 4
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2892,
+                        "y": 1980
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 360,
+                        "y": 229
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 360,
+                        "y": 277
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 447,
+                        "y": 229
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 447,
+                        "y": 277
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 378,
+                        "y": 1789
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 378,
+                        "y": 1837
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 464,
+                        "y": 1789
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 464,
+                        "y": 1837
+                    }
+                ]
+            },
+            {
+                "name": "GT Map Chest",
+                "access_rules": [ "@Ganon's Tower/Map Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3023,
+                        "y": 2254
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 562,
+                        "y": 580
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 580,
+                        "y": 2140
+                    }
+                ]
+            },
+            {
+                "name": "GT Double Switch",
+                "access_rules": [ "@Ganon's Tower/Double Switch Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2927,
+                        "y": 2414
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 442,
+                        "y": 769
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 460,
+                        "y": 2329
+                    }
+                ]
+            },
+            {
+                "name": "GT Firesnake",
+                "access_rules": [ "@Ganon's Tower/Firesnake" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3401,
+                        "y": 1868
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 1016,
+                        "y": 118
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 1036,
+                        "y": 1678
+                    }
+                ]
+            },
+            {
+                "name": "GT Rando Room",
+                "access_rules": [ "@Ganon's Tower/Rando Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 4
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3276,
+                        "y": 1879
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 865,
+                        "y": 132
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 884,
+                        "y": 1693
+                    }
+                ]
+            },
+            {
+                "name": "GT Tile Room",
+                "access_rules": [ "@Ganon's Tower/Tile Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3409,
+                        "y": 2093
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 1025,
+                        "y": 390
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 1043,
+                        "y": 1950
+                    }
+                ]
+            },
+            {
+                "name": "GT Compass Room",
+                "access_rules": [ "@Ganon's Tower/Compass Room" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 4
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3405,
+                        "y": 2382
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 1019,
+                        "y": 735
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 1038,
+                        "y": 2295
+                    }
+                ]
+            },
+            {
+                "name": "GT Post-Compass",
+                "access_rules": [ "@Ganon's Tower/Post-Compass Key" ],
+                "sections": [
+                    {
+                        "name": "Pot",
+                        "chest_unopened_img": "images/pot-dw.png",
+                        "chest_opened_img": "images/pot-collected.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2959,
+                        "y": 1835
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 485,
+                        "y": 81
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 503,
+                        "y": 1640
+                    }
+                ]
+            },
+            {
+                "name": "GT Bob",
+                "access_rules": [ "@Ganon's Tower/Bob\\Ice Armos" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3313,
+                        "y": 2277
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 906,
+                        "y": 608
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 925,
+                        "y": 2169
+                    }
+                ]
+            },
+            {
+                "name": "GT Ice Armos",
+                "access_rules": [ "@Ganon's Tower/Bob\\Ice Armos" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 3
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3276,
+                        "y": 306
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 865,
+                        "y": 1032
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 901,
+                        "y": 2591
+                    }
+                ]
+            },
+            {
+                "name": "GT Big Chest",
+                "access_rules": [ "@Ganon's Tower/Big Chest" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3148,
+                        "y": 2251
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 711,
+                        "y": 578
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 730,
+                        "y": 2138
+                    }
+                ]
+            },
+            {
+                "name": "GT Mini Helmasaur",
+                "access_rules": [ "@Ganon's Tower/Mini Helmasaur" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "clear_as_group": true,
+                        "item_count": 2
+                    },
+                    {
+                        "name": "Mini Helmasaur",
+                        "chest_unopened_img": "images/enemy-helma.png",
+                        "chest_opened_img": "images/enemy-defeated.png",
+                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3498,
+                        "y": 803
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3569,
+                        "y": 803
+                    },
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3534,
+                        "y": 872,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 2092,
+                        "y": 61
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 2178,
+                        "y": 61
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 2135,
+                        "y": 113,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 822,
+                        "y": 347
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 909,
+                        "y": 347
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 866,
+                        "y": 499,
+                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                    }
+                ]
+            },
+            {
+                "name": "GT Pre-Moldorm",
+                "access_rules": [ "@Ganon's Tower/Pre-Moldorm" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3401,
+                        "y": 968
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 1976,
+                        "y": 254
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 707,
+                        "y": 544
+                    }
+                ]
+            },
+            {
+                "name": "GT Validation",
+                "access_rules": [ "@Ganon's Tower/Validation" ],
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3485,
+                        "y": 1217
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 2077,
+                        "y": 552
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 808,
+                        "y": 843
+                    }
+                ]
+            },
+            {
+                "name": "GT Agahnim 2",
+                "access_rules": [ "@Ganon's Tower/Validation" ],
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "hosted_item": "aga2"
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 3405,
+                        "y": 196,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_gt_horiz",
+                        "x": 2307,
+                        "y": 235,
+                        "size": 96
+                    },
+                    {
+                        "map": "dungeon_gt_vert",
+                        "x": 1039,
+                        "y": 235,
+                        "size": 96
+                    }
+                ]
+            }
+        ]
+    }
+]

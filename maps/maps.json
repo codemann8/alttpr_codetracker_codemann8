@@ -1,26 +1,149 @@
 ﻿[
+    //Overworld
     {
         "name": "lightworld",
         "location_size": 80,
         "location_border_thickness": 5,
-        "img": "images/lttp_lightworld.png"
+        "img": "images/maps/lttp_lightworld.png"
     },
     {
         "name": "darkworld",
         "location_size": 80,
         "location_border_thickness": 5,
-        "img": "images/lttp_darkworld.png"
+        "img": "images/maps/lttp_darkworld.png"
     },
     {
         "name": "erlightdungeon",
         "location_size": 240,
         "location_border_thickness": 15,
-        "img": "images/lttp_lightworld.png"
+        "img": "images/maps/lttp_lightworld.png"
     },
     {
         "name": "erdarkdungeon",
         "location_size": 240,
         "location_border_thickness": 15,
-        "img": "images/lttp_darkworld.png"
+        "img": "images/maps/lttp_darkworld.png"
+    },
+
+    //Dungeons
+    {
+        "name": "dungeon_egmap",
+        "location_size": 64,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_eg.png"
+    },
+    {
+        "name": "dungeon_hc",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_hc.png"
+    },
+    {
+        "name": "dungeon_hc_escape",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_hc_escape.png"
+    },
+    {
+        "name": "dungeon_ep",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_ep.png"
+    },
+    {
+        "name": "dungeon_dp",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_dp.png"
+    },
+    {
+        "name": "dungeon_dp_back",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_dp_back.png"
+    },
+    {
+        "name": "dungeon_toh",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_toh.png"
+    },
+    {
+        "name": "dungeon_at",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_at.png"
+    },
+    {
+        "name": "dungeon_pod",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_pod.png"
+    },
+    {
+        "name": "dungeon_sp",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_sp.png"
+    },
+    {
+        "name": "dungeon_sw",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_sw.png"
+    },
+    {
+        "name": "dungeon_sw_back",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_sw_back.png"
+    },
+    {
+        "name": "dungeon_tt",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_tt.png"
+    },
+    {
+        "name": "dungeon_ip_horiz",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_ip_horiz.png"
+    },
+    {
+        "name": "dungeon_ip_vert",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_ip_vert.png"
+    },
+    {
+        "name": "dungeon_mm",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_mm.png"
+    },
+    {
+        "name": "dungeon_tr_horiz",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_tr_horiz.png"
+    },
+    {
+        "name": "dungeon_tr_vert",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_tr_vert.png"
+    },
+    {
+        "name": "dungeon_gt_horiz",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_gt_horiz.png"
+    },
+    {
+        "name": "dungeon_gt_vert",
+        "location_size": 48,
+        "location_border_thickness": 5,
+        "img": "images/maps/dungeon_gt_vert.png"
     }
 ]

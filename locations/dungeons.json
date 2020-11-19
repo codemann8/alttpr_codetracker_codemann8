@@ -1314,7 +1314,7 @@
                         "item_count": 1
                     },
                     {
-                        "name": "Khold",
+                        "name": "Kholdstare",
                         "access_rules": [
                             "@Ice Palace/Pre-Kholdstare,hammer,lift1,firerod",
                             "@Ice Palace/Pre-Kholdstare,hammer,lift1,$canUseMedallions,bombos"

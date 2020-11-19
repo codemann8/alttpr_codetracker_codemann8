@@ -507,7 +507,7 @@
                 "title": "Dungeon",
                 "content": {
                     "type": "layout",
-                    "key": "shared_doorrando"
+                    "key": "shared_v_doorrando"
                 }
             }
         ]
