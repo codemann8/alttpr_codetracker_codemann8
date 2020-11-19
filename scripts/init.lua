@@ -52,7 +52,6 @@ if Tracker.ActiveVariantUID == "items_only" then
 else
     --Maps
     Tracker:AddMaps("maps/maps.json")
-    Tracker:AddItems("items/rooms.json")
 
     --Layouts
     Tracker:AddLayouts("layouts/layouts_capture.json")
