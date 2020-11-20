@@ -45,13 +45,19 @@ ConsumableItem:set {
     SwapActions = false
 }
 
-function ConsumableItem:init(name, code, count)
-    count = count or self.MaxCount
+function ConsumableItem:init(name, code, maxqty, img, disabledImg, imgMods, disabledImgMods)
+    maxqty = maxqty or self.MaxCount
 
     self:createItem(name)
     self.code = code
 
-    self.MaxCount = count
+    self.MaxCount = maxqty
+    if img then
+        self.FullIcon = ImageReference:FromPackRelativePath(img, imgMods or "")
+    end
+    if disabledImg then
+        self.EmptyIcon = ImageReference:FromPackRelativePath(disabledImg, disabledImgMods or "")
+    end
 end
 
 function ConsumableItem:UpdateBadgeAndIcon()
