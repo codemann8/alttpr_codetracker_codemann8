@@ -7,52 +7,44 @@
             "dropshadow": true,
             "content": [
                 {
-                    "type": "dock",
-                    "dock": "left",
-                    "v_alignment": "stretch",
+                    "type": "array",
+                    "orientation": "horizontal",
                     "content": [
                         {
                             "type": "array",
-                            "orientation": "horizontal",
+                            "orientation": "vertical",
+                            "dock": "top",
                             "content": [
                                 {
-                                    "type": "array",
-                                    "orientation": "vertical",
-                                    "dock": "top",
-                                    "content": [
-                                        {
-                                            "type": "group",
-                                            "header": "Items",
-                                            "header_content": {
-                                                "type": "button_popup",
-                                                "style": "settings",
-                                                "popup_background": "#55212121",
-                                                "layout": "settings_popup"
-                                            },
-                                            "content": {
-                                                "type": "layout",
-                                                "key": "shared_item_grid"
-                                            }
-                                        },
-                                        {
-                                            "type": "group",
-                                            "header": "Dungeons",
-                                            "content": {
-                                                "type": "layout",
-                                                "key": "shared_dungeon_v_grid"
-                                            }
-                                        },
-                                        {
-                                            "type": "group",
-                                            "header": "Modes",
-                                            "margin": "0,0,3,0",
-                                            "dock": "left",
-                                            "content": {
-                                                "type": "layout",
-                                                "key": "shared_mode_grid"
-                                            }
-                                        }
-                                    ]
+                                    "type": "group",
+                                    "header": "Items",
+                                    "header_content": {
+                                        "type": "button_popup",
+                                        "style": "settings",
+                                        "popup_background": "#55212121",
+                                        "layout": "settings_popup"
+                                    },
+                                    "content": {
+                                        "type": "layout",
+                                        "key": "shared_item_grid"
+                                    }
+                                },
+                                {
+                                    "type": "group",
+                                    "header": "Dungeons",
+                                    "content": {
+                                        "type": "layout",
+                                        "key": "shared_dungeon_v_grid"
+                                    }
+                                },
+                                {
+                                    "type": "group",
+                                    "header": "Modes",
+                                    "margin": "0,0,3,0",
+                                    "content": {
+                                        "type": "layout",
+                                        "key": "shared_mode_grid"
+                                    }
                                 }
                             ]
                         }
@@ -69,60 +61,51 @@
             "dropshadow": true,
             "content": [
                 {
-                    "type": "dock",
-                    "dock": "bottom",
+                    "type": "array",
+                    "orientation": "vertical",
                     "content": [
                         {
                             "type": "array",
-                            "orientation": "vertical",
+                            "orientation": "horizontal",
                             "content": [
                                 {
-                                    "type": "array",
-                                    "orientation": "vertical",
-                                    "content": [
-                                        {
-                                            "type": "array",
-                                            "orientation": "horizontal",
-                                            "content": [
-                                                {
-                                                    "type": "group",
-                                                    "header": "Items",
-                                                    "header_content": {
-                                                        "type": "button_popup",
-                                                        "style": "settings",
-                                                        "popup_background": "#55212121",
-                                                        "layout": "settings_popup"
-                                                    },
-                                                    "margin": "0,0,3,0",
-                                                    "dock": "left",
-                                                    "content": {
-                                                        "type": "layout",
-                                                        "key": "shared_item_grid"
-                                                    }
-                                                },
-                                                {
-                                                    "type": "group",
-                                                    "header": "Dungeons",
-                                                    "margin": "0,0,3,0",
-                                                    "dock": "left",
-                                                    "content": {
-                                                        "type": "layout",
-                                                        "key": "shared_dungeon_grid"
-                                                    }
-                                                },
-                                                {
-                                                    "type": "group",
-                                                    "header": "Modes",
-                                                    "margin": "0,0,3,0",
-                                                    "dock": "left",
-                                                    "content": {
-                                                        "type": "layout",
-                                                        "key": "shared_v_mode_grid"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
+                                    "type": "group",
+                                    "header": "Items",
+                                    "margin": "0,0,3,0",
+                                    "dock": "left",
+                                    "header_content": {
+                                        "type": "button_popup",
+                                        "style": "settings",
+                                        "popup_background": "#55212121",
+                                        "layout": "settings_popup"
+                                    },
+                                    "content": {
+                                        "type": "layout",
+                                        "v_alignment": "center",
+                                        "key": "shared_item_grid"
+                                    }
+                                },
+                                {
+                                    "type": "group",
+                                    "header": "Dungeons",
+                                    "margin": "0,0,3,0",
+                                    "dock": "left",
+                                    "content": {
+                                        "type": "layout",
+                                        "v_alignment": "center",
+                                        "key": "shared_dungeon_grid"
+                                    }
+                                },
+                                {
+                                    "type": "group",
+                                    "header": "Modes",
+                                    "margin": "0,0,3,0",
+                                    "dock": "left",
+                                    "content": {
+                                        "type": "layout",
+                                        "v_alignment": "center",
+                                        "key": "shared_v_mode_grid"
+                                    }
                                 }
                             ]
                         }
