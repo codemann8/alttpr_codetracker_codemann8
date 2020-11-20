@@ -122,8 +122,8 @@
     "shared_misc_left": {
         "type": "array",
         "orientation": "horizontal",
-        "h_alignment": "center",
-        "margin": "-32,0,32,0",
+        "h_alignment": "left",
+        "margin": "-30,0,0,0",
         "content": [
             {
                 "type": "itemgrid",
@@ -132,23 +132,19 @@
                 "item_size": 40,
                 "badge_font_size": 20,
                 "rows": [
-                    [ "", "" ]
+                    [ "", "", "" ]
                 ]
             },
-            {
-
-            }
+            {}
         ]
     },
     "shared_misc_right": {
         "type": "array",
         "orientation": "horizontal",
-        "h_alignment": "center",
-        "margin": "32,0,-32,0",
+        "h_alignment": "right",
+        "margin": "-4,0,0,0",
         "content": [
-            {
-
-            },
+            {},
             {
                 "type": "itemgrid",
                 "v_alignment": "center",
@@ -157,6 +153,16 @@
                 "badge_font_size": 20,
                 "rows": [
                     [ "door_dungeonselect", "door_totalchest" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "item_margin": "-16,0",
+                "item_size": 40,
+                "badge_font_size": 20,
+                "rows": [
+                    [ "door_totalkey" ]
                 ]
             }
         ]

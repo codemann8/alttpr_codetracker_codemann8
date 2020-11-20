@@ -261,6 +261,7 @@ function initGlobalVars()
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
         OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+        OBJ_DOORKEY = Tracker:FindObjectForCode("door_totalkey")
 
         CaptureBadgeCache = {}
 
@@ -397,6 +398,7 @@ function updateIcons()
 
         OBJ_DOORDUNGEON.ItemState:updateIcon()
         OBJ_DOORCHEST.ItemState:updateIcon()
+        OBJ_DOORKEY.ItemState:updateIcon()
     end
 end
 

@@ -69,7 +69,8 @@ else
 
     --Custom Items
     DoorDungeonSelect()
-    DoorTotalChest()
+    DoorTotalChest("Chests", "chest", "item", "images/0058.png")
+    DoorTotalChest("Keys", "key", "smallkey", "images/SmallKey2.png")
 
     WorldStateMode(true):linkSurrogate(WorldStateMode(false))
     KeysanityMode(false, "Map"):linkSurrogate(KeysanityMode(true, "Map"))
