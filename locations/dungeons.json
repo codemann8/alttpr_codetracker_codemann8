@@ -711,8 +711,8 @@
                     {
                         "name": "Rupee Basement",
                         "access_rules": [
-                            "door_shuffle_off,@Palace of Darkness/Turtle Room,[lamp]",
-                            "door_shuffle_on,[lamp]"
+                            "door_shuffle_off,@Palace of Darkness/Turtle Room,[firesource]",
+                            "door_shuffle_on,[firesource]"
                         ],
                         "clear_as_group": true,
                         "item_count": 2
