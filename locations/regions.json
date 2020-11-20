@@ -280,6 +280,7 @@
         "name": "Mountain Access",
         "access_rules": [
             "world_state_open,flute",
+            "world_state_inverted,activated_flute",
             "world_state_inverted,@Light World,pearl,flute",
             "entrance_shuffle_singleentryvanilla,lift1,[lamp]"
         ]
