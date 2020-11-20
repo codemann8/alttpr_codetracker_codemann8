@@ -405,7 +405,7 @@
         "type": "consumable",
         "img": "images/SmallKey2.png",
         "codes": "hc_potkey",
-        "max_quantity": 3
+        "max_quantity": 4
     },
     {
         "name": "Eastern Palace Pot Key",

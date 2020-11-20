@@ -345,7 +345,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         else
             currentKeys = ReadU8(segment, address)
         end
-        
+
         local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
         if potKeys and OBJ_POOL.CurrentStage == 0 then
             local offsetKey = 0
@@ -421,7 +421,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
 
             if potkey and OBJ_POOL.CurrentStage > 0 then
                 local addedKeys = potkey.AcquiredCount
-                if dungeonPrefix == "hc" and bigkey.Active then
+                if OBJ_KEYSANITY_BIG.CurrentStage == 0 and dungeonPrefix == "hc" and bigkey.Active then
                     addedKeys = addedKeys - 1
                 end
                 item.AcquiredCount = math.max(item.MaxCount - (((chest.MaxCount - chest.AcquiredCount) - dungeonItems) + addedKeys), 0)
