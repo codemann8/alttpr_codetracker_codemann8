@@ -36,24 +36,23 @@ function ExtendedConsumableItem:UpdateBadgeAndIcon()
         end
     end
     if not self.SwapActions and self:getProperty("section") then
-        local access = tostring(self:getProperty("section").AccessibilityLevel)
-        access = access:sub(0, access:find(":") - 1)
+        local access = self:getProperty("section").AccessibilityLevel
 
-        if access == "Normal" then
+        if access == AccessibilityLevel.Normal then
             self.ItemInstance.BadgeTextColor = "#00ff00"
-        elseif access == "None" then
+        elseif access == AccessibilityLevel.None then
             self.ItemInstance.BadgeTextColor = "#ff3030"
-        elseif access == "Partial" then
+        elseif access == AccessibilityLevel.Partial then
             self.ItemInstance.BadgeTextColor = "DarkOrange"
-        elseif access == "SequenceBreak" then
+        elseif access == AccessibilityLevel.SequenceBreak then
             self.ItemInstance.BadgeTextColor = "Yellow"
-        elseif access == "Inspect" then
+        elseif access == AccessibilityLevel.Inspect then
             self.ItemInstance.BadgeTextColor = "CornflowerBlue"
-        elseif access == "Unlockable" then
+        elseif access == AccessibilityLevel.Unlockable then
             self.ItemInstance.BadgeTextColor = "MediumPurple"
-        elseif access == "Glitch" then
+        elseif access == AccessibilityLevel.Glitch then
             self.ItemInstance.BadgeTextColor = "#b399c1"
-        --elseif access == "Cleared" then
+        --elseif access == AccessibilityLevel.Cleared then
             --self.ItemInstance.BadgeTextColor = "#333333"
         else
             self.ItemInstance.BadgeTextColor = "WhiteSmoke"
