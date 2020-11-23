@@ -15,6 +15,7 @@ This package is meant to encompass all aspects that are desired or missing from 
 - Dungeon chests show on the item tracker; the chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest count will change on the fly when you change thru the various Keysanity (Dungeon Item) modes. The color of the chest counts will indicate the level of access you have to that dungeon, the colors used are identical to the colors used on the map. In `Crossed Door Rando` mode, the colors have a different meaning, see the `Door Rando` section for more details.
 - Dungeon Item Shuffles (Keysanity options) are separated as individual toggles (Map, Compass, Small Keys, Big Key). Left click toggles each type, right click enables everything up to that point. (ie. right click on Big Key effectively sets it to Full Keysanity)
 - Key Drop Shuffle (Pool Mode) is a mode where pot keys and enemy drop keys are shuffled into the standard item pool, this affects the dungeon item counts along with dungeon key counts
+- Glitch Mode can be toggled to show logical access with OWG Logic, MG Logic is coming soon
 - A `Race Mode` has been added to disable autotracking features that have been disallowed per racing council rules. A checkered flag icon will replace the GT Big Key guessing game icon to indicate its activation.
 - Dungeon locations on the map tracker shows every chest location and has it's own logical access defined, except where they can be grouped
 - Dungeon locations having a larger blip on the map compared to other locations
