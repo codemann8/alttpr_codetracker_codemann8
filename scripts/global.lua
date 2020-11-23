@@ -257,6 +257,7 @@ function initGlobalVars()
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
         OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
         OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
+        OBJ_GLITCH = Tracker:FindObjectForCode("glitch_mode")
         OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")

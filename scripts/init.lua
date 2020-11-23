@@ -29,6 +29,7 @@ ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/retromode.lua")
 ScriptHost:LoadScript("scripts/custom/poolmode.lua")
+ScriptHost:LoadScript("scripts/custom/glitchmode.lua")
 ScriptHost:LoadScript("scripts/custom/racemode.lua")
 
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
@@ -81,6 +82,7 @@ else
     DoorShuffleMode(false):linkSurrogate(DoorShuffleMode(true))
     RetroMode(false):linkSurrogate(RetroMode(true))
     PoolMode(false):linkSurrogate(PoolMode(true))
+    GlitchMode(false):linkSurrogate(GlitchMode(true))
     RaceMode(false):linkSurrogate(RaceMode(true))
 
     GTCrystalReq()

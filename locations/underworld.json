@@ -59,7 +59,8 @@
                 "name": "Cave",
                 "access_rules": [
                     "world_state_open",
-                    "world_state_inverted,[pearl]"
+                    "world_state_inverted,[pearl]",
+                    "world_state_inverted,glitch_mode_ow"
                 ],
                 "item_count": 4
             },
@@ -85,19 +86,25 @@
     {
         "name": "Blind's House",
         "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
         "sections": [
             {
                 "name": "Basement",
                 "short_name": "Main",
+                "access_rules": [
+                    "world_state_open",
+                    "world_state_inverted,pearl",
+                    "world_state_inverted,[pearl],mirror",
+                    "world_state_inverted,glitch_mode_ow,mirror"
+                ],
                 "item_count": 4
             },
             {
                 "name": "Bombable Wall",
                 "short_name": "Bomb",
+                "access_rules": [
+                    "world_state_open",
+                    "world_state_inverted,pearl"
+                ],
                 "item_count": 1
             }
         ],
@@ -157,6 +164,7 @@
         "access_rules": [
             "world_state_open,hammer",
             "world_state_open,lift2,pearl,mirror",
+            "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl,hammer"
         ],
         "sections": [
@@ -234,7 +242,9 @@
         "parent": "Light World",
         "access_rules": [
             "world_state_open,@Northwest Dark World,pearl,mirror",
-            "world_state_inverted,pearl"
+            "world_state_open,glitch_mode_ow,boots",
+            "world_state_inverted,pearl",
+            "glitch_mode_ow,@Mountain Access,mirror"
         ],
         "sections": [
             {
@@ -253,7 +263,7 @@
                 "map": "darkworld",
                 "x": 1146,
                 "y": 530,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
@@ -269,6 +279,7 @@
                 "name": "The Crypt",
                 "access_rules": [
                     "lift2,boots",
+                    "glitch_mode_ow,boots",
                     "world_state_open,@Northwest Dark World,pearl,mirror,boots"
                 ],
                 "item_count": 1
@@ -340,6 +351,7 @@
         "parent": "Desert Area",
         "access_rules": [
             "world_state_open,@Mire Area,mirror",
+            "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl"
         ],
         "sections": [
@@ -360,7 +372,7 @@
                 "map": "darkworld",
                 "x": 354,
                 "y": 1560,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
@@ -390,19 +402,16 @@
         "name": "Cave 45",
         "parent": "Light World",
         "access_rules": [
-            "world_state_open",
+            "world_state_open,@South Dark World,mirror",
+            "world_state_open,boots",
             "world_state_inverted,pearl",
+            "world_state_inverted,[pearl],mirror",
+            "world_state_inverted,glitch_mode_ow,mirror",
             "{world_state_inverted}"
         ],
         "sections": [
             {
                 "name": "Circle of Bushes",
-                "access_rules": [
-                    "world_state_open,@South Dark World,mirror",
-                    "world_state_inverted,pearl",
-                    "world_state_inverted,[pearl],mirror",
-                    "{world_state_inverted}"
-                ],
                 "capture_item": true,
                 "item_count": 1
             }
@@ -418,7 +427,7 @@
                 "map": "darkworld",
                 "x": 552,
                 "y": 1693,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
@@ -428,7 +437,8 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "world_state_inverted,[pearl],mirror"
+            "world_state_inverted,[pearl],mirror",
+            "world_state_inverted,glitch_mode_ow,mirror"
         ],
         "sections": [
             {
@@ -499,7 +509,8 @@
         "parent": "Light World",
         "access_rules": [
             "world_state_open",
-            "world_state_inverted,pearl"
+            "world_state_inverted,pearl",
+            "world_state_inverted,glitch_mode_ow,[pearl],boots,bottle"
         ],
         "sections": [
             {
@@ -621,7 +632,8 @@
         "parent": "Death Mountain East Top",
         "access_rules": [
             "world_state_open",
-            "world_state_inverted,[pearl]"
+            "world_state_inverted,[pearl]",
+            "glitch_mode_ow"
         ],
         "sections": [
             {
@@ -645,13 +657,16 @@
             "world_state_open,@TR Main Entrance,pearl,somaria,tr_smallkey:2,mirror",
             "world_state_open,@TR Main Entrance,pearl,somaria,[firerod],keysanity_smallkey_off,mirror",
             "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror",
+            "world_state_open,glitch_mode_ow,boots,hammer,mirror",
+            "world_state_open,glitch_mode_ow,pearl,boots,[sword],mirror",
+            "world_state_open,glitch_mode_ow,pearl,boots,[hookshot],mirror",
             "world_state_inverted,@Death Mountain East Top,pearl"
         ],
         "sections": [
             {
-                    "name": "Cave",
-                    "access_rules": [ "hammer" ],
-                    "item_count": 1
+                "name": "Cave",
+                "access_rules": [ "hammer" ],
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -665,7 +680,7 @@
                 "map": "darkworld",
                 "x": 1694,
                 "y": 204,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off" ]
+                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off,glitch_mode_none" ]
             }
         ]
     },
@@ -682,7 +697,9 @@
                 "access_rules": [
                     "flippers",
                     "pearl,[flippers]",
-                    "boots,[flippers]"
+                    "boots,[flippers]",
+                    "glitch_mode_ow,boots",
+                    "glitch_mode_ow,pearl"
                 ],
                 "item_count": 2
             }
@@ -702,6 +719,9 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,[pearl],mirror",
+            "world_state_open,glitch_mode_ow,[mirror]",
+            "world_state_open,glitch_mode_ow,[pearl]",
             "world_state_inverted"
         ],
         "sections": [
@@ -724,6 +744,9 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,[pearl],mirror",
+            "world_state_open,glitch_mode_ow,[mirror]",
+            "world_state_open,glitch_mode_ow,[pearl]",
             "world_state_inverted"
         ],
         "sections": [
@@ -746,6 +769,7 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,glitch_mode_ow,[pearl],bottle",
             "world_state_inverted"
         ],
         "sections": [
@@ -792,6 +816,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
+            "world_state_open,glitch_mode_ow,[mirror]",
             "world_state_inverted"
         ],
         "sections": [
@@ -811,12 +836,14 @@
     },
     {
         "name": "Pyramid Fairy",
-        "parent": "East Dark World",
+        "parent": "Dark World Color",
         "access_rules": [
-            "world_state_open,pearl,crystal56:2",
-            "world_state_open,pearl,prize:10",
-            "world_state_inverted,crystal56:2",
-            "world_state_inverted,prize:10"
+            "world_state_open,@East Dark World,pearl,crystal56:2",
+            "world_state_open,@East Dark World,pearl,prize:10",
+            "world_state_open,glitch_mode_ow,boots,mirror",
+            "world_state_inverted,@East Dark World,crystal56:2",
+            "world_state_inverted,@East Dark World,prize:10",
+            "world_state_inverted,glitch_mode_ow,pearl,boots,mirror"
         ],
         "sections": [
             {
@@ -824,7 +851,8 @@
                 "access_rules": [
                     "world_state_open,@South Dark World,[hammer]",
                     "world_state_open,@South Dark World,[mirror],[aga]",
-                    "world_state_inverted,@Light World,mirror"
+                    "world_state_inverted,@Light World,mirror",
+                    "glitch_mode_ow"
                 ],
                 "item_count": 2
             }
@@ -843,6 +871,7 @@
         "parent": "South Dark World",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,glitch_mode_ow,[pearl],bottle",
             "world_state_inverted"
         ],
         "sections": [
@@ -892,10 +921,11 @@
     },
     {
         "name": "Hookshot Cave",
-        "parent": "Dark Death Mountain Top",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
-            "world_state_open,pearl,lift1",
-            "world_state_inverted,lift1"
+            "world_state_open,@Dark Death Mountain Top,pearl,lift1",
+            "world_state_open,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,@Dark Death Mountain Top,lift1"
         ],
         "sections": [
             {
@@ -909,14 +939,17 @@
             },
             {
                 "name": "Back",
-                "access_rules": [ "hookshot" ],
+                "access_rules": [
+                    "hookshot",
+                    "[hookshot],boots"
+                ],
                 "item_count": 3
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1670,
+                "x": 1660,
                 "y": 122,
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
             }
@@ -924,14 +957,19 @@
     },
     {
         "name": "Superbunny Cave",
-        "parent": "Dark Death Mountain East",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
-            "world_state_open,[pearl]",
-            "world_state_inverted"
+            "@Dark Death Mountain Top",
+            "@Dark Death Mountain East"
         ],
         "sections": [
             {
                 "name": "Cave",
+                "access_rules": [
+                    "world_state_open,[pearl]",
+                    "world_state_inverted",
+                    "glitch_mode_ow"
+                ],
                 "item_count": 2
             }
         ],
@@ -939,7 +977,13 @@
             {
                 "map": "darkworld",
                 "x": 1670,
-                "y": 290,
+                "y": 280,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1740,
+                "y": 122,
                 "restrict_visibility_rules": [ "entrance_shuffle_off" ]
             },
             {

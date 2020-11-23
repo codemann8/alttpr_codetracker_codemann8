@@ -1,106 +1,132 @@
 {
     "settings_popup": {
         "type": "array",
+        "orientation": "horizontal",
         "margin": "5",
         "content": [
             {
-                "type": "group",
-                "header": "World State",
-                "header_background": "#3e4b57",
-                "content":[
+                "type": "array",
+                "margin": "5",
+                "content": [
                     {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-1",
-                        "height": "48",
-                        "item": "world_state_mode_surrogate"
-                    }
-                ]
-            },
-            {
-                "type": "group",
-                "header": "Dungeon Items",
-                "header_background": "#3e4b57",
-                "content":[
-                    {
-                        "type": "container",
-                        "margin": "-10,-10,-10,-7",
-                        "content": [
+                        "type": "group",
+                        "header": "World State",
+                        "header_background": "#3e4b57",
+                        "content":[
                             {
-                                "type": "itemgrid",
-                                "item_margin": 0,
-                                "item_width": 96,
-                                "item_height": 24,
-                                "rows": [
-                                    [ "keysanity_map_surrogate", "keysanity_compass_surrogate" ],
-                                    [ "keysanity_smallkey_surrogate", "keysanity_bigkey_surrogate" ]
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "world_state_mode_surrogate"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "group",
+                        "header": "Dungeon Items",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "container",
+                                "margin": "-10,-10,-10,-7",
+                                "content": [
+                                    {
+                                        "type": "itemgrid",
+                                        "item_margin": 0,
+                                        "item_width": 96,
+                                        "item_height": 24,
+                                        "rows": [
+                                            [ "keysanity_map_surrogate", "keysanity_compass_surrogate" ],
+                                            [ "keysanity_smallkey_surrogate", "keysanity_bigkey_surrogate" ]
+                                        ]
+                                    }
                                 ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "group",
+                        "header": "Entrance Shuffle",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "entrance_shuffle_surrogate"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "group",
+                        "header": "Door Shuffle",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "door_shuffle_surrogate"
                             }
                         ]
                     }
                 ]
             },
             {
-                "type": "group",
-                "header": "Entrance Shuffle",
-                "header_background": "#3e4b57",
-                "content":[
+                "type": "array",
+                "margin": "5",
+                "content": [
                     {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-1",
-                        "height": "48",
-                        "item": "entrance_shuffle_surrogate"
-                    }
-                ]
-            },
-            {
-                "type": "group",
-                "header": "Door Shuffle",
-                "header_background": "#3e4b57",
-                "content":[
+                        "type": "group",
+                        "header": "Retro Mode",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "retro_mode_surrogate"
+                            }
+                        ]
+                    },
                     {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-1",
-                        "height": "48",
-                        "item": "door_shuffle_surrogate"
-                    }
-                ]
-            },
-            {
-                "type": "group",
-                "header": "Retro Mode",
-                "header_background": "#3e4b57",
-                "content":[
+                        "type": "group",
+                        "header": "Pool Mode",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "pool_mode_surrogate"
+                            }
+                        ]
+                    },
                     {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-1",
-                        "height": "48",
-                        "item": "retro_mode_surrogate"
-                    }
-                ]
-            },
-            {
-                "type": "group",
-                "header": "Pool Mode",
-                "header_background": "#3e4b57",
-                "content":[
+                        "type": "group",
+                        "header": "Glitch Logic",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-1",
+                                "height": "48",
+                                "item": "glitch_mode_surrogate"
+                            }
+                        ]
+                    },
                     {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-1",
-                        "height": "48",
-                        "item": "pool_mode_surrogate"
-                    }
-                ]
-            },
-            {
-                "type": "group",
-                "header": "Race Mode",
-                "header_background": "#3e4b57",
-                "content":[
-                    {
-                        "type": "item",
-                        "margin": "-5,-5,-5,-5",
-                        "height": "48",
-                        "item": "race_mode_surrogate"
+                        "type": "group",
+                        "header": "Race Mode",
+                        "header_background": "#3e4b57",
+                        "content":[
+                            {
+                                "type": "item",
+                                "margin": "-5,-5,-5,-5",
+                                "height": "48",
+                                "item": "race_mode_surrogate"
+                            }
+                        ]
                     }
                 ]
             }

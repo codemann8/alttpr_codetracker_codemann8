@@ -1045,6 +1045,30 @@
             }
         ]
     },
+    // Glitch Mode
+    {
+        "name": "Glitch Logic",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_glitches_none.png",
+                "codes": "glitch_mode,glitch_mode_none",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_glitches_ow.png",
+                "codes": "glitch_mode,glitch_mode_ow",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_glitches_major.png",
+                "codes": "glitch_mode,glitch_mode_major",
+                "inherit_codes": true
+            }
+        ]
+    },
     // Race Mode
     {
         "name": "Race Mode",
