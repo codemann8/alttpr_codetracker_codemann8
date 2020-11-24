@@ -398,9 +398,9 @@
                         "item_size": 40,
                         "badge_font_size": 20,
                         "rows": [
-                            [ "sw_item", "sw_mcbk", "sw_smallkey", "skullwoods" ],
-                            [ "tt_item", "tt_mcbk", "tt_smallkey", "thievestown" ],
-                            [ "mm_item", "mm_mcbk", "mm_smallkey", "miserymire" ]
+                            [ "sw_smallkey", "sw_mcbk", "sw_item", "skullwoods" ],
+                            [ "tt_smallkey", "tt_mcbk", "tt_item", "thievestown" ],
+                            [ "mm_smallkey", "mm_mcbk", "mm_item", "miserymire" ]
                         ]
                     },
                     {
