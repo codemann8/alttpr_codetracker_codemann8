@@ -4889,6 +4889,12 @@
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
             },
             {
+                "map": "lightworld",
+                "x": 669,
+                "y": 315,
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_inverted" ]
+            },
+            {
                 "map": "darkworld",
                 "x": 669,
                 "y": 315,
