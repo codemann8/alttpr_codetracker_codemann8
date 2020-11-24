@@ -46,6 +46,9 @@ if Tracker.ActiveVariantUID == "items_only" then
     Tracker:AddLayouts("layouts/layouts_base_custom.json")
     Tracker:AddLayouts("layouts/layouts_base_shared.json")
     Tracker:AddLayouts("layouts/layouts_custom.json")
+    if LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+        Tracker:AddLayouts("layouts/layouts_dungeonalt_shared.json")
+    end
     Tracker:AddLayouts("layouts/layouts_shared.json")
     Tracker:AddLayouts("layouts/dungeon_grid.json")
     Tracker:AddLayouts("layouts/tracker.json")
@@ -93,6 +96,9 @@ else
     Tracker:AddLayouts("layouts/layouts_base_shared.json")
 
     Tracker:AddLayouts("layouts/layouts_custom.json") --anything defined here overrides layouts defined in 'layouts_shared'
+    if LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+        Tracker:AddLayouts("layouts/layouts_dungeonalt_shared.json")
+    end
     Tracker:AddLayouts("layouts/layouts_shared.json")
 
     Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
