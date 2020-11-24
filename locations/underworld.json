@@ -403,7 +403,7 @@
         "parent": "Light World",
         "access_rules": [
             "world_state_open,@South Dark World,mirror",
-            "world_state_open,boots",
+            "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl",
             "world_state_inverted,[pearl],mirror",
             "world_state_inverted,glitch_mode_ow,mirror",
