@@ -944,6 +944,13 @@
                 "y": 1428,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 210,
+                "y": 1428,
+                "size": 48,
+                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
@@ -1213,6 +1220,13 @@
                 "y": 549,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1132,
+                "y": 549,
+                "size": 48,
+                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
@@ -1246,6 +1260,13 @@
                 "y": 598,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1207,
+                "y": 598,
+                "size": 48,
+                "restrict_visibility_rules": [ "mirror,glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
@@ -1868,7 +1889,7 @@
                 "map": "darkworld",
                 "x": 354,
                 "y": 1560,
-                "size": 64,
+                "size": 48,
                 "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
@@ -1925,6 +1946,13 @@
                 "y": 1653,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 542,
+                "y": 1653,
+                "size": 48,
+                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
@@ -1974,7 +2002,7 @@
                 "map": "darkworld",
                 "x": 540,
                 "y": 1885,
-                "size": 64,
+                "size": 48,
                 "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
         ]
@@ -2345,7 +2373,7 @@
                 "map": "darkworld",
                 "x": 1450,
                 "y": 1666,
-                "size": 64,
+                "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,world_state_open,glitch_mode_none" ]
             }
         ]
