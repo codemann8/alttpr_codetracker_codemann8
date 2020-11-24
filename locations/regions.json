@@ -64,6 +64,8 @@
             "world_state_inverted,upgrade_fairy,pearl,[flippers]",
             "world_state_inverted,zora_area,pearl,flippers",
             "world_state_inverted,glitch_mode_ow,boots,mirror",
+            "world_state_inverted,glitch_mode_ow,activated_flute,mirror",
+            "world_state_inverted,glitch_mode_ow,entrance_singleentryvanilla,lift1,[lamp],mirror",
             "world_state_inverted,glitch_mode_ow,boots,[mirror],bottle",
             "glitch_mode_ow,pearl,boots"
         ],
