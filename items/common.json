@@ -326,15 +326,18 @@
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay2.png"
+                "img_mods": "overlay|images/overlay2.png",
+                "codes": "bottle2"
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay3.png"
+                "img_mods": "overlay|images/overlay3.png",
+                "codes": "bottle3"
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay4.png"
+                "img_mods": "overlay|images/overlay4.png",
+                "codes": "bottle4"
             }
         ]
     },

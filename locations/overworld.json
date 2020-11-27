@@ -3854,16 +3854,62 @@
         ]
     },
     {
+        "name": "Dwarven Smiths",
+        "short_name": "Smiths",
+        "parent": "Northwest Dark World",
+        "sections": [
+            {
+                "name": "Bring Him Home",
+                "access_rules": [
+                    "world_state_open,@Light World,pearl,lift2",
+                    "world_state_open,glitch_mode_ow,pearl,boots,bottle,[lift2]",
+                    "world_state_open,glitch_mode_ow,pearl,boots,mirror,[lift2]",
+                    "world_state_open,glitch_mode_ow,[pearl],bottle2,boots,[lift2]",
+                    "world_state_open,glitch_mode_ow,[pearl],bottle,boots,mirror,[lift2]",
+                    "world_state_inverted,@Light World,mirror",
+                    "world_state_inverted,@Light World,lift2",
+                    "world_state_inverted,glitch_mode_ow,boots,bottle,[lift2]",
+                    "world_state_inverted,glitch_mode_ow,boots,mirror,[lift2]"
+                    
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 616,
+                "y": 1054,
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 295,
+                "y": 1325,
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 295,
+                "y": 1325,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            }
+        ]
+    },
+    {
         "name": "Purple Chest",
         "parent": "Hammer Pegs Area",
         "sections": [
             {
                 "name": "Middle-Aged Man",
                 "access_rules": [
-                    "@Light World,pearl,lift2",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle",
-                    "world_state_inverted,@Light World,pearl,mirror",
-                    "world_state_inverted,lift2,aga"
+                    "world_state_open,@Dwarven Smiths/Bring Him Home,pearl,lift2",
+                    "world_state_open,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[pearl],[lift2]",
+                    "world_state_inverted,@Dwarven Smiths/Bring Him Home,mirror",
+                    "world_state_inverted,@Dwarven Smiths/Bring Him Home,lift2",
+                    "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[mirror]",
+                    "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[lift2]"
                 ],
                 "item_count": 1
             }
@@ -3954,45 +4000,6 @@
                 "map": "darkworld",
                 "x": 100,
                 "y": 1385,
-                "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
-            }
-        ]
-    },
-    {
-        "name": "Dwarven Smiths",
-        "short_name": "Smiths",
-        "parent": "Northwest Dark World",
-        "sections": [
-            {
-                "name": "Bring Him Home",
-                "access_rules": [
-                    "@Light World,pearl,lift2",
-                    "world_state_open,glitch_mode_ow,boots,bottle,[nothing]",
-                    "world_state_open,glitch_mode_ow,[pearl],lift2",
-                    "world_state_inverted,@Light World,mirror",
-                    "world_state_inverted,@Light World,lift2"
-                ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 616,
-                "y": 1054,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 295,
-                "y": 1325,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 295,
-                "y": 1325,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
             }
