@@ -451,7 +451,6 @@
                 "sections": [
                     {
                         "name": "Torch",
-                        "capture_item": true,
                         "item_count": 1
                     }
                 ],
