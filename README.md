@@ -30,7 +30,7 @@ All of the modes can be set by clicking the `Gear` in the `Items` section. Addit
 - Entrance Shuffle
   - Vanilla
   - Dungeon (Only the dungeon entrances are shuffled)
-    - *This also works with Lobby shuffle to show logical access via Sanctuary being in a different dungeon*
+    - *\*This also works with Lobby shuffle to show logical access via Sanctuary being in a different dungeon\**
   - Crossed (Works for most ER modes Simple/Restricted/Full/Crossed)
   - Insanity
 - Door Shuffle
@@ -44,9 +44,10 @@ All of the modes can be set by clicking the `Gear` in the `Items` section. Addit
 - Glitch Logic
   - None
   - OWG (Overworld Glitches)
-  - MG (Major Glitches *Coming Soon*)
+  - MG (Major Glitches)
 - Race Mode (Disables autotracking features that are deemed illegal per racing council rules)
   - *A checkered flag icon will replace the GT BK guessing game icon to indicate its activation*
+  - *\*This mode can be defaulted to be enabled, see `Customization` section below\**
 
 ## Installation:
 To install, you will need to perform the following steps:
@@ -88,13 +89,13 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - Remaining Dungeon Items and Small Keys DO autotrack, unlike the other LttPR trackers.
 - There is a GT Big Key guessing game icon that auto increments a GT BK chest count as chests are collected in GT, this correctly counts the torch if it was viewed but not collected.
 - Some Locations autotrack if an item was viewed but not collected (Cave 45 does not, as there is a bug in the vanilla game), but only in scenarios when you have the ability to get the item, but decide to not collect it.
-- Aga2 is autotracked when you beat Aga2. *This does NOT spoil Fast Ganon in Mystery modes*
+- Aga2 is autotracked when you beat Aga2. *(This does NOT spoil Fast Ganon in Mystery modes)*
 - In Entrance Shuffle, the Dam autotracks when the dam is drained.
 - In Door Shuffle, the Attic autotracks when the TT Attic floor is bombed.
 - In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly.
-- The current dungeon is auto-pinned when player enters a dungeon, feature is disabled by default (see `Settings` section below)
-- Advanced development feature, in Beta and disabled by default, output file when certain items are obtained (see `Settings` section below)
-- Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld (see `Settings` section below)
+- The current dungeon is auto-pinned when player enters a dungeon, feature is disabled by default (see `Customization` section below)
+- Advanced development feature, in Beta and disabled by default, output file when certain items are obtained (see `Customization` section below)
+- Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld (see `Customization` section below)
 
 ## Mode-Specific Features:
 #### Entrance Shuffle
