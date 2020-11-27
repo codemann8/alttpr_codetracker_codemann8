@@ -3022,6 +3022,7 @@
         "parent": "Death Mountain East Bottom",
         "access_rules": [
             "world_state_open,@Dark Death Mountain TR Bridge,mirror",
+            "world_state_open,glitch_mode_ow,hammer,mirror",
             "world_state_inverted,@Death Mountain East Top"
         ],
         "sections": [
@@ -5198,10 +5199,7 @@
         "parent": "Dark Death Mountain",
         "access_rules": [
             "ddm_tr_bridge",
-            "world_state_open,glitch_mode_ow,pearl,boots,[sword]",
-            "world_state_open,glitch_mode_ow,pearl,boots,[hookshot]",
-            "world_state_open,glitch_mode_ow,boots,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror",
+            "@TR Bridge Entrances OW",
             "world_state_inverted,dm_east_spiral,mirror",
             "world_state_inverted,dm_east_mimic,mirror"
         ],
@@ -5276,8 +5274,7 @@
         "parent": "Dark Death Mountain",
         "access_rules": [
             "ddm_tr_safety",
-            "world_state_open,glitch_mode_ow,pearl,boots,[nothing]",
-            "world_state_inverted,@Death Mountain East Top,mirror",
+            "@TR Laser Entrance OW",
             "world_state_inverted,dm_east_connect,mirror"
         ],
         "sections": [

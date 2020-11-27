@@ -416,11 +416,10 @@
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,[pearl],boots,bottle",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
-            "world_state_open,glitch_mode_major,@Dark Death Mountain Top,boots,bottle",
+            "world_state_open,glitch_mode_major,@Dark Death Mountain Top",
             "world_state_inverted,@Death Mountain East Top,mirror",
-            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots",
-            "world_state_inverted,glitch_mode_major,@Dark Death Mountain Top",
-            "entrance_shuffle_on"
+            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,sword",
+            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,hookshot"
         ]
     },
     {
@@ -431,22 +430,26 @@
             "TR Bridge Entrances OW,[somaria],boots",
             "TR Bridge Entrances OW,[hookshot],boots",
             "TR Bridge Entrances OW,glitch_mode_ow,boots",
-            "TR Bridge Entrances OW,glitch_mode_ow,cape",
-            "TR Bridge Entrances OW,glitch_mode_ow,byrna",
+            "TR Bridge Entrances OW,glitch_mode_ow,[cape]",
+            "TR Bridge Entrances OW,glitch_mode_ow,[byrna]",
             "entrance_shuffle_on",
             "door_shuffle_on"
         ]
     },
     {
-        "name": "TR Laser Entrance",
+        "name": "TR Laser Entrance OW",
         "access_rules": [
             "world_state_open,glitch_mode_ow,pearl,boots,mirror",
             "world_state_open,glitch_mode_ow,[pearl],boots,mirror,bottle",
             "world_state_open,glitch_mode_major,pearl,mirror",
             "world_state_open,glitch_mode_major,bottle,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror",
-            "world_state_inverted,glitch_mode_ow,boots,mirror",
-            "world_state_inverted,glitch_mode_major,mirror",
+            "world_state_inverted,@Death Mountain East Top,mirror"
+        ]
+    },
+    {
+        "name": "TR Laser Entrance",
+        "access_rules": [
+            "@TR Laser Entrance OW",
             "entrance_shuffle_on"
         ]
     },
