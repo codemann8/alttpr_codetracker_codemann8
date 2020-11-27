@@ -59,6 +59,7 @@
             "world_state_inverted,dw_south,hammer,lift1,pearl",
             "world_state_inverted,dw_east,hammer,lift1,pearl",
             "world_state_inverted,dw_west,lift2,pearl",
+            "world_state_inverted,dw_south,lift2,pearl",
             "world_state_inverted,dw_south,aga",
             "world_state_inverted,grass_house,pearl",
             "world_state_inverted,bomb_hut,pearl",
