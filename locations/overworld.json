@@ -846,6 +846,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
+            "glitch_mode_major",
             "{entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -855,6 +856,7 @@
                     "hammer",
                     "world_state_open,pearl,lift2,mirror",
                     "glitch_mode_ow,boots",
+                    "glitch_mode_major",
                     "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -887,6 +889,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
+            "glitch_mode_major",
             "{}"
         ],
         "sections": [
@@ -895,6 +898,8 @@
                 "access_rules": [
                     "entrance_shuffle_singleentryvanilla",
                     "race_game",
+                    "glitch_mode_ow,boots",
+                    "glitch_mode_major",
                     "world_state_open,@Northwest Dark World,mirror",
                     "{}"
                 ],
@@ -1200,7 +1205,8 @@
             "world_state_open,@Northwest Dark World,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl",
-            "world_state_inverted,glitch_mode_ow,pearl,boots"
+            "world_state_inverted,glitch_mode_ow,pearl,boots",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -1863,7 +1869,8 @@
         "access_rules": [
             "world_state_open,@Mire Area,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@Light World,pearl"
+            "world_state_inverted,@Light World,pearl",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -1926,7 +1933,8 @@
         "access_rules": [
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -1962,9 +1970,11 @@
         "access_rules": [
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
+            "world_state_open,glitch_mode_major",
             "world_state_inverted,@Light World",
             "{world_state_open,@South Dark World,mirror}",
             "{world_state_open,glitch_mode_ow,boots}",
+            "{world_state_open,glitch_mode_major}",
             "{world_state_inverted,@Light World}"
         ],
         "sections": [
@@ -2342,6 +2352,7 @@
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_inverted,@Light World,pearl,[flippers]",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "glitch_mode_major",
                     "{world_state_open}",
                     "{world_state_inverted,@Light World}"
                 ],
@@ -2632,7 +2643,8 @@
             "world_state_open,bumper_cave,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,nothing",
-            "world_state_inverted,glitch_mode_ow,pearl,boots"
+            "world_state_inverted,glitch_mode_ow,pearl,boots",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -2787,6 +2799,7 @@
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_inverted,@Death Mountain West Top",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "glitch_mode_major",
                     "{@Death Mountain West Bottom}"
                 ],
                 "capture_item": true,
@@ -2919,6 +2932,7 @@
                     "world_state_open,ddm_floating,mirror",
                     "world_state_open,entrance_shuffle_singleentryvanilla,@Dark Death Mountain Top,pearl,lift1,mirror",
                     "world_state_open,glitch_mode_ow,boots",
+                    "world_state_open,glitch_mode_major",
                     "world_state_inverted,@Death Mountain East Top",
                     "{@Death Mountain East Top}"
                 ],
@@ -3208,8 +3222,9 @@
             "world_state_open,[flippers],pearl",
             "world_state_open,[flippers],boots",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@Zora Area,pearl,[flippers]",
-            "glitch_mode_ow,pearl"
+            "world_state_open,glitch_mode_ow,pearl",
+            "world_state_inverted,pearl,[flippers]",
+            "world_state_inverted,glitch_mode_ow,pearl"
         ],
         "sections": [
             {
@@ -3272,6 +3287,7 @@
                     "[flippers],bow",
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "glitch_mode_major",
                     "{}"
                 ],
                 "capture_item": true,
@@ -3866,11 +3882,14 @@
                     "world_state_open,glitch_mode_ow,pearl,boots,mirror,[lift2]",
                     "world_state_open,glitch_mode_ow,[pearl],bottle2,boots,[lift2]",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,boots,mirror,[lift2]",
+                    "world_state_open,glitch_mode_major,bottle",
+                    "world_state_open,glitch_mode_major,mirror",
                     "world_state_inverted,@Light World,mirror",
                     "world_state_inverted,@Light World,lift2",
                     "world_state_inverted,glitch_mode_ow,boots,bottle,[lift2]",
-                    "world_state_inverted,glitch_mode_ow,boots,mirror,[lift2]"
-                    
+                    "world_state_inverted,glitch_mode_ow,boots,mirror,[lift2]",
+                    "world_state_inverted,glitch_mode_major,bottle",
+                    "world_state_inverted,glitch_mode_major,mirror"
                 ],
                 "item_count": 1
             }
@@ -3906,10 +3925,12 @@
                 "access_rules": [
                     "world_state_open,@Dwarven Smiths/Bring Him Home,pearl,lift2",
                     "world_state_open,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[pearl],[lift2]",
+                    "world_state_open,glitch_mode_major,@Dwarven Smiths/Bring Him Home,pearl",
                     "world_state_inverted,@Dwarven Smiths/Bring Him Home,mirror",
                     "world_state_inverted,@Dwarven Smiths/Bring Him Home,lift2",
                     "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[mirror]",
-                    "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[lift2]"
+                    "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[lift2]",
+                    "world_state_inverted,glitch_mode_major,@Dwarven Smiths/Bring Him Home"
                 ],
                 "item_count": 1
             }
@@ -4882,6 +4903,7 @@
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Light World,pearl,lift1,cape,mirror",
                     "world_state_inverted,bumper_cave,mirror",
                     "world_state_inverted,glitch_mode_ow,boots",
+                    "glitch_mode_major",
                     "{}"
                 ],
                 "capture_item": true,
@@ -4914,15 +4936,16 @@
         "name": "Bumper Cave Top",
         "short_name": "Bumper Top",
         "parent": "Northwest Dark World",
+        "access_rules": [
+            "world_state_open,nothing",
+            "world_state_open,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,lw_dmexit,mirror",
+            "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_major"
+        ],
         "sections": [
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "world_state_open,nothing",
-                    "world_state_open,glitch_mode_ow,pearl,boots",
-                    "world_state_inverted,lw_dmexit,mirror",
-                    "world_state_inverted,glitch_mode_ow,boots"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
@@ -4945,16 +4968,17 @@
         "name": "Bumper Cave Bottom",
         "short_name": "Bumper Bottom",
         "parent": "Northwest Dark World",
+        "access_rules": [
+            "world_state_open,pearl,lift1",
+            "world_state_open,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,lift1",
+            "world_state_inverted,lw_dmentry,mirror",
+            "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_major"
+        ],
         "sections": [
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "world_state_open,pearl,lift1",
-                    "world_state_open,glitch_mode_ow,pearl,boots",
-                    "world_state_inverted,lift1",
-                    "world_state_inverted,lw_dmentry,mirror",
-                    "world_state_inverted,glitch_mode_ow,boots"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
@@ -5090,7 +5114,8 @@
             "ddm_floating",
             "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_inverted,@Death Mountain East Top,mirror",
-            "world_state_inverted,glitch_mode_ow,@Mountain Access,boots"
+            "world_state_inverted,glitch_mode_ow,@Mountain Access,boots",
+            "glitch_mode_major"
         ],
         "sections": [
             {

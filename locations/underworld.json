@@ -165,7 +165,8 @@
             "world_state_open,hammer",
             "world_state_open,lift2,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl,hammer"
+            "world_state_inverted,pearl,hammer",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -244,7 +245,8 @@
             "world_state_open,@Northwest Dark World,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl",
-            "glitch_mode_ow,@Mountain Access,mirror"
+            "glitch_mode_ow,@Mountain Access,mirror",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -352,7 +354,8 @@
         "access_rules": [
             "world_state_open,@Mire Area,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl"
+            "world_state_inverted,pearl",
+            "glitch_mode_major"
         ],
         "sections": [
             {
@@ -407,6 +410,7 @@
             "world_state_inverted,pearl",
             "world_state_inverted,[pearl],mirror",
             "world_state_inverted,glitch_mode_ow,mirror",
+            "glitch_mode_major",
             "{world_state_inverted}"
         ],
         "sections": [
@@ -699,7 +703,8 @@
                     "pearl,[flippers]",
                     "boots,[flippers]",
                     "glitch_mode_ow,boots",
-                    "glitch_mode_ow,pearl"
+                    "glitch_mode_ow,pearl",
+                    "glitch_mode_major"
                 ],
                 "item_count": 2
             }

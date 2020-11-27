@@ -29,7 +29,184 @@
             "world_state_inverted,@Desert Ledge Area,[pearl]",
             "world_state_inverted,glitch_mode_ow,@Light World,book",
             "world_state_inverted,glitch_mode_ow,@Desert Ledge Area",
+            "glitch_mode_major",
             "entrance_shuffle_on"
+        ]
+    },
+    {
+        "name": "MM Access",
+        "parent": "Dungeon Color",
+        "access_rules": [
+            "@Mire Area",
+            "entrance_shuffle_on"
+        ]
+    },
+    {
+        "name": "Misery Mire",
+        "parent": "MM Access",
+        "sections": [
+            {
+                "name": "Medallion",
+                "access_rules": [ "{$hasNotSeenMireMedallion}" ],
+                "visibility_rules": [ "entrance_shuffle_off,$hasNotSeenMireMedallion" ],
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_medallion",
+                "item_count": 1
+            },
+            {
+                "name": "Bunny Rules",
+                "access_rules": [
+                    "world_state_open,pearl",
+                    "world_state_inverted"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Open Entrance",
+                "access_rules": [
+                    "@Misery Mire/Bunny Rules,$canUseMedallions,mm_medallion",
+                    "@Misery Mire/Bunny Rules,$canUseMedallions,bombos,ether,quake",
+                    "entrance_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Dungeon Access",
+                "access_rules": [
+                    "@Misery Mire/Open Entrance,hookshot",
+                    "@Misery Mire/Open Entrance,boots"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Spike Switch",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Bridge",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Main Hub",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,mm_bigkey",
+                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
+                    "@Misery Mire/Dungeon Access,pool_mode_chest,mm_smallkey:1",
+                    "@Misery Mire/Dungeon Access,pool_mode_chestkeydrop,mm_smallkey:1,[mm_smallkey:2]",
+                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Spike Key",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access"
+                ],
+                "chest_unopened_img": "images/pot-dw.png",
+                "chest_opened_img": "images/pot-collected.png",
+                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "item_count": 1
+            },
+            {
+                "name": "Fishbone Key",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,mm_bigkey",
+                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
+                    "@Misery Mire/Dungeon Access,mm_smallkey:2,[mm_smallkey:5]",
+                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "chest_unopened_img": "images/pot-dw.png",
+                "chest_opened_img": "images/pot-collected.png",
+                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "item_count": 1
+            },
+            {
+                "name": "Conveyor Jelly",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,mm_smallkey:1,[mm_smallkey:5]",
+                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "chest_unopened_img": "images/enemy-jelly.png",
+                "chest_opened_img": "images/enemy-defeated.png",
+                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "item_count": 1
+            },
+            {
+                "name": "Left Side",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chest,[mm_smallkey:3]",
+                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chestkeydrop,mm_smallkey:2,[mm_smallkey:6]",
+                    "@Misery Mire/Dungeon Access,firesource,keysanity_smallkey_off",
+                    "door_shuffle_on,firesource"
+                ],
+                "clear_as_group": false,
+                "item_count": 2
+            },
+            {
+                "name": "Blue Peg Chest",
+                "access_rules": [
+                    "@Misery Mire/Main Hub"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Big Chest",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,mm_bigkey",
+                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
+                    "@Misery Mire/Dungeon Access,door_shuffle_basic",
+                    "door_shuffle_crossed"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Vitreous",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,mm_bigkey,[lamp],somaria",
+                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off,[lamp],somaria",
+                    "door_shuffle_on,sword",
+                    "door_shuffle_on,retro_mode_off,bow",
+                    "door_shuffle_on,retro_mode_on,arrows,bow",
+                    "door_shuffle_on,hammer"
+                ],
+                "hosted_item": "miserymire",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 148,
+                "y": 1697,
+                "size": 110,
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 148,
+                "y": 1700,
+                "size": 80,
+                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "erdarkdungeon",
+                "x": 160,
+                "y": 1670
+            }
         ]
     },
     {
@@ -38,7 +215,10 @@
         "access_rules": [
             "world_state_open,@Death Mountain West Top",
             "world_state_inverted,@Death Mountain West Top,[pearl]",
-            "world_state_inverted,glitch_mode_ow,@Death Mountain West Top,mirror",
+            "world_state_inverted,glitch_mode_ow,@Death Mountain West Top,mirror,sword",
+            "glitch_mode_ow,@Misery Mire/Left Side,[nothing]",
+            "glitch_mode_major,@Misery Mire/Left Side",
+            "glitch_mode_major,@Mountain Access",
             "entrance_shuffle_on"
         ]
     },
@@ -48,6 +228,7 @@
         "access_rules": [
             "world_state_open,$canClearAgaTowerBarrier",
             "world_state_open,glitch_mode_ow,boots",
+            "world_state_open,glitch_mode_major",
             "world_state_inverted,@Dark Death Mountain West",
             "entrance_shuffle_on"
         ]
@@ -57,9 +238,107 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "world_state_open,@East Dark World,pearl",
-            "world_state_open,@East Dark World,[pearl],bottle",
+            "world_state_open,glitch_mode_ow,@East Dark World,[pearl],bottle",
             "world_state_inverted,@East Dark World",
+            "glitch_mode_ow,@Mountain Access,boots,[nothing]",
+            "glitch_mode_major,@Mountain Access",
             "entrance_shuffle_on"
+        ]
+    },
+    {
+        "name": "Tower of Hera",
+        "parent": "ToH Access",
+        "sections": [
+            {
+                "name": "Lobby\\Cage",
+                "clear_as_group": false,
+                "item_count": 2
+            },
+            {
+                "name": "Basement",
+                "access_rules": [
+                    "firesource,toh_smallkey:1",
+                    "firesource,keysanity_smallkey_off",
+                    "door_shuffle_on,firesource"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Compass Chest",
+                "access_rules": [
+                    "toh_bigkey",
+                    "[toh_bigkey],hookshot",
+                    "keysanity_bigkey_off",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,[nothing]",
+                    "glitch_mode_major,@Misery Mire/Left Side",
+                    "door_shuffle_on"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Big Chest",
+                "access_rules": [
+                    "toh_bigkey",
+                    "keysanity_bigkey_off",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,mm_bigkey,[nothing]",
+                    "glitch_mode_major,@Misery Mire/Left Side,mm_bigkey"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Moldorm Access",
+                "access_rules": [
+                    "@Tower of Hera/Compass Chest,toh_bigkey",
+                    "@Tower of Hera/Compass Chest,[toh_bigkey],hookshot",
+                    "@Tower of Hera/Compass Chest,keysanity_bigkey_off",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,mm_bigkey,[nothing]",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,toh_bigkey,[nothing]",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,hookshot,[nothing]",
+                    "glitch_mode_major,@Misery Mire/Left Side,mm_bigkey",
+                    "glitch_mode_major,@Misery Mire/Left Side,[mm_bigkey],hookshot",
+                    "glitch_mode_major,@Misery Mire/Left Side,toh_bigkey",
+                    "glitch_mode_major,@Misery Mire/Left Side,[toh_bigkey],hookshot",
+                    "door_shuffle_on"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Moldorm",
+                "access_rules": [
+                    "@Tower of Hera/Moldorm Access,sword",
+                    "@Tower of Hera/Moldorm Access,hammer"
+                ],
+                "hosted_item": "towerofhera",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 58,
+                "size": 110,
+                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 21,
+                "size": 110,
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 4,
+                "size": 80,
+                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            },
+            {
+                "map": "erlightdungeon",
+                "x": 1125,
+                "y": 144
+            }
         ]
     },
     {
@@ -68,6 +347,12 @@
         "access_rules": [
             "world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl",
             "world_state_inverted,entrance_shuffle_off,@Light World,mirror,[pearl]",
+            "door_shuffle_off,glitch_mode_ow,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,boots,[mm_bigkey],[nothing]",
+            "door_shuffle_off,glitch_mode_ow,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,boots,[toh_bigkey],[nothing]",
+            "door_shuffle_off,glitch_mode_ow,[flippers],[@Mountain Access],[lamp],[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,boots,[toh_bigkey],[nothing]",
+            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,[mm_bigkey]",
+            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,[toh_bigkey]",
+            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,[toh_bigkey]",
             "entrance_shuffle_on,door_shuffle_crossed",
             "entrance_shuffle_on,dam"
         ]
@@ -97,22 +382,17 @@
         "name": "IP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,[flippers],lift2,[pearl]",
+            "world_state_open,pearl,[flippers],lift2",
             "world_state_open,glitch_mode_ow,lift2",
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
             "world_state_open,glitch_mode_ow,pearl,boots,[flippers],mirror",
-            "world_state_open,glitch_mode_ow,[pearl],boots,[flippers],bottle,mirror",
+            "world_state_open,glitch_mode_ow,[pearl],boots,[flippers],mirror,bottle",
+            "world_state_open,glitch_mode_major,mirror",
+            "world_state_open,glitch_mode_major,pearl,flippers",
+            "world_state_open,glitch_mode_major,flippers,bottle",
             "world_state_inverted,[flippers]",
             "world_state_inverted,glitch_mode_ow",
-            "entrance_shuffle_on"
-        ]
-    },
-    {
-        "name": "MM Access",
-        "parent": "Dungeon Color",
-        "access_rules": [
-            "@Mire Area",
             "entrance_shuffle_on"
         ]
     },
@@ -131,20 +411,42 @@
         ]
     },
     {
+        "name": "TR Bridge Entrances OW",
+        "access_rules": [
+            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots",
+            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,[pearl],boots,bottle",
+            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
+            "world_state_open,glitch_mode_major,@Dark Death Mountain Top,boots,bottle",
+            "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots",
+            "world_state_inverted,glitch_mode_major,@Dark Death Mountain Top",
+            "entrance_shuffle_on"
+        ]
+    },
+    {
         "name": "TR Bridge Entrances",
         "access_rules": [
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots,[sword]",
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots,[hookshot]",
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror",
-            "entrance_shuffle_on"
+            "TR Bridge Entrances OW,somaria",
+            "TR Bridge Entrances OW,hookshot",
+            "TR Bridge Entrances OW,[somaria],boots",
+            "TR Bridge Entrances OW,[hookshot],boots",
+            "TR Bridge Entrances OW,glitch_mode_ow,boots",
+            "TR Bridge Entrances OW,glitch_mode_ow,cape",
+            "TR Bridge Entrances OW,glitch_mode_ow,byrna",
+            "entrance_shuffle_on",
+            "door_shuffle_on"
         ]
     },
     {
         "name": "TR Laser Entrance",
         "access_rules": [
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots,mirror",
+            "world_state_open,glitch_mode_ow,pearl,boots,mirror",
+            "world_state_open,glitch_mode_ow,[pearl],boots,mirror,bottle",
+            "world_state_open,glitch_mode_major,pearl,mirror",
+            "world_state_open,glitch_mode_major,bottle,mirror",
             "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,glitch_mode_ow,boots,mirror",
+            "world_state_inverted,glitch_mode_major,mirror",
             "entrance_shuffle_on"
         ]
     },
@@ -163,6 +465,7 @@
             "world_state_open,@Dark Death Mountain Top,[pearl],$gtCrystalCount",
             "world_state_inverted,@Light World,$gtCrystalCount",
             "glitch_mode_ow,pearl,boots",
+            "glitch_mode_major",
             "entrance_shuffle_on"
         ]
     },
@@ -455,6 +758,7 @@
                     "door_shuffle_off,lift1",
                     "door_shuffle_off,world_state_open,glitch_mode_ow,boots",
                     "door_shuffle_off,world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "door_shuffle_off,glitch_mode_major",
                     "door_shuffle_on",
                     "entrance_shuffle_on"
                 ],
@@ -540,81 +844,6 @@
                 "map": "erlightdungeon",
                 "x": 166,
                 "y": 1584
-            }
-        ]
-    },
-    {
-        "name": "Tower of Hera",
-        "parent": "ToH Access",
-        "sections": [
-            {
-                "name": "Lobby\\Cage",
-                "clear_as_group": false,
-                "item_count": 2
-            },
-            {
-                "name": "Basement",
-                "access_rules": [
-                    "firesource,toh_smallkey:1",
-                    "firesource,keysanity_smallkey_off",
-                    "door_shuffle_on,firesource"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Compass Chest",
-                "access_rules": [
-                    "toh_bigkey",
-                    "[toh_bigkey],hookshot",
-                    "keysanity_bigkey_off",
-                    "door_shuffle_on"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Big Chest",
-                "access_rules": [
-                    "toh_bigkey",
-                    "keysanity_bigkey_off"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Moldorm",
-                "access_rules": [
-                    "@Tower of Hera/Compass Chest,sword",
-                    "@Tower of Hera/Compass Chest,hammer"
-                ],
-                "hosted_item": "towerofhera",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1125,
-                "y": 58,
-                "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
-            },
-            {
-                "map": "lightworld",
-                "x": 1125,
-                "y": 21,
-                "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ]
-            },
-            {
-                "map": "lightworld",
-                "x": 1125,
-                "y": 4,
-                "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
-            },
-            {
-                "map": "erlightdungeon",
-                "x": 1125,
-                "y": 144
             }
         ]
     },
@@ -893,6 +1122,10 @@
                 "name": "Entrance Chest",
                 "access_rules": [
                     "door_shuffle_off,flippers",
+                    "door_shuffle_off,glitch_mode_ow,@Misery Mire/Left Side,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_ow,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
+                    "door_shuffle_off,glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -902,6 +1135,10 @@
                 "access_rules": [
                     "door_shuffle_off,flippers,sp_smallkey:1",
                     "door_shuffle_off,flippers,keysanity_smallkey_off",
+                    "door_shuffle_off,glitch_mode_ow,@Misery Mire/Left Side,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_ow,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
+                    "door_shuffle_off,glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -921,6 +1158,10 @@
                 "access_rules": [
                     "door_shuffle_off,flippers,sp_smallkey:2",
                     "door_shuffle_off,flippers,keysanity_smallkey_off",
+                    "glitch_mode_ow,@Misery Mire/Left Side,boots,[nothing]",
+                    "glitch_mode_ow,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,boots,[nothing]",
+                    "glitch_mode_major,@Misery Mire/Left Side",
+                    "glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
@@ -934,6 +1175,10 @@
                     "door_shuffle_off,pool_mode_chest,@Swamp Palace/Bomb Wall,hammer",
                     "door_shuffle_off,pool_mode_chestkeydrop,sp_smallkey:3,hammer",
                     "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off,hammer",
+                    "door_shuffle_off,glitch_mode_ow,@Misery Mire/Left Side,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_ow,@Tower of Hera/Compass Chest,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
+                    "door_shuffle_off,glitch_mode_major,@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -953,6 +1198,10 @@
                 "access_rules": [
                     "@Swamp Palace/South Side,sp_bigkey",
                     "@Swamp Palace/South Side,keysanity_bigkey_off",
+                    "door_shuffle_off,glitch_mode_ow,@Misery Mire/Left Side,mm_bigkey,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_ow,@Tower of Hera/Compass Chest,toh_bigkey,boots,[nothing]",
+                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side,mm_bigkey",
+                    "door_shuffle_off,glitch_mode_major,@Tower of Hera/Compass Chest,toh_bigkey",
                     "door_shuffle_crossed"
                 ],
                 "item_count": 1
@@ -1075,7 +1324,7 @@
             {
                 "name": "Bridge",
                 "access_rules": [
-                    "world_state_open,[pearl],firerod",
+                    "world_state_open,pearl,firerod",
                     "world_state_inverted,firerod",
                     "door_shuffle_on",
                     "entrance_shuffle_on"
@@ -1247,7 +1496,11 @@
         "parent": "IP Access",
         "access_rules": [
             "firerod",
-            "$canUseMedallions,bombos"
+            "$canUseMedallions,bombos",
+            "glitch_mode_ow,boots,[firerod]",
+            "glitch_mode_ow,boots,[$canUseMedallions,bombos]",
+            "glitch_mode_major",
+            "door_shuffle_on"
         ],
         "sections": [
             {
@@ -1424,174 +1677,6 @@
         ]
     },
     {
-        "name": "Misery Mire",
-        "parent": "MM Access",
-        "sections": [
-            {
-                "name": "Medallion",
-                "access_rules": [ "{$hasNotSeenMireMedallion}" ],
-                "visibility_rules": [ "entrance_shuffle_off,$hasNotSeenMireMedallion" ],
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_medallion",
-                "item_count": 1
-            },
-            {
-                "name": "Bunny Rules",
-                "access_rules": [
-                    "world_state_open,pearl",
-                    "world_state_inverted"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
-                "name": "Open Entrance",
-                "access_rules": [
-                    "@Misery Mire/Bunny Rules,$canUseMedallions,mm_medallion",
-                    "@Misery Mire/Bunny Rules,$canUseMedallions,bombos,ether,quake",
-                    "entrance_shuffle_on"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
-                "name": "Dungeon Access",
-                "access_rules": [
-                    "@Misery Mire/Open Entrance,hookshot",
-                    "@Misery Mire/Open Entrance,boots"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
-                "name": "Spike Switch",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Bridge",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Main Hub",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,mm_bigkey",
-                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
-                    "@Misery Mire/Dungeon Access,pool_mode_chest,mm_smallkey:1",
-                    "@Misery Mire/Dungeon Access,pool_mode_chestkeydrop,mm_smallkey:1,[mm_smallkey:2]",
-                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
-                    "door_shuffle_on"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Spike Key",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access"
-                ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
-                "item_count": 1
-            },
-            {
-                "name": "Fishbone Key",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,mm_bigkey",
-                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
-                    "@Misery Mire/Dungeon Access,mm_smallkey:2,[mm_smallkey:5]",
-                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
-                    "door_shuffle_on"
-                ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
-                "item_count": 1
-            },
-            {
-                "name": "Conveyor Jelly",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,mm_smallkey:1,[mm_smallkey:5]",
-                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
-                    "door_shuffle_on"
-                ],
-                "chest_unopened_img": "images/enemy-jelly.png",
-                "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
-                "item_count": 1
-            },
-            {
-                "name": "Left Side",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chest,[mm_smallkey:3]",
-                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chestkeydrop,mm_smallkey:2,[mm_smallkey:6]",
-                    "@Misery Mire/Dungeon Access,firesource,keysanity_smallkey_off",
-                    "door_shuffle_on,firesource"
-                ],
-                "clear_as_group": false,
-                "item_count": 2
-            },
-            {
-                "name": "Blue Peg Chest",
-                "access_rules": [
-                    "@Misery Mire/Main Hub"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Big Chest",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,mm_bigkey",
-                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
-                    "@Misery Mire/Dungeon Access,door_shuffle_basic",
-                    "door_shuffle_crossed"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Vitreous",
-                "access_rules": [
-                    "@Misery Mire/Dungeon Access,mm_bigkey,[lamp],somaria",
-                    "@Misery Mire/Dungeon Access,keysanity_bigkey_off,[lamp],somaria",
-                    "door_shuffle_on,sword",
-                    "door_shuffle_on,retro_mode_off,bow",
-                    "door_shuffle_on,retro_mode_on,arrows,bow",
-                    "door_shuffle_on,hammer"
-                ],
-                "hosted_item": "miserymire",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 148,
-                "y": 1697,
-                "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 148,
-                "y": 1700,
-                "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
-            },
-            {
-                "map": "erdarkdungeon",
-                "x": 160,
-                "y": 1670
-            }
-        ]
-    },
-    {
         "name": "Turtle Rock",
         "parent": "TR Access",
         "sections": [
@@ -1609,6 +1694,8 @@
                 "name": "Bunny Rules",
                 "access_rules": [
                     "world_state_open,pearl",
+                    "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
+                    "world_state_open,glitch_mode_major,bottle",
                     "world_state_inverted",
                     "entrance_shuffle_on"
                 ],
@@ -1628,7 +1715,8 @@
             {
                 "name": "Dungeon Access",
                 "access_rules": [
-                    "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria"
+                    "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria",
+                    "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1723,11 +1811,7 @@
                     "@TR Bridge Entrances,somaria",
                     "@TR Bridge Entrances,[somaria],boots",
                     "@TR Bridge Entrances,hookshot",
-                    "@TR Bridge Entrances,[hookshot],boots",
-                    "door_shuffle_on,somaria",
-                    "door_shuffle_on,[somaria],boots",
-                    "door_shuffle_on,hookshot",
-                    "door_shuffle_on,[hookshot],boots"
+                    "@TR Bridge Entrances,[hookshot],boots"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1782,7 +1866,6 @@
             {
                 "name": "Peg Maze Door",
                 "access_rules": [
-                    //intentionally missing BK requirement for logic simplification
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:3,[tr_smallkey:4],[lamp]",
                     "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:5,[tr_smallkey:6],[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,[lamp]",

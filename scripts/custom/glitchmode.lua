@@ -7,7 +7,7 @@ function GlitchMode:init(isAlt)
     self:initSuffix(isAlt)
     self:initCode()
 
-    self:setCount(2)
+    self:setCount(3)
     self:setState(0)
 end
 

@@ -50,6 +50,8 @@
             "race_game",
             "lw_dmentry",
             "lw_dmexit",
+            "glitch_mode_major",
+            "glitch_mode_ow,pearl,boots",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,hammer,lift1,pearl",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,lift2,pearl",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,aga",
@@ -69,8 +71,7 @@
             "world_state_inverted,glitch_mode_ow,boots,mirror",
             "world_state_inverted,glitch_mode_ow,activated_flute,mirror",
             "world_state_inverted,glitch_mode_ow,entrance_singleentryvanilla,lift1,[lamp],mirror",
-            "world_state_inverted,glitch_mode_ow,boots,[mirror],bottle",
-            "glitch_mode_ow,pearl,boots"
+            "world_state_inverted,glitch_mode_ow,boots,[mirror],bottle"
         ],
         "children": [
             {
@@ -86,7 +87,8 @@
                             "world_state_inverted,zora_area,pearl,flippers",
                             "world_state_inverted,@Light World,pearl,lift1",
                             "world_state_inverted,@Light World,pearl,[flippers]",
-                            "world_state_inverted,glitch_mode_ow,pearl"
+                            "world_state_inverted,glitch_mode_ow,pearl",
+                            "glitch_mode_major"
                         ]
                     }
                 ]
@@ -106,7 +108,8 @@
                             "world_state_open,glitch_mode_ow,boots",
                             "world_state_inverted,desert_back,pearl,lift1",
                             "world_state_inverted,entrance_shuffle_off,@Light World,pearl,book",
-                            "world_state_inverted,glitch_mode_ow,pearl,boots"
+                            "world_state_inverted,glitch_mode_ow,pearl,boots",
+                            "glitch_mode_major"
                         ]
                     }
                 ]
@@ -170,7 +173,8 @@
                     "world_state_inverted,glitch_mode_ow,dw_east,boots",
                     "glitch_mode_ow,pearl,boots",
                     "entrance_shuffle_dungeon,door_shuffle_sameset,sw_area",
-                    "entrance_shuffle_crossed,door_shuffle_sameset,sw_area"
+                    "entrance_shuffle_crossed,door_shuffle_sameset,sw_area",
+                    "glitch_mode_major"
                 ]
             },
             {
@@ -186,7 +190,8 @@
                     "world_state_inverted,dw_witch,hammer",
                     "world_state_inverted,dw_east,hammer",
                     "world_state_inverted,dw_southeast,[flippers],hammer",
-                    "world_state_inverted,ip_area,[flippers],hammer"
+                    "world_state_inverted,ip_area,[flippers],hammer",
+                    "glitch_mode_major"
                 ]
             },
             {
@@ -213,7 +218,8 @@
                     "world_state_inverted,dw_witch,lift1",
                     "world_state_inverted,dw_witch,[flippers]",
                     "world_state_inverted,dw_southeast,[flippers]",
-                    "world_state_inverted,ip_area,[flippers]"
+                    "world_state_inverted,ip_area,[flippers]",
+                    "glitch_mode_major"
                 ]
             },
             {
@@ -231,7 +237,8 @@
                     "world_state_inverted,@South Dark World,[flippers]",
                     "world_state_inverted,@East Dark World,[flippers]",
                     "world_state_inverted,ip_area,[flippers]",
-                    "world_state_inverted,dw_witch,[flippers]"
+                    "world_state_inverted,dw_witch,[flippers]",
+                    "glitch_mode_major"
                 ]
             },
             {
@@ -255,7 +262,8 @@
                     "world_state_inverted,@East Dark World,hammer",
                     "world_state_inverted,@East Dark World,lift1",
                     "world_state_inverted,@Southeast Dark World,[flippers]",
-                    "world_state_inverted,ip_area,[flippers]"
+                    "world_state_inverted,ip_area,[flippers]",
+                    "glitch_mode_major"
                 ]
             },
             {
@@ -267,7 +275,9 @@
                     "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
                     "world_state_open,glitch_mode_ow,[pearl],aga,bottle",
                     "world_state_inverted,@Northwest Dark World,lift2",
-                    "world_state_inverted,@Light World,mirror"
+                    "world_state_inverted,@Light World,mirror",
+                    "world_state_inverted,glitch_mode_ow,boots",
+                    "glitch_mode_major"
                 ]
             }
         ]
@@ -299,7 +309,8 @@
             "world_state_inverted,@Light World,mirror",
             "world_state_inverted,@Light World,pearl,flute",
             "world_state_inverted,desert_back,mirror",
-            "world_state_inverted,desert_front,mirror"
+            "world_state_inverted,desert_front,mirror",
+            "glitch_mode_major"
         ]
     },
     {
@@ -309,7 +320,8 @@
             "castle_top",
             "world_state_open,@East Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,glitch_mode_ow,pearl,boots"
+            "world_state_inverted,glitch_mode_ow,pearl,boots",
+            "glitch_mode_major"
         ]
     },
 
@@ -323,7 +335,8 @@
             "world_state_inverted,@Northwest Dark World,glitch_mode_ow,boots",
             "world_state_inverted,@Light World,glitch_mode_ow,pearl,boots",
             "entrance_shuffle_singleentryvanilla,glitch_mode_ow,boots",
-            "entrance_shuffle_singleentryvanilla,lift1,[lamp]"
+            "entrance_shuffle_singleentryvanilla,lift1,[lamp]",
+            "glitch_mode_major"
         ]
     },
     {
@@ -335,6 +348,7 @@
                 "name": "Death Mountain West Top",
                 "access_rules": [
                     "dm_west_top",
+                    "glitch_mode_major",
                     "world_state_open,@Mountain Access,mirror",
                     "world_state_open,entrance_shuffle_singleentryvanilla,@Mountain Access,hookshot,hammer",
                     "world_state_open,dm_west_bottom,mirror",
@@ -366,6 +380,7 @@
                 "name": "Death Mountain East Top",
                 "access_rules": [
                     "dm_east_top",
+                    "glitch_mode_major",
                     "world_state_open,entrance_shuffle_singleentryvanilla,@Mountain Access,hookshot",
                     "world_state_open,@Death Mountain West Top,hammer",
                     "world_state_open,ddm_floating,mirror",
@@ -440,6 +455,7 @@
                 "access_rules": [
                     "ddm_top",
                     "ddm_floating",
+                    "glitch_mode_major",
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_open,glitch_mode_ow,boots,hammer",
                     "world_state_open,glitch_mode_ow,boots,lift2,pearl",
