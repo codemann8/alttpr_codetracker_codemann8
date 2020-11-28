@@ -4431,15 +4431,14 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
-            "{}"
+            "{$hasNotSeenMireMedallion}"
         ],
         "sections": [
             {
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,mm_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{nothing}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -4451,7 +4450,7 @@
             {
                 "name": "Medallion",
                 "access_rules": [
-                    "{$hasNotSeenMireMedallion}"
+                    "{}"
                 ],
                 "visibility_rules": [ "$hasNotSeenMireMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -5410,15 +5409,14 @@
         "access_rules": [
             "world_state_open,@Death Mountain East Top,lift2,hammer,pearl",
             "world_state_inverted",
-            "{}"
+            "{$hasNotSeenTurtleMedallion}"
         ],
         "sections": [
             {
                 "name": "Entrance",
                 "access_rules": [
                     "$canUseMedallions,tr_medallion",
-                    "$canUseMedallions,bombos,ether,quake",
-                    "{nothing}"
+                    "$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -5430,7 +5428,7 @@
             {
                 "name": "Medallion",
                 "access_rules": [
-                    "{$hasNotSeenTurtleMedallion}"
+                    "{}"
                 ],
                 "visibility_rules": [ "$hasNotSeenTurtleMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
