@@ -444,6 +444,10 @@ function updateGhost(section, clearSection, markHostedItem)
             elseif PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-item%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-misc%-")) then
                 target.Owner.Pinned = true
             end
+
+            if target.Owner.Pinned and target.CapturedItem.Name == "Dead Entrance" then
+                target.Owner.Pinned = false
+            end
         end
     end
 end
