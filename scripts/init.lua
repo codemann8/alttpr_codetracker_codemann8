@@ -1,5 +1,9 @@
 --Config
-ScriptHost:LoadScript("scripts/settings.lua")
+ScriptHost:LoadScript("scripts/settings/experimental.lua")
+ScriptHost:LoadScript("scripts/settings/tracking.lua")
+ScriptHost:LoadScript("scripts/settings/fileio.lua")
+ScriptHost:LoadScript("scripts/settings/settings.lua")
+ScriptHost:LoadScript("scripts/settings/defaults.lua")
 
 --Essentials
 ScriptHost:LoadScript("scripts/global.lua")
