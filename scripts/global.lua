@@ -267,7 +267,7 @@ function initGlobalVars()
         CaptureBadgeCache = {}
 
         --Auto-Toggle Race Mode
-        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
+        if PREFERENCE_DEFAULT_RACE_MODE_ON then
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
         end
 
@@ -439,7 +439,9 @@ function updateGhost(section, clearSection, markHostedItem)
                 end
             end
 
-            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") then
+            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sanc%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sw%-")) then
+                target.Owner.Pinned = true
+            elseif PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-item%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-misc%-")) then
                 target.Owner.Pinned = true
             end
         end

@@ -128,10 +128,10 @@ end
 initGlobalVars()
 
 --Default Settings
-Tracker.DisplayAllLocations = true
-Tracker.AlwaysAllowClearing = true
-Tracker.PinLocationsOnItemCapture = false
-Tracker.AutoUnpinLocationsOnClear = false
+Tracker.DisplayAllLocations = PREFERENCE_DISPLAY_ALL_LOCATIONS
+Tracker.AlwaysAllowClearing = PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
+Tracker.PinLocationsOnItemCapture = PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE
+Tracker.AutoUnpinLocationsOnClear = PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
 
 if _VERSION == "Lua 5.3" then
     ScriptHost:LoadScript("scripts/fileio.lua")

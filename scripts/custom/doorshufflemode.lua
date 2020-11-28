@@ -36,8 +36,8 @@ function DoorShuffleMode:updateIcon()
 end
 
 function DoorShuffleMode:postUpdate()
-    if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
-        if OBJ_DOORSHUFFLE.CurrentStage == 2 then
+    if self.suffix == "" then
+        if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 then
             local message = "NEW FEATURE: For Crossed Door Rando, new icons have been added to the lower right of the Dungeons section."
             message = message .. "\n\nThe Dungeon Selector icon will cycle thru each dungeon and Total Chests icon will set the total number of chests for that particular dungeon."
             message = message .. " Left click will increment the total chests and right click will reset it to 'unknown amount'."
@@ -45,5 +45,11 @@ function DoorShuffleMode:postUpdate()
         end
 
         updateIcons()
+
+        if self:getState() == 2 then
+            Tracker.AutoUnpinLocationsOnClear = false
+        else
+            Tracker.AutoUnpinLocationsOnClear = PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
+        end
     end
 end
