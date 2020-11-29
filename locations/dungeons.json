@@ -415,13 +415,13 @@
     {
         "name": "TR Bridge Entrances",
         "access_rules": [
-            "TR Bridge Entrances OW,somaria",
-            "TR Bridge Entrances OW,hookshot",
-            "TR Bridge Entrances OW,[somaria],boots",
-            "TR Bridge Entrances OW,[hookshot],boots",
-            "TR Bridge Entrances OW,glitch_mode_ow,boots",
-            "TR Bridge Entrances OW,glitch_mode_ow,[cape]",
-            "TR Bridge Entrances OW,glitch_mode_ow,[byrna]",
+            "@TR Bridge Entrances OW,somaria",
+            "@TR Bridge Entrances OW,hookshot",
+            "@TR Bridge Entrances OW,[somaria],boots",
+            "@TR Bridge Entrances OW,[hookshot],boots",
+            "@TR Bridge Entrances OW,glitch_mode_ow,boots",
+            "@TR Bridge Entrances OW,glitch_mode_ow,[cape]",
+            "@TR Bridge Entrances OW,glitch_mode_ow,[byrna]",
             "entrance_shuffle_on",
             "door_shuffle_on"
         ]
