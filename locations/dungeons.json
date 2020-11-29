@@ -1,4 +1,5 @@
 [
+    //Access
     {
         "name": "HC Access",
         "parent": "Semi-Dungeon Color",
@@ -186,10 +187,7 @@
             {
                 "name": "Vitreous",
                 "access_rules": [
-                    "@Misery Mire/Vitreous Access,sword",
-                    "@Misery Mire/Vitreous Access,retro_mode_off,bow",
-                    "@Misery Mire/Vitreous Access,retro_mode_on,arrows,bow",
-                    "@Misery Mire/Vitreous Access,hammer",
+                    "@Misery Mire/Vitreous Access,$canDamageBoss|@Misery Mire/Vitreous",
                     "{@Misery Mire/Vitreous Access}"
                 ],
                 "capture_item": true,
@@ -310,8 +308,7 @@
             {
                 "name": "Moldorm",
                 "access_rules": [
-                    "@Tower of Hera/Moldorm Access,sword",
-                    "@Tower of Hera/Moldorm Access,hammer",
+                    "@Tower of Hera/Moldorm Access,$canDamageBoss|@Tower of Hera/Moldorm",
                     "{@Tower of Hera/Moldorm Access}"
                 ],
                 "capture_item": true,
@@ -696,20 +693,7 @@
             {
                 "name": "Armos",
                 "access_rules": [
-                    "@Eastern Palace/Armos Access,sword",
-                    "@Eastern Palace/Armos Access,hammer",
-                    "@Eastern Palace/Armos Access,retro_mode_off,bow",
-                    "@Eastern Palace/Armos Access,retro_mode_on,arrows,bow",
-                    "@Eastern Palace/Armos Access,boomerang",
-                    "@Eastern Palace/Armos Access,redboomerang",
-                    "@Eastern Palace/Armos Access,firerod,halfmagic,bottle",
-                    "@Eastern Palace/Armos Access,firerod,bottle3",
-                    "@Eastern Palace/Armos Access,icerod,halfmagic,bottle",
-                    "@Eastern Palace/Armos Access,icerod,bottle3",
-                    "@Eastern Palace/Armos Access,somaria,halfmagic",
-                    "@Eastern Palace/Armos Access,somaria,bottle",
-                    "@Eastern Palace/Armos Access,byrna,halfmagic",
-                    "@Eastern Palace/Armos Access,byrna,bottle",
+                    "@Eastern Palace/Armos Access,$canDamageBoss|@Eastern Palace/Armos",
                     "{@Eastern Palace/Armos Access}"
                 ],
                 "capture_item": true,
@@ -852,14 +836,7 @@
                 "name": "Lanmolas",
                 "short_name": "Lanmo",
                 "access_rules": [
-                    "@Desert Palace/Lanmolas Access,sword",
-                    "@Desert Palace/Lanmolas Access,hammer",
-                    "@Desert Palace/Lanmolas Access,firerod",
-                    "@Desert Palace/Lanmolas Access,icerod",
-                    "@Desert Palace/Lanmolas Access,retro_mode_off,bow",
-                    "@Desert Palace/Lanmolas Access,retro_mode_on,arrows,bow",
-                    "@Desert Palace/Lanmolas Access,somaria",
-                    "@Desert Palace/Lanmolas Access,byrna",
+                    "@Desert Palace/Lanmolas Access,$canDamageBoss|@Desert Palace/Lanmolas",
                     "{@Desert Palace/Lanmolas Access}"
                 ],
                 "capture_item": true,
@@ -1140,12 +1117,9 @@
                 "item_count": 1
             },
             {
-                "name": "Helmasaur",
+                "name": "King Helmasaur",
                 "access_rules": [
-                    "@Palace of Darkness/Helmasaur Access,sword",
-                    "@Palace of Darkness/Helmasaur Access,hammer",
-                    "@Palace of Darkness/Helmasaur Access,retro_mode_off,bow",
-                    "@Palace of Darkness/Helmasaur Access,retro_mode_on,arrows,bow",
+                    "@Palace of Darkness/Helmasaur Access,$canDamageBoss|@Palace of Darkness/King Helmasaur",
                     "{@Palace of Darkness/Helmasaur Access}"
                 ],
                 "capture_item": true,
@@ -1315,18 +1289,7 @@
             {
                 "name": "Arrghus",
                 "access_rules": [
-                    "@Swamp Palace/Arrghus Access,hookshot,sword",
-                    "@Swamp Palace/Arrghus Access,hookshot,hammer",
-                    "@Swamp Palace/Arrghus Access,hookshot,firerod,halfmagic",
-                    "@Swamp Palace/Arrghus Access,hookshot,firerod,bottle",
-                    "@Swamp Palace/Arrghus Access,hookshot,icerod,halfmagic",
-                    "@Swamp Palace/Arrghus Access,hookshot,icerod,bottle",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,silvers,[sword]",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,firerod",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,icerod",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,silvers,[sword]",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,firerod",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,icerod",
+                    "@Swamp Palace/Arrghus Access,$canDamageBoss|@Swamp Palace/Arrghus",
                     "{@Swamp Palace/Arrghus Access}"
                 ],
                 "capture_item": true,
@@ -1424,15 +1387,7 @@
             {
                 "name": "Mothula",
                 "access_rules": [
-                    "@Skull Woods/Mothula Access,sword",
-                    "@Skull Woods/Mothula Access,hammer",
-                    "@Skull Woods/Mothula Access,firerod,[halfmagic]",
-                    "@Skull Woods/Mothula Access,firerod,[bottle]",
-                    "@Skull Woods/Mothula Access,somaria,[halfmagic]",
-                    "@Skull Woods/Mothula Access,somaria,[bottle]",
-                    "@Skull Woods/Mothula Access,byrna,[halfmagic]",
-                    "@Skull Woods/Mothula Access,byrna,[bottle]",
-                    "@Skull Woods/Mothula Access,bottle,net",
+                    "@Skull Woods/Mothula Access,$canDamageBoss|@Skull Woods/Mothula",
                     "{@Skull Woods/Mothula Access}"
                 ],
                 "capture_item": true,
@@ -1549,10 +1504,7 @@
             {
                 "name": "Blind",
                 "access_rules": [
-                    "@Thieves Town/Blind Access,sword",
-                    "@Thieves Town/Blind Access,hammer",
-                    "@Thieves Town/Blind Access,somaria",
-                    "@Thieves Town/Blind Access,byrna",
+                    "@Thieves Town/Blind Access,$canDamageBoss|@Thieves Town/Blind",
                     "{@Thieves Town/Blind Access}"
                 ],
                 "capture_item": true,
@@ -1737,8 +1689,7 @@
             {
                 "name": "Kholdstare",
                 "access_rules": [
-                    "@Ice Palace/Kholdstare Access,hammer,lift1,firerod",
-                    "@Ice Palace/Kholdstare Access,hammer,lift1,$canUseMedallions,bombos",
+                    "@Ice Palace/Kholdstare Access,hammer,lift1,$canDamageBoss|@Ice Palace/Kholdstare",
                     "{@Ice Palace/Kholdstare Access,hammer,lift1}"
                 ],
                 "capture_item": true,
@@ -1993,12 +1944,7 @@
             {
                 "name": "Trinexx",
                 "access_rules": [
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword3",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2,[halfmagic]",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2,[bottle]",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,bottle2,[bottle3]",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,halfmagic,bottle,[bottle2]",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,hammer",
+                    "@Turtle Rock/Trinexx Access,$canDamageBoss|@Turtle Rock/Trinexx",
                     "{@Turtle Rock/Trinexx Access}"
                 ],
                 "capture_item": true,
@@ -2155,20 +2101,7 @@
             {
                 "name": "Bob\\Ice Armos",
                 "access_rules": [
-                    "@Ganon's Tower/Ice Armos Access,sword",
-                    "@Ganon's Tower/Ice Armos Access,hammer",
-                    "@Ganon's Tower/Ice Armos Access,retro_mode_off,bow",
-                    "@Ganon's Tower/Ice Armos Access,retro_mode_on,arrows,bow",
-                    "@Ganon's Tower/Ice Armos Access,boomerang",
-                    "@Ganon's Tower/Ice Armos Access,redboomerang",
-                    "@Ganon's Tower/Ice Armos Access,firerod,halfmagic,bottle",
-                    "@Ganon's Tower/Ice Armos Access,firerod,bottle3",
-                    "@Ganon's Tower/Ice Armos Access,icerod,halfmagic,bottle",
-                    "@Ganon's Tower/Ice Armos Access,icerod,bottle3",
-                    "@Ganon's Tower/Ice Armos Access,somaria,halfmagic",
-                    "@Ganon's Tower/Ice Armos Access,somaria,bottle",
-                    "@Ganon's Tower/Ice Armos Access,byrna,halfmagic",
-                    "@Ganon's Tower/Ice Armos Access,byrna,bottle",
+                    "@Ganon's Tower/Ice Armos Access,$canDamageBoss|@Ganon's Tower/Bob\\Ice Armos",
                     "{@Ganon's Tower/Ice Armos Access}"
                 ],
                 "capture_item": true,
@@ -2202,16 +2135,9 @@
                 "item_count": 1
             },
             {
-                "name": "Lanmolas 2",
+                "name": "Lanmolas",
                 "access_rules": [
-                    "@Ganon's Tower/Gauntlet,sword",
-                    "@Ganon's Tower/Gauntlet,hammer",
-                    "@Ganon's Tower/Gauntlet,firerod",
-                    "@Ganon's Tower/Gauntlet,icerod",
-                    "@Ganon's Tower/Gauntlet,retro_mode_off,bow",
-                    "@Ganon's Tower/Gauntlet,retro_mode_on,arrows,bow",
-                    "@Ganon's Tower/Gauntlet,somaria",
-                    "@Ganon's Tower/Gauntlet,byrna",
+                    "@Ganon's Tower/Gauntlet,$canDamageBoss|@Ganon's Tower/Lanmolas",
                     "{@Ganon's Tower/Gauntlet}"
                 ],
                 "capture_item": true,
@@ -2221,9 +2147,9 @@
             {
                 "name": "Mini Helmasaur",
                 "access_rules": [
-                    "@Ganon's Tower/Lanmolas 2,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Lanmolas 2,pool_mode_chestkeydrop,[gt_smallkey:6]",
-                    "@Ganon's Tower/Lanmolas 2,keysanity_smallkey_off",
+                    "@Ganon's Tower/Lanmolas,pool_mode_chest,[gt_smallkey:3]",
+                    "@Ganon's Tower/Lanmolas,pool_mode_chestkeydrop,[gt_smallkey:6]",
+                    "@Ganon's Tower/Lanmolas,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "clear_as_group": true,
@@ -2250,7 +2176,7 @@
                 "item_count": 1
             },
             {
-                "name": "Moldorm 2 Access",
+                "name": "Moldorm Access",
                 "access_rules": [
                     "@Ganon's Tower/Pre-Moldorm,pool_mode_chest,[gt_smallkey:4]",
                     "@Ganon's Tower/Pre-Moldorm,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:8]",
@@ -2261,11 +2187,10 @@
                 "item_count": 1
             },
             {
-                "name": "Moldorm 2",
+                "name": "Moldorm",
                 "access_rules": [
-                    "@Ganon's Tower/Moldorm 2 Access,sword",
-                    "@Ganon's Tower/Moldorm 2 Access,hammer",
-                    "{@Ganon's Tower/Moldorm 2 Access}"
+                    "@Ganon's Tower/Moldorm Access,$canDamageBoss|@Ganon's Tower/Moldorm",
+                    "{@Ganon's Tower/Moldorm Access}"
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
@@ -2274,8 +2199,8 @@
             {
                 "name": "Validation",
                 "access_rules": [
-                    "@Ganon's Tower/Moldorm 2,hookshot",
-                    "@Ganon's Tower/Moldorm 2,boots,[hookshot]"
+                    "@Ganon's Tower/Moldorm,hookshot",
+                    "@Ganon's Tower/Moldorm,boots,[hookshot]"
                 ],
                 "item_count": 1,
                 "hosted_item": "aga2"

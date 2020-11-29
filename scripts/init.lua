@@ -68,6 +68,7 @@ else
     ScriptHost:LoadScript("scripts/logic_common.lua")
     ScriptHost:LoadScript("scripts/logic_custom.lua")
 
+    Tracker:AddLocations("locations/bosses.json")
     Tracker:AddLocations("locations/regions.json")
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/dungeonmap.json")

@@ -1,0 +1,126 @@
+[
+    {
+        "name": "Bosses",
+        "sections": [
+            {
+                "name": "Armos",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "retro_mode_off,bow",
+                    "retro_mode_on,arrows,bow",
+                    "boomerang",
+                    "redboomerang",
+                    "firerod,$magicExtensions:4",
+                    "icerod,$magicExtensions:4",
+                    "somaria,$magicExtensions:2",
+                    "byrna,$magicExtensions:2"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Lanmolas",
+                "short_name": "Lanmo",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "firerod",
+                    "icerod",
+                    "retro_mode_off,bow",
+                    "retro_mode_on,arrows,bow",
+                    "somaria",
+                    "byrna"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Moldorm",
+                "access_rules": [
+                    "sword",
+                    "hammer"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "King Helmasaur",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "retro_mode_off,bow",
+                    "retro_mode_on,arrows,bow"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Arrghus",
+                "access_rules": [
+                    "hookshot,sword",
+                    "hookshot,hammer",
+                    "hookshot,firerod,$magicExtensions:2",
+                    "hookshot,icerod,$magicExtensions:2",
+                    "hookshot,retro_mode_off,bow,silvers,[sword]",
+                    "hookshot,retro_mode_off,bow,firerod",
+                    "hookshot,retro_mode_off,bow,icerod",
+                    "hookshot,retro_mode_on,arrows,bow,silvers,[sword]",
+                    "hookshot,retro_mode_on,arrows,bow,firerod",
+                    "hookshot,retro_mode_on,arrows,bow,icerod"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Mothula",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "firerod,$magicExtensions:2",
+                    "somaria,$magicExtensions:2",
+                    "byrna,$magicExtensions:2",
+                    "bottle,net"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Blind",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "somaria",
+                    "byrna"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Kholdstare",
+                "access_rules": [
+                    "firerod,sword",
+                    "firerod,hammer",
+                    "firerod,$magicExtensions:3",
+                    "$canUseMedallions,bombos,hammer",
+                    "$canUseMedallions,bombos,sword",
+                    "swordless,firerod,bombos,$magicExtensions:2"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Vitreous",
+                "access_rules": [
+                    "sword",
+                    "hammer",
+                    "retro_mode_off,bow",
+                    "retro_mode_on,arrows,bow"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Trinexx",
+                "access_rules": [
+                    "firerod,icerod,hammer",
+                    "firerod,icerod,sword3",
+                    "firerod,icerod,sword2,$magicExtensions:2",
+                    "firerod,icerod,sword,$magicExtensions:4"
+                ],
+                "item_count": 1
+            }
+        ]
+    }
+]

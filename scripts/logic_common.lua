@@ -35,6 +35,28 @@ function canClearAgaTowerBarrier()
     end    
 end
 
+function canDamageBoss(locationRef)
+    local boss = Tracker:FindObjectForCode(locationRef)
+    if boss and boss.CapturedItem then
+        boss = boss.CapturedItem.Name
+    else
+        boss = locationRef:sub(locationRef:find("/") + 1)
+    end
+    if boss == "Bob\\Ice Armos" then
+        boss = "Armos"
+    end
+
+    return 1, Tracker:FindObjectForCode("@Bosses/" .. boss).AccessibilityLevel
+end
+
+function magicExtensions()
+    local bars = Tracker:ProviderCountForCode("halfmagic") + 1
+    bars = bars * (Tracker:ProviderCountForCode("quartermagic") + 1)
+    local bottleCount = Tracker:ProviderCountForCode("bottle") + Tracker:ProviderCountForCode("bottle2") + Tracker:ProviderCountForCode("bottle3") + Tracker:ProviderCountForCode("bottle4")
+
+    return bars * (bottleCount + 1)
+end
+
 function hasSeenMireMedallion()
     local medallion = Tracker:FindObjectForCode("bombos")
     if medallion.CurrentStage == 1 or medallion.CurrentStage == 3 then

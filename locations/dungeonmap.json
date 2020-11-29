@@ -1172,8 +1172,8 @@
                 ]
             },
             {
-                "name": "PoD Helmasaur",
-                "access_rules": [ "@Palace of Darkness/Helmasaur" ],
+                "name": "PoD King Helmasaur",
+                "access_rules": [ "@Palace of Darkness/King Helmasaur" ],
                 "sections": [
                     {
                         "name": "Prize",
