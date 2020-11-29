@@ -72,6 +72,7 @@ The first thing you may notice is that a few things are rearranged differently t
   - The Big Key icon is for the GT BK Guessing Game (see `Autotracking` section below)
 - Map Area
   - Dungeon locations having a larger blip on the map compared to other locations
+  - Bosses can be rearranged and the appropriate logic rules flow thru to the location, see `Boss Shuffle` section below
   - MM and TR Medallion Checks are added to inform the user when it is available to check. Weathervane also gets a blip when you find flute but haven't activated it
   - The Map area features a `Dungeon` tab, which shows all the dungeon rooms in the game and the locations of all the items, this can also be used as a reference.
 
@@ -98,6 +99,9 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - Advanced development feature, in Beta and disabled by default, output file when you enter dungeons or overworld (see `Customization` section below)
 
 ## Mode-Specific Features:
+#### Boss Shuffle
+- When using Boss Shuffle, you can choose a different boss to replace the original boss and the new logic rules will be applied. To perform this, you left-hold-click a Dungeon blip on the map and click on the dotted line at the Boss Location, a grid will appear where you can select the boss that resides there.
+
 #### Entrance Shuffle
 - For tracking entrances, not only can you mark an entrance as Checked, but you can also add an icon on the map, indicating where the entrance leads. This is done by left-hold-clicking a blip and clicking the dashed box. Selecting an icon will place an icon on the map for later reference.
 - In the `Dropdowns` section of the tracker, there are 8 dropdown icons, to be marked as they are found, to show which dropdowns are left to be found. In `Insanity Shuffle`, 4 additional dropdown icons appear.
@@ -121,17 +125,28 @@ Maps help with putting as much info on your stream so viewers ask less questions
 ## Customization:
 EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
 
-For instance, there is a settings file that can be modified to enable or disable various features. This settings file is where all options to configure (current and future) are surfaced. The settings file will be found under `scripts/settings.lua`.
+For instance, there are settings files that can be modified to enable or disable various features. The settings files will be found under the `scripts/settings` directory. More information on the various .lua settings files are in the below section.
 
 #### Settings:
-- AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
-- AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance shuffle)
+The settings are broken out into several files, grouped by relation or its usage.
 
-- AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
-- AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
-- AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
-
-- AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
-- AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT - This will enable Race Mode every time you start a new tracking instance
-- LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
-- EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door shuffle, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.
+- tracking.lua (Settings relating to content that is tracked)
+  - AUTOTRACKER_DISABLE_ITEM_TRACKING - Changes whether items are auto-tracked or not
+  - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
+  - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance shuffle)
+    - *\*This is already disabled in Race Mode\**
+- defaults.lua (Settings that are defaults, can be changed by user in app)
+  - PREFERENCE_DISPLAY_ALL_LOCATIONS - Option to `Show All Locations` by default
+  - PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS - Option to `Always Allow Chest Manipulation` by default
+  - PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE - Option to `Pin Locations on Item Capture` by default
+  - PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR - Option to `Unpin Locations when Cleared` by default
+  - PREFERENCE_DEFAULT_RACE_MODE_ON - Option to enable `Race Mode` by default
+- settings.lua (Features available specific to functionality in this package)
+  - AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
+  - LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
+- fileio.lua (Features relating to files that are output when certain events are triggered)
+  - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
+  - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
+  - AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
+- experimental.lua (Settings to enable experimental features)
+  - EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door shuffle, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.
