@@ -174,15 +174,26 @@
                 "item_count": 1
             },
             {
-                "name": "Vitreous",
+                "name": "Vitreous Access",
                 "access_rules": [
                     "@Misery Mire/Dungeon Access,mm_bigkey,[lamp],somaria",
                     "@Misery Mire/Dungeon Access,keysanity_bigkey_off,[lamp],somaria",
-                    "door_shuffle_on,sword",
-                    "door_shuffle_on,retro_mode_off,bow",
-                    "door_shuffle_on,retro_mode_on,arrows,bow",
-                    "door_shuffle_on,hammer"
+                    "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Vitreous",
+                "access_rules": [
+                    "@Misery Mire/Vitreous Access,sword",
+                    "@Misery Mire/Vitreous Access,retro_mode_off,bow",
+                    "@Misery Mire/Vitreous Access,retro_mode_on,arrows,bow",
+                    "@Misery Mire/Vitreous Access,hammer",
+                    "{@Misery Mire/Vitreous Access}"
+                ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "miserymire",
                 "item_count": 1
             }
@@ -300,8 +311,11 @@
                 "name": "Moldorm",
                 "access_rules": [
                     "@Tower of Hera/Moldorm Access,sword",
-                    "@Tower of Hera/Moldorm Access,hammer"
+                    "@Tower of Hera/Moldorm Access,hammer",
+                    "{@Tower of Hera/Moldorm Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "towerofhera",
                 "item_count": 1
             }
@@ -669,13 +683,29 @@
                 "item_count": 1
             },
             {
+                "name": "Armos Access",
+                "access_rules": [
+                    "door_shuffle_off,pool_mode_chest,@Eastern Palace/Dark Eyegore,@Eastern Palace/Red Eyegores",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,ep_smallkey:1,[ep_smallkey:2],@Eastern Palace/Red Eyegores",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,keysanity_smallkey_off,@Eastern Palace/Red Eyegores",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Armos",
                 "access_rules": [
-                    "door_shuffle_off,pool_mode_chest,@Eastern Palace/Dark Eyegore,@Eastern Palace/Red Eyegores,$canDamageArmos",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,ep_smallkey:1,[ep_smallkey:2],@Eastern Palace/Red Eyegores,$canDamageArmos",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,keysanity_smallkey_off,@Eastern Palace/Red Eyegores,$canDamageArmos",
-                    "door_shuffle_on,[$canDamageArmos]"
+                    "@Eastern Palace/Armos Access,sword",
+                    "@Eastern Palace/Armos Access,hammer",
+                    "@Eastern Palace/Armos Access,retro_mode_off,bow",
+                    "@Eastern Palace/Armos Access,retro_mode_on,arrows,bow",
+                    "@Eastern Palace/Armos Access,boomerang",
+                    "@Eastern Palace/Armos Access,redboomerang",
+                    "{@Eastern Palace/Armos Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "item_count": 1,
                 "hosted_item": "easternpalace"
             }
@@ -802,12 +832,29 @@
                 "item_count": 1
             },
             {
+                "name": "Lanmolas Access",
+                "access_rules": [
+                    "@Desert Palace/Stonewall",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Lanmolas",
                 "short_name": "Lanmo",
                 "access_rules": [
-                    "@Desert Palace/Stonewall,$canDamageLanmolas",
-                    "door_shuffle_on,$canDamageLanmolas"
+                    "@Desert Palace/Lanmolas Access,sword",
+                    "@Desert Palace/Lanmolas Access,hammer",
+                    "@Desert Palace/Lanmolas Access,firerod",
+                    "@Desert Palace/Lanmolas Access,icerod",
+                    "@Desert Palace/Lanmolas Access,retro_mode_off,bow",
+                    "@Desert Palace/Lanmolas Access,retro_mode_on,arrows,bow",
+                    "@Desert Palace/Lanmolas Access,somaria",
+                    "{@Desert Palace/Lanmolas Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "desertpalace",
                 "item_count": 1
             }
@@ -1072,16 +1119,28 @@
                 "item_count": 1
             },
             {
-                "name": "Helmasaur",
+                "name": "Helmasaur Access",
                 "access_rules": [
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],pod_bigkey",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],keysanity_bigkey_off",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,pod_bigkey",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,keysanity_bigkey_off",
-                    "door_shuffle_on,sword",
-                    "door_shuffle_on,hammer",
-                    "door_shuffle_on,@Palace of Darkness/Mimics 2"
+                    "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Helmasaur",
+                "access_rules": [
+                    "@Palace of Darkness/Helmasaur Access,sword",
+                    "@Palace of Darkness/Helmasaur Access,hammer",
+                    "@Palace of Darkness/Helmasaur Access,retro_mode_off,bow",
+                    "@Palace of Darkness/Helmasaur Access,retro_mode_on,arrows,bow",
+                    "{@Palace of Darkness/Helmasaur Access}"
+                ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "palaceofdarkness",
                 "item_count": 1
             }
@@ -1234,20 +1293,31 @@
                 "item_count": 1
             },
             {
+                "name": "Arrghus Access",
+                "access_rules": [
+                    "door_shuffle_off,pool_mode_chest,@Swamp Palace/Waterway Key",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Waterway Key,sp_smallkey:5,[sp_smallkey:6]",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Waterway Key,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Arrghus",
                 "access_rules": [
-                    "door_shuffle_off,pool_mode_chest,@Swamp Palace/South Side,hookshot",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/South Side,hookshot,sp_smallkey:5,[sp_smallkey:6]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/South Side,hookshot,keysanity_smallkey_off",
-                    "door_shuffle_on,hookshot,sword",
-                    "door_shuffle_on,hookshot,hammer",
-                    "door_shuffle_on,hookshot,retro_mode_off,bow,silvers",
-                    "door_shuffle_on,hookshot,retro_mode_on,arrows,bow,silvers",
-                    "door_shuffle_on,hookshot,retro_mode_off,bow,firerod",
-                    "door_shuffle_on,hookshot,retro_mode_on,arrows,bow,firerod",
-                    "door_shuffle_on,hookshot,retro_mode_off,bow,icerod",
-                    "door_shuffle_on,hookshot,retro_mode_on,arrows,bow,icerod"
+                    "@Swamp Palace/Arrghus Access,hookshot,sword",
+                    "@Swamp Palace/Arrghus Access,hookshot,hammer",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,silvers",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,firerod",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,icerod",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,silvers",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,firerod",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,icerod",
+                    "{@Swamp Palace/Arrghus Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "swamppalace",
                 "item_count": 1
             }
@@ -1328,15 +1398,26 @@
                 "item_count": 1
             },
             {
-                "name": "Mothula",
+                "name": "Mothula Access",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Skull Woods/Gibdo Key",
                     "door_shuffle_off,pool_mode_chestkeydrop,@Skull Woods/Gibdo Key,sw_smallkey:2,[sw_smallkey:5]",
                     "door_shuffle_off,pool_mode_chestkeydrop,@Skull Woods/Gibdo Key,keysanity_smallkey_off",
-                    "door_shuffle_on,sword",
-                    "door_shuffle_on,firerod",
-                    "door_shuffle_on,hammer"
+                    "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Mothula",
+                "access_rules": [
+                    "@Skull Woods/Mothula Access,sword",
+                    "@Skull Woods/Mothula Access,firerod",
+                    "@Skull Woods/Mothula Access,hammer",
+                    "{@Skull Woods/Mothula Access}"
+                ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "skullwoods",
                 "item_count": 1
             }
@@ -1437,11 +1518,25 @@
                 "item_count": 1
             },
             {
+                "name": "Blind Access",
+                "access_rules": [
+                    "@Thieves Town/Attic Chest,@Thieves Town/Prison Cell",
+                    "door_shuffle_on,attic,@Thieves Town/Prison Cell"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Blind",
                 "access_rules": [
-                    "@Thieves Town/Attic Chest,@Thieves Town/Prison Cell,$canDamageBlind",
-                    "door_shuffle_crossed,attic,@Thieves Town/Prison Cell,$canDamageBlind"
+                    "@Thieves Town/Blind Access,sword",
+                    "@Thieves Town/Blind Access,hammer",
+                    "@Thieves Town/Blind Access,somaria",
+                    "@Thieves Town/Blind Access,byrna",
+                    "{@Thieves Town/Blind Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "thievestown",
                 "item_count": 1
             }
@@ -1602,7 +1697,7 @@
                 "item_count": 1
             },
             {
-                "name": "Pre-Kholdstare",
+                "name": "Kholdstare Access",
                 "access_rules": [
                     "@Ice Palace/Spike Cross,[somaria],[ip_bigkey]",
                     "@Ice Palace/Spike Cross,[somaria],keysanity_bigkey_off",
@@ -1622,9 +1717,12 @@
             {
                 "name": "Kholdstare",
                 "access_rules": [
-                    "@Ice Palace/Pre-Kholdstare,hammer,lift1,firerod",
-                    "@Ice Palace/Pre-Kholdstare,hammer,lift1,$canUseMedallions,bombos"
+                    "@Ice Palace/Kholdstare Access,hammer,lift1,firerod",
+                    "@Ice Palace/Kholdstare Access,hammer,lift1,$canUseMedallions,bombos",
+                    "{@Ice Palace/Kholdstare Access,hammer,lift1}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "icepalace",
                 "item_count": 1
             }
@@ -1875,9 +1973,14 @@
             {
                 "name": "Trinexx",
                 "access_rules": [
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,hammer"
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,halfmagic,bottle",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,bottle2",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,hammer",
+                    "{@Turtle Rock/Trinexx Access}"
                 ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "hosted_item": "turtlerock",
                 "item_count": 1
             }
@@ -2014,7 +2117,7 @@
                 "item_count": 1
             },
             {
-                "name": "Bob\\Ice Armos",
+                "name": "Ice Armos Access",
                 "access_rules": [
                     "@Ganon's Tower/Firesnake,pool_mode_chest,[gt_smallkey:3]",
                     "@Ganon's Tower/Firesnake,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:7]",
@@ -2022,8 +2125,24 @@
                     "@Ganon's Tower/Compass Room,pool_mode_chest",
                     "@Ganon's Tower/Compass Room,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:7]",
                     "@Ganon's Tower/Compass Room,keysanity_smallkey_off",
-                    "door_shuffle_on,[$canDamageArmos]"
+                    "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Bob\\Ice Armos",
+                "access_rules": [
+                    "@Ganon's Tower/Ice Armos Access,sword",
+                    "@Ganon's Tower/Ice Armos Access,hammer",
+                    "@Ganon's Tower/Ice Armos Access,retro_mode_off,bow",
+                    "@Ganon's Tower/Ice Armos Access,retro_mode_on,arrows,bow",
+                    "@Ganon's Tower/Ice Armos Access,boomerang",
+                    "@Ganon's Tower/Ice Armos Access,redboomerang",
+                    "{@Ganon's Tower/Ice Armos Access}"
+                ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
                 "clear_as_group": false,
                 "item_count": 4
             },
@@ -2051,6 +2170,22 @@
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
+            },
+            {
+                "name": "Lanmolas 2",
+                "access_rules": [
+                    "@Ganon's Tower/Gauntlet,sword",
+                    "@Ganon's Tower/Gauntlet,hammer",
+                    "@Ganon's Tower/Gauntlet,firerod",
+                    "@Ganon's Tower/Gauntlet,icerod",
+                    "@Ganon's Tower/Gauntlet,retro_mode_off,bow",
+                    "@Ganon's Tower/Gauntlet,retro_mode_on,arrows,bow",
+                    "@Ganon's Tower/Gauntlet,somaria",
+                    "{@Ganon's Tower/Gauntlet}"
+                ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
+                "hosted_item": "dummy"
             },
             {
                 "name": "Mini Helmasaur",
@@ -2084,7 +2219,7 @@
                 "item_count": 1
             },
             {
-                "name": "Moldorm Access",
+                "name": "Moldorm 2 Access",
                 "access_rules": [
                     "@Ganon's Tower/Pre-Moldorm,pool_mode_chest,[gt_smallkey:4]",
                     "@Ganon's Tower/Pre-Moldorm,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:8]",
@@ -2095,19 +2230,21 @@
                 "item_count": 1
             },
             {
-                "name": "Moldorm",
+                "name": "Moldorm 2",
                 "access_rules": [
-                    "@Ganon's Tower/Moldorm Access,sword",
-                    "@Ganon's Tower/Moldorm Access,hammer"
+                    "@Ganon's Tower/Moldorm 2 Access,sword",
+                    "@Ganon's Tower/Moldorm 2 Access,hammer",
+                    "{@Ganon's Tower/Moldorm 2 Access}"
                 ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_bosses",
+                "hosted_item": "dummy"
             },
             {
                 "name": "Validation",
                 "access_rules": [
-                    "@Ganon's Tower/Moldorm,hookshot",
-                    "@Ganon's Tower/Moldorm,boots,[hookshot]"
+                    "@Ganon's Tower/Moldorm 2,hookshot",
+                    "@Ganon's Tower/Moldorm 2,boots,[hookshot]"
                 ],
                 "item_count": 1,
                 "hosted_item": "aga2"

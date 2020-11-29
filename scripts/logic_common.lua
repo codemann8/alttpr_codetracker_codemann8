@@ -35,48 +35,6 @@ function canClearAgaTowerBarrier()
     end    
 end
 
-function canDamageArmos()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") == 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") > 0 and Tracker:ProviderCountForCode("arrows") > 0 then
-        return 1
-    else
-        return Tracker:ProviderCountForCode("boomerang")
-    end
-end
-
-function canDamageLanmolas()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("firerod") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("icerod") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 then
-        return 1
-    else
-        return Tracker:ProviderCountForCode("somaria")
-    end
-end
-
-function canDamageBlind()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("byrna") > 0 then
-        return 1
-    else
-        return Tracker:ProviderCountForCode("somaria")
-    end
-end
-
 function hasSeenMireMedallion()
     local medallion = Tracker:FindObjectForCode("bombos")
     if medallion.CurrentStage == 1 or medallion.CurrentStage == 3 then

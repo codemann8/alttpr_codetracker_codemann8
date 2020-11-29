@@ -624,6 +624,12 @@
             }
         ]
     },
+    // Dummy
+    {
+        "name": "Dummy",
+        "type": "toggle",
+        "codes": "dummy"
+    },
     
     //Locational Items
     {
