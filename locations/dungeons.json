@@ -702,6 +702,14 @@
                     "@Eastern Palace/Armos Access,retro_mode_on,arrows,bow",
                     "@Eastern Palace/Armos Access,boomerang",
                     "@Eastern Palace/Armos Access,redboomerang",
+                    "@Eastern Palace/Armos Access,firerod,halfmagic,bottle",
+                    "@Eastern Palace/Armos Access,firerod,bottle3",
+                    "@Eastern Palace/Armos Access,icerod,halfmagic,bottle",
+                    "@Eastern Palace/Armos Access,icerod,bottle3",
+                    "@Eastern Palace/Armos Access,somaria,halfmagic",
+                    "@Eastern Palace/Armos Access,somaria,bottle",
+                    "@Eastern Palace/Armos Access,byrna,halfmagic",
+                    "@Eastern Palace/Armos Access,byrna,bottle",
                     "{@Eastern Palace/Armos Access}"
                 ],
                 "capture_item": true,
@@ -851,6 +859,7 @@
                     "@Desert Palace/Lanmolas Access,retro_mode_off,bow",
                     "@Desert Palace/Lanmolas Access,retro_mode_on,arrows,bow",
                     "@Desert Palace/Lanmolas Access,somaria",
+                    "@Desert Palace/Lanmolas Access,byrna",
                     "{@Desert Palace/Lanmolas Access}"
                 ],
                 "capture_item": true,
@@ -1308,10 +1317,14 @@
                 "access_rules": [
                     "@Swamp Palace/Arrghus Access,hookshot,sword",
                     "@Swamp Palace/Arrghus Access,hookshot,hammer",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,silvers",
+                    "@Swamp Palace/Arrghus Access,hookshot,firerod,halfmagic",
+                    "@Swamp Palace/Arrghus Access,hookshot,firerod,bottle",
+                    "@Swamp Palace/Arrghus Access,hookshot,icerod,halfmagic",
+                    "@Swamp Palace/Arrghus Access,hookshot,icerod,bottle",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,silvers,[sword]",
                     "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,firerod",
                     "@Swamp Palace/Arrghus Access,hookshot,retro_mode_off,bow,icerod",
-                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,silvers",
+                    "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,silvers,[sword]",
                     "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,firerod",
                     "@Swamp Palace/Arrghus Access,hookshot,retro_mode_on,arrows,bow,icerod",
                     "{@Swamp Palace/Arrghus Access}"
@@ -1412,8 +1425,14 @@
                 "name": "Mothula",
                 "access_rules": [
                     "@Skull Woods/Mothula Access,sword",
-                    "@Skull Woods/Mothula Access,firerod",
                     "@Skull Woods/Mothula Access,hammer",
+                    "@Skull Woods/Mothula Access,firerod,[halfmagic]",
+                    "@Skull Woods/Mothula Access,firerod,[bottle]",
+                    "@Skull Woods/Mothula Access,somaria,[halfmagic]",
+                    "@Skull Woods/Mothula Access,somaria,[bottle]",
+                    "@Skull Woods/Mothula Access,byrna,[halfmagic]",
+                    "@Skull Woods/Mothula Access,byrna,[bottle]",
+                    "@Skull Woods/Mothula Access,bottle,net",
                     "{@Skull Woods/Mothula Access}"
                 ],
                 "capture_item": true,
@@ -1521,7 +1540,8 @@
                 "name": "Blind Access",
                 "access_rules": [
                     "@Thieves Town/Attic Chest,@Thieves Town/Prison Cell",
-                    "door_shuffle_on,attic,@Thieves Town/Prison Cell"
+                    "door_shuffle_basic,@Thieves Town/Prison Cell",
+                    "door_shuffle_crossed,attic,@Thieves Town/Prison Cell"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1973,9 +1993,11 @@
             {
                 "name": "Trinexx",
                 "access_rules": [
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,halfmagic,bottle",
-                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,bottle2",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword3",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2,[halfmagic]",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword2,[bottle]",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,bottle2,[bottle3]",
+                    "@Turtle Rock/Trinexx Access,firerod,icerod,sword,halfmagic,bottle,[bottle2]",
                     "@Turtle Rock/Trinexx Access,firerod,icerod,hammer",
                     "{@Turtle Rock/Trinexx Access}"
                 ],
@@ -2139,6 +2161,14 @@
                     "@Ganon's Tower/Ice Armos Access,retro_mode_on,arrows,bow",
                     "@Ganon's Tower/Ice Armos Access,boomerang",
                     "@Ganon's Tower/Ice Armos Access,redboomerang",
+                    "@Ganon's Tower/Ice Armos Access,firerod,halfmagic,bottle",
+                    "@Ganon's Tower/Ice Armos Access,firerod,bottle3",
+                    "@Ganon's Tower/Ice Armos Access,icerod,halfmagic,bottle",
+                    "@Ganon's Tower/Ice Armos Access,icerod,bottle3",
+                    "@Ganon's Tower/Ice Armos Access,somaria,halfmagic",
+                    "@Ganon's Tower/Ice Armos Access,somaria,bottle",
+                    "@Ganon's Tower/Ice Armos Access,byrna,halfmagic",
+                    "@Ganon's Tower/Ice Armos Access,byrna,bottle",
                     "{@Ganon's Tower/Ice Armos Access}"
                 ],
                 "capture_item": true,
@@ -2181,6 +2211,7 @@
                     "@Ganon's Tower/Gauntlet,retro_mode_off,bow",
                     "@Ganon's Tower/Gauntlet,retro_mode_on,arrows,bow",
                     "@Ganon's Tower/Gauntlet,somaria",
+                    "@Ganon's Tower/Gauntlet,byrna",
                     "{@Ganon's Tower/Gauntlet}"
                 ],
                 "capture_item": true,
