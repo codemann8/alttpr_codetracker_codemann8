@@ -293,6 +293,7 @@
                     "glitch_mode_major,@Misery Mire/Left Side,[toh_bigkey],hookshot",
                     "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
                 "item_count": 1
             },
             {
