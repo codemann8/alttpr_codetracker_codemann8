@@ -1203,8 +1203,8 @@
                 "name": "South Side",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Swamp Palace/Bomb Wall,hammer",
-                    "door_shuffle_off,pool_mode_chestkeydrop,sp_smallkey:3,hammer",
-                    "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off,hammer",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,sp_smallkey:3,hammer",
+                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,keysanity_smallkey_off,hammer",
                     "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
                     "door_shuffle_off,glitch_mode_major,@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
