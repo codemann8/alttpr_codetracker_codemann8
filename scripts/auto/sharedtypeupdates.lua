@@ -328,9 +328,9 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         end
     end
 
-    if NEW_KEY_SYSTEM and ((OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0) or dungeonPrefix != "toh") then
+    if NEW_KEY_SYSTEM and ((OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0) or dungeonPrefix ~= "toh") then
     --if NEW_KEY_SYSTEM then --remove previous line if alttpr.com fixes ToH Cage issue
-            if address > 0x7ef400 then
+        if address > 0x7ef400 then
             chestKeys.AcquiredCount = ReadU8(segment, address) + (dungeonPrefix == "hc" and ReadU8(segment, address + 1) or 0)
         end
     elseif OBJ_KEYSANITY_SMALL.CurrentStage < 2 and address < 0x7ef400 then
