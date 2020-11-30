@@ -1,5 +1,6 @@
 START_CLOCK = os.clock()
 TRACKER_READY = false
+NEW_KEY_SYSTEM = false
 
 CaptureBadgeEntrances = {
     --"@Forest Hideout Drop/Dropdown",
@@ -257,15 +258,17 @@ function initGlobalVars()
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
         OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
         OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
+        OBJ_GLITCH = Tracker:FindObjectForCode("glitch_mode")
         OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
 
         OBJ_DOORDUNGEON = Tracker:FindObjectForCode("door_dungeonselect")
         OBJ_DOORCHEST = Tracker:FindObjectForCode("door_totalchest")
+        OBJ_DOORKEY = Tracker:FindObjectForCode("door_totalkey")
 
         CaptureBadgeCache = {}
 
         --Auto-Toggle Race Mode
-        if AUTOTRACKER_ENABLE_RACE_MODE_BY_DEFAULT then
+        if PREFERENCE_DEFAULT_RACE_MODE_ON then
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
         end
 
@@ -397,6 +400,7 @@ function updateIcons()
 
         OBJ_DOORDUNGEON.ItemState:updateIcon()
         OBJ_DOORCHEST.ItemState:updateIcon()
+        OBJ_DOORKEY.ItemState:updateIcon()
     end
 end
 
@@ -436,8 +440,14 @@ function updateGhost(section, clearSection, markHostedItem)
                 end
             end
 
-            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") then
+            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sanc%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sw%-")) then
                 target.Owner.Pinned = true
+            elseif PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-item%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-misc%-")) then
+                target.Owner.Pinned = true
+            end
+
+            if target.Owner.Pinned and target.CapturedItem.Name == "Dead Entrance" then
+                target.Owner.Pinned = false
             end
         end
     end

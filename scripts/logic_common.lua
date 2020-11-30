@@ -35,46 +35,26 @@ function canClearAgaTowerBarrier()
     end    
 end
 
-function canDamageArmos()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") == 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 and Tracker:ProviderCountForCode("retro_mode_surrogate") > 0 and Tracker:ProviderCountForCode("arrows") > 0 then
-        return 1
+function canDamageBoss(locationRef)
+    local boss = Tracker:FindObjectForCode(locationRef)
+    if boss and boss.CapturedItem then
+        boss = boss.CapturedItem.Name
     else
-        return Tracker:ProviderCountForCode("boomerang")
+        boss = locationRef:sub(locationRef:find("/") + 1)
     end
+    if boss == "Bob\\Ice Armos" then
+        boss = "Armos"
+    end
+
+    return 1, Tracker:FindObjectForCode("@Bosses/" .. boss).AccessibilityLevel
 end
 
-function canDamageLanmolas()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("firerod") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("icerod") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("bow") > 0 then
-        return 1
-    else
-        return Tracker:ProviderCountForCode("somaria")
-    end
-end
+function magicExtensions()
+    local bars = Tracker:ProviderCountForCode("halfmagic") + 1
+    bars = bars * (Tracker:ProviderCountForCode("quartermagic") + 1)
+    local bottleCount = Tracker:ProviderCountForCode("bottle") + Tracker:ProviderCountForCode("bottle2") + Tracker:ProviderCountForCode("bottle3") + Tracker:ProviderCountForCode("bottle4")
 
-function canDamageBlind()
-    if Tracker:ProviderCountForCode("sword") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("hammer") > 0 then
-        return 1
-    elseif Tracker:ProviderCountForCode("byrna") > 0 then
-        return 1
-    else
-        return Tracker:ProviderCountForCode("somaria")
-    end
+    return bars * (bottleCount + 1)
 end
 
 function hasSeenMireMedallion()

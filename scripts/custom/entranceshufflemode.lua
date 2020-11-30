@@ -58,5 +58,13 @@ function EntranceShuffleMode:postUpdate()
                 drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
             end
         end
+
+        if self:getState() > 0 then
+            Tracker.DisplayAllLocations = true
+            Tracker.AlwaysAllowClearing = true
+        else
+            Tracker.DisplayAllLocations = PREFERENCE_DISPLAY_ALL_LOCATIONS
+            Tracker.AlwaysAllowClearing = PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
+        end
     end
 end

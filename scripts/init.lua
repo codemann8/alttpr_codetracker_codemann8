@@ -1,5 +1,9 @@
 --Config
-ScriptHost:LoadScript("scripts/settings.lua")
+ScriptHost:LoadScript("scripts/settings/experimental.lua")
+ScriptHost:LoadScript("scripts/settings/tracking.lua")
+ScriptHost:LoadScript("scripts/settings/fileio.lua")
+ScriptHost:LoadScript("scripts/settings/settings.lua")
+ScriptHost:LoadScript("scripts/settings/defaults.lua")
 
 --Essentials
 ScriptHost:LoadScript("scripts/global.lua")
@@ -29,6 +33,7 @@ ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
 ScriptHost:LoadScript("scripts/custom/retromode.lua")
 ScriptHost:LoadScript("scripts/custom/poolmode.lua")
+ScriptHost:LoadScript("scripts/custom/glitchmode.lua")
 ScriptHost:LoadScript("scripts/custom/racemode.lua")
 
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
@@ -45,6 +50,9 @@ if Tracker.ActiveVariantUID == "items_only" then
     Tracker:AddLayouts("layouts/layouts_base_custom.json")
     Tracker:AddLayouts("layouts/layouts_base_shared.json")
     Tracker:AddLayouts("layouts/layouts_custom.json")
+    if LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+        Tracker:AddLayouts("layouts/layouts_dungeonalt_shared.json")
+    end
     Tracker:AddLayouts("layouts/layouts_shared.json")
     Tracker:AddLayouts("layouts/dungeon_grid.json")
     Tracker:AddLayouts("layouts/tracker.json")
@@ -60,6 +68,7 @@ else
     ScriptHost:LoadScript("scripts/logic_common.lua")
     ScriptHost:LoadScript("scripts/logic_custom.lua")
 
+    Tracker:AddLocations("locations/bosses.json")
     Tracker:AddLocations("locations/regions.json")
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/dungeonmap.json")
@@ -69,7 +78,8 @@ else
 
     --Custom Items
     DoorDungeonSelect()
-    DoorTotalChest()
+    DoorTotalChest("Chests", "chest", "item", "images/0058.png")
+    DoorTotalChest("Keys", "key", "smallkey", "images/SmallKey2.png")
 
     WorldStateMode(true):linkSurrogate(WorldStateMode(false))
     KeysanityMode(false, "Map"):linkSurrogate(KeysanityMode(true, "Map"))
@@ -80,6 +90,7 @@ else
     DoorShuffleMode(false):linkSurrogate(DoorShuffleMode(true))
     RetroMode(false):linkSurrogate(RetroMode(true))
     PoolMode(false):linkSurrogate(PoolMode(true))
+    GlitchMode(false):linkSurrogate(GlitchMode(true))
     RaceMode(false):linkSurrogate(RaceMode(true))
 
     GTCrystalReq()
@@ -90,6 +101,9 @@ else
     Tracker:AddLayouts("layouts/layouts_base_shared.json")
 
     Tracker:AddLayouts("layouts/layouts_custom.json") --anything defined here overrides layouts defined in 'layouts_shared'
+    if LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+        Tracker:AddLayouts("layouts/layouts_dungeonalt_shared.json")
+    end
     Tracker:AddLayouts("layouts/layouts_shared.json")
 
     Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
@@ -115,10 +129,10 @@ end
 initGlobalVars()
 
 --Default Settings
-Tracker.DisplayAllLocations = true
-Tracker.AlwaysAllowClearing = true
-Tracker.PinLocationsOnItemCapture = false
-Tracker.AutoUnpinLocationsOnClear = false
+Tracker.DisplayAllLocations = PREFERENCE_DISPLAY_ALL_LOCATIONS
+Tracker.AlwaysAllowClearing = PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
+Tracker.PinLocationsOnItemCapture = PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE
+Tracker.AutoUnpinLocationsOnClear = PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
 
 if _VERSION == "Lua 5.3" then
     ScriptHost:LoadScript("scripts/fileio.lua")

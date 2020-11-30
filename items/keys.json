@@ -405,7 +405,7 @@
         "type": "consumable",
         "img": "images/SmallKey2.png",
         "codes": "hc_potkey",
-        "max_quantity": 3
+        "max_quantity": 4
     },
     {
         "name": "Eastern Palace Pot Key",
@@ -636,5 +636,67 @@
         "type": "toggle",
         "img": "images/map.png",
         "codes": "gt_map"
+    },
+
+    // Bosses
+    {
+        "name": "Armos",
+        "type": "toggle",
+        "img": "images/boss-armos.png",
+        "codes": "boss_armos"
+    },
+    {
+        "name": "Lanmolas",
+        "type": "toggle",
+        "img": "images/boss-lanmolas.png",
+        "codes": "boss_lanmolas"
+    },
+    {
+        "name": "Moldorm",
+        "type": "toggle",
+        "img": "images/boss-moldorm.png",
+        "codes": "boss_moldorm"
+    },
+    {
+        "name": "King Helmasaur",
+        "type": "toggle",
+        "img": "images/boss-helmasaur.png",
+        "codes": "boss_helmasaur"
+    },
+    {
+        "name": "Arrghus",
+        "type": "toggle",
+        "img": "images/boss-arrghus.png",
+        "codes": "boss_arrghus"
+    },
+    {
+        "name": "Mothula",
+        "type": "toggle",
+        "img": "images/boss-mothula.png",
+        "codes": "boss_mothula"
+    },
+    {
+        "name": "Blind",
+        "type": "toggle",
+        "img": "images/boss-blind.png",
+        "codes": "boss_blind"
+    },
+    {
+        "name": "Kholdstare",
+        "type": "toggle",
+        "img": "images/boss-kholdstare.png",
+        "codes": "boss_kholdstare"
+    },
+    {
+        "name": "Vitreous",
+        "type": "toggle",
+        "img": "images/boss-vitreous.png",
+        "codes": "boss_vitreous"
+    },
+    {
+        "name": "Trinexx",
+        "type": "toggle",
+        "img": "images/boss-trinexx.png",
+        "codes": "boss_trinexx"
     }
 ]

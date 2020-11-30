@@ -1,8 +1,11 @@
 DoorTotalChest = CustomItem:extend()
 
-function DoorTotalChest:init()
-    self:createItem("Door Rando Total Chests")
-    self.code = "door_totalchest"
+function DoorTotalChest:init(name, suffix, itemType, img)
+    self:createItem("Door Rando Total " .. name)
+    self.code = "door_total" .. suffix
+
+    self.Icon = ImageReference:FromPackRelativePath(img)
+    self:setProperty("itemType", itemType)
 end
 
 function DoorTotalChest:setState(state)
@@ -15,7 +18,7 @@ end
 
 function DoorTotalChest:updateIcon()
     if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/0058.png")
+        self.ItemInstance.Icon = self.Icon
         if self:getState() == 99 then
             self.ItemInstance.BadgeText = "?"
         else
@@ -44,9 +47,20 @@ function DoorTotalChest:onLeftClick()
             [11] = "tr",
             [12] = "gt"
         }
-        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item").ItemState
+        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_" .. self:getProperty("itemType"))
+        if item.ItemState and item.ItemState.MaxCount then
+            item = item.ItemState
+        end
+
         if self:getState() == 99 then
-            item.MaxCount = item.MaxCount - item.AcquiredCount
+            if self:getProperty("itemType") == "smallkey" then
+                item.MaxCount = item.AcquiredCount
+                if item.MaxCount == 0 then
+                    item.BadgeText = "0"
+                end
+            else
+                item.MaxCount = item.MaxCount - item.AcquiredCount
+            end
             self:setState(item.MaxCount)
         else
             item.MaxCount = item.MaxCount + 1
@@ -72,10 +86,16 @@ function DoorTotalChest:onRightClick()
             [11] = "tr",
             [12] = "gt"
         }
-        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_item").ItemState
+        local item = Tracker:FindObjectForCode(dungeons[OBJ_DOORDUNGEON.ItemState:getState()] .. "_" .. self:getProperty("itemType"))
+        if item.ItemState and item.ItemState.MaxCount then
+            item = item.ItemState
+        end
+        
         if item.MaxCount == item.AcquiredCount then
             item.MaxCount = 99
-            item.AcquiredCount = item.MaxCount - item.AcquiredCount
+            if self:getProperty("itemType") == "item" then
+                item.AcquiredCount = item.MaxCount - item.AcquiredCount
+            end
         else
             item.MaxCount = item.MaxCount - 1
         end

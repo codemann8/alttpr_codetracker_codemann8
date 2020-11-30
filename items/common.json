@@ -326,15 +326,18 @@
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay2.png"
+                "img_mods": "overlay|images/overlay2.png",
+                "codes": "bottle2"
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay3.png"
+                "img_mods": "overlay|images/overlay3.png",
+                "codes": "bottle3"
             },
             {
                 "img": "images/0026.png",
-                "img_mods": "overlay|images/overlay4.png"
+                "img_mods": "overlay|images/overlay4.png",
+                "codes": "bottle4"
             }
         ]
     },
@@ -620,6 +623,12 @@
                 "codes": "yellowgomode,maybegomode,yieldgomode"
             }
         ]
+    },
+    // Dummy
+    {
+        "name": "Dummy",
+        "type": "toggle",
+        "codes": "dummy"
     },
     
     //Locational Items
@@ -1042,6 +1051,30 @@
                 "img": "images/mode_pool_chestkeydrop.png",
                 "codes": "pool_mode,pool_mode_chestkeydrop",
                 "inherit_codes": false
+            }
+        ]
+    },
+    // Glitch Mode
+    {
+        "name": "Glitch Logic",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_glitches_none.png",
+                "codes": "glitch_mode,glitch_mode_none",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_glitches_ow.png",
+                "codes": "glitch_mode,glitch_mode_ow",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_glitches_major.png",
+                "codes": "glitch_mode,glitch_mode_major",
+                "inherit_codes": true
             }
         ]
     },
