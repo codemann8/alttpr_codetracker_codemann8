@@ -45,7 +45,7 @@
                 "name": "King Helmasaur",
                 "access_rules": [
                     "sword",
-                    "hammer",
+                    "hammer,[sword]",
                     "retro_mode_off,bow",
                     "retro_mode_on,arrows,bow"
                 ],
