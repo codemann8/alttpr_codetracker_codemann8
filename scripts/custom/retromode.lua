@@ -23,6 +23,8 @@ function RetroMode:updateIcon()
         item.Active = not item.Active
         item.Active = not item.Active
         item.IgnoreUserInput = false
-        Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(2)
+        if TRACKER_READY then
+            Tracker:FindObjectForCode("keysanity_smallkey_surrogate").ItemState:setState(2)
+        end
     end
 end

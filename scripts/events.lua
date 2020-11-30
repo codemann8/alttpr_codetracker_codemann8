@@ -3,12 +3,14 @@ function tracker_on_begin_loading_save_file()
 end
 
 function tracker_on_finish_loading_save_file()
-    TRACKER_READY = true
     if OBJ_RETRO then
         Tracker:FindObjectForCode("retro_mode_surrogate").ItemState:updateIcon()
         updateIcons()
+        TRACKER_READY = true
         tracker_on_accessibility_updated()
     end
+    
+    TRACKER_READY = true
 end
 
 function tracker_on_accessibility_updated()
