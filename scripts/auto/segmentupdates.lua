@@ -895,8 +895,8 @@ function updateDungeonKeysFromMemorySegment(segment)
     InvalidateReadCaches()
 
     --Small Keys
-    if segment and OBJ_DOORSHUFFLE.CurrentStage > 0 then
-        updateDungeonKeysFromPrefix(segment, "hc", 0x7ef4e1)
+    if segment then
+        updateDungeonKeysFromPrefix(segment, "hc", 0x7ef4e0)
         updateDungeonKeysFromPrefix(segment, "ep", 0x7ef4e2)
         updateDungeonKeysFromPrefix(segment, "dp", 0x7ef4e3)
         updateDungeonKeysFromPrefix(segment, "toh", 0x7ef4ea)

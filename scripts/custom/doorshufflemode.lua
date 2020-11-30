@@ -46,6 +46,10 @@ function DoorShuffleMode:postUpdate()
 
         updateIcons()
 
+        if self:getState() == 0 then
+            NEW_KEY_SYSTEM = false
+        end
+
         if self:getState() == 2 then
             Tracker.AutoUnpinLocationsOnClear = false
         else

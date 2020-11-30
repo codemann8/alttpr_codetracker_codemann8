@@ -1,5 +1,6 @@
 START_CLOCK = os.clock()
 TRACKER_READY = false
+NEW_KEY_SYSTEM = false
 
 CaptureBadgeEntrances = {
     --"@Forest Hideout Drop/Dropdown",
