@@ -316,21 +316,25 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 
     InvalidateReadCaches()
 
-    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 and not NEW_KEY_SYSTEM then
-        local offset = 0x7ef4e0
-        while (offset <= 0x7ef4ed)
-        do
-            if AutoTracker:ReadU16(offset) > 0 then
-                NEW_KEY_SYSTEM = true
-                break
+    if OBJ_DOORSHUFFLE then
+        if OBJ_DOORSHUFFLE.CurrentStage > 0 then
+            NEW_KEY_SYSTEM = true
+        elseif not NEW_KEY_SYSTEM then
+            local offset = 0x7ef4e0
+            while (offset <= 0x7ef4ed)
+            do
+                if AutoTracker:ReadU16(offset) > 0 then
+                    NEW_KEY_SYSTEM = true
+                    break
+                end
+                offset = offset + 2
             end
-            offset = offset + 2
         end
     end
 
-    if NEW_KEY_SYSTEM and ((OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0) or dungeonPrefix != "toh") then
+    if NEW_KEY_SYSTEM and ((OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0) or dungeonPrefix ~= "toh") then
     --if NEW_KEY_SYSTEM then --remove previous line if alttpr.com fixes ToH Cage issue
-            if address > 0x7ef400 then
+        if address > 0x7ef400 then
             chestKeys.AcquiredCount = ReadU8(segment, address) + (dungeonPrefix == "hc" and ReadU8(segment, address + 1) or 0)
         end
     elseif OBJ_KEYSANITY_SMALL.CurrentStage < 2 and address < 0x7ef400 then
