@@ -316,15 +316,19 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 
     InvalidateReadCaches()
 
-    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 0 and not NEW_KEY_SYSTEM then
-        local offset = 0x7ef4e0
-        while (offset <= 0x7ef4ed)
-        do
-            if AutoTracker:ReadU16(offset) > 0 then
-                NEW_KEY_SYSTEM = true
-                break
+    if OBJ_DOORSHUFFLE then
+        if OBJ_DOORSHUFFLE.CurrentStage > 0 then
+            NEW_KEY_SYSTEM = true
+        elseif not NEW_KEY_SYSTEM then
+            local offset = 0x7ef4e0
+            while (offset <= 0x7ef4ed)
+            do
+                if AutoTracker:ReadU16(offset) > 0 then
+                    NEW_KEY_SYSTEM = true
+                    break
+                end
+                offset = offset + 2
             end
-            offset = offset + 2
         end
     end
 
