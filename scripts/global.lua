@@ -440,7 +440,7 @@ function updateGhost(section, clearSection, markHostedItem)
                 end
             end
 
-            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sanc%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-drop-sw%-")) then
+            if OBJ_DOORSHUFFLE.CurrentStage == 2 and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-dungeon%-") or target.CapturedItem.Name == "Sanctuary Dropdown" or string.match(target.CapturedItem.Name, "^SW .* Dropdown")) then
                 target.Owner.Pinned = true
             elseif PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "%-item%-") or string.match(tostring(target.CapturedItem.Icon.URI), "%-misc%-")) then
                 target.Owner.Pinned = true
