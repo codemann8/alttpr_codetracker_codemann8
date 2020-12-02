@@ -374,7 +374,6 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "world_state_open,@Northwest Dark World,pearl",
-            "world_state_open,glitch_mode_ow,@Northwest Dark World,mirror",
             "world_state_open,glitch_mode_ow,@Northwest Dark World,[pearl],bottle",
             "world_state_inverted,@Northwest Dark World",
             "entrance_shuffle_on"
