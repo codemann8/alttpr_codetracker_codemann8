@@ -1364,7 +1364,7 @@
             {
                 "name": "Gibdo Key",
                 "access_rules": [
-                    "door_shuffle_off,@Skull Woods/Bridge,sw_smallkey:1,[sw_smallkey:3],firesource,[firerod],$canRemoveCurtains",
+                    "door_shuffle_off,@Skull Woods/Bridge,[sw_smallkey:3],firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_off,@Skull Woods/Bridge,keysanity_smallkey_off,firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_on"
                 ],
