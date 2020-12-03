@@ -1354,8 +1354,8 @@
                 "name": "Bridge",
                 "access_rules": [
                     "world_state_open,pearl,firerod",
-                    "world_state_open,glitch_mode_ow,[pearl],boots,firerod,mirror",
-                    "world_state_open,glitch_mode_ow,[pearl],boots,firerod,bottle",
+                    "world_state_open,entrance_shuffle_off,[pearl],boots,firerod,mirror",
+                    "world_state_open,entrance_shuffle_off,[pearl],boots,firerod,bottle",
                     "world_state_inverted,firerod",
                     "door_shuffle_on",
                     "entrance_shuffle_on"

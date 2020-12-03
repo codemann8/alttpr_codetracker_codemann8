@@ -3318,6 +3318,10 @@
         "parent": "Skull Woods Back Area",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,entrance_mode_singleentryvanilla,[pearl],bottle",
+            "world_state_open,entrance_mode_singleentryvanilla,[pearl],mirror",
+            "world_state_open,entrance_mode_crossed,[pearl],bottle",
+            "world_state_open,entrance_mode_crossed,[pearl],mirror",
             "world_state_inverted"
         ],
         "sections": [
@@ -3792,6 +3796,8 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,[pearl],bottle",
+            "world_state_open,[pearl],mirror",
             "world_state_inverted"
         ],
         "sections": [
