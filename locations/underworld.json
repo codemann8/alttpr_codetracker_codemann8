@@ -796,6 +796,7 @@
         "parent": "Hammer Pegs Area",
         "access_rules": [
             "world_state_open,pearl",
+            "world_state_open,glitch_mode_ow,[pearl],bottle",
             "world_state_inverted"
         ],
         "sections": [
