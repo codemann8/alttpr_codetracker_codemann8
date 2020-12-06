@@ -649,6 +649,20 @@
         "codes": "attic"
     },
     {
+        "name": "Lanmolas 2",
+        "type": "toggle",
+        "img": "images/notfound.png",
+        "initial_active_state": true,
+        "codes": "lanmolas2"
+    },
+    {
+        "name": "Moldorm 2",
+        "type": "toggle",
+        "img": "images/notfound.png",
+        "initial_active_state": true,
+        "codes": "moldorm2"
+    },
+    {
         "name": "Take Any Caves",
         "type": "progressive_toggle",
         "loop": false,

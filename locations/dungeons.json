@@ -2144,7 +2144,7 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
-                "hosted_item": "dummy"
+                "hosted_item": "lanmolas2"
             },
             {
                 "name": "Mini Helmasaur",
@@ -2196,7 +2196,7 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
-                "hosted_item": "dummy"
+                "hosted_item": "moldorm2"
             },
             {
                 "name": "Validation",
