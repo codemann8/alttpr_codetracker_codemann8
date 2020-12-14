@@ -438,8 +438,8 @@
     {
         "name": "TR Laser Entrance OW",
         "access_rules": [
-            "world_state_open,glitch_mode_ow,pearl,boots,mirror",
-            "world_state_open,glitch_mode_ow,[pearl],boots,mirror,bottle",
+            "world_state_open,glitch_mode_ow,pearl,boots,mirror,[nothing]",
+            "world_state_open,glitch_mode_ow,boots,mirror,bottle,[nothing]",
             "world_state_open,glitch_mode_major,pearl,mirror",
             "world_state_open,glitch_mode_major,bottle,mirror",
             "world_state_inverted,@Death Mountain East Top,mirror"
