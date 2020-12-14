@@ -417,10 +417,10 @@
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,[pearl],boots,bottle",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
-            "world_state_open,glitch_mode_major,@Dark Death Mountain Top",
             "world_state_inverted,@Death Mountain East Top,mirror",
-            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,sword",
-            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,hookshot"
+            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,[sword]",
+            "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,[hookshot]",
+            "glitch_mode_major,@Dark Death Mountain Top"
         ]
     },
     {
@@ -442,7 +442,9 @@
             "world_state_open,glitch_mode_ow,boots,mirror,bottle,[nothing]",
             "world_state_open,glitch_mode_major,pearl,mirror",
             "world_state_open,glitch_mode_major,bottle,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror"
+            "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,glitch_mode_major,mirror,pearl",
+            "world_state_inverted,glitch_mode_major,mirror,bottle"
         ]
     },
     {
