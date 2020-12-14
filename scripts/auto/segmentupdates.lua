@@ -990,7 +990,6 @@ function updateDungeonCrystalFromMemorySegment(segment)
         local dungeon = Tracker:FindObjectForCode(dungeons[i])
         if dungeon.Active and dungeon.CurrentStage == 0 then
             dungeonToChange = dungeon
-            print(dungeons[i])
             count = count + 1
         end
     end
