@@ -2,6 +2,8 @@ START_CLOCK = os.clock()
 TRACKER_READY = false
 NEW_KEY_SYSTEM = false
 
+DUNGEON_PRIZE_DATA = 0x0000
+
 CaptureBadgeEntrances = {
     --"@Forest Hideout Drop/Dropdown",
     "@Forest Chest Game/Entrance",

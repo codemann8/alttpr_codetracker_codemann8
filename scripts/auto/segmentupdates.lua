@@ -815,7 +815,7 @@ function updateDungeonItemsFromMemorySegment(segment)
     InvalidateReadCaches()
 
     --Dungeon Data
-    if not AUTOTRACKER_DISABLE_ITEM_TRACKING and Tracker.ActiveVariantUID ~= "items_only"then
+    if not AUTOTRACKER_DISABLE_ITEM_TRACKING and Tracker.ActiveVariantUID ~= "items_only" then
         --Dungeon Items
         updateToggleItemFromByteAndFlag(segment, "gt_bigkey", 0x7ef366, 0x04)
         updateToggleItemFromByteAndFlag(segment, "tr_bigkey", 0x7ef366, 0x08)
@@ -931,6 +931,80 @@ function updateDungeonKeysFromMemorySegment(segment)
         updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
         updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
     end
+end
+
+function updateDungeonPendantFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    if AUTOTRACKER_DISABLE_ITEM_TRACKING or OBJ_RACEMODE.CurrentStage > 0 then
+        return true
+    end
+
+    InvalidateReadCaches()
+
+    local dungeons =  {"ep", "dp", "toh", "pod", "sp", "sw", "tt", "ip", "mm", "tr"}
+    local count = 0
+    local dungeonToChange = nil
+    for i = 1, #dungeons do
+        local dungeon = Tracker:FindObjectForCode(dungeons[i])
+        if dungeon.Active and dungeon.CurrentStage == 0 then
+            dungeonToChange = dungeon
+            print(dungeons[i])
+            count = count + 1
+        end
+    end
+
+    local pendantData = ReadU8(segment, 0x7ef374)
+
+    if count == 1 then
+        local diffData = ((DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ pendantData
+        if numberOfSetBits(diffData) == 1 and diffData & pendantData > 0 then
+            if diffData & pendantData == 4 then
+                dungeonToChange.CurrentStage = 4
+            else
+                dungeonToChange.CurrentStage = 3
+            end
+        end
+    end
+
+    DUNGEON_PRIZE_DATA = (DUNGEON_PRIZE_DATA & 0x00ff) + (pendantData << 8)
+end
+
+function updateDungeonCrystalFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    if AUTOTRACKER_DISABLE_ITEM_TRACKING or OBJ_RACEMODE.CurrentStage > 0 then
+        return true
+    end
+
+    InvalidateReadCaches()
+
+    local dungeons =  {"ep", "dp", "toh", "pod", "sp", "sw", "tt", "ip", "mm", "tr"}
+    local count = 0
+    local dungeonToChange = nil
+    for i = 1, #dungeons do
+        local dungeon = Tracker:FindObjectForCode(dungeons[i])
+        if dungeon.Active and dungeon.CurrentStage == 0 then
+            dungeonToChange = dungeon
+            print(dungeons[i])
+            count = count + 1
+        end
+    end
+
+    local crystalData = ReadU8(segment, 0x7ef37a)
+
+    if count == 1 then
+        local diffData = (DUNGEON_PRIZE_DATA & 0xff) ~ crystalData
+        if numberOfSetBits(diffData) == 1 and diffData & crystalData > 0 then
+            dungeonToChange.CurrentStage = 1
+        end
+    end
+
+    DUNGEON_PRIZE_DATA = (DUNGEON_PRIZE_DATA & 0xff00) + crystalData
 end
 
 function updateGTBKFromMemorySegment(segment)

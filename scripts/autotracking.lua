@@ -74,6 +74,12 @@ function testFlag(segment, address, flag)
     end
 end
 
+function numberOfSetBits(value)
+     value = value - ((value >> 1) & 0x55)
+     value = (value & 0x33) + ((value >> 2) & 0x33)
+     return (((value + (value >> 4)) & 0x0F) * 0x01)
+end
+
 function isInGame()
     local module = AutoTracker:ReadU8(0x7e0010, 0)
     return module > 0x05 and module < 0x55 and module ~= 0x14
@@ -98,6 +104,7 @@ end
 ScriptHost:LoadScript("scripts/auto/itemupdates.lua")
 ScriptHost:LoadScript("scripts/auto/sharedtypeupdates.lua")
 ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
+
 --Add Memory Watches
 -- Run the in-game status check more frequently (every 250ms) to catch save/quit scenarios more effectively
 ScriptHost:AddMemoryWatch("LTTP Module Id", 0x7e0010, 2, updateModuleIdFromMemorySegment, 250)
@@ -111,6 +118,8 @@ ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartC
 
 ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Dungeon Pendant Data", 0x7ef374, 1, updateDungeonPendantFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP Dungeon Crystal Data", 0x7ef37a, 1, updateDungeonCrystalFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Overworld Id", 0x7e008a, 2, updateOverworldIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
