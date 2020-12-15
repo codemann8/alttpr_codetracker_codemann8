@@ -6,6 +6,11 @@ function updateModuleIdFromMemorySegment(segment)
     end
 
     if mainModuleIdx ~= OBJ_MODULE.AcquiredCount and mainModuleIdx ~= 0x0e then
+        --Update Dungeon Id when starting at Sanctuary
+        if OBJ_MODULE.AcquiredCount == 0x05 and mainModuleIdx == 0x07 then
+            updateDungeonIdFromMemorySegment(nil)
+        end
+
         OBJ_MODULE.AcquiredCount = mainModuleIdx
 
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
@@ -119,7 +124,11 @@ function updateDungeonIdFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    OBJ_DUNGEON.AcquiredCount = ReadU8(segment, 0x7e040c)
+    if (segment) then
+        OBJ_DUNGEON.AcquiredCount = ReadU8(segment, 0x7e040c)
+    else
+        OBJ_DUNGEON.AcquiredCount = AutoTracker:ReadU8(0x7e040c, 0)
+    end
 
     if OBJ_DUNGEON.AcquiredCount < 0xff then
         local dungeons = {
