@@ -953,26 +953,37 @@ function updateDungeonPendantFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    local dungeons =  {"ep", "dp", "toh", "pod", "sp", "sw", "tt", "ip", "mm", "tr"}
-    local count = 0
-    local dungeonToChange = nil
-    for i = 1, #dungeons do
-        local dungeon = Tracker:FindObjectForCode(dungeons[i])
-        if dungeon.Active and dungeon.CurrentStage == 0 then
-            dungeonToChange = dungeon
-            count = count + 1
-        end
+    local dungeons = {
+        [0] = "hc", --sewer
+        [2] = "hc",
+        [4] = "ep",
+        [6] = "dp",
+        [8] = "at",
+        [10] = "sp",
+        [12] = "pod",
+        [14] = "mm",
+        [16] = "sw",
+        [18] = "ip",
+        [20] = "toh",
+        [22] = "tt",
+        [24] = "tr",
+        [26] = "gt",
+        [255] = "OW"
+    }
+    local dungeon = Tracker:FindObjectForCode(dungeons[OBJ_DUNGEON.AcquiredCount])
+    if dungeon and (dungeon.Active or dungeon.CurrentStage > 0) then
+        dungeon = nil
     end
 
     local pendantData = ReadU8(segment, 0x7ef374)
 
-    if count == 1 then
+    if dungeon then
         local diffData = ((DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ pendantData
         if numberOfSetBits(diffData) == 1 and diffData & pendantData > 0 then
             if diffData & pendantData == 4 then
-                dungeonToChange.CurrentStage = 4
+                dungeon.CurrentStage = 4
             else
-                dungeonToChange.CurrentStage = 3
+                dungeon.CurrentStage = 3
             end
         end
     end
@@ -991,23 +1002,34 @@ function updateDungeonCrystalFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    local dungeons =  {"ep", "dp", "toh", "pod", "sp", "sw", "tt", "ip", "mm", "tr"}
-    local count = 0
-    local dungeonToChange = nil
-    for i = 1, #dungeons do
-        local dungeon = Tracker:FindObjectForCode(dungeons[i])
-        if dungeon.Active and dungeon.CurrentStage == 0 then
-            dungeonToChange = dungeon
-            count = count + 1
-        end
+    local dungeons = {
+        [0] = "hc", --sewer
+        [2] = "hc",
+        [4] = "ep",
+        [6] = "dp",
+        [8] = "at",
+        [10] = "sp",
+        [12] = "pod",
+        [14] = "mm",
+        [16] = "sw",
+        [18] = "ip",
+        [20] = "toh",
+        [22] = "tt",
+        [24] = "tr",
+        [26] = "gt",
+        [255] = "OW"
+    }
+    local dungeon = Tracker:FindObjectForCode(dungeons[OBJ_DUNGEON.AcquiredCount])
+    if dungeon and (dungeon.Active or dungeon.CurrentStage > 0) then
+        dungeon = nil
     end
 
     local crystalData = ReadU8(segment, 0x7ef37a)
 
-    if count == 1 then
+    if dungeon then
         local diffData = (DUNGEON_PRIZE_DATA & 0xff) ~ crystalData
         if numberOfSetBits(diffData) == 1 and diffData & crystalData > 0 then
-            dungeonToChange.CurrentStage = 1
+            dungeon.CurrentStage = 1
         end
     end
 
