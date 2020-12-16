@@ -207,7 +207,7 @@ function updateSectionChestCountFromOverworldIndexAndFlag(segment, locationRef, 
     updateSectionChestCountFromByteAndFlag(segment, locationRef, 0x7ef280 + index, 0x40, callback)
 end
 
-function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots, callback)
+function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots, altLocationRef)
     local location = Tracker:FindObjectForCode(locationRef)
     if location then
         -- Do not auto-track this the user has manually modified it
@@ -232,8 +232,11 @@ function updateSectionChestCountFromRoomSlotList(segment, locationRef, roomSlots
 
         location.AvailableChestCount = location.ChestCount - clearedCount
 
-        if callback then
-            callback(clearedCount > 0)
+        if altLocationRef then
+            location = Tracker:FindObjectForCode(altLocationRef)
+            if location then
+                location.AvailableChestCount = location.ChestCount - clearedCount
+            end
         end
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         print("Couldn't find location", locationRef)
