@@ -1156,6 +1156,24 @@
         ]
     },
     {
+        "name": "Cave 45 Ghost",
+        "sections": [
+            {
+                "name": "Circle of Bushes",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 552,
+                "y": 1645,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
         "name": "Cave 45 Entrance Ghost",
         "sections": [
             {
@@ -1170,7 +1188,7 @@
                 "x": 542,
                 "y": 1653,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 96
             }
         ]
     },

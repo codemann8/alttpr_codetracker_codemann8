@@ -172,7 +172,7 @@ CaptureBadgeUnderworld = {
     "@Forest Hideout/Stash",
     "@Lumberjack Cave/Cave",
     "@Library/On The Shelf",
-    "@Cave 45/Circles of Bushes"
+    "@Cave 45/Circle of Bushes"
 }
 
 function loadDungeonChests()
