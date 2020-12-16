@@ -5,12 +5,9 @@ NEW_KEY_SYSTEM = false
 DUNGEON_PRIZE_DATA = 0x0000
 
 CaptureBadgeEntrances = {
-    --"@Forest Hideout Drop/Dropdown",
     "@Forest Chest Game/Entrance",
-    --"@Lumberjack Tree/Dropdown",
     "@Lumberjack House/Entrance",
     "@Kakariko Fortune Teller/Entrance",
-    --"@Kakariko Well Drop/Dropdown",
     "@Left Snitch House/Entrance",
     "@Blind's House Entrance/Entrance",
     "@Elder Left Door/Entrance",
@@ -23,23 +20,18 @@ CaptureBadgeEntrances = {
     "@Kakariko Shop/Entrance",
     "@Tavern Entrance/Entrance",
     "@Smith's House/Entrance",
-    --"@Magic Bat Drop/Dropdown",
     "@Quarreling Brothers Left/Entrance",
     "@Quarreling Brothers Right/Entrance",
     "@Library Entrance/Entrance",
     "@Kakariko Chest Game/Entrance",
     "@North Bonk Rocks/Entrance",
     "@Old Man Home/Entrance",
-    --"@Sanctuary Grave/Dropdown",
     "@Graveyard Ledge Cave/Entrance",
     "@King's Tomb Grave/Entrance",
-    --"@Useless Fairy Drop/Dropdown",
     "@Castle Left Entrance/Entrance",
     "@Agahnim's Tower Entrance/Entrance",
     "@Castle Right Entrance/Entrance",
-    --"@Castle Hole/Dropdown",
     "@Castle Main Entrance/Entrance",
-    --"@Secret Passage Drop/Dropdown",
     "@Witch's Hut/Entrance",
     "@Sahasrala's Hut Entrance/Entrance",
     "@Eastern Palace Entrance/Entrance",
@@ -77,9 +69,9 @@ CaptureBadgeEntrances = {
     "@Paradox Cave Top/Entrance",
     "@Spiral Cave Top/Entrance",
     "@Mimic Cave Entrance/Entrance",
-    "@EDM Connector Top/Entrance",
+    "@Fairy Ascension Top/Entrance",
     "@Spiral Cave Bottom/Entrance",
-    "@EDM Connector Bottom/Entrance",
+    "@Fairy Ascension Bottom/Entrance",
     "@Hookshot Fairy Cave/Entrance",
     "@Paradox Cave Bottom/Entrance",
     "@Waterfall Fairy Cave/Entrance",
@@ -96,7 +88,6 @@ CaptureBadgeEntrances = {
     "@Brewery Entrance/Entrance",
     "@Hammer Pegs Cave/Entrance",
     "@Archery Game/Entrance",
-    --"@Pyramid Hole/Dropdown",
     "@Pyramid Fairy Cave/Entrance",
     "@Dark Witch's Hut/Entrance",
     "@Dark Sahasrahla/Entrance",
@@ -180,7 +171,8 @@ CaptureBadgeOverworld = {
 CaptureBadgeUnderworld = {
     "@Forest Hideout/Stash",
     "@Lumberjack Cave/Cave",
-    "@Library/On The Shelf"
+    "@Library/On The Shelf",
+    "@Cave 45/Circles of Bushes"
 }
 
 function loadDungeonChests()

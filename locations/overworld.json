@@ -3047,7 +3047,7 @@
         ]
     },
     {
-        "name": "EDM Connector Top",
+        "name": "Fairy Ascension Top",
         "short_name": "EDM Ledge",
         "parent": "Death Mountain East Bottom",
         "access_rules": [
@@ -3102,7 +3102,7 @@
         ]
     },
     {
-        "name": "EDM Connector Bottom",
+        "name": "Fairy Ascension Bottom",
         "short_name": "EDM Mitts",
         "parent": "Death Mountain East Bottom",
         "access_rules": [
@@ -3401,6 +3401,7 @@
     },
     {
         "name": "Skull Woods Front Area",
+        "short_name": "SW Front Area",
         "parent": "Northwest Dark World",
         "sections": [
             {
