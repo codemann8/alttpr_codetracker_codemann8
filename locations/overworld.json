@@ -3217,6 +3217,7 @@
     },
     {
         "name": "Waterfall Fairy Cave",
+        "short_name": "Waterfall Fairy",
         "parent": "Zora Area",
         "access_rules": [
             "world_state_open,flippers",
