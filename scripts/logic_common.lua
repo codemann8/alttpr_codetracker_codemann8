@@ -154,3 +154,11 @@ function ganonCrystalCount()
         return 0
     end
 end
+
+function gtCrystalUnknown()
+    return Tracker:FindObjectForCode("gt_crystals_surrogate").ItemState:getState() == 8
+end
+
+function ganonCrystalUnknown()
+    return Tracker:FindObjectForCode("goal_setting").ItemState:getState() == 8
+end

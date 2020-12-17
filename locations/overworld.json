@@ -4161,6 +4161,38 @@
         ]
     },
     {
+        "name": "Ganon Sign",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "world_state_open,@East Dark World",
+            "world_state_inverted,@Castle Second Floor"
+        ],
+        "sections": [
+            {
+                "name": "Sign",
+                "chest_unopened_img": "images/ganon_crystals.png",
+                "chest_opened_img": "images/ganon_crystals.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 940,
+                "y": 880,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_open,$ganonCrystalUnknown" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1082,
+                "y": 823,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_inverted,$ganonCrystalUnknown" ]
+            }
+        ]
+    },
+    {
         "name": "Pyramid Fairy Cave",
         "short_name": "Pyramid Fairy",
         "parent": "Dark World Color",
@@ -5080,6 +5112,39 @@
                 "y": 294,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+            }
+        ]
+    },
+    {
+        "name": "Ganon's Tower Sign",
+        "short_name": "GT Sign",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "world_state_open,@Dark Death Mountain Top",
+            "world_state_inverted,@Castle Second Floor"
+        ],
+        "sections": [
+            {
+                "name": "Sign",
+                "chest_unopened_img": "images/GTSign.png",
+                "chest_opened_img": "images/GTSign.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1046,
+                "y": 89,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_open,$gtCrystalUnknown" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 924,
+                "y": 823,
+                "size": 48,
+                "restrict_visibility_rules": [ "world_state_inverted,$gtCrystalUnknown" ]
             }
         ]
     },
