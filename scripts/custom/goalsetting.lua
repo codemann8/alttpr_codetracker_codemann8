@@ -24,32 +24,23 @@ function GoalSetting:updateIcon()
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/triforce.png")
     else
         if self:getState() == 0 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay0.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay0.png")
         elseif self:getState() == 1 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay1.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay1.png")
         elseif self:getState() == 2 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay2.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay2.png")
         elseif self:getState() == 3 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay3.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay3.png")
         elseif self:getState() == 4 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay4.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay4.png")
         elseif self:getState() == 5 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay5.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay5.png")
         elseif self:getState() == 6 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay6.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay6.png")
         elseif self:getState() == 7 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay7.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlay7.png")
         elseif self:getState() == 8 then
-            self.ItemInstance.Icon =
-                ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlayNA.png")
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/ganon_crystals.png", "overlay|images/overlayNA.png")
         end
     end
 end
