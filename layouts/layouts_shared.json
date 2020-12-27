@@ -500,7 +500,7 @@
                 "title": "Dungeon",
                 "content": {
                     "type": "layout",
-                    "key": "shared_doorrando"
+                    "key": "shared_dungeon"
                 }
             }
         ]
@@ -539,7 +539,7 @@
                 "title": "Dungeon",
                 "content": {
                     "type": "layout",
-                    "key": "shared_v_doorrando"
+                    "key": "shared_v_dungeon"
                 }
             }
         ]
