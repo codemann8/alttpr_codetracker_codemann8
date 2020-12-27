@@ -1,4 +1,4 @@
-DynamicRequirement = class(CustomItem)
+DynamicRequirement = CustomItem:extend()
 
 function DynamicRequirement:init(dungeonCode, imageCode, num, x, y)
     self:createItem("Dynamic Requirement")
