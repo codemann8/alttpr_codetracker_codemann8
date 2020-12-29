@@ -43,6 +43,7 @@
             },
             {
                 "name": "King Helmasaur",
+                "short_name": "Helma",
                 "access_rules": [
                     "sword",
                     "hammer,[sword]",
