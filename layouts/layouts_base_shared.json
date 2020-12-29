@@ -448,5 +448,73 @@
                 }
             }
         ]
+    },
+    "shared_help": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "0,100,0,0",
+        "scale": 2.0,
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "Thanks for using CodeTracker!"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": ""
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "For more information on how to use this tracker and/or learn some tricks/features"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "that you might not know exist, press F1 to open the package documentation."
+            }
+        ]
+    },
+    "shared_v_help": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "0,100,0,0",
+        "scale": 2.0,
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "Thanks for using CodeTracker!"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": ""
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "For more information on how to use this"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "tracker and/or learn some tricks/features"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "that you might not know exist, press F1"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "to open the package documentation."
+            }
+        ]
     }
 }
