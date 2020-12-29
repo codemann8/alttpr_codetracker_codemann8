@@ -261,8 +261,9 @@
             },
             {
                 "map": "darkworld",
-                "x": 1146,
-                "y": 530,
+                "x": 1132,
+                "y": 549,
+                "size": 48,
                 "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
@@ -373,6 +374,7 @@
                 "map": "darkworld",
                 "x": 354,
                 "y": 1560,
+                "size": 48,
                 "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
@@ -429,6 +431,7 @@
                 "map": "darkworld",
                 "x": 552,
                 "y": 1693,
+                "size": 48,
                 "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
@@ -680,7 +683,8 @@
             {
                 "map": "darkworld",
                 "x": 1694,
-                "y": 204,
+                "y": 194,
+                "size": 48,
                 "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off,glitch_mode_none" ]
             }
         ]

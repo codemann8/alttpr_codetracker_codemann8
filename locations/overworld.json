@@ -1957,8 +1957,8 @@
             },
             {
                 "map": "darkworld",
-                "x": 542,
-                "y": 1653,
+                "x": 552,
+                "y": 1693,
                 "size": 48,
                 "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
             }
@@ -1996,12 +1996,6 @@
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
             },
             {
-                "map": "darkworld",
-                "x": 540,
-                "y": 1885,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_open" ]
-            },
-            {
                 "map": "lightworld",
                 "x": 448,
                 "y": 1852,
@@ -2013,7 +2007,7 @@
                 "x": 540,
                 "y": 1885,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "glitch_mode_none,world_state_open" ]
             }
         ]
     },
@@ -2370,8 +2364,9 @@
             {
                 "map": "darkworld",
                 "x": 1450,
-                "y": 1666,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_open,glitch_mode_none" ]
+                "y": 1676,
+                "size": 48,
+                "restrict_visibility_rules": [ "glitch_mode_none,world_state_open" ]
             },
             {
                 "map": "lightworld",
@@ -2379,13 +2374,6 @@
                 "y": 1666,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 1450,
-                "y": 1666,
-                "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,world_state_open,glitch_mode_none" ]
             }
         ]
     },
@@ -2951,6 +2939,7 @@
                 "map": "darkworld",
                 "x": 1627,
                 "y": 40,
+                "size": 48,
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_open,glitch_mode_none" ]
             },
             {
@@ -4961,7 +4950,8 @@
                 "map": "lightworld",
                 "x": 669,
                 "y": 315,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_inverted" ]
+                "size": 48,
+                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_inverted" ]
             },
             {
                 "map": "darkworld",
