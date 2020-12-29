@@ -202,7 +202,8 @@
                 "x": 148,
                 "y": 1697,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -332,7 +333,7 @@
                 "y": 21,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -585,7 +586,8 @@
                 "x": 925,
                 "y": 546,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -600,7 +602,7 @@
                 "y": 952,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -713,7 +715,8 @@
                 "x": 1924,
                 "y": 775,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -865,7 +868,7 @@
                 "y": 1700,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -958,7 +961,7 @@
                 "y": 730,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon,world_state_open" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -973,7 +976,7 @@
                 "y": 21,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon,world_state_inverted" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
@@ -1146,7 +1149,8 @@
                 "x": 1924,
                 "y": 775,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -1325,7 +1329,7 @@
                 "y": 1822,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -1428,7 +1432,7 @@
                 "y": 55,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -1547,7 +1551,7 @@
                 "y": 920,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -1734,7 +1738,7 @@
                 "y": 1682,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -2003,7 +2007,8 @@
                 "x": 1890,
                 "y": 120,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -2266,7 +2271,7 @@
                 "y": 730,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon,world_state_inverted" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "darkworld",
@@ -2281,7 +2286,7 @@
                 "y": 21,
                 "size": 110,
                 "restrict_visibility_rules": [ "entrance_shuffle_dungeon,world_state_open" ],
-                "force_invisibility_rules": [ "door_shuffle_crossed" ]
+                "force_invisibility_rules": [ "entrance_shuffle_on,door_shuffle_crossed" ]
             },
             {
                 "map": "lightworld",
