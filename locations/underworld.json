@@ -27,15 +27,13 @@
     {
         "name": "Lumberjack Cave",
         "parent": "Light World",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
         "sections": [
             {
                 "name": "Cave",
                 "access_rules": [
-                    "aga,boots",
+                    "world_state_open,aga,boots",
+                    "world_state_inverted,aga,pearl,boots",
+                    "world_state_inverted,aga,[pearl],boots,mirror",
                     "{}"
                 ],
                 "capture_item": true,
