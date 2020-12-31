@@ -463,7 +463,6 @@
             },
             {
                 "type": "text",
-                "h_alignment": "center",
                 "text": ""
             },
             {
@@ -475,6 +474,15 @@
                 "type": "text",
                 "h_alignment": "center",
                 "text": "that you might not know exist, press F1 to open the package documentation."
+            },
+            {
+                "type": "text",
+                "text": ""
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "Be sure to check back on the package documention when new features are released."
             }
         ]
     },
@@ -492,7 +500,6 @@
             },
             {
                 "type": "text",
-                "h_alignment": "center",
                 "text": ""
             },
             {
@@ -514,6 +521,20 @@
                 "type": "text",
                 "h_alignment": "center",
                 "text": "to open the package documentation."
+            },
+            {
+                "type": "text",
+                "text": ""
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "Be sure to check back on the package"
+            },
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "documention when new features are released."
             }
         ]
     }
