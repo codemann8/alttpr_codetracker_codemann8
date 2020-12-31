@@ -10,9 +10,9 @@ ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/events.lua")
 
 --SDK
-ScriptHost:LoadScript("scripts/sdk/class.lua")
-ScriptHost:LoadScript("scripts/sdk/custom_item.lua")
-ScriptHost:LoadScript("scripts/sdk/consumableitem.lua")
+ScriptHost:LoadScript("scripts/sdk/base/class.lua")
+ScriptHost:LoadScript("scripts/sdk/base/custom_item.lua")
+ScriptHost:LoadScript("scripts/sdk/base/consumableitem.lua")
 
 --Items
 Tracker:AddItems("items/common.json")
@@ -23,18 +23,19 @@ Tracker:AddItems("items/labels.json")
 Tracker:AddItems("items/capturebadges.json")
 
 --Custom Items
-ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
-ScriptHost:LoadScript("scripts/custom/extconsumableitem.lua")
+ScriptHost:LoadScript("scripts/sdk/extconsumableitem.lua")
+ScriptHost:LoadScript("scripts/sdk/surrogateitem.lua")
 
-ScriptHost:LoadScript("scripts/custom/surrogateitem.lua")
-ScriptHost:LoadScript("scripts/custom/worldstatemode.lua")
-ScriptHost:LoadScript("scripts/custom/keysanitymode.lua")
-ScriptHost:LoadScript("scripts/custom/entranceshufflemode.lua")
-ScriptHost:LoadScript("scripts/custom/doorshufflemode.lua")
-ScriptHost:LoadScript("scripts/custom/retromode.lua")
-ScriptHost:LoadScript("scripts/custom/poolmode.lua")
-ScriptHost:LoadScript("scripts/custom/glitchmode.lua")
-ScriptHost:LoadScript("scripts/custom/racemode.lua")
+ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
+
+ScriptHost:LoadScript("scripts/custom/modes/worldstatemode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/keysanitymode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/entranceshufflemode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/doorshufflemode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/retromode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/poolmode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/glitchmode.lua")
+ScriptHost:LoadScript("scripts/custom/modes/racemode.lua")
 
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
@@ -56,7 +57,7 @@ if Tracker.ActiveVariantUID == "items_only" then
     Tracker:AddLayouts("layouts/tracker.json")
     Tracker:AddLayouts("layouts/broadcast_standard.json")
 else
-    ScriptHost:LoadScript("scripts/custom/dynamicrequirement.lua")
+    ScriptHost:LoadScript("scripts/custom/doors/dynamicrequirement.lua")
     
     loadDynamicRequirement()
 
