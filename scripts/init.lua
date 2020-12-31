@@ -38,8 +38,8 @@ ScriptHost:LoadScript("scripts/custom/racemode.lua")
 
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
-ScriptHost:LoadScript("scripts/custom/doordungeonselect.lua")
-ScriptHost:LoadScript("scripts/custom/doortotalchest.lua")
+ScriptHost:LoadScript("scripts/custom/doors/doordungeonselect.lua")
+ScriptHost:LoadScript("scripts/custom/doors/doortotalchest.lua")
 
 loadMCBK()
 loadDungeonChests()
