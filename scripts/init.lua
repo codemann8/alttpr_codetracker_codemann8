@@ -19,6 +19,7 @@ Tracker:AddItems("items/common.json")
 Tracker:AddItems("items/regions.json")
 Tracker:AddItems("items/keysanity_dungeon_items.json")
 Tracker:AddItems("items/keys.json")
+Tracker:AddItems("items/doors.json")
 Tracker:AddItems("items/labels.json")
 Tracker:AddItems("items/capturebadges.json")
 
@@ -58,8 +59,13 @@ if Tracker.ActiveVariantUID == "items_only" then
     Tracker:AddLayouts("layouts/broadcast_standard.json")
 else
     ScriptHost:LoadScript("scripts/custom/doors/dynamicrequirement.lua")
+    ScriptHost:LoadScript("scripts/custom/doors/roomgroupselect.lua")
+    ScriptHost:LoadScript("scripts/custom/doors/roomselectslot.lua")
+    ScriptHost:LoadScript("scripts/custom/doors/doorslotselect.lua")
+    ScriptHost:LoadScript("scripts/custom/doors/doorslot.lua")
     
     loadDynamicRequirement()
+    loadDoorSlots()
 
     --Maps
     Tracker:AddMaps("maps/maps.json")

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Current Path",
+        "type": "static",
+        "img": "images/rooms/blank.png",
+        "codes": "roomSlot1"
+    },
+    {
+        "name": "Previous Path",
+        "type": "static",
+        "img": "images/rooms/blank.png",
+        "codes": "roomSlot2"
+    },
+    {
+        "name": "Previous Path 2",
+        "type": "static",
+        "img": "images/rooms/blank.png",
+        "codes": "roomSlot3"
+    },
+    {
+        "name": "Previous Path 3",
+        "type": "static",
+        "img": "images/rooms/blank.png",
+        "codes": "roomSlot4"
+    }
+]

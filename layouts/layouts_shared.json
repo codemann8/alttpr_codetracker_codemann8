@@ -504,6 +504,96 @@
                 }
             },
             {
+                "title": "Doors",
+                "content": {
+                    "type": "array",
+                    "orientation": "vertical",
+                    "h_alignment": "center",
+                    "v_alignment": "center",
+                    "content": [
+                        {
+                            "type": "array",
+                            "orientation": "horizontal",
+                            "h_alignment": "center",
+                            "margin": "0,0,0,20",
+                            "scale": 1.25,
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_doorslotselect"
+                                },
+                                {
+                                    "type": "layout",
+                                    "key": "shared_roomgroupselect"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "layout",
+                            "key": "shared_doorrando"
+                        }
+                    ]
+                }
+            },
+            {
+                "title": "Dashboard",
+                "content": {
+                    "type": "array",
+                    "orientation": "horizontal",
+                    "v_alignment": "center",
+                    "content": [
+                        {
+                            "type": "container",
+                            "min_width": 700,
+                            "max_width": 3300,
+                            "content": [
+                                {
+                                    "type": "map",
+                                    "maps": [ "lightworld", "darkworld" ]
+                                },
+                                {
+                                    "type": "array",
+                                    "orientation": "horizontal",
+                                    "h_alignment": "center",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_lw_dynreq"
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_dw_dynreq"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "container",
+                            "v_alignment": "center",
+                            "content": [
+                                {
+                                    "type": "array",
+                                    "orientation": "vertical",
+                                    "h_alignment": "center",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_doorslotselect",
+                                            "margin": "0,0,0,10"
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_doorrando_compact"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
                 "title": "?",
                 "content": {
                     "type": "layout",
@@ -547,6 +637,38 @@
                 "content": {
                     "type": "layout",
                     "key": "shared_v_dungeon"
+                }
+            },
+            {
+                "title": "Doors",
+                "content": {
+                    "type": "array",
+                    "orientation": "horizontal",
+                    "h_alignment": "center",
+                    "v_alignment": "center",
+                    "content": [
+                        {
+                            "type": "array",
+                            "orientation": "vertical",
+                            "h_alignment": "center",
+                            "v_alignment": "center",
+                            "margin": "0,0,30,0",
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_v_doorslotselect"
+                                },
+                                {
+                                    "type": "layout",
+                                    "key": "shared_v_roomgroupselect"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "layout",
+                            "key": "shared_v_doorrando"
+                        }
+                    ]
                 }
             },
             {

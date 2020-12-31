@@ -207,7 +207,7 @@ function updateDungeonIdFromMemorySegment(segment)
 end
 
 function updateRoomIdFromMemorySegment(segment)
-    if not isInGame() then
+    if not isInGame() and OBJ_MODULE.AcquiredCount ~= 0x05 then
         return false
     end
 
@@ -215,6 +215,9 @@ function updateRoomIdFromMemorySegment(segment)
 
     OBJ_ROOM.AcquiredCount = ReadU16(segment, 0x7e00a0)
 
+    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 and not AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+        updateDoorSlots(OBJ_ROOM.AcquiredCount)
+    end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         local roomMap =
