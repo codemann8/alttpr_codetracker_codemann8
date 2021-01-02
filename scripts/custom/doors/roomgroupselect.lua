@@ -32,9 +32,9 @@ end
 
 function RoomGroupSelection:updateIcon()
     if self:getState() > 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. RoomGroupSelection.Groups[self.index] .. ".png", "overlay|images/selectedlabel.png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. string.upper(RoomGroupSelection.Groups[self.index]) .. ".png", "overlay|images/selectedlabel.png")
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. RoomGroupSelection.Groups[self.index] .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. string.upper(RoomGroupSelection.Groups[self.index]) .. ".png")
     end
 end
 
