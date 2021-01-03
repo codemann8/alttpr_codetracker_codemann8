@@ -319,6 +319,8 @@
             "world_state_inverted,@Light World,pearl,flute",
             "world_state_inverted,desert_back,mirror",
             "world_state_inverted,desert_front,mirror",
+            "world_state_inverted,glitch_mode_ow,boots",
+            "world_state_inverted,glitch_mode_ow,boots,[bottle]",
             "glitch_mode_major"
         ]
     },
