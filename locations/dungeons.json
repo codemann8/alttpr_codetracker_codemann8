@@ -149,12 +149,20 @@
                 "item_count": 1
             },
             {
+                "name": "Left Side Access",
+                "access_rules": [
+                    "@Misery Mire/Dungeon Access,pool_mode_chest,[mm_smallkey:3]",
+                    "@Misery Mire/Dungeon Access,pool_mode_chestkeydrop,mm_smallkey:2,[mm_smallkey:6]",
+                    "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
+                    "@Misery Mire/Dungeon Access,door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Left Side",
                 "access_rules": [
-                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chest,[mm_smallkey:3]",
-                    "@Misery Mire/Dungeon Access,firesource,pool_mode_chestkeydrop,mm_smallkey:2,[mm_smallkey:6]",
-                    "@Misery Mire/Dungeon Access,firesource,keysanity_smallkey_off",
-                    "@Misery Mire/Dungeon Access,door_shuffle_on,firesource"
+                    "@Misery Mire/Left Side Access,firesource"
                 ],
                 "clear_as_group": false,
                 "item_count": 2
@@ -227,7 +235,7 @@
             "world_state_open,@Death Mountain West Top",
             "world_state_inverted,@Death Mountain West Top,[pearl]",
             "world_state_inverted,glitch_mode_ow,@Death Mountain West Top,mirror,sword",
-            "glitch_mode_major,@Misery Mire/Left Side",
+            "glitch_mode_hybrid,@Misery Mire/Left Side Access",
             "glitch_mode_major,@Mountain Access",
             "entrance_shuffle_on"
         ]
@@ -250,7 +258,7 @@
             "world_state_open,@East Dark World,pearl",
             "world_state_open,glitch_mode_ow,@East Dark World,[pearl],bottle",
             "world_state_inverted,@East Dark World",
-            "glitch_mode_major,@Mountain Access",
+            "glitch_mode_hybrid,@Mountain Access",
             "entrance_shuffle_on"
         ]
     },
@@ -277,8 +285,10 @@
                 "access_rules": [
                     "toh_bigkey",
                     "[toh_bigkey],hookshot",
-                    "keysanity_bigkey_off",
-                    "glitch_mode_major,@Misery Mire/Left Side",
+                    "glitch_mode_none,keysanity_bigkey_off",
+                    "glitch_mode_ow,keysanity_bigkey_off",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,mm_bigkey",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,[mm_bigkey],hookshot",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -287,8 +297,9 @@
                 "name": "Big Chest",
                 "access_rules": [
                     "toh_bigkey",
-                    "keysanity_bigkey_off",
-                    "glitch_mode_major,@Misery Mire/Left Side,mm_bigkey"
+                    "glitch_mode_none,keysanity_bigkey_off",
+                    "glitch_mode_ow,keysanity_bigkey_off",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side,mm_bigkey"
                 ],
                 "item_count": 1
             },
@@ -298,10 +309,10 @@
                     "@Tower of Hera/Compass Chest,toh_bigkey",
                     "@Tower of Hera/Compass Chest,[toh_bigkey],hookshot",
                     "@Tower of Hera/Compass Chest,keysanity_bigkey_off",
-                    "glitch_mode_major,@Misery Mire/Left Side,mm_bigkey",
-                    "glitch_mode_major,@Misery Mire/Left Side,[mm_bigkey],hookshot",
-                    "glitch_mode_major,@Misery Mire/Left Side,toh_bigkey",
-                    "glitch_mode_major,@Misery Mire/Left Side,[toh_bigkey],hookshot",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,mm_bigkey",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,toh_bigkey",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,[mm_bigkey],hookshot",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access,[toh_bigkey],hookshot",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -354,12 +365,12 @@
         "name": "SP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl",
-            "world_state_inverted,entrance_shuffle_off,@Light World,mirror,[pearl]",
-            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,[mm_bigkey]",
-            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side,[toh_bigkey]",
-            "door_shuffle_off,glitch_mode_major,[flippers],[@Mountain Access],[lamp],[@Misery Mire/Left Side],@Tower of Hera/Compass Chest,[toh_bigkey]",
-            "entrance_shuffle_on,door_shuffle_crossed",
+            "world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl,flippers",
+            "world_state_inverted,entrance_shuffle_off,@Light World,mirror,[pearl],flippers",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side Access,[mm_bigkey]",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side Access,[toh_bigkey]",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],[@Misery Mire/Left Side Access],@Tower of Hera/Compass Chest,[toh_bigkey]",
+            "door_shuffle_on",
             "entrance_shuffle_on,dam"
         ]
     },
@@ -1038,6 +1049,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer",
                     "door_shuffle_off,pod_smallkey:1",
                     "door_shuffle_off,keysanity_smallkey_off",
+                    "glitch_mode_hybrid,@Mountain Access",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1055,6 +1067,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5]",
                     "door_shuffle_off,keysanity_smallkey_off",
+                    "glitch_mode_hybrid,@Mountain Access",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1065,6 +1078,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5],[lamp]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5],[lamp]",
                     "door_shuffle_off,keysanity_smallkey_off,[lamp]",
+                    "glitch_mode_hybrid,@Mountain Access,[lamp]",
                     "door_shuffle_on"
                 ],
                 "clear_as_group": true,
@@ -1087,6 +1101,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:3]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:3]",
                     "door_shuffle_off,keysanity_smallkey_off",
+                    "glitch_mode_hybrid,@Mountain Access",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1106,6 +1121,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:2,[pod_smallkey:5]",
                     "door_shuffle_off,pod_smallkey:3,[pod_smallkey:5]",
                     "door_shuffle_off,keysanity_smallkey_off",
+                    "glitch_mode_hybrid,@Mountain Access",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1126,6 +1142,8 @@
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],keysanity_bigkey_off",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,pod_bigkey",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,keysanity_bigkey_off",
+                    "glitch_mode_hybrid,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_bigkey",
+                    "glitch_mode_hybrid,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_bigkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -1175,8 +1193,8 @@
                 "name": "Entrance Chest",
                 "access_rules": [
                     "door_shuffle_off,flippers",
-                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
-                    "door_shuffle_off,glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
+                    "door_shuffle_off,glitch_mode_hybrid,@Misery Mire/Left Side Access",
+                    "door_shuffle_off,glitch_mode_hybrid,[@Misery Mire/Left Side Access],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1186,8 +1204,8 @@
                 "access_rules": [
                     "door_shuffle_off,flippers,sp_smallkey:1",
                     "door_shuffle_off,flippers,keysanity_smallkey_off",
-                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
-                    "door_shuffle_off,glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
+                    "door_shuffle_off,glitch_mode_hybrid,@Misery Mire/Left Side Access",
+                    "door_shuffle_off,glitch_mode_hybrid,[@Misery Mire/Left Side Access],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1207,8 +1225,8 @@
                 "access_rules": [
                     "door_shuffle_off,flippers,sp_smallkey:2",
                     "door_shuffle_off,flippers,keysanity_smallkey_off",
-                    "glitch_mode_major,@Misery Mire/Left Side",
-                    "glitch_mode_major,[@Misery Mire/Left Side],@Tower of Hera/Compass Chest",
+                    "glitch_mode_hybrid,@Misery Mire/Left Side Access",
+                    "glitch_mode_hybrid,[@Misery Mire/Left Side Access],@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
@@ -1222,8 +1240,8 @@
                     "door_shuffle_off,pool_mode_chest,@Swamp Palace/Bomb Wall,hammer",
                     "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,sp_smallkey:3,hammer",
                     "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,keysanity_smallkey_off,hammer",
-                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side",
-                    "door_shuffle_off,glitch_mode_major,@Tower of Hera/Compass Chest",
+                    "door_shuffle_off,glitch_mode_hybrid,@Misery Mire/Left Side Access",
+                    "door_shuffle_off,glitch_mode_hybrid,@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1243,8 +1261,8 @@
                 "access_rules": [
                     "@Swamp Palace/South Side,sp_bigkey",
                     "@Swamp Palace/South Side,keysanity_bigkey_off",
-                    "door_shuffle_off,glitch_mode_major,@Misery Mire/Left Side,mm_bigkey",
-                    "door_shuffle_off,glitch_mode_major,@Tower of Hera/Compass Chest,toh_bigkey",
+                    "door_shuffle_off,glitch_mode_hybrid,@Misery Mire/Left Side Access,mm_bigkey",
+                    "door_shuffle_off,glitch_mode_hybrid,@Tower of Hera/Compass Chest,toh_bigkey",
                     "door_shuffle_crossed"
                 ],
                 "item_count": 1
@@ -1574,7 +1592,7 @@
         "access_rules": [
             "firerod",
             "$canUseMedallions,bombos",
-            "glitch_mode_major",
+            "glitch_mode_hybrid",
             "door_shuffle_on"
         ],
         "sections": [

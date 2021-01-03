@@ -1086,6 +1086,11 @@
                 "inherit_codes": false
             },
             {
+                "img": "images/mode_glitches_hybrid.png",
+                "codes": "glitch_mode,glitch_mode_hybrid",
+                "inherit_codes": true
+            },
+            {
                 "img": "images/mode_glitches_major.png",
                 "codes": "glitch_mode,glitch_mode_major",
                 "inherit_codes": true
