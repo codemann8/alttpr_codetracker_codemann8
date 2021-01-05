@@ -6,6 +6,7 @@ ScriptHost:LoadScript("scripts/settings/settings.lua")
 ScriptHost:LoadScript("scripts/settings/defaults.lua")
 
 --Essentials
+ScriptHost:LoadScript("scripts/static.lua")
 ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/events.lua")
 
