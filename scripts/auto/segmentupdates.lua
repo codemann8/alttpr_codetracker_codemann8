@@ -131,76 +131,26 @@ function updateDungeonIdFromMemorySegment(segment)
     end
 
     if OBJ_DUNGEON.AcquiredCount < 0xff then
-        local dungeons = {
-            [0] = "hc", --sewer
-            [2] = "hc",
-            [4] = "ep",
-            [6] = "dp",
-            [8] = "at",
-            [10] = "sp",
-            [12] = "pod",
-            [14] = "mm",
-            [16] = "sw",
-            [18] = "ip",
-            [20] = "toh",
-            [22] = "tt",
-            [24] = "tr",
-            [26] = "gt",
-            [255] = "OW"
-        }
-        
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-            print("CURRENT DUNGEON:", dungeons[OBJ_DUNGEON.AcquiredCount], OBJ_DUNGEON.AcquiredCount, string.format("0x%2X", OBJ_DUNGEON.AcquiredCount))
+            print("CURRENT DUNGEON:", DungeonIdMap[OBJ_DUNGEON.AcquiredCount], OBJ_DUNGEON.AcquiredCount, string.format("0x%2X", OBJ_DUNGEON.AcquiredCount))
         end
 
         --Set Door Dungeon Selector
         if Tracker.ActiveVariantUID ~= "items_only" then
-            local dungeonSelect = {
-                [0] = 0,
-                [2] = 0,
-                [4] = 1,
-                [6] = 2,
-                [8] = 4,
-                [10] = 6,
-                [12] = 5,
-                [14] = 10,
-                [16] = 7,
-                [18] = 9,
-                [20] = 3,
-                [22] = 8,
-                [24] = 11,
-                [26] = 12
-            }
-            OBJ_DOORDUNGEON.ItemState:setState(dungeonSelect[OBJ_DUNGEON.AcquiredCount])
+            OBJ_DOORDUNGEON.ItemState:setState(DungeonData[DungeonIdMap[OBJ_DUNGEON.AcquiredCount]][4])
         end
 
         --Update Dungeon Image
         if string.find(Tracker.ActiveVariantUID, "er_") then
-            sendExternalMessage("dungeon", "er-" .. dungeons[OBJ_DUNGEON.AcquiredCount])
+            sendExternalMessage("dungeon", "er-" .. DungeonIdMap[OBJ_DUNGEON.AcquiredCount])
         else
-            sendExternalMessage("dungeon", dungeons[OBJ_DUNGEON.AcquiredCount])
+            sendExternalMessage("dungeon", DungeonIdMap[OBJ_DUNGEON.AcquiredCount])
         end
 
         --Auto-pin Dungeon Chests
         if AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE.CurrentStage < 2 then
-            local dungeonLocations = {
-                [0] = "@Hyrule Castle & Escape", --sewer
-                [2] = "@Hyrule Castle & Escape",
-                [4] = "@Eastern Palace",
-                [6] = "@Desert Palace",
-                [8] = "@Agahnim's Tower",
-                [10] = "@Swamp Palace",
-                [12] = "@Palace of Darkness",
-                [14] = "@Misery Mire",
-                [16] = "@Skull Woods",
-                [18] = "@Ice Palace",
-                [20] = "@Tower of Hera",
-                [22] = "@Thieves Town",
-                [24] = "@Turtle Rock",
-                [26] = "@Ganon's Tower"
-            }
             for i = 0, 26, 2 do
-                Tracker:FindObjectForCode(dungeonLocations[i]).Pinned = dungeonLocations[i] == dungeonLocations[OBJ_DUNGEON.AcquiredCount]
+                Tracker:FindObjectForCode(DungeonData[DungeonIdMap[i]][1]).Pinned = DungeonIdMap[i] == DungeonIdMap[OBJ_DUNGEON.AcquiredCount]
             end
         end
     end
@@ -239,26 +189,8 @@ function updateRoomIdFromMemorySegment(segment)
             [0xe0] = 8
         }
         
-        local dungeons = {
-            [0] = "hc", --sewer
-            [2] = "hc",
-            [4] = "ep",
-            [6] = "dp",
-            [8] = "at",
-            [10] = "sp",
-            [12] = "pod",
-            [14] = "mm",
-            [16] = "sw",
-            [18] = "ip",
-            [20] = "toh",
-            [22] = "tt",
-            [24] = "tr",
-            [26] = "gt",
-            [255] = "OW"
-        }
-        
         print("CURRENT ROOM:", OBJ_ROOM.AcquiredCount, string.format("0x%4X", OBJ_ROOM.AcquiredCount))
-        print("CURRENT ROOM ORIGDUNGEON:", dungeons[roomMap[OBJ_ROOM.AcquiredCount]], roomMap[OBJ_ROOM.AcquiredCount], string.format("0x%2X", roomMap[OBJ_ROOM.AcquiredCount]))
+        print("CURRENT ROOM ORIGDUNGEON:", DungeonIdMap[roomMap[OBJ_ROOM.AcquiredCount]], roomMap[OBJ_ROOM.AcquiredCount], string.format("0x%2X", roomMap[OBJ_ROOM.AcquiredCount]))
     end
 end
 
@@ -841,24 +773,7 @@ function updateDungeonPendantFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    local dungeons = {
-        [0] = "hc", --sewer
-        [2] = "hc",
-        [4] = "ep",
-        [6] = "dp",
-        [8] = "at",
-        [10] = "sp",
-        [12] = "pod",
-        [14] = "mm",
-        [16] = "sw",
-        [18] = "ip",
-        [20] = "toh",
-        [22] = "tt",
-        [24] = "tr",
-        [26] = "gt",
-        [255] = "OW"
-    }
-    local dungeon = Tracker:FindObjectForCode(dungeons[OBJ_DUNGEON.AcquiredCount])
+    local dungeon = Tracker:FindObjectForCode(DungeonIdMap[OBJ_DUNGEON.AcquiredCount])
     if dungeon and (dungeon.Active or dungeon.CurrentStage > 0) then
         dungeon = nil
     end
@@ -890,24 +805,7 @@ function updateDungeonCrystalFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    local dungeons = {
-        [0] = "hc", --sewer
-        [2] = "hc",
-        [4] = "ep",
-        [6] = "dp",
-        [8] = "at",
-        [10] = "sp",
-        [12] = "pod",
-        [14] = "mm",
-        [16] = "sw",
-        [18] = "ip",
-        [20] = "toh",
-        [22] = "tt",
-        [24] = "tr",
-        [26] = "gt",
-        [255] = "OW"
-    }
-    local dungeon = Tracker:FindObjectForCode(dungeons[OBJ_DUNGEON.AcquiredCount])
+    local dungeon = Tracker:FindObjectForCode(DungeonIdMap[OBJ_DUNGEON.AcquiredCount])
     if dungeon and (dungeon.Active or dungeon.CurrentStage > 0) then
         dungeon = nil
     end

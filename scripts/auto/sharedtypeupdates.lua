@@ -1,23 +1,22 @@
 function refreshMCBK()
-    local dungeons =  {"hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt"}
-    for i = 1, #dungeons do
+    for i = 1, #DungeonList do
         local state = 0
-        local item = Tracker:FindObjectForCode(dungeons[i] .. "_bigkey")
+        local item = Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey")
         if item and item.Active then
             state = state + 0x4
         end
 
-        item = Tracker:FindObjectForCode(dungeons[i] .. "_compass")
+        item = Tracker:FindObjectForCode(DungeonList[i] .. "_compass")
         if item and item.Active then
             state = state + 0x2
         end
 
-        item = Tracker:FindObjectForCode(dungeons[i] .. "_map")
+        item = Tracker:FindObjectForCode(DungeonList[i] .. "_map")
         if item and item.Active then
             state = state + 0x1
         end
 
-        item = Tracker:FindObjectForCode(dungeons[i] .. "_mcbk")
+        item = Tracker:FindObjectForCode(DungeonList[i] .. "_mcbk")
         if item then
             item:Set("state", state)
         end
@@ -346,25 +345,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
         local currentKeys = 0
 
-        local dungeons = {
-            [0] = "hc", --sewer
-            [2] = "hc",
-            [4] = "ep",
-            [6] = "dp",
-            [8] = "at",
-            [10] = "sp",
-            [12] = "pod",
-            [14] = "mm",
-            [16] = "sw",
-            [18] = "ip",
-            [20] = "toh",
-            [22] = "tt",
-            [24] = "tr",
-            [26] = "gt",
-            [255] = "OW"
-        }
-
-        if dungeons[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
+        if DungeonIdMap[OBJ_DUNGEON.AcquiredCount] == dungeonPrefix and ReadU8(segment, 0x7ef36f) ~= 0xff then
             currentKeys = ReadU8(segment, 0x7ef36f)
         else
             currentKeys = ReadU8(segment, address)
