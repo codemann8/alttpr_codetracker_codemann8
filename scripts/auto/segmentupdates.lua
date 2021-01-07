@@ -70,23 +70,8 @@ function updateOverworldIdFromMemorySegment(segment)
         if OBJ_OWAREA.AcquiredCount < 0xff then
             --Region Autotracking
             if OBJ_ENTRANCE.CurrentStage > 0 and OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and Tracker.ActiveVariantUID ~= "items_only" then
-                local overworldMap =
-                {
-                    [0x02] = "light_world", [0x03] = "dm_west_bottom",
-                    [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
-                    [0x22] = "light_world", [0x1e] = "light_world",
-                    [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
-                    [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
-                    [0x3a] = "light_world", [0x3b] = "light_world",
-                    [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
-                    [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-                    [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
-                    [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
-                    [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
-                    [0x7b] = "dw_south"
-                }
-                if OBJ_OWAREA.AcquiredCount < 0xff and overworldMap[OBJ_OWAREA.AcquiredCount] then
-                    local region = Tracker:FindObjectForCode(overworldMap[OBJ_OWAREA.AcquiredCount])
+                if OBJ_OWAREA.AcquiredCount < 0xff and OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount] then
+                    local region = Tracker:FindObjectForCode(OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount])
                     if region then
                         region.Active = true
                     end
