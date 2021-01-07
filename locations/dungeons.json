@@ -245,7 +245,7 @@
         "parent": "Semi-Dungeon Color",
         "access_rules": [
             "world_state_open,$canClearAgaTowerBarrier",
-            "world_state_open,glitch_mode_ow,boots",
+            "world_state_open,glitch_mode_ow,boots,[$canClearAgaTowerBarrier]",
             "world_state_open,glitch_mode_major",
             "world_state_inverted,@Dark Death Mountain West",
             "entrance_shuffle_on"

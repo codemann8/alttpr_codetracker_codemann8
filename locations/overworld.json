@@ -1061,9 +1061,7 @@
         "sections": [
             {
                 "name": "Hidden Treasure",
-                "access_rules": [
-                    "shovel"
-                ],
+                "access_rules": [ "shovel" ],
                 "item_count": 1
             }
         ],
@@ -1094,9 +1092,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "boots"
-                ],
+                "access_rules": [ "boots" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
@@ -1812,7 +1808,7 @@
             {
                 "name": "Entrance",
                 "access_rules": [
-                    "glitch_mode_owg,@Mire Area,mirror"
+                    "glitch_mode_ow,@Mire Area,mirror"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -3308,10 +3304,8 @@
         "parent": "Skull Woods Back Area",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,entrance_mode_singleentryvanilla,[pearl],bottle",
-            "world_state_open,entrance_mode_singleentryvanilla,[pearl],mirror",
-            "world_state_open,entrance_mode_crossed,[pearl],bottle",
-            "world_state_open,entrance_mode_crossed,[pearl],mirror",
+            "world_state_open,[pearl],boots,bottle",
+            "world_state_open,[pearl],boots,mirror",
             "world_state_inverted"
         ],
         "sections": [
@@ -3365,13 +3359,13 @@
         "name": "Skull Woods Back Drop",
         "short_name": "SW Back Drop",
         "parent": "Skull Woods Back Area",
+        "access_rules": [
+            "world_state_open,pearl",
+            "world_state_inverted"
+        ],
         "sections": [
             {
                 "name": "Dropdown",
-                "access_rules": [
-                    "world_state_open,pearl",
-                    "world_state_inverted"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
@@ -3393,13 +3387,13 @@
         "name": "Skull Woods Front Area",
         "short_name": "SW Front Area",
         "parent": "Northwest Dark World",
+        "access_rules": [
+            "world_state_open,[pearl]",
+            "world_state_inverted"
+        ],
         "sections": [
             {
                 "name": "Area",
-                "access_rules": [
-                    "world_state_open,[pearl]",
-                    "world_state_inverted"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
@@ -3518,13 +3512,14 @@
         "name": "Skull Woods Big Chest Drop",
         "short_name": "SW Bush Drop",
         "parent": "Northwest Dark World",
+        "access_rules": [
+            "world_state_open,pearl",
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
+        ],
         "sections": [
             {
                 "name": "Dropdown",
-                "access_rules": [
-                    "world_state_open,pearl",
-                    "world_state_inverted"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
@@ -3787,8 +3782,8 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,[pearl],bottle",
-            "world_state_open,[pearl],mirror",
+            "world_state_open,[pearl],boots,bottle",
+            "world_state_open,[pearl],boots,mirror",
             "world_state_inverted"
         ],
         "sections": [
@@ -3843,8 +3838,8 @@
         "parent": "Northwest Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl]",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -3968,14 +3963,13 @@
         "parent": "Hammer Pegs Area",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "hammer"
-                ],
+                "access_rules": [ "hammer" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
@@ -3999,8 +3993,8 @@
         "parent": "South Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4070,9 +4064,9 @@
         "parent": "South Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
-            "world_state_open,glitch_mode_ow,[pearl],mirror",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle",
+            "glitch_mode_ow,[pearl],mirror"
         ],
         "sections": [
             {
@@ -4099,9 +4093,7 @@
     {
         "name": "Pyramid Hole",
         "parent": "East Dark World",
-        "access_rules": [
-            "aga2"
-        ],
+        "access_rules": [ "aga2" ],
         "sections": [
             {
                 "name": "Dropdown",
@@ -4126,9 +4118,7 @@
         "name": "Pyramid Hole Exit",
         "short_name": "Pyramid Exit",
         "parent": "East Dark World",
-        "access_rules": [
-            "nothing"
-        ],
+        "access_rules": [ "nothing" ],
         "sections": [
             {
                 "name": "Entrance",
@@ -4324,7 +4314,8 @@
         "parent": "East Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4478,9 +4469,7 @@
             },
             {
                 "name": "Medallion",
-                "access_rules": [
-                    "{}"
-                ],
+                "access_rules": [ "{}" ],
                 "visibility_rules": [ "$hasNotSeenMireMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -4609,7 +4598,8 @@
         "parent": "South Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4622,9 +4612,7 @@
             },
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "boots"
-                ],
+                "access_rules": [ "boots" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "visibility_rules": [ "entrance_shuffle_all" ],
@@ -4681,8 +4669,8 @@
         "parent": "South Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4789,7 +4777,8 @@
         "parent": "Southeast Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4875,7 +4864,8 @@
         "parent": "Southeast Dark World",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -4888,9 +4878,7 @@
             },
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "lift1"
-                ],
+                "access_rules": [ "lift1" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "visibility_rules": [ "entrance_shuffle_all" ],
@@ -4971,6 +4959,7 @@
             "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_inverted,lw_dmexit,mirror",
             "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_ow,[pearl],bottle,boots",
             "glitch_mode_major"
         ],
         "sections": [
@@ -5004,6 +4993,7 @@
             "world_state_inverted,lift1",
             "world_state_inverted,lw_dmentry,mirror",
             "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_ow,[pearl],bottle,lift1",
             "glitch_mode_major"
         ],
         "sections": [
@@ -5045,9 +5035,7 @@
             },
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "@Dark Death Mountain West"
-                ],
+                "access_rules": [ "@Dark Death Mountain West" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "visibility_rules": [ "entrance_shuffle_all" ],
@@ -5207,7 +5195,8 @@
         "parent": "Dark Death Mountain Top",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -5490,9 +5479,7 @@
             },
             {
                 "name": "Medallion",
-                "access_rules": [
-                    "{}"
-                ],
+                "access_rules": [ "{}" ],
                 "visibility_rules": [ "$hasNotSeenTurtleMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
