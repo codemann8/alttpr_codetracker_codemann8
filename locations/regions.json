@@ -340,7 +340,9 @@
     {
         "name": "Mountain Access",
         "access_rules": [
+            "world_state_open,dm_west_top",
             "world_state_open,flute",
+            "world_state_inverted,ddm_west",
             "world_state_inverted,activated_flute",
             "world_state_inverted,@Light World,pearl,flute",
             "world_state_inverted,@Northwest Dark World,glitch_mode_ow,boots",
