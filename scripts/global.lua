@@ -204,7 +204,7 @@ function updateIcons()
     if not TRACKER_READY then
         for i = 1, #DungeonList do
             local item = Tracker:FindObjectForCode(DungeonList[i] .. "_item").ItemState
-            item.SwapActions = OBJ_DOORSHUFFLE.CurrentStage == 2
+            item.SwapActions = (OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 or false)
         end
     else
         for i = 1, #DungeonList do
