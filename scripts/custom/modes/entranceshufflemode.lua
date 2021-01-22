@@ -26,7 +26,7 @@ end
 function EntranceShuffleMode:postUpdate()
     if self.suffix == "" then
         --Force Entrance Mode for Crossed Door Rando
-        if self:getState() == 0 and OBJ_DOORSHUFFLE.CurrentStage == 2 then
+        if self:getState() == 0 and OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 then
             self:setState(1)
         end
 
