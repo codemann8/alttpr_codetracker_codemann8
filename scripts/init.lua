@@ -41,6 +41,7 @@ ScriptHost:LoadScript("scripts/custom/modes/racemode.lua")
 
 ScriptHost:LoadScript("scripts/custom/gtcrystalreq.lua")
 ScriptHost:LoadScript("scripts/custom/goalsetting.lua")
+ScriptHost:LoadScript("scripts/custom/savestorage.lua")
 ScriptHost:LoadScript("scripts/custom/doors/doordungeonselect.lua")
 ScriptHost:LoadScript("scripts/custom/doors/doortotalchest.lua")
 
@@ -105,6 +106,7 @@ else
 
     GTCrystalReq()
     GoalSetting()
+    SaveStorage()
 
     --Tracker Layout
     Tracker:AddLayouts("layouts/layouts_base_custom.json") --anything defined here overrides layouts defined in 'layouts_base_shared'

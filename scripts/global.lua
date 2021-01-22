@@ -385,7 +385,7 @@ function removeGhost(section)
     end
 end
 
-function updateDoorSlots(roomId)
+function updateDoorSlots(roomId, forceUpdate)
     if roomId > 0 and DOORSLOTS[roomId] and ROOMSLOTS[1] ~= roomId then
         local carried = ROOMSLOTS[1]
         ROOMSLOTS[1] = roomId
@@ -398,12 +398,13 @@ function updateDoorSlots(roomId)
             ROOMSLOTS[r] = carried
             carried = temp
         end
-        
+    end
+    if roomId > 0 or forceUpdate then
         for r = 1, #ROOMSLOTS do
             if ROOMSLOTS[r] > 0 then
                 local item = Tracker:FindObjectForCode("roomSlot" .. math.floor(r))
                 item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png")
-
+                
                 for d = 1, #DOORSLOTS[ROOMSLOTS[r]] do
                     item = Tracker:FindObjectForCode("doorSlot" .. math.floor(r) .. "_" .. math.floor(d)).ItemState
                     item:setState(DOORSLOTS[ROOMSLOTS[r]][d])
@@ -411,4 +412,28 @@ function updateDoorSlots(roomId)
             end
         end
     end
+end
+
+function JObjectToLuaTable(obj)
+    local ret = {}
+    if obj:GetType():ToString() == "Newtonsoft.Json.Linq.JObject" then
+        local vals = obj:GetValue("Values")
+        local curKey = obj:GetValue("Keys").First
+        local curVal = vals.First
+        while (true)
+        do
+            if curVal:GetType():ToString() == "Newtonsoft.Json.Linq.JValue" then
+                ret[tonumber(curKey:ToString())] = tonumber(curVal:ToString())
+            else
+                ret[tonumber(curKey:ToString())] = JObjectToLuaTable(curVal)
+            end
+            if curVal == vals.Last then
+                break
+            else
+                curKey = curKey.Next
+                curVal = curVal.Next
+            end
+        end
+    end
+    return ret
 end
