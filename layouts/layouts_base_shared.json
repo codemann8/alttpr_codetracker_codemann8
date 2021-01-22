@@ -636,15 +636,15 @@
                 "item_margin": "0,0,4,4",
                 "item_size": 64,
                 "rows": [
-                    [ "roomselect_1"],
-                    ["roomselect_2"],
-                    ["roomselect_3"],
-                    ["roomselect_4"],
-                    ["roomselect_5"],
-                    ["roomselect_6"],
-                    ["roomselect_7"],
-                    ["roomselect_8"],
-                    ["roomselect_9"]
+                    [ "roomselect_1" ],
+                    [ "roomselect_2" ],
+                    [ "roomselect_3" ],
+                    [ "roomselect_4" ],
+                    [ "roomselect_5" ],
+                    [ "roomselect_6" ],
+                    [ "roomselect_7" ],
+                    [ "roomselect_8" ],
+                    [ "roomselect_9" ]
                 ]
             }
         ]
