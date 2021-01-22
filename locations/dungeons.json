@@ -368,7 +368,7 @@
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side Access,[mm_bigkey]",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@Misery Mire/Left Side Access,[toh_bigkey]",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],[@Misery Mire/Left Side Access],@Tower of Hera/Compass Chest,[toh_bigkey]",
-            "door_shuffle_on",
+            "entrance_shuffle_off,door_shuffle_on,@South Dark World",
             "entrance_shuffle_on,dam"
         ]
     },
