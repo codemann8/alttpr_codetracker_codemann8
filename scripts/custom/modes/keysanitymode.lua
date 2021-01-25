@@ -38,7 +38,7 @@ function KeysanityMode:onRightClick()
     local state = 1
     for i = 1, #items do
         if items[i] == self.itemCode then
-            if items[i] == "smallkey" and OBJ_RETRO.CurrentStage > 0 then
+            if items[i] == "smallkey" and self:getState() == 0 and OBJ_RETRO.CurrentStage > 0 then
                 self:setState(2)
             else
                 self:setState(state)
