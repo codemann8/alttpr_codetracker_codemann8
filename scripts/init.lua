@@ -92,7 +92,7 @@ else
     DoorTotalChest("Chests", "chest", "item", "images/0058.png")
     DoorTotalChest("Keys", "key", "smallkey", "images/SmallKey2.png")
 
-    WorldStateMode(true):linkSurrogate(WorldStateMode(false))
+    WorldStateMode(false):linkSurrogate(WorldStateMode(true))
     KeysanityMode(false, "Map"):linkSurrogate(KeysanityMode(true, "Map"))
     KeysanityMode(false, "Compass"):linkSurrogate(KeysanityMode(true, "Compass"))
     KeysanityMode(false, "Small Key"):linkSurrogate(KeysanityMode(true, "Small Key"))
