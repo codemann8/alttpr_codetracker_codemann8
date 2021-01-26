@@ -171,7 +171,7 @@ function updatePseudoProgressiveItemFromByteAndFlag(segment, code, address, flag
     end
 end
 
-function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, flag, callback)
+function updateSectionChestCountFromBytesAndFlag(segment, locationRef, addresses, flag, callback)
     local location = Tracker:FindObjectForCode(locationRef)
     if location then
         -- Do not auto-track this the user has manually modified it
@@ -179,19 +179,25 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
             return
         end
 
-        local value = ReadU8(segment, address)
+        local count = 0
+        for i, address in ipairs(addresses) do
+            local value = ReadU8(segment, address)
+            if (value & flag) ~= 0 then
+                count = count + 1
+            end
+        end
 
         if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
             print(locationRef, value)
         end
 
-        if (value & flag) ~= 0 then
+        if count == location.MaxCount then
             location.AvailableChestCount = 0
             if callback then
                 callback(true)
             end
         else
-            location.AvailableChestCount = location.AvailableChestCount
+            location.AvailableChestCount = location.MaxCount - count
 
             if callback then
                 callback(false)
@@ -203,7 +209,7 @@ function updateSectionChestCountFromByteAndFlag(segment, locationRef, address, f
 end
 
 function updateSectionChestCountFromOverworldIndexAndFlag(segment, locationRef, index, callback)
-    updateSectionChestCountFromByteAndFlag(segment, locationRef, 0x7ef280 + index, 0x40, callback)
+    updateSectionChestCountFromBytesAndFlag(segment, locationRef, {0x7ef280 + index}, 0x40, callback)
 end
 
 function updateSectionChestCountFromRoomSlotList(segment, locationRefs, roomSlots, altLocationRef, callback)

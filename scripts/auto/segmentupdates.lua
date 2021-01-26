@@ -240,10 +240,10 @@ function updateItemsFromMemorySegment(segment)
 
     --    It may seem unintuitive, but these locations are controlled by flags stored adjacent to the item data,
     --    which makes it more efficient to update them here.
-    updateSectionChestCountFromByteAndFlag(segment, "@Secret Passage/Uncle", 0x7ef3c6, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Hobo/Under The Bridge", 0x7ef3c9, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Bottle Vendor/This Jerk", 0x7ef3c9, 0x02)
-    updateSectionChestCountFromByteAndFlag(segment, "@Purple Chest/Middle-Aged Man", 0x7ef3c9, 0x10)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Secret Passage/Uncle", {0x7ef3c6}, 0x01)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Hobo/Under The Bridge", {0x7ef3c9}, 0x01)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Bottle Vendor/This Jerk", {0x7ef3c9}, 0x02)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Purple Chest/Middle-Aged Man", {0x7ef3c9}, 0x10)
 end
 
 function updateOverworldEventsFromMemorySegment(segment)
@@ -275,6 +275,19 @@ function updateOverworldEventsFromMemorySegment(segment)
     updateDam(segment)
 end
 
+function updateShopsFromMemorySegment(segment)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Dark Death Mountain Shop/Items", { 0x7ef302, 0x7ef303, 0x7ef304 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Shield Shop/Items", { 0x7ef305, 0x7ef306, 0x7ef307 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Dark Lake Shop/Items", { 0x7ef308, 0x7ef309, 0x7ef30a }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Dark Lumberjack Shop/Items", { 0x7ef30b, 0x7ef30c, 0x7ef30d }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Village of Outcasts Shop/Items", { 0x7ef30e, 0x7ef30f, 0x7ef310 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Dark Witch's Hut/Items", { 0x7ef311, 0x7ef312, 0x7ef313 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Paradox Cave Shop/Items", { 0x7ef314, 0x7ef315, 0x7ef316 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Kakariko Shop/Items", { 0x7ef317, 0x7ef318, 0x7ef319 }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Lake Shop/Items", { 0x7ef31a, 0x7ef31b, 0x7ef31c }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Potion Shop/Items", { 0x7ef31d, 0x7ef31e, 0x7ef31f }, 0xff)
+end
+
 function updateNPCItemFlagsFromMemorySegment(segment)
     if not isInGame() then
         return false
@@ -286,23 +299,23 @@ function updateNPCItemFlagsFromMemorySegment(segment)
 
     InvalidateReadCaches()
 
-    updateSectionChestCountFromByteAndFlag(segment, "@Old Man/Bring Him Home",          0x7ef410, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Zora's Domain/King Zora",         0x7ef410, 0x02)
-    updateSectionChestCountFromByteAndFlag(segment, "@Sick Kid/By The Bed",             0x7ef410, 0x04)
-    updateSectionChestCountFromByteAndFlag(segment, "@Stumpy/Farewell",                 0x7ef410, 0x08)
-    updateSectionChestCountFromByteAndFlag(segment, "@Sahasrala's Hut/Sahasrala",       0x7ef410, 0x10)
-    updateSectionChestCountFromByteAndFlag(segment, "@Catfish/Ring of Stones",          0x7ef410, 0x20)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Old Man/Bring Him Home",          {0x7ef410}, 0x01)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Zora's Domain/King Zora",         {0x7ef410}, 0x02)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Sick Kid/By The Bed",             {0x7ef410}, 0x04)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Stumpy/Farewell",                 {0x7ef410}, 0x08)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Sahasrala's Hut/Sahasrala",       {0x7ef410}, 0x10)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Catfish/Ring of Stones",          {0x7ef410}, 0x20)
     -- 0x40 is unused
-    updateSectionChestCountFromByteAndFlag(segment, "@Library/On The Shelf",            0x7ef410, 0x80)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Library/On The Shelf",            {0x7ef410}, 0x80)
 
-    updateSectionChestCountFromByteAndFlag(segment, "@Ether Tablet/Tablet",             0x7ef411, 0x01)
-    updateSectionChestCountFromByteAndFlag(segment, "@Bombos Tablet/Tablet",            0x7ef411, 0x02)
-    updateSectionChestCountFromByteAndFlag(segment, "@Dwarven Smiths/Bring Him Home",   0x7ef411, 0x04)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Ether Tablet/Tablet",             {0x7ef411}, 0x01)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Bombos Tablet/Tablet",            {0x7ef411}, 0x02)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Dwarven Smiths/Bring Him Home",   {0x7ef411}, 0x04)
     -- 0x08 is no longer relevant
-    updateSectionChestCountFromByteAndFlag(segment, "@Mushroom Spot/Shroom",            0x7ef411, 0x10)
-    updateSectionChestCountFromByteAndFlag(segment, "@Potion Shop/Assistant",           0x7ef411, 0x20)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Mushroom Spot/Shroom",            {0x7ef411}, 0x10)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Potion Shop/Assistant",           {0x7ef411}, 0x20)
     -- 0x40 is unused
-    updateSectionChestCountFromByteAndFlag(segment, "@Magic Bat/Magic Bowl",            0x7ef411, 0x80, updateBatIndicatorStatus)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Magic Bat/Magic Bowl",            {0x7ef411}, 0x80, updateBatIndicatorStatus)
 end
 
 function updateRoomsFromMemorySegment(segment)
