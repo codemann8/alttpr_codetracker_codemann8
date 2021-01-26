@@ -161,16 +161,23 @@
                 "item_count": 1
             },
             {
-                "name": "Left Side",
+                "name": "Torch Tiles Chest",
                 "access_rules": [
                     "@Misery Mire/Left Side Access,firesource"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 2
+                "item_count": 1
             },
             {
-                "name": "Blue Peg Chest",
+                "name": "Torch Cutscene",
+                "access_rules": [
+                    "@Misery Mire/Left Side Access,firesource"
+                ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Right Blue Pegs Chest",
                 "access_rules": [
                     "@Misery Mire/Main Hub"
                 ],
@@ -269,10 +276,14 @@
         "parent": "ToH Access",
         "sections": [
             {
-                "name": "Lobby\\Cage",
+                "name": "Lobby",
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 2
+                "item_count": 1
+            },
+            {
+                "name": "Cage",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
             },
             {
                 "name": "Basement",
@@ -648,10 +659,19 @@
         "parent": "EP Access",
         "sections": [
             {
-                "name": "Front",
+                "name": "Cannonball Chest",
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 3
+                "item_count": 1
+            },
+            {
+                "name": "Hook Chest",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Stalfos Spawn",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
             },
             {
                 "name": "Dark Pot Key",
@@ -1298,7 +1318,7 @@
                 "item_count": 1
             },
             {
-                "name": "Left Side",
+                "name": "Far Left Cheft",
                 "access_rules": [
                     "pool_mode_chest,@Swamp Palace/South Side",
                     "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
@@ -1306,11 +1326,21 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 2
+                "item_count": 1
             },
             {
-                "name": "Back",
+                "name": "Big Key Chest",
+                "access_rules": [
+                    "pool_mode_chest,@Swamp Palace/South Side",
+                    "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
+                    "pool_keydrop_on,@Swamp Palace/South Side,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Flooded Treasure",
                 "access_rules": [
                     "pool_mode_chest,@Swamp Palace/South Side,hookshot",
                     "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
@@ -1318,8 +1348,19 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 3
+                "clear_as_group": true,
+                "item_count": 2
+            },
+            {
+                "name": "Snake Waterfall",
+                "access_rules": [
+                    "pool_mode_chest,@Swamp Palace/South Side,hookshot",
+                    "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
+                    "pool_keydrop_on,@Swamp Palace/South Side,keysanity_smallkey_off,hookshot",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
             },
             {
                 "name": "Waterway Key",
@@ -1389,10 +1430,29 @@
         "parent": "SW Access",
         "sections": [
             {
-                "name": "Front",
+                "name": "Map Chest",
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 5
+                "item_count": 1
+            },
+            {
+                "name": "Gibdo Prison",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Compass Chest",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Pinball",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Statue Switch",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
             },
             {
                 "name": "Big Chest",
@@ -1493,10 +1553,24 @@
         "parent": "TT Access",
         "sections": [
             {
-                "name": "Front",
+                "name": "Main Lobby",
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": false,
-                "item_count": 4
+                "item_count": 1
+            },
+            {
+                "name": "Ambush",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "SE Lobby",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
+                "name": "Big Key Chest",
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
             },
             {
                 "name": "Hallway Key",
