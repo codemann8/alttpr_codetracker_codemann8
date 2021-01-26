@@ -277,7 +277,6 @@
         "sections": [
             {
                 "name": "Lobby",
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
@@ -306,7 +305,6 @@
                     "glitch_mode_hybrid,@Misery Mire/Left Side Access,[mm_bigkey],hookshot",
                     "door_shuffle_on"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
@@ -317,7 +315,6 @@
                     "glitch_mode_ow,keysanity_bigkey_off",
                     "glitch_mode_hybrid,@Misery Mire/Left Side,mm_bigkey"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
@@ -1431,7 +1428,6 @@
         "sections": [
             {
                 "name": "Map Chest",
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
@@ -1441,12 +1437,10 @@
             },
             {
                 "name": "Compass Chest",
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
                 "name": "Pinball",
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
@@ -1460,12 +1454,11 @@
                     "sw_bigkey",
                     "keysanity_bigkey_off"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
                 "name": "West Lobby Key",
-                "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
                 "item_count": 1
@@ -1491,7 +1484,7 @@
                     "door_shuffle_off,@Skull Woods/Bridge,keysanity_smallkey_off,firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_on"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "chest_unopened_img": "images/enemy-gibdo.png",
                 "chest_opened_img": "images/enemy-defeated.png",
                 "item_count": 1
@@ -1618,7 +1611,6 @@
                     "door_shuffle_basic,keysanity_bigkey_off",
                     "door_shuffle_crossed"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
