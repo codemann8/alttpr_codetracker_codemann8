@@ -79,7 +79,27 @@
                 "item_margin": "1,0",
                 "item_size": 40,
                 "rows": [
-                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "retro_mode_surrogate_small", "pool_mode_surrogate_small", "gt_crystals_surrogate", "goal_setting" ]
+                    [ "entrance_shuffle_surrogate_small", "door_shuffle_surrogate_small", "retro_mode_surrogate_small" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "margin": "0.45,0,0.25,0",
+                "item_margin": "0.5,0",
+                "item_width": 40,
+                "item_height": 20,
+                "rows": [
+                    [ "pool_shopsanity_surrogate_small" ],
+                    [ "pool_keydrop_surrogate_small" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "margin": 0,
+                "item_margin": "1,0",
+                "item_size": 40,
+                "rows": [
+                    [ "gt_crystals_surrogate", "goal_setting" ]
                 ]
             }
         ]
@@ -108,7 +128,7 @@
                 "item_size": 40,
                 "rows": [
                     [ "door_shuffle_surrogate_small"],
-                    [ "pool_mode_surrogate_small" ],
+                    [ "pool_keydrop_surrogate_base" ],
                     [ "gt_crystals_surrogate" ],
                     [ "goal_setting" ]
                 ]

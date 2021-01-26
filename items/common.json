@@ -1049,21 +1049,40 @@
             }
         ]
     },
-    // Pool Mode
+    // Pool Mode Shopsanity
     {
-        "name": "Pool Mode",
+        "name": "Pool Mode Shopsanity",
         "type": "progressive",
         "allow_disabled": false,
         "loop": true,
         "stages": [
             {
-                "img": "images/mode_pool_chest.png",
-                "codes": "pool_mode,pool_mode_chest",
+                "img": "images/mode_pool_shopsanity.png",
+                "codes": "pool_shopsanity,pool_shopsanity_off",
                 "inherit_codes": false
             },
             {
-                "img": "images/mode_pool_chestkeydrop.png",
-                "codes": "pool_mode,pool_mode_chestkeydrop",
+                "img": "images/mode_pool_shopsanity.png",
+                "codes": "pool_shopsanity,pool_shopsanity_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode Key Drop
+    {
+        "name": "Pool Mode Key Drop",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_pool_keydrop.png",
+                "codes": "pool_keydrop,pool_keydrop_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_pool_keydrop.png",
+                "codes": "pool_keydrop,pool_keydrop_on",
                 "inherit_codes": false
             }
         ]

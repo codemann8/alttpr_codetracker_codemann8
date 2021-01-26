@@ -174,7 +174,7 @@ function initGlobalVars()
         OBJ_ENTRANCE = Tracker:FindObjectForCode("entrance_shuffle")
         OBJ_DOORSHUFFLE = Tracker:FindObjectForCode("door_shuffle")
         OBJ_RETRO = Tracker:FindObjectForCode("retro_mode")
-        OBJ_POOL = Tracker:FindObjectForCode("pool_mode")
+        OBJ_POOL_KEYDROP = Tracker:FindObjectForCode("pool_keydrop")
         OBJ_GLITCH = Tracker:FindObjectForCode("glitch_mode")
         OBJ_RACEMODE = Tracker:FindObjectForCode("race_mode")
 
@@ -219,12 +219,12 @@ function updateIcons()
                 key.MaxCount = 99
                 key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
 
-                if (OBJ_POOL.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
+                if (OBJ_POOL_KEYDROP.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
                     Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
                 end
             else
                 key.MaxCount = DungeonData[DungeonList[i]][2]
-                if OBJ_POOL.CurrentStage > 0 then
+                if OBJ_POOL_KEYDROP.CurrentStage > 0 then
                     key.MaxCount = key.MaxCount + DungeonData[DungeonList[i]][3]
                 end
 
@@ -232,10 +232,10 @@ function updateIcons()
                     key.Icon = ""
                 end
 
-                if OBJ_POOL.CurrentStage > 0 and DungeonList[i] == "hc" then
+                if OBJ_POOL_KEYDROP.CurrentStage > 0 and DungeonList[i] == "hc" then
                     local bk = Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey")
                     bk.Icon = ImageReference:FromPackRelativePath("images/BigKey.png", (not bk.Active and "@disabled" or ""))
-                elseif (OBJ_POOL.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
+                elseif (OBJ_POOL_KEYDROP.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
                     local bk = Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey")
                     if bk.Icon ~= "" then
                         bk.Icon = ""
@@ -249,7 +249,7 @@ function updateIcons()
 
                 local chest = Tracker:FindObjectForCode(DungeonList[i] .. "_chest")
                 item.MaxCount = chest.MaxCount
-                if OBJ_POOL.CurrentStage > 0 then
+                if OBJ_POOL_KEYDROP.CurrentStage > 0 then
                     item.MaxCount = item.MaxCount + DungeonData[DungeonList[i]][3] + (DungeonList[i] == "hc" and 1 or 0)
                 end
 
@@ -262,7 +262,7 @@ function updateIcons()
                 if OBJ_KEYSANITY_SMALL.CurrentStage == 0 and key then
                     item.MaxCount = item.MaxCount - key.MaxCount
                 end
-                if OBJ_KEYSANITY_BIG.CurrentStage == 0 and DungeonList[i] ~= "at" and not (DungeonList[i] == "hc" and OBJ_POOL.CurrentStage == 0) then
+                if OBJ_KEYSANITY_BIG.CurrentStage == 0 and DungeonList[i] ~= "at" and not (DungeonList[i] == "hc" and OBJ_POOL_KEYDROP.CurrentStage == 0) then
                     item.MaxCount = item.MaxCount - 1
                 end
 
@@ -301,13 +301,13 @@ function updateIcons()
 
         local gtbk = Tracker:FindObjectForCode("gt_bkgame")
         if OBJ_DOORSHUFFLE.CurrentStage == 0 then
-            if OBJ_POOL.CurrentStage == 0 then
+            if OBJ_POOL_KEYDROP.CurrentStage == 0 then
                 gtbk.MaxCount = 22
             else
                 gtbk.MaxCount = 25
             end
         elseif OBJ_DOORSHUFFLE.CurrentStage == 1 then
-            if OBJ_POOL.CurrentStage == 0 then
+            if OBJ_POOL_KEYDROP.CurrentStage == 0 then
                 gtbk.MaxCount = 27
             else
                 gtbk.MaxCount = 31

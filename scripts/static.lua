@@ -11,7 +11,7 @@ CaptureBadgeEntrances = {
     "@Sick Kid Entrance/Entrance",
     "@Grass House/Entrance",
     "@Bomb Hut/Entrance",
-    "@Kakariko Shop/Entrance",
+    "@Kakariko Shop Entrance/Entrance",
     "@Tavern Entrance/Entrance",
     "@Smith's House/Entrance",
     "@Quarreling Brothers Left/Entrance",
@@ -46,7 +46,7 @@ CaptureBadgeEntrances = {
     "@Hype Fairy Cave/Entrance",
     "@Lake Fortune Teller/Entrance",
     "@Mini Moldorm Cave Entrance/Entrance",
-    "@Lake Shop/Entrance",
+    "@Lake Shop Entrance/Entrance",
     "@Upgrade Fairy/Entrance",
     "@Ice Rod Cave Entrance/Entrance",
     "@Cold Bee Cave/Entrance",
@@ -73,7 +73,7 @@ CaptureBadgeEntrances = {
     "@Skull Woods Back/Entrance",
     "@Dark Lumberjack/Entrance",
     "@Dark Chapel/Entrance",
-    "@Shield Shop/Entrance",
+    "@Shield Shop Entrance/Entrance",
     "@Village of Outkasts Fortune Teller/Entrance",
     "@Chest Game Entrance/Entrance",
     "@Thieves Town Entrance/Entrance",
@@ -83,7 +83,7 @@ CaptureBadgeEntrances = {
     "@Hammer Pegs Cave/Entrance",
     "@Archery Game/Entrance",
     "@Pyramid Fairy Cave/Entrance",
-    "@Dark Witch's Hut/Entrance",
+    "@Dark Witch's Hut Entrance/Entrance",
     "@Dark Sahasrahla/Entrance",
     "@Palace of Darkness Entrance/Entrance",
     "@Dark Trees Fairy/Entrance",
@@ -96,7 +96,7 @@ CaptureBadgeEntrances = {
     "@Dark Bonk Rocks/Entrance",
     "@Bomb Shop/Entrance",
     "@Hype Cave Entrance/Entrance",
-    "@Dark Lake Shop/Entrance",
+    "@Dark Lake Shop Entrance/Entrance",
     "@Ice Palace Entrance/Entrance",
     "@Dark Lake Hylia Fairy/Entrance",
     "@Hamburger Helper Cave/Entrance",
@@ -113,7 +113,7 @@ CaptureBadgeEntrances = {
     "@Turtle Ledge Right Entrance/Entrance",
     "@Turtle Laser Bridge Entrance/Entrance",
     "@Superbunny Cave Bottom/Entrance",
-    "@Dark Death Mountain Shop/Entrance",
+    "@Dark Death Mountain Shop Entrance/Entrance",
     "@Turtle Rock Entrance/Entrance"
 }
 
@@ -165,8 +165,18 @@ CaptureBadgeOverworld = {
 CaptureBadgeUnderworld = {
     "@Forest Hideout/Stash",
     "@Lumberjack Cave/Cave",
+    "@Kakariko Shop/Items",
     "@Library/On The Shelf",
-    "@Cave 45/Circle of Bushes"
+    "@Cave 45/Circle of Bushes",
+    "@Potion Shop/Items",
+    "@Lake Shop/Items",
+    "@Paradox Cave Shop/Items",
+    "@Dark Lumberjack Shop/Items",
+    "@Shield Shop/Items",
+    "@Village of Outcasts Shop/Items",
+    "@Dark Witch's Hut/Items",
+    "@Dark Lake Shop/Items",
+    "@Dark Death Mountain Shop/Items"
 }
 
 DungeonList = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }

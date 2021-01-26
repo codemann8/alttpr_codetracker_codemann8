@@ -417,7 +417,7 @@
         ]
     },
     {
-        "name": "Kakariko Shop Ghost",
+        "name": "Kakariko Shop Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -431,6 +431,25 @@
                 "x": 218,
                 "y": 1185,
                 "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 218,
+                "y": 1209,
+                "size":0,
                 "badge_size": 96
             }
         ]
@@ -948,6 +967,25 @@
         ]
     },
     {
+        "name": "Potion Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1607,
+                "y": 718,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
         "name": "Sahasrala's Hut Entrance Ghost",
         "sections": [
             {
@@ -1381,7 +1419,7 @@
         ]
     },
     {
-        "name": "Lake Shop Ghost",
+        "name": "Lake Shop Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1396,6 +1434,25 @@
                 "y": 1540,
                 "size": 0,
                 "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Lake Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1508,
+                "y": 1540,
+                "size": 0,
+                "badge_size": 96
             }
         ]
     },
@@ -1853,6 +1910,25 @@
         ]
     },
     {
+        "name": "Paradox Cave Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1737,
+                "y": 339,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
         "name": "Waterfall Fairy Cave Ghost",
         "sections": [
             {
@@ -2082,6 +2158,25 @@
         ]
     },
     {
+        "name": "Dark Lumberjack Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 627,
+                "y": 115,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
         "name": "Dark Chapel Ghost",
         "sections": [
             {
@@ -2101,7 +2196,7 @@
         ]
     },
     {
-        "name": "Shield Shop Ghost",
+        "name": "Shield Shop Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2116,6 +2211,25 @@
                 "y": 912,
                 "size": 0,
                 "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 864,
+                "size": 0,
+                "badge_size": 96
             }
         ]
     },
@@ -2211,6 +2325,25 @@
                 "y": 1077,
                 "size": 0,
                 "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1117,
+                "size": 0,
+                "badge_size": 96
             }
         ]
     },
@@ -2329,7 +2462,7 @@
         ]
     },
     {
-        "name": "Dark Witch's Hut Ghost",
+        "name": "Dark Witch's Hut Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2344,6 +2477,25 @@
                 "y": 668,
                 "size": 0,
                 "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch's Hut Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1616,
+                "y": 716,
+                "size": 0,
+                "badge_size": 96
             }
         ]
     },
@@ -2576,7 +2728,7 @@
         ]
     },
     {
-        "name": "Dark Lake Shop Ghost",
+        "name": "Dark Lake Shop Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2591,6 +2743,25 @@
                 "y": 1615,
                 "size": 0,
                 "badge_size": 128
+            }
+        ]
+    },
+    {
+        "name": "Dark Lake Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1350,
+                "y": 1615,
+                "size": 0,
+                "badge_size": 96
             }
         ]
     },
@@ -2918,7 +3089,7 @@
     },
    
     {
-        "name": "Dark Death Mountain Shop Ghost",
+        "name": "Dark Death Mountain Shop Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2931,6 +3102,25 @@
                 "map": "darkworld",
                 "x": 1750,
                 "y": 334,
+                "size": 0,
+                "badge_size": 96
+            }
+        ]
+    },
+    {
+        "name": "Dark Death Mountain Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1745,
+                "y": 256,
                 "size": 0,
                 "badge_size": 96
             }

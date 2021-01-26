@@ -105,7 +105,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -114,7 +114,7 @@
                     "@Misery Mire/Dungeon Access,mm_bigkey",
                     "@Misery Mire/Dungeon Access,keysanity_bigkey_off",
                     "@Misery Mire/Dungeon Access,pool_mode_chest,[mm_smallkey:1]",
-                    "@Misery Mire/Dungeon Access,pool_mode_chestkeydrop,mm_smallkey:1,[mm_smallkey:2]",
+                    "@Misery Mire/Dungeon Access,pool_keydrop_on,mm_smallkey:1,[mm_smallkey:2]",
                     "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
                     "@Misery Mire/Dungeon Access,door_shuffle_on"
                 ],
@@ -131,7 +131,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -143,14 +143,14 @@
                 ],
                 "chest_unopened_img": "images/enemy-jelly.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Left Side Access",
                 "access_rules": [
                     "@Misery Mire/Dungeon Access,pool_mode_chest,[mm_smallkey:3]",
-                    "@Misery Mire/Dungeon Access,pool_mode_chestkeydrop,mm_smallkey:2,[mm_smallkey:6]",
+                    "@Misery Mire/Dungeon Access,pool_keydrop_on,mm_smallkey:2,[mm_smallkey:6]",
                     "@Misery Mire/Dungeon Access,keysanity_smallkey_off",
                     "@Misery Mire/Dungeon Access,door_shuffle_on"
                 ],
@@ -501,14 +501,14 @@
                 "name": "Key Guard",
                 "chest_unopened_img": "images/enemy-guard.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Boomerang",
                 "access_rules": [
-                    "door_shuffle_off,pool_mode_chestkeydrop,hc_smallkey:1,[hc_smallkey:3]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off",
+                    "door_shuffle_off,pool_keydrop_on,hc_smallkey:1,[hc_smallkey:3]",
+                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off",
                     "pool_mode_chest",
                     "door_shuffle_on"
                 ],
@@ -521,7 +521,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-guard.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -533,7 +533,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-chain.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -541,10 +541,10 @@
                 "access_rules": [
                     "pool_mode_chest,[hc_smallkey:1]",
                     "pool_mode_chest,keysanity_smallkey_off",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Hyrule Castle & Escape/Ball 'N Chain Guard,hc_bigkey",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Hyrule Castle & Escape/Ball 'N Chain Guard,keysanity_bigkey_off",
-                    "door_shuffle_basic,pool_mode_chestkeydrop,hc_bigkey",
-                    "door_shuffle_basic,pool_mode_chestkeydrop,keysanity_bigkey_off",
+                    "door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,hc_bigkey",
+                    "door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,keysanity_bigkey_off",
+                    "door_shuffle_basic,pool_keydrop_on,hc_bigkey",
+                    "door_shuffle_basic,pool_keydrop_on,keysanity_bigkey_off",
                     "door_shuffle_crossed"
                 ],
                 "item_count": 1
@@ -565,7 +565,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-rat.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -575,8 +575,8 @@
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,pearl,lift1",
                     "door_shuffle_off,pool_mode_chest,hc_smallkey:1,[firesource]",
                     "door_shuffle_off,pool_mode_chest,keysanity_smallkey_off,[firesource]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,hc_smallkey:2,[hc_smallkey:4],[firesource]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off,[firesource]",
+                    "door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
+                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
                     "door_shuffle_on",
                     "entrance_shuffle_all"
                 ],
@@ -652,15 +652,15 @@
                 ],
                 "chest_unopened_img": "images/pot-lw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Big Key Chest",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,[lamp]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,ep_smallkey:1,[ep_smallkey:2],[lamp]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off,[lamp]",
+                    "door_shuffle_off,pool_keydrop_on,ep_smallkey:1,[ep_smallkey:2],[lamp]",
+                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[lamp]",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -683,7 +683,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-eyegore.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -699,8 +699,8 @@
                 "name": "Armos Access",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Eastern Palace/Dark Eyegore,@Eastern Palace/Red Eyegores",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,ep_smallkey:1,[ep_smallkey:2],@Eastern Palace/Red Eyegores",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Eastern Palace/Dark Eyegore,keysanity_smallkey_off,@Eastern Palace/Red Eyegores",
+                    "door_shuffle_off,pool_keydrop_on,@Eastern Palace/Dark Eyegore,ep_smallkey:1,[ep_smallkey:2],@Eastern Palace/Red Eyegores",
+                    "door_shuffle_off,pool_keydrop_on,@Eastern Palace/Dark Eyegore,keysanity_smallkey_off,@Eastern Palace/Red Eyegores",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -764,8 +764,8 @@
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,[dp_smallkey:1]",
                     "door_shuffle_off,pool_mode_chest,keysanity_smallkey_off",
-                    "door_shuffle_off,pool_mode_chestkeydrop,dp_smallkey:1,[dp_smallkey:4]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,keysanity_smallkey_off",
+                    "door_shuffle_off,pool_keydrop_on,dp_smallkey:1,[dp_smallkey:4]",
+                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -798,7 +798,7 @@
                 ],
                 "chest_unopened_img": "images/pot-lw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -810,20 +810,20 @@
                 ],
                 "chest_unopened_img": "images/pot-lw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Back Tiles Key",
                 "access_rules": [
                     "@Desert Palace/Back Lobby Key,pool_mode_chest,[dp_smallkey:1]",
-                    "@Desert Palace/Back Lobby Key,pool_mode_chestkeydrop,dp_smallkey:2,[dp_smallkey:3]",
+                    "@Desert Palace/Back Lobby Key,pool_keydrop_on,dp_smallkey:2,[dp_smallkey:3]",
                     "@Desert Palace/Back Lobby Key,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "chest_unopened_img": "images/pot-lw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -831,10 +831,10 @@
                 "access_rules": [
                     "@Desert Palace/Back Tiles Key,firesource,pool_mode_chest,dp_bigkey",
                     "@Desert Palace/Back Tiles Key,firesource,pool_mode_chest,keysanity_bigkey_off",
-                    "@Desert Palace/Back Tiles Key,firesource,pool_mode_chestkeydrop,dp_smallkey:3,[dp_smallkey:4],dp_bigkey",
-                    "@Desert Palace/Back Tiles Key,firesource,pool_mode_chestkeydrop,keysanity_smallkey_off,dp_bigkey",
-                    "@Desert Palace/Back Tiles Key,firesource,pool_mode_chestkeydrop,dp_smallkey:3,[dp_smallkey:4],keysanity_bigkey_off",
-                    "@Desert Palace/Back Tiles Key,firesource,pool_mode_chestkeydrop,keysanity_smallkey_off,keysanity_bigkey_off",
+                    "@Desert Palace/Back Tiles Key,firesource,pool_keydrop_on,dp_smallkey:3,[dp_smallkey:4],dp_bigkey",
+                    "@Desert Palace/Back Tiles Key,firesource,pool_keydrop_on,keysanity_smallkey_off,dp_bigkey",
+                    "@Desert Palace/Back Tiles Key,firesource,pool_keydrop_on,dp_smallkey:3,[dp_smallkey:4],keysanity_bigkey_off",
+                    "@Desert Palace/Back Tiles Key,firesource,pool_keydrop_on,keysanity_smallkey_off,keysanity_bigkey_off",
                     "door_shuffle_on,firesource,dp_bigkey",
                     "door_shuffle_on,firesource,keysanity_bigkey_off"
                 ],
@@ -920,7 +920,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-bowguard.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -932,14 +932,14 @@
                 ],
                 "chest_unopened_img": "images/enemy-redguard.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Altar",
                 "access_rules": [
                     "$canRemoveCurtains,pool_mode_chest,at_smallkey:2,[lamp]",
-                    "$canRemoveCurtains,pool_mode_chestkeydrop,at_smallkey:4,[lamp]",
+                    "$canRemoveCurtains,pool_keydrop_on,at_smallkey:4,[lamp]",
                     "$canRemoveCurtains,keysanity_smallkey_off,[lamp]",
                     "door_shuffle_crossed"
                 ],
@@ -1215,7 +1215,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1229,15 +1229,15 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "South Side",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Swamp Palace/Bomb Wall,hammer",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,sp_smallkey:3,hammer",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Bomb Wall,keysanity_smallkey_off,hammer",
+                    "door_shuffle_off,pool_keydrop_on,@Swamp Palace/Bomb Wall,sp_smallkey:3,hammer",
+                    "door_shuffle_off,pool_keydrop_on,@Swamp Palace/Bomb Wall,keysanity_smallkey_off,hammer",
                     "door_shuffle_off,glitch_mode_hybrid,@Misery Mire/Left Side Access",
                     "door_shuffle_off,glitch_mode_hybrid,@Tower of Hera/Compass Chest",
                     "door_shuffle_on"
@@ -1251,7 +1251,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1272,15 +1272,15 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Left Side",
                 "access_rules": [
                     "pool_mode_chest,@Swamp Palace/South Side",
-                    "pool_mode_chestkeydrop,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
-                    "pool_mode_chestkeydrop,@Swamp Palace/South Side,keysanity_smallkey_off",
+                    "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
+                    "pool_keydrop_on,@Swamp Palace/South Side,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "clear_as_group": false,
@@ -1290,8 +1290,8 @@
                 "name": "Back",
                 "access_rules": [
                     "pool_mode_chest,@Swamp Palace/South Side,hookshot",
-                    "pool_mode_chestkeydrop,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
-                    "pool_mode_chestkeydrop,@Swamp Palace/South Side,keysanity_smallkey_off,hookshot",
+                    "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
+                    "pool_keydrop_on,@Swamp Palace/South Side,keysanity_smallkey_off,hookshot",
                     "door_shuffle_on"
                 ],
                 "clear_as_group": false,
@@ -1305,15 +1305,15 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Arrghus Access",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Swamp Palace/Waterway Key",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Waterway Key,sp_smallkey:5,[sp_smallkey:6]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Swamp Palace/Waterway Key,keysanity_smallkey_off",
+                    "door_shuffle_off,pool_keydrop_on,@Swamp Palace/Waterway Key,sp_smallkey:5,[sp_smallkey:6]",
+                    "door_shuffle_off,pool_keydrop_on,@Swamp Palace/Waterway Key,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -1383,7 +1383,7 @@
                 "name": "West Lobby Key",
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1402,21 +1402,21 @@
                 "name": "Gibdo Key",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Skull Woods/Bridge,[sw_smallkey:3],firesource,[firerod],$canRemoveCurtains",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Skull Woods/Bridge,sw_smallkey:1,[sw_smallkey:4],firesource,[firerod],$canRemoveCurtains",
+                    "door_shuffle_off,pool_keydrop_on,@Skull Woods/Bridge,sw_smallkey:1,[sw_smallkey:4],firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_off,@Skull Woods/Bridge,keysanity_smallkey_off,firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_on"
                 ],
                 "chest_unopened_img": "images/enemy-gibdo.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Mothula Access",
                 "access_rules": [
                     "door_shuffle_off,pool_mode_chest,@Skull Woods/Gibdo Key",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Skull Woods/Gibdo Key,sw_smallkey:2,[sw_smallkey:5]",
-                    "door_shuffle_off,pool_mode_chestkeydrop,@Skull Woods/Gibdo Key,keysanity_smallkey_off",
+                    "door_shuffle_off,pool_keydrop_on,@Skull Woods/Gibdo Key,sw_smallkey:2,[sw_smallkey:5]",
+                    "door_shuffle_off,pool_keydrop_on,@Skull Woods/Gibdo Key,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -1483,7 +1483,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1493,14 +1493,14 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Attic Chest",
                 "access_rules": [
                     "pool_mode_chest,@Thieves Town/Hallway Key,[tt_smallkey:1]",
-                    "pool_mode_chestkeydrop,@Thieves Town/Hallway Key,tt_smallkey:2,[tt_smallkey:3]",
+                    "pool_keydrop_on,@Thieves Town/Hallway Key,tt_smallkey:2,[tt_smallkey:3]",
                     "@Thieves Town/Hallway Key,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -1511,10 +1511,10 @@
                 "access_rules": [
                     "pool_mode_chest,tt_bigkey",
                     "pool_mode_chest,keysanity_bigkey_off",
-                    "pool_mode_chestkeydrop,tt_smallkey:1,tt_bigkey",
-                    "pool_mode_chestkeydrop,keysanity_smallkey_off,tt_bigkey",
-                    "pool_mode_chestkeydrop,tt_smallkey:1,keysanity_bigkey_off",
-                    "pool_mode_chestkeydrop,keysanity_smallkey_off,keysanity_bigkey_off",
+                    "pool_keydrop_on,tt_smallkey:1,tt_bigkey",
+                    "pool_keydrop_on,keysanity_smallkey_off,tt_bigkey",
+                    "pool_keydrop_on,tt_smallkey:1,keysanity_bigkey_off",
+                    "pool_keydrop_on,keysanity_smallkey_off,keysanity_bigkey_off",
                     "door_shuffle_basic,tt_bigkey",
                     "door_shuffle_basic,keysanity_bigkey_off",
                     "door_shuffle_crossed"
@@ -1598,15 +1598,15 @@
                 "name": "Lobby Key",
                 "chest_unopened_img": "images/enemy-jelly.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Pengator Room",
                 "access_rules": [
                     "pool_mode_chest",
-                    "pool_mode_chestkeydrop,ip_smallkey:1",
-                    "pool_mode_chestkeydrop,keysanity_smallkey_off",
+                    "pool_keydrop_on,ip_smallkey:1",
+                    "pool_keydrop_on,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "item_count": 1
@@ -1618,7 +1618,7 @@
                 ],
                 "chest_unopened_img": "images/enemy-jelly.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1626,8 +1626,8 @@
                 "access_rules": [
                     "pool_mode_chest,[hookshot]",
                     "pool_mode_chest,ip_smallkey:1",
-                    "pool_mode_chestkeydrop,ip_smallkey:2,[hookshot]",
-                    "pool_mode_chestkeydrop,ip_smallkey:3",
+                    "pool_keydrop_on,ip_smallkey:2,[hookshot]",
+                    "pool_keydrop_on,ip_smallkey:3",
                     "keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -1638,13 +1638,13 @@
                 "access_rules": [
                     "@Ice Palace/Spike Room,lift1,hammer",
                     "pool_mode_chest,[@Ice Palace/Spike Room],somaria,lift1,hammer",
-                    "pool_mode_chestkeydrop,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,lift1,hammer",
-                    "pool_mode_chestkeydrop,[@Ice Palace/Spike Room],keysanity_smallkey_off,somaria,lift1,hammer",
+                    "pool_keydrop_on,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,lift1,hammer",
+                    "pool_keydrop_on,[@Ice Palace/Spike Room],keysanity_smallkey_off,somaria,lift1,hammer",
                     "door_shuffle_on,lift1,hammer"
                 ],
                 "chest_unopened_img": "images/pot-boulder.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1659,8 +1659,8 @@
                 "access_rules": [
                     "@Ice Palace/Spike Room,lift1,hammer",
                     "pool_mode_chest,[@Ice Palace/Spike Room],somaria,[lift1],[hammer]",
-                    "pool_mode_chestkeydrop,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,[lift1],[hammer]",
-                    "pool_mode_chestkeydrop,[@Ice Palace/Spike Room],keysanity_smallkey_off,somaria,[lift1],[hammer]",
+                    "pool_keydrop_on,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,[lift1],[hammer]",
+                    "pool_keydrop_on,[@Ice Palace/Spike Room],keysanity_smallkey_off,somaria,[lift1],[hammer]",
                     "door_shuffle_on,somaria,[lift1],[hammer]"
                 ],
                 "item_count": 1
@@ -1669,8 +1669,8 @@
                 "name": "Spike Cross",
                 "access_rules": [
                     "pool_mode_chest",
-                    "pool_mode_chestkeydrop,ip_smallkey:2",
-                    "pool_mode_chestkeydrop,keysanity_smallkey_off",
+                    "pool_keydrop_on,ip_smallkey:2",
+                    "pool_keydrop_on,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -1691,7 +1691,7 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -1717,10 +1717,10 @@
                     "@Ice Palace/Spike Cross,[somaria],keysanity_bigkey_off",
                     "@Ice Palace/Spike Cross,pool_mode_chest,[ip_smallkey:1],[ip_bigkey]",
                     "@Ice Palace/Spike Cross,pool_mode_chest,[ip_smallkey:1],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_mode_chestkeydrop,ip_smallkey:2,[somaria],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_mode_chestkeydrop,ip_smallkey:2,[somaria],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_mode_chestkeydrop,[ip_smallkey:3],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_mode_chestkeydrop,[ip_smallkey:3],keysanity_bigkey_off",
+                    "@Ice Palace/Spike Cross,pool_keydrop_on,ip_smallkey:2,[somaria],[ip_bigkey]",
+                    "@Ice Palace/Spike Cross,pool_keydrop_on,ip_smallkey:2,[somaria],keysanity_bigkey_off",
+                    "@Ice Palace/Spike Cross,pool_keydrop_on,[ip_smallkey:3],[ip_bigkey]",
+                    "@Ice Palace/Spike Cross,pool_keydrop_on,[ip_smallkey:3],keysanity_bigkey_off",
                     "@Ice Palace/Spike Cross,keysanity_smallkey_off,[ip_bigkey]",
                     "@Ice Palace/Spike Cross,keysanity_smallkey_off,keysanity_bigkey_off",
                     "door_shuffle_on"
@@ -1820,10 +1820,10 @@
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access",
                     "@TR Bridge Entrances,pool_mode_chest,tr_smallkey:1,[tr_smallkey:4],somaria",
-                    "@TR Bridge Entrances,pool_mode_chestkeydrop,tr_smallkey:2,[tr_smallkey:6],somaria",
+                    "@TR Bridge Entrances,pool_keydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
                     "@TR Bridge Entrances,keysanity_smallkey_off,somaria",
                     "@TR Laser Entrance,pool_mode_chest,tr_smallkey:1,[tr_smallkey:4],somaria",
-                    "@TR Laser Entrance,pool_mode_chestkeydrop,tr_smallkey:2,[tr_smallkey:6],somaria",
+                    "@TR Laser Entrance,pool_keydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
                     "@TR Laser Entrance,keysanity_smallkey_off,somaria"
                 ],
                 "item_count": 1
@@ -1842,8 +1842,8 @@
                 "name": "Chain Chomp Pokey",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:1",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,world_state_open,entrance_shuffle_off,tr_smallkey:1",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:2]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,world_state_open,entrance_shuffle_off,tr_smallkey:1",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:2]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Bridge Entrances,tr_smallkey:1,[tr_smallkey:5]",
                     "@TR Bridge Entrances,keysanity_smallkey_off",
@@ -1854,15 +1854,15 @@
                 ],
                 "chest_unopened_img": "images/enemy-pokey.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Chain Chomp",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:1",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,world_state_open,entrance_shuffle_off,tr_smallkey:2",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:2,[tr_smallkey:3]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,world_state_open,entrance_shuffle_off,tr_smallkey:2",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:2,[tr_smallkey:3]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Bridge Entrances",
                     "@TR Laser Entrance,somaria,[lamp]",
@@ -1884,20 +1884,20 @@
                 ],
                 "chest_unopened_img": "images/enemy-pokey.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Lava Chest",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2,[tr_smallkey:4]",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:4,[tr_smallkey:6]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:4,[tr_smallkey:6]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Bridge Entrances,pool_mode_chest,[tr_smallkey:4]",
-                    "@TR Bridge Entrances,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:6]",
+                    "@TR Bridge Entrances,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:6]",
                     "@TR Bridge Entrances,keysanity_smallkey_off",
                     "@TR Laser Entrance,pool_mode_chest,[tr_smallkey:4],somaria,[lamp]",
-                    "@TR Laser Entrance,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
+                    "@TR Laser Entrance,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
                     "@TR Laser Entrance,keysanity_smallkey_off,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
@@ -1908,8 +1908,8 @@
                 "name": "Big Chest Room",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,world_state_open,entrance_shuffle_off,tr_smallkey:3",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:3,[tr_smallkey:4]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,world_state_open,entrance_shuffle_off,tr_smallkey:3",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Bridge Entrances",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
@@ -1941,10 +1941,10 @@
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2,keysanity_bigkey_off",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,world_state_open,entrance_shuffle_off,tr_smallkey:3,tr_bigkey",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:3,[tr_smallkey:4],tr_bigkey",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,world_state_open,entrance_shuffle_off,tr_smallkey:3,keysanity_bigkey_off",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:3,[tr_smallkey:4],keysanity_bigkey_off",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,world_state_open,entrance_shuffle_off,tr_smallkey:3,tr_bigkey",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:3,[tr_smallkey:4],tr_bigkey",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,world_state_open,entrance_shuffle_off,tr_smallkey:3,keysanity_bigkey_off",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:3,[tr_smallkey:4],keysanity_bigkey_off",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off",
                     "@TR Bridge Entrances,tr_bigkey",
@@ -1960,14 +1960,14 @@
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2,[tr_smallkey:3],tr_bigkey,[lamp]",
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:2,[tr_smallkey:3],keysanity_bigkey_off,[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:4,[tr_smallkey:5],tr_bigkey,[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:4,[tr_smallkey:5],keysanity_bigkey_off,[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:4,[tr_smallkey:5],tr_bigkey,[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:4,[tr_smallkey:5],keysanity_bigkey_off,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off,[lamp]",
                     "@TR Bridge Entrances,pool_mode_chest,tr_smallkey:1,[tr_smallkey:3],tr_bigkey,somaria,[lamp]",
                     "@TR Bridge Entrances,pool_mode_chest,tr_smallkey:1,[tr_smallkey:3],keysanity_bigkey_off,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:5],tr_bigkey,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:5],keysanity_bigkey_off,somaria,[lamp]",
+                    "@TR Bridge Entrances,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:5],tr_bigkey,somaria,[lamp]",
+                    "@TR Bridge Entrances,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:5],keysanity_bigkey_off,somaria,[lamp]",
                     "@TR Bridge Entrances,keysanity_smallkey_off,tr_bigkey,somaria,[lamp]",
                     "@TR Bridge Entrances,keysanity_smallkey_off,keysanity_bigkey_off,somaria,[lamp]",
                     "@TR Laser Entrance",
@@ -1985,13 +1985,13 @@
                 "name": "Peg Maze Door",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_mode_chest,tr_smallkey:3,[tr_smallkey:4],[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_mode_chestkeydrop,tr_smallkey:5,[tr_smallkey:6],[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_keydrop_on,tr_smallkey:5,[tr_smallkey:6],[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,[lamp]",
                     "@TR Bridge Entrances,pool_mode_chest,tr_smallkey:1,[tr_smallkey:4],somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
+                    "@TR Bridge Entrances,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
                     "@TR Bridge Entrances,keysanity_smallkey_off,somaria,[lamp]",
                     "@TR Laser Entrance,pool_mode_chest,tr_smallkey:1,[tr_smallkey:4]",
-                    "@TR Laser Entrance,pool_mode_chestkeydrop,tr_smallkey:1,[tr_smallkey:6]",
+                    "@TR Laser Entrance,pool_keydrop_on,tr_smallkey:1,[tr_smallkey:6]",
                     "@TR Laser Entrance,keysanity_smallkey_off",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
@@ -2068,7 +2068,7 @@
                 "name": "Conveyor Bumper Key",
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
@@ -2089,14 +2089,14 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Map Chest",
                 "access_rules": [
                     "@Ganon's Tower/Double Switch Key,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Double Switch Key,pool_mode_chestkeydrop,gt_smallkey:1,[gt_smallkey:7]",
+                    "@Ganon's Tower/Double Switch Key,pool_keydrop_on,gt_smallkey:1,[gt_smallkey:7]",
                     "@Ganon's Tower/Double Switch Key,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -2107,8 +2107,8 @@
                 "access_rules": [
                     "pool_mode_chest,[gt_smallkey:2],hammer,hookshot",
                     "pool_mode_chest,[gt_smallkey:2],hammer,boots,[hookshot]",
-                    "pool_mode_chestkeydrop,gt_smallkey:1,[gt_smallkey:6],hammer,hookshot",
-                    "pool_mode_chestkeydrop,gt_smallkey:1,[gt_smallkey:6],hammer,boots,[hookshot]",
+                    "pool_keydrop_on,gt_smallkey:1,[gt_smallkey:6],hammer,hookshot",
+                    "pool_keydrop_on,gt_smallkey:1,[gt_smallkey:6],hammer,boots,[hookshot]",
                     "keysanity_smallkey_off,hammer,hookshot",
                     "keysanity_smallkey_off,hammer,boots,[hookshot]",
                     "door_shuffle_on,hookshot",
@@ -2120,7 +2120,7 @@
                 "name": "Rando Room",
                 "access_rules": [
                     "@Ganon's Tower/Firesnake,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Firesnake,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:7]",
+                    "@Ganon's Tower/Firesnake,pool_keydrop_on,gt_smallkey:2,[gt_smallkey:7]",
                     "@Ganon's Tower/Firesnake,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -2139,7 +2139,7 @@
                 "name": "Compass Room",
                 "access_rules": [
                     "@Ganon's Tower/Tile Room,pool_mode_chest,[gt_smallkey:3],firesource,[firerod]",
-                    "@Ganon's Tower/Tile Room,pool_mode_chestkeydrop,gt_smallkey:1,[gt_smallkey:7],firesource,[firerod]",
+                    "@Ganon's Tower/Tile Room,pool_keydrop_on,gt_smallkey:1,[gt_smallkey:7],firesource,[firerod]",
                     "@Ganon's Tower/Tile Room,keysanity_smallkey_off,firesource,[firerod]",
                     "door_shuffle_on"
                 ],
@@ -2153,17 +2153,17 @@
                 ],
                 "chest_unopened_img": "images/pot-dw.png",
                 "chest_opened_img": "images/pot-collected.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Ice Armos Access",
                 "access_rules": [
                     "@Ganon's Tower/Firesnake,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Firesnake,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:7]",
+                    "@Ganon's Tower/Firesnake,pool_keydrop_on,gt_smallkey:2,[gt_smallkey:7]",
                     "@Ganon's Tower/Firesnake,keysanity_smallkey_off",
                     "@Ganon's Tower/Compass Room,pool_mode_chest",
-                    "@Ganon's Tower/Compass Room,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:7]",
+                    "@Ganon's Tower/Compass Room,pool_keydrop_on,gt_smallkey:2,[gt_smallkey:7]",
                     "@Ganon's Tower/Compass Room,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -2220,7 +2220,7 @@
                 "name": "Mini Helmasaur",
                 "access_rules": [
                     "@Ganon's Tower/Lanmolas,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Lanmolas,pool_mode_chestkeydrop,[gt_smallkey:6]",
+                    "@Ganon's Tower/Lanmolas,pool_keydrop_on,[gt_smallkey:6]",
                     "@Ganon's Tower/Lanmolas,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -2234,14 +2234,14 @@
                 ],
                 "chest_unopened_img": "images/enemy-helma.png",
                 "chest_opened_img": "images/enemy-defeated.png",
-                "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                "visibility_rules": [ "pool_keydrop_on" ],
                 "item_count": 1
             },
             {
                 "name": "Pre-Moldorm",
                 "access_rules": [
                     "@Ganon's Tower/Mini Helmasaur,pool_mode_chest,[gt_smallkey:3]",
-                    "@Ganon's Tower/Mini Helmasaur,pool_mode_chestkeydrop,gt_smallkey:1,[gt_smallkey:7]",
+                    "@Ganon's Tower/Mini Helmasaur,pool_keydrop_on,gt_smallkey:1,[gt_smallkey:7]",
                     "@Ganon's Tower/Mini Helmasaur,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -2251,7 +2251,7 @@
                 "name": "Moldorm Access",
                 "access_rules": [
                     "@Ganon's Tower/Pre-Moldorm,pool_mode_chest,[gt_smallkey:4]",
-                    "@Ganon's Tower/Pre-Moldorm,pool_mode_chestkeydrop,gt_smallkey:2,[gt_smallkey:8]",
+                    "@Ganon's Tower/Pre-Moldorm,pool_keydrop_on,gt_smallkey:2,[gt_smallkey:8]",
                     "@Ganon's Tower/Pre-Moldorm,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],

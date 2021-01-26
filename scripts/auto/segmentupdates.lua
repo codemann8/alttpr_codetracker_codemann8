@@ -482,7 +482,7 @@ function updateRoomsFromMemorySegment(segment)
         updateSectionChestCountFromRoomSlotList(segment, {"@Ganon's Tower/Validation", "@GT Validation/Chest"}, {{77, 4}})
 
         --Key Drop Locations
-        if OBJ_POOL and OBJ_POOL.CurrentStage > 0 then
+        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP.CurrentStage > 0 then
             updateSectionChestCountFromRoomSlotList(segment, {"@Hyrule Castle & Escape/Key Guard", "@HC Key Guard/Guard"}, {{114, 10}})
             updateSectionChestCountFromRoomSlotList(segment, {"@Hyrule Castle & Escape/Boomerang Guard", "@HC Boomerang/Guard"}, {{113, 10}})
             updateSectionChestCountFromRoomSlotList(segment, {"@Hyrule Castle & Escape/Ball 'N Chain Guard", "@HC Ball 'N Chain/Guard"}, {{128, 10}})

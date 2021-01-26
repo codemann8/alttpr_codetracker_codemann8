@@ -29,9 +29,12 @@ function SurrogateItem:initSuffix(isAlt)
     end
 end
 
-function SurrogateItem:linkSurrogate(item)
+function SurrogateItem:linkSurrogate(item, onedirection)
     self.linkedItem = item
-    item.linkedItem = self
+    if not onedirection then
+        item.linkedItem = self
+    end
+    return self
 end
 
 function SurrogateItem:getState()

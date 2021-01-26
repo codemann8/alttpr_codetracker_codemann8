@@ -16,7 +16,7 @@
                         "name": "Guard",
                         "chest_unopened_img": "images/enemy-guard.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -30,7 +30,7 @@
                         "map": "dungeon_egmap",
                         "x": 667,
                         "y": 1876,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_hc",
@@ -41,7 +41,7 @@
                         "map": "dungeon_hc",
                         "x": 799,
                         "y": 727,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
@@ -57,7 +57,7 @@
                         "name": "Guard",
                         "chest_unopened_img": "images/enemy-guard.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -71,7 +71,7 @@
                         "map": "dungeon_egmap",
                         "x": 478,
                         "y": 1996,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_hc",
@@ -82,7 +82,7 @@
                         "map": "dungeon_hc",
                         "x": 572,
                         "y": 870,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
@@ -94,7 +94,7 @@
                         "name": "Guard",
                         "chest_unopened_img": "images/enemy-chain.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -163,7 +163,7 @@
                         "name": "Rat",
                         "chest_unopened_img": "images/enemy-rat.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -305,7 +305,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-lw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -374,7 +374,7 @@
                         "name": "Eyegore",
                         "chest_unopened_img": "images/enemy-eyegore.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -541,7 +541,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-lw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -566,7 +566,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-lw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -591,7 +591,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-lw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -834,7 +834,7 @@
                         "name": "Guard",
                         "chest_unopened_img": "images/enemy-bowguard.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -859,7 +859,7 @@
                         "name": "Guard",
                         "chest_unopened_img": "images/enemy-redguard.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1255,7 +1255,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1280,7 +1280,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1305,7 +1305,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1374,7 +1374,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1488,7 +1488,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1677,7 +1677,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1724,7 +1724,7 @@
                         "name": "Gibdo",
                         "chest_unopened_img": "images/enemy-gibdo.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1869,7 +1869,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -1894,7 +1894,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2016,7 +2016,7 @@
                         "name": "Bari",
                         "chest_unopened_img": "images/enemy-jelly.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2073,7 +2073,7 @@
                         "name": "Bari",
                         "chest_unopened_img": "images/enemy-jelly.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2135,7 +2135,7 @@
                         "access_rules": [ "@Ice Palace/Boulder Key" ],
                         "chest_unopened_img": "images/pot-boulder.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2149,7 +2149,7 @@
                         "map": "dungeon_egmap",
                         "x": 3906,
                         "y": 960,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_ip_horiz",
@@ -2160,7 +2160,7 @@
                         "map": "dungeon_ip_horiz",
                         "x": 1010,
                         "y": 225,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_ip_vert",
@@ -2171,7 +2171,7 @@
                         "map": "dungeon_ip_vert",
                         "x": 374,
                         "y": 1188,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
@@ -2237,7 +2237,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2362,7 +2362,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2376,7 +2376,7 @@
                         "map": "dungeon_egmap",
                         "x": 800,
                         "y": 2992,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_mm",
@@ -2387,7 +2387,7 @@
                         "map": "dungeon_mm",
                         "x": 976,
                         "y": 831,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
@@ -2443,7 +2443,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2468,7 +2468,7 @@
                         "name": "Bari",
                         "chest_unopened_img": "images/enemy-jelly.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -2667,7 +2667,7 @@
                         "name": "Pokey",
                         "chest_unopened_img": "images/enemy-pokey.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     },
                     {
@@ -2685,7 +2685,7 @@
                         "map": "dungeon_egmap",
                         "x": 1606,
                         "y": 3008,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_tr_horiz",
@@ -2696,7 +2696,7 @@
                         "map": "dungeon_tr_horiz",
                         "x": 1655,
                         "y": 516,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_tr_vert",
@@ -2707,7 +2707,7 @@
                         "map": "dungeon_tr_vert",
                         "x": 712,
                         "y": 1151,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
@@ -2719,7 +2719,7 @@
                         "name": "Pokey",
                         "chest_unopened_img": "images/enemy-pokey.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -3010,7 +3010,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -3125,7 +3125,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -3265,7 +3265,7 @@
                         "name": "Pot",
                         "chest_unopened_img": "images/pot-dw.png",
                         "chest_opened_img": "images/pot-collected.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -3382,7 +3382,7 @@
                         "name": "Mini Helmasaur",
                         "chest_unopened_img": "images/enemy-helma.png",
                         "chest_opened_img": "images/enemy-defeated.png",
-                        "visibility_rules": [ "pool_mode_chestkeydrop" ],
+                        "visibility_rules": [ "pool_keydrop_on" ],
                         "item_count": 1
                     }
                 ],
@@ -3401,7 +3401,7 @@
                         "map": "dungeon_egmap",
                         "x": 3534,
                         "y": 872,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_gt_horiz",
@@ -3417,7 +3417,7 @@
                         "map": "dungeon_gt_horiz",
                         "x": 2135,
                         "y": 113,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     },
                     {
                         "map": "dungeon_gt_vert",
@@ -3433,7 +3433,7 @@
                         "map": "dungeon_gt_vert",
                         "x": 866,
                         "y": 499,
-                        "restrict_visibility_rules": [ "pool_mode_chestkeydrop" ]
+                        "restrict_visibility_rules": [ "pool_keydrop_on" ]
                     }
                 ]
             },
