@@ -200,7 +200,7 @@ function initGlobalVars()
     TRACKER_READY = true
 end
 
-function updateIcons()
+function updateIcons(updateDoorCounts)
     if not TRACKER_READY then
         for i = 1, #DungeonList do
             local item = Tracker:FindObjectForCode(DungeonList[i] .. "_item").ItemState
@@ -210,19 +210,7 @@ function updateIcons()
         for i = 1, #DungeonList do
             local item = Tracker:FindObjectForCode(DungeonList[i] .. "_item").ItemState
             local key = Tracker:FindObjectForCode(DungeonList[i] .. "_smallkey")
-            if OBJ_DOORSHUFFLE.CurrentStage == 2 then
-                if item.MaxCount ~= 99 then
-                    item.MaxCount = 99
-                    item.AcquiredCount = 99
-                end
-                item.SwapActions = true
-                key.MaxCount = 99
-                key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
-
-                if (OBJ_POOL_KEYDROP.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
-                    Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
-                end
-            else
+            if OBJ_DOORSHUFFLE.CurrentStage < 2 then
                 key.MaxCount = DungeonData[DungeonList[i]][2]
                 if OBJ_POOL_KEYDROP.CurrentStage > 0 then
                     key.MaxCount = key.MaxCount + DungeonData[DungeonList[i]][3]

@@ -42,6 +42,23 @@ function DoorShuffleMode:postUpdate()
             message = message .. "\n\nThe Dungeon Selector icon will cycle thru each dungeon and Total Chests icon will set the total number of chests for that particular dungeon."
             message = message .. " Left click will increment the total chests and right click will reset it to 'unknown amount'."
             ScriptHost:PushMarkdownNotification(NotificationType.Message, message)
+
+            --Update Dungeon Chest/Key Counts
+            for i = 1, #DungeonList do
+                local item = Tracker:FindObjectForCode(DungeonList[i] .. "_item").ItemState
+                local key = Tracker:FindObjectForCode(DungeonList[i] .. "_smallkey")
+                if item.MaxCount ~= 99 then
+                    item.MaxCount = 99
+                    item.AcquiredCount = 99
+                end
+                item.SwapActions = true
+                key.MaxCount = 99
+                key.Icon = ImageReference:FromPackRelativePath("images/SmallKey2.png", "@disabled")
+
+                if (OBJ_POOL_KEYDROP.CurrentStage == 0 and DungeonList[i] == "hc") or DungeonList[i] == "at" then
+                    Tracker:FindObjectForCode(DungeonList[i] .. "_bigkey").Icon = ImageReference:FromPackRelativePath("images/BigKey.png", "@disabled")
+                end
+            end
         end
 
         updateIcons()
