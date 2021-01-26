@@ -39,11 +39,12 @@ All of the modes can be set by clicking the `Gear` in the `Items` section. Addit
   - Crossed (Supertiles are shuffled with all dungeons)
 - Retro Mode (Shows Shops and also possible Take Any Caves)
 - Pool Mode
-  - Chests (Regular Rando)
+  - Shopsanity (Shop inventories are shuffled into the item pool)
   - Key Drops (Enemies and Pots, that normally drop keys, are shuffled into the item pool)
 - Glitch Logic
   - None
   - OWG (Overworld Glitches)
+  - HMG (Hybrid Major Glitches)
   - MG (Major Glitches)
 - Race Mode (Disables autotracking features that are deemed illegal per racing council rules)
   - *A checkered flag icon will replace the GT BK guessing game icon to indicate its activation*
