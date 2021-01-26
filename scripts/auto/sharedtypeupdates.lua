@@ -191,7 +191,7 @@ function updateSectionChestCountFromBytesAndFlag(segment, locationRef, addresses
             print(locationRef, value)
         end
 
-        location.AvailableChestCount = location.MaxCount - count
+        location.AvailableChestCount = location.ChestCount - count
 
         if callback then
             callback(location.AvailableChestCount == 0)
