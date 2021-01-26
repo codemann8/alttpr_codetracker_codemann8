@@ -191,17 +191,10 @@ function updateSectionChestCountFromBytesAndFlag(segment, locationRef, addresses
             print(locationRef, value)
         end
 
-        if count == location.MaxCount then
-            location.AvailableChestCount = 0
-            if callback then
-                callback(true)
-            end
-        else
-            location.AvailableChestCount = location.MaxCount - count
+        location.AvailableChestCount = location.MaxCount - count
 
-            if callback then
-                callback(false)
-            end
+        if callback then
+            callback(location.AvailableChestCount == 0)
         end
     elseif AUTOTRACKER_ENABLE_DEBUG_LOGGING then
         print("Couldn't find location", locationRef)
