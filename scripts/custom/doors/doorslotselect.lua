@@ -20,7 +20,7 @@ DoorSlotSelection.Groups = { --[index of header] = index of last item in group
     [18] = {20, "aitem"},
     [21] = {22, "0023"}
 }
-DoorSlotSelection.Selection = 0
+DoorSlotSelection.Selection = 2
 
 function DoorSlotSelection:init(index)
     self:createItem("Door Slot Selection")
@@ -68,9 +68,8 @@ function DoorSlotSelection:updateNeighbors()
 end
 
 function DoorSlotSelection:onLeftClick()
-    local state = (self:getState() + 1) % 2
-    DoorSlotSelection.Selection = state * self.index
-    self:setState(state)
+    DoorSlotSelection.Selection = self.index
+    self:setState(1)
     self:updateIcon()
     self:updateNeighbors()
 end
