@@ -739,7 +739,7 @@
         "name": "Mimic Cave",
         "parent": "Death Mountain East Top",
         "access_rules": [
-            "door_shuffle_off,world_state_open,@TR Main Entrance,pearl,somaria,pool_mode_chest,tr_smallkey:2,mirror",
+            "door_shuffle_off,world_state_open,@TR Main Entrance,pearl,somaria,pool_keydrop_off,tr_smallkey:2,mirror",
             "door_shuffle_off,world_state_open,@TR Main Entrance,pearl,somaria,pool_keydrop_on,tr_smallkey:3,mirror",
             "door_shuffle_off,world_state_open,@TR Main Entrance,pearl,somaria,[firerod],keysanity_smallkey_off,mirror",
             "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror",
