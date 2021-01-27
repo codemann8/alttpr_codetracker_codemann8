@@ -17,16 +17,16 @@ function DoorTotalChest:getState()
 end
 
 function DoorTotalChest:updateIcon()
-    if OBJ_DOORSHUFFLE.CurrentStage == 2 then
+    if OBJ_DOORSHUFFLE.CurrentStage < 2 or (self:getProperty("itemType") == "smallkey" and OBJ_KEYSANITY_SMALL.CurrentStage == 2) then
+        self.ItemInstance.Icon = ""
+        self.ItemInstance.BadgeText = nil
+    else
         self.ItemInstance.Icon = self.Icon
         if self:getState() == 99 then
             self.ItemInstance.BadgeText = "?"
         else
             self.ItemInstance.BadgeText = string.format("%i", self:getState())
         end
-    else
-        self.ItemInstance.Icon = ""
-        self.ItemInstance.BadgeText = nil
     end
 end
 
