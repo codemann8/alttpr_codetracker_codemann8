@@ -1315,7 +1315,7 @@
                 "item_count": 1
             },
             {
-                "name": "Far Left Cheft",
+                "name": "Far Left Chest",
                 "access_rules": [
                     "pool_keydrop_off,@Swamp Palace/South Side",
                     "pool_keydrop_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",

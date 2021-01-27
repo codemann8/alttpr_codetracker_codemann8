@@ -233,7 +233,7 @@
         "children": [
             {
                 "name": "EP Cannonball",
-                "access_rules": [ "@Eastern Palace/Front" ],
+                "access_rules": [ "@Eastern Palace/Cannonball" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -255,7 +255,7 @@
             },
             {
                 "name": "EP Hook",
-                "access_rules": [ "@Eastern Palace/Front" ],
+                "access_rules": [ "@Eastern Palace/Hook Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -277,7 +277,7 @@
             },
             {
                 "name": "EP Stalfos Spawn",
-                "access_rules": [ "@Eastern Palace/Front" ],
+                "access_rules": [ "@Eastern Palace/Stalfos Spawn" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -642,7 +642,7 @@
         "children": [
             {
                 "name": "TH Lobby",
-                "access_rules": [ "@Tower of Hera/Lobby\\Cage" ],
+                "access_rules": [ "@Tower of Hera/Lobby" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -664,7 +664,7 @@
             },
             {
                 "name": "TH Cage",
-                "access_rules": [ "@Tower of Hera/Lobby\\Cage" ],
+                "access_rules": [ "@Tower of Hera/Cage" ],
                 "sections": [
                     {
                         "name": "Item",
@@ -1393,7 +1393,7 @@
             },
             {
                 "name": "SP Left Side Chest",
-                "access_rules": [ "@Swamp Palace/Left Side" ],
+                "access_rules": [ "@Swamp Palace/Far Left Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1415,7 +1415,7 @@
             },
             {
                 "name": "SP Big Key Chest",
-                "access_rules": [ "@Swamp Palace/Left Side" ],
+                "access_rules": [ "@Swamp Palace/Big Key Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1437,7 +1437,7 @@
             },
             {
                 "name": "SP Flooded Treasure",
-                "access_rules": [ "@Swamp Palace/Back" ],
+                "access_rules": [ "@Swamp Palace/Flooded Treasure" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1460,7 +1460,7 @@
             },
             {
                 "name": "SP Snake Waterfall",
-                "access_rules": [ "@Swamp Palace/Back" ],
+                "access_rules": [ "@Swamp Palace/Snake Waterfall" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1539,7 +1539,7 @@
         "children": [
             {
                 "name": "SW Map Chest",
-                "access_rules": [ "@Skull Woods/Front" ],
+                "access_rules": [ "@Skull Woods/Map Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1561,7 +1561,7 @@
             },
             {
                 "name": "SW Gibdo Prison",
-                "access_rules": [ "@Skull Woods/Front" ],
+                "access_rules": [ "@Skull Woods/Gibdo Prison" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1583,7 +1583,7 @@
             },
             {
                 "name": "SW Compass Chest",
-                "access_rules": [ "@Skull Woods/Front" ],
+                "access_rules": [ "@Skull Woods/Compass Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1605,7 +1605,7 @@
             },
             {
                 "name": "SW Pinball",
-                "access_rules": [ "@Skull Woods/Front" ],
+                "access_rules": [ "@Skull Woods/Pinball" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1649,7 +1649,7 @@
             },
             {
                 "name": "SW Statue Switch",
-                "access_rules": [ "@Skull Woods/Front" ],
+                "access_rules": [ "@Skull Woods/Statue Switch" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1775,7 +1775,7 @@
         "children": [
             {
                 "name": "TT Main Lobby",
-                "access_rules": [ "@Thieves Town/Front" ],
+                "access_rules": [ "@Thieves Town/Main Lobby" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1797,7 +1797,7 @@
             },
             {
                 "name": "TT Ambush",
-                "access_rules": [ "@Thieves Town/Front" ],
+                "access_rules": [ "@Thieves Town/Ambush" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1819,7 +1819,7 @@
             },
             {
                 "name": "TT SE Lobby",
-                "access_rules": [ "@Thieves Town/Front" ],
+                "access_rules": [ "@Thieves Town/SE Lobby" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -1841,7 +1841,7 @@
             },
             {
                 "name": "TT Big Key Chest",
-                "access_rules": [ "@Thieves Town/Front" ],
+                "access_rules": [ "@Thieves Town/Big Key Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -2487,7 +2487,7 @@
             },
             {
                 "name": "MM Torch Tiles",
-                "access_rules": [ "@Misery Mire/Left Side" ],
+                "access_rules": [ "@Misery Mire/Torch Tiles Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -2509,7 +2509,7 @@
             },
             {
                 "name": "MM Torch Cutscene",
-                "access_rules": [ "@Misery Mire/Left Side" ],
+                "access_rules": [ "@Misery Mire/Torch Cutscene" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -2531,7 +2531,7 @@
             },
             {
                 "name": "MM Right Blue Pegs",
-                "access_rules": [ "@Misery Mire/Blue Peg Chest" ],
+                "access_rules": [ "@Misery Mire/Right Blue Pegs Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
