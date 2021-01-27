@@ -233,7 +233,7 @@
         "children": [
             {
                 "name": "EP Cannonball",
-                "access_rules": [ "@Eastern Palace/Cannonball" ],
+                "access_rules": [ "@Eastern Palace/Cannonball Chest" ],
                 "sections": [
                     {
                         "name": "Chest",
