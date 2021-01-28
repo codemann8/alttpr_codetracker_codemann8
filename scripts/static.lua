@@ -1,3 +1,54 @@
+DungeonList = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
+
+DungeonData = { --dungeonPrefix = location header, chest keys, key drops, dungeon order index
+    ["hc"] = { "@Hyrule Castle & Escape", 1, 3, 0 },
+    ["ep"] = { "@Eastern Palace", 0, 2, 1 },
+    ["dp"] = { "@Desert Palace", 1, 3, 2 },
+    ["at"] = { "@Agahnim's Tower", 2, 2, 4 },
+    ["sp"] = { "@Swamp Palace", 1, 5, 6 },
+    ["pod"] = { "@Palace of Darkness", 6, 0, 5 },
+    ["mm"] = { "@Misery Mire", 3, 3, 10 },
+    ["sw"] = { "@Skull Woods", 3, 2, 7 },
+    ["ip"] = { "@Ice Palace", 2, 4, 9 },
+    ["toh"] = { "@Tower of Hera", 1, 0, 3 },
+    ["tt"] = { "@Thieves Town", 1, 2, 8 },
+    ["tr"] = { "@Turtle Rock", 4, 2, 11 },
+    ["gt"] = { "@Ganon's Tower", 4, 4, 12 }
+}
+
+DungeonIdMap = {
+    [0] = "hc", --sewer
+    [2] = "hc",
+    [4] = "ep",
+    [6] = "dp",
+    [8] = "at",
+    [10] = "sp",
+    [12] = "pod",
+    [14] = "mm",
+    [16] = "sw",
+    [18] = "ip",
+    [20] = "toh",
+    [22] = "tt",
+    [24] = "tr",
+    [26] = "gt",
+    [255] = "OW"
+}
+
+OverworldIdRegionMap = {
+    [0x02] = "light_world", [0x03] = "dm_west_bottom",
+    [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
+    [0x22] = "light_world", [0x1e] = "light_world",
+    [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
+    [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
+    [0x3a] = "light_world", [0x3b] = "light_world",
+    [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
+    [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
+    [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
+    [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
+    [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
+    [0x7b] = "dw_south"
+}
+
 CaptureBadgeEntrances = {
     "@Forest Chest Game/Entrance",
     "@Lumberjack House/Entrance",
@@ -178,55 +229,3 @@ CaptureBadgeUnderworld = {
     "@Dark Lake Shop/Items",
     "@Dark Death Mountain Shop/Items"
 }
-
-DungeonList = { "hc", "ep", "dp", "at", "sp", "pod", "mm", "sw", "ip", "toh", "tt", "tr", "gt" }
-
-DungeonData = { --dungeonPrefix = location header, chest keys, key drops, dungeon order index
-    ["hc"] = { "@Hyrule Castle & Escape", 1, 3, 0 },
-    ["ep"] = { "@Eastern Palace", 0, 2, 1 },
-    ["dp"] = { "@Desert Palace", 1, 3, 2 },
-    ["at"] = { "@Agahnim's Tower", 2, 2, 4 },
-    ["sp"] = { "@Swamp Palace", 1, 5, 6 },
-    ["pod"] = { "@Palace of Darkness", 6, 0, 5 },
-    ["mm"] = { "@Misery Mire", 3, 3, 10 },
-    ["sw"] = { "@Skull Woods", 3, 2, 7 },
-    ["ip"] = { "@Ice Palace", 2, 4, 9 },
-    ["toh"] = { "@Tower of Hera", 1, 0, 3 },
-    ["tt"] = { "@Thieves Town", 1, 2, 8 },
-    ["tr"] = { "@Turtle Rock", 4, 2, 11 },
-    ["gt"] = { "@Ganon's Tower", 4, 4, 12 }
-}
-
-DungeonIdMap = {
-    [0] = "hc", --sewer
-    [2] = "hc",
-    [4] = "ep",
-    [6] = "dp",
-    [8] = "at",
-    [10] = "sp",
-    [12] = "pod",
-    [14] = "mm",
-    [16] = "sw",
-    [18] = "ip",
-    [20] = "toh",
-    [22] = "tt",
-    [24] = "tr",
-    [26] = "gt",
-    [255] = "OW"
-}
-
-OverworldIdRegionMap = {
-    [0x02] = "light_world", [0x03] = "dm_west_bottom",
-    [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
-    [0x22] = "light_world", [0x1e] = "light_world",
-    [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
-    [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
-    [0x3a] = "light_world", [0x3b] = "light_world",
-    [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
-    [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-    [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
-    [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
-    [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
-    [0x7b] = "dw_south"
-}
-                
