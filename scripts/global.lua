@@ -377,7 +377,8 @@ function removeGhost(section)
 end
 
 function updateDoorSlots(roomId, forceUpdate)
-    if roomId > 0 and DOORSLOTS[roomId] and ROOMSLOTS[1] ~= roomId then
+    local shouldUpdate = false
+    if roomId > 0 and DOORSLOTS[roomId] and ROOMSLOTS[1] ~= roomId and shouldShowRoom(roomId, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
         local carried = ROOMSLOTS[1]
         ROOMSLOTS[1] = roomId
         for r = 2, #ROOMSLOTS do
@@ -389,8 +390,9 @@ function updateDoorSlots(roomId, forceUpdate)
             ROOMSLOTS[r] = carried
             carried = temp
         end
+        shouldUpdate = true
     end
-    if roomId > 0 or forceUpdate then
+    if shouldUpdate or forceUpdate then
         for r = 1, #ROOMSLOTS do
             if ROOMSLOTS[r] > 0 then
                 local item = Tracker:FindObjectForCode("roomSlot" .. math.floor(r))
@@ -403,6 +405,19 @@ function updateDoorSlots(roomId, forceUpdate)
             end
         end
     end
+end
+
+function shouldShowRoom(roomId, xCoord, yCoord)
+    if RoomNonLinearExclusions[roomId] then
+        print(string.format("0x%2x", roomId) .. ": " .. string.format("%3x", xCoord) .. " x " .. string.format("%3x", yCoord))
+        for i, rect in ipairs(RoomNonLinearExclusions[roomId]) do
+            if xCoord >= rect[1] and xCoord <= rect[2] and yCoord >= rect[3] and yCoord <= rect[4] then
+                print("Suppressed " .. string.format("0x%2x", roomId))
+                return false
+            end
+        end
+    end
+    return true
 end
 
 function JObjectToLuaTable(obj)
