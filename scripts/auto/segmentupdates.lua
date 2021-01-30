@@ -150,7 +150,7 @@ function updateRoomIdFromMemorySegment(segment)
 
     OBJ_ROOM.AcquiredCount = ReadU16(segment, 0x7e00a0)
 
-    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage == 2 and not AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE.CurrentStage > 0 and not AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
         updateDoorSlots(OBJ_ROOM.AcquiredCount)
     end
 
