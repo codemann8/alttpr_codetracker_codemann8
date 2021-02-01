@@ -331,6 +331,8 @@
             "castle_top",
             "world_state_open,@East Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
+            "world_state_inverted,aga,mirror",
+            "world_state_inverted,aga2",
             "world_state_inverted,glitch_mode_ow,pearl,boots",
             "glitch_mode_major"
         ]
