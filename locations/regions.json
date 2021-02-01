@@ -344,7 +344,9 @@
         "access_rules": [
             "world_state_open,dm_west_top",
             "world_state_open,flute",
+            "world_state_inverted,ddm_top",
             "world_state_inverted,ddm_west",
+            "world_state_inverted,ddm_floating",
             "world_state_inverted,activated_flute",
             "world_state_inverted,@Light World,pearl,flute",
             "world_state_inverted,@Northwest Dark World,glitch_mode_ow,boots",
@@ -385,9 +387,7 @@
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,lift2,pearl,hammer",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot,hammer",
                     "world_state_inverted,dm_east_top,pearl,hammer",
-                    "world_state_inverted,ddm_top,lift2,pearl,hammer",
-                    "world_state_inverted,ddm_west,lift2,pearl,hammer",
-                    "world_state_inverted,ddm_floating,lift2,pearl,hammer",
+                    "world_state_inverted,@Mountain Access,lift2,pearl,hammer",
                     "world_state_inverted,glitch_mode_ow,pearl,boots"
                 ]
             },
@@ -403,8 +403,8 @@
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror",
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_safety,mirror",
                     "world_state_open,glitch_mode_ow,boots",
-                    "world_state_inverted,dm_west_top,pearl,hammer",
                     "world_state_inverted,@Death Mountain West Top,pearl,hammer",
+                    "world_state_inverted,@Mountain Access,lift2,pearl,hammer",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,lift2",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
@@ -432,9 +432,6 @@
                     "world_state_inverted,dm_east_connect,pearl,hookshot",
                     "world_state_inverted,dm_east_spiral,pearl,hookshot",
                     "world_state_inverted,dm_east_mimic,pearl,hookshot",
-                    "world_state_inverted,ddm_west",
-                    "world_state_inverted,ddm_top",
-                    "world_state_inverted,ddm_floating",
                     "world_state_inverted,ddm_east,mirror,pearl,hookshot"
                 ]
             },
@@ -451,10 +448,8 @@
                     "world_state_open,ddm_tr_safety,mirror",
                     "world_state_inverted,dm_east_mimic",
                     "world_state_inverted,@Death Mountain West Bottom,pearl,hookshot",
+                    "world_state_inverted,@Mountain Access,lift2",
                     "world_state_inverted,ddm_east,lift2",
-                    "world_state_inverted,ddm_top,lift2",
-                    "world_state_inverted,ddm_west,lift2",
-                    "world_state_inverted,ddm_floating,lift2",
                     "world_state_inverted,glitch_mode_ow,mirror"
                 ]
             }
@@ -480,8 +475,7 @@
                     "world_state_open,entrance_shuffle_singleentryvanilla,@Death Mountain East Bottom,lift2",
                     "world_state_inverted,@Mountain Access",
                     "world_state_inverted,@Death Mountain East Top,mirror",
-                    "world_state_inverted,@Death Mountain West Bottom,mirror",
-                    "world_state_inverted,ddm_west"
+                    "world_state_inverted,@Death Mountain West Bottom,mirror"
                 ]
             },
             {
