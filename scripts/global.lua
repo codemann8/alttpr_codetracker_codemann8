@@ -9,8 +9,8 @@ ROOMSLOTS = { 0, 0, 0, 0 }
 DOORSLOTS = { -- 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
     [0x01] = {0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
     --[0x07] = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1},--Moldorm Boss Arena
-    [0x0a] = {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
     [0x09] = {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0},
+    --[0x0a] = {0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},--PoD Stalfos Basement
     [0x0c] = {1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
     [0x11] = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0},
     [0x14] = {0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0},
@@ -379,12 +379,16 @@ function removeGhost(section)
 end
 
 function updateDoorSlots(roomId, forceUpdate)
+    local roomToLoad = roomId
+    if LinkedRoomSurrogates[roomId] then
+        roomToLoad = LinkedRoomSurrogates[roomId]
+    end
     local shouldUpdate = false
-    if roomId > 0 and DOORSLOTS[roomId] and ROOMSLOTS[1] ~= roomId and shouldShowRoom(roomId, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
+    if roomToLoad > 0 and DOORSLOTS[roomToLoad] and ROOMSLOTS[1] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
         local carried = ROOMSLOTS[1]
-        ROOMSLOTS[1] = roomId
+        ROOMSLOTS[1] = roomToLoad
         for r = 2, #ROOMSLOTS do
-            if ROOMSLOTS[r] == roomId then
+            if ROOMSLOTS[r] == roomToLoad then
                 ROOMSLOTS[r] = carried
                 break
             end

@@ -70,6 +70,13 @@ RoomNonLinearExclusions = {
     [0xdb] = {{ 0x1770, 0x1800, 0x1b30, 0x1b80 }}
 }
 
+LinkedRoomSurrogates = {
+    [0x0a] = 0x3a,
+    [0x54] = 0x34,
+    [0x9b] = 0x7d,
+    [0xa6] = 0x4d
+}
+
 CaptureBadgeEntrances = {
     "@Forest Chest Game/Entrance",
     "@Lumberjack House/Entrance",
