@@ -223,7 +223,7 @@ function updateSectionChestCountFromRoomSlotList(segment, locationRefs, roomSlot
 
             if (roomData & (1 << slot[2])) ~= 0 then
                 clearedCount = clearedCount + 1
-            elseif OBJ_ENTRANCE.CurrentStage == 0 and OBJ_RACEMODE.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
+            elseif OBJ_ENTRANCE.CurrentStage < 2 and OBJ_RACEMODE.CurrentStage == 0 and slot[3] and roomData & slot[3] ~= 0 then
                 clearedCount = clearedCount + 1
             end
         end
