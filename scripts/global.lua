@@ -4,6 +4,7 @@ NEW_KEY_SYSTEM = false
 
 DUNGEON_PRIZE_DATA = 0x0000
 
+ROOMCURSORPOSITION = 0
 ROOMSLOTS = { 0, 0, 0, 0 }
 
 DOORSLOTS = { -- 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
@@ -384,17 +385,23 @@ function updateDoorSlots(roomId, forceUpdate)
         roomToLoad = LinkedRoomSurrogates[roomId]
     end
     local shouldUpdate = false
-    if roomToLoad > 0 and DOORSLOTS[roomToLoad] and ROOMSLOTS[1] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
-        local carried = ROOMSLOTS[1]
-        ROOMSLOTS[1] = roomToLoad
-        for r = 2, #ROOMSLOTS do
-            if ROOMSLOTS[r] == roomToLoad then
+    if roomToLoad > 0 and DOORSLOTS[roomToLoad] and ROOMSLOTS[ROOMCURSORPOSITION] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
+        if LAYOUT_KEEP_RECENT_ROOM_ON_TOP then
+            local carried = ROOMSLOTS[1]
+            ROOMSLOTS[1] = roomToLoad
+            for r = 2, #ROOMSLOTS do
+                if ROOMSLOTS[r] == roomToLoad then
+                    ROOMSLOTS[r] = carried
+                    break
+                end
+                local temp = ROOMSLOTS[r]
                 ROOMSLOTS[r] = carried
-                break
+                carried = temp
             end
-            local temp = ROOMSLOTS[r]
-            ROOMSLOTS[r] = carried
-            carried = temp
+            ROOMCURSORPOSITION = 1
+        else
+            ROOMCURSORPOSITION = (ROOMCURSORPOSITION % 4) + 1
+            ROOMSLOTS[ROOMCURSORPOSITION] = roomToLoad
         end
         shouldUpdate = true
     end
@@ -402,8 +409,12 @@ function updateDoorSlots(roomId, forceUpdate)
         for r = 1, #ROOMSLOTS do
             if ROOMSLOTS[r] > 0 then
                 local item = Tracker:FindObjectForCode("roomSlot" .. math.floor(r))
-                item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png")
-                
+                if ROOMCURSORPOSITION == r then
+                    item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png", "overlay|images/overlay-highlighted.png")
+                else
+                    item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png")
+                end
+
                 for d = 1, #DOORSLOTS[ROOMSLOTS[r]] do
                     item = Tracker:FindObjectForCode("doorSlot" .. math.floor(r) .. "_" .. math.floor(d)).ItemState
                     item:setState(DOORSLOTS[ROOMSLOTS[r]][d])
