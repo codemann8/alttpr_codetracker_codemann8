@@ -217,10 +217,11 @@ function updateIcons(updateDoorCounts)
             local item = Tracker:FindObjectForCode(DungeonList[i] .. "_item").ItemState
             local key = Tracker:FindObjectForCode(DungeonList[i] .. "_smallkey")
             if OBJ_DOORSHUFFLE.CurrentStage < 2 then
-                key.MaxCount = DungeonData[DungeonList[i]][2]
+                local newMax = DungeonData[DungeonList[i]][2]
                 if OBJ_POOL_KEYDROP.CurrentStage > 0 then
-                    key.MaxCount = key.MaxCount + DungeonData[DungeonList[i]][3]
+                    newMax = newMax + DungeonData[DungeonList[i]][3]
                 end
+                key.MaxCount = newMax
 
                 if key.MaxCount == 0 then
                     key.Icon = ""
@@ -242,23 +243,24 @@ function updateIcons(updateDoorCounts)
                 end
 
                 local chest = Tracker:FindObjectForCode(DungeonList[i] .. "_chest")
-                item.MaxCount = chest.MaxCount
+                newMax = chest.MaxCount
                 if OBJ_POOL_KEYDROP.CurrentStage > 0 then
-                    item.MaxCount = item.MaxCount + DungeonData[DungeonList[i]][3] + (DungeonList[i] == "hc" and 1 or 0)
+                    newMax = newMax + DungeonData[DungeonList[i]][3] + (DungeonList[i] == "hc" and 1 or 0)
                 end
 
                 if Tracker:FindObjectForCode("keysanity_map").CurrentStage == 0 and DungeonList[i] ~= "at" then
-                    item.MaxCount = item.MaxCount - 1
+                    newMax = newMax - 1
                 end
                 if Tracker:FindObjectForCode("keysanity_compass").CurrentStage == 0 and DungeonList[i] ~= "hc" and DungeonList[i] ~= "at" then
-                    item.MaxCount = item.MaxCount - 1
+                    newMax = newMax - 1
                 end
                 if OBJ_KEYSANITY_SMALL.CurrentStage == 0 and key then
-                    item.MaxCount = item.MaxCount - key.MaxCount
+                    newMax = newMax - key.MaxCount
                 end
                 if OBJ_KEYSANITY_BIG.CurrentStage == 0 and DungeonList[i] ~= "at" and not (DungeonList[i] == "hc" and OBJ_POOL_KEYDROP.CurrentStage == 0) then
-                    item.MaxCount = item.MaxCount - 1
+                    newMax = newMax - 1
                 end
+                item.MaxCount = newMax
 
                 item.AcquiredCount = math.max(item.MaxCount - found, 0)
 
