@@ -432,10 +432,8 @@ end
 
 function shouldShowRoom(roomId, xCoord, yCoord)
     if RoomNonLinearExclusions[roomId] then
-        print(string.format("0x%2x", roomId) .. ": " .. string.format("%3x", xCoord) .. " x " .. string.format("%3x", yCoord))
         for i, rect in ipairs(RoomNonLinearExclusions[roomId]) do
             if xCoord >= rect[1] and xCoord <= rect[2] and yCoord >= rect[3] and yCoord <= rect[4] then
-                print("Suppressed " .. string.format("0x%2x", roomId))
                 return false
             end
         end
