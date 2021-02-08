@@ -408,19 +408,23 @@ function updateDoorSlots(roomId, forceUpdate)
         shouldUpdate = true
     end
     if shouldUpdate or forceUpdate then
-        for r = 1, #ROOMSLOTS do
-            if ROOMSLOTS[r] > 0 then
-                local item = Tracker:FindObjectForCode("roomSlot" .. math.floor(r))
-                if ROOMCURSORPOSITION == r then
-                    item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png", "overlay|images/overlay-highlighted.png")
-                else
-                    item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png")
-                end
+        refreshDoorSlots()
+    end
+end
 
-                for d = 1, #DOORSLOTS[ROOMSLOTS[r]] do
-                    item = Tracker:FindObjectForCode("doorSlot" .. math.floor(r) .. "_" .. math.floor(d)).ItemState
-                    item:setState(DOORSLOTS[ROOMSLOTS[r]][d])
-                end
+function refreshDoorSlots()
+    for r = 1, #ROOMSLOTS do
+        if ROOMSLOTS[r] > 0 then
+            local item = Tracker:FindObjectForCode("roomSlot" .. math.floor(r))
+            if ROOMCURSORPOSITION == r then
+                item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png", "overlay|images/overlay-highlighted.png")
+            else
+                item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", ROOMSLOTS[r]) .. ".png")
+            end
+
+            for d = 1, #DOORSLOTS[ROOMSLOTS[r]] do
+                item = Tracker:FindObjectForCode("doorSlot" .. math.floor(r) .. "_" .. math.floor(d)).ItemState
+                item:setState(DOORSLOTS[ROOMSLOTS[r]][d])
             end
         end
     end

@@ -67,6 +67,7 @@ function DoorSlot:onLeftClick()
         DOORSLOTS[ROOMSLOTS[self.roomSlot]][self.doorSlot] = state
     end
     self:setState(state)
+    refreshDoorSlots()
 end
 
 function DoorSlot:onRightClick()
@@ -81,6 +82,7 @@ function DoorSlot:onRightClick()
         DOORSLOTS[ROOMSLOTS[self.roomSlot]][self.doorSlot] = state
     end
     self:setState(state)
+    refreshDoorSlots()
 end
 
 function DoorSlot:canProvideCode(code)
