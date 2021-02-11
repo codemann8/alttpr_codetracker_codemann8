@@ -1133,6 +1133,7 @@
             "world_state_open,@East Dark World,pearl,crystal:7",
             "world_state_open,@East Dark World,pearl,prize:10",
             "world_state_open,glitch_mode_ow,boots,mirror",
+            "world_state_open,glitch_mode_mg,bottle",
             "world_state_inverted,@East Dark World,crystal56:2",
             "world_state_inverted,@East Dark World,crystal:7",
             "world_state_inverted,@East Dark World,prize:10"
@@ -1143,8 +1144,10 @@
                 "access_rules": [
                     "world_state_open,@South Dark World,[hammer]",
                     "world_state_open,@South Dark World,[mirror],[aga]",
-                    "world_state_inverted,@Light World,mirror",
-                    "glitch_mode_ow"
+                    "world_state_open,glitch_mode_ow,boots,mirror",
+                    "world_state_open,glitch_mode_ow,[boots],[mirror],bottle",
+                    "world_state_open,glitch_mode_mg,bottle",
+                    "world_state_inverted,@Light World,mirror"
                 ],
                 "item_count": 2
             }

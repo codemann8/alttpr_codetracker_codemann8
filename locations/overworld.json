@@ -4090,6 +4090,7 @@
         "parent": "Dark World Color",
         "access_rules": [
             "@East Dark World,crystal56:2",
+            "@East Dark World,crystal:7",
             "@East Dark World,prize:10",
             "world_state_open,glitch_mode_ow,boots,mirror",
             "world_state_inverted,glitch_mode_ow,pearl,boots,mirror"
