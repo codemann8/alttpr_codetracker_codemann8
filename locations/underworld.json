@@ -594,7 +594,10 @@
         "sections": [
             {
                 "name": "Assistant",
-                "access_rules": [ "mushroom" ],
+                "access_rules": [
+                    "mushroom",
+                    "mushroom_used"
+                ],
                 "item_count": 1
             },
             {

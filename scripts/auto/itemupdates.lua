@@ -99,36 +99,16 @@ function updateBottles(segment)
 end
 
 function updateBatIndicatorStatus(status)
-    local item = Tracker:FindObjectForCode("powder")
+    local item = Tracker:FindObjectForCode("powder_used")
     if item then
-        if status then
-            item.CurrentStage = 1
-        else
-            item.CurrentStage = 0
-        end
+        item.Active = status
     end
 end
 
 function updateShovelIndicatorStatus(status)
-    local item = Tracker:FindObjectForCode("shovel")
+    local item = Tracker:FindObjectForCode("shovel_used")
     if item then
-        if status then
-            item.CurrentStage = 1
-        else
-            item.CurrentStage = 0
-        end
-    end
-end
-
-function updateMushroomIndicator(segment)
-    local item = Tracker:FindObjectForCode("mushroom")
-    if item and segment then
-        local value = ReadU8(segment, 0x7ef212)
-        if value & 0x80 > 0 then
-            item.CurrentStage = 1
-        else
-            item.CurrentStage = 0
-        end
+        item.Active = status
     end
 end
 

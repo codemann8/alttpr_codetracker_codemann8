@@ -10,8 +10,8 @@
                 "boomerangs",
                 "hookshot",
                 "bombs",
-                "powder",
-                "mushroom",
+                "powder_used",
+                "mushroom_used",
                 "boots",
                 "owsword"
             ],
@@ -31,7 +31,7 @@
                 "ocarina",
                 "net",
                 "book",
-                "shovel",
+                "shovel_used",
                 "flippers",
                 "armor"
             ],

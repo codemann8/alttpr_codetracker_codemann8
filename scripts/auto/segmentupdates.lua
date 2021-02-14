@@ -372,7 +372,7 @@ function updateRoomsFromMemorySegment(segment)
         updateToggleFromRoomSlot(segment, "tr", {164, 11})
 
         --Mushroom
-        updateMushroomIndicator(segment)
+        updateToggleItemFromByteAndFlag(segment, "mushroom_used", 0x7ef212, 0x80)
     end
 
     if AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
