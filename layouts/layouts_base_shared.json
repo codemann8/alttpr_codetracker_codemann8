@@ -808,14 +808,14 @@
                 "content": [
                     {
                         "type": "item",
-                        "height": 320,
+                        "height": 240,
                         "item": "roomSlot1"
                     },
                     {
                         "type": "itemgrid",
                         "v_alignment": "center",
-                        "item_margin": "-16,-16",
-                        "item_size": 58,
+                        "item_margin": "-14,-14",
+                        "item_size": 48,
                         "rows": [
                             [ "", "", "doorSlot1_1", "", "", "doorSlot1_2", "", "", "doorSlot1_3", "", "" ],
                             [ "", "", "", "", "", "", "", "", "", "", "" ],
@@ -838,14 +838,14 @@
                 "content": [
                     {
                         "type": "item",
-                        "height": 320,
+                        "height": 240,
                         "item": "roomSlot2"
                     },
                     {
                         "type": "itemgrid",
                         "v_alignment": "center",
-                        "item_margin": "-16,-16",
-                        "item_size": 58,
+                        "item_margin": "-14,-14",
+                        "item_size": 48,
                         "rows": [
                             [ "", "", "doorSlot2_1", "", "", "doorSlot2_2", "", "", "doorSlot2_3", "", "" ],
                             [ "", "", "", "", "", "", "", "", "", "", "" ],
@@ -864,17 +864,18 @@
             },
             {
                 "type": "container",
+                "margin": "0,0,0,10",
                 "content": [
                     {
                         "type": "item",
-                        "height": 320,
+                        "height": 240,
                         "item": "roomSlot3"
                     },
                     {
                         "type": "itemgrid",
                         "v_alignment": "center",
-                        "item_margin": "-16,-16",
-                        "item_size": 58,
+                        "item_margin": "-14,-14",
+                        "item_size": 48,
                         "rows": [
                             [ "", "", "doorSlot3_1", "", "", "doorSlot3_2", "", "", "doorSlot3_3", "", "" ],
                             [ "", "", "", "", "", "", "", "", "", "", "" ],
@@ -887,6 +888,35 @@
                             [ "doorSlot3_6", "", "", "", "", "", "", "", "", "", "doorSlot3_9" ],
                             [ "", "", "", "", "", "", "", "", "", "", "" ],
                             [ "", "", "doorSlot3_10", "", "", "doorSlot3_11", "", "", "doorSlot3_12", "", "" ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "container",
+                "content": [
+                    {
+                        "type": "item",
+                        "height": 240,
+                        "item": "roomSlot4"
+                    },
+                    {
+                        "type": "itemgrid",
+                        "v_alignment": "center",
+                        "item_margin": "-14,-14",
+                        "item_size": 48,
+                        "rows": [
+                            [ "", "", "doorSlot4_1", "", "", "doorSlot4_2", "", "", "doorSlot4_3", "", "" ],
+                            [ "", "", "", "", "", "", "", "", "", "", "" ],
+                            [ "doorSlot4_4", "", "", "", "", "", "", "", "", "", "doorSlot4_7" ],
+                            [ "", "", "", "doorSlot4_13", "", "", "", "doorSlot4_14", "", "", "" ],
+                            [ "", "", "", "", "", "", "", "", "", "", "" ],
+                            [ "doorSlot4_5", "", "", "", "", "", "", "", "", "", "doorSlot4_8" ],
+                            [ "", "", "", "", "", "", "", "", "", "", "" ],
+                            [ "", "", "", "doorSlot4_15", "", "", "", "doorSlot4_16", "", "", "" ],
+                            [ "doorSlot4_6", "", "", "", "", "", "", "", "", "", "doorSlot4_9" ],
+                            [ "", "", "", "", "", "", "", "", "", "", "" ],
+                            [ "", "", "doorSlot4_10", "", "", "doorSlot4_11", "", "", "doorSlot4_12", "", "" ]
                         ]
                     }
                 ]
