@@ -68,8 +68,7 @@
                 "access_rules": [
                     "@MM Special Access/Open Entrance,hookshot",
                     "@MM Special Access/Open Entrance,boots",
-                    "@MM Special Access/Open Entrance,door_shuffle_basic",
-                    "door_shuffle_crossed"
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
                 "item_count": 1
             },
@@ -274,6 +273,11 @@
         "parent": "HC Access",
         "sections": [
             {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
+            {
                 "name": "First",
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -421,6 +425,11 @@
         "parent": "EP Access",
         "sections": [
             {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
+            {
                 "name": "Cannonball Chest",
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -536,6 +545,11 @@
         "name": "Desert Palace",
         "parent": "DP Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Eyegore Switch",
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -692,6 +706,11 @@
         "parent": "ToH Access",
         "sections": [
             {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
+            {
                 "name": "Lobby",
                 "item_count": 1
             },
@@ -787,6 +806,11 @@
         "name": "Agahnim's Tower",
         "parent": "AT Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Lobby",
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -908,6 +932,11 @@
         "name": "Palace of Darkness",
         "parent": "PoD Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Shooter Chest",
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1083,6 +1112,11 @@
         "name": "Swamp Palace",
         "parent": "SP Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Entrance Chest",
                 "access_rules": [
@@ -1288,6 +1322,11 @@
         "parent": "SW Access",
         "sections": [
             {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
+            {
                 "name": "Map Chest",
                 "item_count": 1
             },
@@ -1406,6 +1445,11 @@
         "name": "Thieves Town",
         "parent": "TT Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Main Lobby",
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1546,6 +1590,11 @@
             "door_shuffle_on"
         ],
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Lobby Key",
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
@@ -1735,10 +1784,18 @@
             {
                 "name": "Medallion",
                 "access_rules": [ "{$hasNotSeenMireMedallion}" ],
-                "visibility_rules": [ "entrance_shuffle_off,door_shuffle_sameset,$hasNotSeenMireMedallion" ],
+                "visibility_rules": [ "entrance_shuffle_off,$hasNotSeenMireMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1
+            },
+            {
+                "name": "Dungeon Access",
+                "access_rules": [
+                    "@MM Special Access/Dungeon Access"
+                ],
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
             },
             {
                 "name": "Bridge",
@@ -1889,7 +1946,7 @@
             {
                 "name": "Medallion",
                 "access_rules": [ "{$hasNotSeenTurtleMedallion}" ],
-                "visibility_rules": [ "entrance_shuffle_off,door_shuffle_sameset,$hasNotSeenTurtleMedallion" ],
+                "visibility_rules": [ "entrance_shuffle_off,$hasNotSeenTurtleMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1
@@ -1920,11 +1977,10 @@
                 "name": "Dungeon Access",
                 "access_rules": [
                     "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria",
-                    "door_shuffle_basic,@Turtle Rock/Open Entrance,@TR Main Entrance",
-                    "door_shuffle_crossed"
+                    "door_shuffle_on,@Turtle Rock/Open Entrance,@TR Main Entrance"
                 ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
             },
             {
                 "name": "Compass Room",
@@ -2166,6 +2222,11 @@
         "name": "Ganon's Tower",
         "parent": "GT Access",
         "sections": [
+            {
+                "name": "Dungeon Access",
+                "visibility_rules": [ "door_shuffle_crossed" ],
+                "hosted_item": "dummy"
+            },
             {
                 "name": "Hope Room",
                 "visibility_rules": [ "door_shuffle_sameset" ],
