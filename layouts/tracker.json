@@ -19,12 +19,6 @@
                                 {
                                     "type": "group",
                                     "header": "Items",
-                                    "header_content": {
-                                        "type": "button_popup",
-                                        "style": "settings",
-                                        "popup_background": "#55212121",
-                                        "layout": "settings_popup"
-                                    },
                                     "content": {
                                         "type": "layout",
                                         "margin": "0,-6,0,-6",
@@ -95,12 +89,6 @@
                                             "header": "Items",
                                             "margin": "0,0,3,0",
                                             "dock": "left",
-                                            "header_content": {
-                                                "type": "button_popup",
-                                                "style": "settings",
-                                                "popup_background": "#55212121",
-                                                "layout": "settings_popup"
-                                            },
                                             "content": {
                                                 "type": "layout",
                                                 "key": "shared_item_grid"
