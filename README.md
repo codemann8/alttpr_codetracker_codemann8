@@ -17,7 +17,7 @@ All variants (Standard, Keysanity, Inverted, etc) have been combined into one va
 - Vanilla/ROM Hack Item Tracker
 
 ## Modes:
-All of the modes can be set by clicking the `Gear` in the `Items` section. Additionally, there are shortcut icons for many of these modes in the `Modes` section of the tracker.
+All of the modes can be set by clicking the `Gear` in the `Modes` section. Additionally, there are shortcut icons for many of these modes in the `Modes` section of the tracker.
 - World State
   - Open (Works for Standard also)
   - Inverted
@@ -48,7 +48,7 @@ All of the modes can be set by clicking the `Gear` in the `Items` section. Addit
   - MG (Major Glitches)
 - Race Mode (Disables autotracking features that are deemed illegal per racing council rules)
   - *A checkered flag icon will replace the GT BK guessing game icon to indicate its activation*
-  - *\*This mode can be defaulted to be enabled, see `Customization` section below\**
+  - *\*Race Mode is disabled by default. If you wish to enable this by default, see `Customization` section below\**
 
 ## Installation:
 To install, you will need to perform the following steps:
@@ -122,7 +122,7 @@ Maps help with putting as much info on your stream so viewers ask less questions
 #### Retro Mode
 - In `Retro Mode`, when not in Entrance Shuffle, Shops and Take Any Caves show up as smaller blips on the map.
   - Take Any Caves show up as yellow instead of green as they aren't as essential as Shops.
-- Universal Keys can be set without Retro Mode active, altho by default, enabling Retro Mode also triggers Universal Keys to enable as well.
+- Universal Keys are typically paired with Retro Mode, but due to their ability to be enabled separately, this has to be manually set. This is set by cycling through the `Small Key Shuffle` options.
 - In the `Miscellaneous` section of the tracker, there is a Take Any Cave icon. Left-clicking this will mark that you found the Take Any Sword, right-clicking will mark all the Take Any Heart Containers that you find.
 
 ## Customization:
