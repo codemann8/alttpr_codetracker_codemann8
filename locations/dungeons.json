@@ -1946,7 +1946,7 @@
             {
                 "name": "Medallion",
                 "access_rules": [ "{$hasNotSeenTurtleMedallion}" ],
-                "visibility_rules": [ "entrance_shuffle_off,$hasNotSeenTurtleMedallion" ],
+                "visibility_rules": [ "entrance_shuffle_off,glitch_mode_none,$hasNotSeenTurtleMedallion" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1
