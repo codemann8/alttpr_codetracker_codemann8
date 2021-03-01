@@ -575,7 +575,7 @@
                 "item_size": 40,
                 "rows": [
                     [ "doorslot_x", "doorslot_signs", "doorslot_keys", "doorslot_boss", "doorslot_crystalpegs" ],
-                    [ "doorslot_fire", "doorslot_yitem", "doorslot_aitem", "doorslot_sword" ]
+                    [ "doorslot_fire", "doorslot_yitem", "doorslot_aitem", "doorslot_sword", "doorslot_number" ]
                 ]
             }
         ]
@@ -589,7 +589,7 @@
             [ "doorslot_signs", "doorslot_yitem" ],
             [ "doorslot_keys", "doorslot_aitem" ],
             [ "doorslot_boss", "doorslot_sword" ],
-            [ "doorslot_crystalpegs", "" ]
+            [ "doorslot_crystalpegs", "doorslot_number" ]
         ]
     },
     "shared_roomgroupselect": {

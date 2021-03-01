@@ -8,7 +8,8 @@ DoorSlotSelection.Types = {
     [11] = "fire",
     [15] = "yitem",
     [19] = "aitem",
-    [22] = "sword"
+    [22] = "sword",
+    [24] = "number"
 }
 DoorSlotSelection.Groups = { --[index of header] = index of last item in group
     [3] = {4, "signs"},
@@ -17,7 +18,8 @@ DoorSlotSelection.Groups = { --[index of header] = index of last item in group
     [11] = {14, "firesource"},
     [15] = {18, "yitem"},
     [19] = {21, "aitem"},
-    [22] = {23, "0023"}
+    [22] = {23, "0023"},
+    [24] = {27, "number"}
 }
 DoorSlotSelection.Selection = 2
 
