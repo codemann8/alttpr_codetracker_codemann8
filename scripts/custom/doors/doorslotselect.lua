@@ -1,24 +1,25 @@
 DoorSlotSelection = CustomItem:extend()
 DoorSlotSelection.Types = {
     [2] = "x",
-    [3] = "trap",
-    [4] = "keys",
-    [6] = "boss",
-    [7] = "crystalpegs",
-    [10] = "bow",
-    [11] = "hookshot",
-    [12] = "fire",
-    [16] = "hammer",
-    [17] = "somaria",
-    [18] = "aitem",
-    [21] = "sword"
+    [3] = "signs",
+    [5] = "keys",
+    [7] = "boss",
+    [8] = "crystalpegs",
+    [11] = "bow",
+    [12] = "hookshot",
+    [13] = "fire",
+    [17] = "hammer",
+    [18] = "somaria",
+    [19] = "aitem",
+    [22] = "sword"
 }
 DoorSlotSelection.Groups = { --[index of header] = index of last item in group
-    [4] = {5, "keys"},
-    [7] = {9, "crystalswitch"},
-    [12] = {15, "firesource"},
-    [18] = {20, "aitem"},
-    [21] = {22, "0023"}
+    [3] = {4, "signs"},
+    [5] = {6, "keys"},
+    [8] = {10, "crystalswitch"},
+    [13] = {16, "firesource"},
+    [19] = {21, "aitem"},
+    [22] = {23, "0023"}
 }
 DoorSlotSelection.Selection = 2
 

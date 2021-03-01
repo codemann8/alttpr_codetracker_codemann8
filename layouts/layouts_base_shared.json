@@ -574,7 +574,7 @@
                 "item_margin": "0,0,4,4",
                 "item_size": 40,
                 "rows": [
-                    [ "doorslot_x", "doorslot_trap", "doorslot_keys", "doorslot_boss", "doorslot_crystalpegs" ],
+                    [ "doorslot_x", "doorslot_signs", "doorslot_keys", "doorslot_boss", "doorslot_crystalpegs" ],
                     [ "doorslot_bow", "doorslot_hookshot", "doorslot_fire", "doorslot_hammer", "doorslot_somaria", "doorslot_aitem", "doorslot_sword" ]
                 ]
             }
@@ -586,7 +586,7 @@
         "item_size": 36,
         "rows": [
             [ "doorslot_x", "doorslot_bow" ],
-            [ "doorslot_trap", "doorslot_hookshot" ],
+            [ "doorslot_signs", "doorslot_hookshot" ],
             [ "doorslot_keys", "doorslot_fire" ],
             [ "doorslot_boss", "doorslot_hammer" ],
             [ "doorslot_crystalpegs", "doorslot_somaria" ],
