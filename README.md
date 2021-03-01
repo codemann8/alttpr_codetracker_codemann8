@@ -147,7 +147,10 @@ The settings are broken out into several files, grouped by relation or its usage
 - settings.lua (Features available specific to functionality in this package)
   - AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
   - LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
-  - LAYOUT_KEEP_RECENT_ROOM_ON_TOP - In door rando mode, this keeps the most recently visited room at the top of the list
+  - LAYOUT_ROOM_SLOT_METHOD - In door rando mode, this determines the order in which rooms will occupy slots
+    - `top`: This ensures the most recent room stays in the first slot, bumping every room down a slot
+    - `next`: This puts the most recent room in the next slot in the rotation, keeping all slots in their place
+    - `exist` (default): Same as 'next' but if a room already exists, it will use that slot instead, but any new rooms after that will continue from the previous point (this ensures the 4 most recent rooms are displayed)
 - fileio.lua (Features relating to files that are output when certain events are triggered)
   - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
   - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game

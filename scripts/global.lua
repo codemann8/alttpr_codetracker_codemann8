@@ -5,6 +5,7 @@ NEW_KEY_SYSTEM = false
 DUNGEON_PRIZE_DATA = 0x0000
 
 ROOMCURSORPOSITION = 0
+ROOMCURSORRECENT = 0
 ROOMSLOTS = { 0, 0, 0, 0 }
 
 DOORSLOTS = { -- 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
@@ -388,7 +389,7 @@ function updateDoorSlots(roomId, forceUpdate)
     end
     local shouldUpdate = false
     if roomToLoad > 0 and DOORSLOTS[roomToLoad] and ROOMSLOTS[ROOMCURSORPOSITION] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
-        if LAYOUT_KEEP_RECENT_ROOM_ON_TOP then
+        if LAYOUT_ROOM_SLOT_METHOD == "top" then
             local carried = ROOMSLOTS[1]
             ROOMSLOTS[1] = roomToLoad
             for r = 2, #ROOMSLOTS do
@@ -401,9 +402,23 @@ function updateDoorSlots(roomId, forceUpdate)
                 carried = temp
             end
             ROOMCURSORPOSITION = 1
-        else
+        elseif LAYOUT_ROOM_SLOT_METHOD == "next" then
             ROOMCURSORPOSITION = (ROOMCURSORPOSITION % 4) + 1
             ROOMSLOTS[ROOMCURSORPOSITION] = roomToLoad
+        else
+            local found = false
+            for r = 1, #ROOMSLOTS do
+                if ROOMSLOTS[r] == roomToLoad then
+                    ROOMCURSORPOSITION = r
+                    found = true
+                    break
+                end
+            end
+            if not found then
+                ROOMCURSORPOSITION = (ROOMCURSORRECENT % 4) + 1
+                ROOMCURSORRECENT = ROOMCURSORPOSITION
+                ROOMSLOTS[ROOMCURSORPOSITION] = roomToLoad
+            end
         end
         shouldUpdate = true
     end
