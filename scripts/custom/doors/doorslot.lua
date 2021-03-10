@@ -27,7 +27,9 @@ DoorSlot.Icons = {
     [24] = "1",
     [25] = "2",
     [26] = "3",
-    [27] = "4"
+    [27] = "4",
+    [28] = "5",
+    [29] = "6"
 }
 
 function DoorSlot:init(roomSlotNum, doorSlotNum)

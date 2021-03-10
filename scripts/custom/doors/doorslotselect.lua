@@ -19,7 +19,7 @@ DoorSlotSelection.Groups = { --[index of header] = index of last item in group
     [15] = {18, "yitem"},
     [19] = {21, "aitem"},
     [22] = {23, "0023"},
-    [24] = {27, "number"}
+    [24] = {29, "number"}
 }
 DoorSlotSelection.Selection = 2
 
