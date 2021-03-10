@@ -584,6 +584,29 @@
         ]
     },
     {
+        "name": "Upgrade Fairy",
+        "parent": "Light World",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1596,
+                "y": 1712
+            }
+        ]
+    },
+    {
         "name": "Potion Shop",
         "parent": "Light World",
         "access_rules": [
