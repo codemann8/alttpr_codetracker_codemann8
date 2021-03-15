@@ -584,7 +584,7 @@
         ]
     },
     {
-        "name": "Upgrade Fairy",
+        "name": "Pond of Happiness",
         "parent": "Light World",
         "access_rules": [
             "world_state_open,[flippers]",

@@ -286,6 +286,7 @@ function updateShopsFromMemorySegment(segment)
     updateSectionChestCountFromBytesAndFlag(segment, "@Kakariko Shop/Items", { 0x7ef317, 0x7ef318, 0x7ef319 }, 0xff)
     updateSectionChestCountFromBytesAndFlag(segment, "@Lake Shop/Items", { 0x7ef31a, 0x7ef31b, 0x7ef31c }, 0xff)
     updateSectionChestCountFromBytesAndFlag(segment, "@Potion Shop/Items", { 0x7ef31d, 0x7ef31e, 0x7ef31f }, 0xff)
+    updateSectionChestCountFromBytesAndFlag(segment, "@Pond of Happiness/Items", { 0x7ef320, 0x7ef321 }, 0xff)
 end
 
 function updateNPCItemFlagsFromMemorySegment(segment)
