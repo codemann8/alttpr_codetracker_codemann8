@@ -175,7 +175,7 @@
         "name": "IP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,pearl,[flippers],lift2",
+            "world_state_open,[pearl],[flippers],lift2",
             "world_state_open,glitch_mode_ow,lift2",
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
