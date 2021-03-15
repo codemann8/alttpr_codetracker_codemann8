@@ -590,7 +590,11 @@ function updateRoomsFromMemorySegment(segment)
     updateSectionChestCountFromRoomSlotList(segment, {"@Hookshot Cave/Bonkable Chest"}, {{60, 7}})
     updateSectionChestCountFromRoomSlotList(segment, {"@Hookshot Cave/Back"}, {{60, 4}, {60, 5}, {60, 6}})
     updateSectionChestCountFromRoomSlotList(segment, {"@Secret Passage/Hallway"}, {{85, 4}})
-    updateSectionChestCountFromRoomSlotList(segment, {"@Forest Hideout/Stash"}, {{225, 9, 4}})
+    if OBJ_WORLDSTATE.CurrentStage == 0 then
+        updateSectionChestCountFromRoomSlotList(segment, {"@Forest Hideout/Stash"}, {{225, 9, 4}})
+    else
+        updateSectionChestCountFromRoomSlotList(segment, {"@Forest Hideout/Stash"}, {{225, 9}})
+    end
     updateSectionChestCountFromRoomSlotList(segment, {"@Lumberjack Cave/Cave"}, {{226, 9}})
     updateSectionChestCountFromRoomSlotList(segment, {"@Spectacle Rock/Cave"}, {{234, 10, 2}})
     updateSectionChestCountFromRoomSlotList(segment, {"@Paradox Cave/Top"}, {{239, 4}, {239, 5}, {239, 6}, {239, 7}, {239, 8}})
