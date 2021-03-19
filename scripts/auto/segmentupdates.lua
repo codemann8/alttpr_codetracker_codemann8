@@ -276,6 +276,12 @@ function updateOverworldEventsFromMemorySegment(segment)
 end
 
 function updateShopsFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    InvalidateReadCaches()
+
     updateSectionChestCountFromBytesAndFlag(segment, "@Dark Death Mountain Shop/Items", { 0x7ef302, 0x7ef303, 0x7ef304 }, 0xff)
     updateSectionChestCountFromBytesAndFlag(segment, "@Shield Shop/Items", { 0x7ef305, 0x7ef306, 0x7ef307 }, 0xff)
     updateSectionChestCountFromBytesAndFlag(segment, "@Dark Lake Shop/Items", { 0x7ef308, 0x7ef309, 0x7ef30a }, 0xff)
