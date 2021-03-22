@@ -32,10 +32,12 @@ function updateProgressiveItemFromByte(segment, code, address, offset)
         end
 
         local value = ReadU8(segment, address)
-        if value + (offset or 0) - item.CurrentStage == 1 then
+        if value + (offset or 0) - item.CurrentStage > 0 then
             itemFlippedOn(code)
         end
-        item.CurrentStage = value + (offset or 0)
+        if item.CurrentStage >= (offset or 0) or value > 0 then
+            item.CurrentStage = value + (offset or 0)
+        end
     end
 end
 

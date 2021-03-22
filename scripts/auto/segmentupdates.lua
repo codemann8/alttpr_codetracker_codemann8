@@ -188,9 +188,9 @@ function updateItemsFromMemorySegment(segment)
 
     if not AUTOTRACKER_DISABLE_ITEM_TRACKING then
         updateProgressiveItemFromByte(segment, "sword", 0x7ef359, 1)
-        updateProgressiveItemFromByte(segment, "shield", 0x7ef35a, 0)
-        updateProgressiveItemFromByte(segment, "armor", 0x7ef35b, 0)
-        updateProgressiveItemFromByte(segment, "gloves", 0x7ef354, 0)
+        updateProgressiveItemFromByte(segment, "shield", 0x7ef35a)
+        updateProgressiveItemFromByte(segment, "armor", 0x7ef35b)
+        updateProgressiveItemFromByte(segment, "gloves", 0x7ef354)
         updateProgressiveItemFromByte(segment, "halfmagic", 0x7ef37b)
 
         updateToggleItemFromByte(segment, "hookshot", 0x7ef342)
