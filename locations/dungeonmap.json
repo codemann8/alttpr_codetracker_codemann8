@@ -1392,7 +1392,7 @@
                 ]
             },
             {
-                "name": "SP Left Side Chest",
+                "name": "SP Far Left Chest",
                 "access_rules": [ "@Swamp Palace/Far Left Chest" ],
                 "sections": [
                     {
