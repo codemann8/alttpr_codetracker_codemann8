@@ -76,6 +76,10 @@ function ExtendedConsumableItem:UpdateBadgeAndIcon()
     end
 end
 
+function ExtendedConsumableItem:InvalidateAccessibility()
+    
+end
+
 function ExtendedConsumableItem:onLeftClick()
     if self.SwapActions and self.MaxCount ~= 99 then
         self:Increment(1)

@@ -23,7 +23,7 @@ ConsumableItem:set {
         set = function(self, value) return math.min(math.max(math.max(value, self.ConsumedCount), self.MinCount), self.MaxCount) end,
         afterSet = function(self)
                 self:UpdateBadgeAndIcon()
-                self.ItemInstance:InvalidateAccessibility()
+                self:InvalidateAccessibility()
             end
     },
     ConsumedCount = {
@@ -31,7 +31,7 @@ ConsumableItem:set {
         set = function(self, value) return math.max(math.min(value, self.AvailableCount), 0) end,
         afterSet = function(self)
                 self:UpdateBadgeAndIcon()
-                self.ItemInstance:InvalidateAccessibility()
+                self:InvalidateAccessibility()
             end
     },
     AvailableCount = {
@@ -77,6 +77,10 @@ function ConsumableItem:UpdateBadgeAndIcon()
     else
         self.ItemInstance.BadgeTextColor = "WhiteSmoke"
     end
+end
+
+function ConsumableItem:InvalidateAccessibility()
+    self.ItemInstance:InvalidateAccessibility()
 end
 
 function ConsumableItem:Increment(count)
