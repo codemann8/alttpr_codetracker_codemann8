@@ -5135,7 +5135,6 @@
         "name": "Dark Death Mountain TR Bridge",
         "parent": "Dark Death Mountain",
         "access_rules": [
-            "ddm_tr_bridge",
             "@TR Bridge Entrances OW",
             "world_state_inverted,dm_east_spiral,mirror",
             "world_state_inverted,dm_east_mimic,mirror"

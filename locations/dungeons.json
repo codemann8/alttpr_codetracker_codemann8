@@ -206,6 +206,11 @@
     {
         "name": "TR Bridge Entrances OW",
         "access_rules": [
+            "ddm_tr_bridge",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,door_shuffle_on",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,pool_keydrop_off,tr_smallkey:2",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,pool_keydrop_on,tr_smallkey:3",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,keysanity_smallkey_off",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,[pearl],boots,bottle",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
