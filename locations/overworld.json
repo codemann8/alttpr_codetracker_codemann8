@@ -1452,6 +1452,13 @@
         "name": "Castle Main Entrance",
         "short_name": "HC Main",
         "parent": "Light World",
+        "access_rules": [
+            "world_state_inverted",
+            "entrance_shuffle_singleentryvanilla",
+            "entrance_shuffle_crossed",
+            "entrance_shuffle_insanity,[mirror]",
+            "entrance_shuffle_insanity,[castle_top]"
+        ],
         "sections": [
             {
                 "name": "Entrance",
@@ -1485,7 +1492,8 @@
         "short_name": "Uncle Exit",
         "parent": "Light World",
         "access_rules": [
-            "world_state_open",
+            "world_state_open,[mirror]",
+            "world_state_open,[castle_top]",
             "world_state_inverted,pearl"
         ],
         "sections": [
