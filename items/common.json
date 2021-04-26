@@ -1015,6 +1015,25 @@
             }
         ]
     },
+    // Overworld Shuffle
+    {
+        "name": "Overworld Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_ow_shuffle_off.png",
+                "codes": "ow_shuffle,ow_shuffle_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_ow_shuffle_on.png",
+                "codes": "ow_shuffle,ow_shuffle_on",
+                "inherit_codes": false
+            }
+        ]
+    },
     // Retro Mode
     {
         "name": "Retro Mode",
