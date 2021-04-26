@@ -85,6 +85,7 @@ else
     Tracker:AddLocations("locations/dungeonmap.json")
     Tracker:AddLocations("locations/underworld.json")
     Tracker:AddLocations("locations/overworld.json")
+    Tracker:AddLocations("locations/entrances.json")
     Tracker:AddLocations("locations/ghosts.json")
 
     --Custom Items
