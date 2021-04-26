@@ -68,6 +68,11 @@ function updateOverworldIdFromMemorySegment(segment)
         OBJ_OWAREA.AcquiredCount = owarea
 
         if OBJ_OWAREA.AcquiredCount < 0xff then
+            --OW Shuffle Autotracking
+            if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE.CurrentStage > 0 and not AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+                updateDoorSlots(OBJ_OWAREA.AcquiredCount + 0x1000)
+            end
+
             --Region Autotracking
             if OBJ_ENTRANCE.CurrentStage > 0 and OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and Tracker.ActiveVariantUID ~= "items_only" then
                 if OBJ_OWAREA.AcquiredCount < 0xff and OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount] then

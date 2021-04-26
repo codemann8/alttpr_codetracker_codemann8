@@ -31,6 +31,30 @@ DoorSlot.Icons = {
     [28] = "5",
     [29] = "6"
 }
+DoorSlot.OWIcons = {
+    [4] = "portal",
+    [5] = "SmallKey2",
+    [6] = "BigKey",
+    [7] = "boss",
+    [8] = "frog",
+    [9] = "purplechest",
+    [10] = "potionshop",
+    [11] = "0005",
+    [12] = "0010",
+    [13] = "0007",
+    [15] = "0018",
+    [16] = "0014",
+    [17] = "0011",
+    [18] = "0002",
+    [22] = "weapon",
+    [23] = "",
+    [24] = "1",
+    [25] = "2",
+    [26] = "3",
+    [27] = "4",
+    [28] = "5",
+    [29] = "6"
+}
 
 function DoorSlot:init(roomSlotNum, doorSlotNum)
     self:createItem("Door Slot " .. (string.char(string.byte("A") + (roomSlotNum - 1))) .. doorSlotNum)
@@ -54,7 +78,14 @@ function DoorSlot:setDisabled()
 end
 
 function DoorSlot:updateIcon()
-    local imgPath = "images/" .. DoorSlot.Icons[self:getState()] .. ".png"
+    local img = ""
+    if ROOMSLOTS[self.roomSlot] > 0x1000 then
+        img = DoorSlot.OWIcons[self:getState()]
+    end
+    if not img or img == "" then
+        img = DoorSlot.Icons[self:getState()]
+    end
+    local imgPath = "images/" .. img .. ".png"
     self.ItemInstance.Icon = ImageReference:FromPackRelativePath(imgPath)
 end
 
