@@ -20,13 +20,13 @@
             {
                 "map": "lightworld",
                 "x": 83,
-                "y": 100,
+                "y": 50,
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
             },
             {
                 "map": "lightworld",
                 "x": 83,
-                "y": 101,
+                "y": 53,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
             }

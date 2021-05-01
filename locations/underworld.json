@@ -76,7 +76,7 @@
             {
                 "map": "lightworld",
                 "x": 47,
-                "y": 833,
+                "y": 845,
                 "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
             }
         ]
@@ -269,7 +269,13 @@
                 "map": "lightworld",
                 "x": 777,
                 "y": 600,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 789,
+                "y": 540,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_singleentryvanilla" ]
             }
         ]
     },

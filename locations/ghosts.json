@@ -11,8 +11,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 83,
-                "y": 148,
+                "x": 135,
+                "y": 50,
                 "size": 0,
                 "badge_size": 96
             }
@@ -561,7 +561,7 @@
             {
                 "map": "lightworld",
                 "x": 206,
-                "y": 1428,
+                "y": 1418,
                 "size": 0,
                 "badge_size": 96
             }
@@ -580,7 +580,7 @@
             {
                 "map": "lightworld",
                 "x": 294,
-                "y": 1428,
+                "y": 1418,
                 "size": 0,
                 "badge_size": 96
             }
@@ -636,7 +636,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 432,
+                "x": 408,
                 "y": 1404,
                 "size": 0,
                 "badge_size": 128
@@ -655,10 +655,10 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 777,
+                "x": 816,
                 "y": 600,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 96
             }
         ]
     },
@@ -713,7 +713,7 @@
             {
                 "map": "lightworld",
                 "x": 1040,
-                "y": 590,
+                "y": 582,
                 "size": 0,
                 "badge_size": 96
             }
@@ -1299,7 +1299,7 @@
             {
                 "map": "lightworld",
                 "x": 948,
-                "y": 1880,
+                "y": 1864,
                 "size": 0,
                 "badge_size": 128
             }
@@ -1318,7 +1318,7 @@
             {
                 "map": "lightworld",
                 "x": 945,
-                "y": 1310,
+                "y": 1280,
                 "size": 0,
                 "badge_size": 128
             }
@@ -1336,7 +1336,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1098,
+                "x": 1106,
                 "y": 1382,
                 "size": 0,
                 "badge_size": 128
@@ -1355,7 +1355,7 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1182,
+                "x": 1192,
                 "y": 1560,
                 "size": 0,
                 "badge_size": 128
@@ -1977,8 +1977,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1920,
-                "y": 321,
+                "x": 1968,
+                "y": 243,
                 "size": 0,
                 "badge_size": 96
             }
@@ -2397,7 +2397,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 431,
+                "x": 400,
                 "y": 1400,
                 "size": 0,
                 "badge_size": 128
@@ -2664,7 +2664,7 @@
             {
                 "map": "darkworld",
                 "x": 940,
-                "y": 1877,
+                "y": 1864,
                 "size": 0,
                 "badge_size": 128
             }
@@ -2683,7 +2683,7 @@
             {
                 "map": "darkworld",
                 "x": 945,
-                "y": 1310,
+                "y": 1280,
                 "size": 0,
                 "badge_size": 128
             }
@@ -2701,7 +2701,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1098,
+                "x": 1106,
                 "y": 1382,
                 "size": 0,
                 "badge_size": 128
@@ -2720,7 +2720,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1182,
+                "x": 1192,
                 "y": 1560,
                 "size": 0,
                 "badge_size": 128

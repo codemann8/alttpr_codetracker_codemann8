@@ -1,0 +1,6209 @@
+[
+    //Light World
+    {
+        "name": "Lost Woods NW",
+        "parent": "OW Lost Woods West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 82,
+                "y": 118,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods SW",
+        "parent": "OW Lost Woods West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 54,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods SC",
+        "parent": "OW Lost Woods West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 184,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods SE",
+        "parent": "OW Lost Woods East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 443,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods EN",
+        "parent": "OW Lost Woods East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 72,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack WN",
+        "parent": "OW Lumberjack",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lumberjack"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 72,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lumberjack SC",
+        "parent": "OW Lumberjack",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lumberjack"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 602,
+                "y": 226,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "West Death Mountain EN",
+        "parent": "OW Death Mountain West Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dm_west_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 55,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "West Death Mountain ES",
+        "parent": "OW Death Mountain West Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dm_west_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 408,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Death Mountain WN",
+        "parent": "OW Death Mountain East Top Left",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dm_east_top_hammer"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 55,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Death Mountain WS",
+        "parent": "OW Death Mountain East Bottom Left",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dm_east_bottom_hookshot"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 408,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Death Mountain EN",
+        "parent": "OW Death Mountain East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dm_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 43,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Rock Pegs WN",
+        "parent": "OW Turtle Rock Pegs",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_trpegs"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1781,
+                "y": 43,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Mountain Entry NC",
+        "parent": "OW Mountain Entry",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_mountainentry"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 602,
+                "y": 276,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Mountain Entry SC",
+        "parent": "OW Mountain Entry",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_mountainentry"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 639,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora Approach NE",
+        "parent": "OW Zora Approach",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_zora_approach"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 276,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora Approach SE",
+        "parent": "OW Zora Approach",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_zora_approach"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1944,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods Pass NW",
+        "parent": "OW Lost Woods Pass West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_pass_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 54,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods Pass NE",
+        "parent": "OW Lost Woods Pass East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_pass_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 184,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods Pass SW",
+        "parent": "OW Lost Woods Pass West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_pass_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 67,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lost Woods Pass SE",
+        "parent": "OW Lost Woods Pass East Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_lost_woods_pass_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 161,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Fortune NE",
+        "parent": "OW Kakariko Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 443,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Fortune SE",
+        "parent": "OW Kakariko Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 392,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Fortune EN",
+        "parent": "OW Kakariko Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 571,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Fortune ES",
+        "parent": "OW Kakariko Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 690,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond NC",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 639,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond WN",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 571,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond WS",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 690,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond EN",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 604,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond ES",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 688,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond SW",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 582,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond SC",
+        "parent": "OW Kakariko Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 648,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary WN",
+        "parent": "OW Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sanc_ledge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 604,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary WS",
+        "parent": "OW Sanctuary",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sanc"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 688,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary EC",
+        "parent": "OW Sanctuary",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sanc"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 646,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Graveyard WC",
+        "parent": "OW Graveyard",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_graveyard"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 646,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Graveyard EC",
+        "parent": "OW Graveyard",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_graveyard"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 689,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend WC",
+        "parent": "OW River Bend West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 689,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend SW",
+        "parent": "OW River Bend West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1327,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend SC",
+        "parent": "OW River Bend Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1403,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend SE",
+        "parent": "OW River Bend East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1460,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend EN",
+        "parent": "OW River Bend Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1480,
+                "y": 563,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend EC",
+        "parent": "OW River Bend East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1480,
+                "y": 615,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend ES",
+        "parent": "OW River Bend East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_river_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1480,
+                "y": 679,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop WN",
+        "parent": "OW Potion Shop Water",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_witch_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1530,
+                "y": 563,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop WC",
+        "parent": "OW Potion Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_witch"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1530,
+                "y": 615,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop WS",
+        "parent": "OW Potion Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_witch"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1530,
+                "y": 679,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop EN",
+        "parent": "OW Potion Shop Water",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_witch_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 538,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop EC",
+        "parent": "OW Potion Shop East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_witch_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 588,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora Warning WN",
+        "parent": "OW Zora Warning",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1781,
+                "y": 538,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora Warning WC",
+        "parent": "OW Zora Warning",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_zora_warning"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1781,
+                "y": 588,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora Warning NE",
+        "parent": "OW Zora Warning",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_zora_warning"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1944,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Village NW",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 67,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Village NC",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 161,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Village NE",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 392,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Village SE",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 435,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Village ES",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 1154,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Forgotten Forest NW",
+        "parent": "OW Forgotten Forest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_forest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 582,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Forgotten Forest NC",
+        "parent": "OW Forgotten Forest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_forest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 648,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Forgotten Forest ES",
+        "parent": "OW Forgotten Forest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_forest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 910,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle WN",
+        "parent": "OW Castle Perimeter",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_castle"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 910,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle SW",
+        "parent": "OW Castle Southwest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_castle_southwest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 823,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle SE",
+        "parent": "OW Castle Perimeter",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_castle"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1147,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle ES",
+        "parent": "OW Castle East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_castle_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 1084,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Wooden Bridge NW",
+        "parent": "OW Wooden Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_wooden_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1327,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Wooden Bridge NC",
+        "parent": "OW Wooden Bridge",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1403,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Wooden Bridge NE",
+        "parent": "OW Wooden Bridge Northeast",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_wooden_bridge_northeast"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1460,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Wooden Bridge SW",
+        "parent": "OW Wooden Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_wooden_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1337,
+                "y": 978,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Eastern Palace SW",
+        "parent": "OW Eastern Palace",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_eastern_palace"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1570,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Eastern Palace SE",
+        "parent": "OW Eastern Palace",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_eastern_palace"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1940,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Blacksmith WC",
+        "parent": "OW Blacksmith",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_blacksmith"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 1154,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sand Dunes NW",
+        "parent": "OW Sand Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sand_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1337,
+                "y": 1028,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sand Dunes WN",
+        "parent": "OW Sand Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sand_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 1084,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Sand Dunes SC",
+        "parent": "OW Sand Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sand_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1372,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Race Game ES",
+        "parent": "OW Race Game Tease",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_race_game"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 226,
+                "y": 1482,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Suburb NE",
+        "parent": "OW Kakariko Suburb",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_suburb"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 435,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Suburb WS",
+        "parent": "OW Kakariko Suburb",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_suburb"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 276,
+                "y": 1482,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Suburb ES",
+        "parent": "OW Kakariko Suburb",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_kak_suburb"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 1435,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Flute Boy WS",
+        "parent": "OW Flute Boy Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_flute_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 1435,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Flute Boy SW",
+        "parent": "OW Flute Boy Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_flute_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 548,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Flute Boy SC",
+        "parent": "OW Flute Boy",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_flute"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 618,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks NW",
+        "parent": "OW Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_central_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 823,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks SW",
+        "parent": "OW Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_central_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 833,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks EN",
+        "parent": "OW Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_central_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1352,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks EC",
+        "parent": "OW Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_central_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1400,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks ES",
+        "parent": "OW Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_central_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1448,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House NE",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1147,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House WN",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1352,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House WC",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1400,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House WS",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1448,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House ES",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 1446,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Links House SC",
+        "parent": "OW Links House",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_links"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1116,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge NC",
+        "parent": "OW Stone Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1372,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge WS",
+        "parent": "OW Stone Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 1446,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge SC",
+        "parent": "OW Stone Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1364,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge EN",
+        "parent": "OW Stone Bridge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1480,
+                "y": 1327,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge EC",
+        "parent": "OW Stone Bridge Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1480,
+                "y": 1415,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stone Bridge WC",
+        "parent": "OW Stone Bridge Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stone_bridge_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1436,
+                "y": 1398,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line NW",
+        "parent": "OW Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_treeline"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1570,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line WN",
+        "parent": "OW Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_treeline"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1530,
+                "y": 1327,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line WC",
+        "parent": "OW Tree Line Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_treeline_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1530,
+                "y": 1415,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line SC",
+        "parent": "OW Tree Line Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_treeline_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1660,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line SE",
+        "parent": "OW Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_treeline"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1709,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Eastern Nook NE",
+        "parent": "OW Eastern Nook",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_eastern_nook"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1940,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert EC",
+        "parent": "OW Desert Tablet",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert_tablet"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 1874,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert ES",
+        "parent": "OW Desert",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 477,
+                "y": 1950,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Cave 45 NW",
+        "parent": "OW Cave 45",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cave45"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 548,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Cave 45 NC",
+        "parent": "OW Cave 45 Bush",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cave45_bush"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 618,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Cave 45 EC",
+        "parent": "OW Cave 45",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cave45"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 1633,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool NW",
+        "parent": "OW C Whirlpool West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 833,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool WC",
+        "parent": "OW C Whirlpool West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 1633,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool SC",
+        "parent": "OW C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 898,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool EN",
+        "parent": "OW C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1590,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool EC",
+        "parent": "OW C Whirlpool East",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1642,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "C Whirlpool ES",
+        "parent": "OW C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1698,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Statues NC",
+        "parent": "OW Statues",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_statues"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1116,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Statues WN",
+        "parent": "OW Statues",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_statues"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1590,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Statues WC",
+        "parent": "OW Statues",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_statues"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1642,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Statues WS",
+        "parent": "OW Statues",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_statues"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1698,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Statues SC",
+        "parent": "OW Statues",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_statues"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1121,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia NW",
+        "parent": "OW Lake Hylia Northwest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_northwest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1364,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia NC",
+        "parent": "OW Lake Hylia Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1660,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia NE",
+        "parent": "OW Lake Hylia Northeast",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_northeast"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1709,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia WS",
+        "parent": "OW Lake Hylia South Shore",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_shore"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1279,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia EC",
+        "parent": "OW Lake Hylia Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 1905,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Hylia ES",
+        "parent": "OW Lake Hylia South Shore",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_shore"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Cave SW",
+        "parent": "OW Ice Cave",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_cave"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Cave SE",
+        "parent": "OW Ice Cave",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_cave"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1921,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert Pass WC",
+        "parent": "OW Desert Pass Ledge",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert_pass_ledge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 1874,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert Pass WS",
+        "parent": "OW Desert Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 527,
+                "y": 1950,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert Pass EC",
+        "parent": "OW Desert Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 1893,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Desert Pass ES",
+        "parent": "OW Desert Pass Southeast",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_desert_pass_southeast"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 728,
+                "y": 1980,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dam NC",
+        "parent": "OW Dam",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dam"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 898,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dam WC",
+        "parent": "OW Dam",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dam"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 1893,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dam WS",
+        "parent": "OW Dam",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dam"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 778,
+                "y": 1980,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dam EC",
+        "parent": "OW Dam",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dam"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 978,
+                "y": 1944,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "South Pass NC",
+        "parent": "OW South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1121,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "South Pass WC",
+        "parent": "OW South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1028,
+                "y": 1944,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "South Pass EC",
+        "parent": "OW South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1229,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Octoballoon NW",
+        "parent": "Light World Color",
+        "access_rules": [ "nothing" ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_octoballoon_waterfall"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Octoballoon NE",
+        "parent": "OW Octoballoon",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_octoballoon"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1921,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Octoballoon WC",
+        "parent": "OW Octoballoon",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_octoballoon"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1781,
+                "y": 1905,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Octoballoon WS",
+        "parent": "OW Octoballoon",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_octoballoon"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1781,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    //Dark World
+    {
+        "name": "Skull Woods SW",
+        "parent": "OW Skull Woods Forgotten Path West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_path_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 54,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods SC",
+        "parent": "OW Skull Woods Portal Entry",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_portal"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 184,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods SE",
+        "parent": "OW Skull Woods Front",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_front"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 443,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods EN",
+        "parent": "OW Skull Woods Forgotten Path East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_path_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 477,
+                "y": 72,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Lumberjack WN",
+        "parent": "OW Dark Lumberjack",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_lumberjack"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 527,
+                "y": 72,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Lumberjack SC",
+        "parent": "OW Dark Lumberjack",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_lumberjack"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 578,
+                "y": 226,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "West Dark Death Mountain EN",
+        "parent": "OW Dark Death Mountain West Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_west_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 55,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "West Dark Death Mountain ES",
+        "parent": "OW Dark Death Mountain West Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_west_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 408,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Dark Death Mountain WN",
+        "parent": "OW Dark Death Mountain East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 55,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Dark Death Mountain WS",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "world_state_inverted,@OW Death Mountain East Bottom Left,mirror"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_east_deadend"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 408,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "East Dark Death Mountain EN",
+        "parent": "OW Dark Death Mountain East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 43,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Rock WN",
+        "parent": "OW Turtle Rock",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_turtlerock"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1781,
+                "y": 43,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave NC",
+        "parent": "OW Bumper Cave",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bumper"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 578,
+                "y": 276,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave SC",
+        "parent": "OW Bumper Cave",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bumper"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 639,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Catfish SE",
+        "parent": "OW Catfish",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_catfish"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1944,
+                "y": 477,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Pass NW",
+        "parent": "OW Skull Woods Pass West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_pass_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 54,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Pass NE",
+        "parent": "OW Skull Woods Pass East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_pass_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 184,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Pass SW",
+        "parent": "OW Skull Woods Pass West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_pass_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 67,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Skull Woods Pass SE",
+        "parent": "OW Skull Woods Pass East Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_sw_pass_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 161,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Fortune NE",
+        "parent": "OW Outcast Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 443,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Fortune SE",
+        "parent": "OW Outcast Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 392,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Fortune EN",
+        "parent": "OW Outcast Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 477,
+                "y": 571,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Fortune ES",
+        "parent": "OW Outcast Fortune",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_fortune"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 477,
+                "y": 690,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond NC",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 639,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond WN",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 527,
+                "y": 571,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond WS",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 527,
+                "y": 690,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond EN",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 604,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond ES",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 688,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond SW",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 582,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Outcast Pond SC",
+        "parent": "OW Outcast Pond",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcast_pond"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 648,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Chapel WN",
+        "parent": "OW Chapel",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_chapel"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 778,
+                "y": 604,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Chapel WS",
+        "parent": "OW Chapel",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_chapel"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 778,
+                "y": 688,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Chapel EC",
+        "parent": "OW Chapel",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_chapel"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 646,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Graveyard WC",
+        "parent": "OW Dark Graveyard",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_graveyard"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 646,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Graveyard EC",
+        "parent": "OW Dark Graveyard",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_graveyard"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 689,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump WC",
+        "parent": "OW Qirn Jump West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 689,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump SW",
+        "parent": "OW Qirn Jump West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1327,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump SC",
+        "parent": "OW Qirn Jump Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1403,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump SE",
+        "parent": "OW Qirn Jump East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1460,
+                "y": 728,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump EN",
+        "parent": "OW Qirn Jump Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1480,
+                "y": 563,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump EC",
+        "parent": "OW Qirn Jump East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1480,
+                "y": 615,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump ES",
+        "parent": "OW Qirn Jump East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_qirn_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1480,
+                "y": 679,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch WN",
+        "parent": "OW Dark Witch Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_witch_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1530,
+                "y": 563,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch WC",
+        "parent": "OW Dark Witch",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_witch"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1530,
+                "y": 615,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch WS",
+        "parent": "OW Dark Witch",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_witch"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1530,
+                "y": 679,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch EN",
+        "parent": "OW Dark Witch Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_witch_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 538,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch EC",
+        "parent": "OW Dark Witch East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_witch_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 588,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Catfish Approach WN",
+        "parent": "OW Catfish Approach",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1781,
+                "y": 538,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Catfish Approach WC",
+        "parent": "OW Catfish Approach",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_catfish_approach"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1781,
+                "y": 588,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Catfish Approach NE",
+        "parent": "OW Catfish Approach",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_catfish_approach"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1944,
+                "y": 527,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts NW",
+        "parent": "OW Village of Outcasts",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcasts"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 67,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts NC",
+        "parent": "OW Village of Outcasts",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcasts"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 161,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts NE",
+        "parent": "OW Village of Outcasts",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcasts"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 392,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts SE",
+        "parent": "OW Village of Outcasts",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcasts"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 435,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts ES",
+        "parent": "OW Village of Outcasts",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_outcasts"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 477,
+                "y": 1154,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop NW",
+        "parent": "OW Shield Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_shield_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 582,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop NC",
+        "parent": "OW Shield Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_shield_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 648,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid SW",
+        "parent": "OW Pyramid",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_pyramid_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 823,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid SE",
+        "parent": "OW Pyramid Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_pyramid_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1147,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid ES",
+        "parent": "OW Pyramid Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_pyramid"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 1084,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Broken Bridge NW",
+        "parent": "OW Broken Bridge West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_broken_bridge_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1327,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Broken Bridge NC",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "world_state_open,@OW Broken Bridge West,pearl,[flippers]",
+            "world_state_open,@OW Broken Bridge East Top,pearl,[flippers]",
+            "world_state_open,@OW Broken Bridge East Bottom,pearl,[flippers]",
+            "world_state_inverted,@OW Broken Bridge West,[flippers]",
+            "world_state_inverted,@OW Broken Bridge East Top,[flippers]",
+            "world_state_inverted,@OW Broken Bridge East Bottom,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1403,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Broken Bridge NE",
+        "parent": "OW Broken Bridge East Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_broken_bridge_east_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1460,
+                "y": 778,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Broken Bridge SW",
+        "parent": "OW Broken Bridge East Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_broken_bridge_east_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1337,
+                "y": 978,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Palace of Darkness SW",
+        "parent": "OW Palace of Darkness",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_palace"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1570,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Palace of Darkness SE",
+        "parent": "OW Palace of Darkness",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_palace"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1940,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Pegs WC",
+        "parent": "OW Hammer Pegs Entry",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammerpegs"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 527,
+                "y": 1154,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Dunes NW",
+        "parent": "OW Dark Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1337,
+                "y": 1028,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Dunes WN",
+        "parent": "OW Dark Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 1084,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Dunes SC",
+        "parent": "OW Dark Dunes",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_dunes"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1372,
+                "y": 1229,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dig Game EC",
+        "parent": "OW Dig Game",
+        "access_rules": [ 
+            "world_state_open,pearl,lift2",
+            "world_state_open,pearl,[lift2],hookshot",
+            "world_state_inverted,lift2",
+            "world_state_inverted,[lift2],hookshot"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dig_game"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 226,
+                "y": 1432,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dig Game ES",
+        "parent": "OW Dig Game",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dig_game"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 226,
+                "y": 1482,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Frog NE",
+        "parent": "OW Frog",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_frog"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 435,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Frog WC",
+        "parent": "OW Archery Game",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_archery"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 276,
+                "y": 1432,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Frog WS",
+        "parent": "OW Archery Game",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_archery"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 276,
+                "y": 1482,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Frog ES",
+        "parent": "OW Archery Game",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_archery"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 477,
+                "y": 1435,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stumpy WS",
+        "parent": "OW Stumpy Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stumpy_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 527,
+                "y": 1435,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stumpy SW",
+        "parent": "OW Stumpy Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stumpy_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 548,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Stumpy SC",
+        "parent": "OW Stumpy",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_stumpy"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 618,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks NW",
+        "parent": "OW Dark Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 823,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks SW",
+        "parent": "OW Dark Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 833,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks EN",
+        "parent": "OW Dark Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1352,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks EC",
+        "parent": "OW Dark Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1400,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks ES",
+        "parent": "OW Dark Central Bonk Rocks",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_bonk"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1448,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop NE",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1147,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop WN",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1352,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop WC",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1400,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop WS",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1448,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop ES",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 1446,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop SC",
+        "parent": "OW Bomb Shop",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomb_shop"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1116,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Bridge NC",
+        "parent": "OW Hammer Bridge Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammer_bridge_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1372,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Bridge WS",
+        "parent": "OW Hammer Bridge Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammer_bridge_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 1446,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Bridge SC",
+        "parent": "OW Hammer Bridge Bottom",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammer_bridge_bottom"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1364,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Bridge EN",
+        "parent": "OW Hammer Bridge Top",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammer_bridge_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1480,
+                "y": 1327,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Bridge EC",
+        "parent": "OW Hammer Bridge Top",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hammer_bridge_top"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1480,
+                "y": 1415,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line NW",
+        "parent": "OW Dark Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_tree_line"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1570,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line WN",
+        "parent": "OW Dark Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_tree_line"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1530,
+                "y": 1327,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line WC",
+        "parent": "OW Dark Tree Line Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_tree_line_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1530,
+                "y": 1415,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line SC",
+        "parent": "OW Dark Tree Line Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_tree_line_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1660,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line SE",
+        "parent": "OW Dark Tree Line",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_tree_line"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1709,
+                "y": 1480,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Darkness Nook NE",
+        "parent": "OW Palace of Darkness Nook",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_nook"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1940,
+                "y": 1279,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Circle of Bushes NW",
+        "parent": "OW Bush Circle",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bush_circle"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 548,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Circle of Bushes NC",
+        "parent": "OW Bush Circle Blocked",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bush_circle_blocked"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 618,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Circle of Bushes EC",
+        "parent": "OW Bush Circle",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bush_circle"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 1633,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool NW",
+        "parent": "OW Dark C Whirlpool West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 833,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool WC",
+        "parent": "OW Dark C Whirlpool West",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_west"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 778,
+                "y": 1633,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool SC",
+        "parent": "OW Dark C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 865,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool EN",
+        "parent": "OW Dark C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1590,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool EC",
+        "parent": "OW Dark C Whirlpool East",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1642,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark C Whirlpool ES",
+        "parent": "OW Dark C Whirlpool East",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_cwhirlpool_east"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1698,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype NC",
+        "parent": "OW Hype",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hype"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1116,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype WN",
+        "parent": "OW Hype",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hype"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1590,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype WC",
+        "parent": "OW Hype",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hype"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1642,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype WS",
+        "parent": "OW Hype",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hype"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1698,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype SC",
+        "parent": "OW Hype",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_hype"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1121,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake NW",
+        "parent": "OW Ice Lake Northwest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_northwest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1364,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake NC",
+        "parent": "OW Ice Lake Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1660,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake NE",
+        "parent": "OW Ice Lake Northeast",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_northeast"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1709,
+                "y": 1530,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake WS",
+        "parent": "OW Ice Lake Southwest",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_southwest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1279,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake EC",
+        "parent": "OW Ice Lake Water",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_water"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 1905,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Lake ES",
+        "parent": "OW Ice Lake Southeast",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_ice_southeast"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Shopping Mall SW",
+        "parent": "OW Shopping Mall",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_shopping_mall"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Shopping Mall SE",
+        "parent": "OW Shopping Mall",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_shopping_mall"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1921,
+                "y": 1731,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp Nook EC",
+        "parent": "OW Swamp Nook",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp_nook"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 1893,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp Nook ES",
+        "parent": "OW Swamp Nook",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp_nook"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 728,
+                "y": 1980,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp NC",
+        "parent": "OW Swamp",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 865,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp WC",
+        "parent": "OW Swamp",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 778,
+                "y": 1893,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp WS",
+        "parent": "OW Swamp",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 778,
+                "y": 1980,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Swamp EC",
+        "parent": "OW Swamp",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_swamp"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 978,
+                "y": 1944,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark South Pass NC",
+        "parent": "OW Dark South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1121,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark South Pass WC",
+        "parent": "OW Dark South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1028,
+                "y": 1944,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark South Pass EC",
+        "parent": "OW Dark South Pass",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_dark_south_pass"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1229,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomber Corner NW",
+        "parent": "Dark World Color",
+        "access_rules": [ "nothing" ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomber_corner_waterfall"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomber Corner NE",
+        "parent": "OW Bomber Corner",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomber_corner"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1921,
+                "y": 1781,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomber Corner WC",
+        "parent": "OW Bomber Corner",
+        "access_rules": [
+            "world_state_open,pearl,[flippers]",
+            "world_state_inverted,[flippers]"
+        ],
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomber_corner"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1781,
+                "y": 1905,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomber Corner WS",
+        "parent": "OW Bomber Corner",
+        "sections": [
+            {
+                "name": "Transition",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "item_count": 1,
+                "hosted_item": "ow_bomber_corner"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1781,
+                "y": 1960,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_shuffle_on" ]
+            }
+        ]
+    }
+]
