@@ -3,7 +3,7 @@
     {
         "name": "Master Sword Pedestal",
         "short_name": "Pedestal",
-        "parent": "Light World",
+        "parent": "OW Lost Woods West",
         "sections": [
             {
                 "name": "Pedestal",
@@ -34,7 +34,11 @@
     },
     {
         "name": "Mushroom Spot",
-        "parent": "Light World",
+        "parent": "Light World Color",
+        "access_rules": [
+            "@OW Lost Woods East",
+            "@Light World"
+        ],
         "sections": [
             {
                 "name": "Shroom",
@@ -65,7 +69,7 @@
     },
     {
         "name": "Bottle Vendor",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "This Jerk",
@@ -90,7 +94,7 @@
     },
     {
         "name": "Weathervane",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Activate Flute",
@@ -112,7 +116,7 @@
     },
     {
         "name": "Tavern",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -142,7 +146,7 @@
     },
     {
         "name": "Race Game",
-        "parent": "Light World",
+        "parent": "OW Race Game",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -183,7 +187,7 @@
     {
         "name": "Grove Digging Spot",
         "short_name": "Dig Spot",
-        "parent": "Light World",
+        "parent": "OW Flute Boy",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -213,12 +217,12 @@
     },
     {
         "name": "Desert Ledge",
-        "parent": "Desert Area",
+        "parent": "OW Desert",
         "sections": [
             {
                 "name": "Ledge",
                 "access_rules": [
-                    "@Desert Ledge Area",
+                    "@OW Desert Ledge",
                     "{}"
                 ],
                 "capture_item": true,
@@ -243,16 +247,13 @@
     },
     {
         "name": "Bombos Tablet",
-        "parent": "Desert Area",
+        "parent": "Desert Area Color",
         "access_rules": [
+            "ow_desert_tablet",
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_open,glitch_mode_major",
-            "world_state_inverted,@Light World",
-            "{world_state_open,@South Dark World,mirror}",
-            "{world_state_open,glitch_mode_ow,boots}",
-            "{world_state_open,glitch_mode_major}",
-            "{world_state_inverted,@Light World}"
+            "world_state_inverted,@Light World"
         ],
         "sections": [
             {
@@ -270,27 +271,40 @@
                 "map": "lightworld",
                 "x": 448,
                 "y": 1852,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 448,
+                "y": 1808,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_singleentryvanilla" ]
             },
             {
                 "map": "lightworld",
                 "x": 448,
                 "y": 1852,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 448,
+                "y": 1820,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
                 "x": 540,
                 "y": 1885,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,world_state_open" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,glitch_mode_none,world_state_open" ]
             }
         ]
     },
     {
         "name": "Sunken Treasure",
-        "parent": "Light World",
+        "parent": "OW Dam",
         "access_rules": [ "dam" ],
         "sections": [
             {
@@ -310,20 +324,20 @@
     },
     {
         "name": "Lake Hylia Island",
-        "parent": "Water Areas",
+        "parent": "OW Lake Hylia Water",
         "sections": [
             {
                 "name": "Island",
                 "access_rules": [
-                    "world_state_open,@East Dark World,pearl,flippers,mirror",
-                    "world_state_open,@South Dark World,pearl,flippers,mirror",
-                    "world_state_open,@South Dark World,pearl,boots,[flippers],mirror",
+                    "world_state_open,@OW Ice Lake Water,pearl,flippers,mirror",
+                    "world_state_open,@OW Ice Lake Water,pearl,boots,[flippers],mirror",
                     "world_state_open,glitch_mode_ow,boots",
-                    "world_state_inverted,@Light World,pearl,[flippers]",
+                    "world_state_inverted,@OW Lake Hylia Water,pearl,[flippers]",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
                     "glitch_mode_major",
                     "{world_state_open}",
-                    "{world_state_inverted,@Light World}"
+                    "{world_state_inverted,@OW Lake Hylia Northeast}",
+                    "{world_state_inverted,@OW Lake Hylia Water}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -341,7 +355,7 @@
                 "x": 1450,
                 "y": 1676,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,world_state_open" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,glitch_mode_none,world_state_open" ]
             },
             {
                 "map": "lightworld",
@@ -354,7 +368,7 @@
     },
     {
         "name": "Hobo",
-        "parent": "Water Areas",
+        "parent": "OW Stone Bridge Water",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -374,24 +388,33 @@
                 "map": "lightworld",
                 "x": 1390,
                 "y": 1394,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1375,
+                "y": 1394,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_singleentryvanilla" ]
             },
             {
                 "map": "lightworld",
                 "x": 1390,
                 "y": 1390,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1382,
+                "y": 1390,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_all" ]
             }
         ]
     },
     {
         "name": "Ether Tablet",
-        "parent": "Death Mountain West Top",
-        "access_rules": [
-            "@Death Mountain West Top",
-            "{}"
-        ],
+        "parent": "OW Death Mountain West Top",
         "sections": [
             {
                 "name": "Tablet",
@@ -421,7 +444,7 @@
     },
     {
         "name": "Spectacle Rock",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Cave",
@@ -431,12 +454,12 @@
             {
                 "name": "Up On Top",
                 "access_rules": [
-                    "world_state_open,@Death Mountain West Bottom,mirror",
+                    "world_state_open,mirror",
                     "world_state_open,glitch_mode_ow,boots",
-                    "world_state_inverted,@Death Mountain West Top",
+                    "world_state_inverted,@OW Death Mountain West Top",
                     "world_state_inverted,glitch_mode_ow,pearl,boots",
                     "glitch_mode_major",
-                    "{@Death Mountain West Bottom}"
+                    "{}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -460,17 +483,17 @@
     },
     {
         "name": "Floating Island",
-        "parent": "Death Mountain Color",
+        "parent": "OW Death Mountain East Top",
         "sections": [
             {
                 "name": "Island",
                 "access_rules": [
+                    "world_state_open,@OW Dark Death Mountain East Top,mirror",
                     "world_state_open,ddm_floating,mirror",
-                    "world_state_open,entrance_shuffle_singleentryvanilla,@Dark Death Mountain Top,pearl,lift1,mirror",
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_open,glitch_mode_major",
-                    "world_state_inverted,@Death Mountain East Top",
-                    "{@Death Mountain East Top}"
+                    "world_state_inverted",
+                    "{}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -488,7 +511,7 @@
                 "x": 1627,
                 "y": 40,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_open,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla,world_state_open,glitch_mode_none" ]
             },
             {
                 "map": "lightworld",
@@ -501,7 +524,7 @@
     },
     {
         "name": "Zora's Domain",
-        "parent": "Zora Area",
+        "parent": "OW Zora Approach",
         "sections": [
             {
                 "name": "King Zora",
@@ -525,15 +548,28 @@
             {
                 "map": "lightworld",
                 "x": 1920,
-                "y": 273,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "y": 243,
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 213,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_singleentryvanilla" ]
             },
             {
                 "map": "lightworld",
                 "x": 1920,
-                "y": 273,
+                "y": 243,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 223,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_all" ]
             }
         ]
     },
@@ -541,20 +577,23 @@
     {
         "name": "Dwarven Smiths",
         "short_name": "Smiths",
-        "parent": "Northwest Dark World",
+        "parent": "OW Frog",
         "sections": [
             {
                 "name": "Bring Him Home",
                 "access_rules": [
-                    "world_state_open,@Light World,pearl,lift2",
+                    "world_state_open,pearl,lift2,@OW Blacksmith",
+                    "world_state_open,entrance_shuffle_all,pearl,lift2",
                     "world_state_open,glitch_mode_ow,pearl,boots,bottle,[lift2]",
                     "world_state_open,glitch_mode_ow,pearl,boots,mirror,[lift2]",
                     "world_state_open,glitch_mode_ow,[pearl],bottle2,boots,[lift2]",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,boots,mirror,[lift2]",
                     "world_state_open,glitch_mode_major,bottle",
                     "world_state_open,glitch_mode_major,mirror",
-                    "world_state_inverted,@Light World,mirror",
-                    "world_state_inverted,@Light World,lift2",
+                    "world_state_inverted,entrance_shuffle_all,@OW Kakariko Suburb,mirror",
+                    "world_state_inverted,entrance_shuffle_all,lift2",
+                    "world_state_inverted,@OW Kakariko Suburb,mirror,@OW Blacksmith",
+                    "world_state_inverted,lift2,@OW Blacksmith",
                     "world_state_inverted,glitch_mode_ow,boots,bottle,[lift2]",
                     "world_state_inverted,glitch_mode_ow,boots,mirror,[lift2]",
                     "world_state_inverted,glitch_mode_major,bottle",
@@ -587,16 +626,22 @@
     },
     {
         "name": "Purple Chest",
-        "parent": "Hammer Pegs Area",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "hammer_pegs,@OW Desert Pass",
+            "@Hammer Pegs Area,@Light World",
+            "world_state_open,@OW Hammer Pegs,pearl,lift2",
+            "world_state_inverted,@OW Hammer Pegs,lift2",
+            "world_state_inverted,@OW Blacksmith,mirror"
+        ],
         "sections": [
             {
                 "name": "Middle-Aged Man",
                 "access_rules": [
-                    "world_state_open,@Dwarven Smiths/Bring Him Home,pearl,lift2",
+                    "@Dwarven Smiths/Bring Him Home,@OW Desert Pass",
+                    "@Dwarven Smiths/Bring Him Home,@Light World",
                     "world_state_open,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[pearl],[lift2]",
                     "world_state_open,glitch_mode_major,@Dwarven Smiths/Bring Him Home,pearl",
-                    "world_state_inverted,@Dwarven Smiths/Bring Him Home,mirror",
-                    "world_state_inverted,@Dwarven Smiths/Bring Him Home,lift2",
                     "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[mirror]",
                     "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[lift2]",
                     "world_state_inverted,glitch_mode_major,@Dwarven Smiths/Bring Him Home"
@@ -635,7 +680,7 @@
     },
     {
         "name": "Digging Game",
-        "parent": "South Dark World",
+        "parent": "OW Dig Game",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -665,7 +710,7 @@
     },
     {
         "name": "Stumpy",
-        "parent": "South Dark World",
+        "parent": "OW Stumpy",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -698,8 +743,8 @@
         "name": "Ganon Sign",
         "parent": "Dark World Color",
         "access_rules": [
-            "world_state_open,@East Dark World",
-            "world_state_inverted,@Castle Second Floor"
+            "world_state_open,@OW Pyramid",
+            "world_state_inverted,@OW Castle Ledge"
         ],
         "sections": [
             {
@@ -728,7 +773,7 @@
     },
     {
         "name": "Pyramid Ledge",
-        "parent": "East Dark World",
+        "parent": "OW Pyramid",
         "sections": [
             {
                 "name": "Ledge",
@@ -753,7 +798,7 @@
     },
     {
         "name": "Bumper Ledge",
-        "parent": "Northwest Dark World",
+        "parent": "OW Bumper Cave",
         "sections": [
             {
                 "name": "Ledge",
@@ -763,7 +808,7 @@
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,boots",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,cape",
-                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@Light World,pearl,lift1,cape,mirror",
+                    "world_state_inverted,entrance_shuffle_singleentryvanilla,@OW Mountain Entry,pearl,lift1,cape,mirror",
                     "world_state_inverted,bumper_cave,mirror",
                     "world_state_inverted,glitch_mode_ow,boots",
                     "glitch_mode_major",
@@ -785,7 +830,7 @@
                 "x": 669,
                 "y": 315,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_inverted" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_inverted" ]
             },
             {
                 "map": "darkworld",
@@ -798,15 +843,7 @@
     },
     {
         "name": "Catfish",
-        "parent": "Northeast Dark World",
-        "access_rules": [
-            "world_state_open,@Northeast Dark World,pearl,lift1",
-            "world_state_open,glitch_mode_ow,pearl,boots",
-            "world_state_open,glitch_mode_ow,[pearl],aga,bottle,lift1",
-            "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
-            "world_state_inverted,@Northeast Dark World,lift1",
-            "world_state_inverted,@Zora Area,mirror"
-        ],
+        "parent": "OW Catfish",
         "sections": [
             {
                 "name": "Ring of Stones",
@@ -834,8 +871,8 @@
         "short_name": "GT Sign",
         "parent": "Dark Death Mountain Color",
         "access_rules": [
-            "world_state_open,@Dark Death Mountain Top",
-            "world_state_inverted,@Castle Second Floor"
+            "world_state_open,@OW Dark Death Mountain West Top",
+            "world_state_inverted,@OW Castle Ledge"
         ],
         "sections": [
             {

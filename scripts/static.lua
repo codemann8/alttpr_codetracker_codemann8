@@ -35,18 +35,17 @@ DungeonIdMap = {
 }
 
 OverworldIdRegionMap = {
-    [0x02] = "light_world", [0x03] = "dm_west_bottom",
-    [0x11] = "light_world", [0x13] = "light_world", [0x15] = "light_world", [0x16] = "lw_witch",
-    [0x22] = "light_world", [0x1e] = "light_world",
-    [0x28] = "light_world", [0x29] = "light_world", [0x2b] = "light_world", [0x2c] = "light_world",
-    [0x32] = "light_world", [0x34] = "light_world", [0x37] = "light_world",
-    [0x3a] = "light_world", [0x3b] = "light_world",
-    [0x42] = "dw_west", [0x43] = "ddm_west", [0x47] = "ddm_top",
-    [0x51] = "dw_west", [0x53] = "dw_west", [0x56] = "dw_witch",
-    [0x5a] = "dw_west", [0x5b] = "dw_east", [0x5e] = "dw_east",
-    [0x69] = "dw_south", [0x6b] = "dw_south", [0x6c] = "dw_south",
-    [0x70] = "mire_area", [0x74] = "dw_south", [0x77] = "dw_southeast",
-    [0x7b] = "dw_south"
+    [0x02] = "ow_lumberjack", [0x03] = "ow_dm_west_bottom", [0x07] = "ow_trpegs", [0x0a] = "ow_mountainentry", [0x0f] = "ow_zora_approach",
+    [0x11] = "ow_kak_fortune", [0x12] = "ow_kak_pond", [0x13] = "ow_sanc",
+    [0x1a] = "ow_forest", [0x1e] = "ow_eastern_palace", [0x22] = "ow_blacksmith", [0x25] = "ow_sand_dunes",
+    [0x28] = "ow_race_game", [0x29] = "ow_kak_suburb", [0x2b] = "ow_central_bonk", [0x2c] = "ow_links", [0x2f] = "ow_eastern_nook",
+    [0x34] = "ow_statues", [0x37] = "ow_ice_cave", [0x3b] = "ow_dam", [0x3c] = "ow_south_pass",
+    [0x42] = "ow_dark_lumberjack", [0x43] = "ow_ddm_west_bottom", [0x47] = "ow_turtlerock", [0x4a] = "ow_bumper", [0x4f] = "ow_catfish",
+    [0x51] = "ow_outcast_fortune", [0x52] = "ow_outcast_pond", [0x53] = "ow_chapel", [0x54] = "ow_dark_graveyard",
+    [0x5a] = "ow_shield_shop", [0x5e] = "ow_dark_palace", [0x65] = "ow_dark_dunes",
+    [0x68] = "ow_dig_game", [0x69] = "ow_archery", [0x6b] = "ow_dark_bonk", [0x6c] = "ow_bomb_shop", [0x6f] = "ow_dark_nook",
+    [0x70] = "mire_area", [0x74] = "ow_hype", [0x77] = "ow_ice_southwest",
+    [0x7a] = "ow_swamp_nook", [0x7b] = "ow_swamp", [0x7c] = "ow_dark_south_pass"
 }
 
 RoomNonLinearExclusions = {

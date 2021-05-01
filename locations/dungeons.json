@@ -4,19 +4,29 @@
         "name": "HC Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,@Light World,[pearl]",
-            "world_state_inverted,glitch_mode_ow,@Light World",
+            "world_state_open,@OW Castle Courtyard",
+            "world_state_inverted,@OW Castle Courtyard,[pearl]",
+            "world_state_inverted,glitch_mode_ow,@OW Castle Courtyard",
             "entrance_shuffle_on"
+        ]
+    },
+    {
+        "name": "HC Sanc Access",
+        "parent": "Semi-Dungeon Color",
+        "access_rules": [
+            "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,lift1",
+            "world_state_open,entrance_shuffle_singleentryvanilla,@OW Graveyard,lift1",
+            "world_state_inverted,ow_shuffle_off,entrance_shuffle_singleentryvanilla,pearl,lift1",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,@OW Graveyard,pearl,lift1"
         ]
     },
     {
         "name": "EP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Light World",
-            "world_state_inverted,@Light World,[pearl]",
-            "world_state_inverted,glitch_mode_ow,@Light World",
+            "world_state_open,@OW Eastern Palace",
+            "world_state_inverted,@OW Eastern Palace,[pearl]",
+            "world_state_inverted,glitch_mode_ow,@OW Eastern Palace",
             "entrance_shuffle_on"
         ]
     },
@@ -24,12 +34,12 @@
         "name": "DP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Light World,book",
-            "world_state_open,@Desert Ledge Area",
-            "world_state_inverted,@Light World,[pearl],book",
-            "world_state_inverted,@Desert Ledge Area,[pearl]",
-            "world_state_inverted,glitch_mode_ow,@Light World,book",
-            "world_state_inverted,glitch_mode_ow,@Desert Ledge Area",
+            "world_state_open,@OW Desert,book",
+            "world_state_open,@OW Desert Ledge",
+            "world_state_inverted,@OW Desert,[pearl],book",
+            "world_state_inverted,@OW Desert Ledge,[pearl]",
+            "world_state_inverted,glitch_mode_ow,@OW Desert,book",
+            "world_state_inverted,glitch_mode_ow,@OW Desert Ledge",
             "glitch_mode_major",
             "entrance_shuffle_on"
         ]
@@ -38,7 +48,7 @@
         "name": "MM Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "@Mire Area",
+            "@OW Mire",
             "entrance_shuffle_on"
         ]
     },
@@ -88,9 +98,9 @@
         "name": "ToH Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Death Mountain West Top",
-            "world_state_inverted,@Death Mountain West Top,[pearl]",
-            "world_state_inverted,glitch_mode_ow,@Death Mountain West Top,mirror,sword",
+            "world_state_open,@OW Death Mountain West Top",
+            "world_state_inverted,@OW Death Mountain West Top,[pearl]",
+            "world_state_inverted,glitch_mode_ow,@OW Death Mountain West Top,mirror,sword",
             "glitch_mode_hybrid,@MM Special Access/Left Side Access",
             "glitch_mode_major,@Mountain Access",
             "entrance_shuffle_on"
@@ -119,10 +129,10 @@
         "name": "AT Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "world_state_open,$canClearAgaTowerBarrier",
+            "world_state_open,@OW Castle Ledge,$canClearAgaTowerBarrier",
             "world_state_open,glitch_mode_ow,boots,[$canClearAgaTowerBarrier]",
             "world_state_open,glitch_mode_major",
-            "world_state_inverted,@Dark Death Mountain West",
+            "world_state_inverted,@OW Dark Death Mountain West Top",
             "entrance_shuffle_on"
         ]
     },
@@ -130,10 +140,10 @@
         "name": "PoD Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@East Dark World,pearl",
-            "world_state_open,glitch_mode_ow,@East Dark World,[pearl],bottle",
-            "world_state_inverted,@East Dark World",
-            "glitch_mode_hybrid,@Mountain Access",
+            "world_state_open,@OW Palace of Darkness,pearl",
+            "world_state_open,glitch_mode_ow,@OW Palace of Darkness,[pearl],bottle",
+            "world_state_inverted,@OW Palace of Darkness",
+            "glitch_mode_hybrid,@OW Death Mountain West Bottom",
             "entrance_shuffle_on"
         ]
     },
@@ -141,23 +151,25 @@
         "name": "SP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,entrance_shuffle_off,@South Dark World,mirror,pearl,flippers",
-            "world_state_inverted,entrance_shuffle_off,@Light World,mirror,[pearl],flippers",
-            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@MM Special Access/Left Side Access,[mm_bigkey]",
-            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],@MM Special Access/Left Side Access,[toh_bigkey]",
-            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@Mountain Access],[lamp],[@MM Special Access/Left Side Access],@ToH Special Access/Compass Chest,[toh_bigkey]",
+            "world_state_open,entrance_shuffle_off,@OW Swamp,mirror,pearl,flippers",
+            "world_state_inverted,entrance_shuffle_off,@OW Dam,mirror,[pearl],flippers",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],@MM Special Access/Left Side Access,[mm_bigkey]",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],@MM Special Access/Left Side Access,[toh_bigkey]",
+            "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],[@MM Special Access/Left Side Access],@ToH Special Access/Compass Chest,[toh_bigkey]",
             "door_shuffle_off,entrance_shuffle_on,dam",
             "door_shuffle_on,entrance_shuffle_on",
-            "door_shuffle_on,entrance_shuffle_off,@South Dark World"
+            "door_shuffle_on,entrance_shuffle_off,@OW Swamp"
         ]
     },
     {
         "name": "SW Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Northwest Dark World,[pearl]",
-            "world_state_open,glitch_mode_ow,@Northwest Dark World",
-            "world_state_inverted,@Northwest Dark World",
+            "world_state_open,@OW Skull Woods Front,[pearl]",
+            "world_state_open,@OW Skull Woods Back,[pearl]",
+            "world_state_open,glitch_mode_ow,@OW Skull Woods Front",
+            "world_state_inverted,@OW Skull Woods Front",
+            "world_state_inverted,@OW Skull Woods Back",
             "entrance_shuffle_on"
         ]
     },
@@ -165,9 +177,9 @@
         "name": "TT Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Northwest Dark World,pearl",
-            "world_state_open,glitch_mode_ow,@Northwest Dark World,[pearl],bottle",
-            "world_state_inverted,@Northwest Dark World",
+            "world_state_open,@OW Village of Outcasts,pearl",
+            "world_state_open,glitch_mode_ow,@OW Village of Outcasts,[pearl],bottle",
+            "world_state_inverted,@OW Village of Outcasts",
             "entrance_shuffle_on"
         ]
     },
@@ -175,7 +187,7 @@
         "name": "IP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,[pearl],[flippers],lift2",
+            "world_state_open,@OW Ice Lake Island,[pearl]",
             "world_state_open,glitch_mode_ow,lift2",
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
@@ -184,7 +196,7 @@
             "world_state_open,glitch_mode_major,mirror",
             "world_state_open,glitch_mode_major,pearl,flippers",
             "world_state_open,glitch_mode_major,flippers,bottle",
-            "world_state_inverted,[flippers]",
+            "world_state_inverted,@OW Ice Lake Island",
             "world_state_inverted,glitch_mode_ow",
             "entrance_shuffle_on"
         ]
@@ -192,14 +204,14 @@
     {
         "name": "TR Main Entrance",
         "access_rules": [
-            "world_state_open,@Death Mountain East Top,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
-            "world_state_open,@Death Mountain East Top,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+            "world_state_open,@OW Turtle Rock,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
+            "world_state_open,@OW Turtle Rock,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
             "world_state_open,glitch_mode_ow,@Death Mountain East Top,boots,hammer,pearl,$canUseMedallions,tr_medallion",
             "world_state_open,glitch_mode_ow,@Death Mountain East Top,boots,hammer,pearl,$canUseMedallions,bombos,ether,quake",
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,boots,pearl,$canUseMedallions,tr_medallion",
-            "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,boots,pearl,$canUseMedallions,bombos,ether,quake",
-            "world_state_inverted,@Dark Death Mountain Top,$canUseMedallions,tr_medallion",
-            "world_state_inverted,@Dark Death Mountain Top,$canUseMedallions,bombos,ether,quake",
+            "world_state_open,glitch_mode_ow,@OW Dark Death Mountain East Top,boots,pearl,$canUseMedallions,tr_medallion",
+            "world_state_open,glitch_mode_ow,@OW Dark Death Mountain East Top,boots,pearl,$canUseMedallions,bombos,ether,quake",
+            "world_state_inverted,@OW Turtle Rock,$canUseMedallions,tr_medallion",
+            "world_state_inverted,@OW Turtle Rock,$canUseMedallions,bombos,ether,quake",
             "entrance_shuffle_on"
         ]
     },
@@ -214,7 +226,8 @@
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,pearl,boots",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,[pearl],boots,bottle",
             "world_state_open,glitch_mode_ow,@Dark Death Mountain Top,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,@OW Death Mountain East Top,mirror",
+            "world_state_inverted,dm_east_mimic,mirror",
             "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,[sword]",
             "world_state_inverted,glitch_mode_ow,@Dark Death Mountain Top,boots,[hookshot]",
             "glitch_mode_major,@Dark Death Mountain Top"
@@ -239,7 +252,8 @@
             "world_state_open,glitch_mode_ow,boots,mirror,bottle,[nothing]",
             "world_state_open,glitch_mode_major,pearl,mirror",
             "world_state_open,glitch_mode_major,bottle,mirror",
-            "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,@OW Death Mountain East Top,mirror",
+            "world_state_inverted,dm_east_connect,mirror",
             "world_state_inverted,glitch_mode_major,mirror,pearl",
             "world_state_inverted,glitch_mode_major,mirror,bottle"
         ]
@@ -255,7 +269,7 @@
         "name": "TR Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "@Dark Death Mountain Top",
+            "@OW Turtle Rock",
             "entrance_shuffle_on"
         ]
     },
@@ -263,8 +277,8 @@
         "name": "GT Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "world_state_open,@Dark Death Mountain Top,[pearl],$gtCrystalCount",
-            "world_state_inverted,@Light World,$gtCrystalCount",
+            "world_state_open,@OW Dark Death Mountain West Top,[pearl],$gtCrystalCount",
+            "world_state_inverted,@OW Castle Ledge,$gtCrystalCount",
             "glitch_mode_ow,pearl,boots",
             "glitch_mode_major",
             "entrance_shuffle_on"
@@ -275,20 +289,26 @@
     {
         "name": "Hyrule Castle & Escape",
         "short_name": "Hyrule Castle",
-        "parent": "HC Access",
+        "parent": "Semi-Dungeon Color",
         "sections": [
             {
                 "name": "Dungeon Access",
+                "access_rules": [
+                    "@HC Access",
+                    "@HC Sanc Access"
+                ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
                 "hosted_item": "dummy"
             },
             {
                 "name": "First",
+                "access_rules": [ "@HC Access" ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
                 "name": "Key Guard",
+                "access_rules": [ "@HC Access" ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/enemy-guard.png",
                 "chest_opened_img": "images/enemy-defeated.png",
@@ -297,9 +317,9 @@
             {
                 "name": "Boomerang",
                 "access_rules": [
-                    "door_shuffle_off,pool_keydrop_on,hc_smallkey:1,[hc_smallkey:3]",
-                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off",
-                    "pool_keydrop_off",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,hc_smallkey:1,[hc_smallkey:3]",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off",
+                    "@HC Access,pool_keydrop_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -308,7 +328,7 @@
             {
                 "name": "Boomerang Guard",
                 "access_rules": [
-                    "@Hyrule Castle & Escape/Boomerang"
+                    "@HC Access,@Hyrule Castle & Escape/Boomerang"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/enemy-guard.png",
@@ -318,8 +338,8 @@
             {
                 "name": "Ball 'N Chain Guard",
                 "access_rules": [
-                    "door_shuffle_off,hc_smallkey:2,[hc_smallkey:4]",
-                    "door_shuffle_off,keysanity_smallkey_off",
+                    "@HC Access,door_shuffle_off,hc_smallkey:2,[hc_smallkey:4]",
+                    "@HC Access,door_shuffle_off,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
@@ -330,12 +350,12 @@
             {
                 "name": "Prison",
                 "access_rules": [
-                    "pool_keydrop_off,[hc_smallkey:1]",
-                    "pool_keydrop_off,keysanity_smallkey_off",
-                    "door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,hc_bigkey",
-                    "door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,keysanity_bigkey_off",
-                    "door_shuffle_basic,pool_keydrop_on,hc_bigkey",
-                    "door_shuffle_basic,pool_keydrop_on,keysanity_bigkey_off",
+                    "@HC Access,pool_keydrop_off,[hc_smallkey:1]",
+                    "@HC Access,pool_keydrop_off,keysanity_smallkey_off",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,hc_bigkey",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,@Hyrule Castle & Escape/Ball 'N Chain Guard,keysanity_bigkey_off",
+                    "@HC Access,door_shuffle_basic,pool_keydrop_on,hc_bigkey",
+                    "@HC Access,door_shuffle_basic,pool_keydrop_on,keysanity_bigkey_off",
                     "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -344,7 +364,10 @@
             {
                 "name": "Dark Cross",
                 "access_rules": [
-                    "[firesource]"
+                    "@HC Access,door_shuffle_off,[firesource]",
+                    "@HC Sanc Access,door_shuffle_off,[firesource],hc_smallkey:1",
+                    "@HC Sanc Access,door_shuffle_sameset,[lamp]",
+                    "door_shuffle_on,[lamp]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -352,9 +375,11 @@
             {
                 "name": "Key Rat",
                 "access_rules": [
-                    "door_shuffle_off,hc_smallkey:1,[hc_smallkey:4],[firesource]",
-                    "door_shuffle_off,keysanity_smallkey_off,[firesource]",
-                    "door_shuffle_on,[firesource]"
+                    "@HC Access,door_shuffle_off,hc_smallkey:1,[hc_smallkey:4],[firesource]",
+                    "@HC Access,door_shuffle_off,keysanity_smallkey_off,[firesource]",
+                    "@HC Sanc Access,door_shuffle_off,hc_smallkey:1,[hc_smallkey:4],[firesource]",
+                    "@HC Sanc Access,door_shuffle_off,keysanity_smallkey_off,[firesource]",
+                    "door_shuffle_on,[lamp]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/enemy-rat.png",
@@ -364,12 +389,11 @@
             {
                 "name": "Back",
                 "access_rules": [
-                    "world_state_open,entrance_shuffle_singleentryvanilla,lift1",
-                    "world_state_inverted,entrance_shuffle_singleentryvanilla,pearl,lift1",
-                    "door_shuffle_off,pool_keydrop_off,hc_smallkey:1,[firesource]",
-                    "door_shuffle_off,pool_keydrop_off,keysanity_smallkey_off,[firesource]",
-                    "door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
-                    "door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
+                    "@HC Sanc Access",
+                    "@HC Access,door_shuffle_off,pool_keydrop_off,hc_smallkey:1,[firesource]",
+                    "@HC Access,door_shuffle_off,pool_keydrop_off,keysanity_smallkey_off,[firesource]",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
+                    "@HC Access,door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
                     "door_shuffle_on",
                     "entrance_shuffle_all"
                 ],

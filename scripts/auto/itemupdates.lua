@@ -129,13 +129,9 @@ function updateAga1(segment)
         item.Active = true
         if Tracker.ActiveVariantUID ~= "items_only" and OBJ_RACEMODE.CurrentStage == 0 then
             if OBJ_WORLDSTATE.CurrentStage == 1 then
-                if OBJ_DOORSHUFFLE.CurrentStage == 0 then
-                    item = Tracker:FindObjectForCode("castle_top")
-                else
-                    item = Tracker:FindObjectForCode("light_world")
-                end
+                item = Tracker:FindObjectForCode("castle_top")
             else
-                item = Tracker:FindObjectForCode("dw_east")
+                item = Tracker:FindObjectForCode("ow_pyramid")
             end
             item.Active = true
         end

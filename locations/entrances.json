@@ -3,7 +3,7 @@
     {
         "name": "Forest Hideout Drop",
         "short_name": "Hideout Drop",
-        "parent": "Light World",
+        "parent": "OW Lost Woods East",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -32,7 +32,7 @@
     {
         "name": "Forest Hideout Exit",
         "short_name": "Hideout Exit",
-        "parent": "Light World",
+        "parent": "OW Lost Woods East",
         "sections": [
             {
                 "name": "Entrance",
@@ -41,7 +41,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_lost_woods_east"
             }
         ],
         "map_locations": [
@@ -57,7 +57,7 @@
     {
         "name": "Forest Chest Game",
         "short_name": "Forest Game",
-        "parent": "Light World",
+        "parent": "OW Lost Woods East",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -75,7 +75,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_lost_woods_east"
             }
         ],
         "map_locations": [
@@ -98,7 +98,7 @@
     {
         "name": "Lumberjack Tree",
         "short_name": "Aga Tree",
-        "parent": "Light World",
+        "parent": "OW Lumberjack",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -131,7 +131,7 @@
     {
         "name": "Lumberjack Tree Exit",
         "short_name": "Aga Tree Exit",
-        "parent": "Light World",
+        "parent": "OW Lumberjack",
         "sections": [
             {
                 "name": "Entrance",
@@ -140,7 +140,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_lumberjack"
             }
         ],
         "map_locations": [
@@ -156,7 +156,7 @@
     {
         "name": "Lumberjack House",
         "short_name": "LJ House",
-        "parent": "Light World",
+        "parent": "OW Lumberjack",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -174,7 +174,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_lumberjack"
             }
         ],
         "map_locations": [
@@ -197,7 +197,7 @@
     {
         "name": "Kakariko Fortune Teller",
         "short_name": "Kak Fortune",
-        "parent": "Light World",
+        "parent": "OW Kakariko Fortune",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -215,7 +215,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kak_fortune"
             }
         ],
         "map_locations": [
@@ -238,7 +238,7 @@
     {
         "name": "Kakariko Well Drop",
         "short_name": "Kak Well Drop",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Dropdown",
@@ -262,7 +262,7 @@
     {
         "name": "Kakariko Well Exit",
         "short_name": "Kak Well Exit",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -271,7 +271,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -287,7 +287,7 @@
     {
         "name": "Left Snitch House",
         "short_name": "Left Snitch",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -305,7 +305,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -328,7 +328,7 @@
     {
         "name": "Blind's House Entrance",
         "short_name": "Blind's House",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -337,7 +337,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -353,7 +353,7 @@
     {
         "name": "Elder Left Door",
         "short_name": "Elder Left",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -362,7 +362,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -378,7 +378,7 @@
     {
         "name": "Elder Right Door",
         "short_name": "Elder Right",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -387,7 +387,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -403,7 +403,7 @@
     {
         "name": "Right Snitch House",
         "short_name": "Right Snitch",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -421,7 +421,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -444,7 +444,7 @@
     {
         "name": "Chicken House Entrance",
         "short_name": "Chicken House",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -453,7 +453,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -469,7 +469,7 @@
     {
         "name": "Sick Kid Entrance",
         "short_name": "Sick Kid",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -478,7 +478,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -493,7 +493,7 @@
     },
     {
         "name": "Grass House",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -537,7 +537,7 @@
     },
     {
         "name": "Bomb Hut",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -581,7 +581,7 @@
     },
     {
         "name": "Kakariko Shop Entrance",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -591,7 +591,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -606,7 +606,7 @@
     {
         "name": "Tavern Entrance",
         "short_name": "Tavern",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Entrance",
@@ -615,7 +615,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kakariko"
             }
         ],
         "map_locations": [
@@ -630,7 +630,7 @@
     },
     {
         "name": "Smith's House",
-        "parent": "Light World",
+        "parent": "OW Blacksmith",
         "sections": [
             {
                 "name": "Entrance",
@@ -639,7 +639,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_blacksmith"
             }
         ],
         "map_locations": [
@@ -662,7 +662,7 @@
     {
         "name": "Magic Bat Exit",
         "short_name": "Bat Exit",
-        "parent": "Light World",
+        "parent": "OW Blacksmith",
         "sections": [
             {
                 "name": "Entrance",
@@ -671,7 +671,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_blacksmith"
             }
         ],
         "map_locations": [
@@ -687,7 +687,7 @@
     {
         "name": "Magic Bat Drop",
         "short_name": "Bat Drop",
-        "parent": "Light World",
+        "parent": "OW Blacksmith",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -731,11 +731,7 @@
     {
         "name": "Quarreling Brothers Left",
         "short_name": "Left Brother",
-        "parent": "Light World",
-        "access_rules": [
-            "race_game",
-            "world_state_open,@South Dark World,mirror"
-        ],
+        "parent": "OW Race Game",
         "sections": [
             {
                 "name": "Entrance",
@@ -760,14 +756,14 @@
                 "x": 210,
                 "y": 1428,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "glitch_mode_none,ow_shuffle_off,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
     {
         "name": "Quarreling Brothers Right",
         "short_name": "Right Brother",
-        "parent": "Light World",
+        "parent": "OW Kakariko Suburb",
         "sections": [
             {
                 "name": "Entrance",
@@ -776,7 +772,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kak_suburb"
             }
         ],
         "map_locations": [
@@ -792,7 +788,7 @@
     {
         "name": "Library Entrance",
         "short_name": "Library",
-        "parent": "Light World",
+        "parent": "OW Kakariko Suburb",
         "sections": [
             {
                 "name": "Entrance",
@@ -801,7 +797,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kak_suburb"
             }
         ],
         "map_locations": [
@@ -817,7 +813,7 @@
     {
         "name": "Kakariko Chest Game",
         "short_name": "Kak Game",
-        "parent": "Light World",
+        "parent": "OW Kakariko Suburb",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -835,7 +831,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_kak_suburb"
             }
         ],
         "map_locations": [
@@ -858,7 +854,7 @@
     {
         "name": "North Bonk Rocks",
         "short_name": "Bonk Rocks",
-        "parent": "Light World",
+        "parent": "OW Bonk Rocks",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -872,13 +868,13 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_sanc_ledge"
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 777,
+                "x": 806,
                 "y": 600,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all" ]
@@ -887,7 +883,7 @@
     },
     {
         "name": "Old Man Home",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -896,7 +892,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -912,7 +908,7 @@
     {
         "name": "Sanctuary Exit",
         "short_name": "Sanc Exit",
-        "parent": "Light World",
+        "parent": "OW Sanctuary",
         "sections": [
             {
                 "name": "Entrance",
@@ -921,7 +917,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_sanc"
             }
         ],
         "map_locations": [
@@ -937,18 +933,18 @@
     {
         "name": "Sanctuary Grave",
         "short_name": "Sanc Grave",
-        "parent": "Light World",
+        "parent": "Light World Color",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl",
-            "{entrance_shuffle_crossed}"
+            "world_state_open,@OW Graveyard",
+            "world_state_inverted,@OW Graveyard,pearl",
+            "{@OW Sanctuary,entrance_shuffle_crossed}"
         ],
         "sections": [
             {
                 "name": "Dropdown",
                 "access_rules": [
                     "lift1",
-                    "{entrance_shuffle_crossed}"
+                    "{@OW Sanctuary,entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -970,11 +966,13 @@
     {
         "name": "Graveyard Ledge Cave",
         "short_name": "Graveyard Ledge",
-        "parent": "Light World",
+        "parent": "Light World Color",
         "access_rules": [
+            "world_state_open,@OW Dark Graveyard,pearl,mirror",
             "world_state_open,@Northwest Dark World,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl",
+            "world_state_inverted,@OW Graveyard,pearl",
+            "world_state_inverted,@Light World,pearl",
             "world_state_inverted,glitch_mode_ow,pearl,boots",
             "glitch_mode_major"
         ],
@@ -1002,19 +1000,19 @@
                 "x": 1132,
                 "y": 549,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "glitch_mode_none,ow_shuffle_off,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
     {
         "name": "King's Tomb Grave",
         "short_name": "King's Tomb",
-        "parent": "Light World",
+        "parent": "Light World Color",
         "access_rules": [
-            "world_state_open,lift2",
-            "world_state_open,@Northwest Dark World,pearl,mirror",
+            "world_state_open,@OW Graveyard,lift2",
+            "world_state_open,@OW Dark Graveyard,pearl,mirror",
             "world_state_open,glitch_mode_ow",
-            "world_state_inverted,pearl,lift2",
+            "world_state_inverted,@OW Graveyard,pearl,lift2",
             "world_state_inverted,glitch_mode_ow,pearl"
         ],
         "sections": [
@@ -1042,14 +1040,14 @@
                 "x": 1207,
                 "y": 598,
                 "size": 48,
-                "restrict_visibility_rules": [ "mirror,glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "mirror,glitch_mode_none,ow_shuffle_off,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
     {
         "name": "Useless Fairy Drop",
         "short_name": "Fairy Drop",
-        "parent": "Light World",
+        "parent": "OW River Bend West",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -1078,7 +1076,7 @@
     {
         "name": "Useless Fairy Exit",
         "short_name": "Fairy Exit",
-        "parent": "Light World",
+        "parent": "OW River Bend West",
         "sections": [
             {
                 "name": "Entrance",
@@ -1087,7 +1085,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_river_west"
             }
         ],
         "map_locations": [
@@ -1103,7 +1101,7 @@
     {
         "name": "Castle Left Entrance",
         "short_name": "HC Left",
-        "parent": "Castle Second Floor",
+        "parent": "OW Castle Ledge",
         "sections": [
             {
                 "name": "Entrance",
@@ -1128,7 +1126,7 @@
     {
         "name": "Agahnim's Tower Entrance",
         "short_name": "Aga Tower",
-        "parent": "Castle Second Floor",
+        "parent": "OW Castle Ledge",
         "access_rules": [
             "world_state_open,aga",
             "world_state_open,$canClearAgaTowerBarrier",
@@ -1165,7 +1163,7 @@
     },
     {
         "name": "Castle Right Entrance",
-        "parent": "Castle Second Floor",
+        "parent": "OW Castle Ledge",
         "sections": [
             {
                 "name": "Entrance",
@@ -1189,10 +1187,10 @@
     },
     {
         "name": "Castle Hole",
-        "parent": "Light World",
+        "parent": "OW Castle Ledge",
         "access_rules": [
             "aga2",
-            "{entrance_shuffle_crossed,@Light World}"
+            "{entrance_shuffle_crossed,@OW Castle Courtyard}"
         ],
         "sections": [
             {
@@ -1216,7 +1214,7 @@
     },
     {
         "name": "Castle Hole Exit",
-        "parent": "Light World",
+        "parent": "OW Castle Courtyard",
         "sections": [
             {
                 "name": "Entrance",
@@ -1224,7 +1222,8 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
-                "item_count": 1
+                "item_count": 1,
+                "hosted_item": "castle_courtyard"
             }
         ],
         "map_locations": [
@@ -1240,7 +1239,7 @@
     {
         "name": "Castle Main Entrance",
         "short_name": "HC Main",
-        "parent": "Light World",
+        "parent": "OW Castle Courtyard",
         "access_rules": [
             "world_state_inverted",
             "entrance_shuffle_singleentryvanilla",
@@ -1256,7 +1255,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "castle_courtyard"
             }
         ],
         "map_locations": [
@@ -1279,7 +1278,7 @@
     {
         "name": "Secret Passage Exit",
         "short_name": "Uncle Exit",
-        "parent": "Light World",
+        "parent": "OW Castle Courtyard",
         "access_rules": [
             "world_state_open,[mirror]",
             "world_state_open,[castle_top]",
@@ -1292,7 +1291,8 @@
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
-                "item_count": 1
+                "item_count": 1,
+                "hosted_item": "castle_courtyard"
             }
         ],
         "map_locations": [
@@ -1308,7 +1308,7 @@
     {
         "name": "Secret Passage Drop",
         "short_name": "Uncle Drop",
-        "parent": "Light World",
+        "parent": "OW Castle Perimeter",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1335,13 +1335,7 @@
     },
     {
         "name": "Witch's Hut",
-        "parent": "Light World",
-        "access_rules": [
-            "lw_witch",
-            "world_state_open",
-            "world_state_inverted,@Light World,pearl",
-            "world_state_inverted,zora_area,pearl,flippers,lift1"
-        ],
+        "parent": "OW Potion Shop",
         "sections": [
             {
                 "name": "Entrance",
@@ -1350,7 +1344,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "lw_witch"
+                "hosted_item": "ow_witch"
             }
         ],
         "map_locations": [
@@ -1366,7 +1360,7 @@
     {
         "name": "Sahasrala's Hut Entrance",
         "short_name": "Sah's Hut",
-        "parent": "Light World",
+        "parent": "OW Eastern Palace",
         "sections": [
             {
                 "name": "Entrance",
@@ -1375,7 +1369,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_eastern_palace"
             }
         ],
         "map_locations": [
@@ -1391,7 +1385,7 @@
     {
         "name": "Eastern Palace Entrance",
         "short_name": "EP Entrance",
-        "parent": "Light World",
+        "parent": "OW Eastern Palace",
         "sections": [
             {
                 "name": "Entrance",
@@ -1400,7 +1394,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_eastern_palace"
             }
         ],
         "map_locations": [
@@ -1415,7 +1409,7 @@
     },
     {
         "name": "Trees Fairy Cave",
-        "parent": "Light World",
+        "parent": "OW Tree Line",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -1433,7 +1427,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_treeline"
             }
         ],
         "map_locations": [
@@ -1455,7 +1449,7 @@
     },
     {
         "name": "Long Fairy Cave",
-        "parent": "Light World",
+        "parent": "OW Eastern Nook",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -1473,7 +1467,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_eastern_nook"
             }
         ],
         "map_locations": [
@@ -1496,7 +1490,7 @@
     {
         "name": "Desert Back Entrance",
         "short_name": "DP Back",
-        "parent": "Desert Ledge Area",
+        "parent": "OW Desert Ledge",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1507,7 +1501,7 @@
                 "access_rules": [
                     "lift1",
                     "world_state_open,glitch_mode_ow,boots",
-                    "world_state_open,@Mire Area,mirror",
+                    "world_state_open,@OW Mire,mirror",
                     "world_state_inverted,glitch_mode_ow,pearl,boots"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -1531,7 +1525,7 @@
     {
         "name": "Desert Left Entrance",
         "short_name": "DP Left",
-        "parent": "Desert Ledge Area",
+        "parent": "OW Desert Ledge",
         "sections": [
             {
                 "name": "Entrance",
@@ -1556,13 +1550,13 @@
     {
         "name": "Desert Front Entrance",
         "short_name": "DP Main",
-        "parent": "Desert Area",
+        "parent": "OW Desert",
         "sections": [
             {
                 "name": "Entrance",
                 "access_rules": [
                     "book",
-                    "world_state_open,@Mire Area,mirror"
+                    "world_state_open,@OW Mire,mirror"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -1585,19 +1579,19 @@
     {
         "name": "Desert Right Entrance",
         "short_name": "DP Right",
-        "parent": "Desert Area",
+        "parent": "OW Desert Ledge",
         "sections": [
             {
                 "name": "Entrance",
                 "access_rules": [
-                    "glitch_mode_ow,@Mire Area,mirror"
+                    "glitch_mode_ow,@OW Mire,mirror"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_desert"
             }
         ],
         "map_locations": [
@@ -1615,9 +1609,9 @@
         "short_name": "Checkerboard",
         "parent": "Desert Area",
         "access_rules": [
-            "world_state_open,@Mire Area,mirror",
+            "world_state_open,@OW Mire,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@Light World,pearl",
+            "world_state_inverted,@OW Desert,pearl",
             "glitch_mode_major"
         ],
         "sections": [
@@ -1629,7 +1623,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_desert"
             }
         ],
         "map_locations": [
@@ -1645,14 +1639,14 @@
                 "x": 354,
                 "y": 1560,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "glitch_mode_none,ow_shuffle_off,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
     {
         "name": "Aginah's Cave Entrance",
         "short_name": "Aginah's Cave",
-        "parent": "Desert Area",
+        "parent": "OW Desert",
         "sections": [
             {
                 "name": "Entrance",
@@ -1661,7 +1655,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_desert"
             }
         ],
         "map_locations": [
@@ -1677,11 +1671,12 @@
     {
         "name": "Cave 45 Entrance",
         "short_name": "Cave 45",
-        "parent": "Light World",
+        "parent": "OW Cave 45",
         "access_rules": [
+            "world_state_open,@OW Bush Circle,mirror",
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted",
+            "world_state_inverted,@Light World",
             "glitch_mode_major"
         ],
         "sections": [
@@ -1692,7 +1687,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_cave45"
             }
         ],
         "map_locations": [
@@ -1708,13 +1703,13 @@
                 "x": 552,
                 "y": 1693,
                 "size": 48,
-                "restrict_visibility_rules": [ "glitch_mode_none,entrance_shuffle_all,world_state_open" ]
+                "restrict_visibility_rules": [ "glitch_mode_none,ow_shuffle_off,entrance_shuffle_all,world_state_open" ]
             }
         ]
     },
     {
         "name": "Desert Fairy Cave",
-        "parent": "Desert Area",
+        "parent": "OW Desert Pass",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -1732,7 +1727,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_desert_pass"
             }
         ],
         "map_locations": [
@@ -1755,7 +1750,7 @@
     {
         "name": "Fifty Rupee Cave",
         "short_name": "50 Rupee Cave",
-        "parent": "Desert Area",
+        "parent": "OW Desert Pass",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1778,7 +1773,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_desert_pass"
             }
         ],
         "map_locations": [
@@ -1801,7 +1796,7 @@
     {
         "name": "Dam Entrance",
         "short_name": "Dam",
-        "parent": "Light World",
+        "parent": "OW Dam",
         "sections": [
             {
                 "name": "Entrance",
@@ -1810,7 +1805,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_dam"
             }
         ],
         "map_locations": [
@@ -1825,7 +1820,7 @@
     },
     {
         "name": "Central Bonk Rocks",
-        "parent": "Light World",
+        "parent": "OW Central Bonk Rocks",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1833,9 +1828,7 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [
-                    "boots,[nothing]"
-                ],
+                "access_rules": [ "boots,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
                 "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
@@ -1843,16 +1836,14 @@
             },
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "boots"
-                ],
+                "access_rules": [ "boots" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "visibility_rules": [ "entrance_shuffle_all" ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_central_bonk"
             }
         ],
         "map_locations": [
@@ -1875,7 +1866,7 @@
     {
         "name": "Link's House Entrance",
         "short_name": "Link's House",
-        "parent": "Light World",
+        "parent": "OW Links House",
         "sections": [
             {
                 "name": "Entrance",
@@ -1884,7 +1875,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_links"
             }
         ],
         "map_locations": [
@@ -1900,7 +1891,7 @@
     {
         "name": "Hype Fairy Cave",
         "short_name": "LW Hype Cave",
-        "parent": "Light World",
+        "parent": "OW Statues",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1922,7 +1913,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_statues"
             }
         ],
         "map_locations": [
@@ -1945,7 +1936,7 @@
     {
         "name": "Lake Fortune Teller",
         "short_name": "Lake Fortune",
-        "parent": "Light World",
+        "parent": "OW Lake Hylia Northwest",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -1963,7 +1954,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_hylia_northwest"
             }
         ],
         "map_locations": [
@@ -1984,9 +1975,33 @@
         ]
     },
     {
+        "name": "Lake Shop Entrance",
+        "parent": "OW Lake Hylia Northwest",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/door_closed.png",
+                "chest_opened_img": "images/door_open.png",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "ow_hylia_northwest"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1460,
+                "y": 1540,
+                "size": 64
+            }
+        ]
+    },
+    {
         "name": "Mini Moldorm Cave Entrance",
         "short_name": "Mini Moldorm",
-        "parent": "Light World",
+        "parent": "OW Lake Hylia South Shore",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -1999,7 +2014,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_hylia_shore"
             }
         ],
         "map_locations": [
@@ -2013,43 +2028,11 @@
         ]
     },
     {
-        "name": "Lake Shop Entrance",
-        "parent": "Light World",
-        "sections": [
-            {
-                "name": "Entrance",
-                "chest_unopened_img": "images/door_closed.png",
-                "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "capture_item": true,
-                "capture_item_layout": "tracker_capture_entrance",
-                "item_count": 1,
-                "hosted_item": "light_world"
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1460,
-                "y": 1540,
-                "size": 64
-            }
-        ]
-    },
-    {
         "name": "Upgrade Fairy",
-        "parent": "Water Areas",
+        "parent": "OW Lake Hylia Central Island",
         "sections": [
             {
                 "name": "Entrance",
-                "access_rules": [
-                    "world_state_open,[flippers]",
-                    "world_state_open,ip_area,mirror",
-                    "world_state_open,glitch_mode_ow",
-                    "world_state_inverted,@Light World,pearl,[flippers]",
-                    "world_state_inverted,[flippers],lift2",
-                    "world_state_inverted,glitch_mode_ow,pearl"
-                ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "capture_item": true,
@@ -2071,7 +2054,7 @@
     {
         "name": "Ice Rod Cave Entrance",
         "short_name": "Ice Rod Cave",
-        "parent": "Light World",
+        "parent": "OW Ice Cave",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -2084,7 +2067,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_ice_cave"
             }
         ],
         "map_locations": [
@@ -2099,7 +2082,7 @@
     },
     {
         "name": "Cold Bee Cave",
-        "parent": "Light World",
+        "parent": "OW Ice Cave",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -2117,7 +2100,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_ice_cave"
             }
         ],
         "map_locations": [
@@ -2140,7 +2123,7 @@
     {
         "name": "Twenty Rupee Cave",
         "short_name": "20 Rupee Cave",
-        "parent": "Light World",
+        "parent": "OW Ice Cave",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -2163,7 +2146,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "light_world"
+                "hosted_item": "ow_ice_cave"
             }
         ],
         "map_locations": [
@@ -2186,7 +2169,7 @@
     {
         "name": "Death Mountain Descent Front",
         "short_name": "DM Descent",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2195,7 +2178,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2211,7 +2194,7 @@
     {
         "name": "Death Mountain Descent Back",
         "short_name": "DM Descent Exit",
-        "parent": "Light World",
+        "parent": "OW Mountain Entry",
         "access_rules": [
             "world_state_open,bumper_cave,mirror",
             "world_state_open,glitch_mode_ow,boots",
@@ -2243,7 +2226,7 @@
     {
         "name": "Death Mountain Entry Cave",
         "short_name": "DM Entry",
-        "parent": "Light World",
+        "parent": "OW Mountain Entry",
         "access_rules": [
             "world_state_open,bumper_entrance,mirror",
             "world_state_open,lift1",
@@ -2275,7 +2258,7 @@
     {
         "name": "Death Mountain Entry Back",
         "short_name": "DM Entry Back",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2284,7 +2267,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2300,7 +2283,7 @@
     {
         "name": "Tower of Hera Entrance",
         "short_name": "ToH Entrance",
-        "parent": "Death Mountain West Top",
+        "parent": "OW Death Mountain West Top",
         "sections": [
             {
                 "name": "Entrance",
@@ -2309,7 +2292,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_top"
+                "hosted_item": "ow_dm_west_top"
             }
         ],
         "map_locations": [
@@ -2325,7 +2308,7 @@
     {
         "name": "Spectacle Rock Top",
         "short_name": "Spec Rock Top",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2334,7 +2317,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2350,7 +2333,7 @@
     {
         "name": "Spectacle Rock Left",
         "short_name": "Spec Rock Left",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2359,7 +2342,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2375,7 +2358,7 @@
     {
         "name": "Spectacle Rock Bottom",
         "short_name": "Spec Rock Bottom",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2384,7 +2367,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2400,7 +2383,7 @@
     {
         "name": "Old Man Back Door",
         "short_name": "Old Man Back",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2409,7 +2392,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_west_bottom"
+                "hosted_item": "ow_dm_west_bottom"
             }
         ],
         "map_locations": [
@@ -2425,7 +2408,7 @@
     {
         "name": "Paradox Cave Top",
         "short_name": "Paradox Top",
-        "parent": "Death Mountain East Top",
+        "parent": "OW Death Mountain East Top",
         "sections": [
             {
                 "name": "Entrance",
@@ -2434,7 +2417,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dm_east_top"
+                "hosted_item": "ow_dm_east_top"
             }
         ],
         "map_locations": [
@@ -2450,9 +2433,9 @@
     {
         "name": "Spiral Cave Top",
         "short_name": "Spiral Top",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "access_rules": [
-            "@Death Mountain East Top",
+            "@OW Death Mountain East Top",
             "world_state_open,ddm_tr_bridge,mirror"
         ],
         "sections": [
@@ -2479,11 +2462,11 @@
     {
         "name": "Mimic Cave Entrance",
         "short_name": "Mimic Cave",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "world_state_open,ddm_tr_bridge,mirror",
             "world_state_open,glitch_mode_ow,hammer,mirror",
-            "world_state_inverted,@Death Mountain East Top"
+            "world_state_inverted,@OW Death Mountain East Top"
         ],
         "sections": [
             {
@@ -2509,10 +2492,10 @@
     {
         "name": "Fairy Ascension Top",
         "short_name": "EDM Ledge",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "dm_east_connect",
-            "@Death Mountain East Top",
+            "@OW Death Mountain East Top",
             "world_state_open,ddm_tr_safety,mirror"
         ],
         "sections": [
@@ -2539,7 +2522,7 @@
     {
         "name": "Spiral Cave Bottom",
         "short_name": "Spiral Bottom",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2564,13 +2547,13 @@
     {
         "name": "Fairy Ascension Bottom",
         "short_name": "EDM Mitts",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "dm_east_connect",
-            "@Death Mountain East Top",
+            "@OW Death Mountain East Top",
             "world_state_open,lift2",
             "world_state_open,ddm_tr_safety,mirror",
-            "world_state_open,@Dark Death Mountain East,pearl,mirror",
+            "world_state_open,@OW Dark Death Mountain East Bottom,pearl,mirror",
             "world_state_inverted,pearl,lift2"
         ],
         "sections": [
@@ -2597,7 +2580,7 @@
     {
         "name": "Hookshot Fairy Cave",
         "short_name": "Hookshot Fairy",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -2645,7 +2628,7 @@
     {
         "name": "Paradox Cave Middle",
         "short_name": "Paradox Middle",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2670,7 +2653,7 @@
     {
         "name": "Waterfall Fairy Cave",
         "short_name": "Waterfall Fairy",
-        "parent": "Zora Area",
+        "parent": "OW Zora Approach",
         "access_rules": [
             "world_state_open,flippers",
             "world_state_open,[flippers],pearl",
@@ -2688,7 +2671,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "zora_area"
+                "hosted_item": "zora_waterfall"
             }
         ],
         "map_locations": [
@@ -2704,7 +2687,7 @@
     {
         "name": "Paradox Cave Bottom",
         "short_name": "Paradox Bottom",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -2730,7 +2713,7 @@
     {
         "name": "Skull Woods Back",
         "short_name": "SW Boss",
-        "parent": "Skull Woods Back Area",
+        "parent": "OW Skull Woods Back",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],boots,bottle",
@@ -2762,7 +2745,7 @@
     {
         "name": "Skull Woods Back South",
         "short_name": "SW Back South",
-        "parent": "Skull Woods Back Area",
+        "parent": "OW Skull Woods Back",
         "sections": [
             {
                 "name": "Entrance",
@@ -2787,7 +2770,7 @@
     {
         "name": "Skull Woods Back Drop",
         "short_name": "SW Back Drop",
-        "parent": "Skull Woods Back Area",
+        "parent": "OW Skull Woods Back",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted"
@@ -2815,7 +2798,7 @@
     {
         "name": "Skull Woods Front Area",
         "short_name": "SW Front Area",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "access_rules": [
             "world_state_open,[pearl]",
             "world_state_inverted"
@@ -2826,7 +2809,7 @@
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_sw_front"
             }
         ],
         "map_locations": [
@@ -2843,7 +2826,7 @@
     {
         "name": "Skull Woods Front Left",
         "short_name": "SW Front Left",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "sections": [
             {
                 "name": "Entrance",
@@ -2852,7 +2835,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_sw_front"
             }
         ],
         "map_locations": [
@@ -2868,7 +2851,7 @@
     {
         "name": "Skull Woods Front Left Drop",
         "short_name": "SW Left Drop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "sections": [
             {
                 "name": "Dropdown",
@@ -2892,7 +2875,7 @@
     {
         "name": "Skull Woods Front Right Drop",
         "short_name": "SW Right Drop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "sections": [
             {
                 "name": "Dropdown",
@@ -2916,7 +2899,7 @@
     {
         "name": "Skull Woods Front Right",
         "short_name": "SW Front Right",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "sections": [
             {
                 "name": "Entrance",
@@ -2925,7 +2908,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_sw_front"
             }
         ],
         "map_locations": [
@@ -2941,7 +2924,7 @@
     {
         "name": "Skull Woods Big Chest Drop",
         "short_name": "SW Bush Drop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Skull Woods Front",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -2970,7 +2953,7 @@
     {
         "name": "Dark Lumberjack",
         "short_name": "Dark LJ House",
-        "parent": "Northwest Dark World",
+        "parent": "OW Dark Lumberjack",
         "sections": [
             {
                 "name": "Entrance",
@@ -2980,7 +2963,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_dark_lumberjack"
             }
         ],
         "map_locations": [
@@ -2994,7 +2977,7 @@
     },
     {
         "name": "Dark Chapel",
-        "parent": "Northwest Dark World",
+        "parent": "OW Chapel",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3012,7 +2995,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_chapel"
             }
         ],
         "map_locations": [
@@ -3034,7 +3017,7 @@
     },
     {
         "name": "Shield Shop Entrance",
-        "parent": "Northwest Dark World",
+        "parent": "OW Shield Shop",
         "sections": [
             {
                 "name": "Entrance",
@@ -3044,7 +3027,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_shield_shop"
             }
         ],
         "map_locations": [
@@ -3059,7 +3042,7 @@
     {
         "name": "Village of Outkasts Fortune Teller",
         "short_name": "Dark Fortune",
-        "parent": "Northwest Dark World",
+        "parent": "OW Outcast Fortune",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3077,7 +3060,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_outcasts"
             }
         ],
         "map_locations": [
@@ -3100,7 +3083,7 @@
     {
         "name": "Chest Game Entrance",
         "short_name": "Chest Game",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "sections": [
             {
                 "name": "Entrance",
@@ -3109,7 +3092,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_outcasts"
             }
         ],
         "map_locations": [
@@ -3125,7 +3108,7 @@
     {
         "name": "Thieves Town Entrance",
         "short_name": "TT Entrance",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,glitch_mode_ow,[pearl]",
@@ -3139,7 +3122,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_outcasts"
             }
         ],
         "map_locations": [
@@ -3155,7 +3138,7 @@
     {
         "name": "C-Shaped House Entrance",
         "short_name": "C-Shaped House",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "sections": [
             {
                 "name": "Entrance",
@@ -3164,7 +3147,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_outcasts"
             }
         ],
         "map_locations": [
@@ -3179,7 +3162,7 @@
     },
     {
         "name": "Hammer House",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],boots,bottle",
@@ -3215,7 +3198,7 @@
     {
         "name": "Brewery Entrance",
         "short_name": "Brewery",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3229,7 +3212,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_west"
+                "hosted_item": "ow_outcasts"
             }
         ],
         "map_locations": [
@@ -3245,10 +3228,12 @@
     {
         "name": "Hammer Pegs Cave",
         "short_name": "Hammer Pegs",
-        "parent": "Hammer Pegs Area",
+        "parent": "Dark World Color",
         "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted",
+            "@Hammer Pegs Area",
+            "world_state_open,ow_hammerpegs,pearl,lift2",
+            "world_state_inverted,ow_hammerpegs,lift2",
+            "world_state_inverted,ow_blacksmith,mirror",
             "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
@@ -3276,7 +3261,7 @@
     {
         "name": "Archery Game",
         "short_name": "Arrow Game",
-        "parent": "South Dark World",
+        "parent": "OW Archery Game",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3294,7 +3279,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_archery"
             }
         ],
         "map_locations": [
@@ -3316,7 +3301,7 @@
     },
     {
         "name": "Pyramid Hole",
-        "parent": "East Dark World",
+        "parent": "OW Pyramid",
         "access_rules": [ "aga2" ],
         "sections": [
             {
@@ -3341,7 +3326,7 @@
     {
         "name": "Pyramid Hole Exit",
         "short_name": "Pyramid Exit",
-        "parent": "East Dark World",
+        "parent": "OW Pyramid",
         "access_rules": [ "nothing" ],
         "sections": [
             {
@@ -3351,7 +3336,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance_insanity",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_pyramid"
             }
         ],
         "map_locations": [
@@ -3367,11 +3352,11 @@
     {
         "name": "Pyramid Fairy Cave",
         "short_name": "Pyramid Fairy",
-        "parent": "Dark World Color",
+        "parent": "OW Pyramid",
         "access_rules": [
-            "@East Dark World,crystal56:2",
-            "@East Dark World,crystal:7",
-            "@East Dark World,prize:10",
+            "crystal56:2",
+            "crystal:7",
+            "prize:10",
             "world_state_open,glitch_mode_ow,boots,mirror",
             "world_state_inverted,glitch_mode_ow,pearl,boots,mirror"
         ],
@@ -3383,7 +3368,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_pyramid"
             }
         ],
         "map_locations": [
@@ -3399,7 +3384,7 @@
     {
         "name": "Dark Witch's Hut Entrance",
         "short_name": "Dark Witch",
-        "parent": "Northeast Dark World",
+        "parent": "OW Dark Witch",
         "sections": [
             {
                 "name": "Entrance",
@@ -3409,7 +3394,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_witch"
+                "hosted_item": "ow_dark_witch"
             }
         ],
         "map_locations": [
@@ -3424,7 +3409,7 @@
     {
         "name": "Dark Sahasrahla",
         "short_name": "Dark Sah",
-        "parent": "East Dark World",
+        "parent": "OW Palace of Darkness",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3442,7 +3427,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_dark_palace"
             }
         ],
         "map_locations": [
@@ -3465,7 +3450,7 @@
     {
         "name": "Palace of Darkness Entrance",
         "short_name": "PoD Entrance",
-        "parent": "East Dark World",
+        "parent": "OW Palace of Darkness",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3479,7 +3464,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_dark_palace"
             }
         ],
         "map_locations": [
@@ -3494,7 +3479,7 @@
     },
     {
         "name": "Dark Trees Fairy",
-        "parent": "East Dark World",
+        "parent": "OW Dark Tree Line",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3512,7 +3497,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_dark_tree_line"
             }
         ],
         "map_locations": [
@@ -3535,7 +3520,7 @@
     {
         "name": "East Storyteller Cave",
         "short_name": "East Storyteller",
-        "parent": "East Dark World",
+        "parent": "OW Palace of Darkness Nook",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3553,7 +3538,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_east"
+                "hosted_item": "ow_dark_nook"
             }
         ],
         "map_locations": [
@@ -3576,7 +3561,7 @@
     {
         "name": "Mire Shed Cave",
         "short_name": "Mire Shed",
-        "parent": "Mire Area",
+        "parent": "OW Mire",
         "sections": [
             {
                 "name": "Entrance",
@@ -3601,7 +3586,7 @@
     {
         "name": "Misery Mire Entrance",
         "short_name": "MM Entrance",
-        "parent": "Mire Area",
+        "parent": "OW Mire",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3644,7 +3629,7 @@
     },
     {
         "name": "Mire Fairy",
-        "parent": "Mire Area",
+        "parent": "OW Mire",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3684,7 +3669,7 @@
     },
     {
         "name": "Mire Hint Cave",
-        "parent": "Mire Area",
+        "parent": "OW Mire",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3725,7 +3710,7 @@
     {
         "name": "Swamp Palace Entrance",
         "short_name": "SP Entrance",
-        "parent": "South Dark World",
+        "parent": "OW Swamp",
         "sections": [
             {
                 "name": "Entrance",
@@ -3734,7 +3719,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_swamp"
             }
         ],
         "map_locations": [
@@ -3749,7 +3734,7 @@
     },
     {
         "name": "Dark Bonk Rocks",
-        "parent": "South Dark World",
+        "parent": "OW Dark Central Bonk Rocks",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3773,7 +3758,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_dark_bonk"
             }
         ],
         "map_locations": [
@@ -3795,7 +3780,7 @@
     },
     {
         "name": "Bomb Shop",
-        "parent": "South Dark World",
+        "parent": "OW Bomb Shop",
         "sections": [
             {
                 "name": "Entrance",
@@ -3804,7 +3789,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_bomb_shop"
             }
         ],
         "map_locations": [
@@ -3820,7 +3805,7 @@
     {
         "name": "Hype Cave Entrance",
         "short_name": "Hype Cave",
-        "parent": "South Dark World",
+        "parent": "OW Hype",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3834,7 +3819,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_hype"
             }
         ],
         "map_locations": [
@@ -3850,7 +3835,7 @@
     {
         "name": "Dark Lake Shop Entrance",
         "short_name": "Dark Lake Shop",
-        "parent": "South Dark World",
+        "parent": "OW Ice Lake Northwest",
         "sections": [
             {
                 "name": "Entrance",
@@ -3860,7 +3845,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_south"
+                "hosted_item": "ow_hylia_northwest"
             }
         ],
         "map_locations": [
@@ -3875,18 +3860,14 @@
     {
         "name": "Ice Palace Entrance",
         "short_name": "IP Entrance",
-        "parent": "Water Area Color",
+        "parent": "OW Ice Lake Island",
         "access_rules": [
-            "world_state_open,[flippers],lift2",
-            "world_state_open,upgrade_fairy,lift2",
+            "@OW Ice Lake Island",
             "world_state_open,glitch_mode_ow,lift2",
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
             "world_state_open,glitch_mode_ow,pearl,boots,[flippers],mirror",
             "world_state_open,glitch_mode_ow,[pearl],boots,[flippers],bottle,mirror",
-            "world_state_inverted,@Light World,pearl[flippers],mirror",
-            "world_state_inverted,@East Dark World,[flippers]",
-            "world_state_inverted,upgrade_fairy,mirror",
             "world_state_inverted,glitch_mode_ow,lift2",
             "world_state_inverted,glitch_mode_ow,boots,flippers" //prob soon to be removed from logic
         ],
@@ -3914,7 +3895,7 @@
     {
         "name": "Dark Lake Hylia Fairy",
         "short_name": "Dark Hylia Fairy",
-        "parent": "Southeast Dark World",
+        "parent": "OW Shopping Mall",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -3937,7 +3918,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_southeast"
+                "hosted_item": "ow_shopping_mall"
             }
         ],
         "map_locations": [
@@ -3960,7 +3941,7 @@
     {
         "name": "Hamburger Helper Cave",
         "short_name": "Hamburger Helper",
-        "parent": "Southeast Dark World",
+        "parent": "OW Shopping Mall",
         "sections": [
             {
                 "name": "Take Any Cave",
@@ -3978,7 +3959,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_southeast"
+                "hosted_item": "ow_shopping_mall"
             }
         ],
         "map_locations": [
@@ -4001,7 +3982,7 @@
     {
         "name": "Spike Hint Cave",
         "short_name": "Spike Hint",
-        "parent": "Southeast Dark World",
+        "parent": "OW Shopping Mall",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -4025,7 +4006,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "dw_southeast"
+                "hosted_item": "ow_shopping_mall"
             }
         ],
         "map_locations": [
@@ -4048,7 +4029,7 @@
     {
         "name": "Bumper Cave Top",
         "short_name": "Bumper Top",
-        "parent": "Northwest Dark World",
+        "parent": "Dark World Color",
         "access_rules": [
             "world_state_open,nothing",
             "world_state_open,glitch_mode_ow,pearl,boots",
@@ -4081,7 +4062,7 @@
     {
         "name": "Bumper Cave Bottom",
         "short_name": "Bumper Bottom",
-        "parent": "Northwest Dark World",
+        "parent": "OW Bumper Cave",
         "access_rules": [
             "world_state_open,pearl,lift1",
             "world_state_open,glitch_mode_ow,pearl,boots",
@@ -4120,8 +4101,8 @@
             {
                 "name": "Take Any Cave",
                 "access_rules": [
-                    "world_state_open,@Dark Death Mountain West,[nothing]",
-                    "world_state_inverted,@Light World,pearl,lift1,cape,mirror,[nothing]"
+                    "world_state_open,@OW Dark Death Mountain West Bottom,[nothing]",
+                    "world_state_inverted,@OW Mountain Entry,pearl,lift1,cape,mirror,[nothing]"
                 ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
@@ -4130,14 +4111,14 @@
             },
             {
                 "name": "Entrance",
-                "access_rules": [ "@Dark Death Mountain West" ],
+                "access_rules": [ "@OW Dark Death Mountain West Bottom" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
                 "visibility_rules": [ "entrance_shuffle_all" ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_west"
+                "hosted_item": "ow_ddm_west_bottom"
             }
         ],
         "map_locations": [
@@ -4167,7 +4148,7 @@
     {
         "name": "Spike Cave Entrance",
         "short_name": "Spike Cave",
-        "parent": "Dark Death Mountain West",
+        "parent": "OW Dark Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -4176,7 +4157,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_west"
+                "hosted_item": "ow_ddm_west_bottom"
             }
         ],
         "map_locations": [
@@ -4192,7 +4173,7 @@
     {
         "name": "Ganon's Tower Entrance",
         "short_name": "GT Entrance",
-        "parent": "Dark Death Mountain Top",
+        "parent": "OW Dark Death Mountain West Top",
         "access_rules": [
             "world_state_open,$gtCrystalCount",
             "world_state_open,glitch_mode_ow,pearl,boots",
@@ -4206,7 +4187,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_top"
+                "hosted_item": "ow_ddm_west_top"
             }
         ],
         "map_locations": [
@@ -4222,11 +4203,11 @@
     {
         "name": "Hookshot Cave Island",
         "short_name": "Floating Island",
-        "parent": "Dark Death Mountain",
+        "parent": "OW Dark Death Mountain East Top",
         "access_rules": [
             "ddm_floating",
             "world_state_open,glitch_mode_ow,pearl,boots",
-            "world_state_inverted,@Death Mountain East Top,mirror",
+            "world_state_inverted,@OW Death Mountain East Top,mirror",
             "world_state_inverted,glitch_mode_ow,@Mountain Access,boots",
             "glitch_mode_major"
         ],
@@ -4254,7 +4235,7 @@
     {
         "name": "Hookshot Cave Entrance",
         "short_name": "Hookshot Cave",
-        "parent": "Dark Death Mountain Top",
+        "parent": "OW Dark Death Mountain East Top",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
@@ -4269,7 +4250,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_top"
+                "hosted_item": "ow_ddm_east_top"
             }
         ],
         "map_locations": [
@@ -4285,7 +4266,7 @@
     {
         "name": "Superbunny Cave Top",
         "short_name": "Superbunny Top",
-        "parent": "Dark Death Mountain Top",
+        "parent": "OW Dark Death Mountain East Top",
         "sections": [
             {
                 "name": "Entrance",
@@ -4294,7 +4275,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_top"
+                "hosted_item": "ow_ddm_east_top"
             }
         ],
         "map_locations": [
@@ -4309,7 +4290,7 @@
     },
     {
         "name": "Dark Death Mountain TR Bridge",
-        "parent": "Dark Death Mountain",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
             "@TR Bridge Entrances OW",
             "world_state_inverted,dm_east_spiral,mirror",
@@ -4383,7 +4364,7 @@
     {
         "name": "Turtle Laser Bridge Entrance",
         "short_name": "TR Laser",
-        "parent": "Dark Death Mountain",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
             "ddm_tr_safety",
             "@TR Laser Entrance OW",
@@ -4420,7 +4401,7 @@
     {
         "name": "Superbunny Cave Bottom",
         "short_name": "Superbunny Bottom",
-        "parent": "Dark Death Mountain East",
+        "parent": "OW Dark Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -4429,7 +4410,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_east"
+                "hosted_item": "ddm_east_bottom"
             }
         ],
         "map_locations": [
@@ -4445,7 +4426,7 @@
     {
         "name": "Dark Death Mountain Shop Entrance",
         "short_name": "DDM Shop",
-        "parent": "Dark Death Mountain East",
+        "parent": "OW Dark Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Entrance",
@@ -4455,7 +4436,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_east"
+                "hosted_item": "ddm_east_bottom"
             }
         ],
         "map_locations": [
@@ -4470,10 +4451,9 @@
     {
         "name": "Turtle Rock Entrance",
         "short_name": "TR Entrance",
-        "parent": "Dark Death Mountain Top",
+        "parent": "OW Turtle Rock",
         "access_rules": [
-            "world_state_open,@Death Mountain East Top,lift2,hammer,pearl",
-            "world_state_inverted",
+            "@OW Turtle Rock",
             "{$hasNotSeenTurtleMedallion}"
         ],
         "sections": [
@@ -4488,7 +4468,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ddm_top"
+                "hosted_item": "ow_turtlerock"
             },
             {
                 "name": "Medallion",

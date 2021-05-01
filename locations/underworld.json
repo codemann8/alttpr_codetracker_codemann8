@@ -2,7 +2,7 @@
     //Light World
     {
         "name": "Forest Hideout",
-        "parent": "Light World",
+        "parent": "OW Lost Woods East",
         "sections": [
             {
                 "name": "Stash",
@@ -26,7 +26,7 @@
     },
     {
         "name": "Lumberjack Cave",
-        "parent": "Light World",
+        "parent": "OW Lumberjack",
         "sections": [
             {
                 "name": "Cave",
@@ -51,7 +51,7 @@
     },
     {
         "name": "Kakariko Well",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Cave",
@@ -83,7 +83,7 @@
     },
     {
         "name": "Blind's House",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Basement",
@@ -117,7 +117,7 @@
     },
     {
         "name": "Chicken House",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -139,7 +139,7 @@
     },
     {
         "name": "Sick Kid",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "By The Bed",
@@ -158,7 +158,7 @@
     },
     {
         "name": "Kakariko Shop",
-        "parent": "Light World",
+        "parent": "OW Kakariko Village",
         "sections": [
             {
                 "name": "Shop",
@@ -195,7 +195,7 @@
     },
     {
         "name": "Magic Bat",
-        "parent": "Light World",
+        "parent": "OW Blacksmith",
         "access_rules": [
             "world_state_open,hammer",
             "world_state_open,lift2,pearl,mirror",
@@ -224,7 +224,7 @@
     },
     {
         "name": "Library",
-        "parent": "Light World",
+        "parent": "OW Kakariko Suburb",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -252,7 +252,7 @@
     },
     {
         "name": "Bonk Rocks",
-        "parent": "Light World",
+        "parent": "OW Bonk Rocks",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -275,12 +275,13 @@
     },
     {
         "name": "Graveyard Ledge",
-        "parent": "Light World",
+        "parent": "OW Graveyard",
         "access_rules": [
+            "world_state_open,@OW Dark Graveyard,pearl,mirror",
             "world_state_open,@Northwest Dark World,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl",
-            "glitch_mode_ow,@Mountain Access,mirror",
+            "glitch_mode_ow,@OW Death Mountain West Bottom,mirror",
             "glitch_mode_major"
         ],
         "sections": [
@@ -301,13 +302,13 @@
                 "x": 1132,
                 "y": 549,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
     {
         "name": "King's Tomb",
-        "parent": "Light World",
+        "parent": "OW Graveyard",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -318,7 +319,7 @@
                 "access_rules": [
                     "lift2,boots",
                     "glitch_mode_ow,boots",
-                    "world_state_open,@Northwest Dark World,pearl,mirror,boots"
+                    "world_state_open,@OW Dark Graveyard,pearl,mirror,boots"
                 ],
                 "item_count": 1
             }
@@ -335,7 +336,7 @@
     {
         "name": "Secret Passage",
         "short_name": "Uncle",
-        "parent": "Light World",
+        "parent": "OW Castle Perimeter",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -361,7 +362,7 @@
     },
     {
         "name": "Link's House",
-        "parent": "Light World Color",
+        "parent": "OW Links House",
         "sections": [
             {
                 "name": "By The Door",
@@ -385,7 +386,7 @@
     },
     {
         "name": "Lake Shop",
-        "parent": "Light World",
+        "parent": "OW Lake Hylia Northwest",
         "sections": [
             {
                 "name": "Shop",
@@ -423,9 +424,9 @@
     {
         "name": "Checkerboard Cave",
         "short_name": "Checkerboard",
-        "parent": "Desert Area",
+        "parent": "OW Desert",
         "access_rules": [
-            "world_state_open,@Mire Area,mirror",
+            "world_state_open,@OW Mire,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl",
             "glitch_mode_major"
@@ -449,13 +450,13 @@
                 "x": 354,
                 "y": 1560,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
     {
         "name": "Aginah's Cave",
-        "parent": "Desert Area",
+        "parent": "OW Desert",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -477,13 +478,14 @@
     },
     {
         "name": "Cave 45",
-        "parent": "Light World",
+        "parent": "OW Cave 45",
         "access_rules": [
+            "world_state_open,@OW Bush Circle,mirror",
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl",
-            "world_state_inverted,[pearl],mirror",
-            "world_state_inverted,glitch_mode_ow,mirror",
+            "world_state_inverted,@Light World,pearl",
+            "world_state_inverted,@Light World,[pearl],mirror",
+            "world_state_inverted,@Light World,glitch_mode_ow,mirror",
             "glitch_mode_major",
             "{world_state_inverted}"
         ],
@@ -506,13 +508,13 @@
                 "x": 552,
                 "y": 1693,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
             }
         ]
     },
     {
         "name": "Dam",
-        "parent": "Light World",
+        "parent": "OW Dam",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -541,7 +543,7 @@
     {
         "name": "Mini Moldorm Cave",
         "short_name": "Mini-Moldorm",
-        "parent": "Light World",
+        "parent": "OW Lake Hylia South Shore",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -563,7 +565,7 @@
     },
     {
         "name": "Ice Rod Cave",
-        "parent": "Light World",
+        "parent": "OW Ice Cave",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -585,11 +587,7 @@
     },
     {
         "name": "Pond of Happiness",
-        "parent": "Light World",
-        "access_rules": [
-            "world_state_open,[flippers]",
-            "world_state_inverted,pearl,[flippers]"
-        ],
+        "parent": "OW Lake Hylia Central Island",
         "sections": [
             {
                 "name": "Items",
@@ -608,7 +606,7 @@
     },
     {
         "name": "Potion Shop",
-        "parent": "Light World",
+        "parent": "OW Potion Shop",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -642,7 +640,7 @@
     {
         "name": "Sahasrala's Hut",
         "short_name": "Sah's Hut",
-        "parent": "Light World",
+        "parent": "OW Eastern Palace",
         "sections": [
             {
                 "name": "Closet",
@@ -674,7 +672,7 @@
     },
     {
         "name": "Old Man",
-        "parent": "Death Mountain West Bottom",
+        "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Bring Him Home",
@@ -708,7 +706,7 @@
     },
     {
         "name": "Paradox Cave",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -740,7 +738,7 @@
     },
     {
         "name": "Spiral Cave",
-        "parent": "Death Mountain East Top",
+        "parent": "OW Death Mountain East Top",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,[pearl]",
@@ -763,7 +761,7 @@
     },
     {
         "name": "Mimic Cave",
-        "parent": "Death Mountain East Top",
+        "parent": "OW Death Mountain East Top",
         "access_rules": [
             "door_shuffle_off,world_state_open,@TR Main Entrance,somaria,pool_keydrop_off,tr_smallkey:2,mirror",
             "door_shuffle_off,world_state_open,@TR Main Entrance,somaria,pool_keydrop_on,tr_smallkey:3,mirror",
@@ -791,14 +789,14 @@
                 "x": 1694,
                 "y": 194,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_off,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_off,glitch_mode_none" ]
             }
         ]
     },
     {
         "name": "Paradox Cave Shop",
         "short_name": "Paradox Shop",
-        "parent": "Death Mountain East Bottom",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Shop",
@@ -835,7 +833,7 @@
     },
     {
         "name": "Waterfall Fairy",
-        "parent": "Zora Area",
+        "parent": "OW Zora Approach",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl"
@@ -867,7 +865,7 @@
     {
         "name": "Dark Lumberjack Shop",
         "short_name": "Dark LJ Shop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Dark Lumberjack",
         "sections": [
             {
                 "name": "Shop",
@@ -904,7 +902,7 @@
     },
     {
         "name": "Shield Shop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Shield Shop",
         "sections": [
             {
                 "name": "Shop",
@@ -941,7 +939,7 @@
     },
     {
         "name": "Chest Game",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
@@ -966,7 +964,7 @@
     },
     {
         "name": "C-Shaped House",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
@@ -992,7 +990,7 @@
     {
         "name": "Village of Outcasts Shop",
         "short_name": "VoO Shop",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],boots,bottle",
@@ -1045,7 +1043,7 @@
     },
     {
         "name": "Brewery",
-        "parent": "Northwest Dark World",
+        "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,glitch_mode_ow,[pearl],bottle",
@@ -1068,16 +1066,20 @@
     },
     {
         "name": "Hammer Pegs",
-        "parent": "Hammer Pegs Area",
+        "parent": "OW Hammer Pegs",
         "access_rules": [
-            "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
-            "world_state_inverted"
+            "world_state_open,pearl,lift2",
+            "world_state_inverted,lift2",
+            "world_state_inverted,@OW Blacksmith,mirror"
         ],
         "sections": [
             {
                 "name": "Cave",
-                "access_rules": [ "hammer" ],
+                "access_rules": [
+                    "world_state_open,pearl,hammer",
+                    "world_state_open,glitch_mode_ow,[pearl],bottle,hammer",
+                    "world_state_inverted,hammer"
+                ],
                 "item_count": 1
             }
         ],
@@ -1092,7 +1094,7 @@
     },
     {
         "name": "Mire Shed",
-        "parent": "Mire Area",
+        "parent": "OW Mire",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
@@ -1116,7 +1118,7 @@
     },
     {
         "name": "Dark Witch's Hut",
-        "parent": "Northeast Dark World",
+        "parent": "OW Dark Witch",
         "sections": [
             {
                 "name": "Shop",
@@ -1153,27 +1155,22 @@
     },
     {
         "name": "Pyramid Fairy",
-        "parent": "Dark World Color",
+        "parent": "OW Pyramid",
         "access_rules": [
-            "world_state_open,@East Dark World,pearl,crystal56:2",
-            "world_state_open,@East Dark World,pearl,crystal:7",
-            "world_state_open,@East Dark World,pearl,prize:10",
+            "crystal56:2",
+            "crystal:7",
+            "prize:10",
             "world_state_open,glitch_mode_ow,boots,mirror",
-            "world_state_open,glitch_mode_major,bottle",
-            "world_state_inverted,@East Dark World,crystal56:2",
-            "world_state_inverted,@East Dark World,crystal:7",
-            "world_state_inverted,@East Dark World,prize:10"
+            "world_state_open,glitch_mode_major,bottle"
         ],
         "sections": [
             {
                 "name": "Big Bomb Spot",
                 "access_rules": [
-                    "world_state_open,@South Dark World,[hammer]",
-                    "world_state_open,@South Dark World,[mirror],[aga]",
+                    "",
                     "world_state_open,glitch_mode_ow,boots,mirror",
                     "world_state_open,glitch_mode_ow,[boots],[mirror],bottle",
-                    "world_state_open,glitch_mode_major,bottle",
-                    "world_state_inverted,@Light World,mirror"
+                    "world_state_open,glitch_mode_major,bottle"
                 ],
                 "item_count": 2
             }
@@ -1189,7 +1186,7 @@
     },
     {
         "name": "Dark Lake Shop",
-        "parent": "South Dark World",
+        "parent": "OW Ice Lake Northwest",
         "sections": [
             {
                 "name": "Shop",
@@ -1226,7 +1223,7 @@
     },
     {
         "name": "Hype Cave",
-        "parent": "South Dark World",
+        "parent": "OW Hype",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,glitch_mode_ow,[pearl],bottle",
@@ -1249,7 +1246,7 @@
     },
     {
         "name": "Spike Cave",
-        "parent": "Dark Death Mountain West",
+        "parent": "OW Dark Death Mountain West Bottom",
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted"
@@ -1279,11 +1276,11 @@
     },
     {
         "name": "Hookshot Cave",
-        "parent": "Dark Death Mountain Color",
+        "parent": "OW Dark Death Mountain East Top",
         "access_rules": [
-            "world_state_open,@Dark Death Mountain Top,pearl,lift1",
+            "world_state_open,pearl,lift1",
             "world_state_open,glitch_mode_ow,pearl,boots",
-            "world_state_inverted,@Dark Death Mountain Top,lift1"
+            "world_state_inverted,lift1"
         ],
         "sections": [
             {
@@ -1315,11 +1312,7 @@
     },
     {
         "name": "Superbunny Cave",
-        "parent": "Dark Death Mountain Color",
-        "access_rules": [
-            "@Dark Death Mountain Top",
-            "@Dark Death Mountain East"
-        ],
+        "parent": "OW Dark Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Cave",
@@ -1355,7 +1348,7 @@
     {
         "name": "Dark Death Mountain Shop",
         "short_name": "DDM Shop",
-        "parent": "Dark Death Mountain East",
+        "parent": "OW Dark Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Shop",

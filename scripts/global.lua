@@ -275,7 +275,7 @@ function initGlobalVars()
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)
         end
 
-        --Default Selected Door Icon Selectore
+        --Default Selected Door Icon Selector
         Tracker:FindObjectForCode("doorslot_x").ItemState:setState(1)
 
         TRACKER_READY = true
