@@ -1408,6 +1408,18 @@
         ]
     },
     {
+        "name": "OW Desert Tablet",
+        "parent": "Desert Area Color",
+        "always_allow_chest_manipulation": true,
+        "access_rules": [
+            "ow_desert_tablet",
+            "world_state_open,@South Dark World,mirror",
+            "world_state_open,glitch_mode_ow,boots",
+            "world_state_open,glitch_mode_major",
+            "world_state_inverted,@Light World"
+        ]
+    },
+    {
         "name": "OW Cave 45",
         "parent": "Light World Color",
         "always_allow_chest_manipulation": true,

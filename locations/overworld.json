@@ -247,14 +247,7 @@
     },
     {
         "name": "Bombos Tablet",
-        "parent": "Desert Area Color",
-        "access_rules": [
-            "ow_desert_tablet",
-            "world_state_open,@South Dark World,mirror",
-            "world_state_open,glitch_mode_ow,boots",
-            "world_state_open,glitch_mode_major",
-            "world_state_inverted,@Light World"
-        ],
+        "parent": "OW Desert Tablet",
         "sections": [
             {
                 "name": "Tablet",
