@@ -1089,6 +1089,10 @@
     {
         "name": "Zora Warning WN",
         "parent": "OW Zora Warning",
+        "access_rules": [
+            "world_state_open,[flippers]",
+            "world_state_inverted,pearl,[flippers]"
+        ],
         "sections": [
             {
                 "name": "Transition",
