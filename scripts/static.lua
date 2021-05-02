@@ -48,6 +48,13 @@ OverworldIdRegionMap = {
     [0x7a] = "ow_swamp_nook", [0x7b] = "ow_swamp", [0x7c] = "ow_dark_south_pass"
 }
 
+OverworldIdPearlRegionMap = {
+    [0x00] = "ow_lost_woods_east",
+    [0x18] = "ow_kakariko",
+    [0x32] = "ow_cave45",
+    [0x72] = "ow_bush_circle"
+}
+
 RoomNonLinearExclusions = {
     [0x09] = {{ 0x1228, 0x12c8, 0x0, 0xc0 }},
     [0x14] = {

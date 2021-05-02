@@ -75,11 +75,19 @@ function updateOverworldIdFromMemorySegment(segment)
 
             --Region Autotracking
             if (OBJ_ENTRANCE.CurrentStage > 0 or OBJ_OWSHUFFLE.CurrentStage > 0) and OBJ_RACEMODE.CurrentStage == 0 and (not AUTOTRACKER_DISABLE_REGION_TRACKING) and Tracker.ActiveVariantUID ~= "items_only" then
-                if OBJ_OWAREA.AcquiredCount < 0xff and OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount] then
-                    local region = Tracker:FindObjectForCode(OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount])
-                    if region then
-                        region.Active = true
-                    end
+                if OBJ_OWAREA.AcquiredCount < 0xff then
+                    if OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount] then
+                        local region = Tracker:FindObjectForCode(OverworldIdRegionMap[OBJ_OWAREA.AcquiredCount])
+                        if region then
+                            region.Active = true
+                        end
+                    elseif (OBJ_WORLDSTATE.CurrentStage == 0 and OBJ_OWAREA.AcquiredCount < 0x40)
+                            or (OBJ_WORLDSTATE.CurrentStage == 1 and OBJ_OWAREA.AcquiredCount >= 0x40) then
+                        local region = Tracker:FindObjectForCode(OverworldIdPearlRegionMap[OBJ_OWAREA.AcquiredCount])
+                        if region then
+                            region.Active = true
+                        end
+                    end  
                 end
             end
 
