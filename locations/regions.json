@@ -2631,7 +2631,7 @@
         "parent": "Dark World Color",
         "always_allow_chest_manipulation": true,
         "access_rules": [
-            "ow_octoballoon",
+            "ow_bomber_corner",
             "world_state_open,ow_bomber_corner_waterfall,pearl,flippers",
             "world_state_open,ow_qirn_west,pearl,[flippers]",
             "world_state_open,ow_qirn_east,pearl,[flippers]",
