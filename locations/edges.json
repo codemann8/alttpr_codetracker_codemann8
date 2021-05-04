@@ -4440,7 +4440,7 @@
     },
     {
         "name": "Pyramid SW",
-        "parent": "OW Pyramid",
+        "parent": "OW Pyramid Pass",
         "sections": [
             {
                 "name": "Transition",
@@ -4484,7 +4484,7 @@
     },
     {
         "name": "Pyramid ES",
-        "parent": "OW Pyramid Pass",
+        "parent": "OW Pyramid",
         "sections": [
             {
                 "name": "Transition",
