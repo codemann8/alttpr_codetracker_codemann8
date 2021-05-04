@@ -1922,6 +1922,10 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_sw_pass_west",
+            "world_state_open,ow_sw_pass_east_top,pearl",
+            "world_state_open,ow_sw_pass_east_bottom,pearl,lift2",
+            "world_state_inverted,ow_sw_pass_east_top",
+            "world_state_inverted,ow_sw_pass_east_bottom,lift2,hammer",
             "world_state_inverted,ow_lost_woods_pass_west,mirror",
             "world_state_inverted,ow_lost_woods_pass_east_top,mirror",
             "world_state_inverted,ow_lost_woods_pass_east_bottom,mirror,lift2"
@@ -1933,13 +1937,15 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_sw_pass_east_top",
+            "world_state_open,ow_sw_pass_west,pearl",
             "world_state_open,ow_sw_pass_east_bottom,pearl,lift2",
             "world_state_open,ow_lost_woods_pass_east_top,hammer,pearl",
             "world_state_open,ow_lost_woods_pass_east_bottom,lift2,pearl",
+            "world_state_inverted,ow_sw_pass_west",
+            "world_state_inverted,ow_sw_pass_east_bottom,lift2",
             "world_state_inverted,ow_lost_woods_pass_west,mirror",
             "world_state_inverted,ow_lost_woods_pass_east_top,mirror",
-            "world_state_inverted,ow_lost_woods_pass_east_bottom,mirror,lift2",
-            "world_state_inverted,ow_sw_pass_east_bottom,lift2"
+            "world_state_inverted,ow_lost_woods_pass_east_bottom,mirror,lift2"
         ]
     },
     {
@@ -1948,9 +1954,11 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_sw_pass_east_bottom",
+            "world_state_open,ow_sw_pass_west,pearl,lift2",
             "world_state_open,ow_sw_pass_east_top,pearl,lift2",
             "world_state_open,ow_lost_woods_pass_east_top,hammer,lift2,pearl",
             "world_state_open,ow_lost_woods_pass_east_bottom,lift2,pearl",
+            "world_state_inverted,ow_sw_pass_west,lift2",
             "world_state_inverted,ow_lost_woods_pass_east_bottom,mirror",
             "world_state_inverted,ow_lost_woods_pass_west,mirror,lift2",
             "world_state_inverted,ow_lost_woods_pass_east_top,mirror,lift2",
