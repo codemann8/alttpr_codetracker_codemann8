@@ -1336,6 +1336,7 @@
         "access_rules": [
             "ow_stone_bridge_water,[flippers]",
             "@Light World,[flippers]",
+            "@Light World,glitch_mode_ow,boots",
             "world_state_open,ow_hammer_bridge_top,mirror,[flippers]",
             "world_state_open,ow_hammer_bridge_bottom,mirror,[flippers]"
         ]
@@ -1604,6 +1605,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "@Light World,[flippers]",
+            "@Light World,glitch_mode_ow,boots",
             "world_state_open,ow_hylia_water,[flippers]",
             "world_state_open,ow_hylia_northwest,[flippers]",
             "world_state_open,ow_hylia_northeast,[flippers]",

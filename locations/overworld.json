@@ -371,7 +371,7 @@
                 "name": "Under The Bridge",
                 "access_rules": [
                     "[flippers]",
-                    "glitch_mode_ow"
+                    "glitch_mode_ow,boots"
                 ],
                 "item_count": 1
             }
