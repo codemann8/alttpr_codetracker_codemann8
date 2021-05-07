@@ -81,8 +81,10 @@ function updateOverworldIdFromMemorySegment(segment)
                         if region then
                             region.Active = true
                         end
-                    elseif (OBJ_WORLDSTATE.CurrentStage == 0 and OBJ_OWAREA.AcquiredCount < 0x40)
-                            or (OBJ_WORLDSTATE.CurrentStage == 1 and OBJ_OWAREA.AcquiredCount >= 0x40) then
+                        
+                    elseif OverworldIdPearlRegionMap[OBJ_OWAREA.AcquiredCount]
+                        and ((OBJ_WORLDSTATE.CurrentStage == 0 and OBJ_OWAREA.AcquiredCount < 0x40)
+                            or (OBJ_WORLDSTATE.CurrentStage == 1 and OBJ_OWAREA.AcquiredCount >= 0x40)) then
                         local region = Tracker:FindObjectForCode(OverworldIdPearlRegionMap[OBJ_OWAREA.AcquiredCount])
                         if region then
                             region.Active = true
