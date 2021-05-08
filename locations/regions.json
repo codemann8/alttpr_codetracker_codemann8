@@ -1252,8 +1252,8 @@
             "entrance_shuffle_singleentryvanilla,@Light World",
             "world_state_open,entrance_shuffle_all,@South Dark World,mirror",
             "world_state_open,ow_dig_game,mirror",
-            "world_state_open,entrance_shuffle_singleentryvanilla,ow_kakariko_suburb",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kakariko_suburb,pearl"
+            "world_state_open,entrance_shuffle_singleentryvanilla,ow_kak_suburb",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kak_suburb,pearl"
         ]
     },
     {
@@ -1263,8 +1263,8 @@
         "access_rules": [
             "ow_race_game",
             "world_state_open,ow_dig_game,mirror",
-            "world_state_open,entrance_shuffle_singleentryvanilla,ow_kakariko_suburb",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kakariko_suburb,pearl"
+            "world_state_open,entrance_shuffle_singleentryvanilla,ow_kak_suburb",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kak_suburb,pearl"
         ]
     },
     {
