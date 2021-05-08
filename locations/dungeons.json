@@ -204,8 +204,8 @@
     {
         "name": "TR Main Entrance",
         "access_rules": [
-            "world_state_open,@OW Turtle Rock,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
-            "world_state_open,@OW Turtle Rock,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+            "world_state_open,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
+            "world_state_open,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
             "world_state_open,glitch_mode_ow,@Death Mountain East Top,boots,hammer,pearl,$canUseMedallions,tr_medallion",
             "world_state_open,glitch_mode_ow,@Death Mountain East Top,boots,hammer,pearl,$canUseMedallions,bombos,ether,quake",
             "world_state_open,glitch_mode_ow,@OW Dark Death Mountain East Top,boots,pearl,$canUseMedallions,tr_medallion",
