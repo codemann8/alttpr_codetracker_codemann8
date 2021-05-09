@@ -1166,18 +1166,11 @@
             "crystal56:2",
             "crystal:7",
             "prize:10",
-            "world_state_open,glitch_mode_ow,boots,mirror",
-            "world_state_open,glitch_mode_major,bottle"
+            "world_state_open,glitch_mode_ow,boots,mirror"
         ],
         "sections": [
             {
                 "name": "Big Bomb Spot",
-                "access_rules": [
-                    "",
-                    "world_state_open,glitch_mode_ow,boots,mirror",
-                    "world_state_open,glitch_mode_ow,[boots],[mirror],bottle",
-                    "world_state_open,glitch_mode_major,bottle"
-                ],
                 "item_count": 2
             }
         ],

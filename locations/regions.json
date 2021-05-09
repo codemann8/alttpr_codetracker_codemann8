@@ -360,6 +360,7 @@
                     "world_state_open,glitch_mode_ow,boots,mirror",
                     "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
                     "world_state_open,glitch_mode_ow,[pearl],aga,bottle",
+                    "world_state_open,glitch_mode_major,bottle",
                     "world_state_inverted,activated_flute",
                     "world_state_inverted,@Light World,mirror",
                     "world_state_inverted,@Light World,pearl,flute",
