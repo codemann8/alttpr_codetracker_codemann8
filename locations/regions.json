@@ -2003,6 +2003,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_dark_graveyard",
+            "@Northwest Dark World",
             "world_state_inverted,ow_graveyard,mirror",
             "world_state_inverted,kings_tomb,mirror",
             "world_state_inverted,graveyard_ledge,mirror"
