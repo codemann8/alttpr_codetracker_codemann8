@@ -146,7 +146,7 @@
     },
     {
         "name": "Race Game",
-        "parent": "OW Race Game",
+        "parent": "OW Race Game Tease",
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
@@ -157,11 +157,9 @@
             {
                 "name": "Take This Trash",
                 "access_rules": [
-                    "entrance_shuffle_singleentryvanilla",
-                    "race_game",
+                    "@OW Race Game",
                     "glitch_mode_ow,boots",
                     "glitch_mode_major",
-                    "world_state_open,@South Dark World,mirror",
                     "{}"
                 ],
                 "capture_item": true,

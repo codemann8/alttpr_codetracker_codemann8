@@ -1251,7 +1251,7 @@
         "access_rules": [
             "race_game",
             "entrance_shuffle_singleentryvanilla,@Light World",
-            "world_state_open,entrance_shuffle_all,@South Dark World,mirror",
+            "world_state_open,@South Dark World,mirror",
             "world_state_open,ow_dig_game,mirror",
             "world_state_open,entrance_shuffle_singleentryvanilla,ow_kak_suburb",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kak_suburb,pearl"
@@ -1263,6 +1263,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_race_game",
+            "@Light World",
             "world_state_open,ow_dig_game,mirror",
             "world_state_open,entrance_shuffle_singleentryvanilla,ow_kak_suburb",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_kak_suburb,pearl"
