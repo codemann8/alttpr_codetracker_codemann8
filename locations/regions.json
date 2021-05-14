@@ -2085,6 +2085,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_dark_witch",
+            "@Northeast Dark World",
             "world_state_open,ow_dark_witch_east,pearl,lift1",
             "world_state_inverted,activated_flute",
             "world_state_inverted,ow_kakariko,pearl,flute",
