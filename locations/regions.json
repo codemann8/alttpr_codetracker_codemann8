@@ -486,6 +486,7 @@
                     "world_state_open,ow_ddm_west_top,mirror",
                     "world_state_open,ow_ddm_east_top,mirror",
                     "world_state_open,ddm_floating,mirror",
+                    "world_state_open,ow_turtlerock,mirror",
                     "world_state_open,ow_ddm_east_top,mirror,hookshot",
                     "world_state_open,ddm_tr_bridge,mirror,hookshot",
                     "world_state_open,ddm_tr_safety,mirror,hookshot",
@@ -506,9 +507,10 @@
                     "glitch_mode_major",
                     "world_state_open,entrance_shuffle_singleentryvanilla,@Mountain Access,hookshot",
                     "world_state_open,@Death Mountain West Top,hammer",
-                    "world_state_open,ddm_floating,mirror",
                     "world_state_open,ow_ddm_west_top,mirror",
                     "world_state_open,ow_ddm_east_top,mirror",
+                    "world_state_open,ddm_floating,mirror",
+                    "world_state_open,ow_turtlerock,mirror",
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror",
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_safety,mirror",
                     "world_state_open,glitch_mode_ow,boots",
@@ -581,6 +583,7 @@
                 "access_rules": [
                     "ddm_top",
                     "ddm_floating",
+                    "ow_turtlerock",
                     "glitch_mode_major",
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_open,glitch_mode_ow,boots,hammer",
@@ -792,6 +795,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_trpegs",
+            "@Death Mountain East Top",
             "world_state_open,ow_turtlerock,mirror",
             "world_state_inverted,ow_turtlerock,lift2,hammer,pearl"
             

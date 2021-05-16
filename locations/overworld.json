@@ -479,7 +479,7 @@
             {
                 "name": "Island",
                 "access_rules": [
-                    "world_state_open,@OW Dark Death Mountain East Top,mirror",
+                    "world_state_open,@OW Dark Death Mountain East Top,entrance_shuffle_singleentryvanilla,mirror",
                     "world_state_open,ddm_floating,mirror",
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_open,glitch_mode_major",
