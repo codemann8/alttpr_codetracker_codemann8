@@ -690,13 +690,13 @@
             "world_state_open,ow_kakariko,flute",
             "world_state_open,entrance_shuffle_singleentryvanilla,lw_dmentry,[lamp]",
             "world_state_open,entrance_shuffle_singleentryvanilla,lw_dmexit,[lamp]",
-            "world_state_open,entrance_shuffle_singleentryvanilla,ow_mountainentry,lift,[lamp]",
+            "world_state_open,entrance_shuffle_singleentryvanilla,ow_mountainentry,lift1,[lamp]",
             "world_state_open,ow_ddm_west_bottom,mirror",
             "world_state_open,ow_ddm_west_top,mirror",
             "world_state_inverted,ow_kakariko,pearl,flute",
             "world_state_inverted,ow_ddm_west_bottom",
             "world_state_inverted,ow_ddm_west_top",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_mountainentry,pearl,lift,[lamp]",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_mountainentry,pearl,lift1,[lamp]",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,bumper_cave,[lamp]",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,lw_dmexit,mirror,[lamp]"
         ]
@@ -1729,8 +1729,8 @@
             "@Northwest Dark World",
             "entrance_shuffle_singleentryvanilla,door_shuffle_sameset,sw_area",
             "entrance_shuffle_crossed,door_shuffle_sameset,sw_area",
-            "world_state_open,ow_sw_portal,pearl,lift",
-            "world_state_inverted,ow_sw_portal,lift",
+            "world_state_open,ow_sw_portal,pearl,lift1",
+            "world_state_inverted,ow_sw_portal,lift1",
             "world_state_inverted,ow_lost_woods_east,mirror",
             "world_state_inverted,ow_lost_woods_west,pearl,mirror",
             "world_state_inverted,ow_lost_woods_west,mirror,lift1"
@@ -1742,10 +1742,10 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_sw_portal",
-            "world_state_open,entrance_shuffle_singleentryvanilla,door_shuffle_sameset,sw_area,pearl,lift",
-            "world_state_open,ow_sw_front,pearl,lift",
-            "world_state_inverted,entrance_shuffle_crossed,door_shuffle_sameset,sw_area,lift",
-            "world_state_inverted,ow_sw_front,lift",
+            "world_state_open,entrance_shuffle_singleentryvanilla,door_shuffle_sameset,sw_area,pearl,lift1",
+            "world_state_open,ow_sw_front,pearl,lift1",
+            "world_state_inverted,entrance_shuffle_crossed,door_shuffle_sameset,sw_area,lift1",
+            "world_state_inverted,ow_sw_front,lift1",
             "world_state_inverted,ow_lost_woods_west,mirror",
             "world_state_inverted,ow_lost_woods_east,mirror,lift1"
         ]
@@ -1828,7 +1828,7 @@
             "world_state_open,ow_dm_west_top",
             "world_state_inverted,ow_kakariko,pearl,flute",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,bumper_entry,[lamp]",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_bumper,lift,[lamp]",
+            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_bumper,lift1,[lamp]",
             "world_state_inverted,ow_dm_west_bottom,mirror",
             "world_state_inverted,ow_dm_west_top,mirror"
         ]
