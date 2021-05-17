@@ -2379,7 +2379,7 @@
         "access_rules": [
             "ow_dark_tree_line",
             "@East Dark World",
-            "world_state_open,ow_treeline,mirror"
+            "world_state_inverted,ow_treeline,mirror"
         ]
     },
     {
