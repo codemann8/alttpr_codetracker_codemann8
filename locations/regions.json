@@ -2579,6 +2579,7 @@
         "parent": "Water Area Color",
         "always_allow_chest_manipulation": true,
         "access_rules": [
+            "world_state_open,@East Dark World,pearl,[flippers]",
             "world_state_open,ow_ice_water,[pearl],[flippers]",
             "world_state_open,ow_ice_northwest,pearl,[flippers]",
             "world_state_open,ow_ice_northeast,pearl,[flippers]",
