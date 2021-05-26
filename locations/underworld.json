@@ -368,7 +368,11 @@
     },
     {
         "name": "Link's House",
-        "parent": "OW Links House",
+        "parent": "Light World Color",
+        "access_rules": [
+            "world_state_open,@OW Links House",
+            "world_state_inverted,@OW Bomb Shop"
+        ],
         "sections": [
             {
                 "name": "By The Door",
