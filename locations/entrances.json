@@ -2443,7 +2443,7 @@
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "@OW Death Mountain East Top",
-            "world_state_open,ddm_tr_bridge,mirror"
+            "world_state_open,@TR Bridge Entrances OW,mirror"
         ],
         "sections": [
             {
@@ -2471,7 +2471,7 @@
         "short_name": "Mimic Cave",
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
-            "world_state_open,ddm_tr_bridge,mirror",
+            "world_state_open,@TR Bridge Entrances OW,mirror",
             "world_state_open,glitch_mode_ow,hammer,mirror",
             "world_state_inverted,@OW Death Mountain East Top"
         ],
@@ -2503,7 +2503,7 @@
         "access_rules": [
             "dm_east_connect",
             "@OW Death Mountain East Top",
-            "world_state_open,ddm_tr_safety,mirror"
+            "world_state_open,@TR Laser Entrance OW,mirror"
         ],
         "sections": [
             {
@@ -2559,7 +2559,7 @@
             "dm_east_connect",
             "@OW Death Mountain East Top",
             "world_state_open,lift2",
-            "world_state_open,ddm_tr_safety,mirror",
+            "world_state_open,@TR Laser Entrance OW,mirror",
             "world_state_open,@OW Dark Death Mountain East Bottom,pearl,mirror",
             "world_state_inverted,pearl,lift2"
         ],
@@ -4373,7 +4373,6 @@
         "short_name": "TR Laser",
         "parent": "Dark Death Mountain Color",
         "access_rules": [
-            "ddm_tr_safety",
             "@TR Laser Entrance OW",
             "world_state_inverted,dm_east_connect,mirror"
         ],
