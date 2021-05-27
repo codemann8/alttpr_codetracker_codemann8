@@ -34,11 +34,7 @@
     },
     {
         "name": "Mushroom Spot",
-        "parent": "Light World Color",
-        "access_rules": [
-            "@OW Lost Woods East",
-            "@Light World"
-        ],
+        "parent": "OW Lost Woods East",
         "sections": [
             {
                 "name": "Shroom",
@@ -619,10 +615,9 @@
         "name": "Purple Chest",
         "parent": "Dark World Color",
         "access_rules": [
-            "hammer_pegs,@OW Desert Pass",
-            "@Hammer Pegs Area,@Light World",
-            "world_state_open,@OW Hammer Pegs,pearl,lift2",
-            "world_state_inverted,@OW Hammer Pegs,lift2",
+            "@Hammer Pegs Area,@OW Desert Pass",
+            "world_state_open,@OW Hammer Pegs Entry,pearl,lift2",
+            "world_state_inverted,@OW Hammer Pegs Entry,lift2",
             "world_state_inverted,@OW Blacksmith,mirror"
         ],
         "sections": [
@@ -630,7 +625,6 @@
                 "name": "Middle-Aged Man",
                 "access_rules": [
                     "@Dwarven Smiths/Bring Him Home,@OW Desert Pass",
-                    "@Dwarven Smiths/Bring Him Home,@Light World",
                     "world_state_open,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[pearl],[lift2]",
                     "world_state_open,glitch_mode_major,@Dwarven Smiths/Bring Him Home,pearl",
                     "world_state_inverted,glitch_mode_ow,@Dwarven Smiths/Bring Him Home,[mirror]",
