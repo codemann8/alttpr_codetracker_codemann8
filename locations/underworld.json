@@ -491,8 +491,10 @@
         "parent": "OW Cave 45",
         "access_rules": [
             "world_state_open,@OW Bush Circle,mirror",
+            "world_state_open,@Light World",
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
+            "world_state_inverted,pearl",
             "world_state_inverted,@Light World,pearl",
             "world_state_inverted,@Light World,[pearl],mirror",
             "world_state_inverted,@Light World,glitch_mode_ow,mirror",
