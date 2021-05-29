@@ -1449,7 +1449,7 @@
             "world_state_inverted,ow_hylia_shore,pearl,[flippers]",
             "world_state_inverted,ow_hylia_water,pearl,[flippers]",
             "world_state_inverted,upgrade_fairy,pearl,[flippers]",
-            "world_state_inverted,ow_zora_approach,pearl[flippers]",
+            "world_state_inverted,ow_zora_approach,pearl,[flippers]",
             "world_state_inverted,ow_ice_northwest,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_northeast,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_southwest,[flippers],lift2,pearl",

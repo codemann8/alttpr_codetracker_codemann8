@@ -3067,7 +3067,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ow_outcasts"
+                "hosted_item": "ow_outcast_fortune"
             }
         ],
         "map_locations": [
@@ -3852,7 +3852,7 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
-                "hosted_item": "ow_hylia_northwest"
+                "hosted_item": "ow_ice_northwest"
             }
         ],
         "map_locations": [
