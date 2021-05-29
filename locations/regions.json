@@ -783,6 +783,7 @@
             "world_state_open,ow_sw_pass_east_bottom,pearl,lift2,hammer,mirror",
             "world_state_open,ow_lost_woods_pass_east_bottom,lift2,hammer",
             "world_state_inverted,ow_lost_woods_pass_east_bottom,pearl,lift2,hammer",
+            "world_state_inverted,ow_sw_pass_west,pearl,hammer",
             "world_state_inverted,ow_sw_pass_east_top,pearl,hammer",
             "world_state_inverted,ow_sw_pass_east_bottom,pearl,lift2,hammer"
         ]
@@ -798,6 +799,7 @@
             "world_state_open,ow_sw_pass_east_top,pearl,hammer,lift2,mirror",
             "world_state_open,ow_lost_woods_pass_east_top,lift2,hammer",
             "world_state_inverted,ow_lost_woods_pass_east_top,pearl,lift2,hammer",
+            "world_state_inverted,ow_sw_pass_west,pearl,hammer,lift2",
             "world_state_inverted,ow_sw_pass_east_top,pearl,hammer,lift2",
             "world_state_inverted,ow_sw_pass_east_bottom,pearl,lift2"
         ]
@@ -1388,6 +1390,8 @@
             "world_state_open,ow_dark_cwhirlpool_west,mirror",
             "world_state_open,ow_dark_cwhirlpool_east,mirror,lift1",
             "world_state_inverted,ow_cwhirlpool_east,pearl,lift1",
+            "world_state_inverted,ow_dark_cwhirlpool_east,hammer,lift1,pearl",
+            "world_state_inverted,ow_dark_cwhirlpool_west,hammer,lift1,pearl",
             "world_state_inverted,ow_river_west,pearl,lift1,[flippers]",
             "world_state_inverted,ow_river_east,pearl,lift1,[flippers]",
             "world_state_inverted,ow_river_water,pearl,lift1,[flippers]"
@@ -1406,6 +1410,8 @@
             "world_state_open,ow_dark_cwhirlpool_east,mirror",
             "world_state_open,ow_dark_cwhirlpool_west,mirror,lift1",
             "world_state_inverted,ow_cwhirlpool_west,pearl,lift1",
+            "world_state_inverted,ow_dark_cwhirlpool_east,hammer,lift1,pearl",
+            "world_state_inverted,ow_dark_cwhirlpool_west,hammer,lift1,pearl",
             "world_state_inverted,ow_river_west,pearl,[flippers]",
             "world_state_inverted,ow_river_east,pearl,[flippers]",
             "world_state_inverted,ow_river_water,pearl,[flippers]"
