@@ -1683,7 +1683,7 @@
             "world_state_open,@OW Bush Circle,mirror",
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@Light World",
+            "world_state_inverted,@OW Cave 45",
             "glitch_mode_major"
         ],
         "sections": [
@@ -3047,7 +3047,7 @@
         ]
     },
     {
-        "name": "Village of Outkasts Fortune Teller",
+        "name": "Village of Outcasts Fortune Teller",
         "short_name": "Dark Fortune",
         "parent": "OW Outcast Fortune",
         "sections": [
