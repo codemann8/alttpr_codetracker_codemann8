@@ -91,6 +91,10 @@
     {
         "name": "Weathervane",
         "parent": "OW Kakariko Village",
+        "access_rules": [
+            "world_state_open,@OW Kakariko Village,flute",
+            "@OW Kakariko Village,pearl,flute"
+        ],
         "sections": [
             {
                 "name": "Activate Flute",
@@ -105,7 +109,7 @@
                 "x": 256,
                 "y": 964,
                 "size": 48,
-                "restrict_visibility_rules": [ "@OW Kakariko Village,pearl,flute", "world_state_open,@OW Kakariko Village,flute" ],
+                "restrict_visibility_rules": [ "flute" ],
                 "force_invisibility_rules": [ "activated_flute" ]
             }
         ]
