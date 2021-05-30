@@ -159,7 +159,7 @@ CaptureBadgeEntrances = {
     "@Dark Lumberjack/Entrance",
     "@Dark Chapel/Entrance",
     "@Shield Shop Entrance/Entrance",
-    "@Village of Outkasts Fortune Teller/Entrance",
+    "@Village of Outcasts Fortune Teller/Entrance",
     "@Chest Game Entrance/Entrance",
     "@Thieves Town Entrance/Entrance",
     "@C-Shaped House Entrance/Entrance",
