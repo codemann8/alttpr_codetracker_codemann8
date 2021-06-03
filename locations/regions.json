@@ -2129,6 +2129,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_broken_bridge_west",
+            "@Northwest Dark World",
             "world_state_open,ow_broken_bridge_east_top,pearl,hookshot",
             "world_state_open,ow_broken_bridge_east_bottom,pearl,lift1,hookshot",
             "world_state_open,ow_broken_bridge_east_bottom,pearl,hammer,hookshot",
@@ -2286,6 +2287,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_hammer_bridge_top",
+            "@East Dark World",
             "world_state_open,ow_hammer_bridge_bottom,pearl,hammer",
             "world_state_inverted,ow_hammer_bridge_bottom,hammer",
             "world_state_inverted,ow_stone_bridge,mirror"

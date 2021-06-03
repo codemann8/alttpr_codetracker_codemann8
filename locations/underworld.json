@@ -1079,8 +1079,14 @@
         "parent": "OW Hammer Pegs",
         "access_rules": [
             "world_state_open,pearl,lift2",
+            "world_state_open,glitch_mode_ow,@OW Broken Bridge West,pearl,boots",
+            "world_state_open,glitch_mode_ow,@OW Hammer Bridge Top,pearl,boots",
+            "world_state_open,glitch_mode_ow,@OW Bomb Shop,pearl,boots",
             "world_state_inverted,lift2",
-            "world_state_inverted,@OW Blacksmith,mirror"
+            "world_state_inverted,@OW Blacksmith,mirror",
+            "world_state_inverted,glitch_mode_ow,@OW Broken Bridge West,boots",
+            "world_state_inverted,glitch_mode_ow,@OW Hammer Bridge Top,boots",
+            "world_state_inverted,glitch_mode_ow,@OW Bomb Shop,boots"
         ],
         "sections": [
             {
