@@ -4459,7 +4459,8 @@
         "short_name": "TR Entrance",
         "parent": "OW Turtle Rock",
         "access_rules": [
-            "@OW Turtle Rock",
+            "world_state_open,@OW Turtle Rock Pegs,lift2,hammer",
+            "world_state_inverted,@OW Turtle Rock",
             "{$hasNotSeenTurtleMedallion}"
         ],
         "sections": [

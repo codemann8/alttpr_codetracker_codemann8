@@ -395,13 +395,12 @@
         "access_rules": [
             "world_state_open,dm_west_top",
             "world_state_open,flute",
-            "world_state_inverted,ddm_top",
-            "world_state_inverted,ddm_west",
+            "world_state_inverted,ddm_west_bottom",
             "world_state_inverted,ddm_floating",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,@Light World,pearl,flute",
-            "world_state_inverted,@Northwest Dark World,glitch_mode_ow,boots",
-            "world_state_inverted,@Light World,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,@OW Kakariko Village,pearl,flute",
+            "world_state_inverted,@OW Dark Lumberjack,glitch_mode_ow,boots",
+            "world_state_inverted,@OW Lumberjack,glitch_mode_ow,pearl,boots",
             "entrance_shuffle_singleentryvanilla,glitch_mode_ow,boots",
             "entrance_shuffle_singleentryvanilla,lift1,[lamp]",
             "glitch_mode_major"
@@ -503,9 +502,10 @@
             {
                 "name": "Dark Death Mountain Top",
                 "access_rules": [
-                    "ddm_top",
                     "ddm_floating",
                     "ow_turtlerock",
+                    "ow_ddm_west_top",
+                    "ow_ddm_east_top",
                     "glitch_mode_major",
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_open,glitch_mode_ow,boots,hammer",
