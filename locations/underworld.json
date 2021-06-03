@@ -1012,7 +1012,7 @@
                 "name": "Shop",
                 "access_rules": [
                     "hammer",
-                    "world_state_inverted,@Light World,pearl,mirror",
+                    "world_state_inverted,@OW Kakariko Village,pearl,mirror",
                     "world_state_inverted,grass_house,mirror"
                 ],
                 "chest_unopened_img": "images/potionshop.png",
@@ -1027,7 +1027,7 @@
                 "name": "Items",
                 "access_rules": [
                     "hammer",
-                    "world_state_inverted,@Light World,pearl,mirror",
+                    "world_state_inverted,@OW Kakariko Village,pearl,mirror",
                     "world_state_inverted,grass_house,mirror"
                 ],
                 "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
