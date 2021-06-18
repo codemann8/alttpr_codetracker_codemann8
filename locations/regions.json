@@ -2352,6 +2352,7 @@
             "world_state_open,glitch_mode_major,lift2",
             "world_state_open,glitch_mode_major,@South Dark World",
             "world_state_inverted,@Light World,pearl,flute",
+            "world_state_inverted,@Light World,mirror",
             "world_state_inverted,activated_flute",
             "world_state_inverted,ow_kakariko,pearl,flute",
             "world_state_inverted,ow_desert,mirror",
