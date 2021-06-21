@@ -250,9 +250,9 @@
         "access_rules": [
             "ddm_tr_safety",
             "world_state_open,entrance_shuffle_off,@TR Main Entrance,door_shuffle_on",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,pool_keydrop_off,[tr_smallkey:3],tr_smallkey:2",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,pool_keydrop_on,[tr_smallkey:5],tr_smallkey:4",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,keysanity_smallkey_off",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_off,[tr_smallkey:3],tr_smallkey:2",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_on,[tr_smallkey:5],tr_smallkey:4",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off",
             "world_state_open,glitch_mode_ow,pearl,boots,mirror,[nothing]",
             "world_state_open,glitch_mode_ow,boots,mirror,bottle,[nothing]",
             "world_state_open,glitch_mode_major,pearl,mirror",
