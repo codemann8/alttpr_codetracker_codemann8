@@ -2235,7 +2235,7 @@
         "short_name": "DM Entry",
         "parent": "OW Mountain Entry",
         "access_rules": [
-            "world_state_open,bumper_entrance,mirror",
+            "world_state_open,bumper_entry,mirror",
             "world_state_open,lift1",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl,lift1",
@@ -4087,7 +4087,7 @@
                 "item_count": 1,
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
-                "hosted_item": "bumper_entrance"
+                "hosted_item": "bumper_entry"
             }
         ],
         "map_locations": [
