@@ -204,10 +204,11 @@
                     "world_state_open,ow_shopping_mall,pearl,[flippers],hammer,mirror",
                     "world_state_open,ip_area,pearl,[flippers],hammer,mirror",
                     "world_state_open,aga,mirror",
-                    "world_state_open,glitch_mode_ow,boots",
+                    "world_state_open,glitch_mode_ow,@Vanilla OW Shuffle,boots,[mirror]",
                     "world_state_inverted,aga,[mirror]",
                     "world_state_inverted,aga2",
-                    "world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "world_state_inverted,glitch_mode_ow,@Light World,mirror",
+                    "world_state_inverted,glitch_mode_ow,@Light World,pearl,boots,[mirror]",
                     "glitch_mode_major"
                 ]
             }

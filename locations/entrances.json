@@ -3364,8 +3364,8 @@
             "crystal56:2",
             "crystal:7",
             "prize:10",
-            "world_state_open,glitch_mode_ow,boots,mirror",
-            "world_state_inverted,glitch_mode_ow,pearl,boots,mirror"
+            "world_state_open,glitch_mode_ow,@Vanilla OW Shuffle,boots,mirror",
+            "world_state_inverted,glitch_mode_ow,@Light World,mirror"
         ],
         "sections": [
             {
