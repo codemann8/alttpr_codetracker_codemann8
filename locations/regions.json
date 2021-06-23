@@ -2486,6 +2486,8 @@
         "access_rules": [
             "ip_area",
             "world_state_open,@Light World,[flippers],lift2",
+            "world_state_open,glitch_mode_ow,@Light World,lift2",
+            "world_state_open,glitch_mode_ow,@South Dark World,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,ow_ice_northwest,pearl,[flippers],mirror,lift2",
             "world_state_open,ow_ice_northeast,pearl,[flippers],mirror,lift2",
             "world_state_open,ow_ice_southwest,pearl,[flippers],mirror,lift2",
@@ -2497,6 +2499,7 @@
             "world_state_open,ow_hylia_water,[flippers],lift2",
             "world_state_open,upgrade_fairy,lift2",
             "world_state_inverted,@South Dark World,[flippers]",
+            "world_state_inverted,glitch_mode_ow,@South Dark World",
             "world_state_inverted,ow_ice_northwest,[flippers]",
             "world_state_inverted,ow_ice_northeast,[flippers]",
             "world_state_inverted,ow_ice_southwest,[flippers]",
@@ -2539,12 +2542,14 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_shopping_mall",
-            "world_state_open,@South Dark World,[flippers]",
-            "world_state_open,@East Dark World,[flippers]",
-            "world_state_open,@Northeast Dark World,[flippers]",
-            "world_state_inverted,@South Dark World,pearl,[flippers]",
-            "world_state_inverted,@East Dark World,pearl,[flippers]",
-            "world_state_inverted,@Northeast Dark World,pearl,[flippers]",
+            "world_state_open,@South Dark World,pearl,[flippers]",
+            "world_state_open,@East Dark World,pearl,[flippers]",
+            "world_state_open,glitch_mode_ow,@East Dark World,pearl,boots",
+            "world_state_open,@Northeast Dark World,pearl,[flippers]",
+            "world_state_inverted,@South Dark World,[flippers]",
+            "world_state_inverted,@East Dark World,[flippers]",
+            "world_state_inverted,glitch_mode_ow,@East Dark World,boots",
+            "world_state_inverted,@Northeast Dark World,[flippers]",
             "world_state_inverted,ow_ice_cave,mirror"
         ]
     },

@@ -4460,6 +4460,8 @@
         "parent": "OW Turtle Rock",
         "access_rules": [
             "world_state_open,@OW Turtle Rock Pegs,lift2,hammer",
+            "world_state_open,glitch_mode_ow,@OW Turtle Rock Pegs,boots,hammer",
+            "world_state_open,glitch_mode_major,@OW Turtle Rock Pegs,hammer",
             "world_state_inverted,@OW Turtle Rock",
             "{$hasNotSeenTurtleMedallion}"
         ],
@@ -4467,8 +4469,10 @@
             {
                 "name": "Entrance",
                 "access_rules": [
-                    "$canUseMedallions,tr_medallion",
-                    "$canUseMedallions,bombos,ether,quake"
+                    "world_state_open,pearl,$canUseMedallions,tr_medallion",
+                    "world_state_inverted,$canUseMedallions,tr_medallion",
+                    "world_state_open,pearl,$canUseMedallions,bombos,ether,quake",
+                    "world_state_inverted,$canUseMedallions,bombos,ether,quake"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
