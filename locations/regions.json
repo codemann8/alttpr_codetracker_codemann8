@@ -2255,8 +2255,11 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_stumpy",
-            "@South Dark World",
-            "world_state_inverted,ow_flute,mirror"
+            "world_state_open,@South Dark World,pearl",
+            "glitch_mode_ow,@OW Archery Game,[pearl],bottle",
+            "glitch_mode_ow,@OW Archery Game,[pearl],mirror",
+            "world_state_inverted,ow_flute,mirror",
+            "world_state_inverted,@South Dark World"
         ]
     },
     {

@@ -700,12 +700,6 @@
     {
         "name": "Stumpy",
         "parent": "OW Stumpy",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted",
-            "glitch_mode_ow,[pearl],bottle",
-            "glitch_mode_ow,[pearl],mirror"
-        ],
         "sections": [
             {
                 "name": "Farewell",
