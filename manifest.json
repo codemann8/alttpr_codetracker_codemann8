@@ -5,6 +5,7 @@
   "package_version": "2.4.0.4",
   "package_uid": "alttpr_codetracker_codemann8",
   "author": "codemann8",
+  "enable_unsafe_scripting": true,
   "variants": {
     "mystery": {
       "display_name": "Map Tracker"
