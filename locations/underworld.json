@@ -1086,7 +1086,8 @@
             "world_state_inverted,@OW Blacksmith,mirror",
             "world_state_inverted,glitch_mode_ow,@OW Broken Bridge West,boots",
             "world_state_inverted,glitch_mode_ow,@OW Hammer Bridge Top,boots",
-            "world_state_inverted,glitch_mode_ow,@OW Bomb Shop,boots"
+            "world_state_inverted,glitch_mode_ow,@OW Bomb Shop,boots",
+            "glitch_mode_major,bottle:1"
         ],
         "sections": [
             {
@@ -1094,6 +1095,7 @@
                 "access_rules": [
                     "world_state_open,pearl,hammer",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,hammer",
+                    "world_state_open,glitch_mode_major,bottle,hammer",
                     "world_state_inverted,hammer"
                 ],
                 "item_count": 1
@@ -1258,7 +1260,8 @@
         "parent": "OW Dark Death Mountain West Bottom",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_major,bottle:1"
         ],
         "sections": [
             {
