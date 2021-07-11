@@ -407,6 +407,7 @@
             },
             {
                 "name": "Sanctuary",
+                "access_rules": [ "@HC Sanc Access" ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             }
