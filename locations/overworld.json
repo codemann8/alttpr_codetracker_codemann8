@@ -813,7 +813,7 @@
                 "x": 669,
                 "y": 315,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_shuffle_off,glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_inverted" ]
+                "restrict_visibility_rules": [ "ow_shuffle_off,glitch_mode_none,entrance_shuffle_singleentryvanilla,world_state_inverted,@OW Mountain Entry" ]
             },
             {
                 "map": "darkworld",
