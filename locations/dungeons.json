@@ -400,14 +400,20 @@
                     "@HC Access,door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
                     "door_shuffle_on",
-                    "entrance_shuffle_all"
+                    "entrance_shuffle_on"
                 ],
                 "clear_as_group": true,
                 "item_count": 3
             },
             {
                 "name": "Sanctuary",
-                "access_rules": [ "@HC Sanc Access" ],
+                "access_rules": [
+                    "world_state_open",
+                    "world_state_inverted,@Hyrule Castle & Escape/Back",
+                    "world_state_inverted,entrance_shuffle_off,@OW Sanctuary,pearl",
+                    "world_state_inverted,entrance_shuffle_off,@OW Sanctuary,[pearl],mirror",
+                    "world_state_inverted,entrance_shuffle_on"
+                ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             }
