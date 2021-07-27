@@ -396,6 +396,7 @@ function updateIcons(updateDoorCounts)
             gtbk.MaxCount = 99
         end
 
+        Tracker:FindObjectForCode("race_mode_surrogate").ItemState:updateIcon()
         OBJ_DOORDUNGEON.ItemState:updateIcon()
         OBJ_DOORCHEST.ItemState:updateIcon()
         OBJ_DOORKEY.ItemState:updateIcon()
