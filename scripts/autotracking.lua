@@ -124,6 +124,7 @@ ScriptHost:AddMemoryWatch("LTTP Dungeon Crystal Data", 0x7ef37a, 1, updateDungeo
 ScriptHost:AddMemoryWatch("LTTP Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
 ScriptHost:AddMemoryWatch("LTTP Overworld Id", 0x7e008a, 2, updateOverworldIdFromMemorySegment)
+ScriptHost:AddMemoryWatch("LTTP World Flag", 0x7ef3ca, 1, updateWorldFlagFromMemorySegment)
 SEGMENT_GTBIGKEYCOUNT = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef42a, 1, updateGTBKFromMemorySegment)
 SEGMENT_GTTORCHROOM = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef118, 2, updateGTBKFromMemorySegment) --GT Torch Visit
 ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef0d6, 2, updateGTBKFromMemorySegment) --GT Gauntlet Climb Update

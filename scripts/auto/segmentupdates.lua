@@ -58,14 +58,6 @@ function updateOverworldIdFromMemorySegment(segment)
     end
 
     if OBJ_OWAREA.AcquiredCount ~= owarea then
-        --Update Dungeon Image (Prep)
-        local updateImage = false
-        if OBJ_OWAREA.AcquiredCount == 0xff
-                or (owarea >= 0x40 and owarea < 0x80 and OBJ_OWAREA.AcquiredCount < 0x40) 
-                or (owarea < 0x40 and OBJ_OWAREA.AcquiredCount >= 0x40 and OBJ_OWAREA.AcquiredCount < 0x80) then
-            updateImage = true
-        end
-
         OBJ_OWAREA.AcquiredCount = owarea
 
         if OBJ_OWAREA.AcquiredCount < 0xff then
@@ -94,27 +86,53 @@ function updateOverworldIdFromMemorySegment(segment)
                 end
             end
 
-            --Update Dungeon Image
-            if updateImage then
-                if OBJ_OWAREA.AcquiredCount >= 0x40 and OBJ_OWAREA.AcquiredCount < 0x80 then
-                    if string.find(Tracker.ActiveVariantUID, "er_") then
-                        sendExternalMessage("dungeon", "er-dw")
-                    else
-                        sendExternalMessage("dungeon", "dw")
-                    end
-                else
-                    if string.find(Tracker.ActiveVariantUID, "er_") then
-                        sendExternalMessage("dungeon", "er-lw")
-                    else
-                        sendExternalMessage("dungeon", "lw")
-                    end
-                end
-            end
+            updateWorldFlagFromMemorySegment(nil)
+        end
 
-            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-                print("CURRENT OW:", OBJ_OWAREA.AcquiredCount, string.format("0x%2X", OBJ_OWAREA.AcquiredCount))
+        if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+            print("CURRENT OW:", OBJ_OWAREA.AcquiredCount, string.format("0x%2X", OBJ_OWAREA.AcquiredCount))
+        end
+    end
+end
+
+function updateWorldFlagFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    InvalidateReadCaches()
+
+    if segment then
+        OBJ_WORLD.AcquiredCount = ReadU8(segment, 0x7ef3ca)
+    end
+    OBJ_OWAREA.AcquiredCount = AutoTracker:ReadU8(0x7e008a, 0)
+
+    if not (OBJ_DUNGEON.AcquiredCount == 0xff and OBJ_MODULE.AcquiredCount == 0x09) then --force OW transitions to retain OW ID
+        if (OBJ_OWAREA.AcquiredCount == 0 and (OBJ_MODULE.AcquiredCount == 0x07 or OBJ_MODULE.AcquiredCount == 0x05 or OBJ_MODULE.AcquiredCount == 0x0e or OBJ_MODULE.AcquiredCount == 0x17 or OBJ_MODULE.AcquiredCount == 0x11 or OBJ_MODULE.AcquiredCount == 0x06 or OBJ_MODULE.AcquiredCount == 0x0f)) --transitioning into dungeons
+                or OBJ_OWAREA.AcquiredCount > 0x81 then --transitional OW IDs are ignored ie. 0x96
+            OBJ_OWAREA.AcquiredCount = 0xff
+        end
+    end
+
+    if OBJ_OWAREA.AcquiredCount < 0xff then
+        --Update Dungeon Image
+        if worldId == 0x40 then
+            if string.find(Tracker.ActiveVariantUID, "er_") then
+                sendExternalMessage("dungeon", "er-dw")
+            else
+                sendExternalMessage("dungeon", "dw")
+            end
+        else
+            if string.find(Tracker.ActiveVariantUID, "er_") then
+                sendExternalMessage("dungeon", "er-lw")
+            else
+                sendExternalMessage("dungeon", "lw")
             end
         end
+    end
+
+    if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+        print("CURRENT WORLD:", OBJ_WORLD.AcquiredCount, string.format("0x%2X", OBJ_WORLD.AcquiredCount))
     end
 end
 

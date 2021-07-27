@@ -1168,5 +1168,12 @@
         "codes": "dungeon",
         "max_quantity": 255,
         "initial_quantity": 255
+    },
+    {
+        "name": "Current World",
+        "type": "consumable",
+        "codes": "world",
+        "max_quantity": 255,
+        "initial_quantity": 255
     }
 ]
