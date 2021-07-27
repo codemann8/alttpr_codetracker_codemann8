@@ -1526,7 +1526,8 @@
             {
                 "name": "Spike Switch Key",
                 "access_rules": [
-                    "@Thieves Town/Hallway Key"
+                    "pool_keydrop_off,@Thieves Town/Hallway Key",
+                    "pool_keydrop_on,@Thieves Town/Hallway Key,tt_smallkey:1"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/pot-dw.png",
