@@ -249,10 +249,12 @@
         "name": "TR Laser Entrance OW",
         "access_rules": [
             "ddm_tr_safety",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,door_shuffle_on",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_off,[tr_smallkey:3],tr_smallkey:2",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_on,[tr_smallkey:5],tr_smallkey:4",
-            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_off,[tr_smallkey:3],tr_smallkey:2,tr_bigkey",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_off,[tr_smallkey:3],tr_smallkey:2,keysanity_bigkey_off",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_on,[tr_smallkey:5],tr_smallkey:4,tr_bigkey",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],pool_keydrop_on,[tr_smallkey:5],tr_smallkey:4,keysanity_bigkey_off",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off,tr_bigkey",
+            "world_state_open,entrance_shuffle_off,@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off,keysanity_bigkey_off",
             "world_state_open,glitch_mode_ow,pearl,boots,mirror,[nothing]",
             "world_state_open,glitch_mode_ow,boots,mirror,bottle,[nothing]",
             "world_state_open,glitch_mode_major,pearl,mirror",
@@ -260,7 +262,8 @@
             "world_state_inverted,@OW Death Mountain East Top,mirror",
             "world_state_inverted,dm_east_connect,mirror",
             "world_state_inverted,glitch_mode_major,mirror,pearl",
-            "world_state_inverted,glitch_mode_major,mirror,bottle"
+            "world_state_inverted,glitch_mode_major,mirror,bottle",
+            "entrance_shuffle_off,@TR Main Entrance,door_shuffle_on"
         ]
     },
     {
