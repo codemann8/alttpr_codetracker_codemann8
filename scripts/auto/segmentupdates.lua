@@ -939,7 +939,7 @@ function updateStatisticsFromMemorySegment(segment)
         -- Read completion timer
         local hours, minutes, seconds, frames = read32BitTimer(segment, 0x7ef43e)
 
-        local collection_rate = ReadU8(segment, 0x7ef423)
+        local collection_rate = ReadU16(segment, 0x7ef423)
         local deaths = ReadU8(segment, 0x7ef449)
         local bonks = ReadU8(segment, 0x7ef420)
 
