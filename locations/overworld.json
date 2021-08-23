@@ -580,15 +580,12 @@
                     "world_state_open,glitch_mode_ow,[pearl],bottle2,boots,[lift2]",
                     "world_state_open,glitch_mode_ow,[pearl],bottle,boots,mirror,[lift2]",
                     "world_state_open,glitch_mode_major,bottle",
-                    "world_state_open,glitch_mode_major,mirror",
                     "world_state_inverted,entrance_shuffle_all,@OW Kakariko Suburb,mirror",
                     "world_state_inverted,entrance_shuffle_all,lift2",
                     "world_state_inverted,@OW Kakariko Suburb,mirror,@OW Blacksmith",
                     "world_state_inverted,lift2,@OW Blacksmith",
                     "world_state_inverted,glitch_mode_ow,boots,bottle,[lift2]",
-                    "world_state_inverted,glitch_mode_ow,boots,mirror,[lift2]",
-                    "world_state_inverted,glitch_mode_major,bottle",
-                    "world_state_inverted,glitch_mode_major,mirror"
+                    "world_state_inverted,glitch_mode_major,bottle"
                 ],
                 "item_count": 1
             }
