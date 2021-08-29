@@ -1178,7 +1178,7 @@
             "ow_shuffle_on",
             "entrance_shuffle_all",
             "hammer",
-            "aga",
+            "aga,mirror",
             "world_state_open,glitch_mode_ow,boots,mirror"
         ],
         "sections": [
