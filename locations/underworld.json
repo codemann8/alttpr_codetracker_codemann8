@@ -1175,14 +1175,31 @@
         "name": "Pyramid Fairy",
         "parent": "OW Pyramid",
         "access_rules": [
-            "crystal56:2",
-            "crystal:7",
-            "prize:10",
+            "ow_shuffle_on",
+            "entrance_shuffle_all",
+            "hammer",
+            "aga",
             "world_state_open,glitch_mode_ow,boots,mirror"
         ],
         "sections": [
             {
+                "name": "Get Big Bomb",
+                "access_rules": [
+                    "entrance_shuffle_all",
+                    "@OW Bomb Shop",
+                    "world_state_open,glitch_mode_ow,boots,mirror"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Big Bomb Spot",
+                "access_rules": [
+                    "@Pyramid Fairy/Get Big Bomb,crystal56:2",
+                    "@Pyramid Fairy/Get Big Bomb,crystal:7",
+                    "@Pyramid Fairy/Get Big Bomb,prize:10",
+                    "world_state_open,glitch_mode_ow,boots,mirror"
+                ],
                 "item_count": 2
             }
         ],
