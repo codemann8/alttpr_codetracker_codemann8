@@ -1177,17 +1177,19 @@
         "access_rules": [
             "ow_shuffle_on",
             "entrance_shuffle_all",
-            "hammer",
             "aga,mirror",
-            "world_state_open,glitch_mode_ow,boots,mirror"
+            "world_state_open,hammer",
+            "world_state_open,glitch_mode_ow,boots,mirror",
+            "world_state_inverted,mirror"
         ],
         "sections": [
             {
                 "name": "Get Big Bomb",
                 "access_rules": [
                     "entrance_shuffle_all",
-                    "@OW Bomb Shop",
-                    "world_state_open,glitch_mode_ow,boots,mirror"
+                    "world_state_open,@OW Bomb Shop",
+                    "world_state_open,glitch_mode_ow,boots,mirror",
+                    "world_state_inverted,@OW Links House"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
