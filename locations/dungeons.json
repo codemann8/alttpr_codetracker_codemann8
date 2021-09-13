@@ -398,7 +398,7 @@
                 "name": "Back",
                 "access_rules": [
                     "@HC Sanc Access",
-                    "@HC Access,door_shuffle_off,pool_keydrop_off,hc_smallkey:1,[firesource]",
+                    "@HC Access,door_shuffle_off,pool_keydrop_off,[hc_smallkey:1],[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_off,keysanity_smallkey_off,[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
