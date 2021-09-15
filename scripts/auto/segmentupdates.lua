@@ -940,10 +940,11 @@ function updateStatisticsFromMemorySegment(segment)
         local hours, minutes, seconds, frames = read32BitTimer(segment, 0x7ef43e)
 
         local collection_rate = ReadU16(segment, 0x7ef423) % 0x1ff
+        local collection_max = collection_max > 0 and collection_max or 216
         local deaths = ReadU8(segment, 0x7ef449)
         local bonks = ReadU8(segment, 0x7ef420)
 
-        local markdown = string.format(AUTOTRACKER_STATS_MARKDOWN_FORMAT, collection_rate, deaths, bonks, hours, minutes, seconds, frames)
+        local markdown = string.format(AUTOTRACKER_STATS_MARKDOWN_FORMAT, collection_rate, collection_max, deaths, bonks, hours, minutes, seconds, frames)
         ScriptHost:PushMarkdownNotification(NotificationType.Celebration, markdown)
     end
 

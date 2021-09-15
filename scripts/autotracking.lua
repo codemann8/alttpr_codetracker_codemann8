@@ -27,7 +27,7 @@ AUTOTRACKER_STATS_MARKDOWN_FORMAT =
 
 Stat | Value
 --|-
-**Collection Rate** | %d
+**Collection Rate** | %d/%d
 **Deaths** | %d
 **Bonks** | %d
 **Total Time** | %02d:%02d:%02d.%02d
