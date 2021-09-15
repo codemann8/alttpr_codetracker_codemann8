@@ -939,8 +939,12 @@ function updateStatisticsFromMemorySegment(segment)
         -- Read completion timer
         local hours, minutes, seconds, frames = read32BitTimer(segment, 0x7ef43e)
 
-        local collection_rate = ReadU16(segment, 0x7ef423) % 0x1ff
-        local collection_max = collection_max > 0 and collection_max or 216
+        local collection_rate = ReadU16(segment, 0x7ef423)
+        local collection_max = AutoTracker:ReadU16(0x7ef33e, 0)
+        if collection_max == 0 then
+            collection_max = 216
+            collection_rate = ReadU8(segment, 0x7ef423)
+        end
         local deaths = ReadU8(segment, 0x7ef449)
         local bonks = ReadU8(segment, 0x7ef420)
 
