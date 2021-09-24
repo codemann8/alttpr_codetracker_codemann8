@@ -16,7 +16,6 @@
         "access_rules": [
             "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,lift1",
             "world_state_open,entrance_shuffle_singleentryvanilla,@OW Graveyard,lift1",
-            "world_state_inverted,ow_shuffle_off,entrance_shuffle_singleentryvanilla,pearl,lift1",
             "world_state_inverted,entrance_shuffle_singleentryvanilla,@OW Graveyard,pearl,lift1"
         ]
     },
