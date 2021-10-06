@@ -1311,7 +1311,8 @@
         "access_rules": [
             "world_state_open,pearl,lift1",
             "world_state_open,glitch_mode_ow,pearl,boots",
-            "world_state_inverted,lift1"
+            "world_state_inverted,lift1",
+            "world_state_inverted,glitch_mode_ow,boots"
         ],
         "sections": [
             {
