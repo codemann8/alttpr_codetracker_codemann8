@@ -745,7 +745,8 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_zora_approach",
-            "@Light World",
+            "@Light World,[flippers]",
+            "@Light World,lift1",
             "world_state_open,zora_waterfall,flippers",
             "world_state_open,ow_hylia_water,[flippers]",
             "world_state_open,ow_hylia_northwest,[flippers]",
