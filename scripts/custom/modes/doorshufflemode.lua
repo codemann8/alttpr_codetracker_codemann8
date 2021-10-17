@@ -64,11 +64,6 @@ function DoorShuffleMode:postUpdate()
 
         if self:getState() == 2 then
             Tracker.AutoUnpinLocationsOnClear = false
-
-            --Default Entrance Mode to Dungeon if Crossed Door is selected
-            if OBJ_ENTRANCE.CurrentStage == 0 then
-                Tracker:FindObjectForCode("entrance_shuffle_surrogate").ItemState:setState(1)
-            end
         else
             Tracker.AutoUnpinLocationsOnClear = PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
         end
