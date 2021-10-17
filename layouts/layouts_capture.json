@@ -28,7 +28,7 @@
             ]
         }
     },
-    "tracker_capture_entrance": {
+    "tracker_capture_entrance_connector": {
         "type": "container",
         "content": {
             "type": "itemgrid",
@@ -36,12 +36,44 @@
             "item_margin": "1,2",
             "item_size": 40,
             "rows": [
-                [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
-                [ "cap_pod", "cap_sp", "cap_sw", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
                 [ "cap_granny", "cap_brother", "cap_oldman", "cap_mtncave", "cap_mtncave_back", "cap_spec_left", "cap_spec_top", "cap_spec_bottom", "cap_spiral_top", "cap_spiral_bottom" ],
-                [ "cap_paradox_top", "cap_paradox_middle", "cap_paradox_bottom", "cap_fairyascension", "cap_bumper", "cap_bumper_top", "cap_bunny_bottom", "cap_bunny_top", "cap_hookcave", "cap_darkmountain" ],
+                [ "cap_paradox_top", "cap_paradox_middle", "cap_paradox_bottom", "cap_fairyascension", "cap_bumper", "cap_bumper_top", "cap_bunny_bottom", "cap_bunny_top", "cap_hookcave", "cap_darkmountain" ]
+            ]
+        }
+    },
+    "tracker_capture_entrance_location": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 40,
+            "rows": [
                 [ "cap_link", "cap_sickkid", "cap_library", "cap_sah", "cap_potionshop", "cap_smith", "cap_redbomb", "cap_spike", "cap_mimic", "cap_dam" ],
                 [ "cap_chest", "cap_pearl", "cap_bottle", "cap_bombfarm", "cap_rupee", "cap_fairycave", "cap_shop", "cap_star", "cap_dead"  ]
+            ]
+        }
+    },
+    "tracker_capture_entrance": {
+        "type": "container",
+        "content": {
+            "type": "array",
+            "orientation": "vertical",
+            "h_alignment": "center",
+            "margin": "1,2",
+            "content": [
+                {
+                    "type": "layout",
+                    "key": "tracker_capture_entrance_dungeon"
+                },
+                {
+                    "type": "layout",
+                    "key": "tracker_capture_entrance_connector"
+                },
+                {
+                    "type": "layout",
+                    "key": "tracker_capture_entrance_location"
+                }
             ]
         }
     },

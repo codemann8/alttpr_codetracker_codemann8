@@ -108,7 +108,8 @@
                 "x": 370,
                 "y": 40,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -184,7 +185,8 @@
                 "x": 678,
                 "y": 134,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -203,7 +205,8 @@
                 "x": 375,
                 "y": 635,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -260,7 +263,8 @@
                 "x": 100,
                 "y": 944,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -336,7 +340,8 @@
                 "x": 415,
                 "y": 956,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -393,7 +398,8 @@
                 "x": 410,
                 "y": 1070,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -412,7 +418,8 @@
                 "x": 56,
                 "y": 1195,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -431,7 +438,8 @@
                 "x": 218,
                 "y": 1185,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -469,7 +477,8 @@
                 "x": 322,
                 "y": 1201,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -639,7 +648,8 @@
                 "x": 408,
                 "y": 1404,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1038,7 +1048,8 @@
                 "x": 1650,
                 "y": 1295,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1057,7 +1068,8 @@
                 "x": 1970,
                 "y": 1392,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1263,7 +1275,8 @@
                 "x": 555,
                 "y": 1790,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1282,7 +1295,8 @@
                 "x": 625,
                 "y": 1920,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1320,7 +1334,8 @@
                 "x": 945,
                 "y": 1280,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1358,7 +1373,8 @@
                 "x": 1192,
                 "y": 1560,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1377,7 +1393,8 @@
                 "x": 1310,
                 "y": 1615,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1433,7 +1450,8 @@
                 "x": 1460,
                 "y": 1540,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -1471,7 +1489,8 @@
                 "x": 1595,
                 "y": 1710,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -1509,7 +1528,8 @@
                 "x": 1865,
                 "y": 1522,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1528,7 +1548,8 @@
                 "x": 1822,
                 "y": 1610,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1886,7 +1907,8 @@
                 "x": 1693,
                 "y": 322,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2153,7 +2175,8 @@
                 "x": 675,
                 "y": 115,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -2191,7 +2214,8 @@
                 "x": 924,
                 "y": 551,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2210,7 +2234,8 @@
                 "x": 665,
                 "y": 912,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -2248,7 +2273,8 @@
                 "x": 377,
                 "y": 635,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2324,7 +2350,8 @@
                 "x": 414,
                 "y": 1077,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -2400,7 +2427,8 @@
                 "x": 400,
                 "y": 1400,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2476,7 +2504,8 @@
                 "x": 1616,
                 "y": 668,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -2514,7 +2543,8 @@
                 "x": 1706,
                 "y": 1008,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2552,7 +2582,8 @@
                 "x": 1656,
                 "y": 1296,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2571,7 +2602,8 @@
                 "x": 1968,
                 "y": 1392,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2628,7 +2660,8 @@
                 "x": 234,
                 "y": 1600,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2647,7 +2680,8 @@
                 "x": 400,
                 "y": 1655,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2685,7 +2719,8 @@
                 "x": 945,
                 "y": 1280,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2742,7 +2777,8 @@
                 "x": 1310,
                 "y": 1615,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },
@@ -2799,7 +2835,8 @@
                 "x": 1779,
                 "y": 1522,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2818,7 +2855,8 @@
                 "x": 1865,
                 "y": 1522,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2837,7 +2875,8 @@
                 "x": 1822,
                 "y": 1610,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2912,7 +2951,8 @@
                 "x": 815,
                 "y": 384,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -3103,7 +3143,8 @@
                 "x": 1750,
                 "y": 334,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
     },

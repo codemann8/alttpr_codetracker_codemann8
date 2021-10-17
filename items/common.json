@@ -980,6 +980,11 @@
                 "inherit_codes": false
             },
             {
+                "img": "images/mode_entrance_shuffle_lite.png",
+                "codes": "entrance_shuffle,entrance_shuffle_lite,entrance_shuffle_crossed,entrance_shuffle_on,entrance_shuffle_all",
+                "inherit_codes": false
+            },
+            {
                 "img": "images/mode_entrance_shuffle_entrance.png",
                 "codes": "entrance_shuffle,entrance_shuffle_crossed,entrance_shuffle_on,entrance_shuffle_all",
                 "inherit_codes": false

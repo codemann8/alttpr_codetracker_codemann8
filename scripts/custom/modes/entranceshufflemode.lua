@@ -7,7 +7,7 @@ function EntranceShuffleMode:init(isAlt)
     self:initSuffix(isAlt)
     self:initCode()
 
-    self:setCount(4)
+    self:setCount(5)
     self:setState(0)
 end
 
@@ -17,6 +17,8 @@ function EntranceShuffleMode:updateIcon()
     elseif self:getState() == 1 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_dungeon" .. self.suffix .. ".png")
     elseif self:getState() == 2 then
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_lite" .. self.suffix .. ".png")
+    elseif self:getState() == 3 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_entrance" .. self.suffix .. ".png")
     else 
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_entrance_shuffle_insanity" .. self.suffix .. ".png")
@@ -29,7 +31,7 @@ function EntranceShuffleMode:postUpdate()
         local drops =  { "swpinball", "swcompass", "swbigchest", "swhazard" }
         for i = 1, #drops do
             local drop = Tracker:FindObjectForCode("dropdown_" .. drops[i])
-            if self:getState() > 2 then
+            if self:getState() > 3 then
                 drop.ActiveIcon = drop.ActiveIcon
                 drop.IgnoreUserInput = false
             else
@@ -41,7 +43,7 @@ function EntranceShuffleMode:postUpdate()
         --Change Dropdown Capture Layouts
         for i = 1, #CaptureBadgeDropdowns do
             local drop = Tracker:FindObjectForCode(CaptureBadgeDropdowns[i])
-            if self:getState() > 2 then
+            if self:getState() > 3 then
                 drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
             else
                 drop.ItemCaptureLayout = "tracker_capture_dropdown"
@@ -51,9 +53,37 @@ function EntranceShuffleMode:postUpdate()
         --Change Entrance Capture Layouts
         for i = 1, #CaptureBadgeEntrances do
             local drop = Tracker:FindObjectForCode(CaptureBadgeEntrances[i])
-            if self:getState() > 2 then
+            if self:getState() > 3 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-            elseif self:getState() > 1 then
+            elseif self:getState() == 2 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_location"
+            elseif self:getState() > 2 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance"
+            else
+                drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
+            end
+        end
+
+        for i = 1, #CaptureBadgeDungeons do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeDungeons[i])
+            if self:getState() > 3 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
+            elseif self:getState() == 2 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
+            elseif self:getState() > 2 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance"
+            else
+                drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
+            end
+        end
+
+        for i = 1, #CaptureBadgeConnectors do
+            local drop = Tracker:FindObjectForCode(CaptureBadgeConnectors[i])
+            if self:getState() > 3 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
+            elseif self:getState() == 2 then
+                drop.ItemCaptureLayout = "tracker_capture_entrance_connector"
+            elseif self:getState() > 2 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance"
             else
                 drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
