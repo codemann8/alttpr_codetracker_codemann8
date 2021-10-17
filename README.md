@@ -31,6 +31,7 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
   - Vanilla
   - Dungeon (Only the dungeon entrances are shuffled)
     - *\*This also works with Lobby shuffle to show logical access via Sanctuary being in a different dungeon\**
+  - Lite (Dungeons/Connectors/Item Locations are shuffled independently)
   - Crossed (Works for most ER modes Simple/Restricted/Full/Crossed)
   - Insanity
 - Door Shuffle
