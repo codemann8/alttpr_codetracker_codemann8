@@ -55,9 +55,9 @@ function EntranceShuffleMode:postUpdate()
             local drop = Tracker:FindObjectForCode(CaptureBadgeEntrances[i])
             if self:getState() > 3 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-            elseif self:getState() == 2 then
-                drop.ItemCaptureLayout = "tracker_capture_entrance_location"
-            elseif self:getState() > 2 then
+            --elseif self:getState() == 2 then
+            --    drop.ItemCaptureLayout = "tracker_capture_entrance_location"
+            elseif self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance"
             else
                 drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
@@ -68,9 +68,9 @@ function EntranceShuffleMode:postUpdate()
             local drop = Tracker:FindObjectForCode(CaptureBadgeDungeons[i])
             if self:getState() > 3 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-            elseif self:getState() == 2 then
-                drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
-            elseif self:getState() > 2 then
+            --elseif self:getState() == 2 then
+            --    drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
+            elseif self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance"
             else
                 drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
@@ -81,9 +81,9 @@ function EntranceShuffleMode:postUpdate()
             local drop = Tracker:FindObjectForCode(CaptureBadgeConnectors[i])
             if self:getState() > 3 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-            elseif self:getState() == 2 then
-                drop.ItemCaptureLayout = "tracker_capture_entrance_connector"
-            elseif self:getState() > 2 then
+            --elseif self:getState() == 2 then
+            --    drop.ItemCaptureLayout = "tracker_capture_entrance_connector"
+            elseif self:getState() > 1 then
                 drop.ItemCaptureLayout = "tracker_capture_entrance"
             else
                 drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
