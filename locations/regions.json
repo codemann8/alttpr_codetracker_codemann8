@@ -1855,6 +1855,7 @@
             "world_state_open,glitch_mode_ow,[pearl],aga,bottle,lift1",
             "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
             "world_state_inverted,@Northeast Dark World,lift1",
+            "world_state_inverted,@OW Zora Approach,mirror",
             "world_state_inverted,zora_waterfall,pearl,flippers,mirror",
             "world_state_inverted,ow_zora_approach,mirror",
             "world_state_inverted,glitch_mode_ow,boots"
