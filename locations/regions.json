@@ -315,6 +315,7 @@
                     "world_state_inverted,ow_dark_witch,[flippers]",
                     "world_state_inverted,ow_shopping_mall,[flippers]",
                     "world_state_inverted,ip_area,[flippers]",
+                    "world_state_inverted,glitch_mode_ow,boots",
                     "glitch_mode_major"
                 ]
             },
