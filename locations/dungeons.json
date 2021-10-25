@@ -285,8 +285,8 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "world_state_open,@OW Dark Death Mountain West Top,[pearl],$gtCrystalCount",
+            "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_inverted,@OW Castle Ledge,$gtCrystalCount",
-            "glitch_mode_ow,pearl,boots",
             "glitch_mode_major",
             "entrance_shuffle_on"
         ]
