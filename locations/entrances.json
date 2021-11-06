@@ -64,7 +64,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -92,7 +95,7 @@
                 "x": 370,
                 "y": 40,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -164,7 +167,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -192,7 +198,7 @@
                 "x": 673,
                 "y": 132,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -206,7 +212,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -234,7 +243,7 @@
                 "x": 375,
                 "y": 635,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -297,7 +306,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -325,7 +337,7 @@
                 "x": 100,
                 "y": 944,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -414,7 +426,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -442,7 +457,7 @@
                 "x": 415,
                 "y": 956,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -509,7 +524,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -537,7 +555,7 @@
                 "x": 410,
                 "y": 1070,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -554,7 +572,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -582,7 +603,7 @@
                 "x": 56,
                 "y": 1195,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -829,7 +850,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -857,7 +881,7 @@
                 "x": 432,
                 "y": 1404,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1433,7 +1457,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1461,7 +1488,7 @@
                 "x": 1650,
                 "y": 1295,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1474,7 +1501,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1502,7 +1532,7 @@
                 "x": 1970,
                 "y": 1392,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1735,7 +1765,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1763,7 +1796,7 @@
                 "x": 555,
                 "y": 1790,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1781,7 +1814,10 @@
                 "access_rules": [ "lift1,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1810,7 +1846,7 @@
                 "x": 625,
                 "y": 1920,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1852,7 +1888,10 @@
                 "access_rules": [ "boots,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1881,7 +1920,7 @@
                 "x": 945,
                 "y": 1310,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1924,7 +1963,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1952,7 +1994,7 @@
                 "x": 1190,
                 "y": 1560,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -1966,7 +2008,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -1994,7 +2039,7 @@
                 "x": 1302,
                 "y": 1615,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -2115,7 +2160,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -2143,7 +2191,7 @@
                 "x": 1859,
                 "y": 1530,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -2161,7 +2209,10 @@
                 "access_rules": [ "lift1,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -2190,7 +2241,7 @@
                 "x": 1822,
                 "y": 1602,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -2615,7 +2666,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -2643,14 +2697,14 @@
                 "x": 1685,
                 "y": 291,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_off,retro_mode_on" ]
             },
             {
                 "map": "lightworld",
                 "x": 1675,
                 "y": 291,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on,retro_mode_on" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_on,retro_mode_on" ]
             }
         ]
     },
@@ -3014,7 +3068,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "world_state_open,entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "world_state_open,entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3042,7 +3099,7 @@
                 "x": 924,
                 "y": 551,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3081,7 +3138,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3109,7 +3169,7 @@
                 "x": 377,
                 "y": 635,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3302,7 +3362,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3330,7 +3393,7 @@
                 "x": 431,
                 "y": 1400,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3452,7 +3515,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3480,7 +3546,7 @@
                 "x": 1706,
                 "y": 1008,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3523,7 +3589,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3551,7 +3620,7 @@
                 "x": 1656,
                 "y": 1296,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3565,7 +3634,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3593,7 +3665,7 @@
                 "x": 1968,
                 "y": 1392,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3675,7 +3747,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3703,7 +3778,7 @@
                 "x": 226,
                 "y": 1600,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3716,7 +3791,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3744,7 +3822,7 @@
                 "x": 400,
                 "y": 1655,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3787,7 +3865,10 @@
                 "access_rules": [ "boots,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3816,7 +3897,7 @@
                 "x": 945,
                 "y": 1310,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3950,7 +4031,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -3978,7 +4062,7 @@
                 "x": 1785,
                 "y": 1530,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -3992,7 +4076,10 @@
                 "access_rules": [ "[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -4020,7 +4107,7 @@
                 "x": 1859,
                 "y": 1530,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -4039,7 +4126,10 @@
                 "access_rules": [ "lift1,[nothing]" ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -4068,7 +4158,7 @@
                 "x": 1822,
                 "y": 1602,
                 "size": 48,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "retro_mode_on" ]
             }
         ]
     },
@@ -4152,7 +4242,10 @@
                 ],
                 "chest_unopened_img": "images/takeanycave.png",
                 "chest_opened_img": "images/takeanycave.png",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,retro_mode_on" ],
+                "visibility_rules": [
+                    "entrance_shuffle_singleentryvanilla,retro_mode_on",
+                    "entrance_shuffle_lite,retro_mode_on"
+                ],
                 "item_count": 1
             },
             {
@@ -4181,14 +4274,14 @@
                 "x": 815,
                 "y": 384,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "world_state_open,retro_mode_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 737,
                 "y": 305,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_singleentryvanilla,retro_mode_on" ]
+                "restrict_visibility_rules": [ "world_state_inverted,retro_mode_on" ]
             }
         ]
     },
