@@ -241,6 +241,7 @@
             "@TR Bridge Entrances OW,glitch_mode_ow,boots",
             "@TR Bridge Entrances OW,glitch_mode_ow,[cape]",
             "@TR Bridge Entrances OW,glitch_mode_ow,[byrna]",
+            "world_state_inverted,@TR Bridge Entrances OW",
             "entrance_shuffle_on"
         ]
     },
