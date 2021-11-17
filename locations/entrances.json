@@ -7,6 +7,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
+            "{entrance_shuffle_lite}",
             "{entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -74,7 +75,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -109,6 +113,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
+            "{entrance_shuffle_lite}",
             "{entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -116,6 +121,7 @@
                 "name": "Dropdown",
                 "access_rules": [
                     "aga,boots",
+                    "{entrance_shuffle_lite}",
                     "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -180,7 +186,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -228,7 +237,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -325,7 +337,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -448,7 +463,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -549,7 +567,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -600,7 +621,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -699,7 +723,10 @@
                 "x": 612,
                 "y": 1040,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_lite",
+                    "entrance_shuffle_crossed"
+                ]
             },
             {
                 "map": "lightworld",
@@ -743,6 +770,7 @@
             "world_state_open",
             "world_state_inverted,pearl",
             "glitch_mode_major",
+            "{entrance_shuffle_lite}",
             "{entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -753,6 +781,7 @@
                     "world_state_open,pearl,lift2,mirror",
                     "glitch_mode_ow,boots",
                     "glitch_mode_major",
+                    "{entrance_shuffle_lite}",
                     "{entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -768,7 +797,10 @@
                 "x": 650,
                 "y": 1166,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_crossed" ]
+                "restrict_visibility_rules": [
+                    "entrance_shuffle_lite",
+                    "entrance_shuffle_crossed"
+                ]
             },
             {
                 "map": "lightworld",
@@ -881,7 +913,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1002,6 +1037,7 @@
         "access_rules": [
             "world_state_open,@OW Graveyard",
             "world_state_inverted,@OW Graveyard,pearl",
+            "{@OW Sanctuary,entrance_shuffle_lite}",
             "{@OW Sanctuary,entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -1009,6 +1045,7 @@
                 "name": "Dropdown",
                 "access_rules": [
                     "lift1",
+                    "{@OW Sanctuary,entrance_shuffle_lite}",
                     "{@OW Sanctuary,entrance_shuffle_crossed}"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
@@ -1116,6 +1153,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
+            "{entrance_shuffle_lite}",
             "{entrance_shuffle_crossed}"
         ],
         "sections": [
@@ -1255,6 +1293,7 @@
         "parent": "OW Castle Ledge",
         "access_rules": [
             "aga2",
+            "{entrance_shuffle_lite,@OW Castle Courtyard}",
             "{entrance_shuffle_crossed,@OW Castle Courtyard}"
         ],
         "sections": [
@@ -1308,6 +1347,7 @@
         "access_rules": [
             "world_state_inverted",
             "entrance_shuffle_singleentryvanilla",
+            "entrance_shuffle_lite",
             "entrance_shuffle_crossed",
             "entrance_shuffle_insanity,[mirror]",
             "entrance_shuffle_insanity,[castle_top]"
@@ -1491,7 +1531,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1538,7 +1581,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1805,7 +1851,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1858,7 +1907,10 @@
                 "access_rules": [ "lift1" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1935,7 +1987,10 @@
                 "access_rules": [ "boots" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -1957,6 +2012,7 @@
                 "y": 1310,
                 "size": 48,
                 "force_invisibility_rules": [
+                    "entrance_shuffle_lite",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ]
@@ -2012,7 +2068,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -2060,7 +2119,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -2215,7 +2277,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -2268,7 +2333,10 @@
                 "access_rules": [ "lift1" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -2727,7 +2795,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3137,7 +3208,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3210,7 +3284,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3437,7 +3514,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3593,7 +3673,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3670,7 +3753,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3718,7 +3804,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3834,7 +3923,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3881,7 +3973,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -3959,7 +4054,10 @@
                 "access_rules": [ "boots" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -4127,7 +4225,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -4175,7 +4276,10 @@
                 "name": "Entrance",
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -4229,7 +4333,10 @@
                 "access_rules": [ "lift1" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
@@ -4348,7 +4455,10 @@
                 "access_rules": [ "@OW Dark Death Mountain West Bottom" ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
-                "visibility_rules": [ "entrance_shuffle_all" ],
+                "visibility_rules": [
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "item_count": 1,
