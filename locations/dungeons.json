@@ -82,12 +82,26 @@
                 "item_count": 1
             },
             {
+                "name": "Mire 2",
+                "access_rules": [
+                    "@MM Special Access/Dungeon Access,sword",
+                    "@MM Special Access/Dungeon Access,firerod",
+                    "@MM Special Access/Dungeon Access,icerod",
+                    "@MM Special Access/Dungeon Access,hammer",
+                    "@MM Special Access/Dungeon Access,somaria",
+                    "@MM Special Access/Dungeon Access,retro_mode_off,bow",
+                    "@MM Special Access/Dungeon Access,retro_mode_on,arrows,bad",
+                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                ],
+                "item_count": 1
+            },
+            {
                 "name": "Left Side Access",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,pool_keydrop_off,[mm_smallkey:3]",
-                    "@MM Special Access/Dungeon Access,pool_keydrop_on,mm_smallkey:2,[mm_smallkey:6]",
-                    "@MM Special Access/Dungeon Access,keysanity_smallkey_off",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Mire 2,pool_keydrop_off,[mm_smallkey:3]",
+                    "@MM Special Access/Mire 2,pool_keydrop_on,mm_smallkey:2,[mm_smallkey:6]",
+                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
+                    "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "item_count": 1
             }
@@ -1845,7 +1859,7 @@
             {
                 "name": "Bridge",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access"
+                    "@MM Special Access/Mire 2"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1853,7 +1867,7 @@
             {
                 "name": "Spike Switch",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access"
+                    "@MM Special Access/Mire 2"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1861,7 +1875,7 @@
             {
                 "name": "Spike Key",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access"
+                    "@MM Special Access/Mire 2"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/pot-dw.png",
@@ -1871,12 +1885,12 @@
             {
                 "name": "Main Hub",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,mm_bigkey",
-                    "@MM Special Access/Dungeon Access,keysanity_bigkey_off",
-                    "@MM Special Access/Dungeon Access,pool_keydrop_off,[mm_smallkey:1]",
-                    "@MM Special Access/Dungeon Access,pool_keydrop_on,mm_smallkey:1,[mm_smallkey:2]",
-                    "@MM Special Access/Dungeon Access,keysanity_smallkey_off",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Mire 2,mm_bigkey",
+                    "@MM Special Access/Mire 2,keysanity_bigkey_off",
+                    "@MM Special Access/Mire 2,pool_keydrop_off,[mm_smallkey:1]",
+                    "@MM Special Access/Mire 2,pool_keydrop_on,mm_smallkey:1,[mm_smallkey:2]",
+                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
+                    "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1884,11 +1898,11 @@
             {
                 "name": "Fishbone Key",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,mm_bigkey",
-                    "@MM Special Access/Dungeon Access,keysanity_bigkey_off",
-                    "@MM Special Access/Dungeon Access,mm_smallkey:2,[mm_smallkey:5]",
-                    "@MM Special Access/Dungeon Access,keysanity_smallkey_off",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Mire 2,mm_bigkey",
+                    "@MM Special Access/Mire 2,keysanity_bigkey_off",
+                    "@MM Special Access/Mire 2,mm_smallkey:2,[mm_smallkey:5]",
+                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
+                    "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/pot-dw.png",
@@ -1898,9 +1912,9 @@
             {
                 "name": "Conveyor Jelly",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,mm_smallkey:1,[mm_smallkey:5]",
-                    "@MM Special Access/Dungeon Access,keysanity_smallkey_off",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Mire 2,mm_smallkey:1,[mm_smallkey:5]",
+                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
+                    "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
                 "chest_unopened_img": "images/enemy-jelly.png",
@@ -1934,8 +1948,8 @@
             {
                 "name": "Big Chest",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,mm_bigkey",
-                    "@MM Special Access/Dungeon Access,keysanity_bigkey_off"
+                    "@MM Special Access/Mire 2,mm_bigkey",
+                    "@MM Special Access/Mire 2,keysanity_bigkey_off"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1943,9 +1957,9 @@
             {
                 "name": "Vitreous Access",
                 "access_rules": [
-                    "@MM Special Access/Dungeon Access,mm_bigkey,[lamp],somaria",
-                    "@MM Special Access/Dungeon Access,keysanity_bigkey_off,[lamp],somaria",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Mire 2,mm_bigkey,[lamp],somaria",
+                    "@MM Special Access/Mire 2,keysanity_bigkey_off,[lamp],somaria",
+                    "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
