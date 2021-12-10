@@ -354,7 +354,7 @@
                     "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
                     "world_state_open,glitch_mode_ow,[pearl],aga,bottle",
                     "world_state_inverted,activated_flute",
-                    "world_state_inverted,@Light World,mirror",
+                    "world_state_inverted,@Light World,pearl,mirror",
                     "world_state_inverted,@Light World,pearl,flute",
                     "world_state_inverted,@South Dark World,[flippers]",
                     "world_state_inverted,@South Dark World,hammer",
