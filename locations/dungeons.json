@@ -156,7 +156,7 @@
             "world_state_open,@OW Palace of Darkness,pearl",
             "world_state_open,glitch_mode_ow,@OW Palace of Darkness,[pearl],bottle",
             "world_state_inverted,@OW Palace of Darkness",
-            "glitch_mode_hybrid,@OW Death Mountain West Bottom",
+            "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom",
             "entrance_shuffle_on"
         ]
     },
@@ -1005,6 +1005,7 @@
                 "access_rules": [
                     "door_shuffle_off,retro_mode_off,[bow]",
                     "door_shuffle_off,retro_mode_on,[arrows],[bow]",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1024,7 +1025,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer",
                     "door_shuffle_off,pod_smallkey:1",
                     "door_shuffle_off,keysanity_smallkey_off",
-                    "glitch_mode_hybrid,@Mountain Access",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1044,7 +1045,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5]",
                     "door_shuffle_off,keysanity_smallkey_off",
-                    "glitch_mode_hybrid,@Mountain Access",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1056,7 +1057,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5],[lamp]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5],[lamp]",
                     "door_shuffle_off,keysanity_smallkey_off,[lamp]",
-                    "glitch_mode_hybrid,@Mountain Access,[lamp]",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[lamp],[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1070,6 +1071,8 @@
                     "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],keysanity_bigkey_off",
                     "door_shuffle_basic,pod_bigkey",
                     "door_shuffle_basic,keysanity_bigkey_off",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,pod_bigkey,[nothing]",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,keysanity_bigkey_off,[nothing]",
                     "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1081,7 +1084,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:3]",
                     "door_shuffle_off,pod_smallkey:2,[pod_smallkey:3]",
                     "door_shuffle_off,keysanity_smallkey_off",
-                    "glitch_mode_hybrid,@Mountain Access",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1091,6 +1094,7 @@
                 "name": "Rupee Basement",
                 "access_rules": [
                     "door_shuffle_off,@Palace of Darkness/Turtle Room,[firesource]",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[lamp],[nothing]",
                     "door_shuffle_on,[firesource]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1103,7 +1107,7 @@
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:2,[pod_smallkey:5]",
                     "door_shuffle_off,pod_smallkey:3,[pod_smallkey:5]",
                     "door_shuffle_off,keysanity_smallkey_off",
-                    "glitch_mode_hybrid,@Mountain Access",
+                    "glitch_mode_hybrid,entrance_shuffle_singleentryvanilla,@OW Death Mountain West Bottom,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1125,8 +1129,6 @@
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_smallkey:1,[pod_smallkey:6],keysanity_bigkey_off",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,pod_bigkey",
                     "door_shuffle_off,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_smallkey_off,keysanity_bigkey_off",
-                    "glitch_mode_hybrid,@Palace of Darkness/Mimics 2,[lamp],hammer,pod_bigkey",
-                    "glitch_mode_hybrid,@Palace of Darkness/Mimics 2,[lamp],hammer,keysanity_bigkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
