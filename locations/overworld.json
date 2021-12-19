@@ -362,14 +362,16 @@
         "parent": "OW Stone Bridge Water",
         "access_rules": [
             "world_state_open",
-            "world_state_inverted,pearl"
+            "world_state_inverted,pearl",
+            "world_state_inverted,glitch_mode_major,bottle"
         ],
         "sections": [
             {
                 "name": "Under The Bridge",
                 "access_rules": [
                     "[flippers]",
-                    "glitch_mode_ow,boots"
+                    "glitch_mode_ow,boots",
+                    "glitch_mode_major"
                 ],
                 "item_count": 1
             }
@@ -668,6 +670,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {

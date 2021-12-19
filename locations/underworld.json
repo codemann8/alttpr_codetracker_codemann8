@@ -953,9 +953,9 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,[mirror]",
-            "world_state_open,glitch_mode_ow,[pearl]",
-            "world_state_inverted"
+            "world_state_open,glitch_mode_ow,mirror",
+            "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -978,9 +978,9 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,[mirror]",
-            "world_state_open,glitch_mode_ow,[pearl]",
-            "world_state_inverted"
+            "world_state_open,glitch_mode_ow,mirror",
+            "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1056,7 +1056,8 @@
         "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1086,16 +1087,12 @@
             "world_state_inverted,glitch_mode_ow,@OW Broken Bridge West,boots",
             "world_state_inverted,glitch_mode_ow,@OW Hammer Bridge Top,boots",
             "world_state_inverted,glitch_mode_ow,@OW Bomb Shop,boots",
-            "glitch_mode_major,bottle:1"
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
                 "name": "Cave",
-                "access_rules": [
-                    "world_state_open,pearl,hammer",
-                    "world_state_open,glitch_mode_major,bottle,hammer",
-                    "world_state_inverted,hammer"
-                ],
+                "access_rules": [ "hammer" ],
                 "item_count": 1
             }
         ],
@@ -1114,7 +1111,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,[mirror]",
+            "world_state_open,glitch_mode_ow,mirror",
             "world_state_inverted"
         ],
         "sections": [
@@ -1178,6 +1175,7 @@
             "aga,mirror",
             "world_state_open,hammer",
             "world_state_open,glitch_mode_ow,boots,mirror",
+            "world_state_open,glitch_mode_major,mirror",
             "world_state_inverted,mirror"
         ],
         "sections": [
@@ -1186,7 +1184,6 @@
                 "access_rules": [
                     "entrance_shuffle_all",
                     "world_state_open,@OW Bomb Shop",
-                    "world_state_open,glitch_mode_ow,boots,mirror",
                     "world_state_inverted,@OW Links House"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -1198,7 +1195,8 @@
                     "@Pyramid Fairy/Get Big Bomb,crystal56:2",
                     "@Pyramid Fairy/Get Big Bomb,crystal:7",
                     "@Pyramid Fairy/Get Big Bomb,prize:10",
-                    "world_state_open,glitch_mode_ow,boots,mirror"
+                    "world_state_open,glitch_mode_ow,boots,mirror",
+                    "world_state_open,glitch_mode_major,mirror"
                 ],
                 "item_count": 2
             }
@@ -1254,7 +1252,8 @@
         "parent": "OW Hype",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1309,7 +1308,8 @@
             "world_state_open,pearl,lift1",
             "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_inverted,lift1",
-            "world_state_inverted,glitch_mode_ow,boots"
+            "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {

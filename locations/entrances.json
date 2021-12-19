@@ -1618,7 +1618,8 @@
         "parent": "OW Desert Ledge",
         "access_rules": [
             "world_state_open",
-            "world_state_inverted,pearl"
+            "world_state_inverted,pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1627,7 +1628,8 @@
                     "lift1",
                     "world_state_open,glitch_mode_ow,boots",
                     "world_state_open,@OW Mire,mirror",
-                    "world_state_inverted,glitch_mode_ow,pearl,boots"
+                    "world_state_inverted,glitch_mode_ow,pearl,boots",
+                    "glitch_mode_major"
                 ],
                 "chest_unopened_img": "images/door_closed.png",
                 "chest_opened_img": "images/door_open.png",
@@ -2430,7 +2432,8 @@
             "world_state_open,lift1",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_inverted,pearl,lift1",
-            "world_state_inverted,glitch_mode_ow,pearl,boots"
+            "world_state_inverted,glitch_mode_ow,pearl,boots",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3014,6 +3017,7 @@
         "parent": "OW Skull Woods Front",
         "access_rules": [
             "world_state_open,[pearl]",
+            "world_state_open,glitch_mode_major",
             "world_state_inverted"
         ],
         "sections": [
@@ -3141,6 +3145,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3345,8 +3350,8 @@
         "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl]",
-            "world_state_inverted"
+            "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3437,6 +3442,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3468,6 +3474,7 @@
             "world_state_open,ow_hammerpegs,pearl,lift2",
             "world_state_inverted,ow_hammerpegs,lift2",
             "world_state_inverted,ow_blacksmith,mirror",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3601,6 +3608,7 @@
             "crystal:7",
             "prize:10",
             "world_state_open,glitch_mode_ow,@Vanilla OW Shuffle,boots,mirror",
+            "world_state_open,glitch_mode_major,@Vanilla OW Shuffle,mirror",
             "world_state_inverted,glitch_mode_ow,@Light World,mirror"
         ],
         "sections": [
@@ -3708,6 +3716,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4031,6 +4040,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4111,6 +4121,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4167,11 +4178,12 @@
             "@OW Ice Lake Island",
             "world_state_open,glitch_mode_ow,lift2",
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
-            "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
             "world_state_open,glitch_mode_ow,pearl,boots,[flippers],mirror",
-            "world_state_open,glitch_mode_ow,[pearl],boots,[flippers],bottle,mirror",
-            "world_state_inverted,glitch_mode_ow,lift2",
-            "world_state_inverted,glitch_mode_ow,boots,flippers" //prob soon to be removed from logic
+            "world_state_open,glitch_mode_ow,pearl,boots,[flippers],bottle",
+            "world_state_open,glitch_mode_major,bottle,flippers", //prob soon to be removed from logic
+            "world_state_open,glitch_mode_major,bottle,mirror",
+            "world_state_inverted,glitch_mode_ow,boots",
+            "world_state_inverted,glitch_mode_major"
         ],
         "sections": [
             {
@@ -4201,6 +4213,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4307,6 +4320,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4585,6 +4599,7 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -4712,6 +4727,7 @@
         "parent": "Dark Death Mountain Color",
         "access_rules": [
             "@TR Laser Entrance OW",
+            "world_state_open,glitch_mode_major,bottle,mirror",
             "world_state_inverted,dm_east_connect,mirror"
         ],
         "sections": [

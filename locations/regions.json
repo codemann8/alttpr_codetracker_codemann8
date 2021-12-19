@@ -1546,7 +1546,7 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "@Light World,[flippers]",
-            "@Light World,glitch_mode_ow,boots",
+            "@Light World,glitch_mode_ow",
             "world_state_open,ow_hylia_water,[flippers]",
             "world_state_open,ow_hylia_northwest,[flippers]",
             "world_state_open,ow_hylia_northeast,[flippers]",
@@ -1861,7 +1861,8 @@
             "world_state_inverted,@OW Zora Approach,mirror",
             "world_state_inverted,zora_waterfall,pearl,flippers,mirror",
             "world_state_inverted,ow_zora_approach,mirror",
-            "world_state_inverted,glitch_mode_ow,boots"
+            "world_state_inverted,glitch_mode_ow,boots",
+            "glitch_mode_major,bottle"
         ]
     },
     {
@@ -2264,9 +2265,11 @@
         "access_rules": [
             "ow_stumpy",
             "world_state_open,@South Dark World,pearl",
-            "glitch_mode_ow,@OW Archery Game,[pearl],mirror",
+            "world_state_open,glitch_mode_ow,@OW Archery Game,[pearl],mirror",
+            "world_state_open,glitch_mode_major,@OW Archery Game,mirror",
             "world_state_inverted,ow_flute,mirror",
-            "world_state_inverted,@South Dark World"
+            "world_state_inverted,@South Dark World",
+            "glitch_mode_major,@South Dark World,bottle"
         ]
     },
     {
@@ -2359,8 +2362,6 @@
             "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_open,glitch_mode_ow,boots,lift2",
             "world_state_open,glitch_mode_ow,[pearl],[boots],mirror,@South Dark World",
-            "world_state_open,glitch_mode_major,lift2",
-            "world_state_open,glitch_mode_major,@South Dark World",
             "world_state_inverted,@Light World,pearl,flute",
             "world_state_inverted,@Light World,mirror",
             "world_state_inverted,activated_flute",
@@ -2371,7 +2372,6 @@
             "world_state_inverted,desert_back,mirror",
             "world_state_inverted,desert_front,mirror",
             "world_state_inverted,glitch_mode_ow,boots",
-            "world_state_inverted,glitch_mode_ow,boots,[bottle]",
             "glitch_mode_major"
         ]
     },
@@ -2495,7 +2495,8 @@
             "ip_area",
             "world_state_open,@Light World,[flippers],lift2",
             "world_state_open,glitch_mode_ow,@Light World,lift2",
-            "world_state_open,glitch_mode_ow,@South Dark World,pearl,boots,flippers", //prob soon to be removed from logic
+            "world_state_open,glitch_mode_ow,@OW Hype,pearl,boots,flippers", //prob soon to be removed from logic
+            "world_state_open,glitch_mode_major,@OW Hype,bottle,mirror",
             "world_state_open,ow_ice_northwest,pearl,[flippers],mirror,lift2",
             "world_state_open,ow_ice_northeast,pearl,[flippers],mirror,lift2",
             "world_state_open,ow_ice_southwest,pearl,[flippers],mirror,lift2",
@@ -2507,7 +2508,7 @@
             "world_state_open,ow_hylia_water,[flippers],lift2",
             "world_state_open,upgrade_fairy,lift2",
             "world_state_inverted,@South Dark World,[flippers]",
-            "world_state_inverted,glitch_mode_ow,@South Dark World",
+            "world_state_inverted,glitch_mode_ow,@OW Hype",
             "world_state_inverted,ow_ice_northwest,[flippers]",
             "world_state_inverted,ow_ice_northeast,[flippers]",
             "world_state_inverted,ow_ice_southwest,[flippers]",
@@ -2558,7 +2559,8 @@
             "world_state_inverted,@East Dark World,[flippers]",
             "world_state_inverted,glitch_mode_ow,@East Dark World,boots",
             "world_state_inverted,@Northeast Dark World,[flippers]",
-            "world_state_inverted,ow_ice_cave,mirror"
+            "world_state_inverted,ow_ice_cave,mirror",
+            "glitch_mode_major,@OW Palace of Darkness Nook"
         ]
     },
     {
