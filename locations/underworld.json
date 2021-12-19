@@ -620,7 +620,7 @@
         "access_rules": [
             "world_state_open",
             "world_state_inverted,pearl",
-            "world_state_inverted,glitch_mode_ow,[pearl],boots,bottle"
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1056,7 +1056,6 @@
         "parent": "OW Village of Outcasts",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
             "world_state_inverted"
         ],
         "sections": [
@@ -1094,7 +1093,6 @@
                 "name": "Cave",
                 "access_rules": [
                     "world_state_open,pearl,hammer",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle,hammer",
                     "world_state_open,glitch_mode_major,bottle,hammer",
                     "world_state_inverted,hammer"
                 ],
@@ -1256,7 +1254,6 @@
         "parent": "OW Hype",
         "access_rules": [
             "world_state_open,pearl",
-            "world_state_open,glitch_mode_ow,[pearl],bottle",
             "world_state_inverted"
         ],
         "sections": [

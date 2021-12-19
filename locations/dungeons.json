@@ -205,7 +205,6 @@
             "world_state_open,glitch_mode_ow,pearl,boots,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_ow,[pearl],boots,flippers,bottle",
             "world_state_open,glitch_mode_ow,pearl,boots,[flippers],mirror",
-            "world_state_open,glitch_mode_ow,[pearl],boots,[flippers],mirror,bottle",
             "world_state_open,glitch_mode_major,mirror",
             "world_state_open,glitch_mode_major,pearl,flippers",
             "world_state_open,glitch_mode_major,flippers,bottle",
@@ -2016,7 +2015,6 @@
                 "name": "Bunny Rules",
                 "access_rules": [
                     "world_state_open,pearl",
-                    "world_state_open,glitch_mode_ow,[pearl],boots,bottle",
                     "world_state_open,glitch_mode_major,bottle",
                     "world_state_inverted",
                     "entrance_shuffle_on"

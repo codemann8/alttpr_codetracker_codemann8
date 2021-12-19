@@ -577,8 +577,6 @@
                     "world_state_open,entrance_shuffle_all,pearl,lift2",
                     "world_state_open,glitch_mode_ow,pearl,boots,bottle,[lift2]",
                     "world_state_open,glitch_mode_ow,pearl,boots,mirror,[lift2]",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle2,boots,[lift2]",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle,boots,mirror,[lift2]",
                     "world_state_open,glitch_mode_major,bottle",
                     "world_state_inverted,entrance_shuffle_all,@OW Kakariko Suburb,mirror",
                     "world_state_inverted,entrance_shuffle_all,lift2",
@@ -670,7 +668,6 @@
         "access_rules": [
             "world_state_open,pearl",
             "world_state_inverted",
-            "glitch_mode_ow,[pearl],bottle"
         ],
         "sections": [
             {
@@ -786,8 +783,6 @@
                     "world_state_open,entrance_shuffle_singleentryvanilla,pearl,lift1,cape",
                     "world_state_open,bumper_cave",
                     "world_state_open,glitch_mode_ow,pearl,boots",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle,boots",
-                    "world_state_open,glitch_mode_ow,[pearl],bottle,cape",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@OW Mountain Entry,pearl,lift1,cape,mirror",
                     "world_state_inverted,bumper_cave,mirror",
                     "world_state_inverted,glitch_mode_ow,boots",
