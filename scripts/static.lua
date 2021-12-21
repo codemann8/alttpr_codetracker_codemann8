@@ -261,6 +261,7 @@ CaptureBadgeUnderworld = {
     "@Cave 45/Circle of Bushes",
     "@Potion Shop/Items",
     "@Lake Shop/Items",
+    "@Pond of Happiness/Items",
     "@Paradox Cave Shop/Items",
     "@Dark Lumberjack Shop/Items",
     "@Shield Shop/Items",

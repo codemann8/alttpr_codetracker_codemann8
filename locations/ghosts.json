@@ -1475,6 +1475,25 @@
         ]
     },
     {
+        "name": "Pond of Happiness Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1595,
+                "y": 1774,
+                "size": 0,
+                "badge_size": 128
+            }
+        ]
+    },
+    {
         "name": "Upgrade Fairy Ghost",
         "sections": [
             {
