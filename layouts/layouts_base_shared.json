@@ -148,7 +148,7 @@
         ]
     },
     "shared_lw_dynreq": {
-        "type": "container",
+        "type": "viewbox",
         "margin": 6,
         "content": [
             {
@@ -194,7 +194,7 @@
         ]
     },
     "shared_dw_dynreq": {
-        "type": "container",
+        "type": "viewbox",
         "margin": 6,
         "content": [
             {

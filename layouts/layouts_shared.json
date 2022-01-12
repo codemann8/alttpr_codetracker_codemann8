@@ -501,7 +501,7 @@
             {
                 "title": "Overworld",
                 "content": {
-                    "type": "container",
+                    "type": "viewbox",
                     "content": [
                         {
                             "type": "map",
@@ -515,6 +515,11 @@
                                 {
                                     "type": "layout",
                                     "key": "shared_lw_dynreq"
+                                },
+                                {
+                                    "type": "itemgrid",
+                                    "item_size": 20,
+                                    "rows": [ [ "" ] ]
                                 },
                                 {
                                     "type": "layout",
@@ -572,7 +577,7 @@
                     "v_alignment": "center",
                     "content": [
                         {
-                            "type": "container",
+                            "type": "viewbox",
                             "min_width": 700,
                             "max_width": 3300,
                             "content": [
@@ -588,6 +593,11 @@
                                         {
                                             "type": "layout",
                                             "key": "shared_lw_dynreq"
+                                        },
+                                        {
+                                            "type": "itemgrid",
+                                            "item_size": 20,
+                                            "rows": [ [ "" ] ]
                                         },
                                         {
                                             "type": "layout",
@@ -637,7 +647,7 @@
             {
                 "title": "Overworld",
                 "content": {
-                    "type": "container",
+                    "type": "viewbox",
                     "content": [
                         {
                             "type": "map",
@@ -651,6 +661,11 @@
                                 {
                                     "type": "layout",
                                     "key": "shared_lw_dynreq"
+                                },
+                                {
+                                    "type": "itemgrid",
+                                    "item_size": 20,
+                                    "rows": [ [ "" ] ]
                                 },
                                 {
                                     "type": "layout",
