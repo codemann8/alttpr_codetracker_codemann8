@@ -501,29 +501,35 @@
             {
                 "title": "Overworld",
                 "content": {
-                    "type": "viewbox",
+                    "type": "container",
                     "content": [
                         {
                             "type": "map",
                             "maps": [ "lightworld", "darkworld" ]
                         },
                         {
-                            "type": "array",
-                            "orientation": "horizontal",
-                            "h_alignment": "center",
+                            "type": "viewbox",
                             "content": [
                                 {
-                                    "type": "layout",
-                                    "key": "shared_lw_dynreq"
-                                },
-                                {
-                                    "type": "itemgrid",
-                                    "item_size": 20,
-                                    "rows": [ [ "" ] ]
-                                },
-                                {
-                                    "type": "layout",
-                                    "key": "shared_dw_dynreq"
+                                    "type": "array",
+                                    "orientation": "horizontal",
+                                    "h_alignment": "center",
+                                    "margin": "20",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_lw_dynreq"
+                                        },
+                                        {
+                                            "type": "itemgrid",
+                                            "item_size": 20,
+                                            "rows": [ [ "" ] ]
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_dw_dynreq"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -577,7 +583,7 @@
                     "v_alignment": "center",
                     "content": [
                         {
-                            "type": "viewbox",
+                            "type": "container",
                             "min_width": 700,
                             "max_width": 3300,
                             "content": [
@@ -586,22 +592,28 @@
                                     "maps": [ "lightworld", "darkworld" ]
                                 },
                                 {
-                                    "type": "array",
-                                    "orientation": "horizontal",
-                                    "h_alignment": "center",
+                                    "type": "viewbox",
                                     "content": [
                                         {
-                                            "type": "layout",
-                                            "key": "shared_lw_dynreq"
-                                        },
-                                        {
-                                            "type": "itemgrid",
-                                            "item_size": 20,
-                                            "rows": [ [ "" ] ]
-                                        },
-                                        {
-                                            "type": "layout",
-                                            "key": "shared_dw_dynreq"
+                                            "type": "array",
+                                            "orientation": "horizontal",
+                                            "h_alignment": "center",
+                                            "margin": "20",
+                                            "content": [
+                                                {
+                                                    "type": "layout",
+                                                    "key": "shared_lw_dynreq"
+                                                },
+                                                {
+                                                    "type": "itemgrid",
+                                                    "item_size": 20,
+                                                    "rows": [ [ "" ] ]
+                                                },
+                                                {
+                                                    "type": "layout",
+                                                    "key": "shared_dw_dynreq"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -647,29 +659,36 @@
             {
                 "title": "Overworld",
                 "content": {
-                    "type": "viewbox",
+                    "type": "container",
                     "content": [
                         {
                             "type": "map",
                             "maps": [ "lightworld", "darkworld" ]
                         },
                         {
-                            "type": "array",
-                            "orientation": "vertical",
-                            "h_alignment": "center",
+                            "type": "viewbox",
+                            "v_alignment": "top",
                             "content": [
                                 {
-                                    "type": "layout",
-                                    "key": "shared_lw_dynreq"
-                                },
-                                {
-                                    "type": "itemgrid",
-                                    "item_size": 20,
-                                    "rows": [ [ "" ] ]
-                                },
-                                {
-                                    "type": "layout",
-                                    "key": "shared_dw_dynreq"
+                                    "type": "array",
+                                    "orientation": "vertical",
+                                    "h_alignment": "center",
+                                    "margin": "20",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_lw_dynreq"
+                                        },
+                                        {
+                                            "type": "itemgrid",
+                                            "item_size": 20,
+                                            "rows": [ [ "" ] ]
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_dw_dynreq"
+                                        }
+                                    ]
                                 }
                             ]
                         }
