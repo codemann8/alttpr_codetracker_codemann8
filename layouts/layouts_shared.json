@@ -546,31 +546,36 @@
             {
                 "title": "Doors",
                 "content": {
-                    "type": "array",
-                    "orientation": "vertical",
-                    "h_alignment": "center",
-                    "v_alignment": "center",
+                    "type": "viewbox",
                     "content": [
                         {
                             "type": "array",
-                            "orientation": "horizontal",
+                            "orientation": "vertical",
                             "h_alignment": "center",
-                            "margin": "0,0,0,20",
-                            "scale": 1.25,
+                            "v_alignment": "center",
                             "content": [
                                 {
-                                    "type": "layout",
-                                    "key": "shared_doorslotselect"
+                                    "type": "array",
+                                    "orientation": "horizontal",
+                                    "h_alignment": "center",
+                                    "margin": "0,0,0,20",
+                                    "scale": 1.25,
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_doorslotselect"
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_roomgroupselect"
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "layout",
-                                    "key": "shared_roomgroupselect"
+                                    "key": "shared_doorrando"
                                 }
                             ]
-                        },
-                        {
-                            "type": "layout",
-                            "key": "shared_doorrando"
                         }
                     ]
                 }
@@ -705,31 +710,36 @@
             {
                 "title": "Doors",
                 "content": {
-                    "type": "array",
-                    "orientation": "horizontal",
-                    "h_alignment": "center",
-                    "v_alignment": "center",
+                    "type": "viewbox",
                     "content": [
                         {
                             "type": "array",
-                            "orientation": "vertical",
+                            "orientation": "horizontal",
                             "h_alignment": "center",
                             "v_alignment": "center",
-                            "margin": "0,0,30,0",
                             "content": [
                                 {
-                                    "type": "layout",
-                                    "key": "shared_v_doorslotselect"
+                                    "type": "array",
+                                    "orientation": "vertical",
+                                    "h_alignment": "center",
+                                    "v_alignment": "center",
+                                    "margin": "0,0,30,0",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_v_doorslotselect"
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_v_roomgroupselect"
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "layout",
-                                    "key": "shared_v_roomgroupselect"
+                                    "key": "shared_v_doorrando"
                                 }
                             ]
-                        },
-                        {
-                            "type": "layout",
-                            "key": "shared_v_doorrando"
                         }
                     ]
                 }
