@@ -241,7 +241,8 @@
                     "world_state_open,glitch_mode_ow,boots,mirror",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla",
                     "world_state_inverted,@Light World,mirror",
-                    "world_state_inverted,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_orig,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_new,flute",
                     "world_state_inverted,lm_dmentry,mirror",
                     "world_state_inverted,lm_dmexit,mirror",
                     "world_state_inverted,bomb_hut,mirror",
@@ -254,8 +255,8 @@
                     "world_state_inverted,ow_dark_witch,hammer,lift2",
                     "world_state_inverted,ow_shopping_mall,[flippers],hookshot",
                     "world_state_inverted,ow_shopping_mall,[flippers],hammer,lift2",
-                    "world_state_inverted,ip_area,[flippers],hookshot",
-                    "world_state_inverted,ip_area,[flippers],hammer,lift2",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers],hookshot",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers],hammer,lift2",
                     "world_state_inverted,@EDW Regions,lift1,hookshot",
                     "world_state_inverted,@EDW Regions,hammer,hookshot",
                     "world_state_inverted,@EDW Regions,hammer,lift2",
@@ -278,12 +279,11 @@
                     "@Northwest Dark World",
                     "world_state_open,ow_dark_witch,pearl,hammer",
                     "world_state_open,ow_shopping_mall,pearl,[flippers],hammer",
-                    "world_state_open,ip_area,pearl,[flippers],hammer",
                     "world_state_open,aga,pearl,hammer",
                     "world_state_open,@EDW Regions,pearl,hammer",
                     "world_state_inverted,ow_dark_witch,hammer",
                     "world_state_inverted,ow_shopping_mall,[flippers],hammer",
-                    "world_state_inverted,ip_area,[flippers],hammer",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers],hammer",
                     "world_state_inverted,@EDW Regions,hammer",
                     "glitch_mode_major"
                 ]
@@ -304,14 +304,15 @@
                     "world_state_open,glitch_mode_major,bottle",
                     "world_state_inverted,activated_flute",
                     "world_state_inverted,@Light World,mirror",
-                    "world_state_inverted,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_orig,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_new,flute",
                     "world_state_inverted,@South Dark World,hammer",
                     "world_state_inverted,@South Dark World,[flippers]",
                     "world_state_inverted,ow_dark_witch,hammer",
                     "world_state_inverted,ow_dark_witch,lift1",
                     "world_state_inverted,ow_dark_witch,[flippers]",
                     "world_state_inverted,ow_shopping_mall,[flippers]",
-                    "world_state_inverted,ip_area,[flippers]",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers]",
                     "world_state_inverted,glitch_mode_ow,boots",
                     "glitch_mode_major"
                 ]
@@ -326,10 +327,11 @@
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_inverted,activated_flute",
                     "world_state_inverted,@Light World,mirror",
-                    "world_state_inverted,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_orig,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_new,flute",
                     "world_state_inverted,@South Dark World,[flippers]",
                     "world_state_inverted,@East Dark World,[flippers]",
-                    "world_state_inverted,ip_area,[flippers]",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers]",
                     "world_state_inverted,ow_dark_witch,[flippers]",
                     "glitch_mode_major"
                 ]
@@ -347,14 +349,15 @@
                     "world_state_open,glitch_mode_ow,pearl,boots",
                     "world_state_inverted,activated_flute",
                     "world_state_inverted,@Light World,pearl,mirror",
-                    "world_state_inverted,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_orig,@Light World,pearl,flute",
+                    "world_state_inverted,inverted_new,flute",
                     "world_state_inverted,@South Dark World,[flippers]",
                     "world_state_inverted,@South Dark World,hammer",
                     "world_state_inverted,@East Dark World,[flippers]",
                     "world_state_inverted,@East Dark World,hammer",
                     "world_state_inverted,@East Dark World,lift1",
                     "world_state_inverted,@Southeast Dark World,[flippers]",
-                    "world_state_inverted,ip_area,[flippers]",
+                    "world_state_inverted,inverted_orig,ip_area,[flippers]",
                     "glitch_mode_major"
                 ]
             },
@@ -387,16 +390,18 @@
         "name": "Mountain Access",
         "parent": "Vanilla OW Shuffle",
         "access_rules": [
+            "activated_flute",
             "world_state_open,dm_west_top",
             "world_state_open,flute",
+            "world_state_open,entrance_shuffle_singleentryvanilla,lift1,[lamp]",
             "world_state_inverted,ddm_west_bottom",
             "world_state_inverted,ddm_floating",
-            "world_state_inverted,activated_flute",
-            "world_state_inverted,@OW Kakariko Village,pearl,flute",
             "world_state_inverted,@OW Dark Lumberjack,glitch_mode_ow,boots",
             "world_state_inverted,@OW Lumberjack,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,inverted_orig,@OW Kakariko Village,pearl,flute",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,lift1,[lamp]",
+            "world_state_inverted,inverted_new,flute",
             "entrance_shuffle_singleentryvanilla,glitch_mode_ow,boots",
-            "entrance_shuffle_singleentryvanilla,lift1,[lamp]",
             "glitch_mode_major"
         ]
     },
@@ -422,6 +427,7 @@
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_bridge,mirror,hammer",
                     "world_state_open,entrance_shuffle_singleentryvanilla,ddm_tr_safety,mirror,hammer",
                     "world_state_open,glitch_mode_ow,boots",
+                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,@Light World,pearl,lift1,[lamp],hookshot,hammer",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,lift2,pearl,hammer",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot,hammer",
                     "world_state_inverted,ow_dm_east_top,pearl,hammer",
@@ -442,6 +448,7 @@
                     "world_state_open,@TR Bridge Entrances OW,mirror,hookshot,hammer",
                     "world_state_open,@TR Laser Entrance OW,mirror,hookshot.hammer",
                     "world_state_open,glitch_mode_ow,boots",
+                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,@Light World,pearl,lift1,[lamp],hookshot",
                     "world_state_inverted,@Death Mountain West Top,pearl,hammer",
                     "world_state_inverted,@Mountain Access,lift2,pearl,hammer",
                     "world_state_inverted,entrance_shuffle_singleentryvanilla,@Mountain Access,pearl,hookshot",
@@ -462,6 +469,7 @@
                     "world_state_open,ddm_east_bottom,mirror,hookshot",
                     "world_state_open,@TR Bridge Entrances OW,mirror,hookshot",
                     "world_state_open,@TR Laser Entrance OW,mirror,hookshot",
+                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,@Light World,pearl,lift1,[lamp]",
                     "world_state_inverted,@Death Mountain East Top,pearl,hookshot",
                     "world_state_inverted,@Death Mountain East Top,pearl,hammer",
                     "world_state_inverted,@EDM Bottom Regions,pearl,hookshot",
@@ -608,12 +616,16 @@
             "world_state_open,entrance_shuffle_singleentryvanilla,ow_mountainentry,lift1,[lamp]",
             "world_state_open,ow_ddm_west_bottom,mirror",
             "world_state_open,ow_ddm_west_top,mirror",
-            "world_state_inverted,ow_kakariko,pearl,flute",
             "world_state_inverted,ow_ddm_west_bottom",
             "world_state_inverted,ow_ddm_west_top",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_mountainentry,pearl,lift1,[lamp]",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,bumper_cave,[lamp]",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,lw_dmexit,mirror,[lamp]"
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,ow_mountainentry,pearl,lift1,mirror,[lamp]",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,bumper_cave,[lamp]",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,lw_dmexit,mirror,[lamp]",
+            "world_state_inverted,inverted_new,flute",
+            "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,lw_dmentry,[lamp]",
+            "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,lw_dmexit,[lamp]",
+            "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla,ow_mountainentry,lift1,[lamp]"
         ]
     },
     {
@@ -1323,7 +1335,8 @@
             "world_state_open,desert_back,lift1",
             "world_state_open,mire_area,mirror",
             "world_state_inverted,activated_flute,lift2",
-            "world_state_inverted,ow_kakariko,flute,lift2",
+            "world_state_inverted,inverted_orig,ow_kakariko,flute,lift2",
+            "world_state_inverted,inverted_new,flute,lift2",
             "world_state_inverted,desert_back,pearl,lift1"
         ]
     },
@@ -1354,7 +1367,9 @@
             "world_state_open,@South Dark World,mirror",
             "world_state_open,glitch_mode_ow,boots",
             "world_state_open,glitch_mode_major",
-            "world_state_inverted,@Light World"
+            "world_state_inverted,inverted_orig,@Light World",
+            "world_state_inverted,glitch_mode_none,@Light World",
+            "world_state_inverted,inverted_new,glitch_mode_ow,@Light World,pearl,boots"
         ]
     },
     {
@@ -1363,11 +1378,14 @@
         "always_allow_chest_manipulation": true,
         "access_rules": [
             "ow_cave45",
-            "@Light World",
+            "world_state_open,@Light World",
             "world_state_open,ow_cave45_bush",
             "world_state_open,ow_bush_circle,mirror",
             "world_state_open,ow_bush_circle_blocked,mirror",
-            "world_state_inverted,ow_cave45_bush,pearl"
+            "world_state_inverted,ow_cave45_bush,pearl",
+            "world_state_inverted,inverted_orig,@Light World",
+            "world_state_inverted,inverted_new,glitch_mode_none,@Light World",
+            "world_state_inverted,inverted_new,glitch_mode_ow,pearl,boots"
         ]
     },
     {
@@ -1460,7 +1478,7 @@
             "world_state_inverted,ow_ice_southwest,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_southeast,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_water,[flippers],lift2,pearl",
-            "world_state_inverted,ip_area,[flippers],lift2,pearl"
+            "world_state_inverted,inverted_orig,ip_area,[flippers],lift2,pearl"
         ]
     },
     {
@@ -1491,7 +1509,7 @@
             "world_state_inverted,ow_ice_southwest,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_southeast,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_water,[flippers],lift2,pearl",
-            "world_state_inverted,ip_area,[flippers],lift2,pearl"
+            "world_state_inverted,inverted_orig,ip_area,[flippers],lift2,pearl"
         ]
     },
     {
@@ -1536,7 +1554,7 @@
             "world_state_inverted,ow_ice_southwest,[flippers],lift2",
             "world_state_inverted,ow_ice_southeast,[flippers],lift2",
             "world_state_inverted,ow_ice_water,[flippers],lift2",
-            "world_state_inverted,ip_area,lift2",
+            "world_state_inverted,inverted_orig,ip_area,lift2",
             "world_state_inverted,glitch_mode_ow,pearl"
         ]
     },
@@ -1570,7 +1588,7 @@
             "world_state_inverted,ow_ice_southwest,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_southeast,[flippers],lift2,pearl",
             "world_state_inverted,ow_ice_water,[flippers],lift2,pearl",
-            "world_state_inverted,ip_area,[flippers],lift2,pearl"
+            "world_state_inverted,inverted_orig,ip_area,[flippers],lift2,pearl"
         ]
     },
     {
@@ -1751,7 +1769,8 @@
             "@Dark Death Mountain Top",
             "world_state_inverted,ow_ddm_west_bottom",
             "world_state_inverted,ow_dm_west_top,mirror",
-            "world_state_inverted,ow_dm_west_bottom,mirror"
+            "world_state_inverted,ow_dm_west_bottom,mirror",
+            "world_state_inverted,inverted_new,flute"
         ]
     },
     {
@@ -1766,11 +1785,11 @@
             "world_state_open,ow_kakariko,flute",
             "world_state_open,ow_dm_west_bottom",
             "world_state_open,ow_dm_west_top",
-            "world_state_inverted,ow_kakariko,pearl,flute",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,bumper_entry,[lamp]",
-            "world_state_inverted,entrance_shuffle_singleentryvanilla,ow_bumper,lift1,[lamp]",
             "world_state_inverted,ow_dm_west_bottom,mirror",
-            "world_state_inverted,ow_dm_west_top,mirror"
+            "world_state_inverted,ow_dm_west_top,mirror",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,bumper_entry,[lamp]",
+            "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla,ow_bumper,lift1,[lamp]"
         ]
     },
     {
@@ -1966,7 +1985,8 @@
             "world_state_open,ow_bomber_corner,pearl,[flippers]",
             "world_state_open,ow_bomber_corner_waterfall,pearl,[flippers]",
             "world_state_inverted,activated_flute,[flippers]",
-            "world_state_inverted,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_new,flute,[flippers]",
             "world_state_inverted,ow_qirn_east,[flippers]",
             "world_state_inverted,ow_qirn_water,[flippers]",
             "world_state_inverted,ow_river_west,mirror",
@@ -1989,7 +2009,8 @@
             "world_state_open,ow_bomber_corner,pearl,[flippers]",
             "world_state_open,ow_bomber_corner_waterfall,pearl,[flippers]",
             "world_state_inverted,activated_flute,[flippers]",
-            "world_state_inverted,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_new,flute,[flippers]",
             "world_state_inverted,ow_qirn_west,[flippers]",
             "world_state_inverted,ow_qirn_water,[flippers]",
             "world_state_inverted,ow_river_east,mirror",
@@ -2012,7 +2033,8 @@
             "world_state_open,ow_bomber_corner,pearl,[flippers]",
             "world_state_open,ow_bomber_corner_waterfall,pearl,[flippers]",
             "world_state_inverted,activated_flute,[flippers]",
-            "world_state_inverted,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_new,flute,[flippers]",
             "world_state_inverted,ow_qirn_west,[flippers]",
             "world_state_inverted,ow_qirn_east,[flippers]",
             "world_state_inverted,ow_river_west,mirror,[flippers]",
@@ -2033,7 +2055,8 @@
             "@Northeast Dark World",
             "world_state_open,ow_dark_witch_east,pearl,lift1",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_dark_witch_east,lift1",
             "world_state_inverted,ow_witch,mirror",
             "world_state_inverted,ow_witch_east,mirror,lift1"
@@ -2048,7 +2071,8 @@
             "world_state_open,ow_dark_witch,pearl,lift1",
             "world_state_inverted,ow_dark_witch,lift1",
             "world_state_inverted,activated_flute,lift1",
-            "world_state_inverted,ow_kakariko,pearl,flute,lift1",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute,lift1",
+            "world_state_inverted,inverted_new,flute,lift1",
             "world_state_inverted,ow_witch_east,mirror",
             "world_state_inverted,ow_witch,mirror,lift1"
         ]
@@ -2062,7 +2086,8 @@
             "world_state_open,ow_dark_witch,pearl,[flippers]",
             "world_state_open,ow_dark_witch_east,pearl,[flippers]",
             "world_state_inverted,activated_flute,[flippers]",
-            "world_state_inverted,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute,[flippers]",
+            "world_state_inverted,inverted_new,flute,[flippers]",
             "world_state_inverted,ow_dark_witch,[flippers]",
             "world_state_inverted,ow_dark_witch_east,[flippers]",
             "world_state_inverted,ow_witch_east,mirror,[flippers]",
@@ -2087,7 +2112,8 @@
             "@Northwest Dark World",
             "world_state_open,hammer_house,pearl,hammer",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,hammer_house,hammer",
             "world_state_inverted,ow_kakariko,mirror",
             "world_state_inverted,grass_house,mirror,hammer",
@@ -2292,7 +2318,8 @@
             "world_state_inverted,entrance_shuffle_singleentryvanilla",
             "world_state_inverted,ow_shuffle_on",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_links,mirror"
         ]
     },
@@ -2346,7 +2373,8 @@
             "@East Dark World",
             "world_state_open,ow_eastern_nook,hammer,lift1,pearl",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_eastern_nook,mirror"
         ]
     },
@@ -2362,10 +2390,12 @@
             "world_state_open,glitch_mode_ow,pearl,boots",
             "world_state_open,glitch_mode_ow,boots,lift2",
             "world_state_open,glitch_mode_ow,[pearl],[boots],mirror,@South Dark World",
-            "world_state_inverted,@Light World,pearl,flute",
+            "world_state_inverted,inverted_orig,@Light World,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,@Light World,mirror",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_desert,mirror",
             "world_state_inverted,ow_desert_tablet,mirror",
             "world_state_inverted,desert_ledge,mirror",
@@ -2461,7 +2491,7 @@
             "world_state_inverted,ow_ice_southwest,[flippers]",
             "world_state_inverted,ow_ice_southeast,[flippers]",
             "world_state_inverted,ow_ice_water,[flippers]",
-            "world_state_inverted,ip_area,[flippers]",
+            "world_state_inverted,inverted_orig,ip_area,[flippers]",
             "world_state_inverted,ow_hylia_northeast,mirror",
             "world_state_inverted,ow_hylia_northwest,mirror,[flippers]",
             "world_state_inverted,ow_hylia_shore,mirror,[flippers]",
@@ -2507,13 +2537,19 @@
             "world_state_open,ow_hylia_shore,[flippers],lift2",
             "world_state_open,ow_hylia_water,[flippers],lift2",
             "world_state_open,upgrade_fairy,lift2",
-            "world_state_inverted,@South Dark World,[flippers]",
+            "world_state_inverted,inverted_orig,@South Dark World,[flippers]",
+            "world_state_inverted,inverted_new,@Light World,pearl,[flippers],mirror",
             "world_state_inverted,glitch_mode_ow,@OW Hype",
-            "world_state_inverted,ow_ice_northwest,[flippers]",
-            "world_state_inverted,ow_ice_northeast,[flippers]",
-            "world_state_inverted,ow_ice_southwest,[flippers]",
-            "world_state_inverted,ow_ice_southeast,[flippers]",
-            "world_state_inverted,ow_ice_water,[flippers]",
+            "world_state_inverted,inverted_orig,ow_ice_northwest,[flippers]",
+            "world_state_inverted,inverted_orig,ow_ice_northeast,[flippers]",
+            "world_state_inverted,inverted_orig,ow_ice_southwest,[flippers]",
+            "world_state_inverted,inverted_orig,ow_ice_southeast,[flippers]",
+            "world_state_inverted,inverted_orig,ow_ice_water,[flippers]",
+            "world_state_inverted,inverted_new,ow_ice_northwest,[flippers],lift2,pearl,mirror",
+            "world_state_inverted,inverted_new,ow_ice_northeast,[flippers],lift2,pearl,mirror",
+            "world_state_inverted,inverted_new,ow_ice_southwest,[flippers],lift2,pearl,mirror",
+            "world_state_inverted,inverted_new,ow_ice_southeast,[flippers],lift2,pearl,mirror",
+            "world_state_inverted,inverted_new,ow_ice_water,[flippers]",
             "world_state_inverted,ow_hylia_northwest,mirror,[flippers]",
             "world_state_inverted,ow_hylia_northeast,mirror,[flippers]",
             "world_state_inverted,ow_hylia_shore,mirror,[flippers]",
@@ -2537,7 +2573,7 @@
             "world_state_inverted,ow_ice_northeast,[flippers]",
             "world_state_inverted,ow_ice_southwest,[flippers]",
             "world_state_inverted,ow_ice_southeast,[flippers]",
-            "world_state_inverted,ip_area,[flippers]",
+            "world_state_inverted,inverted_orig,ip_area,[flippers]",
             "world_state_inverted,ow_hylia_northwest,mirror,[flippers]",
             "world_state_inverted,ow_hylia_northeast,mirror,[flippers]",
             "world_state_inverted,ow_hylia_shore,mirror,[flippers]",
@@ -2582,7 +2618,8 @@
             "ow_swamp",
             "@South Dark World",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_dam,mirror"
         ]
     },
@@ -2606,7 +2643,8 @@
             "world_state_open,ow_qirn_east,pearl,[flippers]",
             "world_state_open,ow_qirn_water,pearl,[flippers]",
             "world_state_inverted,activated_flute",
-            "world_state_inverted,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_orig,ow_kakariko,pearl,flute",
+            "world_state_inverted,inverted_new,flute",
             "world_state_inverted,ow_octoballoon,mirror",
             "world_state_inverted,ow_octoballoon_waterfall,pearl,flippers,mirror",
             "world_state_inverted,ow_bomber_corner_waterfall,flippers",

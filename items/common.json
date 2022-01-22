@@ -888,6 +888,25 @@
             }
         ]
     },
+    // Inverted Version
+    {
+        "name": "Inverted Version",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/mode_world_state_inverted.png",
+                "codes": "inverted_version,inverted_orig",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/mode_world_state_inverted.png",
+                "codes": "inverted_version,inverted_new",
+                "inherit_codes": false
+            }
+        ]
+    },
     // Keysanity Mode
     {
         "name": "Keysanity Map",

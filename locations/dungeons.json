@@ -209,6 +209,7 @@
             "world_state_open,glitch_mode_major,pearl,flippers",
             "world_state_open,glitch_mode_major,flippers,bottle",
             "world_state_inverted,@OW Ice Lake Island",
+            "world_state_inverted,@OW Lake Hylia Central Island,mirror",
             "world_state_inverted,glitch_mode_ow,boots",
             "world_state_inverted,glitch_mode_major",
             "entrance_shuffle_on"

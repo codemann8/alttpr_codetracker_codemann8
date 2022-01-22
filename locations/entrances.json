@@ -1073,9 +1073,9 @@
             "world_state_open,@OW Dark Graveyard,pearl,mirror",
             "world_state_open,@Northwest Dark World,pearl,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@OW Graveyard,pearl",
-            "world_state_inverted,@Light World,pearl",
-            "world_state_inverted,glitch_mode_ow,pearl,boots",
+            "world_state_inverted,glitch_mode_none,@OW Graveyard,pearl",
+            "world_state_inverted,glitch_mode_none,@Light World,pearl",
+            "world_state_inverted,glitch_mode_ow,@OW Death Mountain West Bottom,pearl,boots",
             "glitch_mode_major"
         ],
         "sections": [
@@ -1738,7 +1738,8 @@
         "access_rules": [
             "world_state_open,@OW Mire,mirror",
             "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,@OW Desert,pearl",
+            "world_state_inverted,inverted_orig,@OW Desert,pearl",
+            "world_state_inverted,inverted_new,glitch_mode_ow,@OW Desert,pearl,boots",
             "glitch_mode_major"
         ],
         "sections": [
@@ -2637,7 +2638,8 @@
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "@OW Death Mountain East Top",
-            "world_state_open,@TR Bridge Entrances OW,mirror"
+            "world_state_open,@TR Bridge Entrances OW,mirror",
+            "world_state_inverted,inverted_new,dm_east_mimic"
         ],
         "sections": [
             {
@@ -2667,7 +2669,8 @@
         "access_rules": [
             "world_state_open,@TR Bridge Entrances OW,mirror",
             "world_state_open,glitch_mode_ow,hammer,mirror",
-            "world_state_inverted,@OW Death Mountain East Top"
+            "world_state_inverted,@OW Death Mountain East Top",
+            "world_state_inverted,inverted_new,dm_east_spiral"
         ],
         "sections": [
             {
@@ -2697,7 +2700,9 @@
         "access_rules": [
             "dm_east_connect",
             "@OW Death Mountain East Top",
-            "world_state_open,@TR Laser Entrance OW,mirror"
+            "world_state_open,@TR Laser Entrance OW,mirror",
+            "world_state_inverted,inverted_new,dm_east_spiral",
+            "world_state_inverted,inverted_new,dm_east_mimic"
         ],
         "sections": [
             {
@@ -2755,7 +2760,9 @@
             "world_state_open,lift2",
             "world_state_open,@TR Laser Entrance OW,mirror",
             "world_state_open,@OW Dark Death Mountain East Bottom,pearl,mirror",
-            "world_state_inverted,pearl,lift2"
+            "world_state_inverted,pearl,lift2",
+            "world_state_inverted,inverted_new,dm_east_spiral",
+            "world_state_inverted,inverted_new,dm_east_mimic"
         ],
         "sections": [
             {
@@ -4182,8 +4189,8 @@
             "world_state_open,glitch_mode_ow,pearl,boots,[flippers],bottle",
             "world_state_open,glitch_mode_major,bottle,flippers", //prob soon to be removed from logic
             "world_state_open,glitch_mode_major,bottle,mirror",
-            "world_state_inverted,glitch_mode_ow,boots",
-            "world_state_inverted,glitch_mode_major"
+            "world_state_inverted,inverted_orig,glitch_mode_ow,boots",
+            "world_state_inverted,inverted_orig,glitch_mode_major"
         ],
         "sections": [
             {

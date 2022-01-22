@@ -271,6 +271,11 @@ function initGlobalVars()
 
         CaptureBadgeCache = {}
 
+        --Inverted Version
+        if EXPERIMENTAL_INVERTED_NEW_LOGIC then
+            Tracker:FindObjectForCode("inverted_version").CurrentStage = 1
+        end
+
         --Auto-Toggle Race Mode
         if PREFERENCE_DEFAULT_RACE_MODE_ON then
             Tracker:FindObjectForCode("race_mode_surrogate").ItemState:setState(1)

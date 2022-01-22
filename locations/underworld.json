@@ -371,7 +371,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "world_state_open,@OW Links House",
-            "world_state_inverted,@OW Bomb Shop"
+            "world_state_inverted,inverted_orig,@OW Bomb Shop",
+            "world_state_inverted,inverted_new,@OW Links House,pearl",
+            "world_state_inverted,inverted_new,@OW Links House,[pearl],mirror"
         ],
         "sections": [
             {
@@ -384,13 +386,16 @@
                 "map": "lightworld",
                 "x": 1097,
                 "y": 1366,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [
+                    "world_state_open,entrance_shuffle_singleentryvanilla",
+                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla"
+                ]
             },
             {
                 "map": "darkworld",
                 "x": 1097,
                 "y": 1366,
-                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
             }
         ]
     },
@@ -695,22 +700,25 @@
                 "map": "lightworld",
                 "x": 816,
                 "y": 378,
-                "restrict_visibility_rules": [ "world_state_open,entrance_shuffle_singleentryvanilla" ],
+                "restrict_visibility_rules": [
+                    "world_state_open,entrance_shuffle_singleentryvanilla",
+                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla"
+                ],
                 "force_invisibility_rules": [
-                    "world_state_inverted"
+                    "world_state_inverted,inverted_orig"
                 ]
             },
             {
                 "map": "darkworld",
                 "x": 816,
                 "y": 378,
-                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
             },
             {
                 "map": "lightworld",
                 "x": 900,
                 "y": 440,
-                "restrict_visibility_rules": [ "world_state_inverted,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
             }
         ]
     },
