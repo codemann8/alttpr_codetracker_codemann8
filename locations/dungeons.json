@@ -417,7 +417,7 @@
                     "@HC Access,door_shuffle_off,pool_keydrop_off,keysanity_smallkey_off,[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_on,hc_smallkey:2,[hc_smallkey:4],[firesource]",
                     "@HC Access,door_shuffle_off,pool_keydrop_on,keysanity_smallkey_off,[firesource]",
-                    "door_shuffle_on",
+                    "@Light World,door_shuffle_on",
                     "entrance_shuffle_on"
                 ],
                 "clear_as_group": true,
