@@ -148,6 +148,7 @@ The settings are broken out into several files, grouped by relation or its usage
 - settings.lua (Features available specific to functionality in this package)
   - AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
   - LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
+  - LAYOUT_USE_THIN_HORIZONTAL_PANE - This enables an alternate thinner layout of the item/dungeon portion of the tracker 
   - LAYOUT_ROOM_SLOT_METHOD - In door rando mode, this determines the order in which rooms will occupy slots
     - `top`: This ensures the most recent room stays in the first slot, bumping every room down a slot
     - `next`: This puts the most recent room in the next slot in the rotation, keeping all slots in their place
@@ -158,3 +159,4 @@ The settings are broken out into several files, grouped by relation or its usage
   - AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
 - experimental.lua (Settings to enable experimental features)
   - EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door shuffle, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.
+  - EXPERIMENTAL_INVERTED_NEW_LOGIC - New logic rules for the upcoming version of Inverted, currently available in the OWR branch
