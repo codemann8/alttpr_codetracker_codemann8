@@ -590,7 +590,8 @@
                         {
                             "type": "container",
                             "min_width": 700,
-                            "max_width": 3300,
+                            "4k-max_width": 2780,
+                            "max_width": 1390,
                             "content": [
                                 {
                                     "type": "map",
@@ -625,8 +626,9 @@
                             ]
                         },
                         {
-                            "type": "container",
-                            "v_alignment": "center",
+                            "type": "viewbox",
+                            "v_alignment": "top",
+                            "max_width": 530,
                             "content": [
                                 {
                                     "type": "array",

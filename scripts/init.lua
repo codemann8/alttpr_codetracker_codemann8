@@ -125,8 +125,10 @@ else
     Tracker:AddLayouts("layouts/layouts_shared.json")
 
     Tracker:AddLayouts("layouts/dungeon_keys_grid.json")
+    if LAYOUT_USE_THIN_HORIZONTAL_PANE then
+        Tracker:AddLayouts("layouts/layouts_thinhoriz_shared.json")
+    end
     Tracker:AddLayouts("layouts/entrance_grid.json")
-
     Tracker:AddLayouts("layouts/tracker.json")
 
     --Broadcast Layout
