@@ -167,24 +167,25 @@ function updateOverworldIdFromMemorySegment(segment)
                             region.Active = true
                         end
                     --TODO: Handle better with new mixed functionality
-                    -- elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA]
-                    --         and not Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1]).Active then
-                    --     local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                    --     if Tracker:FindObjectForCode('pearl').Active
-                    --             or (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and (CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() > 0)) then
-                    --         local canReach = true
-                    --         if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
-                    --             for i = 1, #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] do
-                    --                 if not Tracker:FindObjectForCode(#DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2][i]).Active then
-                    --                     canReach = false
-                    --                     break
-                    --                 end
-                    --             end
-                    --         end
-                    --         if canReach then
-                    --             Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1]).Active = true
-                    --         end
-                    --     end
+                    elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
+                        local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
+                        if not region.Active then
+                            local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                            if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
+                                local canReach = true
+                                if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
+                                    for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
+                                        if not Tracker:FindObjectForCode(item).Active then
+                                            canReach = false
+                                            break
+                                        end
+                                    end
+                                end
+                                if canReach then
+                                    region.Active = true
+                                end
+                            end
+                        end
                     end  
                 end
             end
