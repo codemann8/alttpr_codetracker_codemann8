@@ -2047,15 +2047,15 @@
     },
     {
         "name": "Agahnim's Tower Entrance",
-        "short_name": "Aga Tower",
+        "short_name": "AT Entrance",
         "parent": "OW Castle Ledge",
         "access_rules": [
             "inverted_new,aga",
             "inverted_new,$canClearAgaTowerBarrier",
-            "ow_swapped_03,ow_swapped_1b,inverted_new,gt_crystals",
+            "ow_swapped_03,ow_swapped_1b,inverted_new,@GT Entry",
             "world_state_open,inverted_orig,aga",
             "world_state_open,inverted_orig,$canClearAgaTowerBarrier",
-            "world_state_inverted,inverted_orig,gt_crystals",
+            "world_state_inverted,inverted_orig,@GT Entry",
             "ow_swapped_5b,@South Light World,glitch_mode_owg,boots",
             "ow_swapped_5b,@South Light World,glitch_mode_major",
             "ow_swapped_1b,@South Dark World,glitch_mode_owg,pearl,boots",
@@ -4115,9 +4115,9 @@
         "short_name": "GT Entrance",
         "parent": "OW Dark Death Mountain West Top",
         "access_rules": [
-            "inverted_new,gt_crystals",
+            "inverted_new,@GT Entry",
             "ow_swapped_03,ow_swapped_1b,inverted_new",
-            "world_state_open,inverted_orig,gt_crystals",
+            "world_state_open,inverted_orig,@GT Entry",
             "world_state_inverted,inverted_orig",
             "glitch_mode_owg,pearl,boots",
             "ow_swapped_03,glitch_mode_owg,boots",
@@ -4446,115 +4446,101 @@
         ]
     },
     {
-        "name": "Dark Death Mountain TR Bridge",
-        "parent": "Dark Death Mountain Color",
-        "access_rules": [
-            "@OW TR Bridge",
-            "ow_swapped_05,ow_dm_east_spiral,mirror",
-            "ow_swapped_05,ow_dm_east_mimic,mirror"
-        ],
-        "children": [
+        "name": "Turtle Ledge Left Entrance",
+        "short_name": "TR Left",
+        "parent": "OW TR Bridge",
+        "sections": [
             {
-                "name": "Turtle Ledge Left Entrance",
-                "short_name": "TR Left",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "chest_unopened_img": "images/icons/entrances/door-closed.png",
-                        "chest_opened_img": "images/icons/entrances/door-open.png",
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "item_count": 1,
-                        "hosted_item": "ow_ddm_tr_bridge"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 1598,
-                        "y": 186,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_all" ]
-                    },
-                    {
-                        "map": "darkworld",
-                        "x": 1598,
-                        "y": 192,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_dungeon" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "x": 1598,
-                        "y": 186,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_all" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "x": 1598,
-                        "y": 192,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_dungeon" ]
-                    }
-                ]
+                "name": "Entrance",
+                "chest_unopened_img": "images/icons/entrances/door-closed.png",
+                "chest_opened_img": "images/icons/entrances/door-open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_tr_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1598,
+                "y": 186,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_all" ]
             },
             {
-                "name": "Turtle Ledge Right Entrance",
-                "short_name": "TR Right",
-                "sections": [
-                    {
-                        "name": "Entrance",
-                        "chest_unopened_img": "images/icons/entrances/door-closed.png",
-                        "chest_opened_img": "images/icons/entrances/door-open.png",
-                        "capture_item": true,
-                        "capture_item_layout": "tracker_capture_entrance",
-                        "item_count": 1,
-                        "hosted_item": "ow_ddm_tr_bridge"
-                    }
-                ],
-                "map_locations": [
-                    {
-                        "map": "darkworld",
-                        "x": 1694,
-                        "y": 186,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_all" ]
-                    },
-                    {
-                        "map": "darkworld",
-                        "x": 1694,
-                        "y": 192,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_dungeon" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "x": 1694,
-                        "y": 186,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_all" ]
-                    },
-                    {
-                        "map": "lightworld",
-                        "x": 1694,
-                        "y": 192,
-                        "size": 64,
-                        "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_dungeon" ]
-                    }
-                ]
+                "map": "darkworld",
+                "x": 1598,
+                "y": 192,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_dungeon" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1598,
+                "y": 186,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1598,
+                "y": 192,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_dungeon" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Ledge Right Entrance",
+        "short_name": "TR Right",
+        "parent": "OW TR Bridge",
+        "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/icons/entrances/door-closed.png",
+                "chest_opened_img": "images/icons/entrances/door-open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "item_count": 1,
+                "hosted_item": "ow_ddm_tr_bridge"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 186,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 192,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_dungeon" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1694,
+                "y": 186,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1694,
+                "y": 192,
+                "size": 64,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_dungeon" ]
             }
         ]
     },
     {
         "name": "Turtle Laser Bridge Entrance",
         "short_name": "TR Laser",
-        "parent": "Dark Death Mountain Color",
-        "access_rules": [
-            "@OW TR Isolated",
-            "ow_swapped_45,glitch_mode_major,bottle,mirror",
-            "ow_swapped_05,dm_east_connect,mirror"
-        ],
+        "parent": "OW TR Isolated",
         "sections": [
             {
                 "name": "Entrance",

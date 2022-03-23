@@ -923,53 +923,34 @@
         "content": [
             {
                 "type": "text",
-                "height": 0,
+                "margin": "0,0,0,10",
                 "text": ""
             },
             {
                 "type": "text",
-                "height": 0,
+                "margin": "0,0,0,10",
                 "text": ""
             },
             {
                 "type": "text",
-                "height": 0,
                 "text": ""
+            }
+        ]
+    },
+    "dyk_close_troll": {
+        "type": "container",
+        "content": [
+            {
+                "type": "item",
+                "h_alignment": "left",
+                "width": 40,
+                "item": "dyk_exit_2"
             },
             {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
-            },
-            {
-                "type": "text",
-                "height": 0,
-                "text": ""
+                "type": "item",
+                "h_alignment": "left",
+                "width": 40,
+                "item": "dyk_exit_3"
             }
         ]
     },
@@ -998,7 +979,7 @@
                                         "content": [
                                             {
                                                 "type": "image",
-                                                "image": "images/icons/lightbulb.png"
+                                                "image": "images/icons/misc/lightbulb.png"
                                             },
                                             {
                                                 "type": "text",
@@ -1013,7 +994,7 @@
                                         "h_alignment": "right",
                                         "margin": "0,-10,-10,0",
                                         "width": 40,
-                                        "item": "dyk_exit"
+                                        "item": "dyk_exit_1"
                                     }
                                 ]
                             },
@@ -1027,6 +1008,11 @@
                                 "key": "dyk_lines_grid"
                             }
                         ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "dyk_close_troll",
+                        "margin": 0
                     }
                 ]
             }

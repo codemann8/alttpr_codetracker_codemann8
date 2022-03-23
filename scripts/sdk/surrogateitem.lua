@@ -116,7 +116,17 @@ function SurrogateItem:providesCode(code)
     return 0
 end
 
+function SurrogateItem:save()
+    local data = {
+        ["state"] = self:getState()
+    }
+    return data
+end
+
 function SurrogateItem:load(data)
+    if data["state"] ~= nil then
+        self:setState(data["state"])
+    end
     return true
 end
 

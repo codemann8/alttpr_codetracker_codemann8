@@ -51,11 +51,14 @@ function saveSettings(setting)
     local packRoot = "user_overrides/alttpr_codetracker_codemann8/"
     
     local function writeOverride(path, filename, text)
-        writeFile(baseDir .. packRoot, path, filename, text)
+        local written = writeFile(baseDir .. packRoot, path, filename, text)
     
         if dirExists(baseDir .. "dev/") then
-            writeFile(baseDir .. "dev/" .. packRoot, path, filename, text)
+            written = writeFile(baseDir .. "dev/" .. packRoot, path, filename, text) or written
         end
+
+        Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
+        Layout:FindLayout("ref_settings_v_message").Root.Layout = not written and Layout:FindLayout("settings_v_message") or nil
     end
     
     local function deleteOverride(path, filename)
@@ -70,6 +73,7 @@ function saveSettings(setting)
     
     local textOutput = ""
     local isDefault = true
+    print(setting.file)
     for textcode, data in pairs(DATA.SettingsData[setting.file]) do
         local name = data[1]
         local code = data[2]
@@ -100,7 +104,10 @@ function writeFile(rootpath, localpath, filename, text)
         io.output(file)
         io.write(text)
         io.close(file)
+        return true
     end
+
+    return false
 end
 
 function dirExists(path)

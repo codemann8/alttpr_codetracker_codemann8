@@ -77,7 +77,7 @@ end
 function updateFlute(segment)
     local item = Tracker:FindObjectForCode("flute")
     if Tracker.ActiveVariantUID == "vanilla" then
-        error("NO FLUTE HERE")
+        print("NO FLUTE HERE")
         item.Active = segment:ReadUInt8(0x7ef34c) > 1
     else
         local value = 0
@@ -133,4 +133,30 @@ function updateShovelIndicatorStatus(status)
     if item and (not item.Active or not STATUS.AutotrackerInGame) then
         item.Active = status
     end
+end
+
+function doStatsMessage()
+    function read32BitTimer(baseAddress)
+        local timer = 0
+        timer = timer | (AutoTracker:ReadU8(baseAddress + 3, 0) << 24)
+        timer = timer | (AutoTracker:ReadU8(baseAddress + 2, 0) << 16)
+        timer = timer | (AutoTracker:ReadU8(baseAddress + 1, 0) << 8)
+        timer = timer | (AutoTracker:ReadU8(baseAddress + 0, 0) << 0)
+    
+        local hours = timer // (60 * 60 * 60)
+        local minutes = (timer % (60 * 60 * 60)) // (60 * 60)
+        local seconds = (timer % (60 * 60)) // (60)
+        local frames = timer % 60
+    
+        return hours, minutes, seconds, frames
+    end
+
+    -- Read completion timer
+    local hours, minutes, seconds, frames = read32BitTimer(0x7ef43e)
+
+    local deaths = AutoTracker:ReadU8(0x7ef449, 0)
+    local bonks = AutoTracker:ReadU8(0x7ef420, 0)
+
+    local markdown = string.format(DATA.StatsMarkdownFormat, CACHE.CollectionRate, math.max(CACHE.CollectionMax, 216), deaths, bonks, hours, minutes, seconds, frames)
+    ScriptHost:PushMarkdownNotification(NotificationType.Celebration, markdown)
 end

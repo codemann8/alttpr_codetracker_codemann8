@@ -55,17 +55,34 @@ end
 
 function WorldStateMode:postUpdate()
     for i = 1, #DATA.OverworldIds do
-        if DATA.OverworldIds[i] ~= 0x1a and DATA.OverworldIds[i] ~= 0x28 and DATA.OverworldIds[i] ~= 0x30 then
-            local item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
-            item.clicked = true
+        local item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
+        item.clicked = true
+        item.ignorePostUpdate = true
 
-            if item:getState() > 1 then --if tile is currently unknown
-                item:setState(self:getState() == 0 and 3 or 2)
-            else
-                item:setState((item:getState() + 1) % item:getCount())
-            end
+        if item:getState() > 1 then --if tile is currently unknown
+            item:setStateExternal(self:getState() == 0 and 3 or 2)
+        else
+            item:setStateExternal((item:getState() + 1) % item:getCount())
         end
     end
+end
+
+function WorldStateMode:save()
+    local data = {
+        ["state"] = self:getState(),
+        ["version"] = self:getProperty("version")
+    }
+    return data
+end
+
+function WorldStateMode:load(data)
+    if data["state"] ~= nil then
+        self:setState(data["state"])
+    end
+    if data["version"] ~= nil then
+        self:setProperty("version", data["version"])
+    end
+    return true
 end
 
 function WorldStateMode:propertyChanged(key, value)

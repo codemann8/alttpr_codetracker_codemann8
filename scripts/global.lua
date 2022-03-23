@@ -2,6 +2,7 @@ math.randomseed(os.time())
 
 STATUS = {}
 STATUS.START_CLOCK = os.clock()
+STATUS.START_DATE = os.date("*t")
 STATUS.TRACKER_READY = false
 STATUS.ACCESS_COUNTER = 0
 
@@ -178,14 +179,14 @@ INSTANCE.DOORSLOTS = {--1 2  3   4  5  6   7  8  9   10 11 12  13 14 15 16
 }
 
 function loadSettings()
-    for file in pairs(DATA.SettingsData) do
-        for setting, data in pairs(DATA.SettingsData[file]) do
-            name = data[1]
-            code = data[2]
-            count = data[3]
-            default = data[4]
-            current = data[5]
-            Setting(name, code, file, setting, count, default, current)
+    for i, file in ipairs(DATA.SettingsHeader) do
+        for j, setting in ipairs(file[2]) do
+            name = DATA.SettingsData[file[1]][setting][1]
+            code = DATA.SettingsData[file[1]][setting][2]
+            count = DATA.SettingsData[file[1]][setting][3]
+            default = DATA.SettingsData[file[1]][setting][4]
+            current = DATA.SettingsData[file[1]][setting][5]
+            Setting(name, code, file[1], setting, count, default, current)
         end
     end
 end
@@ -227,8 +228,10 @@ function loadModes()
 end
 
 function loadSwaps()
-    for i = 1, #DATA.OverworldIds do
-        OWSwap(DATA.OverworldIds[i]):linkSurrogate(OWSwap(DATA.OverworldIds[i] + 0x40))
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        for i = 1, #DATA.OverworldIds do
+            OWSwap(DATA.OverworldIds[i]):linkSurrogate(OWSwap(DATA.OverworldIds[i] + 0x40))
+        end
     end
 end
 
@@ -249,59 +252,69 @@ function loadDungeonChests()
 end
 
 function loadDoorObjects()
-    for g = 1, #RoomGroupSelection.Groups do
-        RoomGroupSelection(g)
-    end
-    for r = 1, 9 do
-        RoomSelectSlot(r)
-    end
-    for r = 1, #INSTANCE.ROOMSLOTS do
-        for d = 1, 16 do
-            DoorSlot(r, d)
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        for g = 1, #RoomGroupSelection.Groups do
+            RoomGroupSelection(g)
         end
-    end
-    for t = 1, #DoorSlot.Icons do
-        if DoorSlotSelection.Types[t] then
-            DoorSlotSelection(t)
+        for r = 1, 9 do
+            RoomSelectSlot(r)
+        end
+        for r = 1, #INSTANCE.ROOMSLOTS do
+            for d = 1, 16 do
+                DoorSlot(r, d)
+            end
+        end
+        for t = 1, #DoorSlot.Icons do
+            if DoorSlotSelection.Types[t] then
+                DoorSlotSelection(t)
+            end
         end
     end
 
-    OBJ_DOORDUNGEON = DoorDungeonSelect()
-    OBJ_DOORCHEST = DoorTotalChest("Chests", "chest", "item", "images/items/chest.png")
-    OBJ_DOORKEY = DoorTotalChest("Keys", "key", "smallkey", "images/items/smallkey.png")
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        OBJ_DOORDUNGEON = DoorDungeonSelect()
+        OBJ_DOORCHEST = DoorTotalChest("Chests", "chest", "item", "images/items/chest.png")
+        OBJ_DOORKEY = DoorTotalChest("Keys", "key", "smallkey", "images/items/smallkey.png")
+    end
 end
 
 function loadMisc()
-    DykCloseItem()
-    TrackerSync()
-    SaveStorage()
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        DykCloseItem(1)
+        DykCloseItem(2)
+        DykCloseItem(3)
+        TrackerSync()
+        SaveStorage()
+    end
 end
 
 function initialize()
-    updateDyk()
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        updateDyk()
 
-    if Tracker.ActiveVariantUID == "full_tracker" then
-        CaptureBadgeCache = {}
-    
-        --Link Dungeon Locations to Chest Items
-        for i = 1, #DATA.DungeonList do
-            local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
-            if item then
-                if item:getProperty("section") == nil then
-                    item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+        if Tracker.ActiveVariantUID == "full_tracker" then
+            CaptureBadgeCache = {}
+        
+            --Link Dungeon Locations to Chest Items
+            for i = 1, #DATA.DungeonList do
+                local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
+                if item then
+                    if item:getProperty("section") == nil then
+                        item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+                    end
                 end
             end
+
+            updateChests()
+        
+            --Disable Retro Mode Icon
+            OBJ_RETRO:updateItem()
         end
 
-        updateChests()
-    end
-    
-    -- --Disable Retro Mode Icon
-    OBJ_RETRO:updateItem()
-
-    -- --Auto-Toggle Race Mode
-    if CONFIG.PREFERENCE_DEFAULT_RACE_MODE_ON then
-        OBJ_RACEMODE:setState(1)
+        -- --Auto-Toggle Race Mode
+        if CONFIG.PREFERENCE_DEFAULT_RACE_MODE_ON then
+            OBJ_RACEMODE:setState(1)
+        end
     end
 
     updateLayout()
@@ -397,100 +410,104 @@ function updateChests()
 end
 
 function updateLayout(setting)
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Updating layout")
-    end
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Updating layout")
+        end
 
-    if setting == nil or setting.file == "defaults.lua" then
-        if setting == nil or setting.textcode == "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS" then
-            Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
-        end
-        if setting == nil or setting.textcode == "CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS" then
-            Tracker.AlwaysAllowClearing = CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
-        end
-        if setting == nil or setting.textcode == "CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE" then
-            Tracker.PinLocationsOnItemCapture = CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE
-        end
-        if setting == nil or setting.textcode == "CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR" then
-            Tracker.AutoUnpinLocationsOnClear = CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
-        end
-    end
-    if setting == nil or setting.file == "layout.lua" then
-        if setting == nil or setting.textcode == "CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW" then
-            --Change horizontal layout
-            local e = Layout:FindLayout("shared_dungeon_grid").Root.Children:GetEnumerator()
-            e:MoveNext()
-            if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-                e.Current.Layout = Layout:FindLayout("shared_lw_keys_alt_grid")
-            else
-                e.Current.Layout = Layout:FindLayout("shared_lw_keys_grid")
+        if setting == nil or setting.file == "defaults.lua" then
+            if setting == nil or setting.textcode == "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS" then
+                Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
             end
-            e:MoveNext()
-            e:MoveNext()
-            if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-                e.Current.Layout = Layout:FindLayout("shared_dw_keys_alt_grid")
-            else
-                e.Current.Layout = Layout:FindLayout("shared_dw_keys_grid")
+            if setting == nil or setting.textcode == "CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS" then
+                Tracker.AlwaysAllowClearing = CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
             end
-            e:MoveNext()
-            if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-               e.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
-            else
-               e.Current.Layout = nil
+            if setting == nil or setting.textcode == "CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE" then
+                Tracker.PinLocationsOnItemCapture = CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE
             end
+            if setting == nil or setting.textcode == "CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR" then
+                Tracker.AutoUnpinLocationsOnClear = CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
+            end
+        end
+        if setting == nil or setting.file == "layout.lua" then
+            if setting == nil or setting.textcode == "CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW" then
+                --Change horizontal layout
+                local e = Layout:FindLayout("shared_dungeon_grid").Root.Children:GetEnumerator()
+                e:MoveNext()
+                if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+                    e.Current.Layout = Layout:FindLayout("shared_lw_keys_alt_grid")
+                else
+                    e.Current.Layout = Layout:FindLayout("shared_lw_keys_grid")
+                end
+                e:MoveNext()
+                e:MoveNext()
+                if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+                    e.Current.Layout = Layout:FindLayout("shared_dw_keys_alt_grid")
+                else
+                    e.Current.Layout = Layout:FindLayout("shared_dw_keys_grid")
+                end
+                e:MoveNext()
+                if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+                e.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
+                else
+                e.Current.Layout = nil
+                end
 
-            --Change vertical layout
-            e = Layout:FindLayout("shared_dungeon_v_grid").Root.Children:GetEnumerator()
-            e:MoveNext()
-            local e2 = e.Current.Items:GetEnumerator()
-            e2:MoveNext()
-            if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-                e2.Current.Layout = Layout:FindLayout("shared_lw_keys_alt_grid")
+                --Change vertical layout
+                e = Layout:FindLayout("shared_dungeon_v_grid").Root.Children:GetEnumerator()
+                e:MoveNext()
+                local e2 = e.Current.Items:GetEnumerator()
                 e2:MoveNext()
-                e2.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
-            else
-                e2.Current.Layout = Layout:FindLayout("shared_lw_keys_grid")
-                e2:MoveNext()
-                e2.Current.Layout = nil
+                if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+                    e2.Current.Layout = Layout:FindLayout("shared_lw_keys_alt_grid")
+                    e2:MoveNext()
+                    e2.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
+                else
+                    e2.Current.Layout = Layout:FindLayout("shared_lw_keys_grid")
+                    e2:MoveNext()
+                    e2.Current.Layout = nil
+                end
+                e:MoveNext()
+                e:MoveNext()
+                if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
+                    e.Current.Layout = Layout:FindLayout("shared_dw_keys_alt_grid")
+                else
+                    e.Current.Layout = Layout:FindLayout("shared_dw_keys_grid")
+                end
             end
-            e:MoveNext()
-            e:MoveNext()
-            if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-                e.Current.Layout = Layout:FindLayout("shared_dw_keys_alt_grid")
-            else
-                e.Current.Layout = Layout:FindLayout("shared_dw_keys_grid")
-            end
-        end
-        if setting == nil or setting.textcode == "CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE" then
-            if CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE then
-                Layout:FindLayout("shared_dock_grid").Root.Layout = Layout:FindLayout("dock_thin_grid")
-                Layout:FindLayout("shared_pins").Root.MaxHeight = 230
-            else
-                Layout:FindLayout("shared_dock_grid").Root.Layout = Layout:FindLayout("dock_grid")
-                Layout:FindLayout("shared_pins").Root.MaxHeight = 306
+            if setting == nil or setting.textcode == "CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE" then
+                if CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE then
+                    Layout:FindLayout("shared_dock_grid").Root.Layout = Layout:FindLayout("dock_thin_grid")
+                    Layout:FindLayout("shared_pins").Root.MaxHeight = 230
+                else
+                    Layout:FindLayout("shared_dock_grid").Root.Layout = Layout:FindLayout("dock_grid")
+                    Layout:FindLayout("shared_pins").Root.MaxHeight = 306
+                end
             end
         end
     end
     if setting == nil or setting.file == "broadcast.lua" then
-        if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and Tracker.ActiveVariantUID == "full_tracker" then
-            Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_full")
-        elseif CONFIG.BROADCAST_ALTERNATE_LAYOUT == 3 and Tracker.ActiveVariantUID == "full_tracker" then
-            Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_custom")
-        elseif Tracker.ActiveVariantUID == "vanilla" then
+        if Tracker.ActiveVariantUID == "vanilla" then
             Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_vanilla")
+        elseif CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and Tracker.ActiveVariantUID == "full_tracker" then
+            Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_full")
+        elseif CONFIG.BROADCAST_ALTERNATE_LAYOUT == 3 then
+            Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_custom")
         else
             Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_standard")
 
-            if CONFIG.BROADCAST_MAP_DIRECTION and Tracker.ActiveVariantUID == "full_tracker" then
-                Layout:FindLayout("broadcast_v_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 1 and Layout:FindLayout("shared_v_map") or nil
-                Layout:FindLayout("broadcast_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 2 and Layout:FindLayout("shared_map") or nil
-                Layout:FindLayout("broadcast_v_right_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 3 and Layout:FindLayout("shared_v_map") or nil
-                Layout:FindLayout("broadcast_bottom_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 4 and Layout:FindLayout("shared_map") or nil
-            else
-                Layout:FindLayout("broadcast_map").Root.Layout = nil
-                Layout:FindLayout("broadcast_bottom_map").Root.Layout = nil
-                Layout:FindLayout("broadcast_v_map").Root.Layout = nil
-                Layout:FindLayout("broadcast_v_right_map").Root.Layout = nil
+            if Tracker.ActiveVariantUID == "full_tracker" then
+                if CONFIG.BROADCAST_MAP_DIRECTION ~= 5 then
+                    Layout:FindLayout("broadcast_v_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 1 and Layout:FindLayout("shared_v_map") or nil
+                    Layout:FindLayout("broadcast_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 2 and Layout:FindLayout("shared_map") or nil
+                    Layout:FindLayout("broadcast_v_right_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 3 and Layout:FindLayout("shared_v_map") or nil
+                    Layout:FindLayout("broadcast_bottom_map").Root.Layout = CONFIG.BROADCAST_MAP_DIRECTION == 4 and Layout:FindLayout("shared_map") or nil
+                else
+                    Layout:FindLayout("broadcast_map").Root.Layout = nil
+                    Layout:FindLayout("broadcast_bottom_map").Root.Layout = nil
+                    Layout:FindLayout("broadcast_v_map").Root.Layout = nil
+                    Layout:FindLayout("broadcast_v_right_map").Root.Layout = nil
+                end
             end
         end
     end
@@ -501,13 +518,30 @@ function updateLayout(setting)
 end
 
 function updateDyk()
-    local text = DATA.DykTexts[math.random(1, #DATA.DykTexts)]
     local e = Layout:FindLayout("dyk_lines_grid").Root.Children:GetEnumerator()
-    for r = 1, #text do
+    e:MoveNext()
+    
+    if Tracker.ActiveVariantUID == "full_tracker" or Tracker.ActiveVariantUID == "items_only" or Tracker.ActiveVariantUID == "vanilla" then
+        local text = DATA.DykTexts[math.random(1, #DATA.DykTexts)]
+        e.Current.Text = text[1]
         e:MoveNext()
-        e.Current.Height = string.len(text[r]) == 0 and 10 or -1
-        e.Current.Text = text[r]
+        e.Current.Text = table.concat({table.unpack(text, 2, #text - 1)}, "\n")
+        e:MoveNext()
+        e.Current.Text = text[#text]
+    else
+        --e.Current.Text = text[1]
+        e:MoveNext()
+        e.Current.Background = "#80aa0000"
+        e.Current.Text = "The package variants have changed, please select a new variant"
+        e:MoveNext()
+        --e.Current.Text = text[#text]
     end
+    
+    e = Layout:FindLayout("dyk_close_troll").Root.Items:GetEnumerator()
+    e:MoveNext()
+    e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
+    e:MoveNext()
+    e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
 end
 
 function updateGhosts(list, clearSection, markHostedItem)

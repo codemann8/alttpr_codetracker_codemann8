@@ -296,36 +296,37 @@
         "name": "TR Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_47,@TR Main Entrance,pearl",
-            "ow_swapped_45,@TR Bridge Entrances,pearl",
-            "ow_swapped_45,@TR Laser Entrance,pearl",
-            "ow_swapped_07,@TR Main Entrance",
-            "ow_swapped_05,@TR Bridge Entrances",
-            "ow_swapped_05,@TR Laser Entrance",
-            "glitch_mode_owg,@TR Bridge Entrances",
-            "glitch_mode_owg,@TR Laser Entrance",
+            "@OW Turtle Rock",
             "entrance_shuffle_on"
+        ]
+    },
+    {
+        "name": "GT Crystals",
+        "parent": "Dungeon Color",
+        "access_rules": [
+            "gt_crystals",
+            "prize:10"
+        ]
+    },
+    {
+        "name": "GT Entry",
+        "parent": "Dungeon Color",
+        "access_rules": [
+            "[pearl],@GT Crystals",
+            "glitch_mode_owg,@GT Crystals",
+            "glitch_mode_owg,pearl,boots",
+            "glitch_mode_major"
         ]
     },
     {
         "name": "GT Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_43,@OW Dark Death Mountain West Top,[pearl],gt_crystals",
-            "ow_swapped_43,@OW Dark Death Mountain West Top,glitch_mode_owg,gt_crystals",
-            "ow_swapped_43,@OW Dark Death Mountain West Top,glitch_mode_owg,pearl,boots",
-            "ow_swapped_43,@OW Dark Death Mountain West Top,glitch_mode_major",
-            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,[pearl],gt_crystals",
-            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,glitch_mode_owg,gt_crystals",
-            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,glitch_mode_owg,pearl,boots",
-            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,glitch_mode_major",
+            "ow_swapped_43,@OW Dark Death Mountain West Top,@GT Entry",
+            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,@GT Entry",
             
-            "inverted_orig,ow_swapped_03,@OW Castle Ledge,[pearl],gt_crystals",
-            "inverted_orig,ow_swapped_03,glitch_mode_owg,@OW Castle Ledge,gt_crystals",
-            "inverted_orig,ow_swapped_03,glitch_mode_major,@OW Castle Ledge",
-            "inverted_new,ow_swapped_03,ow_swapped_1b,@OW Castle Ledge,[pearl],gt_crystals",
-            "inverted_new,ow_swapped_03,ow_swapped_1b,glitch_mode_owg,@OW Castle Ledge,gt_crystals",
-            "inverted_new,ow_swapped_03,ow_swapped_1b,glitch_mode_major,@OW Castle Ledge",
+            "inverted_orig,ow_swapped_03,@OW Castle Ledge,@GT Entry",
+            "inverted_new,ow_swapped_03,ow_swapped_1b,@OW Castle Ledge,@GT Entry",
             "entrance_shuffle_on"
         ]
     },
@@ -356,8 +357,8 @@
                 "name": "Key Guard",
                 "access_rules": [ "@HC Access" ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-guard.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-guard.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -377,8 +378,8 @@
                     "@HC Access,@Hyrule Castle & Escape/Boomerang"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-guard.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-guard.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -389,8 +390,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-chain.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-chain.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -429,8 +430,8 @@
                     "door_shuffle_on,[lamp]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-rat.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-rat.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -543,8 +544,8 @@
                 "name": "Dark Pot Key",
                 "access_rules": [ "[lamp]" ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-lw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -576,8 +577,8 @@
                     "door_shuffle_on,[lamp]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-eyegore.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-eyegore.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -708,8 +709,8 @@
                     "entrance_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-lw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -720,8 +721,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-lw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -733,8 +734,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-lw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -968,8 +969,8 @@
                     "door_shuffle_on,[lamp]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-bowguard.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-bowguard.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -980,8 +981,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-redguard.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-redguard.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -1301,8 +1302,8 @@
                     "@Swamp Palace/Bomb Wall"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1315,8 +1316,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1338,8 +1339,8 @@
                     "@Swamp Palace/South Side,hookshot"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1360,8 +1361,8 @@
                     "@Swamp Palace/South Side"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1416,8 +1417,8 @@
                     "door_shuffle_on,flippers"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1530,8 +1531,8 @@
             {
                 "name": "West Lobby Key",
                 "visibility_rules": [ "pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1556,8 +1557,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-gibdo.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-gibdo.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -1665,19 +1666,20 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
                 "name": "Spike Switch Key",
                 "access_rules": [
                     "pool_keydrop_off,@Thieves Town/Hallway Key",
-                    "pool_keydrop_on,@Thieves Town/Hallway Key,tt_smallkey:1"
+                    "pool_keydrop_on,@Thieves Town/Hallway Key,tt_smallkey:1",
+                    "@Thieves Town/Hallway Key,keysanity_smallkey_off"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1802,8 +1804,8 @@
             {
                 "name": "Lobby Key",
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-jelly.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-jelly.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -1823,8 +1825,8 @@
                     "@Ice Palace/Pengator Room"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-jelly.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-jelly.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -1850,8 +1852,8 @@
                     "door_shuffle_on,lift1,hammer"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-boulder.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-boulder.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -1900,8 +1902,8 @@
                     "@Ice Palace/Spike Cross"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2039,8 +2041,8 @@
                     "@MM Special Access/Mire 2"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2066,8 +2068,8 @@
                     "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2078,8 +2080,8 @@
                     "@MM Special Access/Mire 2,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-jelly.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-jelly.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -2251,8 +2253,8 @@
                     "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-pokey.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-pokey.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -2282,8 +2284,8 @@
                     "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-pokey.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-pokey.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {
@@ -2484,8 +2486,8 @@
             {
                 "name": "Conveyor Bumper Key",
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2506,8 +2508,8 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2575,8 +2577,8 @@
                     "@Ganon's Tower/Compass Room"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/pot-dw.png",
-                "chest_opened_img": "images/pot-collected.png",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "item_count": 1
             },
             {
@@ -2660,8 +2662,8 @@
                     "@Ganon's Tower/Mini Helmasaur"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keydrop_on" ],
-                "chest_unopened_img": "images/enemy-helma.png",
-                "chest_opened_img": "images/enemy-defeated.png",
+                "chest_unopened_img": "images/icons/keydrops/enemy-helma.png",
+                "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
             },
             {

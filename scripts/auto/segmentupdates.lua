@@ -1,17 +1,19 @@
 function updateTitleFromMemorySegment(segment)
-    local value = segment:ReadUInt8(0x007fd3)
-    if value > 0 then
-        if string.char(value) == "O" then
-            if OBJ_WORLDSTATE:getProperty("version") ~= 1 then
-                OBJ_WORLDSTATE.clicked = true
-                OBJ_WORLDSTATE.ignorePostUpdate = true
-                OBJ_WORLDSTATE:setProperty("version", 1)
-            end
-        else
-            if OBJ_WORLDSTATE:getProperty("version") ~= 0 then
-                OBJ_WORLDSTATE.clicked = true
-                OBJ_WORLDSTATE.ignorePostUpdate = true
-                OBJ_WORLDSTATE:setProperty("version", 0)
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        local value = segment:ReadUInt8(0x007fd3)
+        if value > 0 then
+            if string.char(value) == "O" then
+                if OBJ_WORLDSTATE:getProperty("version") ~= 1 then
+                    OBJ_WORLDSTATE.clicked = true
+                    OBJ_WORLDSTATE.ignorePostUpdate = true
+                    OBJ_WORLDSTATE:setProperty("version", 1)
+                end
+            else
+                if OBJ_WORLDSTATE:getProperty("version") ~= 0 then
+                    OBJ_WORLDSTATE.clicked = true
+                    OBJ_WORLDSTATE.ignorePostUpdate = true
+                    OBJ_WORLDSTATE:setProperty("version", 0)
+                end
             end
         end
     end
@@ -53,9 +55,8 @@ function updateModuleFromMemorySegment(segment)
             --Post Game Actions
             STATUS.HealthState = 3
             sendExternalMessage("health", "win")
-            -- TODO: revisit when ready to do final stats handling
-            --stats display
 
+            doStatsMessage()
             disposeMemoryWatch()
         end
     end
@@ -128,7 +129,7 @@ function updateOverworldIdFromMemorySegment(segment)
 
         CACHE.OWAREA = owarea
 
-        if CACHE.OWAREA < 0xff and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+        if CACHE.OWAREA < 0xff and Tracker.ActiveVariantUID ~= "vanilla" and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
             --OW Shuffle Autotracking
             if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
                 updateRoomSlots(CACHE.OWAREA + 0x1000)
@@ -137,7 +138,8 @@ function updateOverworldIdFromMemorySegment(segment)
             --OW Mixed Autotracking
             if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
                 if CACHE.OWAREA == 0 then
-                    error("NULL OW CASE")
+                    print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
+                    print("^ Module:", string.format("0x%02x", MODULE))
                 end
                 
                 local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
@@ -211,7 +213,9 @@ function updateDungeonIdFromMemorySegment(segment)
         end
 
         --Set Door Dungeon Selector
-        OBJ_DOORDUNGEON:setState(DATA.DungeonData[DATA.DungeonIdMap[CACHE.DUNGEON]][2])
+        if Tracker.ActiveVariantUID ~= "vanilla" then
+            OBJ_DOORDUNGEON:setState(DATA.DungeonData[DATA.DungeonIdMap[CACHE.DUNGEON]][2])
+        end
 
         --Update Dungeon Image
         if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
@@ -223,7 +227,7 @@ function updateDungeonIdFromMemorySegment(segment)
         end
 
         --Auto-pin Dungeon Chests
-        if CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 then
+        if Tracker.ActiveVariantUID == "full_tracker" and CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 then
             for i = 0, 26, 2 do
                 Tracker:FindObjectForCode(DATA.DungeonData[DATA.DungeonIdMap[i]][1]).Pinned = DATA.DungeonIdMap[i] == DATA.DungeonIdMap[CACHE.DUNGEON]
             end
@@ -411,16 +415,12 @@ function updateHalfMagicFromMemorySegment(segment)
         return false
     end
     
-    print("Half Magic :(")
-
-    if not CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING then
-        local value = segment:ReadUInt8(0x7ef37b)
-        if value > 0 then
-            local item = Tracker:FindObjectForCode("halfmagic")
-            if value > item.CurrentStage or not STATUS.AutotrackerInGame then
-                itemFlippedOn("halfmagic")
-                item.CurrentStage = value
-            end
+    local value = segment:ReadUInt8(0x7ef37b)
+    if value > 0 then
+        local item = Tracker:FindObjectForCode("halfmagic")
+        if value > item.CurrentStage or not STATUS.AutotrackerInGame then
+            itemFlippedOn("halfmagic")
+            item.CurrentStage = value
         end
     end
 end
@@ -500,7 +500,7 @@ function updateProgressFromMemorySegment(segment)
                     INSTANCE.MEMORY.Progress[name] = nil
                 end
             end
-        else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        elseif CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and Tracker.ActiveVariantUID ~= "vanilla" then
             print("Couldn't find item:", name)
         end
     end
@@ -517,7 +517,7 @@ DATA.MEMORY.Overworld = {
     ["@Sunken Treasure/Drain The Dam"] =      { 0x3b },
     ["@Bumper Ledge/Ledge"] =                 { 0x4a },
     ["@Pyramid Ledge/Ledge"] =                { 0x5b },
-    ["@Digging Game/Dig For Treasure"] =      { 0x6a },
+    ["@Digging Game/Dig For Treasure"] =      { 0x68 },
     ["@Master Sword Pedestal/Pedestal"] =     { 0x80 },
     ["@Zora's Domain/Ledge"] =                { 0x81 }
 }
@@ -528,11 +528,7 @@ DATA.MEMORY.OverworldItems = {
 }
 
 function updateOverworldFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" then
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
         return false
     end
     
@@ -600,7 +596,7 @@ DATA.MEMORY.Shops = {
 }
 
 function updateShopsFromMemorySegment(segment)
-    if not isInGame() then
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
         return false
     end
     
@@ -648,11 +644,7 @@ DATA.MEMORY.Npc = {
 }
 
 function updateNPCFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "items_only" then
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
         return false
     end
     
@@ -915,38 +907,36 @@ function updateRoomsFromMemorySegment(segment)
     print("Rooms")
 
     --Dungeon Data
-    if not CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING then
-        if Tracker.ActiveVariantUID == "full_tracker" then
-            if OBJ_DOORSHUFFLE:getState() == 0 then
-                --Doors Opened
-                updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
-                updateDoorKeyCountFromRoomSlotList(segment, "ep_door", {{186, 15, 185, 15}, {153, 15}})
-                updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
-                updateDoorKeyCountFromRoomSlotList(segment, "toh_door", {{119, 15}})
-                updateDoorKeyCountFromRoomSlotList(segment, "at_door", {{224, 13}, {208, 15}, {192, 13}, {176, 13}})
-                updateDoorKeyCountFromRoomSlotList(segment, "pod_door", {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}})
-                updateDoorKeyCountFromRoomSlotList(segment, "sp_door", {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}})
-                updateDoorKeyCountFromRoomSlotList(segment, "sw_door", {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}})
-                updateDoorKeyCountFromRoomSlotList(segment, "tt_door", {{188, 15}, {171, 15}, {68, 14}})
-                updateDoorKeyCountFromRoomSlotList(segment, "ip_door", {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}})
-                updateDoorKeyCountFromRoomSlotList(segment, "mm_door", {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}})
-                updateDoorKeyCountFromRoomSlotList(segment, "tr_door", {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}})
-                updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
-            end
-
-            --Pot and Enemy Keys
-            updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}, {153, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "at_potkey", {{192, 10}, {176, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}, {57, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{14, 10}, {62, 10}, {63, 10}, {159, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {193, 10}, {161, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tr_potkey", {{182, 10}, {19, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}, {61, 10}})
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        if OBJ_DOORSHUFFLE:getState() == 0 then
+            --Doors Opened
+            updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ep_door", {{186, 15, 185, 15}, {153, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "toh_door", {{119, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "at_door", {{224, 13}, {208, 15}, {192, 13}, {176, 13}})
+            updateDoorKeyCountFromRoomSlotList(segment, "pod_door", {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sp_door", {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sw_door", {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "tt_door", {{188, 15}, {171, 15}, {68, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ip_door", {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "mm_door", {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}})
+            updateDoorKeyCountFromRoomSlotList(segment, "tr_door", {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}})
+            updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
         end
+
+        --Pot and Enemy Keys
+        updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}, {153, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "at_potkey", {{192, 10}, {176, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}, {57, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{14, 10}, {62, 10}, {63, 10}, {159, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {193, 10}, {161, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "tr_potkey", {{182, 10}, {19, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}, {61, 10}})
     end
 
     local i = 1
@@ -958,7 +948,7 @@ function updateRoomsFromMemorySegment(segment)
                 item.Active = true
             end
 
-            if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "items_only" then
+            if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
                 item = Tracker:FindObjectForCode(INSTANCE.MEMORY.Bosses[i][2])
                 if item then
                     item.AvailableChestCount = 0
@@ -1039,11 +1029,7 @@ function updateRoomsFromMemorySegment(segment)
 end
 
 function updateDungeonItemsFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
-    if CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING then
+    if CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING or not isInGame() then
         return false
     end
     
@@ -1081,14 +1067,14 @@ function updateDungeonItemsFromMemorySegment(segment)
 end
 
 function updateDungeonKeysFromMemorySegment(segment)
-    if segment and not isInGame() then
+    if not segment or not isInGame() then
         return false
     end
     
     print("Dungeon Keys")
 
     --Small Keys
-    if segment and not CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING then
+    if segment and not CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING then
         for i = 1, #DATA.DungeonList do
             updateDungeonKeysFromPrefix(segment, DATA.DungeonList[i], 0x7ef4e0 + DATA.DungeonData[DATA.DungeonList[i]][4])
         end
@@ -1117,11 +1103,7 @@ function updateDungeonKeysFromMemorySegment(segment)
 end
 
 function updateDungeonPendantFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
-    if CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING or OBJ_RACEMODE:getState() > 0 then
+    if OBJ_RACEMODE:getState() > 0 or not isInGame() then
         return false
     end
     
@@ -1146,11 +1128,7 @@ function updateDungeonPendantFromMemorySegment(segment)
 end
 
 function updateDungeonCrystalFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-
-    if CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING or OBJ_RACEMODE:getState() > 0 then
+    if OBJ_RACEMODE:getState() > 0 or not isInGame() then
         return false
     end
     
@@ -1191,12 +1169,4 @@ function updateCollectionFromMemorySegment(segment)
     end
 
     Tracker:FindObjectForCode("race_mode_small").ItemState:updateText()
-end
-
-function updateStatisticsFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
-    print("Stats")
 end

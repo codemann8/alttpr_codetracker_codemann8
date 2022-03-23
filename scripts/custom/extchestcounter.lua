@@ -40,7 +40,12 @@ function ExtendedChestCounter:UpdateBadgeAndIcon()
         end
     end
     if OBJ_DOORSHUFFLE:getState() < 2 and Tracker.ActiveVariantUID == "full_tracker" and self:getProperty("section") then
-        self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(self:getProperty("section").AccessibilityLevel)
+        local access = self:getProperty("section").AccessibilityLevel
+        if access == AccessibilityLevel.Cleared then
+            self.ItemInstance.BadgeTextColor = "#666"
+        else
+            self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(access)
+        end
     elseif OBJ_DOORSHUFFLE:getState() == 2 then
         if self.MaxCount == 999 then
             self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(AccessibilityLevel.SequenceBreak)

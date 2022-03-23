@@ -1644,8 +1644,10 @@
                 "access_rules": [
                     "entrance_shuffle_all",
                     "ow_swapped_5b,@OW Bomb Shop",
-                    "ow_swapped_1b,inverted_new,@OW Bomb Shop",
-                    "ow_swapped_1b,inverted_orig,@OW Links House"
+                    "ow_swapped_1b,ow_swapped_2c,inverted_new,@OW Bomb Shop",
+                    "ow_swapped_1b,ow_swapped_6c,mirror,inverted_new,@OW Bomb Shop",
+                    "ow_swapped_1b,ow_swapped_6c,inverted_orig,@OW Links House",
+                    "ow_swapped_1b,ow_swapped_2c,mirror,inverted_orig,@OW Links House"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1

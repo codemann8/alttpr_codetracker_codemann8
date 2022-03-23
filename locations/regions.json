@@ -1356,6 +1356,15 @@
         "name": "Mirror Rule",
         "access_rules": [ "mirror" ]
     },
+    {
+        "name": "Free Flute",
+        "access_rules": [
+            "activated_flute",
+            "ow_swapped_58,ow_kakariko,flute",
+            "ow_swapped_18,inverted_orig,ow_kakariko,pearl,flute",
+            "ow_swapped_18,inverted_new,flute"
+        ]
+    },
     
     //Region Entrypoints
     {
@@ -1377,7 +1386,7 @@
             "ow_swapped,22,ow_hammerpegs,lift2",
             "ow_swapped,22,ow_hammerpegs,[lift2],hookshot", //TODO: Revisit with bombbag mode, this requires bombs or sword
             "ow_swapped,62,ow_hammerpegs,mirror",
-            "flute_shuffle_off,activated_flute",
+            "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
             "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror"
@@ -1426,9 +1435,9 @@
             "ow_swapped_70,ow_desert_back,lift1",
             "ow_swapped_30,ow_desert_back,mirror",
             "ow_swapped_70,ow_mire,mirror",
-            "flute_shuffle_off,activated_flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
-            "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
+            "@Free Flute",
+            "ow_swapped_58,@WLW Entry,flute",
+            "ow_swapped_18,@WDW Regions,pearl,flute",
             "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror"
         ],
@@ -1485,7 +1494,7 @@
             "ow_swapped_1b,ow_castle_ledge,mirror",
             "ow_swapped_5b,ow_castle_courtyard,[aga],[mirror],lift1",
             "ow_swapped_1b,ow_castle_courtyard,mirror",
-            "flute_shuffle_off,activated_flute",
+            "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
             "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
@@ -1540,7 +1549,7 @@
             "@NELW Regions",
             "ow_swapped_4f,ow_zora_waterfall_fairy,flippers",
             "ow_swapped_0f,ow_zora_waterfall_fairy,pearl,flippers,mirror",
-            "flute_shuffle_off,activated_flute",
+            "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute"
         ],
@@ -1589,7 +1598,7 @@
             "@SELW Regions",
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
-            "flute_shuffle_off,activated_flute",
+            "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
             "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
@@ -1646,7 +1655,7 @@
             "@LLW Regions",
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
-            "flute_shuffle_off,activated_flute,[flippers]",
+            "flute_shuffle_off,@Free Flute,[flippers]",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute,[flippers]",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute,[flippers]"
         ],
@@ -1715,10 +1724,9 @@
         "name": "WDM Top Entry",
         "access_rules": [
             "@WDM Top Regions",
-            "flute_shuffle_off,inverted_new,ow_swapped_03,activated_flute",
+            "flute_shuffle_off,inverted_new,ow_swapped_03,@Free Flute",
             "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Entry,flute",
-            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Access,flute", //Intentional Reverse Reference
-            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_18,pearl,flute"
+            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Access,flute" //Intentional Reverse Reference
         ],
         "children": [
             {
@@ -1733,13 +1741,12 @@
             "@WDM Bottom Regions",
             "@WDM Top Entry",
             "@WLW Entry To WDM",
-            "flute_shuffle_off,activated_flute",
+            "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_58,@WLW Access,flute", //Intentional Reverse Reference
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Regions,pearl,flute",
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Entry,pearl,flute", //Intentional Reverse Reference
-            "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Access,pearl,flute", //Intentional Reverse Reference
-            "flute_shuffle_off,inverted_new,ow_swapped_18,pearl,flute"
+            "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Access,pearl,flute" //Intentional Reverse Reference
         ],
         "children": [
             {
@@ -2075,7 +2082,7 @@
         "name": "LDW Entry",
         "access_rules": [
             "@LDW Regions",
-            "flute_shuffle_off,activated_flute,ow_swapped_35,[flippers],lift2,pearl",
+            "flute_shuffle_off,@Free Flute,ow_swapped_35,[flippers],lift2,pearl",
             "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute,ow_swapped_35,[flippers],lift2,pearl",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute,ow_swapped_35,[flippers],lift2,pearl"
         ],
@@ -2680,7 +2687,6 @@
         "name": "WDM Top Access",
         "access_rules": [
             "@WDM Top Entry",
-            "@WLW Access To WDM",
             "@WDM Bottom Entry To Top",
             "@EDM Top Entry To WDM",
             "@WDDM Top Entry To WDM",
@@ -2702,7 +2708,7 @@
         "access_rules": [
             "@WDM Bottom Entry",
             "@WDM Top Access",
-            "@WLW Entry To WDM",
+            "@WLW Access To WDM",
             "@EDM Bottom Entry To WDM",
             "@WDDM Bottom Entry To WDM",
             "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
@@ -3635,11 +3641,9 @@
     {
         "name": "Flute Access",
         "access_rules": [
-            "activated_flute",
+            "@Free Flute",
             "ow_swapped_58,@Northwest Light World,flute",
-            "ow_swapped_18,@Northwest Dark World,pearl,flute",
-            "ow_swapped_58,ow_kakariko,flute",
-            "ow_swapped_18,ow_kakariko,pearl,flute"
+            "ow_swapped_18,inverted_orig,@Northwest Dark World,pearl,flute"
         ]
     }
     

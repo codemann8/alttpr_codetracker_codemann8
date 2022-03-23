@@ -1,7 +1,8 @@
 {
     //override this file and modify below to display a custom layout
-    
-    "broadcast_custom": {
 
+    "broadcast_custom": {
+        "type": "text",
+        "text": "Override 'layouts/broadcast_custom.json' to make a custom broadcast"
     }
 }

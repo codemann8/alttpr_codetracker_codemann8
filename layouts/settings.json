@@ -317,27 +317,27 @@
                     }
                 ]
             },
-            // {
-            //     "type": "array",
-            //     "orientation": "horizontal",
-            //     "v_alignment": "center",
-            //     "margin": "0,0,0,1",
-            //     "scale": 0.75,
-            //     "content": [
-            //         {
-            //             "type": "item",
-            //             "item": "settings_auto_item",
-            //             "width": 20
-            //         },
-            //         {
-            //             "type": "text",
-            //             "h_alignment": "left",
-            //             "v_alignment": "center",
-            //             "margin": "4,0,0,2",
-            //             "text": "Disable Auto Item Tracking"
-            //         }
-            //     ]
-            // },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_auto_dungeon_item",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Disable Auto Dungeon Item Tracking"
+                    }
+                ]
+            },
             {
                 "type": "array",
                 "orientation": "horizontal",
@@ -536,6 +536,42 @@
             }
         ]
     },
+    "settings_message": {
+        "type": "container",
+        "v_alignment": "top",
+        "h_alignment": "center",
+        "background": "#80aa0000",
+        "margin": "0,-5,0,10",
+        "content": [
+            {
+                "type": "text",
+                "margin": 5,
+                "text": "ERROR: Could not save settings. Press F1 for more info on this error."
+            }
+        ]
+    },
+    "settings_v_message": {
+        "type": "container",
+        "v_alignment": "top",
+        "h_alignment": "center",
+        "background": "#80aa0000",
+        "margin": "0,5,0,5",
+        "content": [
+            {
+                "type": "text",
+                "margin": 5,
+                "text": "ERROR: Could not save\nsettings. Press F1 for\nmore info on this error."
+            }
+        ]
+    },
+    "ref_settings_message": {
+        "type": "layout",
+        "key": "blank"
+    },
+    "ref_settings_v_message": {
+        "type": "layout",
+        "key": "blank"
+    },
     "shared_settings": {
         "type": "container",
         "background": "#60303030",
@@ -546,50 +582,60 @@
         "content": [
             {
                 "type": "array",
-                "orientation": "horizontal",
-                "margin": 10,
+                "orientation": "vertical",
                 "content": [
                     {
                         "type": "array",
-                        "orientation": "vertical",
+                        "orientation": "horizontal",
+                        "margin": 10,
                         "content": [
                             {
-                                "type": "layout",
-                                "key": "settings_default"
+                                "type": "array",
+                                "orientation": "vertical",
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "key": "settings_default"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "key": "settings_layout"
+                                    },
+                                    {
+                                        "type": "layout",
+                                        "key": "settings_broadcast"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "key": "settings_autotracker"
+                                    },
+                                    {
+                                        "type": "layout",
+                                        "key": "settings_fileio"
+                                    }//,
+                                    // {
+                                    //     "type": "layout",
+                                    //     "key": "settings_experimental"
+                                    // }
+                                ]
                             }
                         ]
                     },
                     {
-                        "type": "array",
-                        "orientation": "vertical",
-                        "content": [
-                            {
-                                "type": "layout",
-                                "key": "settings_layout"
-                            },
-                            {
-                                "type": "layout",
-                                "key": "settings_broadcast"
-                            }
-                        ]
-                    },
-                    {
-                        "type": "array",
-                        "orientation": "vertical",
-                        "content": [
-                            {
-                                "type": "layout",
-                                "key": "settings_autotracker"
-                            },
-                            {
-                                "type": "layout",
-                                "key": "settings_fileio"
-                            }//,
-                            // {
-                            //     "type": "layout",
-                            //     "key": "settings_experimental"
-                            // }
-                        ]
+                        "type": "layout",
+                        "key": "ref_settings_message"
                     }
                 ]
             }
@@ -627,11 +673,11 @@
                     {
                         "type": "layout",
                         "key": "settings_fileio"
-                    }//,
-                    // {
-                    //     "type": "layout",
-                    //     "key": "settings_experimental"
-                    // }
+                    },
+                    {
+                        "type": "layout",
+                        "key": "settings_v_message"
+                    }
                 ]
             }
         ]

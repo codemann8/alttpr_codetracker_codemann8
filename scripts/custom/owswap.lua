@@ -8,7 +8,7 @@ function OWSwap:init(owid)
     self.clicked = false
     self.ignorePostUpdate = false
 
-    self:createItem(self.label)
+    self:createItem("")
 
     self:setCount(2)
     self:setState(0)
@@ -72,17 +72,14 @@ function OWSwap:updateIcon()
     end
 end
 
-function OWSwap:updateItem()
+function OWSwap:postUpdate()
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Screen " .. string.format("%02x", self.owid) .. " swapped")
+    end
     if DATA.LinkedOverworldScreens[self.owid % 0x40] ~= nil then
         local item = Tracker:FindObjectForCode("ow_swapped_" .. DATA.LinkedOverworldScreens[self.owid % 0x40]).ItemState
         if item:getState() ~= self:getState() then
             item:updateSwap(self:getState())
         end
-    end
-end
-
-function OWSwap:postUpdate()
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Screen " .. string.format("%02x", self.owid) .. " swapped")
     end
 end

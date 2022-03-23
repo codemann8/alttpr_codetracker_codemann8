@@ -1,4 +1,39 @@
 DATA = {}
+DATA.SettingsHeader = {
+    { "defaults.lua", {
+        "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS",
+        "CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS",
+        "CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE",
+        "CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR",
+        "CONFIG.PREFERENCE_DEFAULT_RACE_MODE_ON",
+        "CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING"
+    }},
+    { "layout.lua", {
+        "CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW",
+        "CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE",
+        "CONFIG.LAYOUT_ROOM_SLOT_METHOD"
+    }},
+    { "broadcast.lua", {
+        "CONFIG.BROADCAST_MAP_DIRECTION",
+        "CONFIG.BROADCAST_ALTERNATE_LAYOUT"
+    }},
+    { "tracking.lua", {
+        "CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON",
+        "CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING",
+        "CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING",
+        "CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING",
+        "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"
+    }},
+    { "fileio.lua", {
+        "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE",
+        "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE",
+        "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"
+    }}--,
+    -- { "experimental.lua", {
+    --     "CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS"
+    -- }}
+}
+
 DATA.SettingsData = {
     ["defaults.lua"] = {
         ["CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS"] =           {"Show All Locations",                   "settings_base_showlocations",     2, true,  CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS},
@@ -19,7 +54,7 @@ DATA.SettingsData = {
     },
     ["tracking.lua"] = {
         ["CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON"] = {"Enable Auto Pin Current Dungeon",      "settings_auto_pindungeon",        2, false, CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON},
-        ["CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING"] =          {"Disable Auto Item Tracking",           "settings_auto_item",              2, false, CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING},
+        ["CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING"] =  {"Disable Auto Dungeon Item Tracking",   "settings_auto_dungeon_item",      2, false, CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING"] =      {"Disable Auto Location Tracking",       "settings_auto_location",          2, false, CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING"] =       {"Disable Auto OW Tile Swap Tracking",   "settings_auto_owmixed",           2, false, CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"] =        {"Disable Auto Region Tracking",         "settings_auto_region",            2, false, CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING}
@@ -31,61 +66,60 @@ DATA.SettingsData = {
     }--,
     -- ["experimental.lua"] = {
     --     ["CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS"] =   {"Enable Dynamic Requirements Tracking", "settings_experimental_dynreq",    2, false, CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS},
-    --     ["CONFIG.EXPERIMENTAL_INVERTED_NEW_LOGIC"] =            {"Enable New Inverted Logic",            "settings_experimental_inverted",  2, false, CONFIG.EXPERIMENTAL_INVERTED_NEW_LOGIC}
     -- }
 }
 
 DATA.DykTexts = {
     {
-        "You don't need to chroma-key filter to remove the background color.", "",
+        "You don't need to chroma-key filter to remove the background color.",
         "When you install NDI and the NDI plugin for OBS, you can add NDI",
         "sources, which EmoTracker supports! This allows you to capture the",
-        "Broadcast View without the window background included.", "",
+        "Broadcast View without the window background included.",
         "For more info and support, visit the EmoTracker Discord."
     },
     {
-        "You don't have to window capture the main EmoTracker window.", "",
+        "You don't have to window capture the main EmoTracker window.",
         "By pressing F2, you can open the Broadcast View, which is a better,",
-        "more optimized display for your audience.", "",
+        "more optimized display for your audience.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "You can make personal customizations to your favorite trackers!", "",
+        "You can make personal customizations to your favorite trackers!",
         "EmoTracker is built to be customizable. Each tracker will vary, but any",
         "tracker can be customized by Exporting Overrides, and editting those",
-        "files with a text editor.", "",
+        "files with a text editor.",
         "For more specific info on customizations, press F1 to view the Readme."
     },
     {
-        "Made a mistake?", "",
-        "Using Ctrl+Z will Undo your last action.", "",
+        "Made a mistake?",
+        "Using Ctrl+Z will Undo your last action.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "Not sure how much of a Dungeon you can clear?", "",
+        "Not sure how much of a Dungeon you can clear?",
         "When you hold left-click on a Map Location, it will expand out and",
         "show all the specific chests in the Dungeon. Each grouping of chests",
-        "will show you the logical accessibility by the color of the text.", "",
+        "will show you the logical accessibility by the color of the text.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "Don't quite like something with the tracker?", "",
+        "Don't quite like something with the tracker?",
         "Good news! Many options are available to choose from in the Settings",
         "tab. You can change the way some things display in the layout,",
-        "change the way some things function, and more!", "",
+        "change the way some things function, and more!",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "Have ideas/concerns for the tracker?", "",
+        "Have ideas/concerns for the tracker?",
         "Join the Discord for this tracker package! We accept feedback and also",
-        "offer support to answer any questions you might have.", "",
+        "offer support to answer any questions you might have.",
         "To find a link to the Discord, press F1 to view the Readme."
     },
     {
-        "Don't like how the Dungeons are displayed?", "",
+        "Don't like how the Dungeons are displayed?",
         "Good news! There is an option to switch it to a more traditional,",
         "alternate layout. This, like many other options, can be changed in",
-        "the Settings tab.", "",
+        "the Settings tab.",
         "For more info and support, press F1 to view the Readme."
     },
     {
@@ -95,38 +129,38 @@ DATA.DykTexts = {
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "You can track which medallions lock access to dungeons?", "",
+        "You can track which medallions lock access to dungeons?",
         "Right click the medallions! Doing so will allow the tracker to show you",
-        "your eventual access to those dungeons once you find them.", "",
+        "your eventual access to those dungeons once you find them.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "You can track Entrances on the map!", "",
+        "You can track Entrances on the map!",
         "When you hold left-click on a Map Location, you can click the dotted",
         "box, and select the Location you found there. An icon will appear on",
-        "the map! Right clicking that icon later will remove it from the map.", "",
+        "the map! Right clicking that icon later will remove it from the map.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "There are more Mode options than what displays by default.", "",
+        "There are more Mode options than what displays by default.",
         "In the Modes section of the tracker, clicking the Gear icon will open",
-        "a popup with ALL of the Modes that can be toggled.", "",
+        "a popup with ALL of the Modes that can be toggled.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "You can track Bosses when shuffled!", "",
+        "You can track Bosses when shuffled!",
         "If you hold left-click on a Dungeon Location on the Map, the bottom",
         "area has a dotted box, where you can select which Boss you found",
-        "there. Doing this will also update the logic rules for that Dungeon.", "",
+        "there. Doing this will also update the logic rules for that Dungeon.",
         "For more info and support, press F1 to view the Readme."
     },
     {
-        "You can set Total Chests/Keys for Dungeons in Crossed Door Rando.", "",
+        "You can set Total Chests/Keys for Dungeons in Crossed Door Rando.",
         "By default, the chest counter starts at 0 and increments as you collect",
         "chests. But using the Dungeon Totals tool on the right portion of the",
         "Dungeons section, you can set a Total amount, and the corresponding",
         "Dungeon chest will switch to showing the remaining chests left and",
-        "will start decrementing as you collect chests.", "",
+        "will start decrementing as you collect chests.",
         "For more info on how to use this, press F1 to view the Readme."
     }
 }

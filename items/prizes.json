@@ -8,7 +8,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace",
+                "codes": "ep,easternpalace,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -32,7 +32,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,greenpendant,green,pendant,prize",
+                "codes": "ep,easternpalace,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -46,7 +46,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace",
+                "codes": "dp,desertpalace,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -70,7 +70,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,greenpendant,green,pendant,prize",
+                "codes": "dp,desertpalace,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -84,7 +84,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera",
+                "codes": "toh,towerofhera,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -108,7 +108,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,greenpendant,green,pendant,prize",
+                "codes": "toh,towerofhera,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -122,7 +122,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness",
+                "codes": "pod,palaceofdarkness,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -146,7 +146,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,greenpendant,green,pendant,prize",
+                "codes": "pod,palaceofdarkness,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -160,7 +160,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace",
+                "codes": "sp,swamppalace,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -184,7 +184,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,greenpendant,green,pendant,prize",
+                "codes": "sp,swamppalace,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -198,7 +198,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods",
+                "codes": "sw,skullwoods,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -222,7 +222,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,greenpendant,green,pendant,prize",
+                "codes": "sw,skullwoods,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -236,7 +236,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown",
+                "codes": "tt,thievestown,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -260,7 +260,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,greenpendant,green,pendant,prize",
+                "codes": "tt,thievestown,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -274,7 +274,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace",
+                "codes": "ip,icepalace,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -298,7 +298,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,greenpendant,green,pendant,prize",
+                "codes": "ip,icepalace,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -312,7 +312,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire",
+                "codes": "mm,miserymire,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -336,7 +336,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,greenpendant,green,pendant,prize",
+                "codes": "mm,miserymire,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]
@@ -350,7 +350,7 @@
             {
                 "img": "images/dungeon/prize-unknown.png",
                 "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock",
+                "codes": "tr,turtlerock,prize",
                 "secondary_codes": "none, unknown"
             },
             {
@@ -374,7 +374,7 @@
             {
                 "img": "images/dungeon/prize-greenpendant.png",
                 "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,greenpendant,green,pendant,prize",
+                "codes": "tr,turtlerock,greenpendant,green,prize",
                 "secondary_codes": "green pendant"
             }
         ]

@@ -31,8 +31,20 @@ function Setting:updateIcon()
         else
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png")
         end
+    elseif self.code == "settings_broadcast_mapdirection" then
+        if self:getState() == 1 then
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/icons/misc/arrow-left.png")
+        elseif self:getState() == 2 then
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/icons/misc/arrow-up.png")
+        elseif self:getState() == 3 then
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/icons/misc/arrow-right.png")
+        elseif self:getState() == 4 then
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/icons/misc/arrow-down.png")
+        else
+            self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/overlays/overlay-x.png")
+        end
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/doortracker/" .. math.floor(self:getState()) .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/overlays/box-solid.png", "overlay|images/doortracker/" .. math.floor(self:getState()) .. ".png")
     end
 end
 
@@ -68,8 +80,8 @@ function Setting:updateSetting()
     elseif self.file == "tracking.lua" then
         if self.textcode == "CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON" then
             CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON = self:getState()
-        elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING" then
-            CONFIG.AUTOTRACKER_DISABLE_ITEM_TRACKING = self:getState()
+        elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING" then
+            CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING" then
             CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING" then

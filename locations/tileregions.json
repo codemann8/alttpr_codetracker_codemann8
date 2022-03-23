@@ -849,7 +849,12 @@
             "ow_swapped_70,ow_desert_back,lift1",
             "ow_desert_back,pearl,lift1",
             "entrance_shuffle_off,door_shuffle_off,ow_desert,book",
-            "entrance_shuffle_off,door_shuffle_off,ow_desert_tablet,book"
+            "entrance_shuffle_off,door_shuffle_off,ow_desert_tablet,book",
+
+            "ow_swapped_70,@South Light World,glitch_mode_owg,boots",
+            "ow_swapped_70,@South Light World,glitch_mode_major",
+            "ow_swapped_30,@South Dark World,glitch_mode_owg,pearl,boots",
+            "ow_swapped_30,@South Dark World,glitch_mode_major"
         ]
     },
     {
@@ -1286,6 +1291,7 @@
     },
     {
         "name": "OW TR Bridge",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
             "ow_ddm_tr_bridge",
             "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain East Top,pearl,boots",
@@ -1301,13 +1307,14 @@
     },
     {
         "name": "OW TR Isolated",
+        "parent": "Dark Death Mountain Color",
         "access_rules": [
             "ow_ddm_tr_safety",
             "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain West Bottom,pearl,boots,mirror,[nothing]",
             "ow_swapped_05,@OW Death Mountain East Top,mirror",
             "ow_swapped_05,ow_dm_east_connect,mirror",
-            "glitch_mode_major,mirror,pearl",
-            "glitch_mode_major,mirror,bottle"
+            "ow_swapped_45,glitch_mode_major,mirror,pearl",
+            "ow_swapped_45,glitch_mode_major,mirror,bottle"
         ]
     },
     {
@@ -1855,8 +1862,8 @@
         "access_rules": [
             "ow_mire",
             "ow_swapped_30,@South Dark World,mirror",
-            "flute_shuffle_off,@Flute Access,lift2",
-            "ow_swapped_30,flute_shuffle_off,@Flute Access",
+            "@Flute Access,lift2",
+            "ow_swapped_30,@Flute Access",
 
             "ow_swapped_30,ow_desert,mirror",
             "ow_swapped_30,ow_desert_tablet,mirror",
