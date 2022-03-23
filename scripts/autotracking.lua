@@ -3,25 +3,6 @@ SEGMENTS = {}
 function autotracker_started()
     STATUS.AutotrackerInGame = false
     --updateTitleFromMemorySegment(nil)
-    ----TESTS BELOW----
-
-    --STATUS.LastMajorItem = os.time()
-
-    --local module = AutoTracker:Read16(0x007fc0, 0) --BLACK 7fc0-7fd4 rom title 21bytes
-    --local module = AutoTracker:Read16(0x701ffc, 0) --BLACK 1ffc-1fff rom version
-    --local module = AutoTracker:Read16(0x7ef44e, 0) -- GOOD f44e-f44f bitfield for whether chest counts are known
-    --local module = AutoTracker:Read16(0x7f5410, 0) -- BLACK 5410- chest total counts, address not confirmed
-    --print("Version: ", module)
-
-    -- print(type(AutoTracker.ActiveConnector))
-    -- print(type(AutoTracker.SelectedConnectorType))
-    -- print(AutoTracker.SelectedConnectorType.Name)
-    -- print(AutoTracker.SelectedConnectorType.InstanceType)
-
-    --AutoTracker.ActiveConnector:WriteByte(0x7ef36f, 2) --WORKS!
-    --local value = 0
-    --AutoTracker.ActiveConnector:ReadByte(0x7ef36f, value)
-    --print(value)
 end
 
 function autotracker_stopped()

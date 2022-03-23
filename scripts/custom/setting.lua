@@ -95,12 +95,6 @@ function Setting:updateSetting()
         elseif self.textcode == "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE" then
             CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE = self:getState()
         end
-    -- elseif self.file == "experimental.lua" then
-    --     if self.textcode == "CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS" then
-    --         CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS = self:getState()
-    --     elseif self.textcode == "CONFIG.EXPERIMENTAL_INVERTED_NEW_LOGIC" then
-    --         CONFIG.EXPERIMENTAL_INVERTED_NEW_LOGIC = self:getState()
-    --     end
     end
     if STATUS.TRACKER_READY then
         saveSettings(self)

@@ -28,10 +28,7 @@ DATA.SettingsHeader = {
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE",
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE",
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"
-    }}--,
-    -- { "experimental.lua", {
-    --     "CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS"
-    -- }}
+    }}
 }
 
 DATA.SettingsData = {
@@ -63,10 +60,7 @@ DATA.SettingsData = {
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE"] =      {"Enable External Item File",            "settings_fileio_item",            2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE},
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE"] =  {"Enable External Dungeon File",         "settings_fileio_dungeon",         2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE},
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"] =    {"Enable External Health File",          "settings_fileio_health",          2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE}
-    }--,
-    -- ["experimental.lua"] = {
-    --     ["CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS"] =   {"Enable Dynamic Requirements Tracking", "settings_experimental_dynreq",    2, false, CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS},
-    -- }
+    }
 }
 
 DATA.DykTexts = {

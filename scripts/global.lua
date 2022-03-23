@@ -340,7 +340,6 @@ function updateChests()
             
             if item.MaxCount ~= 999 then
                 item.MaxCount = 999
-                --item.CollectedCount = 0 --TODO: change to autotracked current chest count instead?
             end
         else
             local newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
@@ -387,17 +386,6 @@ function updateChests()
             end
             key.IgnoreUserInput = false
         end
-
-        -- if CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS then
-        --     local dyn = Tracker:FindObjectForCode("dynreq_" .. DATA.DungeonList[i] .. "1_sur")
-        --     if dyn then
-        --         dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
-        --     end
-        --     dyn = Tracker:FindObjectForCode("dynreq_" .. DATA.DungeonList[i] .. "2_sur")
-        --     if dyn then
-        --         dyn.ItemState:setState(OBJ_DOORSHUFFLE.CurrentStage == 2 and 1 or 0)
-        --     end
-        -- end
 
         OBJ_DOORDUNGEON:updateIcon()
         OBJ_DOORCHEST:updateIcon()
@@ -515,10 +503,6 @@ function updateLayout(setting)
             end
         end
     end
-    -- if setting == nil or setting.file == "experimental.lua" then
-    --     if setting == nil or setting.textcode == "CONFIG.EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS" then
-    --     end
-    -- end
 end
 
 function updateDyk()
@@ -533,12 +517,10 @@ function updateDyk()
         e:MoveNext()
         e.Current.Text = text[#text]
     else
-        --e.Current.Text = text[1]
         e:MoveNext()
         e.Current.Background = "#80aa0000"
         e.Current.Text = "The package variants have changed, please select a new variant"
         e:MoveNext()
-        --e.Current.Text = text[#text]
     end
     
     e = Layout:FindLayout("dyk_close_troll").Root.Items:GetEnumerator()

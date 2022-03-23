@@ -607,7 +607,6 @@
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "ow_swapped_45,@OW TR Bridge,mirror",
-            //"ow_swapped_45,glitch_mode_owg,hammer,mirror", //TODO: OWG what?
             "ow_swapped_05,@OW Death Mountain East Top",
             "ow_swapped_05,inverted_new,ow_dm_east_spiral"
         ],
@@ -5337,13 +5336,6 @@
         "name": "Hammer Pegs Cave",
         "short_name": "Hammer Pegs",
         "parent": "OW Hammer Pegs",
-        // "access_rules": [
-        //     "@Hammer Pegs Area",
-        //     "ow_hammerpegs,pearl,lift2",
-        //     "ow_swapped_22,ow_hammerpegs,lift2",
-        //     "ow_swapped_22,ow_blacksmith,mirror",
-        //     "glitch_mode_major,bottle"
-        // ],
         "sections": [
             {
                 "name": "Entrance",

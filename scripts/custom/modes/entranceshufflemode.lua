@@ -68,8 +68,6 @@ function EntranceShuffleMode:postUpdate()
         local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeEntrances[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-        --elseif self:getState() == 2 then
-        --    drop.ItemCaptureLayout = "tracker_capture_entrance_location"
         elseif self:getState() > 1 then
             drop.ItemCaptureLayout = "tracker_capture_entrance"
         else
@@ -81,8 +79,6 @@ function EntranceShuffleMode:postUpdate()
         local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeDungeons[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-        --elseif self:getState() == 2 then
-        --    drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
         elseif self:getState() > 1 then
             drop.ItemCaptureLayout = "tracker_capture_entrance"
         else
@@ -94,8 +90,6 @@ function EntranceShuffleMode:postUpdate()
         local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeConnectors[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
-        --elseif self:getState() == 2 then
-        --    drop.ItemCaptureLayout = "tracker_capture_entrance_connector"
         elseif self:getState() > 1 then
             drop.ItemCaptureLayout = "tracker_capture_entrance"
         else

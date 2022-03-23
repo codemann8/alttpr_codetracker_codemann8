@@ -1,11 +1,5 @@
 [
     {
-        "name": "dummy",
-        "location_size": 0,
-        "location_border_thickness": 0,
-        "img": "images/maps/overworld/ow_transparent.png"
-    },
-    {
         "name": "lightworld",
         "location_size": 80,
         "location_border_thickness": 5,

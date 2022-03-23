@@ -55,7 +55,7 @@ ScriptHost:LoadScript("scripts/static.lua")
 ScriptHost:LoadScript("scripts/global.lua")
 ScriptHost:LoadScript("scripts/events.lua")
 if _VERSION == "Lua 5.3" then
-    ScriptHost:LoadScript("scripts/fileio.lua") --TODO: test scenario when this file doesnt load
+    ScriptHost:LoadScript("scripts/fileio.lua")
     ScriptHost:LoadScript("scripts/autotracking.lua")
 else
     print("Auto-tracker is unsupported by your tracker version")

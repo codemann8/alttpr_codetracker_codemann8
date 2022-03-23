@@ -127,7 +127,6 @@
             "ow_swapped_03,@OW Death Mountain West Top,[pearl],mirror,sword",
             "ow_swapped_03,glitch_mode_owg,@OW Death Mountain West Top,mirror,sword",
             "glitch_mode_hybrid,@MM Special Access/Left Side Access",
-            //"glitch_mode_major,@OW Death Mountain West Top",//TODO: This true?
             "entrance_shuffle_on"
         ]
     },

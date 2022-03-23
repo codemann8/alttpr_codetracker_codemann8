@@ -28,8 +28,6 @@ function updateModuleFromMemorySegment(segment)
     end
 
     if moduleId ~= CACHE.MODULE and moduleId ~= 0x0e then
-        --print("CURRENT MODULE:", moduleId, string.format("0x%2X", moduleId))
-        
         --Update Dungeon Id when starting at Sanctuary
         if CACHE.MODULE == 0x05 and moduleId == 0x07 then
             CACHE.MODULE = moduleId
@@ -334,7 +332,6 @@ function updateItemsFromMemorySegment(segment)
                                 print("Item Got:", name)
                             end
                             itemFlippedOn(name)
-                            --INSTANCE.MEMORY.Items[name] = nil
                         end
                     end
                 else
@@ -358,10 +355,9 @@ function updateItemsFromMemorySegment(segment)
                         print("Item Got:", name)
                     end
                     itemFlippedOn(name)
-                    --INSTANCE.MEMORY.Items[name] = nil
                 end
             end
-        else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find item:", name)
         end
     end
@@ -400,10 +396,9 @@ function updateToggleItemsFromMemorySegment(segment)
                             print("Item Got:", name)
                         end
                         itemFlippedOn(name)
-                        --INSTANCE.MEMORY.ToggleItems[name] = nil
                     end
                 end
-            else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            else
                 print("Couldn't find item:", name)
             end
         end
@@ -485,7 +480,6 @@ function updateProgressFromMemorySegment(segment)
                     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                         print("Cleared:", name)
                     end
-                    --INSTANCE.MEMORY.Progress[name] = nil
                 end
             elseif not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
                 if not item.Owner.ModifiedByUser then
@@ -552,7 +546,7 @@ function updateOverworldFromMemorySegment(segment)
             if location.AvailableChestCount == 0 then
                 INSTANCE.MEMORY.Overworld[name] = nil
             end
-        else --if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find overworld:", name)
         end
     end
@@ -575,7 +569,7 @@ function updateOverworldFromMemorySegment(segment)
             if value[4] ~= nil and cleared then
                 INSTANCE.MEMORY.OverworldItems[name] = nil
             end
-        else --if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find overworld:", name)
         end
     end
@@ -621,7 +615,7 @@ function updateShopsFromMemorySegment(segment)
             if location.AvailableChestCount == 0 then
                 INSTANCE.MEMORY.Shops[name] = nil
             end
-        else --if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find shop:", name)
         end
     end
@@ -670,7 +664,7 @@ function updateNPCFromMemorySegment(segment)
             if location.AvailableChestCount == 0 then
                 INSTANCE.MEMORY.Npc[name] = nil
             end
-        else --if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find location", name)
         end
     end
@@ -964,7 +958,7 @@ function updateRoomsFromMemorySegment(segment)
             if item then
                 item.AvailableChestCount = bossflag == 0 and 1 or 0
                 INSTANCE.MEMORY.BossLocations[i] = nil
-            else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            else
                 print("Couldn't find location", item)
             end
         end

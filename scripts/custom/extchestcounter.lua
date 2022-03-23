@@ -9,9 +9,6 @@ function ExtendedChestCounter:init(name, dungeonCode, sectionName, initialMaxCou
 end
 
 function ExtendedChestCounter:UpdateBadgeAndIcon()
-    -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-    --     print("Updating chest icon for: " .. self:getProperty("dungeon"))
-    -- end
     if OBJ_DOORSHUFFLE:getState() < 2 and self.RemainingCount == 0 then
         self.ItemInstance.Icon = self.RemainingCount > 0 and self.FullIcon or self.EmptyIcon
         self.ItemInstance.BadgeText = nil

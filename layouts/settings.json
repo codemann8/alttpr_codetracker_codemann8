@@ -480,62 +480,6 @@
             }
         ]
     },
-    "settings_experimental": {
-        "type": "array",
-        "orientation": "vertical",
-        "v_alignment": "top",
-        "margin": "10,2,10,2",
-        "content": [
-            {
-                "type": "text",
-                "h_alignment": "left",
-                "margin": "0,0,0,2",
-                "text": "Experimental:"
-            },
-            // {
-            //     "type": "array",
-            //     "orientation": "horizontal",
-            //     "v_alignment": "center",
-            //     "margin": "0,0,0,1",
-            //     "scale": 0.75,
-            //     "content": [
-            //         {
-            //             "type": "item",
-            //             "item": "settings_experimental_dynreq",
-            //             "width": 20
-            //         },
-            //         {
-            //             "type": "text",
-            //             "h_alignment": "left",
-            //             "v_alignment": "center",
-            //             "margin": "4,0,0,2",
-            //             "text": "Enable Dynamic Requirements Tracking"
-            //         }
-            //     ]
-            // },
-            {
-                "type": "array",
-                "orientation": "horizontal",
-                "v_alignment": "center",
-                "margin": "0,0,0,1",
-                "scale": 0.75,
-                "content": [
-                    {
-                        "type": "item",
-                        "item": "settings_experimental_inverted",
-                        "width": 20
-                    },
-                    {
-                        "type": "text",
-                        "h_alignment": "left",
-                        "v_alignment": "center",
-                        "margin": "4,0,0,2",
-                        "text": "Enable New Inverted Logic"
-                    }
-                ]
-            }
-        ]
-    },
     "settings_message": {
         "type": "container",
         "v_alignment": "top",
@@ -624,11 +568,7 @@
                                     {
                                         "type": "layout",
                                         "key": "settings_fileio"
-                                    }//,
-                                    // {
-                                    //     "type": "layout",
-                                    //     "key": "settings_experimental"
-                                    // }
+                                    }
                                 ]
                             }
                         ]

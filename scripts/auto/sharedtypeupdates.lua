@@ -3,10 +3,6 @@ function updateRoomLocation(segment, location)
     for i, slot in ipairs(location[2]) do
         local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
 
-        -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        --     print(locationRef, roomData, 1 << slot[2])
-        -- end
-
         if (roomData & (1 << slot[2])) ~= 0 then
             clearedCount = clearedCount + 1
         elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
@@ -27,7 +23,7 @@ function updateRoomLocation(segment, location)
             if loc.AvailableChestCount == 0 then
                 remove = true
             end
-        else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        else
             print("Couldn't find location", name)
         end
     end
@@ -69,7 +65,7 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots)
         end
 
         doorKey.AcquiredCount = clearedCount
-    else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+    else
         print("Couldn't find door/key", doorKeyRef)
     end
 end
@@ -132,7 +128,7 @@ function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlo
                 item.RemainingCount = math.max(item.MaxCount - (clearedCount - dungeonItems), 0)
             end
         end
-    else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+    else
         print("Couldn't find chest:", dungeonPrefix)
     end
 end
