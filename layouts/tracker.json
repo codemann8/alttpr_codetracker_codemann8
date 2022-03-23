@@ -1,108 +1,101 @@
 {
-    "tracker_default": {
-        "type": "container",
-        "background": "#877373",
-        "content": {
-            "type": "dock",
-            "dropshadow": true,
-            "content": [
-                {
-                    "type": "dock",
-                    "dock": "left",
-                    "v_alignment": "stretch",
-                    "content": [
-                        {
-                            "type": "array",
-                            "orientation": "vertical",
-                            "dock": "top",
-                            "content": [
-                                {
-                                    "type": "group",
-                                    "header": "Items",
-                                    "content": {
-                                        "type": "layout",
-                                        "margin": "0,-6,0,-6",
-                                        "key": "shared_item_grid"
-                                    }
-                                },
-                                {
-                                    "type": "group",
-                                    "header": "Dungeons",
-                                    "content": {
-                                        "type": "layout",
-                                        "margin": "0,-2,0,-4",
-                                        "key": "shared_dungeon_v_grid"
-                                    }
-                                },
-                                {
-                                    "type": "layout",
-                                    "key": "shared_entrance_v_grid"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "group",
-                            "header": "Pinned Locations",
-                            "max_width": 420,
-                            "content": {
-                                "type": "recentpins",
-                                "style": "wrap",
-                                "h_alignment": "left",
-                                "v_alignment": "left",
-                                "orientation": "horizontal",
-                                "scale": 1.15,
-                                "compact": true
-                            }
-                        }
-                    ]
-                },
-                {
-                    "type": "layout",
-                    "key": "shared_v_map_tab"
-                }
-            ]
-        }
-    },
     "tracker_horizontal": {
         "type": "container",
         "background": "#877373",
-        "content": {
-            "type": "dock",
-            "dropshadow": true,
-            "content": [
-                {
-                    "type": "dock",
-                    "dock": "bottom",
-                    "v_alignment": "stretch",
-                    "content": [
-                        {
-                            "type": "layout",
-                            "dock": "left",
-                            "key": "shared_dock_grid"
-                        },
-                        {
-                            "type": "group",
-                            "header": "Pinned Locations",
-                            "dock": "right",
-                            "content": {
-                                "type": "recentpins",
-                                "dock": "right",
-                                "style": "wrap",
-                                "h_alignment": "stretch",
+        "content": [
+            {
+                "type": "dock",
+                "dropshadow": true,
+                "content": [
+                    {
+                        "type": "dock",
+                        "dock": "bottom",
+                        "v_alignment": "stretch",
+                        "content": [
+                            {
+                                "type": "dock",
+                                "dock": "left",
                                 "v_alignment": "stretch",
-                                "orientation": "horizontal",
-                                "max_height": 250,
-                                "scale": 1.07,
-                                "compact": true
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "key": "shared_dock_grid" // shared_base.json
+                                    },
+                                    {
+                                        "type": "layout",
+                                        "key": "shared_pins" // shared_base.json
+                                    }
+                                ]
                             }
-                        }
-                    ]
-                },
-                {
-                    "type": "layout",
-                    "key": "shared_map_tab"
-                }
-            ]
-        }
+                        ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "shared_tab" // shared_base.json
+                    }
+                ]
+            },
+            {
+                "type": "layout",
+                "key": "ref_dyk_grid"
+            }
+        ]
+    },
+    "tracker_vertical": {
+        "type": "container",
+        "background": "#877373",
+        "content": [
+            {
+                "type": "dock",
+                "dropshadow": true,
+                "content": [
+                    {
+                        "type": "dock",
+                        "dock": "left",
+                        "h_alignment": "stretch",
+                        "content": [
+                            {
+                                "type": "dock",
+                                "h_alignment": "stretch",
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "dock": "top",
+                                        "key": "shared_dock_v_grid" // shared_base.json
+                                    },
+                                    {
+                                        "type": "group",
+                                        "header": "Pinned Locations",
+                                        "max_width": 388,
+                                        "content": {
+                                            "type": "scroll",
+                                            "horizontal_scrollbar_visibility": "disabled",
+                                            "vertical_scrollbar_visibility": "hidden",
+                                            "content": {
+                                                "type": "recentpins",
+                                                "style": "wrap",
+                                                "h_alignment": "left",
+                                                "v_alignment": "top",
+                                                "orientation": "horizontal",
+                                                "scale": 1.15,
+                                                "compact": true
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "shared_v_tab" // shared_base.json
+                    }
+                ]
+            },
+            {
+                "type": "layout",
+                "key": "ref_dyk_grid"
+            }
+        ]
     }
 }

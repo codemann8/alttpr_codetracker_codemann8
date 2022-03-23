@@ -9,7 +9,6 @@ function PoolMode:init(altNum, item)
     self:initCode()
 
     self:setCount(2)
-    
     self:setState(0)
 end
 
@@ -25,14 +24,14 @@ end
 
 function PoolMode:updateIcon()
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_pool_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_pool_" .. self.itemCode .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_" .. self.itemCode .. self.suffix .. ".png")
     end
 end
 
 function PoolMode:postUpdate()
-    if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
-        updateIcons()
+    if self.itemCode == "keydrop" then
+        updateChests()
     end
 end

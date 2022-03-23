@@ -1,0 +1,2119 @@
+[
+    //Colors
+    {
+        "name": "Light World Color",
+        "color": "#059134"
+    },
+    {
+        "name": "Dark World Color",
+        "color": "#35046b"
+    },
+    {
+        "name": "Water Area Color",
+        "color": "#345a99"
+    },
+    {
+        "name": "Desert Area Color",
+        "color": "#aa860d"
+    },
+    {
+        "name": "Skull Woods Area Color",
+        "color": "#2a4820"
+    },
+    {
+        "name": "Mire Area Color",
+        "color": "#02473f"
+    },
+    {
+        "name": "Death Mountain Color",
+        "color": "#934f17"
+    },
+    {
+        "name": "Dark Death Mountain Color",
+        "color": "#6f6539"
+    },
+    {
+        "name": "Dungeon Color",
+        "color": "#af0000"
+    },
+    {
+        "name": "Semi-Dungeon Color",
+        "color": "#701d43"
+    },
+    
+    //Light World
+    {
+        "name": "OW Lost Woods West",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lost_woods_west",
+            "ow_swapped_40,@Northwest Light World",
+            "ow_swapped_00,@Northwest Dark World",
+            "ow_swapped_40,ow_lost_woods_east",
+            "ow_swapped_40,ow_sw_path_west,mirror",
+            "ow_swapped_40,ow_sw_path_east,mirror",
+            "ow_swapped_40,ow_sw_portal,mirror",
+            "ow_swapped_40,sw_area,mirror",
+            "ow_swapped_40,ow_sw_front,mirror",
+            "ow_swapped_00,pearl,ow_lost_woods_east"
+        ]
+    },
+    {
+        "name": "OW Lost Woods East",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lost_woods_east",
+            "ow_swapped_40,@Northwest Light World",
+            "ow_swapped_00,@Northwest Dark World",
+            "ow_swapped_40,ow_lost_woods_west",
+            "ow_swapped_40,ow_sw_path_east,mirror",
+            "ow_swapped_40,ow_sw_front,mirror",
+            "ow_swapped_40,ow_sw_portal,mirror",
+            "ow_swapped_40,sw_area,pearl,mirror",
+            "ow_swapped_00,pearl,ow_lost_woods_west"
+        ]
+    },
+    {
+        "name": "OW Lumberjack",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lumberjack",
+            "ow_swapped_42,@Northwest Light World",
+            "ow_swapped_02,@Northwest Dark World",
+            "ow_swapped_42,ow_dark_lumberjack,mirror"
+        ]
+    },
+    {
+        "name": "OW Death Mountain West Top",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_west_top",
+            "ow_swapped_43,@West Top Death Mountain",
+            "ow_swapped_03,@West Top Dark Death Mountain",
+            "ow_swapped_43,ow_dm_west_bottom,mirror",
+            "ow_swapped_43,ow_ddm_west_top,mirror",
+            "ow_swapped_43,ow_ddm_west_bottom,mirror"
+        ]
+    },
+    {
+        "name": "OW Death Mountain West Bottom",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_west_bottom",
+            "@OW Death Mountain West Top",
+            "ow_swapped_03,ow_ddm_west_bottom",
+            "ow_swapped_03,ow_ddm_west_top",
+
+            "ow_swapped_43,@West Bottom Death Mountain",
+            "ow_swapped_03,@West Bottom Dark Death Mountain",
+            "ow_swapped_43,flute_shuffle_off,@Flute Access",
+            "ow_swapped_03,inverted_orig,flute_shuffle_off,@Flute Access",
+
+            "entrance_shuffle_minor,ow_swapped_4a,ow_mountainentry,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_mountainentry_ledge,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper_ledge,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper_entry,mirror,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper_ledge,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry_ledge,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry_entry,mirror,[lamp]"
+        ]
+    },
+    {
+        "name": "OW Death Mountain East Top Left",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_east_top_hammer",
+            "ow_swapped_45,@West Top Death Mountain",
+            "ow_swapped_05,@West Top Dark Death Mountain",
+            "ow_swapped_45,ow_dm_east_top,hammer",
+            "ow_swapped_45,ow_ddm_east_top,mirror",
+            "ow_swapped_45,ow_ddm_floating,mirror",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_bottom,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_spiral,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_connect,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_bottom_hookshot,hammer,hookshot",
+            "ow_swapped_45,entrance_shuffle_minor,ow_ddm_east_deadend,mirror,hookshot,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,ow_ddm_east_bottom,mirror,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,@OW TR Bridge,mirror,hammer",
+            "ow_swapped_45,entrance_shuffle_minor,@OW TR Isolated,mirror,hammer",
+            "ow_swapped_05,ow_dm_east_top,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_bottom,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_spiral,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_mimic,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_connect,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_bottom_hookshot,pearl,hammer,hookshot",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_east_bottom,lift2,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_floating,lift2,pearl,hammer",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_east_top,lift2,pearl,hammer"
+        ]
+    },
+    {
+        "name": "OW Death Mountain East Top",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_east_top",
+            "ow_swapped_45,@East Top Death Mountain",
+            "ow_swapped_05,@East Top Dark Death Mountain",
+
+            "ow_swapped_45,ow_ddm_east_top,mirror",
+            "ow_swapped_45,ow_ddm_floating,mirror",
+            "ow_swapped_45,ow_dm_east_top_hammer,hammer",
+            "ow_dm_east_top_hammer,pearl,hammer",
+            
+            "entrance_shuffle_minor,ow_dm_east_bottom",
+            "entrance_shuffle_minor,ow_dm_east_spiral",
+            "entrance_shuffle_minor,ow_dm_east_connect",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_bottom_hookshot,hookshot",
+            "ow_swapped_45,entrance_shuffle_minor,ow_ddm_east_deadend,mirror,hookshot",
+            "ow_swapped_45,entrance_shuffle_minor,ow_ddm_east_bottom,mirror",
+            "ow_swapped_45,entrance_shuffle_minor,@OW TR Bridge,mirror",
+            "ow_swapped_45,entrance_shuffle_minor,@OW TR Isolated,mirror",
+            "entrance_shuffle_minor,ow_dm_east_bottom_hookshot,pearl,hookshot",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_mimic",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_east_bottom,lift2",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_floating,lift2",
+            "ow_swapped_05,entrance_shuffle_minor,ow_ddm_east_top,lift2"
+        ]
+    },
+    {
+        "name": "OW Death Mountain East Bottom",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_east_bottom",
+            "ow_dm_east_spiral",
+            "ow_dm_east_connect",
+            "ow_dm_east_top",
+            "ow_swapped_05,ow_dm_east_mimic",
+            "ow_swapped_45,@East Bottom Death Mountain",
+            "ow_swapped_05,@East Bottom Dark Death Mountain",
+            "@OW Death Mountain East Top",
+
+            "ow_swapped_45,ow_dm_east_top_hammer,hammer",
+            "ow_swapped_45,ow_dm_east_bottom_hookshot,hookshot",
+            "ow_swapped_45,ow_ddm_east_deadend,mirror,hookshot",
+            "ow_swapped_45,ow_ddm_east_top,mirror",
+            "ow_swapped_45,ow_ddm_floating,mirror",
+            "ow_swapped_45,ow_ddm_east_bottom,mirror",
+            "ow_swapped_45,@OW TR Bridge,mirror",
+            "ow_swapped_45,@OW TR Isolated,mirror",
+            "ow_dm_east_top_hammer,pearl,hammer",
+            "ow_dm_east_bottom_hookshot,pearl,hookshot",
+            "ow_swapped_05,ow_ddm_east_bottom,lift2",
+            "ow_swapped_05,ow_ddm_floating,lift2",
+            "ow_swapped_05,ow_ddm_east_top,lift2"
+        ]
+    },
+    {
+        "name": "OW Death Mountain East Bottom Left",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_dm_east_bottom_hookshot",
+            "ow_swapped_45,@West Bottom Death Mountain",
+            "ow_swapped_05,@West Bottom Dark Death Mountain",
+
+            "ow_swapped_45,@OW Death Mountain East Bottom,hookshot",
+            "ow_swapped_45,ow_ddm_east_deadend,mirror",
+            "@OW Death Mountain East Bottom,pearl,hookshot"
+        ]
+    },
+    {
+        "name": "OW Turtle Rock Pegs",
+        "parent": "Death Mountain Color",
+        "access_rules": [
+            "ow_trpegs",
+            "ow_swapped_45,@East Top Death Mountain",
+            "ow_swapped_05,@East Top Dark Death Mountain",
+
+            "ow_swapped_45,ow_turtlerock,mirror",
+            "ow_swapped_05,ow_turtlerock,lift2,hammer,pearl"
+        ]
+    },
+    {
+        "name": "OW Mountain Entry",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_mountainentry",
+            "ow_mountainentry_entry",
+            "ow_mountainentry_ledge",
+            "ow_swapped_4a,@Northwest Light World",
+            "ow_swapped_0a,@Northwest Dark World",
+            "ow_swapped_4a,ow_bumper,mirror",
+            "ow_swapped_4a,ow_bumper_ledge,mirror",
+            "ow_swapped_4a,ow_bumper_entry,mirror"
+        ]
+    },
+    {
+        "name": "OW Zora Waterfall",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_zora_waterfall",
+            "ow_swapped_4f,@Zora Light World",
+            "ow_swapped_0f,@Zora Dark World",
+            "ow_swapped_4f,zora_waterfall_fairy,flippers",
+            "ow_swapped_4f,ow_catfish,mirror",
+            "zora_waterfall_fairy,pearl,flippers",
+            
+            "ow_swapped_4f,whirlpool_shuffle_off,ow_hylia_water,[flippers]",
+            "ow_swapped_4f,whirlpool_shuffle_off,ow_hylia_northwest,[flippers]",
+            "ow_swapped_4f,whirlpool_shuffle_off,ow_hylia_northeast,[flippers]",
+            "ow_swapped_4f,whirlpool_shuffle_off,ow_hylia_shore,[flippers]",
+            "ow_swapped_4f,whirlpool_shuffle_off,ow_hylia_upgrade,[flippers]",
+            "whirlpool_shuffle_off,ow_hylia_water,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_hylia_northwest,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_hylia_northeast,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_hylia_shore,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_hylia_upgrade,pearl,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Lost Woods Pass West",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lost_woods_pass_west",
+            "ow_swapped_50,ow_sw_pass_west,mirror",
+            "ow_swapped_50,ow_sw_pass_east_top,pearl,mirror",
+            "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2,hammer,mirror"
+        ]
+    },
+    {
+        "name": "OW Lost Woods Pass East Top",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lost_woods_pass_east_top",
+            "ow_swapped_50,ow_sw_pass_east_top,mirror",
+            "ow_swapped_50,ow_sw_pass_west,pearl,mirror",
+            "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2,hammer,mirror",
+            "ow_swapped_50,ow_lost_woods_pass_east_bottom,lift2,hammer",
+            "ow_swapped_10,ow_lost_woods_pass_east_bottom,pearl,lift2,hammer",
+            "ow_swapped_10,ow_sw_pass_west,pearl,hammer",
+            "ow_swapped_10,ow_sw_pass_east_top,pearl,hammer",
+            "ow_swapped_10,ow_sw_pass_east_bottom,pearl,lift2,hammer"
+        ]
+    },
+    {
+        "name": "OW Lost Woods Pass East Bottom",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_lost_woods_pass_east_bottom",
+            "ow_swapped_50,ow_sw_pass_east_bottom,mirror",
+            "ow_swapped_50,ow_sw_pass_west,pearl,hammer,lift2,mirror",
+            "ow_swapped_50,ow_sw_pass_east_top,pearl,hammer,lift2,mirror",
+            "ow_swapped_50,ow_lost_woods_pass_east_top,lift2,hammer",
+            "ow_swapped_10,ow_lost_woods_pass_east_top,pearl,lift2,hammer",
+            "ow_swapped_10,ow_sw_pass_west,pearl,hammer,lift2",
+            "ow_swapped_10,ow_sw_pass_east_top,pearl,hammer,lift2",
+            "ow_swapped_10,ow_sw_pass_east_bottom,pearl,lift2"
+        ]
+    },
+    {
+        "name": "OW Kakariko Fortune",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_kak_fortune",
+            "ow_swapped_51,@Northwest Light World",
+            "ow_swapped_11,@Northwest Dark World",
+            "ow_swapped_51,ow_outcast_fortune,mirror"
+        ]
+    },
+    {
+        "name": "OW Kakariko Pond",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_kak_pond",
+            "ow_swapped_52,flute_shuffle_off,whirlpool_shuffle_off,@Flute Access,[flippers]",
+            "ow_swapped_52,whirlpool_shuffle_off,ow_octoballoon,[flippers]",
+            "ow_swapped_52,ow_outcast_pond,mirror"
+        ]
+    },
+    {
+        "name": "OW Bonk Rocks",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_sanc_ledge",
+            "ow_swapped_53,@Northwest Light World",
+            "ow_swapped_13,@Northwest Dark World",
+
+            "ow_swapped_53,ow_chapel,mirror"
+        ]
+    },
+    {
+        "name": "OW Sanctuary",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_sanc",
+            "ow_sanc_ledge",
+            "ow_swapped_53,@Northwest Light World",
+            "ow_swapped_13,@Northwest Dark World",
+
+            "ow_swapped_53,ow_chapel,mirror",
+            "world_state_open,entrance_shuffle_minor,door_shuffle_off"
+        ]
+    },
+    {
+        "name": "OW Graveyard",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_graveyard",
+            "ow_swapped_54,@Northwest Light World",
+            "ow_swapped_14,@Northwest Dark World",
+
+            "ow_swapped_54,ow_graveyard_ledge",
+            "ow_swapped_54,ow_graveyard_tomb,lift2",
+            "ow_swapped_54,ow_dark_graveyard,mirror",
+            "ow_swapped_14,ow_graveyard_ledge,pearl",
+            "ow_swapped_14,ow_graveyard_tomb,pearl,lift2"
+        ]
+    },
+    {
+        "name": "OW Helper River Bend",
+        "access_rules": [
+            "ow_swapped_55,ow_river_east,[flippers]",
+            "ow_swapped_55,ow_river_west,[flippers]",
+            "ow_swapped_55,ow_qirn_west,mirror,[flippers]",
+            "ow_swapped_55,ow_qirn_east,mirror,[flippers]",
+            "ow_swapped_55,ow_qirn_water,mirror,[flippers]",
+            "ow_river_east,pearl,[flippers]",
+            "ow_river_west,pearl,[flippers]",
+
+            "whirlpool_shuffle_off,ow_swapped_73,ow_cwhirlpool_east,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_73,ow_cwhirlpool_west,lift1,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_73,ow_dark_cwhirlpool_east,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_73,ow_dark_cwhirlpool_west,mirror,lift1,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_dark_cwhirlpool_east,hammer,lift1,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_dark_cwhirlpool_west,lift1,pearl,hammer,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_cwhirlpool_east,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_cwhirlpool_west,pearl,lift1,[flippers]"
+        ]
+    },
+    {
+        "name": "OW River Bend West",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_river_west",
+            "ow_river_water",
+            "ow_swapped_55,@Northwest Light World",
+            "ow_swapped_15,@Northwest Dark World",
+            "@OW Helper River Bend",
+            "ow_swapped_55,ow_qirn_west,mirror"
+        ]
+    },
+    {
+        "name": "OW River Bend East",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_river_east",
+            "ow_river_water",
+            "ow_swapped_55,@Northeast Light World",
+            "ow_swapped_15,@Northeast Dark World",
+            "@OW Helper River Bend",
+            "ow_swapped_55,ow_qirn_east,mirror",
+            "ow_swapped_55,ow_qirn_water,mirror"
+        ]
+    },
+    {
+        "name": "OW River Bend Water",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_river_water",
+            "ow_swapped_55,@Northwest Light World,[flippers]",
+            "ow_swapped_55,@Northeast Light World,[flippers]",
+            "ow_swapped_15,@Northwest Dark World,[flippers]",
+            "ow_swapped_15,@Northeast Dark World,[flippers]",
+            "@OW Helper River Bend"
+        ]
+    },
+    {
+        "name": "OW Potion Shop",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_witch",
+            "ow_swapped_56,@Northeast Light World",
+            "ow_swapped_16,@Northeast Dark World",
+            "ow_swapped_56,flute_shuffle_off,@Flute Access",
+
+            "ow_swapped_56,ow_witch_east,lift1",
+            "ow_swapped_56,ow_dark_witch,mirror",
+            "ow_swapped_56,ow_dark_witch_east,mirror,lift1",
+            "ow_swapped_16,ow_witch_east,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Potion Shop East",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_witch_east",
+            "ow_swapped_56,ow_witch,lift1",
+            "ow_swapped_56,flute_shuffle_off,@Flute Access,lift1",
+
+            "ow_swapped_56,ow_dark_witch_east,mirror",
+            "ow_swapped_56,ow_dark_witch,mirror,lift1",
+            "ow_swapped_16,ow_witch,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Potion Shop Water",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_witch_water,[flippers]",
+            "ow_swapped_56,ow_witch,[flippers]",
+            "ow_swapped_56,flute_shuffle_off,@Flute Access,[flippers]",
+
+            "ow_swapped_56,ow_witch_east,[flippers]",
+            "ow_swapped_56,ow_dark_witch_east,mirror,[flippers]",
+            "ow_swapped_56,ow_dark_witch,mirror,[flippers]",
+            "ow_swapped_16,ow_witch,pearl,[flippers]",
+            "ow_swapped_16,ow_witch_east,pearl,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Zora Approach",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_zora_approach",
+            "ow_swapped_57,ow_catfish_approach,mirror"
+        ]
+    },
+    {
+        "name": "OW Kakariko Village",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_kakariko",
+            "ow_swapped_58,@Northwest Light World",
+            "ow_swapped_18,@Northwest Dark World",
+            "ow_swapped_58,flute_shuffle_off,activated_flute",
+
+            "ow_swapped_58,ow_kak_grasshouse",
+            "ow_swapped_58,ow_kak_bombhut",
+            "ow_swapped_58,ow_outcasts,mirror",
+            "ow_swapped_58,ow_outcasts_hammer,mirror",
+            "ow_swapped_18,ow_kak_grasshouse,pearl",
+            "ow_swapped_18,ow_kak_bombhut,pearl"
+        ]
+    },
+    {
+        "name": "OW Forgotten Forest",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_forest",
+            "ow_swapped_5a,ow_shield_shop,mirror"
+        ]
+    },
+    {
+        "name": "OW Helper Castle",
+        "access_rules": [
+            "ow_swapped_5b,@South Light World",
+            "ow_swapped_5b,@Northwest Light World",
+            "ow_swapped_5b,@East Light World,lift1",
+            "ow_swapped_5b,@East Dark World,mirror",
+
+            "ow_swapped_1b,@South Dark World",
+            "ow_swapped_1b,@Northwest Dark World",
+            "ow_swapped_1b,@East Dark World,pearl,lift1",
+            "@South Light World,aga"
+        ]
+    },
+    {
+        "name": "OW Castle Perimeter",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_castle",
+            "ow_castle_ledge",
+            "@OW Helper Castle",
+            "ow_swapped_5b,ow_castle_southwest",
+            "ow_swapped_5b,ow_castle_east,lift1",
+            "ow_swapped_5b,ow_pyramid,mirror",
+            "ow_swapped_5b,ow_pyramid_pass,mirror",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle_courtyard,[mirror]",
+            "ow_swapped_1b,ow_castle_courtyard",
+            "ow_swapped_1b,ow_castle_southwest,pearl",
+            "ow_swapped_1b,ow_castle_east,pearl,lift1",
+            "ow_swapped_1b,ow_pyramid_pass,aga"
+        ]
+    },
+    {
+        "name": "OW Castle Courtyard",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_castle_courtyard",
+            "ow_castle_ledge",
+            "ow_swapped_5b,entrance_shuffle_minor,@OW Helper Castle",
+            "ow_swapped_5b,entrance_shuffle_lite,@OW Helper Castle",
+            "ow_swapped_5b,entrance_shuffle_crossed,@OW Helper Castle",
+            "ow_swapped_5b,entrance_shuffle_insanity,@OW Helper Castle,[mirror]",
+            "ow_swapped_5b,ow_pyramid,mirror",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle_southwest",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle_southwest",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle_southwest",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle_southwest,[mirror]",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle_east,lift1",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle_east,lift1",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle_east,lift1",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle_east,lift1,[mirror]",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle,[mirror]",
+            "ow_swapped_1b,@OW Helper Castle",
+            "ow_swapped_1b,ow_castle_southwest,pearl",
+            "ow_swapped_1b,ow_castle_east,pearl,lift1",
+            "ow_swapped_1b,ow_pyramid_pass,aga"
+        ]
+    },
+    {
+        "name": "OW Castle Ledge",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_castle_ledge",
+            "@OW Helper Castle,entrance_shuffle_off,door_shuffle_off",
+            "ow_swapped_5b,@East Dark World,mirror",
+            "ow_swapped_1b,aga,[mirror]",
+            "ow_swapped_1b,aga2,[aga],[mirror]",
+
+            "ow_swapped_5b,glitch_mode_owg,@Northwest Light World,boots,[entrance_shuffle_off]",
+            "ow_swapped_1b,glitch_mode_owg,@Northwest Dark World,pearl,boots,[entrance_shuffle_off]",
+            "ow_swapped_5b,glitch_mode_major,@Northwest Light World,[entrance_shuffle_off]",
+            "ow_swapped_1b,glitch_mode_major,@Northwest Dark World,[entrance_shuffle_off]",
+
+            "ow_swapped_5b,entrance_shuffle_off,door_shuffle_off,ow_castle_southwest",
+            "ow_swapped_5b,entrance_shuffle_off,door_shuffle_off,ow_castle_east,lift1",
+            "ow_swapped_5b,entrance_shuffle_off,door_shuffle_off,ow_pyramid,mirror",
+            "ow_swapped_5b,entrance_shuffle_off,door_shuffle_off,ow_pyramid_pass,mirror",
+            "ow_swapped_1b,entrance_shuffle_off,door_shuffle_off,ow_castle_southwest,pearl",
+            "ow_swapped_1b,entrance_shuffle_off,door_shuffle_off,ow_castle_east,pearl,lift1",
+            "entrance_shuffle_off,door_shuffle_off,ow_castle_courtyard"
+        ]
+    },
+    {
+        "name": "OW Castle Southwest",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_castle_southwest",
+            "ow_swapped_5b,ow_castle",
+            "ow_swapped_5b,ow_pyramid_pass,mirror",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle_courtyard",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle_courtyard,[mirror]",
+            "ow_swapped_5b,ow_castle_ledge",
+            "ow_swapped_5b,ow_castle_east,lift1",
+            "ow_swapped_1b,ow_castle,pearl",
+            "ow_swapped_1b,ow_castle_courtyard,pearl",
+            "ow_swapped_1b,ow_castle_ledge,pearl",
+            "ow_swapped_1b,ow_castle_east,pearl,lift1",
+            "ow_swapped_1b,ow_pyramid_pass,aga,pearl"
+        ]
+    },
+    {
+        "name": "OW Castle East",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_castle_east",
+            "ow_swapped_5b,ow_castle,lift1",
+            "ow_swapped_5b,ow_pyramid,mirror",
+            "ow_swapped_5b,entrance_shuffle_minor,ow_castle_courtyard,lift1",
+            "ow_swapped_5b,entrance_shuffle_lite,ow_castle_courtyard,lift1",
+            "ow_swapped_5b,entrance_shuffle_crossed,ow_castle_courtyard,lift1",
+            "ow_swapped_5b,entrance_shuffle_insanity,ow_castle_courtyard,[mirror],lift1",
+            "ow_swapped_5b,ow_castle_ledge,lift1",
+            "ow_swapped_5b,ow_castle_southwest,lift1",
+            "ow_swapped_1b,ow_castle,pearl,lift1",
+            "ow_swapped_1b,ow_castle_courtyard,pearl,lift1",
+            "ow_swapped_1b,ow_castle_ledge,pearl,lift1",
+            "ow_swapped_1b,ow_castle_southwest,pearl,lift1",
+            "ow_swapped_1b,ow_pyramid_pass,aga,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Wooden Bridge",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_wooden_bridge",
+            "ow_swapped_5d,ow_wooden_bridge_northeast",
+            "ow_swapped_5d,ow_broken_bridge_west,mirror",
+            "ow_swapped_5d,ow_broken_bridge_east_top,mirror",
+            "ow_swapped_5d,ow_broken_bridge_east_bottom,mirror",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,pearl"
+        ]
+    },
+    {
+        "name": "OW Wooden Bridge Northeast",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_wooden_bridge_northeast",
+            "ow_swapped_5d,ow_wooden_bridge",
+            "ow_swapped_5d,ow_broken_bridge_west,mirror",
+            "ow_swapped_5d,ow_broken_bridge_east_top,mirror",
+            "ow_swapped_5d,ow_broken_bridge_east_bottom,mirror",
+            "ow_swapped_1d,ow_wooden_bridge,pearl"
+        ]
+    },
+    {
+        "name": "OW Eastern Palace",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_eastern_palace",
+            "ow_swapped_5e,@East Light World",
+            "ow_swapped_1e,@East Dark World",
+            "ow_swapped_5e,ow_dark_palace,mirror"
+        ]
+    },
+    {
+        "name": "OW Blacksmith",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_blacksmith",
+            "ow_swapped_62,@Northwest Light World",
+            "ow_swapped_22,@Northwest Dark World",
+            "ow_swapped_62,ow_hammerpegs,mirror",
+            "ow_swapped_62,ow_hammerpegs_entry,mirror"
+        ]
+    },
+    {
+        "name": "OW Sand Dunes",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_sand_dunes",
+            "ow_swapped_5b,ow_dark_dunes,mirror"
+        ]
+    },
+    {
+        "name": "OW Race Game Ledge",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_race_ledge",
+            "ow_swapped_68,entrance_shuffle_minor,@South Light World",
+            "ow_swapped_68,@South Dark World,mirror",
+            "ow_swapped_28,entrance_shuffle_minor,@South Dark World,pearl",
+
+            "ow_swapped_68,ow_dig_game,pearl,lift2,mirror",
+            "ow_swapped_68,ow_dig_game,pearl,[lift2],hookshot,mirror",
+            "ow_swapped_68,ow_dig_ledge,mirror",
+            "ow_swapped_68,entrance_shuffle_minor,ow_kak_suburb",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,pearl"
+        ]
+    },
+    {
+        "name": "OW Race Game",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_race_game",
+            "ow_swapped_68,@South Light World",
+            "ow_swapped_68,@South Dark World,mirror",
+            "ow_swapped_28,@South Dark World",
+
+            "ow_swapped_68,ow_dig_game,mirror",
+            "ow_swapped_68,ow_dig_ledge,mirror",
+            "ow_swapped_68,entrance_shuffle_minor,ow_kak_suburb",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,pearl"
+        ]
+    },
+    {
+        "name": "OW Kakariko Suburb",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_kak_suburb",
+            "ow_swapped_69,@South Light World",
+            "ow_swapped_29,@South Dark World",
+            "ow_swapped_69,ow_frog,mirror",
+            "ow_swapped_69,ow_archery,mirror",
+            "ow_swapped_69,entrance_shuffle_minor,ow_race_ledge",
+            "ow_swapped_29,entrance_shuffle_minor,ow_race_ledge,pearl"
+        ]
+    },
+    {
+        "name": "OW Flute Boy Pass",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_flute_pass",
+            "ow_swapped_6a,ow_stumpy_pass,mirror"
+        ]
+    },
+    {
+        "name": "OW Flute Boy",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_flute",
+            "ow_swapped_6a,@South Light World",
+            "ow_swapped_2a,@South Dark World,pearl",
+            "ow_swapped_6a,ow_stumpy,mirror"
+        ]
+    },
+    {
+        "name": "OW Central Bonk Rocks",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_central_bonk",
+            "ow_swapped_6b,@South Light World",
+            "ow_swapped_2b,@South Dark World",
+            "ow_swapped_6b,ow_dark_bonk,mirror"
+        ]
+    },
+    {
+        "name": "OW Links House",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_links",
+            "ow_swapped_6c,@South Light World",
+            "ow_swapped_6c,entrance_shuffle_minor",
+            "ow_swapped_6c,flute_shuffle_off,@Flute Access",
+            "ow_swapped_2c,@South Dark World",
+            "ow_swapped_6c,ow_bomb_shop,mirror"
+        ]
+    },
+    {
+        "name": "OW Stone Bridge",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_stone_bridge",
+            "ow_swapped_6d,ow_hammer_bridge_top,mirror",
+            "ow_swapped_6d,ow_hammer_bridge_bottom,mirror"
+        ]
+    },
+    {
+        "name": "OW Stone Bridge Water",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_stone_bridge_water",
+            "ow_swapped_6d,@Lake Light World",
+            "ow_swapped_2d,@Lake Dark World",
+            
+            "ow_swapped_6d,ow_stone_bridge,glitch_mode_owg,boots",
+            "ow_stone_bridge,glitch_mode_owg,pearl,boots",
+            "ow_stone_bridge,glitch_mode_major",
+            "ow_swapped_6d,ow_hammer_bridge_top,flippers,pearl,mirror",
+            "ow_swapped_6d,ow_hammer_bridge_bottom,pearl,hammer,flippers,mirror"
+        ]
+    },
+    {
+        "name": "OW Tree Line",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_treeline",
+            "ow_swapped_6e,@East Light World",
+            "ow_swapped_2e,@East Dark World",
+            "ow_swapped_6e,ow_dark_treeline,mirror"
+        ]
+    },
+    {
+        "name": "OW Tree Line Water",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_treeline_water,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Eastern Nook",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_eastern_nook",
+            "ow_swapped_6f,@East Light World",
+            "ow_swapped_6f,flute_shuffle_off,@Flute Access",
+            "ow_swapped_2f,@East Dark World",
+
+            "ow_swapped_6f,ow_dark_nook,mirror",
+            "ow_swapped_2f,ow_dark_nook,hammer,lift1,pearl"
+        ]
+    },
+    {
+        "name": "OW Desert",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert",
+            "ow_desert_ledge",
+            "ow_desert_tablet",
+            "ow_swapped_70,@East Light World",
+            "ow_swapped_70,@Flute Access",
+            "ow_swapped_30,@East Dark World",
+
+            "ow_swapped_70,ow_desert_back,lift1",
+            "ow_swapped_70,ow_mire,mirror",
+            "ow_desert_back,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Desert Ledge",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert_ledge",
+            "ow_swapped_70,@South Light World,entrance_shuffle_off,door_shuffle_off,book",
+            "ow_swapped_70,@Flute Access,lift2,mirror",
+            "ow_swapped_30,@South Dark World,entrance_shuffle_off,door_shuffle_off,book",
+            
+            "ow_swapped_70,ow_mire,mirror",
+            "ow_swapped_70,ow_desert_back,lift1",
+            "ow_desert_back,pearl,lift1",
+            "entrance_shuffle_off,door_shuffle_off,ow_desert,book",
+            "entrance_shuffle_off,door_shuffle_off,ow_desert_tablet,book"
+        ]
+    },
+    {
+        "name": "OW Desert Tablet",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert_tablet",
+            "ow_swapped_70,@South Dark World,mirror",
+            "ow_swapped_30,inverted_orig,@South Light World",
+            "ow_swapped_30,glitch_mode_none,@South Light World",
+            "ow_swapped_30,inverted_new,glitch_mode_owg,@South Light World,pearl,boots",
+            "ow_swapped_30,inverted_new,glitch_mode_major,@South Light World",
+
+            "ow_swapped_70,glitch_mode_owg,@South Light World,boots",
+            "ow_swapped_70,glitch_mode_major,@South Light World"
+        ]
+    },
+    {
+        "name": "OW Cave 45",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_cave45",
+            "ow_swapped_72,@South Light World",
+            "ow_swapped_32,@South Dark World",
+
+            "ow_swapped_72,ow_cave45_bush",
+            "ow_swapped_72,ow_bush_circle,mirror",
+            "ow_swapped_72,ow_bush_circle_blocked,mirror",
+            "ow_cave45_bush,pearl"
+        ]
+    },
+    {
+        "name": "OW Cave 45 Bush",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_cave45_bush",
+            "ow_swapped_72,ow_cave45",
+            "ow_swapped_72,ow_bush_circle,mirror",
+            "ow_swapped_72,ow_bush_circle_blocked,mirror",
+            "ow_swapped_32,ow_cave45,pearl"
+        ]
+    },
+    {
+        "name": "OW Helper C Whirlpool",
+        "access_rules": [
+            "whirlpool_shuffle_off,ow_swapped_55,ow_river_west,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_55,ow_river_east,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_55,ow_river_water,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_55,ow_qirn_west,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_55,ow_qirn_east,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_55,ow_qirn_water,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_west,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_east,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_water,pearl,[flippers]"
+        ]
+    },
+    {
+        "name": "OW C Whirlpool West",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_cwhirlpool_west",
+            "ow_swapped_73,ow_cwhirlpool_east,lift1",
+            "ow_swapped_73,ow_dark_cwhirlpool_west,mirror",
+            "ow_swapped_73,ow_dark_cwhirlpool_east,mirror,lift1",
+            "ow_cwhirlpool_east,pearl,lift1",
+            "ow_swapped_33,ow_dark_cwhirlpool_east,hammer,lift1,pearl",
+            "ow_swapped_33,ow_dark_cwhirlpool_west,hammer,lift1,pearl",
+            
+            "ow_swapped_73,@OW Helper C Whirlpool,lift1",
+            "@OW Helper C Whirlpool,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW C Whirlpool East",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_cwhirlpool_east",
+            "ow_swapped_73,ow_cwhirlpool_west,lift1",
+            "ow_swapped_73,ow_dark_cwhirlpool_east,mirror",
+            "ow_swapped_73,ow_dark_cwhirlpool_west,mirror,lift1",
+            "ow_cwhirlpool_west,pearl,lift1",
+            "ow_swapped_33,ow_dark_cwhirlpool_east,hammer,lift1,pearl",
+            "ow_swapped_33,ow_dark_cwhirlpool_west,hammer,lift1,pearl",
+            
+            "@OW Helper C Whirlpool"
+        ]
+    },
+    {
+        "name": "OW Statues",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_statues",
+            "ow_swapped_74,@South Light World",
+            "ow_swapped_34,@South Dark World",
+            "ow_swapped_74,ow_hype,mirror"
+        ]
+    },
+    {
+        "name": "OW Lake Hylia Water",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_hylia_water",
+            "ow_swapped_75,@Lake Light World",
+            "ow_swapped_35,@Lake Dark World",
+
+            "ow_swapped_75,ow_hylia_northwest,[flippers]",
+            "ow_swapped_75,ow_hylia_northeast,[flippers]",
+            "ow_swapped_75,ow_hylia_shore,[flippers]",
+            "ow_swapped_75,ow_hylia_upgrade,[flippers]",
+            "ow_swapped_75,ow_ice_northwest,mirror,[flippers]",
+            "ow_swapped_75,ow_ice_northeast,mirror,[flippers]",
+            "ow_swapped_75,ow_ice_southwest,mirror,[flippers]",
+            "ow_swapped_75,ow_ice_southeast,mirror,[flippers]",
+            "ow_swapped_75,ow_ice_water,mirror,[flippers]",
+            "ow_swapped_75,ow_ice_palace,mirror,[flippers]",
+
+            "ow_swapped_35,ow_hylia_northwest,pearl,[flippers]",
+            "ow_swapped_35,ow_hylia_northeast,pearl,[flippers]",
+            "ow_swapped_35,ow_hylia_shore,pearl,[flippers]",
+            "ow_swapped_35,ow_hylia_upgrade,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_northwest,lift2,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_northeast,lift2,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_southwest,lift2,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_southeast,,lift2,pearl[flippers]",
+            "ow_swapped_35,ow_ice_water,lift2,pearl,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_palace,lift2,pearl,[flippers]",
+
+            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall,[flippers]",
+            "whirlpool_shuffle_off,ow_zora_waterfall_fairy,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_zora_waterfall,pearl,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Lake Hylia Northwest",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_hylia_northwest",
+            "ow_swapped_75,@South Light World",
+            "ow_swapped_35,@South Dark World",
+            "@OW Lake Hylia Water",
+            "ow_swapped_75,ow_ice_northwest,mirror"
+        ]
+    },
+    {
+        "name": "OW Lake Hylia Northeast",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_hylia_northeast",
+            "ow_swapped_75,@East Light World",
+            "ow_swapped_35,@East Dark World",
+            "@OW Lake Hylia Water",
+            "ow_swapped_75,ow_ice_northeast,mirror"
+        ]
+    },
+    {
+        "name": "OW Lake Hylia South Shore",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_hylia_shore",
+            "ow_swapped_75,@South Light World",
+            "ow_swapped_35,@South Dark World",
+            "ow_swapped_75,ow_ice_southwest,mirror",
+            "ow_swapped_75,ow_ice_southeast,mirror"
+        ]
+    },
+    {
+        "name": "OW Lake Hylia Central Island",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_hylia_upgrade",
+            "@OW Lake Hylia Water",
+            "ow_swapped_75,ow_ice_palace,mirror",
+            "ow_swapped_35,inverted_orig,ow_ice_palace,lift2"
+        ]
+    },
+    {
+        "name": "OW Ice Cave",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_ice_cave",
+            "ow_swapped_77,@Southeast Light World",
+            "ow_swapped_37,@Southeast Dark World",
+            "ow_swapped_77,ow_shopping_mall,mirror"
+        ]
+    },
+    {
+        "name": "OW Desert Pass",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert_pass",
+            "ow_desert_pass_ledge",
+            "ow_swapped_7a,@South Light World",
+            "ow_swapped_3a,@South Dark World",
+            "ow_swapped_7a,ow_desert_pass_southeast,lift1",
+            "ow_swapped_7a,ow_swamp_nook,mirror",
+            "ow_swapped_3a,ow_desert_pass_southeast,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Desert Pass Ledge",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert_pass_ledge",
+            "ow_swapped_7a,ow_swamp_nook,mirror"
+        ]
+    },
+    {
+        "name": "OW Desert Pass Southeast",
+        "parent": "Desert Area Color",
+        "access_rules": [
+            "ow_desert_pass_southeast",
+            "ow_swapped_7a,ow_desert_pass,lift1",
+            "ow_swapped_7a,ow_desert_pass_ledge,lift1",
+            "ow_swapped_7a,ow_swamp_nook,mirror",
+            "ow_swapped_3a,ow_desert_pass,pearl,lift1",
+            "ow_swapped_3a,ow_desert_pass_ledge,pearl,lift1"
+        ]
+    },
+    {
+        "name": "OW Dam",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_dam",
+            "ow_swapped_7b,flute_shuffle_off,@Flute Access",
+            "ow_swapped_7b,@South Light World",
+            "ow_swapped_3b,@South Dark World",
+            "ow_swapped_7b,ow_swamp,mirror"
+        ]
+    },
+    {
+        "name": "OW South Pass",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_south_pass",
+            "ow_swapped_7c,ow_dark_south_pass,mirror"
+        ]
+    },
+    {
+        "name": "OW Octoballoon",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_octoballoon",
+            "ow_swapped_7f,flute_shuffle_off,@Flute Access",
+            "ow_swapped_7f,ow_bomber_corner,mirror",
+            "ow_swapped_7f,ow_octoballoon_waterfall,flippers",
+            "ow_swapped_3f,ow_octoballoon_waterfall,pearl,flippers",
+
+            "whirlpool_shuffle_off,ow_swapped_52,ow_kak_pond,[flippers]",
+            "whirlpool_shuffle_off,ow_kak_pond,pearl,[flippers]"
+        ]
+    },
+    // //Dark World
+    {
+        "name": "OW Skull Woods Front",
+        "parent": "Skull Woods Area Color",
+        "access_rules": [
+            "ow_sw_front",
+            "ow_swapped_40,@Northwest Dark World",
+            "ow_swapped_00,@Northwest Light World",
+            "entrance_shuffle_minor,door_shuffle_off,ow_sw_back",
+            "ow_sw_portal,pearl,lift1",
+            "ow_swapped_00,ow_sw_portal,lift1",
+            "ow_swapped_00,ow_lost_woods_east,mirror",
+            "ow_swapped_00,ow_lost_woods_west,pearl,mirror",
+            "ow_swapped_00,ow_lost_woods_west,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Portal Entry",
+        "parent": "Skull Woods Area Color",
+        "access_rules": [
+            "ow_sw_portal",
+            "entrance_shuffle_minor,door_shuffle_off,ow_sw_back,pearl,lift1",
+            "ow_sw_front,pearl,lift1",
+            "ow_swapped_00,entrance_shuffle_minor,door_shuffle_off,ow_sw_back,lift1",
+            "ow_swapped_00,ow_sw_front,lift1",
+            "ow_swapped_00,ow_lost_woods_west,mirror",
+            "ow_swapped_00,ow_lost_woods_east,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Forgotten Path West",
+        "parent": "Skull Woods Area Color",
+        "access_rules": [
+            "ow_sw_path_west",
+            "ow_sw_path_east,pearl",
+            "ow_swapped_00,ow_sw_path_east",
+            "ow_swapped_00,ow_lost_woods_west,mirror",
+            "ow_swapped_00,ow_lost_woods_east,mirror"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Forgotten Path East",
+        "parent": "Skull Woods Area Color",
+        "access_rules": [
+            "ow_sw_path_east",
+            "ow_sw_path_west,pearl",
+            "ow_swapped_00,ow_sw_path_west",
+            "ow_swapped_00,ow_lost_woods_west,mirror",
+            "ow_swapped_00,ow_lost_woods_east,mirror"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Back",
+        "parent": "Skull Woods Area Color",
+        "access_rules": [
+            "sw_area",
+            "ow_swapped_40,@Northwest Dark World,entrance_shuffle_minor,door_shuffle_off",
+            "ow_swapped_00,@Northwest Light World,entrance_shuffle_minor,door_shuffle_off",
+            "ow_swapped_00,@Northwest Dark World,mirror",
+            "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock,pearl,boots,[nothing]",
+            "ow_swapped_07,glitch_mode_owg,@OW Turtle Rock,boots,[nothing]",
+            "glitch_mode_major,@OW Turtle Rock,[nothing]",
+
+            "entrance_shuffle_minor,door_shuffle_off,ow_sw_front",
+            "entrance_shuffle_minor,door_shuffle_off,ow_sw_portal,pearl,lift1",
+            "ow_swapped_00,ow_lost_woods_west,mirror",
+            "ow_swapped_00,ow_lost_woods_east,pearl,mirror",
+            "ow_swapped_00,entrance_shuffle_minor,door_shuffle_off,ow_sw_portal,lift1"
+        ]
+    },
+    {
+        "name": "OW Dark Lumberjack",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_lumberjack",
+            "ow_swapped_42,@Northwest Dark World",
+            "ow_swapped_02,@Northwest Light World",
+            "ow_swapped_02,ow_lumberjack,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark Death Mountain West Top",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "ow_ddm_west_top",
+            "ow_swapped_43,@West Top Dark Death Mountain",
+            "ow_swapped_03,@West Top Death Mountain",
+            "ow_swapped_03,inverted_orig,ow_ddm_west_bottom",
+            "ow_swapped_03,ow_dm_west_top,mirror",
+            "ow_swapped_03,ow_dm_west_bottom,mirror",
+            "ow_swapped_03,inverted_new,flute_shuffle_off,@Flute Access",
+
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_4a,ow_mountainentry,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_4a,ow_mountainentry_ledge,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_bumper,mirror,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_bumper_ledge,mirror,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_4a,ow_bumper_entry,mirror,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper_ledge,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_mountainentry,mirror,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_mountainentry_ledge,mirror,lift1,[lamp]",
+            "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry_entry,mirror,[lamp]"
+        ]
+    },
+    {
+        "name": "OW Dark Death Mountain West Bottom",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "ow_ddm_west_bottom",
+            "@OW Dark Death Mountain West Top",
+            "ow_swapped_43,@West Bottom Dark Death Mountain",
+            "ow_swapped_03,@West Bottom Death Mountain",
+            "flute_shuffle_off,@Flute Access",
+
+            "ow_swapped_43,ow_dm_west_bottom",
+            "ow_swapped_43,ow_dm_west_top",
+            "ow_swapped_03,ow_dm_west_bottom,mirror",
+            "ow_swapped_03,ow_dm_west_top,mirror",
+
+            "entrance_shuffle_minor,ow_swapped_4a,ow_mountainentry,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_mountainentry_ledge,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper_ledge,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_swapped_4a,ow_bumper_entry,mirror,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_bumper_ledge,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry_ledge,mirror,lift1,[lamp]",
+            "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,ow_mountainentry_entry,mirror,[lamp]"
+        ]
+    },
+    {
+        "name": "OW Dark Death Mountain East Top",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "ow_ddm_east_top",
+            "ow_ddm_floating",
+            "ow_swapped_45,@East Top Dark Death Mountain",
+            "ow_swapped_05,@East Top Death Mountain",
+
+            "ow_swapped_05,ow_dm_east_top,mirror",
+            "ow_swapped_05,ow_dm_east_top_hammer,mirror",
+            "entrance_shuffle_minor,ow_ddm_east_bottom",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_top,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_spiral,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_connect,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_bottom,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_bottom_hookshot,hookshot,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_dm_east_top_hammer,hammer,lift2",
+            "ow_swapped_45,entrance_shuffle_minor,ow_ddm_east_deadend,mirror,hookshot,lift2",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_bottom_hookshot,pearl,hookshot,mirror",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_bottom,mirror",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_connect,mirror",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_spiral,mirror",
+            "ow_swapped_05,entrance_shuffle_minor,ow_dm_east_mimic,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark Death Mountain East Bottom",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "ow_ddm_east_bottom",
+            "@OW Dark Death Mountain East Top",
+            "ow_swapped_45,@East Bottom Dark Death Mountain",
+            "ow_swapped_05,@East Bottom Death Mountain",
+
+            "ow_swapped_45,ow_dm_east_top,lift2",
+            "ow_swapped_45,ow_dm_east_spiral,lift2",
+            "ow_swapped_45,ow_dm_east_connect,lift2",
+            "ow_swapped_45,ow_dm_east_bottom,lift2",
+            "ow_swapped_45,ow_dm_east_bottom_hookshot,hookshot,lift2",
+            "ow_swapped_45,ow_dm_east_top_hammer,hammer,lift2",
+            "ow_swapped_45,ow_ddm_east_deadend,mirror,hookshot,lift2",
+            "ow_swapped_05,ow_dm_east_top,mirror",
+            "ow_swapped_05,ow_dm_east_top_hammer,mirror",
+            "ow_swapped_05,ow_dm_east_bottom_hookshot,pearl,hookshot,mirror",
+            "ow_swapped_05,ow_dm_east_bottom,mirror",
+            "ow_swapped_05,ow_dm_east_spiral,mirror",
+            "ow_swapped_05,ow_dm_east_mimic,mirror",
+            "ow_swapped_05,ow_dm_east_connect,mirror"
+        ]
+    },
+    {
+        "name": "OW TR Bridge",
+        "access_rules": [
+            "ow_ddm_tr_bridge",
+            "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain East Top,pearl,boots",
+            "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain East Top,[pearl],boots,bottle",
+            "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain East Top,mirror",
+            "ow_swapped_05,@OW Death Mountain East Top,mirror",
+            "ow_swapped_05,ow_dm_east_mimic,mirror",
+            "ow_swapped_05,ow_dm_east_spiral,mirror",
+            "ow_swapped_05,glitch_mode_owg,@OW Dark Death Mountain East Top,boots,[sword]",
+            "ow_swapped_05,glitch_mode_owg,@OW Dark Death Mountain East Top,boots,[hookshot]",
+            "glitch_mode_major,@OW Dark Death Mountain East Top"
+        ]
+    },
+    {
+        "name": "OW TR Isolated",
+        "access_rules": [
+            "ow_ddm_tr_safety",
+            "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain West Bottom,pearl,boots,mirror,[nothing]",
+            "ow_swapped_05,@OW Death Mountain East Top,mirror",
+            "ow_swapped_05,ow_dm_east_connect,mirror",
+            "glitch_mode_major,mirror,pearl",
+            "glitch_mode_major,mirror,bottle"
+        ]
+    },
+    {
+        "name": "OW Turtle Rock",
+        "parent": "Dark Death Mountain Color",
+        "access_rules": [
+            "ow_turtlerock",
+            "ow_swapped_47,@East Top Dark Death Mountain",
+            "ow_swapped_07,@East Top Death Mountain",
+
+            "ow_swapped_47,ow_trpegs,lift2,hammer,pearl",
+            "ow_swapped_07,ow_trpegs,mirror"
+        ]
+    },
+    {
+        "name": "OW Bumper Cave",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bumper",
+            "ow_bumper_entry",
+            "ow_bumper_ledge",
+            "ow_swapped_4a,@Northwest Dark World",
+            "ow_swapped_0a,@Northwest Light World",
+
+            "ow_swapped_0a,ow_mountainentry,mirror",
+            "ow_swapped_0a,ow_mountainentry_ledge,mirror",
+            "ow_swapped_0a,ow_mountainentry_entry,mirror"
+        ]
+    },
+    {
+        "name": "OW Catfish",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_catfish",
+            "ow_swapped_4f,@Zora Dark World",
+            "ow_swapped_0f,@Zora Light World",
+            
+            "ow_swapped_0f,ow_zora_waterfall_fairy,pearl,flippers,mirror",
+            "ow_swapped_0f,ow_zora_waterfall,mirror"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Pass West",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_sw_pass_west",
+            "ow_swapped_50,ow_sw_pass_east_top,pearl",
+            "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2",
+            "ow_swapped_10,ow_sw_pass_east_top",
+            "ow_swapped_10,ow_sw_pass_east_bottom,lift2,hammer",
+            "ow_swapped_10,ow_lost_woods_pass_west,mirror",
+            "ow_swapped_10,ow_lost_woods_pass_east_top,mirror",
+            "ow_swapped_10,ow_lost_woods_pass_east_bottom,mirror,lift2"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Pass East Top",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_sw_pass_east_top",
+            "ow_swapped_50,ow_sw_pass_west,pearl",
+            "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2",
+            "ow_swapped_50,ow_lost_woods_pass_east_top,hammer,pearl",
+            "ow_swapped_50,ow_lost_woods_pass_east_bottom,lift2,pearl",
+            "ow_swapped_10,ow_sw_pass_west",
+            "ow_swapped_10,ow_sw_pass_east_bottom,lift2",
+            "ow_swapped_10,ow_lost_woods_pass_west,mirror",
+            "ow_swapped_10,ow_lost_woods_pass_east_top,mirror",
+            "ow_swapped_10,ow_lost_woods_pass_east_bottom,mirror,lift2"
+        ]
+    },
+    {
+        "name": "OW Skull Woods Pass East Bottom",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_sw_pass_east_bottom",
+            "ow_swapped_50,ow_sw_pass_west,pearl,lift2",
+            "ow_swapped_50,ow_sw_pass_east_top,pearl,lift2",
+            "ow_swapped_50,ow_lost_woods_pass_east_top,hammer,lift2,pearl",
+            "ow_swapped_50,ow_lost_woods_pass_east_bottom,lift2,pearl",
+            "ow_swapped_10,ow_sw_pass_west,lift2",
+            "ow_swapped_10,ow_lost_woods_pass_east_bottom,mirror",
+            "ow_swapped_10,ow_lost_woods_pass_west,mirror,lift2",
+            "ow_swapped_10,ow_lost_woods_pass_east_top,mirror,lift2",
+            "ow_swapped_10,ow_sw_pass_east_top,lift2"
+        ]
+    },
+    {
+        "name": "OW Outcast Fortune",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_outcast_fortune",
+            "ow_swapped_51,@Northwest Dark World",
+            "ow_swapped_11,@Northwest Light World",
+            "ow_swapped_11,ow_kak_fortune,mirror"
+        ]
+    },
+    {
+        "name": "OW Outcast Pond",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_outcast_pond",
+            "ow_swapped_12,ow_kak_pond,mirror"
+        ]
+    },
+    {
+        "name": "OW Chapel",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_chapel",
+            "ow_swapped_53,@Northwest Dark World",
+            "ow_swapped_13,@Northwest Light World",
+            "ow_swapped_13,entrance_shuffle_minor"
+        ]
+    },
+    {
+        "name": "OW Dark Graveyard",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_graveyard",
+            "ow_swapped_54,@Northwest Dark World",
+            "ow_swapped_14,@Northwest Light World",
+            "ow_swapped_14,ow_graveyard,mirror",
+            "ow_swapped_14,ow_graveyard_tomb,mirror",
+            "ow_swapped_14,ow_graveyard_ledge,mirror"
+        ]
+    },
+    {
+        "name": "OW Helper Qirn",
+        "access_rules": [
+            "ow_qirn_west,pearl,[flippers]",
+            "ow_qirn_east,pearl,[flippers]",
+            "ow_swapped_15,ow_qirn_west,[flippers]",
+            "ow_swapped_15,ow_qirn_east,[flippers]",
+            "ow_swapped_15,ow_river_west,mirror,[flippers]",
+            "ow_swapped_15,ow_river_east,mirror,[flippers]",
+            "ow_swapped_15,ow_river_water,mirror,[flippers]",
+
+            "whirlpool_shuffle_off,ow_bomber_corner,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_bomber_corner_waterfall,pearl,flippers",
+            "whirlpool_shuffle_off,ow_swapped_3f,ow_bomber_corner,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_3f,ow_bomber_corner_waterfall,flippers",
+            "whirlpool_shuffle_off,ow_swapped_3f,ow_octoballoon,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_3f,ow_octoballoon_waterfall,mirror,flippers"
+        ]
+    },
+    {
+        "name": "OW Qirn Jump West",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_qirn_west",
+            "ow_swapped_55,@Northwest Dark World",
+            "ow_swapped_15,@Northwest Light World",
+            "@OW Helper Qirn",
+
+            "ow_swapped_15,ow_river_west,mirror",
+            "ow_swapped_15,ow_river_water,mirror"
+        ]
+    },
+    {
+        "name": "OW Qirn Jump East",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_qirn_east",
+            "ow_qirn_water",
+            "ow_swapped_55,@Northeast Dark World",
+            "ow_swapped_15,@Northeast Light World",
+            "@OW Helper Qirn",
+
+            "ow_swapped_15,ow_river_east,mirror",
+            "ow_swapped_15,ow_river_water,mirror"
+        ]
+    },
+    {
+        "name": "OW Qirn Jump Water",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_qirn_water",
+            "ow_swapped_55,@Northeast Dark World,pearl,[flippers]",
+            "ow_swapped_55,@Northwest Dark World,pearl,[flippers]",
+            "ow_swapped_15,@Northeast Light World,[flippers]",
+            "ow_swapped_15,@Northwest Light World,[flippers]",
+            "@OW Helper Qirn"
+        ]
+    },
+    {
+        "name": "OW Dark Witch",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_witch",
+            "ow_swapped_56,@Northeast Dark World",
+            "ow_swapped_16,@Northeast Light World",
+            "ow_swapped_16,flute_shuffle_off,@Flute Access",
+
+            "ow_dark_witch_east,pearl,lift1",
+            "ow_swapped_16,ow_dark_witch_east,lift1",
+            "ow_swapped_16,ow_witch,mirror",
+            "ow_swapped_16,ow_witch_east,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Dark Witch East",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_witch_east",
+            "ow_dark_witch,pearl,lift1",
+            "ow_swapped_16,ow_dark_witch,lift1",
+            "ow_swapped_16,ow_witch_east,mirror",
+            "ow_swapped_16,ow_witch,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Dark Witch Water",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_witch_water",
+            "ow_dark_witch,pearl,[flippers]",
+            "ow_dark_witch_east,pearl,[flippers]",
+            "ow_swapped_16,ow_dark_witch,[flippers]",
+            "ow_swapped_16,ow_dark_witch_east,[flippers]",
+            "ow_swapped_16,ow_witch_east,mirror,[flippers]",
+            "ow_swapped_16,ow_witch,mirror,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Catfish Approach",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_catfish_approach",
+            "ow_swapped_17,ow_zora_approach,mirror"
+        ]
+    },
+    {
+        "name": "OW Village of Outcasts",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_outcasts",
+            "ow_swapped_58,@Northwest Dark World",
+            "ow_swapped_18,@Northwest Light World",
+            "ow_swapped_18,flute_shuffle_off,@Flute Access",
+
+            "ow_outcasts_hammer,pearl,hammer",
+            "ow_swapped_18,ow_outcasts_hammer,hammer",
+            "ow_swapped_18,ow_kakariko,mirror",
+            "ow_swapped_18,ow_kak_grasshouse,mirror,hammer",
+            "ow_swapped_18,ow_kak_grasshouse,pearl,mirror",
+            "ow_swapped_18,ow_kak_bombhut,mirror"
+        ]
+    },
+    {
+        "name": "OW Shield Shop",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_shield_shop",
+            "ow_swapped_5a,@Northwest Dark World",
+            "ow_swapped_1a,@Northwest Light World",
+            "ow_swapped_1a,ow_forest,mirror"
+        ]
+    },
+    {
+        "name": "OW Pyramid",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_pyramid",
+            "ow_swapped_5b,@East Dark World",
+            "ow_swapped_1b,@East Light World",
+            "ow_swapped_5b,aga,@South Light World",
+            "ow_swapped_5b,aga,@East Light World,lift1",
+            "ow_swapped_5b,aga,[mirror]",
+            "ow_swapped_5b,aga2,[aga],[mirror]",
+
+            "ow_swapped_1b,ow_castle,mirror",
+            "ow_swapped_1b,ow_castle_east,mirror",
+            "ow_swapped_1b,ow_castle_ledge,mirror",
+            "ow_swapped_1b,ow_castle_courtyard,mirror",
+            "ow_swapped_1b,ow_castle_southwest,mirror",
+            "ow_swapped_1b,ow_pyramid_pass,aga,mirror"
+        ]
+    },
+    {
+        "name": "OW Pyramid Pass",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_pyramid_pass",
+            "ow_swapped_1b,ow_castle,mirror",
+            "ow_swapped_1b,ow_castle_ledge,mirror",
+            "ow_swapped_1b,ow_castle_courtyard,mirror",
+            "ow_swapped_1b,ow_castle_southwest,mirror",
+            "ow_swapped_1b,ow_castle_east,pearl,lift1,mirror"
+        ]
+    },
+    {
+        "name": "OW Broken Bridge West",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_broken_bridge_west",
+            "ow_broken_bridge_east_top,pearl,hookshot",
+            "ow_broken_bridge_east_bottom,pearl,lift1,hookshot",
+            "ow_broken_bridge_east_bottom,pearl,hammer,hookshot",
+            "ow_swapped_1d,ow_broken_bridge_east_top,hookshot",
+            "ow_swapped_1d,ow_broken_bridge_east_bottom,lift1,hookshot",
+            "ow_swapped_1d,ow_broken_bridge_east_bottom,hammer,hookshot",
+            "ow_swapped_1d,ow_wooden_bridge,mirror",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,pearl,mirror",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,mirror,hookshot"
+        ]
+    },
+    {
+        "name": "OW Broken Bridge East Top",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_broken_bridge_east_top",
+            "ow_broken_bridge_east_bottom,pearl,lift1",
+            "ow_broken_bridge_east_bottom,pearl,hammer",
+            "ow_swapped_1d,ow_broken_bridge_east_bottom,lift1",
+            "ow_swapped_1d,ow_broken_bridge_east_bottom,hammer",
+            "ow_swapped_1d,ow_wooden_bridge,pearl,mirror",
+            "ow_swapped_1d,ow_wooden_bridge,mirror,lift1",
+            "ow_swapped_1d,ow_wooden_bridge,mirror,hammer",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,mirror"
+        ]
+    },
+    {
+        "name": "OW Broken Bridge East Bottom",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_broken_bridge_east_bottom",
+            "ow_broken_bridge_east_top,pearl,lift1",
+            "ow_broken_bridge_east_top,pearl,hammer",
+            "ow_swapped_1d,ow_broken_bridge_east_top,lift1",
+            "ow_swapped_1d,ow_broken_bridge_east_top,hammer",
+            "ow_swapped_1d,ow_wooden_bridge,mirror",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,pearl,mirror",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,mirror,lift1",
+            "ow_swapped_1d,ow_wooden_bridge_northeast,mirror,hammer"
+        ]
+    },
+    {
+        "name": "OW Palace of Darkness",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_palace",
+            "ow_swapped_5e,@East Dark World",
+            "ow_swapped_1e,@East Light World",
+            "ow_swapped_1e,ow_eastern_palace,mirror"
+        ]
+    },
+    {
+        "name": "OW Helper Pyramid Moat",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_swapped_5b,glitch_mode_owg,@Northwest Dark World,pearl,boots",
+            "ow_swapped_5b,glitch_mode_owg,@East Dark World,pearl,boots",
+            "ow_swapped_5b,glitch_mode_major,@Northwest Dark World",
+            "ow_swapped_5b,glitch_mode_major,@East Dark World",
+            "ow_swapped_1b,glitch_mode_owg,@Northwest Light World,boots",
+            "ow_swapped_1b,glitch_mode_owg,@East Light World,boots",
+            "ow_swapped_1b,glitch_mode_major,@Northwest Light World",
+            "ow_swapped_1b,glitch_mode_major,@East Light World",
+
+            "ow_swapped_5b,ow_swapped_5d,glitch_mode_owg,@OW Broken Bridge West,pearl,boots",
+            "ow_swapped_5b,ow_swapped_6d,glitch_mode_owg,@OW Hammer Bridge Top,pearl,boots",
+            "ow_swapped_5b,ow_swapped_6c,glitch_mode_owg,@OW Bomb Shop,pearl,boots",
+            "ow_swapped_5b,ow_swapped_5d,glitch_mode_major,@OW Broken Bridge West",
+            "ow_swapped_5b,ow_swapped_6d,glitch_mode_major,@OW Hammer Bridge Top",
+            "ow_swapped_5b,ow_swapped_6c,glitch_mode_major,@OW Bomb Shop",
+            "ow_swapped_1b,ow_swapped_1d,glitch_mode_owg,@OW Broken Bridge West,boots",
+            "ow_swapped_1b,ow_swapped_2d,glitch_mode_owg,@OW Hammer Bridge Top,boots",
+            "ow_swapped_1b,ow_swapped_2c,glitch_mode_owg,@OW Bomb Shop,boots",
+            "ow_swapped_1b,ow_swapped_1d,glitch_mode_major,@OW Broken Bridge West",
+            "ow_swapped_1b,ow_swapped_2d,glitch_mode_major,@OW Hammer Bridge Top",
+            "ow_swapped_1b,ow_swapped_2c,glitch_mode_major,@OW Bomb Shop",
+
+            "ow_swapped_5b,ow_swapped_1d,glitch_mode_owg,@OW Wooden Bridge,pearl,boots",
+            "ow_swapped_5b,ow_swapped_2d,glitch_mode_owg,@OW Stone Bridge,pearl,boots",
+            "ow_swapped_5b,ow_swapped_2c,glitch_mode_owg,@OW Links House,pearl,boots",
+            "ow_swapped_5b,ow_swapped_1d,glitch_mode_major,@OW Wooden Bridge",
+            "ow_swapped_5b,ow_swapped_2d,glitch_mode_major,@OW Stone Bridge",
+            "ow_swapped_5b,ow_swapped_2c,glitch_mode_major,@OW Links House",
+            "ow_swapped_1b,ow_swapped_5d,glitch_mode_owg,@OW Wooden Bridge,boots",
+            "ow_swapped_1b,ow_swapped_6d,glitch_mode_owg,@OW Stone Bridge,boots",
+            "ow_swapped_1b,ow_swapped_6c,glitch_mode_owg,@OW Links House,boots",
+            "ow_swapped_1b,ow_swapped_5d,glitch_mode_major,@OW Wooden Bridge",
+            "ow_swapped_1b,ow_swapped_6d,glitch_mode_major,@OW Stone Bridge",
+            "ow_swapped_1b,ow_swapped_6c,glitch_mode_major,@OW Links House"
+        ]
+    },
+    {
+        "name": "OW Hammer Pegs",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_hammerpegs",
+            "ow_swapped_62,@Northwest Dark World,pearl,lift2",
+            "ow_swapped_22,@Northwest Light World",
+            "ow_swapped_22,@Northwest Dark World,mirror",
+            "ow_hammerpegs_entry,pearl,lift2",
+            "ow_swapped_22,ow_hammerpegs_entry,lift2",
+            "ow_swapped_22,ow_blacksmith,mirror",
+
+            "ow_swapped_62,ow_swapped_5b,@OW Helper Pyramid Moat",
+            "ow_swapped_22,ow_swapped_1b,@OW Helper Pyramid Moat"
+        ]
+    },
+    {
+        "name": "OW Dark Dunes",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_dunes",
+            "ow_swapped_25,ow_sand_dunes,mirror"
+        ]
+    },
+    {
+        "name": "OW Dig Game",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dig_game",
+            "ow_swapped_68,@South Dark World",
+            "ow_swapped_28,@South Light World",
+            "ow_swapped_28,ow_race_game,mirror",
+            "ow_swapped_28,ow_race_ledge,mirror",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kakariko_suburb,pearl,mirror"
+        ]
+    },
+    {
+        "name": "OW Frog",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_frog",
+            "ow_swapped_69,@Northwest Dark World",
+            "ow_swapped_29,@Northwest Light World",
+            
+            "ow_archery,pearl,lift2",
+            "ow_swapped_29,ow_archery,lift2",
+            "ow_swapped_29,ow_kak_suburb,mirror",
+            "ow_swapped_29,entrance_shuffle_minor,ow_race_ledge,pearl,mirror"
+        ]
+    },
+    {
+        "name": "OW Archery Game",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_archery",
+            "@OW Frog",
+            "ow_swapped_69,@South Dark World",
+            "ow_swapped_29,@South Light World"
+        ]
+    },
+    {
+        "name": "OW Stumpy Pass",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_stumpy_pass",
+            "ow_swapped_2a,ow_flute_pass,mirror"
+        ]
+    },
+    {
+        "name": "OW Stumpy",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_stumpy",
+            "ow_swapped_6a,@South Dark World,pearl",
+            "ow_swapped_2a,@South Light World",
+            
+            "ow_swapped_69,glitch_mode_owg,@OW Archery Game,[pearl],mirror",
+            "ow_swapped_69,glitch_mode_major,@OW Archery Game,mirror",
+            "glitch_mode_major,@South Dark World,bottle",
+
+            "ow_swapped_2a,ow_flute,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark Central Bonk Rocks",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_bonk",
+            "ow_swapped_6b,@South Dark World",
+            "ow_swapped_2b,@South Light World",
+            "ow_swapped_2b,ow_central_bonk,mirror"
+        ]
+    },
+    {
+        "name": "OW Bomb Shop",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bomb_shop",
+            "ow_swapped_6c,@South Dark World",
+            "ow_swapped_2c,@South Light World",
+            "ow_swapped_2c,flute_shuffle_off,@Flute Access",
+            "ow_swapped_2c,entrance_shuffle_minor",
+            "ow_swapped_2c,ow_links,mirror"
+        ]
+    },
+    {
+        "name": "OW Hammer Bridge Top",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_hammer_bridge_top",
+            "ow_hammer_bridge_bottom,pearl,hammer",
+            "ow_swapped_2d,ow_hammer_bridge_bottom,hammer",
+            "ow_swapped_2d,ow_stone_bridge,mirror"
+        ]
+    },
+    {
+        "name": "OW Hammer Bridge Bottom",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_hammer_bridge_bottom",
+            "ow_hammer_bridge_top,pearl,hammer",
+            "ow_swapped_2d,ow_hammer_bridge_top,hammer",
+            "ow_swapped_2d,ow_stone_bridge,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark Tree Line",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_treeline",
+            "ow_swapped_6e,@East Dark World",
+            "ow_swapped_2e,@East Light World",
+            "ow_swapped_2e,ow_treeline,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark Tree Line Water",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_treeline_water"
+        ]
+    },
+    {
+        "name": "OW Palace of Darkness Nook",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_nook",
+            "ow_swapped_6f,@East Dark World",
+            "ow_swapped_2f,@East Light World",
+            "ow_swapped_2f,flute_shuffle_off,@Flute Access",
+            "ow_swapped_6f,ow_eastern_nook,hammer,lift1,pearl",
+            "ow_swapped_2f,ow_eastern_nook,mirror"
+        ]
+    },
+    {
+        "name": "OW Mire",
+        "parent": "Mire Area Color",
+        "access_rules": [
+            "ow_mire",
+            "ow_swapped_30,@South Dark World,mirror",
+            "flute_shuffle_off,@Flute Access,lift2",
+            "ow_swapped_30,flute_shuffle_off,@Flute Access",
+
+            "ow_swapped_30,ow_desert,mirror",
+            "ow_swapped_30,ow_desert_tablet,mirror",
+            "ow_swapped_30,ow_desert_ledge,mirror",
+            "ow_swapped_30,ow_desert_back,mirror",
+            "ow_swapped_30,ow_desert_front,mirror",
+            "ow_swapped_70,glitch_mode_owg,@South Dark World,pearl,boots",
+            "ow_swapped_70,glitch_mode_owg,@South Light World,boots,lift2",
+            "ow_swapped_70,glitch_mode_owg,[pearl],[boots],mirror,@South Dark World",
+            "ow_swapped_30,glitch_mode_owg,@South Light World,boots",
+            "glitch_mode_major,@South Light World,lift2",
+            "ow_swapped_70,glitch_mode_major,@South Dark World",
+            "ow_swapped_30,glitch_mode_major,@South Light World"
+        ]
+    },
+    {
+        "name": "OW Bush Circle",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bush_circle",
+            "ow_swapped_72,@South Dark World",
+            "ow_swapped_32,@South Light World",
+            "ow_bush_circle_blocked,pearl",
+            "ow_swapped_32,ow_bush_circle_blocked",
+            "ow_swapped_32,ow_cave45,mirror",
+            "ow_swapped_32,ow_cave45_bush,mirror"
+        ]
+    },
+    {
+        "name": "OW Bush Circle Blocked",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bush_circle_blocked",
+            "ow_bush_circle,pearl",
+            "ow_swapped_32,ow_bush_circle",
+            "ow_swapped_32,ow_cave45,mirror",
+            "ow_swapped_32,ow_cave45_bush,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark C Whirlpool West",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_cwhirlpool_west",
+            "ow_dark_cwhirlpool_east,pearl,lift1",
+            "ow_swapped_73,ow_cwhirlpool_west,lift1,hammer,pearl",
+            "ow_swapped_73,ow_cwhirlpool_east,hammer,lift1,pearl",
+            "ow_swapped_73,@OW Helper C Whirlpool,hammer,lift1,pearl",
+            "ow_swapped_33,ow_dark_cwhirlpool_east,lift1",
+            "ow_swapped_33,ow_cwhirlpool_west,mirror",
+            "ow_swapped_33,@OW Helper C Whirlpool,mirror",
+            "ow_swapped_33,ow_cwhirlpool_east,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Dark C Whirlpool East",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_cwhirlpool_east",
+            "ow_dark_cwhirlpool_west,pearl,lift1",
+            "ow_swapped_73,ow_cwhirlpool_west,lift1,hammer,pearl",
+            "ow_swapped_73,ow_cwhirlpool_east,hammer,lift1,pearl",
+            "ow_swapped_73,@OW Helper C Whirlpool,hammer,lift1,pearl",
+            "ow_swapped_33,ow_dark_cwhirlpool_west,lift1",
+            "ow_swapped_33,ow_cwhirlpool_east,mirror",
+            "ow_swapped_33,@OW Helper C Whirlpool,mirror",
+            "ow_swapped_33,ow_cwhirlpool_west,mirror,lift1"
+        ]
+    },
+    {
+        "name": "OW Hype",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_hype",
+            "ow_swapped_74,@South Dark World",
+            "ow_swapped_34,@South Light World",
+            "ow_swapped_34,ow_statues,mirror"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Northwest",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_northwest",
+            "ow_swapped_75,@South Dark World",
+            "ow_swapped_35,@South Light World",
+            "ow_swapped_35,ow_hylia_northwest,mirror",
+            "ow_swapped_35,ow_hylia_northeast,pearl,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_shore,pearl,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_water,mirror",
+            "ow_swapped_35,ow_hylia_upgrade,pearl,[flippers],mirror"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Northeast",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_northeast",
+            "ow_ice_water",
+            "ow_ice_northwest,pearl,[flippers]",
+            "ow_ice_southwest,pearl,[flippers]",
+            "ow_ice_southeast,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_northwest,[flippers]",
+            "ow_swapped_35,ow_ice_southwest,[flippers]",
+            "ow_swapped_35,ow_ice_southeast,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_palace,[flippers]",
+            "ow_swapped_35,ow_hylia_northeast,mirror",
+            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_water,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_upgrade,mirror,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Southwest",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_southwest",
+            "ow_swapped_35,ow_hylia_shore,mirror"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Southeast",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_southeast",
+            "ow_swapped_35,ow_hylia_shore,mirror"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Island",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_palace",
+            "ow_swapped_75,@Lake Light World,lift2",
+            "ow_swapped_35,inverted_orig,@Lake Light World",
+            "ow_swapped_35,@Lake Dark World,mirror",
+            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,flippers", //prob soon to be removed from logic
+            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,mirror,[flippers]",
+            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,bottle,[flippers]",
+            "ow_swapped_75,glitch_mode_major,@OW Hype,mirror",
+            "ow_swapped_75,glitch_mode_major,@OW Hype,bottle,flippers", //prob soon to be removed from logic
+            
+            "ow_swapped_75,ow_ice_northwest,pearl,[flippers],mirror,lift2",
+            "ow_swapped_75,ow_ice_northeast,pearl,[flippers],mirror,lift2",
+            "ow_swapped_75,ow_ice_southwest,pearl,[flippers],mirror,lift2",
+            "ow_swapped_75,ow_ice_southeast,pearl,[flippers],mirror,lift2",
+            "ow_swapped_75,ow_ice_water,mirror,lift2",
+            "ow_swapped_75,ow_hylia_northwest,[flippers],lift2",
+            "ow_swapped_75,ow_hylia_northeast,[flippers],lift2",
+            "ow_swapped_75,ow_hylia_shore,[flippers],lift2",
+            "ow_swapped_75,ow_hylia_water,lift2",
+            "ow_swapped_75,ow_hylia_upgrade,lift2",
+            "ow_swapped_35,inverted_orig,ow_ice_northwest,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_northeast,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_southwest,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_southeast,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_water,[flippers]",
+            "ow_swapped_35,ow_ice_northwest,[flippers],lift2,pearl,mirror",
+            "ow_swapped_35,ow_ice_northeast,[flippers],lift2,pearl,mirror",
+            "ow_swapped_35,ow_ice_southwest,[flippers],lift2,pearl,mirror",
+            "ow_swapped_35,ow_ice_southeast,[flippers],lift2,pearl,mirror",
+            "ow_swapped_35,ow_ice_water,lift2,pearl,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_northeast,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_water,mirror",
+            "ow_swapped_35,ow_hylia_upgrade,mirror"
+        ]
+    },
+    {
+        "name": "OW Ice Lake Water",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_water",
+            "ow_swapped_75,@Lake Dark World",
+            "ow_swapped_35,@Lake Light World",
+
+            "ow_ice_northwest,pearl,[flippers]",
+            "ow_ice_northeast,pearl,[flippers]",
+            "ow_ice_southwest,pearl,[flippers]",
+            "ow_ice_southeast,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_northwest,[flippers]",
+            "ow_swapped_35,ow_ice_northeast,[flippers]",
+            "ow_swapped_35,ow_ice_southwest,[flippers]",
+            "ow_swapped_35,ow_ice_southeast,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_palace,[flippers]",
+            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_northeast,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_water,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_upgrade,mirror,[flippers]"
+        ]
+    },
+    {
+        "name": "OW Shopping Mall",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_shopping_mall",
+            "ow_swapped_77,@Southeast Dark World",
+            "ow_swapped_37,@Southeast Light World",
+            "ow_swapped_6f,glitch_mode_owg,@East Dark World,pearl,boots",
+            "ow_swapped_6f,glitch_mode_major,@East Dark World",
+            "ow_swapped_2f,glitch_mode_owg,@East Light World,boots",
+            "ow_swapped_2f,glitch_mode_major,@East Light World",
+            "ow_swapped_37,ow_ice_cave,mirror",
+            "glitch_mode_major,@OW Palace of Darkness Nook"
+        ]
+    },
+    {
+        "name": "OW Swamp Nook",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_swamp_nook",
+            "ow_swapped_3a,ow_desert_pass,mirror",
+            "ow_swapped_3a,ow_desert_pass_ledge,mirror",
+            "ow_swapped_3a,ow_desert_pass_southeast,mirror"
+        ]
+    },
+    {
+        "name": "OW Swamp",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_swamp",
+            "ow_swapped_7b,@South Dark World",
+            "ow_swapped_3b,@South Light World",
+            "ow_swapped_3b,flute_shuffle_off,@Flute Access",
+            "ow_swapped_3b,ow_dam,mirror"
+        ]
+    },
+    {
+        "name": "OW Dark South Pass",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_dark_south_pass",
+            "ow_swapped_3c,ow_south_pass,mirror"
+        ]
+    },
+    {
+        "name": "OW Bomber Corner",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bomber_corner",
+            "ow_swapped_3f,flute_shuffle_off,@Flute Access",
+            "ow_swapped_7f,ow_bomber_corner_waterfall,pearl,flippers",
+            "ow_swapped_3f,ow_octoballoon,mirror",
+            "ow_swapped_3f,ow_octoballoon_waterfall,pearl,flippers,mirror",
+            "ow_swapped_3f,ow_bomber_corner_waterfall,flippers",
+            
+            "whirlpool_shuffle_off,ow_qirn_water",
+            "whirlpool_shuffle_off,ow_qirn_west,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_qirn_east,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_qirn_west,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_qirn_east,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_west,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_east,mirror,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_river_water,mirror,[flippers]"
+        ]
+    }
+]

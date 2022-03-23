@@ -6,14 +6,15 @@ end
 
 function SaveStorage:save()
     local saveData = {}
-    saveData["roomSlots"] = ROOMSLOTS
-    saveData["doorSlots"] = DOORSLOTS
+    saveData["roomSlots"] = INSTANCE.ROOMSLOTS
+    saveData["doorSlots"] = INSTANCE.DOORSLOTS
+    saveData["roomCursor"] = INSTANCE.ROOMCURSORPOSITION
     return saveData
 end
 
 function SaveStorage:load(data)
-    ROOMSLOTS = JObjectToLuaTable(data["roomSlots"])
-    DOORSLOTS = JObjectToLuaTable(data["doorSlots"])
-
-    updateDoorSlots(0, true)
+    INSTANCE.ROOMSLOTS = JObjectToLuaTable(data["roomSlots"])
+    INSTANCE.DOORSLOTS = JObjectToLuaTable(data["doorSlots"])
+    updateRoomSlots(0, true)
+    INSTANCE.ROOMCURSORPOSITION = data["roomCursor"]
 end

@@ -1,0 +1,122 @@
+[
+    // OW Flute Shuffle
+    {
+        "name": "Flute Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/modes/ow_flute.png",
+                "img_mods": "@disabled",
+                "codes": "flute_shuffle,flute_shuffle_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/ow_flute.png",
+                "img_mods": "",
+                "codes": "flute_shuffle,flute_shuffle_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // OW Whirlpool Shuffle
+    {
+        "name": "Whirlpool Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/modes/ow_whirlpool.png",
+                "img_mods": "@disabled",
+                "codes": "whirlpool_shuffle,whirlpool_shuffle_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/ow_whirlpool.png",
+                "img_mods": "",
+                "codes": "whirlpool_shuffle,whirlpool_shuffle_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Goal
+    {
+        "name": "Goal Setting",
+        "type": "progressive",
+        "allow_disabled": false,
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-NA.png",
+                "codes": "goal_setting,goal_ganon_unknown",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-7.png",
+                "codes": "goal_setting,goal_ganon_7",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-6.png",
+                "codes": "goal_setting,goal_ganon_6",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-5.png",
+                "codes": "goal_setting,goal_ganon_5",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-4.png",
+                "codes": "goal_setting,goal_ganon_4",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-3.png",
+                "codes": "goal_setting,goal_ganon_3",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-2.png",
+                "codes": "goal_setting,goal_ganon_2",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-1.png",
+                "codes": "goal_setting,goal_ganon_1",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/crystals-ganon.png",
+                "img_mods": "overlay|images/overlays/overlay-0.png",
+                "codes": "goal_setting,goal_ganon_0",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/goals/triforce.png",
+                "codes": "goal_setting,goal_triforce",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/goals/goal-alldungeons.png",
+                "codes": "goal_setting,goal_dungeons",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/goals/pedestal.png",
+                "codes": "goal_setting,goal_pedestal",
+                "inherit_codes": false
+            }
+        ]
+    }
+]

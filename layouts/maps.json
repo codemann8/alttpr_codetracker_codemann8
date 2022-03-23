@@ -1,12 +1,164 @@
 {
-    "map_grid": {
+    "dummymap": {
+        "type": "map",
+        "maps": [ "dummy" ]
+    },
+    "map": {
+        "type": "map",
+        "maps": [ "lightworld", "darkworld" ]
+    },
+    "broadcast_map": {
+        "type": "layout",
+        "key": "blank",
+        "margin": 0
+    },
+    "broadcast_bottom_map": {
+        "type": "layout",
+        "key": "blank",
+        "margin": 0
+    },
+    "broadcast_v_right_map": {
+        "type": "layout",
+        "key": "blank",
+        "margin": 0
+    },
+    "broadcast_v_map": {
+        "type": "layout",
+        "key": "blank",
+        "margin": 0
+    },
+    "map_item_lw_grid": {
         "type": "container",
-        "margin": "0,0,0,0",
-        "width": 175,
-        "height": 350,
-        "content": {
-            "type": "map",
-            "maps": [ "lightworld", "darkworld" ]
-        }
+        "content": [
+            {
+                "type": "itemgrid",
+                "item_size": 100,
+                "item_margin":"0,0",
+                "margin": 0,
+                "rows": [
+                    [ "",              "",              "ow_swapped_02", "",              "",              "",              "",              "ow_swapped_07" ],
+                    [ "",              "",              "ow_swapped_0a", "",              "",              "",              "",              "ow_swapped_0f" ],
+                    [ "ow_swapped_10", "ow_swapped_11", "ow_swapped_12", "ow_swapped_13", "ow_swapped_14", "ow_swapped_15", "ow_swapped_16", "ow_swapped_17" ],
+                    [ "",              "",              "ow_swapped_1a", "",              "",              "ow_swapped_1d", "",              ""              ],
+                    [ "",              "",              "ow_swapped_22", "",              "",              "ow_swapped_25", "",              ""              ],
+                    [ "ow_swapped_28", "ow_swapped_29", "ow_swapped_2a", "ow_swapped_2b", "ow_swapped_2c", "ow_swapped_2d", "ow_swapped_2e", "ow_swapped_2f" ],
+                    [ "",              "",              "ow_swapped_32", "ow_swapped_33", "ow_swapped_34", "",              "",              "ow_swapped_37" ],
+                    [ "",              "",              "ow_swapped_3a", "ow_swapped_3b", "ow_swapped_3c", "",              "",              "ow_swapped_3f" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 200,
+                "item_margin": "0,0,100,100",
+                "margin": "0,0,-50,-50",
+                "rows": [
+                    [ "ow_swapped_00", "ow_swapped_03", ""              ],
+                    [ "ow_swapped_18", "ow_swapped_1b", "ow_swapped_1e" ],
+                    [ "ow_swapped_30", "",              ""              ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 200,
+                "item_margin":"400,0,0,400",
+                "margin": "0,0,0,-200",
+                "rows": [
+                    [ "ow_swapped_05" ],
+                    [ "ow_swapped_35" ]
+                ]
+            }
+        ]
+    },
+    "map_item_dw_grid": {
+        "type": "container",
+        "content": [
+            {
+                "type": "itemgrid",
+                "item_size": 100,
+                "item_margin":"0,0",
+                "margin": 0,
+                "rows": [
+                    [ "",              "",              "ow_swapped_42", "",              "",              "",              "",              "ow_swapped_47" ],
+                    [ "",              "",              "ow_swapped_4a", "",              "",              "",              "",              "ow_swapped_4f" ],
+                    [ "ow_swapped_50", "ow_swapped_51", "ow_swapped_52", "ow_swapped_53", "ow_swapped_54", "ow_swapped_55", "ow_swapped_56", "ow_swapped_57" ],
+                    [ "",              "",              "ow_swapped_5a", "",              "",              "ow_swapped_5d", "",              ""              ],
+                    [ "",              "",              "ow_swapped_62", "",              "",              "ow_swapped_65", "",              ""              ],
+                    [ "ow_swapped_68", "ow_swapped_69", "ow_swapped_6a", "ow_swapped_6b", "ow_swapped_6c", "ow_swapped_6d", "ow_swapped_6e", "ow_swapped_6f" ],
+                    [ "",              "",              "ow_swapped_72", "ow_swapped_73", "ow_swapped_74", "",              "",              "ow_swapped_77" ],
+                    [ "",              "",              "ow_swapped_7a", "ow_swapped_7b", "ow_swapped_7c", "",              "",              "ow_swapped_7f" ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 200,
+                "item_margin": "0,0,100,100",
+                "margin": "0,0,-50,-50",
+                "rows": [
+                    [ "ow_swapped_40", "ow_swapped_43", ""              ],
+                    [ "ow_swapped_58", "ow_swapped_5b", "ow_swapped_5e" ],
+                    [ "ow_swapped_70", "",              ""              ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 200,
+                "item_margin":"400,0,0,400",
+                "margin": "0,0,0,-200",
+                "rows": [
+                    [ "ow_swapped_45" ],
+                    [ "ow_swapped_75" ]
+                ]
+            }
+        ]
+    },
+    "map_item_grid": {
+        "type": "viewbox",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "margin": 10,
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "map_item_lw_grid"
+                    },
+                    {
+                        "type": "itemgrid",
+                        "item_size": 0,
+                        "rows": [ [ "" ] ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "map_item_dw_grid"
+                    }
+                ]
+            }
+        ]
+    },
+    "map_item_v_grid": {
+        "type": "viewbox",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": 10,
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "map_item_lw_grid"
+                    },
+                    {
+                        "type": "itemgrid",
+                        "item_size": 0,
+                        "rows": [ [ "" ] ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "map_item_dw_grid"
+                    }
+                ]
+            }
+        ]
     }
 }

@@ -1,0 +1,639 @@
+{
+    "settings_default": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "left",
+                "margin": "0,0,0,2",
+                "text": "User Preferences:"
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_showlocations",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Show All Locations"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_allowclearing",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Always Allow Clearing Locations"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_autopincapture",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Auto Pin On Item Capture"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_autounpinclear",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Auto Un-pin On Location Clear"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_racemode",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Race Mode Default"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_base_debug",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable Debug Logging"
+                    }
+                ]
+            }
+        ]
+    },
+    "settings_layout": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "left",
+                "margin": "0,0,0,2",
+                "text": "Layout Options:"
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_layout_altdungeon",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Use Traditional Dungeon Layout"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_layout_thinhoriz",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Use Thin Horizontal Pane"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_layout_doorslot",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Door Slot Method"
+                    }
+                ]
+            }
+        ]
+    },
+    "settings_broadcast": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "left",
+                "margin": "0,0,0,2",
+                "text": "Broadcast Options:"
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_broadcast_mapdirection",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Map Direction"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_broadcast_altlayout",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Alternate Layout"
+                    }
+                ]
+            }
+        ]
+    },
+    "settings_autotracker": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "container",
+                "margin": "0,0,0,2",
+                "content": [
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "text": "Autotracker:"
+                    },
+                    {
+                        "type": "item",
+                        "item": "tracker_sync",
+                        "v_alignment": "center",
+                        "margin": "75,0,0,0",
+                        "height": 16
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_auto_pindungeon",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable Auto Pin Current Dungeon"
+                    }
+                ]
+            },
+            // {
+            //     "type": "array",
+            //     "orientation": "horizontal",
+            //     "v_alignment": "center",
+            //     "margin": "0,0,0,1",
+            //     "scale": 0.75,
+            //     "content": [
+            //         {
+            //             "type": "item",
+            //             "item": "settings_auto_item",
+            //             "width": 20
+            //         },
+            //         {
+            //             "type": "text",
+            //             "h_alignment": "left",
+            //             "v_alignment": "center",
+            //             "margin": "4,0,0,2",
+            //             "text": "Disable Auto Item Tracking"
+            //         }
+            //     ]
+            // },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_auto_location",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Disable Auto Location Tracking"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_auto_region",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Disable Auto Region Tracking"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_auto_owmixed",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Disable Auto OW Tile Swap Tracking"
+                    }
+                ]
+            }
+        ]
+    },
+    "settings_fileio": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "left",
+                "margin": "0,0,0,2",
+                "text": "File Output:"
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_fileio_item",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable External Item File"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_fileio_dungeon",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable External Dungeon File"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_fileio_health",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable External Health File"
+                    }
+                ]
+            }
+        ]
+    },
+    "settings_experimental": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "top",
+        "margin": "10,2,10,2",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "left",
+                "margin": "0,0,0,2",
+                "text": "Experimental:"
+            },
+            // {
+            //     "type": "array",
+            //     "orientation": "horizontal",
+            //     "v_alignment": "center",
+            //     "margin": "0,0,0,1",
+            //     "scale": 0.75,
+            //     "content": [
+            //         {
+            //             "type": "item",
+            //             "item": "settings_experimental_dynreq",
+            //             "width": 20
+            //         },
+            //         {
+            //             "type": "text",
+            //             "h_alignment": "left",
+            //             "v_alignment": "center",
+            //             "margin": "4,0,0,2",
+            //             "text": "Enable Dynamic Requirements Tracking"
+            //         }
+            //     ]
+            // },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_experimental_inverted",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable New Inverted Logic"
+                    }
+                ]
+            }
+        ]
+    },
+    "shared_settings": {
+        "type": "container",
+        "background": "#60303030",
+        "v_alignment": "top",
+        "h_alignment": "center",
+        "margin": 0,
+        "scale" : 1.75,
+        "content": [
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "margin": 10,
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "settings_default"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "settings_layout"
+                            },
+                            {
+                                "type": "layout",
+                                "key": "settings_broadcast"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "settings_autotracker"
+                            },
+                            {
+                                "type": "layout",
+                                "key": "settings_fileio"
+                            }//,
+                            // {
+                            //     "type": "layout",
+                            //     "key": "settings_experimental"
+                            // }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "shared_v_settings": {
+        "type": "container",
+        "background": "#60303030",
+        "v_alignment": "top",
+        "h_alignment": "center",
+        "margin": 0,
+        "scale" : 1.75,
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": "0,4",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "settings_default"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "settings_layout"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "settings_broadcast"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "settings_autotracker"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "settings_fileio"
+                    }//,
+                    // {
+                    //     "type": "layout",
+                    //     "key": "settings_experimental"
+                    // }
+                ]
+            }
+        ]
+    }
+}

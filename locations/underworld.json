@@ -7,9 +7,9 @@
             {
                 "name": "Stash",
                 "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl",
-                    "{world_state_inverted}"
+                    "ow_swapped_40",
+                    "pearl",
+                    "{ow_swapped_00}"
                 ],
                 "capture_item": true,
                 "item_count": 1
@@ -20,7 +20,13 @@
                 "map": "lightworld",
                 "x": 364,
                 "y": 280,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 364,
+                "y": 280,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_00" ]
             }
         ]
     },
@@ -31,9 +37,9 @@
             {
                 "name": "Cave",
                 "access_rules": [
-                    "world_state_open,aga,boots",
-                    "world_state_inverted,aga,pearl,boots",
-                    "world_state_inverted,aga,[pearl],boots,mirror",
+                    "ow_swapped_42,aga,boots",
+                    "ow_swapped_02,aga,pearl,boots",
+                    "ow_swapped_02,aga,[pearl],boots,mirror",
                     "{}"
                 ],
                 "capture_item": true,
@@ -45,134 +51,178 @@
                 "map": "lightworld",
                 "x": 600,
                 "y": 137,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_42" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 600,
+                "y": 137,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_02" ]
             }
         ]
     },
     {
-        "name": "Kakariko Well",
-        "parent": "OW Kakariko Village",
+        "name": "Old Man",
+        "parent": "OW Death Mountain West Bottom",
+        "sections": [
+            {
+                "name": "Bring Him Home",
+                "access_rules": [ "[lamp]" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 816,
+                "y": 378,
+                "restrict_visibility_rules": [ "ow_swapped_43,entrance_shuffle_minor" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 900,
+                "y": 440,
+                "restrict_visibility_rules": [ "ow_swapped_03,entrance_shuffle_minor" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 816,
+                "y": 378,
+                "restrict_visibility_rules": [ "ow_swapped_03,inverted_orig,entrance_shuffle_minor" ]
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave",
+        "parent": "OW Death Mountain East Top",
+        "access_rules": [
+            "ow_swapped_45",
+            "[pearl]",
+            "glitch_mode_owg"
+        ],
         "sections": [
             {
                 "name": "Cave",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,[pearl]",
-                    "world_state_inverted,glitch_mode_ow"
-                ],
-                "item_count": 4
-            },
-            {
-                "name": "Bombable Wall",
-                "short_name": "Bomb",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl"
-                ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 47,
-                "y": 845,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Blind's House",
-        "parent": "OW Kakariko Village",
-        "sections": [
-            {
-                "name": "Basement",
-                "short_name": "Main",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl",
-                    "world_state_inverted,[pearl],mirror",
-                    "world_state_inverted,glitch_mode_ow,mirror"
-                ],
-                "item_count": 4
+                "x": 1598,
+                "y": 190,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
             },
             {
-                "name": "Bombable Wall",
-                "short_name": "Bomb",
-                "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl"
-                ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 260,
-                "y": 830,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "map": "darkworld",
+                "x": 1598,
+                "y": 190,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
             }
         ]
     },
     {
-        "name": "Chicken House",
-        "parent": "OW Kakariko Village",
+        "name": "Mimic Cave",
+        "parent": "OW Death Mountain East Top",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
+            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_keydrop_off,tr_smallkey:2,mirror",
+            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_keydrop_on,tr_smallkey:3,mirror",
+            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,[firerod],keysanity_smallkey_off,mirror",
+            "ow_swapped_45,entrance_shuffle_minor,@OW TR Bridge,mirror",
+            "ow_swapped_45,glitch_mode_owg,mirror",
+            "ow_swapped_05,pearl"
         ],
         "sections": [
             {
-                "name": "Bombable Wall",
+                "name": "Cave",
+                "access_rules": [ "hammer" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 200,
-                "y": 1066,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "x": 1694,
+                "y": 190,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 190,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 194,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_swapped_45,ow_layout_off,entrance_shuffle_off,glitch_mode_none" ]
             }
         ]
     },
     {
-        "name": "Sick Kid",
-        "parent": "OW Kakariko Village",
+        "name": "Paradox Cave",
+        "parent": "OW Death Mountain East Bottom",
+        "access_rules": [
+            "ow_swapped_45",
+            "pearl"
+        ],
         "sections": [
             {
-                "name": "By The Bed",
-                "access_rules": [ "bottle" ],
-                "item_count": 1
+                "name": "Bottom",
+                "item_count": 2
+            },
+            {
+                "name": "Top",
+                "item_count": 5
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 314,
-                "y": 1060,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "x": 1731,
+                "y": 434,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 108,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 434,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 108,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
             }
         ]
     },
     {
-        "name": "Kakariko Shop",
-        "parent": "OW Kakariko Village",
+        "name": "Paradox Cave Shop",
+        "short_name": "Paradox Shop",
+        "parent": "OW Death Mountain East Bottom",
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
                 "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
                 ],
                 "item_count": 1
             },
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "pool_shopsanity_on" ],
                 "capture_item": true,
                 "item_count": 3
             }
@@ -180,73 +230,65 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 218,
-                "y": 1185,
+                "x": 1737,
+                "y": 291,
                 "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_45" ]
             },
             {
                 "map": "lightworld",
-                "x": 218,
-                "y": 1161,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
+                "x": 1737,
+                "y": 291,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1737,
+                "y": 291,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1737,
+                "y": 291,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_05" ]
             }
         ]
     },
     {
-        "name": "Magic Bat",
-        "parent": "OW Blacksmith",
+        "name": "Waterfall Fairy",
+        "parent": "OW Zora Waterfall",
         "access_rules": [
-            "world_state_open,hammer",
-            "world_state_open,lift2,pearl,mirror",
-            "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl,hammer",
-            "glitch_mode_major"
+            "ow_swapped_4f",
+            "pearl"
         ],
         "sections": [
             {
-                "name": "Magic Bowl",
+                "name": "Cave",
                 "access_rules": [
-                    "powder",
-                    "somaria,mushroom,[powder]"
+                    "flippers",
+                    "pearl,[flippers]",
+                    "boots,[flippers]",
+                    "glitch_mode_owg,boots",
+                    "glitch_mode_owg,pearl",
+                    "glitch_mode_major"
                 ],
-                "item_count": 1
+                "item_count": 2
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 650,
-                "y": 1135,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Library",
-        "parent": "OW Kakariko Suburb",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl",
-            "{}"
-        ],
-        "sections": [
+                "x": 1816,
+                "y": 286,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4f" ]
+            },
             {
-                "name": "On The Shelf",
-                "access_rules": [
-                    "boots",
-                    "{}"
-                ],
-                "capture_item": true,
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 313,
-                "y": 1310,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "map": "darkworld",
+                "x": 1816,
+                "y": 286,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_0f" ]
             }
         ]
     },
@@ -254,8 +296,8 @@
         "name": "Bonk Rocks",
         "parent": "OW Bonk Rocks",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
+            "ow_swapped_53",
+            "pearl"
         ],
         "sections": [
             {
@@ -269,13 +311,25 @@
                 "map": "lightworld",
                 "x": 777,
                 "y": 600,
-                "restrict_visibility_rules": [ "ow_shuffle_off,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_53" ]
             },
             {
                 "map": "lightworld",
                 "x": 789,
                 "y": 540,
-                "restrict_visibility_rules": [ "ow_shuffle_on,entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_swapped_53" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 777,
+                "y": 600,
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_13" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 789,
+                "y": 540,
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_swapped_13" ]
             }
         ]
     },
@@ -283,12 +337,12 @@
         "name": "Graveyard Ledge",
         "parent": "OW Graveyard",
         "access_rules": [
-            "world_state_open,@OW Dark Graveyard,pearl,mirror",
-            "world_state_open,@Northwest Dark World,pearl,mirror",
-            "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl",
-            "glitch_mode_ow,@OW Death Mountain West Bottom,mirror",
-            "glitch_mode_major"
+            "ow_swapped_54,@OW Dark Graveyard,pearl,mirror",
+            "ow_swapped_14,pearl",
+            "ow_swapped_54,glitch_mode_owg,@OW Death Mountain West Bottom,boots",
+            "glitch_mode_owg,@OW Death Mountain West Bottom,pearl,boots",
+            "glitch_mode_owg,@OW Death Mountain West Bottom,mirror",
+            "glitch_mode_major,@OW Death Mountain West Bottom"
         ],
         "sections": [
             {
@@ -301,14 +355,20 @@
                 "map": "lightworld",
                 "x": 1137,
                 "y": 530,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_54" ]
             },
             {
                 "map": "darkworld",
                 "x": 1132,
                 "y": 549,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_54,glitch_mode_none" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1137,
+                "y": 530,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_14" ]
             }
         ]
     },
@@ -316,16 +376,19 @@
         "name": "King's Tomb",
         "parent": "OW Graveyard",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
+            "ow_swapped_54",
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
                 "name": "The Crypt",
                 "access_rules": [
                     "lift2,boots",
-                    "glitch_mode_ow,boots",
-                    "world_state_open,@OW Dark Graveyard,pearl,mirror,boots"
+                    "ow_swapped_54,@OW Dark Graveyard,pearl,mirror,boots",
+                    "ow_swapped_54,glitch_mode_owg,@OW Death Mountain West Bottom,boots",
+                    "glitch_mode_owg,@OW Death Mountain West Bottom,pearl,boots",
+                    "glitch_mode_major,@OW Death Mountain West Bottom"
                 ],
                 "item_count": 1
             }
@@ -335,298 +398,19 @@
                 "map": "lightworld",
                 "x": 1215,
                 "y": 598,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Secret Passage",
-        "short_name": "Uncle",
-        "parent": "OW Castle Perimeter",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Uncle",
-                "item_count": 1
-            },
-            {
-                "name": "Hallway",
-                "item_count": 1
-            }									
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1186,
-                "y": 834,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Link's House",
-        "parent": "Light World Color",
-        "access_rules": [
-            "world_state_open,@OW Links House",
-            "world_state_inverted,inverted_orig,@OW Bomb Shop",
-            "world_state_inverted,inverted_new,@OW Links House,pearl",
-            "world_state_inverted,inverted_new,@OW Links House,[pearl],mirror"
-        ],
-        "sections": [
-            {
-                "name": "By The Door",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1097,
-                "y": 1366,
-                "restrict_visibility_rules": [
-                    "world_state_open,entrance_shuffle_singleentryvanilla",
-                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla"
-                ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_54" ]
             },
             {
                 "map": "darkworld",
-                "x": 1097,
-                "y": 1366,
-                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Lake Shop",
-        "parent": "OW Lake Hylia Northwest",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 3
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1460,
-                "y": 1540,
-                "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
-            },
-            {
-                "map": "lightworld",
-                "x": 1460,
-                "y": 1540,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Checkerboard Cave",
-        "short_name": "Checkerboard",
-        "parent": "OW Desert",
-        "access_rules": [
-            "world_state_open,@OW Mire,mirror",
-            "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl",
-            "glitch_mode_major"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "access_rules": [ "lift1" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 354,
-                "y": 1560,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 354,
-                "y": 1560,
-                "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
-            }
-        ]
-    },
-    {
-        "name": "Aginah's Cave",
-        "parent": "OW Desert",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 400,
-                "y": 1655,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Cave 45",
-        "parent": "OW Cave 45",
-        "access_rules": [
-            "world_state_open,@OW Bush Circle,mirror",
-            "world_state_open,@South Dark World,mirror",
-            "world_state_open,glitch_mode_ow,boots",
-            "world_state_inverted,pearl",
-            "world_state_inverted,[pearl],mirror",
-            "world_state_inverted,glitch_mode_ow,mirror",
-            "glitch_mode_major",
-            "{world_state_inverted}"
-        ],
-        "sections": [
-            {
-                "name": "Circle of Bushes",
-                "capture_item": true,
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 552,
-                "y": 1693,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 552,
-                "y": 1693,
-                "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_singleentryvanilla,glitch_mode_none" ]
-            }
-        ]
-    },
-    {
-        "name": "Dam",
-        "parent": "OW Dam",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl",
-            "world_state_inverted,[pearl],mirror",
-            "world_state_inverted,glitch_mode_ow,mirror"
-        ],
-        "sections": [
-            {
-                "name": "Inside",
-                "item_count": 1
-            },
-            {
-                "name": "Outside",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 942,
-                "y": 1880,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Mini Moldorm Cave",
-        "short_name": "Mini-Moldorm",
-        "parent": "OW Lake Hylia South Shore",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "item_count": 5
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1309,
-                "y": 1887,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Ice Rod Cave",
-        "parent": "OW Ice Cave",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1785,
-                "y": 1537,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Pond of Happiness",
-        "parent": "OW Lake Hylia Central Island",
-        "sections": [
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 2
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1596,
-                "y": 1712
+                "x": 1215,
+                "y": 598,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_14" ]
             }
         ]
     },
     {
         "name": "Potion Shop",
         "parent": "OW Potion Shop",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl",
-            "glitch_mode_major,bottle"
-        ],
         "sections": [
             {
                 "name": "Assistant",
@@ -648,29 +432,295 @@
                 "map": "lightworld",
                 "x": 1607,
                 "y": 670,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_56" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1607,
+                "y": 670,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_16" ]
             }
         ]
     },
     {
-        "name": "Sahasrala's Hut",
+        "name": "Kakariko Well",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Cave",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "[pearl]",
+                    "ow_swapped_18,glitch_mode_owg"
+                ],
+                "item_count": 4
+            },
+            {
+                "name": "Bombable Wall",
+                "short_name": "Bomb",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "glitch_mode_major,bottle"
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 47,
+                "y": 845,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 47,
+                "y": 845,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Blind's House",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Basement",
+                "short_name": "Main",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "[pearl],mirror",
+                    "ow_swapped_18,glitch_mode_owg,mirror"
+                ],
+                "item_count": 4
+            },
+            {
+                "name": "Bombable Wall",
+                "short_name": "Bomb",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "glitch_mode_major,bottle"
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 260,
+                "y": 830,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 260,
+                "y": 830,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Chicken House",
+        "parent": "OW Kakariko Village",
+        "access_rules": [
+            "ow_swapped_58",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Bombable Wall",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 200,
+                "y": 1066,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 200,
+                "y": 1066,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Sick Kid",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "By The Bed",
+                "access_rules": [ "bottle" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 314,
+                "y": 1060,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 314,
+                "y": 1060,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Shop",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "visibility_rules": [
+                    "entrance_shuffle_minor,pool_shopsanity_off,retro_mode_on",
+                    "entrance_shuffle_minor,pool_shopsanity_off,keysanity_smallkey_universal"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 218,
+                "y": 1185,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 218,
+                "y": 1161,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 218,
+                "y": 1185,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,ow_swapped_18" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 218,
+                "y": 1161,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Tavern",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Back Room",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "[pearl],mirror"
+                ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 322,
+                "y": 1145,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 322,
+                "y": 1142,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 322,
+                "y": 1145,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 322,
+                "y": 1142,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage",
+        "short_name": "Uncle",
+        "parent": "OW Castle Perimeter",
+        "access_rules": [
+            "ow_swapped_5b",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Uncle",
+                "item_count": 1
+            },
+            {
+                "name": "Hallway",
+                "item_count": 1
+            }									
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1186,
+                "y": 834,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1186,
+                "y": 834,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Sahasrahla's Hut",
         "short_name": "Sah's Hut",
         "parent": "OW Eastern Palace",
         "sections": [
             {
                 "name": "Closet",
                 "access_rules": [
-                    "world_state_open",
-                    "world_state_inverted,pearl"
+                    "ow_swapped_5e",
+                    "pearl"
                 ],
                 "short_name": "Back",
                 "item_count": 3
             },
             {
-                "name": "Sahasrala",
+                "name": "Sahasrahla",
                 "short_name": "Sah",
                 "access_rules": [
                     "greenpendant",
+                    "pendant:3",
                     "prize:10"
                 ],
                 "item_count": 1
@@ -681,154 +731,255 @@
                 "map": "lightworld",
                 "x": 1625,
                 "y": 885,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1625,
+                "y": 885,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1e" ]
             }
         ]
     },
     {
-        "name": "Old Man",
-        "parent": "OW Death Mountain West Bottom",
+        "name": "Magic Bat",
+        "parent": "OW Blacksmith",
+        "access_rules": [
+            "ow_swapped_62,hammer",
+            "ow_swapped_62,@OW Hammer Pegs,mirror",
+            "pearl,hammer",
+            "ow_swapped_62,glitch_mode_owg,boots",
+            "glitch_mode_owg,pearl,boots",
+            "glitch_mode_major"
+        ],
         "sections": [
             {
-                "name": "Bring Him Home",
-                "access_rules": [ "[lamp]" ],
+                "name": "Magic Bowl",
+                "access_rules": [
+                    "powder",
+                    "somaria,mushroom,[powder]"
+                ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 816,
-                "y": 378,
-                "restrict_visibility_rules": [
-                    "world_state_open,entrance_shuffle_singleentryvanilla",
-                    "world_state_inverted,inverted_new,entrance_shuffle_singleentryvanilla"
+                "x": 650,
+                "y": 1135,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_62" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 650,
+                "y": 1135,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_22" ]
+            }
+        ]
+    },
+    {
+        "name": "Library",
+        "parent": "OW Kakariko Suburb",
+        "access_rules": [
+            "ow_swapped_69",
+            "pearl",
+            "{}"
+        ],
+        "sections": [
+            {
+                "name": "On The Shelf",
+                "access_rules": [
+                    "boots",
+                    "{}"
                 ],
-                "force_invisibility_rules": [
-                    "world_state_inverted,inverted_orig"
+                "capture_item": true,
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 313,
+                "y": 1310,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_69" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 313,
+                "y": 1310,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_29" ]
+            }
+        ]
+    },
+    {
+        "name": "Link's House",
+        "parent": "Light World Color",
+        "access_rules": [
+            "ow_swapped_6c,@OW Links House",
+            "ow_swapped_2c,inverted_orig,@OW Bomb Shop",
+            "ow_swapped_2c,inverted_new,@OW Links House,pearl",
+            "ow_swapped_2c,inverted_new,@OW Links House,[pearl],mirror"
+        ],
+        "sections": [
+            {
+                "name": "By The Door",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1097,
+                "y": 1366,
+                "restrict_visibility_rules": [
+                    "ow_swapped_6c,entrance_shuffle_minor",
+                    "ow_swapped_2c,inverted_orig,entrance_shuffle_minor"
                 ]
             },
             {
                 "map": "darkworld",
-                "x": 816,
-                "y": 378,
-                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "lightworld",
-                "x": 900,
-                "y": 440,
-                "restrict_visibility_rules": [ "world_state_inverted,inverted_orig,entrance_shuffle_singleentryvanilla" ]
+                "x": 1097,
+                "y": 1366,
+                "restrict_visibility_rules": [ "ow_swapped_2c,inverted_new,entrance_shuffle_minor" ]
             }
         ]
     },
     {
-        "name": "Paradox Cave",
-        "parent": "OW Death Mountain East Bottom",
+        "name": "Checkerboard Cave",
+        "short_name": "Checkerboard",
+        "parent": "OW Desert",
         "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Bottom",
-                "item_count": 2
-            },
-            {
-                "name": "Top",
-                "item_count": 5
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1731,
-                "y": 434,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            },
-            {
-                "map": "lightworld",
-                "x": 1731,
-                "y": 108,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Spiral Cave",
-        "parent": "OW Death Mountain East Top",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,[pearl]",
-            "glitch_mode_ow"
+            "ow_swapped_70,@OW Mire,mirror",
+            "ow_swapped_70,glitch_mode_owg,boots",
+            "ow_swapped_30,glitch_mode_none,pearl",
+            "ow_swapped_30,inverted_orig,glitch_mode_owg,pearl",
+            "ow_swapped_30,inverted_new,glitch_mode_owg,pearl,boots",
+            "ow_swapped_70,glitch_mode_major",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
                 "name": "Cave",
+                "access_rules": [ "lift1" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1598,
-                "y": 190,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Mimic Cave",
-        "parent": "OW Death Mountain East Top",
-        "access_rules": [
-            "door_shuffle_off,world_state_open,@TR Main Entrance,somaria,pool_keydrop_off,tr_smallkey:2,mirror",
-            "door_shuffle_off,world_state_open,@TR Main Entrance,somaria,pool_keydrop_on,tr_smallkey:3,mirror",
-            "door_shuffle_off,world_state_open,@TR Main Entrance,somaria,[firerod],keysanity_smallkey_off,mirror",
-            "world_state_open,entrance_shuffle_singleentryvanilla,@TR Bridge Entrances OW,mirror",
-            "world_state_open,glitch_mode_ow,mirror",
-            "world_state_inverted,@Death Mountain East Top,pearl"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "access_rules": [ "hammer" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1694,
-                "y": 190,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "x": 354,
+                "y": 1560,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_70" ]
             },
             {
                 "map": "darkworld",
-                "x": 1694,
-                "y": 194,
+                "x": 354,
+                "y": 1560,
                 "size": 48,
-                "restrict_visibility_rules": [ "world_state_open,ow_shuffle_off,entrance_shuffle_off,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_70,glitch_mode_none" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 354,
+                "y": 1560,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_30" ]
             }
         ]
     },
     {
-        "name": "Paradox Cave Shop",
-        "short_name": "Paradox Shop",
-        "parent": "OW Death Mountain East Bottom",
+        "name": "Aginah's Cave",
+        "parent": "OW Desert",
+        "access_rules": [
+            "ow_swapped_70",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1655,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1655,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_30" ]
+            }
+        ]
+    },
+    {
+        "name": "Cave 45",
+        "parent": "OW Cave 45",
+        "access_rules": [
+            "ow_swapped_72",
+            "pearl",
+            "[pearl],mirror",
+            "glitch_mode_owg,mirror",
+            "glitch_mode_major,bottle",
+            "{ow_swapped_32}"
+        ],
+        "sections": [
+            {
+                "name": "Circle of Bushes",
+                "access_rules": [
+                    "ow_swapped_72,@OW Bush Circle,mirror",
+                    "ow_swapped_72,glitch_mode_owg,boots",
+                    "ow_swapped_32,inverted_orig",
+                    "ow_swapped_32,inverted_new,glitch_mode_none",
+                    "ow_swapped_32,inverted_new,glitch_mode_owg,pearl,boots",
+                    "glitch_mode_major",
+                    "{ow_swapped_32}"
+                ],
+                "capture_item": true,
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 552,
+                "y": 1693,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_72" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 552,
+                "y": 1693,
+                "size": 48,
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_72,glitch_mode_none" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 552,
+                "y": 1693,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_32" ]
+            }
+        ]
+    },
+    {
+        "name": "Lake Shop",
+        "parent": "OW Lake Hylia Northwest",
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
                 "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
+                    "entrance_shuffle_minor,pool_shopsanity_off,retro_mode_on",
+                    "entrance_shuffle_minor,pool_shopsanity_off,keysanity_smallkey_universal"
                 ],
                 "item_count": 1
             },
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "capture_item": true,
                 "item_count": 3
             }
@@ -836,46 +987,146 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1737,
-                "y": 291,
+                "x": 1460,
+                "y": 1540,
                 "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_off,ow_swapped_75" ]
             },
             {
                 "map": "lightworld",
-                "x": 1737,
-                "y": 291,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
+                "x": 1460,
+                "y": 1540,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1460,
+                "y": 1540,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,ow_swapped_35" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1460,
+                "y": 1540,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,ow_swapped_35" ]
             }
         ]
     },
     {
-        "name": "Waterfall Fairy",
-        "parent": "OW Zora Approach",
-        "access_rules": [
-            "world_state_open",
-            "world_state_inverted,pearl"
-        ],
+        "name": "Pond of Happiness",
+        "parent": "OW Lake Hylia Central Island",
         "sections": [
             {
-                "name": "Cave",
-                "access_rules": [
-                    "flippers",
-                    "pearl,[flippers]",
-                    "boots,[flippers]",
-                    "glitch_mode_ow,boots",
-                    "glitch_mode_ow,pearl",
-                    "glitch_mode_major"
-                ],
+                "name": "Items",
+                "capture_item": true,
                 "item_count": 2
             }
         ],
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1816,
-                "y": 286,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "x": 1596,
+                "y": 1712,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1596,
+                "y": 1712,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_35" ]
+            }
+        ]
+    },
+    {
+        "name": "Mini Moldorm Cave",
+        "short_name": "Mini-Moldorm",
+        "parent": "OW Lake Hylia South Shore",
+        "access_rules": [
+            "ow_swapped_75",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 5
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1309,
+                "y": 1887,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1309,
+                "y": 1887,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_35" ]
+            }
+        ]
+    },
+    {
+        "name": "Ice Rod Cave",
+        "parent": "OW Ice Cave",
+        "access_rules": [
+            "ow_swapped_77",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1785,
+                "y": 1537,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_77" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1785,
+                "y": 1537,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_37" ]
+            }
+        ]
+    },
+    {
+        "name": "Dam",
+        "parent": "OW Dam",
+        "access_rules": [
+            "ow_swapped_7b",
+            "pearl",
+            "[pearl],mirror",
+            "glitch_mode_owg,mirror",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Inside",
+                "item_count": 1
+            },
+            {
+                "name": "Outside",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 942,
+                "y": 1880,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_7b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 942,
+                "y": 1880,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_3b" ]
             }
         ]
     },
@@ -887,17 +1138,17 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
                 "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
                 ],
                 "item_count": 1
             },
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "pool_shopsanity_on" ],
                 "capture_item": true,
                 "item_count": 3
             }
@@ -908,373 +1159,26 @@
                 "x": 675,
                 "y": 115,
                 "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_off,ow_swapped_42" ]
             },
             {
                 "map": "darkworld",
                 "x": 675,
                 "y": 115,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Shield Shop",
-        "parent": "OW Shield Shop",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
-                ],
-                "item_count": 1
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on,ow_swapped_42" ]
             },
             {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 3
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 665,
-                "y": 912,
+                "map": "lightworld",
+                "x": 675,
+                "y": 115,
                 "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_off,ow_swapped_02" ]
             },
             {
-                "map": "darkworld",
-                "x": 665,
-                "y": 912,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Chest Game",
-        "parent": "OW Village of Outcasts",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,mirror",
-            "world_state_inverted",
-            "glitch_mode_major,bottle"
-        ],
-        "sections": [
-            {
-                "name": "Prize",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 100,
-                "y": 936,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "C-Shaped House",
-        "parent": "OW Village of Outcasts",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,mirror",
-            "world_state_inverted",
-            "glitch_mode_major,bottle"
-        ],
-        "sections": [
-            {
-                "name": "House",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 969,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Village of Outcasts Shop",
-        "short_name": "VoO Shop",
-        "parent": "OW Village of Outcasts",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_open,[pearl],boots,bottle",
-            "world_state_open,[pearl],boots,mirror",
-            "world_state_inverted"
-        ],
-        "sections": [
-            {
-                "name": "Shop",
-                "access_rules": [
-                    "hammer",
-                    "world_state_inverted,@OW Kakariko Village,pearl,mirror",
-                    "world_state_inverted,grass_house,mirror"
-                ],
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Items",
-                "access_rules": [
-                    "hammer",
-                    "world_state_inverted,@OW Kakariko Village,pearl,mirror",
-                    "world_state_inverted,grass_house,mirror"
-                ],
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 3
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 1069,
-                "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 1069,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Brewery",
-        "parent": "OW Village of Outcasts",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted",
-            "glitch_mode_major,bottle"
-        ],
-        "sections": [
-            {
-                "name": "Downstairs",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 219,
-                "y": 1171,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Hammer Pegs",
-        "parent": "OW Hammer Pegs",
-        "access_rules": [
-            "world_state_open,pearl,lift2",
-            "world_state_open,glitch_mode_ow,@OW Broken Bridge West,pearl,boots",
-            "world_state_open,glitch_mode_ow,@OW Hammer Bridge Top,pearl,boots",
-            "world_state_open,glitch_mode_ow,@OW Bomb Shop,pearl,boots",
-            "world_state_inverted,lift2",
-            "world_state_inverted,@OW Blacksmith,mirror",
-            "world_state_inverted,glitch_mode_ow,@OW Broken Bridge West,boots",
-            "world_state_inverted,glitch_mode_ow,@OW Hammer Bridge Top,boots",
-            "world_state_inverted,glitch_mode_ow,@OW Bomb Shop,boots",
-            "glitch_mode_major,bottle"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "access_rules": [ "hammer" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 636,
-                "y": 1214,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Mire Shed",
-        "parent": "OW Mire",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_open,[pearl],mirror",
-            "world_state_open,glitch_mode_ow,mirror",
-            "world_state_inverted"
-        ],
-        "sections": [
-            {
-                "name": "Shed",
-                "item_count": 2
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 77,
-                "y": 1600,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Witch's Hut",
-        "parent": "OW Dark Witch",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 3
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1616,
-                "y": 668,
-                "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 1616,
-                "y": 668,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Pyramid Fairy",
-        "parent": "OW Pyramid",
-        "access_rules": [
-            "ow_shuffle_on",
-            "entrance_shuffle_all",
-            "aga,mirror",
-            "world_state_open,hammer",
-            "world_state_open,glitch_mode_ow,boots,mirror",
-            "world_state_open,glitch_mode_major,mirror",
-            "world_state_inverted,mirror"
-        ],
-        "sections": [
-            {
-                "name": "Get Big Bomb",
-                "access_rules": [
-                    "entrance_shuffle_all",
-                    "world_state_open,@OW Bomb Shop",
-                    "world_state_inverted,@OW Links House"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
-                "name": "Big Bomb Spot",
-                "access_rules": [
-                    "@Pyramid Fairy/Get Big Bomb,crystal56:2",
-                    "@Pyramid Fairy/Get Big Bomb,crystal:7",
-                    "@Pyramid Fairy/Get Big Bomb,prize:10",
-                    "world_state_open,glitch_mode_ow,boots,mirror",
-                    "world_state_open,glitch_mode_major,mirror"
-                ],
-                "item_count": 2
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 940,
-                "y": 976,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Lake Shop",
-        "parent": "OW Ice Lake Northwest",
-        "sections": [
-            {
-                "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
-                "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
-                ],
-                "item_count": 1
-            },
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "capture_item": true,
-                "item_count": 3
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1302,
-                "y": 1615,
-                "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
-            },
-            {
-                "map": "darkworld",
-                "x": 1302,
-                "y": 1615,
-                "restrict_visibility_rules": [ "pool_shopsanity_on" ]
-            }
-        ]
-    },
-    {
-        "name": "Hype Cave",
-        "parent": "OW Hype",
-        "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted",
-            "glitch_mode_major,bottle"
-        ],
-        "sections": [
-            {
-                "name": "Cave",
-                "item_count": 5
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1200,
-                "y": 1560,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "map": "lightworld",
+                "x": 675,
+                "y": 115,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on,ow_swapped_02" ]
             }
         ]
     },
@@ -1282,9 +1186,9 @@
         "name": "Spike Cave",
         "parent": "OW Dark Death Mountain West Bottom",
         "access_rules": [
-            "world_state_open,pearl",
-            "world_state_inverted",
-            "glitch_mode_major,bottle:1"
+            "pearl",
+            "ow_swapped_03",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1292,9 +1196,9 @@
                 "access_rules": [
                     "hammer,lift1,byrna",
                     "hammer,lift1,cape",
-                    "hammer,lift1,[byrna],bottle:1",
+                    "hammer,lift1,[byrna],bottle",
                     "hammer,lift1,[byrna],halfmagic",
-                    "hammer,lift1,[cape],bottle:1",
+                    "hammer,lift1,[cape],bottle",
                     "hammer,lift1,[cape],halfmagic"
                 ],
                 "item_count": 1
@@ -1305,18 +1209,24 @@
                 "map": "darkworld",
                 "x": 1151,
                 "y": 294,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_43" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1151,
+                "y": 294,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_03" ]
             }
         ]
     },
     {
         "name": "Hookshot Cave",
-        "parent": "OW Dark Death Mountain East Top",
+        "parent": "OW Dark Death Mountain East Bottom",
         "access_rules": [
-            "world_state_open,pearl,lift1",
-            "world_state_open,glitch_mode_ow,pearl,boots",
-            "world_state_inverted,lift1",
-            "world_state_inverted,glitch_mode_ow,boots",
+            "@OW Dark Death Mountain East Top,pearl,lift1",
+            "ow_swapped_05,@OW Dark Death Mountain East Top,lift1",
+            "glitch_mode_owg,pearl,boots",
+            "ow_swapped_05,glitch_mode_owg,boots",
             "glitch_mode_major,bottle"
         ],
         "sections": [
@@ -1343,7 +1253,13 @@
                 "map": "darkworld",
                 "x": 1660,
                 "y": 122,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1660,
+                "y": 122,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
             }
         ]
     },
@@ -1354,9 +1270,9 @@
             {
                 "name": "Cave",
                 "access_rules": [
-                    "world_state_open,[pearl]",
-                    "world_state_inverted",
-                    "glitch_mode_ow"
+                    "[pearl]",
+                    "ow_swapped_05",
+                    "glitch_mode_owg"
                 ],
                 "item_count": 2
             }
@@ -1366,19 +1282,37 @@
                 "map": "darkworld",
                 "x": 1740,
                 "y": 122,
-                "restrict_visibility_rules": [ "entrance_shuffle_singleentryvanilla" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
             },
             {
                 "map": "darkworld",
                 "x": 1668,
                 "y": 280,
-                "restrict_visibility_rules": [ "entrance_shuffle_off" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_45" ]
             },
             {
                 "map": "darkworld",
                 "x": 1668,
                 "y": 328,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1740,
+                "y": 122,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1668,
+                "y": 280,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_05" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1668,
+                "y": 328,
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_05" ]
             }
         ]
     },
@@ -1389,17 +1323,17 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/potionshop.png",
-                "chest_opened_img": "images/potionshop.png",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
                 "visibility_rules": [
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,retro_mode_on",
-                    "entrance_shuffle_singleentryvanilla,pool_shopsanity_off,keysanity_smallkey_universal"
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
                 ],
                 "item_count": 1
             },
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "pool_shopsanity_on" ],
                 "capture_item": true,
                 "item_count": 3
             }
@@ -1410,19 +1344,476 @@
                 "x": 1744,
                 "y": 296,
                 "size": 48,
-                "restrict_visibility_rules": [ "pool_shopsanity_off" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_45" ]
             },
             {
                 "map": "darkworld",
                 "x": 1745,
                 "y": 280,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,pool_shopsanity_on" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_off,ow_swapped_45" ]
             },
             {
                 "map": "darkworld",
                 "x": 1745,
                 "y": 328,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,pool_shopsanity_on" ]
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_dungeon,ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1744,
+                "y": 296,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1745,
+                "y": 280,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_off,ow_swapped_05" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1745,
+                "y": 328,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_dungeon,ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch's Hut",
+        "parent": "OW Dark Witch",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "visibility_rules": [
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Items",
+                "visibility_rules": [ "pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1616,
+                "y": 668,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_56" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1616,
+                "y": 668,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_56" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1616,
+                "y": 668,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_16" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1616,
+                "y": 668,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_16" ]
+            }
+        ]
+    },
+    {
+        "name": "Chest Game",
+        "parent": "OW Village of Outcasts",
+        "access_rules": [
+            "pearl",
+            "[pearl],mirror",
+            "glitch_mode_owg,mirror",
+            "ow_swapped_18",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Prize",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 100,
+                "y": 936,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 100,
+                "y": 936,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "C-Shaped House",
+        "parent": "OW Village of Outcasts",
+        "access_rules": [
+            "pearl",
+            "[pearl],mirror",
+            "glitch_mode_owg,mirror",
+            "ow_swapped_18",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "House",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 969,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 969,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts Shop",
+        "short_name": "VoO Shop",
+        "parent": "OW Village of Outcasts",
+        "access_rules": [
+            "ow_swapped_58,pearl",
+            "ow_swapped_58,[pearl],boots,bottle",
+            "ow_swapped_58,[pearl],boots,mirror",
+            "ow_swapped_18"
+        ],
+        "sections": [
+            {
+                "name": "Shop",
+                "access_rules": [
+                    "hammer",
+                    "ow_swapped_18,@OW Kakariko Village,pearl,mirror"
+                ],
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "visibility_rules": [
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Items",
+                "access_rules": [
+                    "hammer",
+                    "ow_swapped_18,@OW Kakariko Village,pearl,mirror"
+                ],
+                "visibility_rules": [ "pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1069,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1069,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 1069,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_18" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 1069,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Brewery",
+        "parent": "OW Village of Outcasts",
+        "access_rules": [
+            "pearl",
+            "ow_swapped_18",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Downstairs",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 219,
+                "y": 1171,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 219,
+                "y": 1171,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop",
+        "parent": "OW Shield Shop",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "visibility_rules": [
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Items",
+                "visibility_rules": [ "pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 912,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_off,ow_swapped_5a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 912,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on,ow_swapped_5a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 665,
+                "y": 912,
+                "size": 48,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_off,ow_swapped_1a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 665,
+                "y": 912,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on,ow_swapped_1a" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Fairy",
+        "parent": "OW Pyramid",
+        "sections": [
+            {
+                "name": "Get Big Bomb",
+                "access_rules": [
+                    "entrance_shuffle_all",
+                    "ow_swapped_5b,@OW Bomb Shop",
+                    "ow_swapped_1b,inverted_new,@OW Bomb Shop",
+                    "ow_swapped_1b,inverted_orig,@OW Links House"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Big Bomb Spot",
+                "access_rules": [
+                    "@Pyramid Fairy/Get Big Bomb,crystal56:2",
+                    "@Pyramid Fairy/Get Big Bomb,crystal:7",
+                    "@Pyramid Fairy/Get Big Bomb,prize:10",
+                    "ow_swapped_5b,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
+                    "ow_swapped_5b,@OW Death Mountain West Bottom,glitch_mode_major,mirror"
+                ],
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 940,
+                "y": 976,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 940,
+                "y": 976,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Pegs",
+        "parent": "OW Hammer Pegs",
+        "access_rules": [
+            "pearl",
+            "ow_swapped_22",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Cave",
+                "access_rules": [ "hammer" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 636,
+                "y": 1214,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_62" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1214,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_22" ]
+            }
+        ]
+    },
+    {
+        "name": "Mire Shed",
+        "parent": "OW Mire",
+        "access_rules": [
+            "ow_swapped_30",
+            "pearl",
+            "[pearl],mirror",
+            "glitch_mode_owg,mirror",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Shed",
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 77,
+                "y": 1600,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_70" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 77,
+                "y": 1600,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_30" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype Cave",
+        "parent": "OW Hype",
+        "access_rules": [
+            "pearl",
+            "ow_swapped_34",
+            "glitch_mode_major,bottle"
+        ],
+        "sections": [
+            {
+                "name": "Cave",
+                "item_count": 5
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1200,
+                "y": 1560,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_74" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1200,
+                "y": 1560,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_34" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Lake Shop",
+        "parent": "OW Ice Lake Northwest",
+        "sections": [
+            {
+                "name": "Shop",
+                "chest_unopened_img": "images/icons/pool/potionshop.png",
+                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "visibility_rules": [
+                    "pool_shopsanity_off,retro_mode_on",
+                    "pool_shopsanity_off,keysanity_smallkey_universal"
+                ],
+                "item_count": 1
+            },
+            {
+                "name": "Items",
+                "visibility_rules": [ "pool_shopsanity_on" ],
+                "capture_item": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1302,
+                "y": 1615,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1302,
+                "y": 1615,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_75" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1302,
+                "y": 1615,
+                "size": 48,
+                "restrict_visibility_rules": [ "pool_shopsanity_off,entrance_shuffle_minor,ow_swapped_35" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1302,
+                "y": 1615,
+                "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_minor,ow_swapped_35" ]
             }
         ]
     }

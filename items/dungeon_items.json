@@ -1,322 +1,568 @@
 [
-    // Eastern Palace
+    // Big Keys
     {
-        "name": "Eastern Palace",
-        "type": "progressive_toggle",
-        "capturable": false,
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayEP.png",
-                "codes": "ep,easternpalace,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayEP.png",
-                "codes": "ep,easternpalace,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayEP.png",
-                "codes": "ep,easternpalace,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayEP.png",
-                "codes": "ep,easternpalace,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Hyrule Castle Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "hc_bigkey"
     },
-    // Desert Palace
     {
-        "name": "Desert Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayDP.png",
-                "codes": "dp,desertpalace,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayDP.png",
-                "codes": "dp,desertpalace,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayDP.png",
-                "codes": "dp,desertpalace,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayDP.png",
-                "codes": "dp,desertpalace,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Eastern Palace Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "ep_bigkey"
     },
-    // Tower of Hera
     {
-        "name": "Tower of Hera",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayTOH.png",
-                "codes": "toh,towerofhera,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayTOH.png",
-                "codes": "toh,towerofhera,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayTOH.png",
-                "codes": "toh,towerofhera,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayTOH.png",
-                "codes": "toh,towerofhera,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Desert Palace Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "dp_bigkey"
     },
-    // Palace of Darkness
     {
-        "name": "Palace of Darkness",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayPOD.png",
-                "codes": "pod,palaceofdarkness,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayPOD.png",
-                "codes": "pod,palaceofdarkness,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayPOD.png",
-                "codes": "pod,palaceofdarkness,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayPOD.png",
-                "codes": "pod,palaceofdarkness,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Tower of Hera Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "toh_bigkey"
     },
-    // Swamp Palace
     {
-        "name": "Swamp Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlaySP.png",
-                "codes": "sp,swamppalace,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlaySP.png",
-                "codes": "sp,swamppalace,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlaySP.png",
-                "codes": "sp,swamppalace,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlaySP.png",
-                "codes": "sp,swamppalace,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Aganihm's Tower Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "at_bigkey"
     },
-    // Skull Woods
     {
-        "name": "Skull Woods",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlaySW.png",
-                "codes": "sw,skullwoods,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlaySW.png",
-                "codes": "sw,skullwoods,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlaySW.png",
-                "codes": "sw,skullwoods,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlaySW.png",
-                "codes": "sw,skullwoods,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Palace of Darkness Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "pod_bigkey"
     },
-    // Thieve's Town
     {
-        "name": "Thieves Town",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayTT.png",
-                "codes": "tt,thievestown,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayTT.png",
-                "codes": "tt,thievestown,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayTT.png",
-                "codes": "tt,thievestown,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayTT.png",
-                "codes": "tt,thievestown,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Swamp Palace Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "sp_bigkey"
     },
-    // Ice Palace
     {
-        "name": "Ice Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayIP.png",
-                "codes": "ip,icepalace,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayIP.png",
-                "codes": "ip,icepalace,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayIP.png",
-                "codes": "ip,icepalace,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayIP.png",
-                "codes": "ip,icepalace,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Skull Woods Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "sw_bigkey"
     },
-    // Misery Mire
     {
-        "name": "Misery Mire",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayMM.png",
-                "codes": "mm,miserymire,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayMM.png",
-                "codes": "mm,miserymire,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayMM.png",
-                "codes": "mm,miserymire,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayMM.png",
-                "codes": "mm,miserymire,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Thieves Town Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "tt_bigkey"
     },
-    // Turtle Rock
     {
-        "name": "Turtle Rock",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/prize-crystal.png",
-                "img_mods": "overlay|images/overlayTR.png",
-                "codes": "tr,turtlerock,crystal",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/prize-crystal56.png",
-                "img_mods": "overlay|images/overlayTR.png",
-                "codes": "tr,turtlerock,crystal,crystal56,redcrystal,red",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/prize-pendant.png",
-                "img_mods": "overlay|images/overlayTR.png",
-                "codes": "tr,turtlerock,pendant",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlayTR.png",
-                "codes": "tr,turtlerock,greenpendant,green",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Ice Palace Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "ip_bigkey"
+    },
+    {
+        "name": "Misery Mire Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "mm_bigkey"
+    },
+    {
+        "name": "Turtle Rock Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "tr_bigkey"
+    },
+    {
+        "name": "Ganon's Tower Big Key",
+        "type": "toggle",
+        "img": "images/items/bigkey.png",
+        "codes": "gt_bigkey"
+    },
+    
+    // Small Keys
+    {
+        "name": "Hyrule Castle Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "hc_smallkey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Eastern Palace Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ep_smallkey",
+        "max_quantity": 0
+    },
+    {
+        "name": "Desert Palace Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "dp_smallkey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Tower of Hera Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "toh_smallkey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Aganhim's Tower Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "at_smallkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Palace of Darkness Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "pod_smallkey",
+        "max_quantity": 6
+    },
+    {
+        "name": "Swamp Palace Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sp_smallkey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Skull Woods Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sw_smallkey",
+        "max_quantity": 3
+    },
+    {
+        "name": "Thieves Town Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tt_smallkey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Ice Palace Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ip_smallkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Misery Mire Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "mm_smallkey",
+        "max_quantity": 3
+    },
+    {
+        "name": "Turtle Rock Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tr_smallkey",
+        "max_quantity": 4
+    },
+    {
+        "name": "Ganon's Tower Small Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "gt_smallkey",
+        "max_quantity": 4
+    },
+    
+    // Doors
+    {
+        "name": "Hyrule Castle Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "hc_door",
+        "max_quantity": 4
+    },
+    {
+        "name": "Eastern Palace Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "ep_door",
+        "max_quantity": 2
+    },
+    {
+        "name": "Desert Palace Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "dp_door",
+        "max_quantity": 4
+    },
+    {
+        "name": "Tower of Hera Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "toh_door",
+        "max_quantity": 1
+    },
+    {
+        "name": "Aga Tower Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "at_door",
+        "max_quantity": 4
+    },
+    {
+        "name": "Palace of Darkness Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "pod_door",
+        "max_quantity": 6
+    },
+    {
+        "name": "Swamp Palace Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "sp_door",
+        "max_quantity": 6
+    },
+    {
+        "name": "Skull Woods Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "sw_door",
+        "max_quantity": 5
+    },
+    {
+        "name": "Thieves Town Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "tt_door",
+        "max_quantity": 3
+    },
+    {
+        "name": "Ice Palace Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "ip_door",
+        "max_quantity": 6
+    },
+    {
+        "name": "Misery Mire Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "mm_door",
+        "max_quantity": 6
+    },
+    {
+        "name": "Turtle Rock Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "tr_door",
+        "max_quantity": 6
+    },
+    {
+        "name": "Ganon's Tower Door",
+        "type": "consumable",
+        "img": "images/icons/entrances/door-closed.png",
+        "codes": "gt_door",
+        "max_quantity": 8
+    },
+
+    // Pot Keys
+    {
+        "name": "Hyrule Castle Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "hc_potkey",
+        "max_quantity": 4
+    },
+    {
+        "name": "Eastern Palace Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ep_potkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Desert Palace Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "dp_potkey",
+        "max_quantity": 3
+    },
+    {
+        "name": "Aga Tower Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "at_potkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Swamp Palace Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sp_potkey",
+        "max_quantity": 5
+    },
+    {
+        "name": "Skull Woods Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sw_potkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Thieves Town Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tt_potkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Ice Palace Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ip_potkey",
+        "max_quantity": 4
+    },
+    {
+        "name": "Misery Mire Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "mm_potkey",
+        "max_quantity": 3
+    },
+    {
+        "name": "Turtle Rock Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tr_potkey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Ganon's Tower Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "gt_potkey",
+        "max_quantity": 4
+    },
+    
+    // Compasses
+    {
+        "name": "Hyrule Castle Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "hc_compass"
+    },
+    {
+        "name": "Eastern Palace Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "ep_compass"
+    },
+    {
+        "name": "Desert Palace Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "dp_compass"
+    },
+    {
+        "name": "Tower of Hera Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "toh_compass"
+    },
+    {
+        "name": "Aganihm's Tower Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "at_compass"
+    },
+    {
+        "name": "Palace of Darkness Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "pod_compass"
+    },
+    {
+        "name": "Swamp Palace Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "sp_compass"
+    },
+    {
+        "name": "Skull Woods Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "sw_compass"
+    },
+    {
+        "name": "Thieves Town Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "tt_compass"
+    },
+    {
+        "name": "Ice Palace Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "ip_compass"
+    },
+    {
+        "name": "Misery Mire Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "mm_compass"
+    },
+    {
+        "name": "Turtle Rock Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "tr_compass"
+    },
+    {
+        "name": "Ganon's Tower Compass",
+        "type": "toggle",
+        "img": "images/items/compass.png",
+        "codes": "gt_compass"
+    },
+    
+    // Maps
+    {
+        "name": "Hyrule Castle Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "hc_map"
+    },
+    {
+        "name": "Eastern Palace Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "ep_map"
+    },
+    {
+        "name": "Desert Palace Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "dp_map"
+    },
+    {
+        "name": "Tower of Hera Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "toh_map"
+    },
+    {
+        "name": "Aganihm's Tower Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "at_map"
+    },
+    {
+        "name": "Palace of Darkness Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "pod_map"
+    },
+    {
+        "name": "Swamp Palace Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "sp_map"
+    },
+    {
+        "name": "Skull Woods Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "sw_map"
+    },
+    {
+        "name": "Thieves Town Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "tt_map"
+    },
+    {
+        "name": "Ice Palace Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "ip_map"
+    },
+    {
+        "name": "Misery Mire Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "mm_map"
+    },
+    {
+        "name": "Turtle Rock Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "tr_map"
+    },
+    {
+        "name": "Ganon's Tower Map",
+        "type": "toggle",
+        "img": "images/items/map.png",
+        "codes": "gt_map"
+    },
+
+    // Bosses
+    {
+        "name": "Armos",
+        "type": "toggle",
+        "img": "images/icons/bosses/armos.png",
+        "codes": "boss_armos"
+    },
+    {
+        "name": "Lanmolas",
+        "type": "toggle",
+        "img": "images/icons/bosses/lanmolas.png",
+        "codes": "boss_lanmolas"
+    },
+    {
+        "name": "Moldorm",
+        "type": "toggle",
+        "img": "images/icons/bosses/moldorm.png",
+        "codes": "boss_moldorm"
+    },
+    {
+        "name": "King Helmasaur",
+        "type": "toggle",
+        "img": "images/icons/bosses/helmasaur.png",
+        "codes": "boss_helmasaur"
+    },
+    {
+        "name": "Arrghus",
+        "type": "toggle",
+        "img": "images/icons/bosses/arrghus.png",
+        "codes": "boss_arrghus"
+    },
+    {
+        "name": "Mothula",
+        "type": "toggle",
+        "img": "images/icons/bosses/mothula.png",
+        "codes": "boss_mothula"
+    },
+    {
+        "name": "Blind",
+        "type": "toggle",
+        "img": "images/icons/bosses/blind.png",
+        "codes": "boss_blind"
+    },
+    {
+        "name": "Kholdstare",
+        "type": "toggle",
+        "img": "images/icons/bosses/kholdstare.png",
+        "codes": "boss_kholdstare"
+    },
+    {
+        "name": "Vitreous",
+        "type": "toggle",
+        "img": "images/icons/bosses/vitreous.png",
+        "codes": "boss_vitreous"
+    },
+    {
+        "name": "Trinexx",
+        "type": "toggle",
+        "img": "images/icons/bosses/trinexx.png",
+        "codes": "boss_trinexx"
     }
 ]

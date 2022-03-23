@@ -1,59 +1,59 @@
 DoorSlot = CustomItem:extend()
 DoorSlot.Icons = {
     [0] = "none",
-    [1] = "unknown",
-    [2] = "overlayX",
-    [3] = "caution",
-    [4] = "exit",
-    [5] = "SmallKey2",
-    [6] = "BigKey",
-    [7] = "boss",
-    [8] = "crystalswitch",
-    [9] = "peg-blue",
-    [10] = "peg-red",
-    [11] = "firesource",
-    [12] = "0005",
-    [13] = "0010",
-    [14] = "0007",
-    [15] = "0015",
-    [16] = "0011",
-    [17] = "0002",
-    [18] = "bow",
-    [19] = "0021",
-    [20] = "0019",
-    [21] = "0020",
-    [22] = "0023",
-    [23] = "weapon",
-    [24] = "1",
-    [25] = "2",
-    [26] = "3",
-    [27] = "4",
-    [28] = "5",
-    [29] = "6"
+    [1] = "doortracker/unknown",
+    [2] = "overlays/overlay-x",
+    [3] = "doortracker/caution",
+    [4] = "doortracker/exit",
+    [5] = "items/smallkey",
+    [6] = "items/bigkey",
+    [7] = "doortracker/boss",
+    [8] = "doortracker/crystalswitch",
+    [9] = "doortracker/peg-blue",
+    [10] = "doortracker/peg-red",
+    [11] = "doortracker/firesource",
+    [12] = "items/firerod",
+    [13] = "items/lamp",
+    [14] = "items/bombos",
+    [15] = "items/somaria",
+    [16] = "items/hammer",
+    [17] = "items/hookshot",
+    [18] = "items/bow",
+    [19] = "items/flippers",
+    [20] = "items/glove-1",
+    [21] = "items/boots",
+    [22] = "items/sword",
+    [23] = "doortracker/weapon",
+    [24] = "doortracker/1",
+    [25] = "doortracker/2",
+    [26] = "doortracker/3",
+    [27] = "doortracker/4",
+    [28] = "doortracker/5",
+    [29] = "doortracker/6"
 }
 DoorSlot.OWIcons = {
-    [4] = "portal",
-    [5] = "SmallKey2",
-    [6] = "BigKey",
-    [7] = "boss",
-    [8] = "frog",
-    [9] = "purplechest",
-    [10] = "potionshop",
-    [11] = "0005",
-    [12] = "0010",
-    [13] = "0007",
-    [15] = "0018",
-    [16] = "0014",
-    [17] = "0011",
-    [18] = "0002",
-    [22] = "weapon",
+    [4] = "items/portal",
+    [5] = "items/smallkey",
+    [6] = "items/bigkey",
+    [7] = "doortracker/boss",
+    [8] = "items/frog",
+    [9] = "items/purplechest",
+    [10] = "icons/entrances/potionshop",
+    [11] = "items/firerod",
+    [12] = "items/lamp",
+    [13] = "items/bombos",
+    [15] = "items/mirror",
+    [16] = "items/book",
+    [17] = "items/hammer",
+    [18] = "items/hookshot",
+    [22] = "doortracker/weapon",
     [23] = "",
-    [24] = "1",
-    [25] = "2",
-    [26] = "3",
-    [27] = "4",
-    [28] = "5",
-    [29] = "6"
+    [24] = "doortracker/1",
+    [25] = "doortracker/2",
+    [26] = "doortracker/3",
+    [27] = "doortracker/4",
+    [28] = "doortracker/5",
+    [29] = "doortracker/6"
 }
 
 function DoorSlot:init(roomSlotNum, doorSlotNum)
@@ -79,7 +79,7 @@ end
 
 function DoorSlot:updateIcon()
     local img = ""
-    if ROOMSLOTS[self.roomSlot] > 0x1000 then
+    if INSTANCE.ROOMSLOTS[self.roomSlot][1] > 0x1000 then
         img = DoorSlot.OWIcons[self:getState()]
     end
     if not img or img == "" then
@@ -101,8 +101,8 @@ function DoorSlot:onLeftClick()
         end
     end
 
-    if DOORSLOTS[ROOMSLOTS[self.roomSlot]] then
-        DOORSLOTS[ROOMSLOTS[self.roomSlot]][self.doorSlot] = state
+    if INSTANCE.DOORSLOTS[INSTANCE.ROOMSLOTS[self.roomSlot][1]] then
+        INSTANCE.DOORSLOTS[INSTANCE.ROOMSLOTS[self.roomSlot][1]][self.doorSlot] = state
     end
     self:setState(state)
     refreshDoorSlots()
@@ -116,32 +116,15 @@ function DoorSlot:onRightClick()
         state = 1
     end
 
-    if DOORSLOTS[ROOMSLOTS[self.roomSlot]] then
-        DOORSLOTS[ROOMSLOTS[self.roomSlot]][self.doorSlot] = state
+    if INSTANCE.DOORSLOTS[INSTANCE.ROOMSLOTS[self.roomSlot][1]] then
+        INSTANCE.DOORSLOTS[INSTANCE.ROOMSLOTS[self.roomSlot][1]][self.doorSlot] = state
     end
     self:setState(state)
     refreshDoorSlots()
 end
 
 function DoorSlot:canProvideCode(code)
-    if code == self.code then
-        return true
-    else
-        return false
-    end
-end
-
-function DoorSlot:providesCode(code)
-    if code == self.code and self:getState() ~= 0 then
-        return self:getState()
-    end
-    return 0
-end
-
-function DoorSlot:advanceToCode(code)
-    if code == nil or code == self.code then
-        self:setState((self:getState() + 1) % #self.Icons)
-    end
+    return code == self.code
 end
 
 function DoorSlot:propertyChanged(key, value)

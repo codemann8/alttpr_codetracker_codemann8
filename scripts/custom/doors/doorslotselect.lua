@@ -12,14 +12,14 @@ DoorSlotSelection.Types = {
     [24] = "number"
 }
 DoorSlotSelection.Groups = { --[index of header] = index of last item in group
-    [3] = {4, "signs"},
-    [5] = {6, "keys"},
-    [8] = {10, "crystalswitch"},
-    [11] = {14, "firesource"},
-    [15] = {18, "yitem"},
-    [19] = {21, "aitem"},
-    [22] = {23, "0023"},
-    [24] = {29, "number"}
+    [3] = {4, "doortracker/signs"},
+    [5] = {6, "doortracker/keys"},
+    [8] = {10, "doortracker/crystalswitch"},
+    [11] = {14, "doortracker/firesource"},
+    [15] = {18, "doortracker/yitem"},
+    [19] = {21, "doortracker/aitem"},
+    [22] = {23, "items/sword"},
+    [24] = {29, "doortracker/number"}
 }
 DoorSlotSelection.Selection = 2
 
@@ -47,11 +47,11 @@ end
 function DoorSlotSelection:updateIcon()
     local overlay = ""
     if DoorSlotSelection.Groups[self.index] and self:getState() > 0 then
-        overlay = "overlay|images/overlayPlus.png,overlay|images/selected.png"
+        overlay = "overlay|images/doortracker/overlays/plus.png,overlay|images/doortracker/overlays/selected.png"
     elseif DoorSlotSelection.Groups[self.index] then
-        overlay = "overlay|images/overlayPlus.png"
+        overlay = "overlay|images/doortracker/overlays/plus.png"
     elseif self:getState() > 0 then
-        overlay = "overlay|images/selected.png"
+        overlay = "overlay|images/doortracker/overlays/selected.png"
     end
 
     self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. self.image .. ".png", overlay)
@@ -80,24 +80,7 @@ function DoorSlotSelection:onRightClick()
 end
 
 function DoorSlotSelection:canProvideCode(code)
-    if code == self.code then
-        return true
-    else
-        return false
-    end
-end
-
-function DoorSlotSelection:providesCode(code)
-    if code == self.code and self:getState() ~= 0 then
-        return self:getState()
-    end
-    return 0
-end
-
-function DoorSlotSelection:advanceToCode(code)
-    if code == nil or code == self.code then
-        self:setState((self:getState() + 1) % 2)
-    end
+    return code == self.code
 end
 
 function DoorSlotSelection:propertyChanged(key, value)

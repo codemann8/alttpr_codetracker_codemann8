@@ -14,7 +14,16 @@
                 "x": 135,
                 "y": 50,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 135,
+                "y": 50,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -32,7 +41,16 @@
                 "x": 250,
                 "y": 228,
                 "size":0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 250,
+                "y": 228,
+                "size":0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -41,7 +59,7 @@
         "sections": [
             {
                 "name": "Stash",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,world_state_inverted" ],
+                "visibility_rules": [ "entrance_shuffle_minor,world_state_inverted" ],
                 "item_count": 1
             }
         ],
@@ -51,7 +69,16 @@
                 "x": 364,
                 "y": 328,
                 "size":0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 364,
+                "y": 328,
+                "size":0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -70,7 +97,16 @@
                 "x": 382,
                 "y": 236,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 382,
+                "y": 236,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -89,7 +125,16 @@
                 "x": 370,
                 "y": 324,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 370,
+                "y": 324,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -109,6 +154,16 @@
                 "y": 40,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_40" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 370,
+                "y": 40,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_00" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -118,7 +173,7 @@
         "sections": [
             {
                 "name": "Cave",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "visibility_rules": [ "entrance_shuffle_minor" ],
                 "item_count": 1
             }
         ],
@@ -128,7 +183,16 @@
                 "x": 600,
                 "y": 185,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_42" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 600,
+                "y": 185,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_02" ]
             }
         ]
     },
@@ -147,7 +211,16 @@
                 "x": 590,
                 "y": 145,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_42" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 590,
+                "y": 145,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_02" ]
             }
         ]
     },
@@ -166,7 +239,16 @@
                 "x": 663,
                 "y": 46,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_42" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 663,
+                "y": 46,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_02" ]
             }
         ]
     },
@@ -186,7 +268,715 @@
                 "y": 134,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_42" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 678,
+                "y": 134,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_02" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "Ether Tablet Ghost",
+        "sections": [
+            {
+                "name": "Tablet",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 844,
+                "y": 86,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 844,
+                "y": 86,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Tower of Hera Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Ghost",
+        "sections": [
+            {
+                "name": "Up On Top",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1034,
+                "y": 112,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1034,
+                "y": 112,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 980,
+                "y": 210,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 980,
+                "y": 210,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Left Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 288,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 901,
+                "y": 288,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Spectacle Rock Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 989,
+                "y": 300,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 989,
+                "y": 300,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Descent Front Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 796,
+                "y": 272,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 796,
+                "y": 272,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Back Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 808,
+                "y": 378,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 808,
+                "y": 378,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Old Man Home Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 902,
+                "y": 460,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 902,
+                "y": 460,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Old Man Back Door Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1077,
+                "y": 333,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1077,
+                "y": 333,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Floating Island Ghost",
+        "sections": [
+            {
+                "name": "Island",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1579,
+                "y": 40,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1579,
+                "y": 40,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1725,
+                "y": 88,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1725,
+                "y": 88,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1590,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1590,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Mimic Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1715,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1715,
+                "y": 162,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Fairy Ascension Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1645,
+                "y": 238,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1645,
+                "y": 238,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Spiral Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1541,
+                "y": 285,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1541,
+                "y": 285,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Fairy Ascension Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1617,
+                "y": 312,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1617,
+                "y": 312,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Hookshot Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1693,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1693,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Middle Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1769,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1769,
+                "y": 322,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1737,
+                "y": 339,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1737,
+                "y": 339,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Paradox Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1731,
+                "y": 434,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1731,
+                "y": 434,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Descent Back Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 714,
+                "y": 284,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 714,
+                "y": 284,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
+        "name": "Death Mountain Entry Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 714,
+                "y": 370,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 714,
+                "y": 370,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
+        "name": "Waterfall Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1845,
+                "y": 286,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4f" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1845,
+                "y": 286,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0f" ]
+            }
+        ]
+    },
+    {
+        "name": "Zora's Domain Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1968,
+                "y": 243,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4f" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1968,
+                "y": 243,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0f" ]
             }
         ]
     },
@@ -206,7 +996,269 @@
                 "y": 635,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_51" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 375,
+                "y": 635,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_11" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "North Bonk Rocks Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 816,
+                "y": 600,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_53" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 816,
+                "y": 600,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_13" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 922,
+                "y": 548,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_53" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 922,
+                "y": 548,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_13" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Grave Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1040,
+                "y": 582,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_54" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1040,
+                "y": 582,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_14" ]
+            }
+        ]
+    },
+    {
+        "name": "Graveyard Ledge Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1126,
+                "y": 549,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_54" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1126,
+                "y": 549,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_14" ]
+            }
+        ]
+    },
+    {
+        "name": "King's Tomb Grave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1213,
+                "y": 598,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_54" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1213,
+                "y": 598,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_14" ]
+            }
+        ]
+    },
+    {
+        "name": "Useless Fairy Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1299,
+                "y": 626,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1299,
+                "y": 626,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_15" ]
+            }
+        ]
+    },
+    {
+        "name": "Useless Fairy Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1341,
+                "y": 538,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1341,
+                "y": 538,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_15" ]
+            }
+        ]
+    },
+    {
+        "name": "Witch's Hut Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1607,
+                "y": 670,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_56" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1607,
+                "y": 670,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_16" ]
+            }
+        ]
+    },
+    {
+        "name": "Potion Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1607,
+                "y": 718,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_56" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1607,
+                "y": 718,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_16" ]
             }
         ]
     },
@@ -225,7 +1277,16 @@
                 "x": 32,
                 "y": 833,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 32,
+                "y": 833,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -244,7 +1305,16 @@
                 "x": 120,
                 "y": 856,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 120,
+                "y": 856,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -264,6 +1334,16 @@
                 "y": 944,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 100,
+                "y": 944,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -283,7 +1363,16 @@
                 "x": 214,
                 "y": 840,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 214,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -302,7 +1391,16 @@
                 "x": 298,
                 "y": 840,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 298,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -321,7 +1419,16 @@
                 "x": 382,
                 "y": 840,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 382,
+                "y": 840,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -341,6 +1448,16 @@
                 "y": 956,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 415,
+                "y": 956,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -360,7 +1477,16 @@
                 "x": 196,
                 "y": 1070,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 196,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -379,7 +1505,16 @@
                 "x": 310,
                 "y": 1070,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 310,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -399,6 +1534,16 @@
                 "y": 1070,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 410,
+                "y": 1070,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -419,6 +1564,16 @@
                 "y": 1195,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 56,
+                "y": 1195,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -439,6 +1594,16 @@
                 "y": 1185,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 218,
+                "y": 1185,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
@@ -448,7 +1613,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -458,7 +1623,16 @@
                 "x": 218,
                 "y": 1209,
                 "size":0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 218,
+                "y": 1209,
+                "size":0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -478,7 +1652,241 @@
                 "y": 1201,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 322,
+                "y": 1201,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle Left Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 901,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 901,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Agahnim's Tower Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1003,
+                "y": 771,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1003,
+                "y": 771,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle Right Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1105,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1105,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Castle Main Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1003,
+                "y": 911,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1003,
+                "y": 911,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1105,
+                "y": 868,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1105,
+                "y": 868,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage Drop Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1196,
+                "y": 834,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1196,
+                "y": 834,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Sahasrahla's Hut Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1625,
+                "y": 900,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1625,
+                "y": 900,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_1e" ]
+            }
+        ]
+    },
+    {
+        "name": "Eastern Palace Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 830,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1924,
+                "y": 830,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_1e" ]
             }
         ]
     },
@@ -497,7 +1905,16 @@
                 "x": 612,
                 "y": 1030,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_62" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 612,
+                "y": 1030,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_22" ]
             }
         ]
     },
@@ -516,7 +1933,16 @@
                 "x": 636,
                 "y": 1105,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_62" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 636,
+                "y": 1105,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_22" ]
             }
         ]
     },
@@ -535,7 +1961,16 @@
                 "x": 650,
                 "y": 1180,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_62" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 650,
+                "y": 1180,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_22" ]
             }
         ]
     },
@@ -553,7 +1988,16 @@
                 "x": 80,
                 "y": 1332,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_68" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 80,
+                "y": 1332,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_28" ]
             }
         ]
     },
@@ -572,7 +2016,16 @@
                 "x": 206,
                 "y": 1418,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_68" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 206,
+                "y": 1418,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_28" ]
             }
         ]
     },
@@ -591,7 +2044,16 @@
                 "x": 294,
                 "y": 1418,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_69" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 294,
+                "y": 1418,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_29" ]
             }
         ]
     },
@@ -600,7 +2062,7 @@
         "sections": [
             {
                 "name": "On The Shelf",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla" ],
+                "visibility_rules": [ "entrance_shuffle_minor" ],
                 "item_count": 1
             }
         ],
@@ -610,7 +2072,16 @@
                 "x": 313,
                 "y": 1358,
                 "size":0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_69" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 313,
+                "y": 1358,
+                "size":0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_29" ]
             }
         ]
     },
@@ -629,7 +2100,16 @@
                 "x": 310,
                 "y": 1320,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_69" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 310,
+                "y": 1320,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_29" ]
             }
         ]
     },
@@ -649,12 +2129,22 @@
                 "y": 1404,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_69" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 408,
+                "y": 1404,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_29" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "North Bonk Rocks Ghost",
+        "name": "Central Bonk Rocks Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -665,15 +2155,26 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 816,
-                "y": 600,
+                "x": 945,
+                "y": 1280,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6b" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 945,
+                "y": 1280,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2b" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Old Man Home Ghost",
+        "name": "Link's House Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -684,352 +2185,19 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 902,
-                "y": 460,
+                "x": 1106,
+                "y": 1382,
                 "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Sanctuary Exit Ghost",
-        "sections": [
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6c" ]
+            },
             {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 922,
-                "y": 548,
+                "map": "darkworld",
+                "x": 1106,
+                "y": 1382,
                 "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Sanctuary Grave Ghost",
-        "sections": [
-            {
-                "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1040,
-                "y": 582,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Graveyard Ledge Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1126,
-                "y": 549,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "King's Tomb Grave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1213,
-                "y": 598,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Useless Fairy Drop Ghost",
-        "sections": [
-            {
-                "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1299,
-                "y": 626,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Useless Fairy Exit Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1341,
-                "y": 538,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Castle Left Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 901,
-                "y": 770,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Agahnim's Tower Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1003,
-                "y": 771,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Castle Right Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1105,
-                "y": 770,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Castle Hole Ghost",
-        "sections": [
-            {
-                "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_all,world_state_inverted" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1003,
-                "y": 841,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Castle Hole Exit Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity,world_state_inverted" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 901,
-                "y": 868,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Castle Main Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1003,
-                "y": 911,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Secret Passage Exit Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1105,
-                "y": 868,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Secret Passage Drop Ghost",
-        "sections": [
-            {
-                "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1196,
-                "y": 834,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Witch's Hut Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1607,
-                "y": 670,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Potion Shop Ghost",
-        "sections": [
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1607,
-                "y": 718,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Sahasrala's Hut Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1625,
-                "y": 900,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Eastern Palace Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1924,
-                "y": 830,
-                "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2c" ]
             }
         ]
     },
@@ -1049,6 +2217,16 @@
                 "y": 1295,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6e" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1650,
+                "y": 1295,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2e" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -1069,6 +2247,16 @@
                 "y": 1392,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6f" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1970,
+                "y": 1392,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2f" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -1088,7 +2276,16 @@
                 "x": 148,
                 "y": 1521,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 148,
+                "y": 1521,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1107,7 +2304,16 @@
                 "x": 62,
                 "y": 1590,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 62,
+                "y": 1590,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1126,7 +2332,16 @@
                 "x": 148,
                 "y": 1610,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 148,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1145,7 +2360,16 @@
                 "x": 234,
                 "y": 1590,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 234,
+                "y": 1590,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1163,7 +2387,16 @@
                 "x": 88,
                 "y": 1835,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 88,
+                "y": 1835,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1182,7 +2415,16 @@
                 "x": 354,
                 "y": 1556,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 354,
+                "y": 1556,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1201,7 +2443,43 @@
                 "x": 400,
                 "y": 1672,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1672,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
+            }
+        ]
+    },
+    {
+        "name": "Bombos Tablet Ghost",
+        "sections": [
+            {
+                "name": "Tablet",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1852,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1852,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -1219,7 +2497,16 @@
                 "x": 552,
                 "y": 1645,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_72" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 552,
+                "y": 1645,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_32" ]
             }
         ]
     },
@@ -1238,123 +2525,16 @@
                 "x": 542,
                 "y": 1653,
                 "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Bombos Tablet Ghost",
-        "sections": [
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_72" ]
+            },
             {
-                "name": "Tablet",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 400,
-                "y": 1852,
+                "map": "darkworld",
+                "x": 542,
+                "y": 1653,
                 "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Desert Fairy Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 555,
-                "y": 1790,
-                "size": 0,
-                "badge_size": 128,
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Fifty Rupee Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 625,
-                "y": 1920,
-                "size": 0,
-                "badge_size": 128,
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Dam Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 948,
-                "y": 1864,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Central Bonk Rocks Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 945,
-                "y": 1280,
-                "size": 0,
-                "badge_size": 128,
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Link's House Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1106,
-                "y": 1382,
-                "size": 0,
-                "badge_size": 128
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_32" ]
             }
         ]
     },
@@ -1374,6 +2554,16 @@
                 "y": 1560,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_74" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1192,
+                "y": 1560,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_34" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -1394,26 +2584,17 @@
                 "y": 1615,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Mini Moldorm Cave Entrance Ghost",
-        "sections": [
+            },
             {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1309,
-                "y": 1887,
+                "map": "darkworld",
+                "x": 1310,
+                "y": 1615,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -1431,7 +2612,16 @@
                 "x": 1450,
                 "y": 1714,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1450,
+                "y": 1714,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -1451,6 +2641,16 @@
                 "y": 1540,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1460,
+                "y": 1540,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
@@ -1460,7 +2660,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -1470,7 +2670,16 @@
                 "x": 1508,
                 "y": 1540,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1508,
+                "y": 1540,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -1479,7 +2688,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -1489,7 +2698,16 @@
                 "x": 1595,
                 "y": 1774,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1595,
+                "y": 1774,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -1509,7 +2727,45 @@
                 "y": 1710,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1595,
+                "y": 1710,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            }
+        ]
+    },
+    {
+        "name": "Mini Moldorm Cave Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1309,
+                "y": 1887,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1309,
+                "y": 1887,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -1528,7 +2784,16 @@
                 "x": 1779,
                 "y": 1522,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1779,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ]
             }
         ]
     },
@@ -1548,6 +2813,16 @@
                 "y": 1522,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1865,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -1568,371 +2843,22 @@
                 "y": 1610,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Death Mountain Descent Front Ghost",
-        "sections": [
+            },
             {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 796,
-                "y": 272,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Death Mountain Descent Back Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 714,
-                "y": 284,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Death Mountain Entry Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 714,
-                "y": 370,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Death Mountain Entry Back Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 808,
-                "y": 378,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Ether Tablet Ghost",
-        "sections": [
-            {
-                "name": "Tablet",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 844,
-                "y": 86,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Tower of Hera Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1125,
-                "y": 76,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spectacle Rock Ghost",
-        "sections": [
-            {
-                "name": "Up On Top",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1034,
-                "y": 112,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spectacle Rock Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 980,
-                "y": 210,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spectacle Rock Left Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 901,
-                "y": 288,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spectacle Rock Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 989,
-                "y": 300,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Old Man Back Door Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1077,
-                "y": 333,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Floating Island Ghost",
-        "sections": [
-            {
-                "name": "Island",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1579,
-                "y": 40,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Paradox Cave Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1725,
-                "y": 88,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spiral Cave Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1590,
-                "y": 162,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Mimic Cave Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1715,
-                "y": 162,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Fairy Ascension Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1645,
-                "y": 238,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Spiral Cave Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1541,
-                "y": 285,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Fairy Ascension Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1617,
-                "y": 312,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Hookshot Fairy Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1693,
-                "y": 322,
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1610,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Paradox Cave Middle Ghost",
+        "name": "Desert Fairy Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1943,34 +2869,26 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1769,
-                "y": 322,
+                "x": 555,
+                "y": 1790,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_7a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 555,
+                "y": 1790,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_3a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Paradox Cave Shop Ghost",
-        "sections": [
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1737,
-                "y": 339,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Waterfall Fairy Cave Ghost",
+        "name": "Fifty Rupee Cave Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1981,15 +2899,26 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1845,
-                "y": 286,
+                "x": 625,
+                "y": 1920,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_7a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 625,
+                "y": 1920,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_3a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Paradox Cave Bottom Ghost",
+        "name": "Dam Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2000,28 +2929,19 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1731,
-                "y": 434,
+                "x": 948,
+                "y": 1864,
                 "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Zora's Domain Ghost",
-        "sections": [
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_7b" ]
+            },
             {
-                "name": "Ledge",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 1968,
-                "y": 243,
+                "map": "darkworld",
+                "x": 948,
+                "y": 1864,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_3b" ]
             }
         ]
     },
@@ -2041,7 +2961,16 @@
                 "x": 80,
                 "y": 110,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 80,
+                "y": 110,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2060,7 +2989,16 @@
                 "x": 118,
                 "y": 254,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 118,
+                "y": 254,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2079,7 +3017,16 @@
                 "x": 244,
                 "y": 164,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 244,
+                "y": 164,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2098,7 +3045,16 @@
                 "x": 282,
                 "y": 278,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 282,
+                "y": 278,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2117,7 +3073,16 @@
                 "x": 308,
                 "y": 368,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 308,
+                "y": 368,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2136,7 +3101,16 @@
                 "x": 402,
                 "y": 368,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 402,
+                "y": 368,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2155,7 +3129,16 @@
                 "x": 372,
                 "y": 292,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 372,
+                "y": 292,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2174,8 +3157,16 @@
                 "x": 380,
                 "y": 216,
                 "size": 0,
-                "badge_size": 96
-                
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 380,
+                "y": 216,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_00" ]
             }
         ]
     },
@@ -2195,6 +3186,16 @@
                 "y": 115,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_42" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 675,
+                "y": 115,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_02" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
@@ -2204,7 +3205,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -2214,12 +3215,49 @@
                 "x": 627,
                 "y": 115,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_42" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 627,
+                "y": 115,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_02" ]
             }
         ]
     },
     {
-        "name": "Dark Chapel Ghost",
+        "name": "Ganon's Tower Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 76,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Spike Cave Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2230,16 +3268,54 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 924,
-                "y": 551,
+                "x": 1151,
+                "y": 294,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_43" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1151,
+                "y": 294,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_03" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Mountain Fairy Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 815,
+                "y": 384,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_43" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 815,
+                "y": 384,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_03" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Shield Shop Entrance Ghost",
+        "name": "Hookshot Cave Island Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2250,30 +3326,356 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 665,
-                "y": 912,
+                "x": 1609,
+                "y": 30,
                 "size": 0,
-                "badge_size": 128,
-                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1609,
+                "y": 30,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
             }
         ]
     },
     {
-        "name": "Shield Shop Ghost",
+        "name": "Hookshot Cave Entrance Ghost",
         "sections": [
             {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 665,
-                "y": 864,
+                "x": 1648,
+                "y": 106,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1648,
+                "y": 106,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Superbunny Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1734,
+                "y": 98,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1734,
+                "y": 98,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Ledge Left Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1598,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1598,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Ledge Right Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1694,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1694,
+                "y": 182,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Laser Bridge Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1648,
+                "y": 258,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1648,
+                "y": 258,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Superbunny Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1658,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1658,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Death Mountain Shop Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1750,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1750,
+                "y": 334,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Death Mountain Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1745,
+                "y": 256,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1745,
+                "y": 256,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Turtle Rock Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1890,
+                "y": 174,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_47" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1890,
+                "y": 174,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_07" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Ledge Ghost",
+        "sections": [
+            {
+                "name": "Ledge",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 621,
+                "y": 315,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 621,
+                "y": 315,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Top Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 730,
+                "y": 282,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 730,
+                "y": 282,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave Bottom Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 722,
+                "y": 372,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_4a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 722,
+                "y": 372,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_0a" ]
             }
         ]
     },
@@ -2293,12 +3695,22 @@
                 "y": 635,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_51" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 377,
+                "y": 635,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_11" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Chest Game Entrance Ghost",
+        "name": "Dark Chapel Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -2309,202 +3721,21 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 100,
-                "y": 936,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Thieves Town Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 255,
-                "y": 975,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "C-Shaped House Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 961,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Hammer House Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 1077,
+                "x": 924,
+                "y": 551,
                 "size": 0,
                 "badge_size": 128,
-                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
-            }
-        ]
-    },
-    {
-        "name": "Village of Outcasts Shop Ghost",
-        "sections": [
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 414,
-                "y": 1117,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Brewery Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 219,
-                "y": 1171,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Hammer Pegs Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 636,
-                "y": 1214,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Archery Game Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 400,
-                "y": 1400,
-                "size": 0,
-                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_53" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Pyramid Hole Ghost",
-        "sections": [
+            },
             {
-                "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_all,world_state_open" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1000,
-                "y": 820,
+                "map": "lightworld",
+                "x": 924,
+                "y": 551,
                 "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Pyramid Hole Exit Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity,world_state_open" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 864,
-                "y": 976,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Pyramid Fairy Cave Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 956,
-                "y": 976,
-                "size": 0,
-                "badge_size": 96
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_13" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
@@ -2524,6 +3755,16 @@
                 "y": 668,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_56" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1616,
+                "y": 668,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_16" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
@@ -2533,7 +3774,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -2543,7 +3784,328 @@
                 "x": 1616,
                 "y": 716,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_56" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1616,
+                "y": 716,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_16" ]
+            }
+        ]
+    },
+    {
+        "name": "Chest Game Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 100,
+                "y": 936,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 100,
+                "y": 936,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Thieves Town Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 255,
+                "y": 975,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 255,
+                "y": 975,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "C-Shaped House Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 961,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 961,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer House Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1077,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 1077,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            }
+        ]
+    },
+    {
+        "name": "Village of Outcasts Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 414,
+                "y": 1117,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 414,
+                "y": 1117,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Brewery Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 219,
+                "y": 1171,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 219,
+                "y": 1171,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop Entrance Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 912,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 665,
+                "y": 912,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_1a" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            }
+        ]
+    },
+    {
+        "name": "Shield Shop Ghost",
+        "sections": [
+            {
+                "name": "Items",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 665,
+                "y": 864,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 665,
+                "y": 864,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1a" ]
+            }
+        ]
+    },
+    {
+        "name": "Ganon Hole Ghost",
+        "sections": [
+            {
+                "name": "Dropdown",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1000,
+                "y": 820,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1003,
+                "y": 841,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Ganon Hole Exit Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 864,
+                "y": 976,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 901,
+                "y": 868,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Fairy Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 956,
+                "y": 976,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_5b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 956,
+                "y": 976,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_1b" ]
             }
         ]
     },
@@ -2563,6 +4125,16 @@
                 "y": 1008,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5e" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1706,
+                "y": 1008,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_1e" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2582,7 +4154,132 @@
                 "x": 1924,
                 "y": 830,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_5e" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1924,
+                "y": 830,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_1e" ]
+            }
+        ]
+    },
+    {
+        "name": "Hammer Pegs Cave Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 636,
+                "y": 1214,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_62" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 636,
+                "y": 1214,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_22" ]
+            }
+        ]
+    },
+    {
+        "name": "Archery Game Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1400,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_69" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1400,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_29" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Bonk Rocks Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 945,
+                "y": 1280,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6b" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 945,
+                "y": 1280,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2b" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            }
+        ]
+    },
+    {
+        "name": "Bomb Shop Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1106,
+                "y": 1382,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6c" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1106,
+                "y": 1382,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2c" ]
             }
         ]
     },
@@ -2602,6 +4299,16 @@
                 "y": 1296,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6e" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1656,
+                "y": 1296,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2e" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2622,6 +4329,16 @@
                 "y": 1392,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_6f" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1968,
+                "y": 1392,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_2f" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2641,7 +4358,16 @@
                 "x": 62,
                 "y": 1600,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 62,
+                "y": 1600,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -2660,7 +4386,16 @@
                 "x": 148,
                 "y": 1610,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 148,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ]
             }
         ]
     },
@@ -2680,6 +4415,16 @@
                 "y": 1600,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_70" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 234,
+                "y": 1600,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_30" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2700,65 +4445,17 @@
                 "y": 1655,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_70" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Swamp Palace Entrance Ghost",
-        "sections": [
+            },
             {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 940,
-                "y": 1864,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Dark Bonk Rocks Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 945,
-                "y": 1280,
+                "map": "lightworld",
+                "x": 400,
+                "y": 1655,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_30" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Bomb Shop Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1106,
-                "y": 1382,
-                "size": 0,
-                "badge_size": 128
             }
         ]
     },
@@ -2777,7 +4474,16 @@
                 "x": 1192,
                 "y": 1560,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_74" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1192,
+                "y": 1560,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_34" ]
             }
         ]
     },
@@ -2797,6 +4503,16 @@
                 "y": 1615,
                 "size": 0,
                 "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1310,
+                "y": 1615,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
             }
         ]
@@ -2806,7 +4522,7 @@
         "sections": [
             {
                 "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
+                "visibility_rules": [ "entrance_shuffle_minor,pool_shopsanity_on" ],
                 "item_count": 1
             }
         ],
@@ -2816,7 +4532,16 @@
                 "x": 1350,
                 "y": 1615,
                 "size": 0,
-                "badge_size": 96
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1350,
+                "y": 1615,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -2835,7 +4560,16 @@
                 "x": 1600,
                 "y": 1737,
                 "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_75" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1600,
+                "y": 1737,
+                "size": 0,
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_35" ]
             }
         ]
     },
@@ -2855,6 +4589,16 @@
                 "y": 1522,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1779,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2875,6 +4619,16 @@
                 "y": 1522,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1865,
+                "y": 1522,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
@@ -2895,107 +4649,22 @@
                 "y": 1610,
                 "size": 0,
                 "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_77" ],
+                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1610,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_37" ],
                 "force_invisibility_rules": [ "entrance_shuffle_lite" ]
             }
         ]
     },
     {
-        "name": "Bumper Ledge Ghost",
-        "sections": [
-            {
-                "name": "Ledge",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 621,
-                "y": 315,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Bumper Cave Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 730,
-                "y": 282,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Bumper Cave Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 722,
-                "y": 372,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Dark Mountain Fairy Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 815,
-                "y": 384,
-                "size": 0,
-                "badge_size": 96,
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
-            }
-        ]
-    },
-    {
-        "name": "Spike Cave Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1151,
-                "y": 294,
-                "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Ganon's Tower Entrance Ghost",
+        "name": "Swamp Palace Entrance Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -3006,202 +4675,19 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1125,
-                "y": 76,
+                "x": 940,
+                "y": 1864,
                 "size": 0,
-                "badge_size": 128
-            }
-        ]
-    },
-    {
-        "name": "Hookshot Cave Island Ghost",
-        "sections": [
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_7b" ]
+            },
             {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1609,
-                "y": 30,
+                "map": "lightworld",
+                "x": 940,
+                "y": 1864,
                 "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Hookshot Cave Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1648,
-                "y": 106,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Superbunny Cave Top Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1734,
-                "y": 98,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Turtle Ledge Left Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1598,
-                "y": 182,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Turtle Ledge Right Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1694,
-                "y": 182,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Turtle Laser Bridge Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1648,
-                "y": 258,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Superbunny Cave Bottom Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1658,
-                "y": 334,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-   
-    {
-        "name": "Dark Death Mountain Shop Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_all" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1750,
-                "y": 334,
-                "size": 0,
-                "badge_size": 96,
-                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_shopsanity_off" ]
-            }
-        ]
-    },
-    {
-        "name": "Dark Death Mountain Shop Ghost",
-        "sections": [
-            {
-                "name": "Items",
-                "visibility_rules": [ "entrance_shuffle_singleentryvanilla,pool_shopsanity_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1745,
-                "y": 256,
-                "size": 0,
-                "badge_size": 96
-            }
-        ]
-    },
-    {
-        "name": "Turtle Rock Entrance Ghost",
-        "sections": [
-            {
-                "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_on" ],
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "darkworld",
-                "x": 1890,
-                "y": 174,
-                "size": 0,
-                "badge_size": 128
+                "badge_size": 128,
+                "restrict_visibility_rules": [ "ow_swapped_3b" ]
             }
         ]
     }

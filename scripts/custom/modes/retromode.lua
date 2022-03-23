@@ -12,14 +12,20 @@ function RetroMode:init(isAlt)
 end
 
 function RetroMode:updateIcon()
+    if self:getState() == 0 then
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/retro_off" .. self.suffix .. ".png")
+    else
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/retro_on" .. self.suffix .. ".png")
+    end
+end
+
+function RetroMode:updateItem()
     local item = Tracker:FindObjectForCode("takeanycave")
 
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_retro_off" .. self.suffix .. ".png")
-        item.Icon = ImageReference:FromPackRelativePath("images/takeanycave.png", "@disabled")
+        item.Icon = ImageReference:FromPackRelativePath("images/icons/takeanycave.png", "@disabled")
         item.IgnoreUserInput = true
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_retro_on" .. self.suffix .. ".png")
         item.Active = not item.Active
         item.Active = not item.Active
         item.IgnoreUserInput = false

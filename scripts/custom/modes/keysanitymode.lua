@@ -17,31 +17,62 @@ function KeysanityMode:init(isAlt, item)
     self:setState(0)
 end
 
+function KeysanityMode:providesCode(code)
+    if self.suffix == "" then
+        if code == "keysanity_" .. self.itemCode .. "_off" and self:getState() ~= 1 then
+            return 1
+        elseif code == "keysanity_" .. self.itemCode .. "_on" and self:getState() == 1 then
+            return 1
+        elseif code == "keysanity_" .. self.itemCode .. "_universal" and self:getState() == 2 then
+            return 1
+        end
+    end
+    return 0
+end
+
 function KeysanityMode:updateIcon()
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/keysanity_" .. self.itemCode .. self.suffix .. ".png", "@disabled")
     elseif self.itemCode == "smallkey" and self:getState() == 2 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. "_universal" .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/keysanity_" .. self.itemCode .. "_universal" .. self.suffix .. ".png")
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_keysanity_" .. self.itemCode .. self.suffix .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/keysanity_" .. self.itemCode .. self.suffix .. ".png")
     end
 end
 
 function KeysanityMode:postUpdate()
-    if self.suffix == "" and OBJ_KEYSANITY_BIG and OBJ_DOORSHUFFLE then
-        updateIcons()
-    end
+    updateChests()
 end
 
 function KeysanityMode:onRightClick()
+    function setState(item, state)
+        local itemToPostUpdate = nil
+        if item:getState() ~= state then
+            item.ignorePostUpdate = true
+            itemToPostUpdate = item
+        end
+        item:setStateExternal(state)
+        return itemToPostUpdate
+    end
+
     local items =  { "map", "compass", "smallkey", "bigkey" }
     local state = 1
+    local itemToPostUpdate = nil
     for i = 1, #items do
+        local changedItem = nil
+
         if items[i] == self.itemCode then
-            self:setState(state)
+            changedItem = setState(self, state)
             state = 0
         else
-            Tracker:FindObjectForCode("keysanity_" .. items[i] .. "_surrogate").ItemState:setState(state)
+            changedItem = setState(Tracker:FindObjectForCode("keysanity_" .. items[i]).ItemState, state)
         end
+
+        if changedItem then
+            itemToPostUpdate = changedItem
+        end
+    end
+    if itemToPostUpdate then
+        itemToPostUpdate.ignorePostUpdate = false
     end
 end

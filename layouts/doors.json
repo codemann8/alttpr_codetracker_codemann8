@@ -1,0 +1,402 @@
+{
+    "shared_doorslotselect": {
+        "type": "array",
+        "orientation": "vertical",
+        "h_alignment": "center",
+        "content": [
+            {
+                "type": "text",
+                "h_alignment": "center",
+                "text": "Door Type Selector:"
+            },
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_margin": "0,0,4,4",
+                "item_size": 40,
+                "rows": [
+                    [ "doorslot_x", "doorslot_signs", "doorslot_keys", "doorslot_boss", "doorslot_crystalpegs" ],
+                    [ "doorslot_fire", "doorslot_yitem", "doorslot_aitem", "doorslot_sword", "doorslot_number" ]
+                ]
+            }
+        ]
+    },
+    "shared_v_doorslotselect": {
+        "type": "itemgrid",
+        "item_margin": "4,4",
+        "item_size": 36,
+        "rows": [
+            [ "doorslot_x", "doorslot_fire" ],
+            [ "doorslot_signs", "doorslot_yitem" ],
+            [ "doorslot_keys", "doorslot_aitem" ],
+            [ "doorslot_boss", "doorslot_sword" ],
+            [ "doorslot_crystalpegs", "doorslot_number" ]
+        ]
+    },
+    "shared_roomgroups": {
+        "type": "itemgrid",
+        "h_alignment": "center",
+        "item_margin": "0,0,4,4",
+        "item_size": 26,
+        "rows": [
+            [ "roomgroup_hc", "roomgroup_lw", "roomgroup_gt" ],
+            [ "roomgroup_pd", "roomgroup_sp", "roomgroup_sw", "roomgroup_tt" ],
+            [ "roomgroup_ip", "roomgroup_mm", "roomgroup_tr" ]
+        ]
+    },
+    "shared_roomgroupselect": {
+        "type": "array",
+        "orientation": "horizontal",
+        "h_alignment": "center",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "margin": "10,0",
+                "content": [
+                    {
+                        "type": "text",
+                        "h_alignment": "center",
+                        "text": "Room Group Selector:"
+                    },
+                    {
+                        "type": "layout",
+                        "margin": 0,
+                        "key": "shared_roomgroups"
+                    }
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "item_margin": "0,0,4,4",
+                "item_size": 88,
+                "rows": [
+                    [ "roomselect_1", "roomselect_2", "roomselect_3", "roomselect_4", "roomselect_5", "roomselect_6", "roomselect_7", "roomselect_8", "roomselect_9" ]
+                ]
+            }
+        ]
+    },
+    "shared_v_roomgroupselect": {
+        "type": "array",
+        "orientation": "vertical",
+        "h_alignment": "center",
+        "content": [
+            {
+                "type": "layout",
+                "margin": 0,
+                "key": "shared_roomgroups"
+            },
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_margin": "0,0,4,4",
+                "item_size": 64,
+                "rows": [
+                    [ "roomselect_1" ],
+                    [ "roomselect_2" ],
+                    [ "roomselect_3" ],
+                    [ "roomselect_4" ],
+                    [ "roomselect_5" ],
+                    [ "roomselect_6" ],
+                    [ "roomselect_7" ],
+                    [ "roomselect_8" ],
+                    [ "roomselect_9" ]
+                ]
+            }
+        ]
+    },
+    "room_slot_1": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "height": 400,
+                "margin": 4,
+                "item": "roomSlot1"
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "h_alignment": "center",
+                "margin": 0,
+                "item_margin": "-22,-22",
+                "item_size": 80,
+                "rows": [
+                    [ "", "", "doorSlot1_1", "", "", "doorSlot1_2", "", "", "doorSlot1_3", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot1_4", "", "", "", "", "", "", "", "", "", "doorSlot1_7" ],
+                    [ "", "", "", "doorSlot1_13", "", "", "", "doorSlot1_14", "", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot1_5", "", "", "", "", "", "", "", "", "", "doorSlot1_8" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "", "doorSlot1_15", "", "", "", "doorSlot1_16", "", "", "" ],
+                    [ "doorSlot1_6", "", "", "", "", "", "", "", "", "", "doorSlot1_9" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "doorSlot1_10", "", "", "doorSlot1_11", "", "", "doorSlot1_12", "", "" ]
+                ]
+            }
+        ]
+    },
+    "room_slot_2": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "height": 400,
+                "margin": 4,
+                "item": "roomSlot2"
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "margin": 0,
+                "item_margin": "-18,-18",
+                "item_size": 72,
+                "rows": [
+                    [ "", "", "doorSlot2_1", "", "", "doorSlot2_2", "", "", "doorSlot2_3", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot2_4", "", "", "", "", "", "", "", "", "", "doorSlot2_7" ],
+                    [ "", "", "", "doorSlot2_13", "", "", "", "doorSlot2_14", "", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot2_5", "", "", "", "", "", "", "", "", "", "doorSlot2_8" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "", "doorSlot2_15", "", "", "", "doorSlot2_16", "", "", "" ],
+                    [ "doorSlot2_6", "", "", "", "", "", "", "", "", "", "doorSlot2_9" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "doorSlot2_10", "", "", "doorSlot2_11", "", "", "doorSlot2_12", "", "" ]
+                ]
+            }
+        ]
+    },
+    "room_slot_3": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "height": 400,
+                "margin": 4,
+                "item": "roomSlot3"
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "margin": 0,
+                "item_margin": "-18,-18",
+                "item_size": 72,
+                "rows": [
+                    [ "", "", "doorSlot3_1", "", "", "doorSlot3_2", "", "", "doorSlot3_3", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot3_4", "", "", "", "", "", "", "", "", "", "doorSlot3_7" ],
+                    [ "", "", "", "doorSlot3_13", "", "", "", "doorSlot3_14", "", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot3_5", "", "", "", "", "", "", "", "", "", "doorSlot3_8" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "", "doorSlot3_15", "", "", "", "doorSlot3_16", "", "", "" ],
+                    [ "doorSlot3_6", "", "", "", "", "", "", "", "", "", "doorSlot3_9" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "doorSlot3_10", "", "", "doorSlot3_11", "", "", "doorSlot3_12", "", "" ]
+                ]
+            }
+        ]
+    },
+    "room_slot_4": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "height": 400,
+                "margin": 4,
+                "item": "roomSlot4"
+            },
+            {
+                "type": "itemgrid",
+                "v_alignment": "center",
+                "margin": 0,
+                "item_margin": "-18,-18",
+                "item_size": 72,
+                "rows": [
+                    [ "", "", "doorSlot4_1", "", "", "doorSlot4_2", "", "", "doorSlot4_3", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot4_4", "", "", "", "", "", "", "", "", "", "doorSlot4_7" ],
+                    [ "", "", "", "doorSlot4_13", "", "", "", "doorSlot4_14", "", "", "" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "doorSlot4_5", "", "", "", "", "", "", "", "", "", "doorSlot4_8" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "", "doorSlot4_15", "", "", "", "doorSlot4_16", "", "", "" ],
+                    [ "doorSlot4_6", "", "", "", "", "", "", "", "", "", "doorSlot4_9" ],
+                    [ "", "", "", "", "", "", "", "", "", "", "" ],
+                    [ "", "", "doorSlot4_10", "", "", "doorSlot4_11", "", "", "doorSlot4_12", "", "" ]
+                ]
+            }
+        ]
+    },
+    "shared_doorrando": {
+        "type": "array",
+        "orientation": "horizontal",
+        "v_alignment": "center",
+        "h_alignment": "center",
+        "width": 1632,
+        "content": [
+            {
+                "type": "layout",
+                "key": "room_slot_1"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_2"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_3"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_4"
+            }
+        ]
+    },
+    "shared_v_doorrando": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "center",
+        "h_alignment": "center",
+        "width": 408,
+        "height": 1632,
+        "content": [
+            {
+                "type": "layout",
+                "key": "room_slot_1"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_2"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_3"
+            },
+            {
+                "type": "layout",
+                "key": "room_slot_4"
+            }
+        ]
+    },
+    "shared_doorrando_compact": {
+        "type": "array",
+        "orientation": "vertical",
+        "v_alignment": "center",
+        "h_alignment": "center",
+        "width": 816,
+        "height": 816,
+        "content": [
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "h_alignment": "center",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "room_slot_1"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "room_slot_2"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "h_alignment": "center",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "room_slot_3"
+                    },
+                    {
+                        "type": "layout",
+                        "key": "room_slot_4"
+                    }
+                ]
+            }
+        ]
+    },
+    "shared_door_tab": {
+        "type": "viewbox",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "h_alignment": "center",
+                        "margin": "0,0,0,20",
+                        "scale": 1.25,
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "shared_doorslotselect"
+                            },
+                            {
+                                "type": "layout",
+                                "key": "shared_roomgroupselect"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "shared_doorrando"
+                    }
+                ]
+            }
+        ]
+    },
+    "shared_door_v_tab": {
+        "type": "viewbox",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "vertical",
+                        "h_alignment": "center",
+                        "v_alignment": "center",
+                        "margin": "0,0,30,0",
+                        "scale": 1.75,
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "shared_v_doorslotselect"
+                            },
+                            {
+                                "type": "layout",
+                                "key": "shared_v_roomgroupselect"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "layout",
+                        "key": "shared_v_doorrando"
+                    }
+                ]
+            }
+        ]
+    }
+}

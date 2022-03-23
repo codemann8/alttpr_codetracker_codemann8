@@ -1,58 +1,4 @@
 {
-    "tracker_default": {
-        "type": "container",
-        "background": "#877373",
-        "content": {
-            "type": "dock",
-            "dropshadow": true,
-            "content": [
-                {
-                    "type": "array",
-                    "orientation": "horizontal",
-                    "content": [
-                        {
-                            "type": "array",
-                            "orientation": "vertical",
-                            "dock": "top",
-                            "content": [
-                                {
-                                    "type": "group",
-                                    "header": "Items",
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "shared_item_grid"
-                                    }
-                                },
-                                {
-                                    "type": "group",
-                                    "header": "Dungeons",
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "shared_dungeon_v_grid"
-                                    }
-                                },
-                                {
-                                    "type": "group",
-                                    "header": "Modes",
-                                    "margin": "0,0,3,0",
-                                    "header_content": {
-                                        "type": "button_popup",
-                                        "style": "settings",
-                                        "popup_background": "#55212121",
-                                        "layout": "settings_popup"
-                                    },
-                                    "content": {
-                                        "type": "layout",
-                                        "key": "shared_mode_grid"
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-    },
     "tracker_horizontal": {
         "type": "container",
         "background": "#877373",
@@ -62,52 +8,157 @@
             "content": [
                 {
                     "type": "array",
-                    "orientation": "vertical",
+                    "orientation": "horizontal",
+                    "h_alignment": "left",
+                    "v_alignment": "top",
                     "content": [
                         {
-                            "type": "array",
-                            "orientation": "horizontal",
+                            "type": "group",
+                            "header": "Items",
+                            "margin": "0,0,2,0",
+                            "header_content": {
+                                "type": "button_popup",
+                                "style": "settings",
+                                "popup_background": "#55212121",
+                                "layout": "shared_settings"
+                            },
                             "content": [
                                 {
-                                    "type": "group",
-                                    "header": "Items",
-                                    "margin": "0,0,3,0",
-                                    "dock": "left",
-                                    "content": {
-                                        "type": "layout",
-                                        "v_alignment": "center",
-                                        "key": "shared_item_grid"
-                                    }
-                                },
-                                {
-                                    "type": "group",
-                                    "header": "Dungeons",
-                                    "margin": "0,0,3,0",
-                                    "dock": "left",
-                                    "content": {
-                                        "type": "layout",
-                                        "v_alignment": "center",
-                                        "key": "shared_dungeon_grid"
-                                    }
-                                },
-                                {
-                                    "type": "group",
-                                    "header": "Modes",
-                                    "margin": "0,0,3,0",
-                                    "dock": "left",
-                                    "header_content": {
-                                        "type": "button_popup",
-                                        "style": "settings",
-                                        "popup_background": "#55212121",
-                                        "layout": "settings_popup"
-                                    },
-                                    "content": {
-                                        "type": "layout",
-                                        "v_alignment": "center",
-                                        "key": "shared_v_mode_grid"
-                                    }
+                                    "type": "layout",
+                                    "key": "shared_item_grid"
                                 }
                             ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Dungeons",
+                            "margin": "0,0,2,0",
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_dungeon_grid" // shared_base.json or shared_dungeon_alt.json
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Modes",
+                            "margin": "0,0,2,0",
+                            "header_content": {
+                                "type": "button_popup",
+                                "style": "settings",
+                                "popup_background": "#55212121",
+                                "layout": "modes_popup"
+                            },
+                            "content": {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "h_alignment": "center",
+                                "margin": "1,0",
+                                "content": [
+                                    {
+                                        "type": "itemgrid",
+                                        "margin": 0,
+                                        "item_margin": 0,
+                                        "item_size": 20,
+                                        "rows": [
+                                            [ "keysanity_map_small", "keysanity_compass_small" ],
+                                            [ "keysanity_smallkey_small", "keysanity_bigkey_small" ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "itemgrid",
+                                        "margin": 0,
+                                        "item_margin": 0,
+                                        "item_size": 40,
+                                        "rows": [
+                                            [ "door_shuffle_small" ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "itemgrid",
+                                        "margin": 0,
+                                        "item_margin": 0,
+                                        "item_width": 40,
+                                        "item_height": 20,
+                                        "rows": [
+                                            [ "pool_shopsanity_small" ],
+                                            [ "pool_keydrop_small" ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "itemgrid",
+                                        "margin": 0,
+                                        "item_margin": 0,
+                                        "item_size": 40,
+                                        "rows": [
+                                            [ "gt_crystals" ],
+                                            [ "goal_setting"]
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "tracker_vertical": {
+        "type": "container",
+        "background": "#877373",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "content": [
+                {
+                    "type": "array",
+                    "orientation": "vertical",
+                    "h_alignment": "left",
+                    "v_alignment": "top",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "margin": 0,
+                            "header_content": {
+                                "type": "button_popup",
+                                "style": "settings",
+                                "popup_background": "#55212121",
+                                "layout": "shared_v_settings"
+                            },
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_item_grid"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Dungeons",
+                            "margin": 0,
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_dungeon_v_grid" // shared_base.json or shared_dungeon_alt.json
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Modes",
+                            "margin": 0,
+                            "header_content": {
+                                "type": "button_popup",
+                                "style": "settings",
+                                "popup_background": "#55212121",
+                                "layout": "modes_popup"
+                            },
+                            "content": {
+                                "type": "layout",
+                                "key": "shared_mode_grid"
+                            }
                         }
                     ]
                 }

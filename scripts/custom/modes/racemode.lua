@@ -12,17 +12,21 @@ function RaceMode:init(isAlt)
 end
 
 function RaceMode:updateIcon()
-    local item = Tracker:FindObjectForCode("gt_bkgame")
-
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_race_off" .. self.suffix .. ".png")
-        item.DisplayAsFractionOfMax = true
-        item.DisplayAsFractionOfMax = false
-        item.IgnoreUserInput = false;
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/race_off" .. self.suffix .. ".png")
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/mode_race_on" .. self.suffix .. ".png")
-        item.Icon = ImageReference:FromPackRelativePath("images/race-flag.png")
-        item.BadgeText = nil
-        item.IgnoreUserInput = true;
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/race_on" .. self.suffix .. ".png")
+    end
+    self:updateText(nil)
+end
+
+function RaceMode:updateText(collection)
+    if self.suffix == "_small" then
+        if self:getState() == 0 then
+            collection = collection and collection or CACHE.CollectionRate
+            self.ItemInstance.BadgeText = tostring(math.floor(collection))
+        else
+            self.ItemInstance.BadgeText = nil
+        end
     end
 end

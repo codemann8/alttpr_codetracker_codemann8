@@ -1,0 +1,134 @@
+{
+    "dock_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "content": [
+                    {
+                        "type": "group",
+                        "header": "Items",
+                        "margin": "0,0,2,0",
+                        "header_content": {
+                            "type": "container",
+                            "content": [
+                                {
+                                    "type": "button_popup",
+                                    "style": "settings",
+                                    "popup_background": "#55212121",
+                                    "layout": "shared_settings"
+                                }
+                            ]
+                        },
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "shared_item_grid"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "group",
+                        "header": "Modes",
+                        "margin": "0,0,2,0",
+                        "header_content": {
+                            "type": "button_popup",
+                            "style": "settings",
+                            "popup_background": "#55212121",
+                            "layout": "modes_popup"
+                        },
+                        "content": {
+                            "type": "layout",
+                            "key": "shared_mode_grid"
+                        }
+                    }
+                ]
+            },
+            {
+                "type": "dock",
+                "content": [
+                    {
+                        "type": "layout",
+                        "dock": "bottom",
+                        "key": "shared_bottom_grid"
+                    },
+                    {
+                        "type": "group",
+                        "header": "Dungeons",
+                        "margin": "0,0,2,0",
+                        "content": [
+                            {
+                                "type": "layout",
+                                "key": "shared_dungeon_grid" // shared_base.json or shared_dungeon_alt.json
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "shared_dock_v_grid": {
+        "type": "array",
+        "orientation": "vertical",
+        "content": [
+            {
+                "type": "group",
+                "header": "Items",
+                "margin": 0,
+                "header_content": {
+                    "type": "container",
+                    "content": [
+                        {
+                            "type": "button_popup",
+                            "style": "settings",
+                            "popup_background": "#55212121",
+                            "layout": "shared_v_settings"
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_item_grid"
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "header": "Dungeons",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_dungeon_v_grid" // shared_base.json or shared_dungeon_alt.json
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "header": "Modes",
+                "margin": 0,
+                "header_content": {
+                    "type": "button_popup",
+                    "style": "settings",
+                    "popup_background": "#55212121",
+                    "layout": "modes_popup"
+                },
+                "content": {
+                    "type": "layout",
+                    "key": "shared_mode_grid"
+                }
+            },
+            {
+                "type": "layout",
+                "key": "shared_dropdown_v_grid" // shared_base.json or shared_dungeon_alt.json
+            },
+            {
+                "type": "layout",
+                "key": "shared_misc_v_grid" // shared_base.json or shared_dungeon_alt.json
+            }
+        ]
+    }
+}

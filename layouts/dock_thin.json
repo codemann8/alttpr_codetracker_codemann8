@@ -1,0 +1,71 @@
+{
+    "dock_thin_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "content": [
+            {
+                "type": "group",
+                "header": "Modes",
+                "margin": "0,0,2,0",
+                "header_content": {
+                    "type": "button_popup",
+                    "style": "settings",
+                    "popup_background": "#55212121",
+                    "layout": "modes_popup"
+                },
+                "content": {
+                    "type": "layout",
+                    "key": "shared_mode_vertical_grid"
+                }
+            },
+            {
+                "type": "group",
+                "header": "Items",
+                "margin": "0,0,2,0",
+                "header_content": {
+                    "type": "container",
+                    "content": [
+                        {
+                            "type": "button_popup",
+                            "style": "settings",
+                            "popup_background": "#55212121",
+                            "layout": "shared_settings"
+                        }
+                    ]
+                },
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_item_grid"
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "header": "Dungeons",
+                "margin": "0,0,2,0",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_dungeon_grid" // shared_base.json or shared_dungeon_alt.json
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "header": "Misc",
+                "margin": "0,0,2,0",
+                "content": [
+                    {
+                        "type": "layout",
+                        "key": "shared_misc_vertical_grid" // shared_base.json or shared_dungeon_alt.json
+                    }
+                ]
+            },
+            {
+                "type": "layout",
+                "key": "shared_dropdown_vertical_grid" // shared_base.json or shared_dungeon_alt.json
+            }
+        ]
+    }
+}

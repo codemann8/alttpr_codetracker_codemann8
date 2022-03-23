@@ -1,131 +1,161 @@
-print("")
-print("Active Auto-Tracker Configuration")
-print("---------------------------------------------------------------------")
-print("Enable Item Tracking:       ", not AUTOTRACKER_DISABLE_ITEM_TRACKING)
-print("Enable Location Tracking:   ", not AUTOTRACKER_DISABLE_LOCATION_TRACKING)
-print("Enable Region Tracking:     ", not AUTOTRACKER_DISABLE_REGION_TRACKING)
-if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
-    print("Enable Debug Logging:       ", "true")
-end
-print("---------------------------------------------------------------------")
-print("")
+SEGMENTS = {}
 
 function autotracker_started()
-    AUTOTRACKER_ON = true
-    START_TIME = os.time()
+    STATUS.AutotrackerInGame = false
+    --updateTitleFromMemorySegment(nil)
+    ----TESTS BELOW----
+
+    --STATUS.LastMajorItem = os.time()
+
+    --local module = AutoTracker:Read16(0x007fc0, 0) --BLACK 7fc0-7fd4 rom title 21bytes
+    --local module = AutoTracker:Read16(0x701ffc, 0) --BLACK 1ffc-1fff rom version
+    --local module = AutoTracker:Read16(0x7ef44e, 0) -- GOOD f44e-f44f bitfield for whether chest counts are known
+    --local module = AutoTracker:Read16(0x7f5410, 0) -- BLACK 5410- chest total counts, address not confirmed
+    --print("Version: ", module)
+
+    -- print(type(AutoTracker.ActiveConnector))
+    -- print(type(AutoTracker.SelectedConnectorType))
+    -- print(AutoTracker.SelectedConnectorType.Name)
+    -- print(AutoTracker.SelectedConnectorType.InstanceType)
+
+    --AutoTracker.ActiveConnector:WriteByte(0x7ef36f, 2) --WORKS!
+    --local value = 0
+    --AutoTracker.ActiveConnector:ReadByte(0x7ef36f, value)
+    --print(value)
 end
 
 function autotracker_stopped()
-    AUTOTRACKER_ON = false
+    STATUS.AutotrackerInGame = false
 end
 
-AUTOTRACKER_IS_IN_TRIFORCE_ROOM = false
-AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY = false
-AUTOTRACKER_STATS_MARKDOWN_FORMAT =
-    [===[
-### Post-Game Summary
-
-Stat | Value
---|-
-**Collection Rate** | %d/%d
-**Deaths** | %d
-**Bonks** | %d
-**Total Time** | %02d:%02d:%02d.%02d
-]===]
-
-U8_READ_CACHE = 0
-U8_READ_CACHE_ADDRESS = 0
-
-U16_READ_CACHE = 0
-U16_READ_CACHE_ADDRESS = 0
-
---Shared Functions
-function InvalidateReadCaches()
-    U8_READ_CACHE_ADDRESS = 0
-    U16_READ_CACHE_ADDRESS = 0
+function isInGame(segment)
+    updateModuleFromMemorySegment(nil)
+    return isInGameFromModule()
 end
 
-function ReadU8(segment, address)
-    if U8_READ_CACHE_ADDRESS ~= address then
-        U8_READ_CACHE = segment:ReadUInt8(address)
-        U8_READ_CACHE_ADDRESS = address
-    end
-
-    return U8_READ_CACHE
+function isInGameFromModule()
+    return CACHE.MODULE > 0x05 and CACHE.MODULE < 0x1c and CACHE.MODULE ~= 0x14 and CACHE.MODULE ~= 0x19 and CACHE.MODULE ~= 0x1a
 end
 
-function ReadU16(segment, address)
-    if U16_READ_CACHE_ADDRESS ~= address then
-        U16_READ_CACHE = segment:ReadUInt16(address)
-        U16_READ_CACHE_ADDRESS = address
-    end
-
-    return U16_READ_CACHE
-end
-
-function testFlag(segment, address, flag)
-    local value = ReadU8(segment, address)
-    local flagTest = value & flag
-
-    if flagTest ~= 0 then
-        return true
-    else
-        return false
-    end
-end
-
-function numberOfSetBits(value)
-     value = value - ((value >> 1) & 0x55)
-     value = (value & 0x33) + ((value >> 2) & 0x33)
-     return (((value + (value >> 4)) & 0x0F) * 0x01)
-end
-
-function isInGame()
-    local module = AutoTracker:ReadU8(0x7e0010, 0)
-    return module > 0x05 and module < 0x55 and module ~= 0x14
-end
-
-function read32BitTimer(segment, baseAddress)
-    local timer = 0
-    timer = timer | (ReadU8(segment, baseAddress + 3) << 24)
-    timer = timer | (ReadU8(segment, baseAddress + 2) << 16)
-    timer = timer | (ReadU8(segment, baseAddress + 1) << 8)
-    timer = timer | (ReadU8(segment, baseAddress + 0) << 0)
-
-    local hours = timer // (60 * 60 * 60)
-    local minutes = (timer % (60 * 60 * 60)) // (60 * 60)
-    local seconds = (timer % (60 * 60)) // (60)
-    local frames = timer % 60
-
-    return hours, minutes, seconds, frames
-end
 
 --Load Functions
 ScriptHost:LoadScript("scripts/auto/itemupdates.lua")
 ScriptHost:LoadScript("scripts/auto/sharedtypeupdates.lua")
 ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
 
---Add Memory Watches
--- Run the in-game status check more frequently (every 250ms) to catch save/quit scenarios more effectively
-ScriptHost:AddMemoryWatch("LTTP Module Id", 0x7e0010, 2, updateModuleIdFromMemorySegment, 250)
---ScriptHost:AddMemoryWatch("LTTP In-Game status", 0x7e0010, 2, updateModuleIdFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Item Data", 0x7ef340, 0x90, updateItemsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Overworld Event Data", 0x7ef280, 0x82, updateOverworldEventsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP NPC Item Data", 0x7ef410, 2, updateNPCItemFlagsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Heart Piece Data", 0x7ef448, 1, updateHeartPiecesFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Heart Container Data", 0x7ef36c, 1, updateHeartContainersFromMemorySegment)
 
-ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Dungeon Data", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Dungeon Pendant Data", 0x7ef374, 1, updateDungeonPendantFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Dungeon Crystal Data", 0x7ef37a, 1, updateDungeonCrystalFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP Overworld Id", 0x7e008a, 2, updateOverworldIdFromMemorySegment)
-ScriptHost:AddMemoryWatch("LTTP World Flag", 0x7ef3ca, 1, updateWorldFlagFromMemorySegment)
-SEGMENT_GTBIGKEYCOUNT = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef42a, 1, updateGTBKFromMemorySegment)
-SEGMENT_GTTORCHROOM = ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef118, 2, updateGTBKFromMemorySegment) --GT Torch Visit
-ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef0d6, 2, updateGTBKFromMemorySegment) --GT Gauntlet Climb Update
-ScriptHost:AddMemoryWatch("LTTP GT BK Game", 0x7ef01a, 2, updateGTBKFromMemorySegment) --Aga2 Update
+--Base Memory Watches
+ScriptHost:AddMemoryWatch("ROM Title", 0x007fc0, 21, updateTitleFromMemorySegment)
+ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 1000)
+
+function initMemoryWatch()
+    STATUS.LastMajorItem = os.time()
+
+    INSTANCE.MEMORY.Items = {}
+    for k, v in pairs(DATA.MEMORY.Items) do
+        INSTANCE.MEMORY.Items[k] = v
+    end
+    INSTANCE.MEMORY.Progress = {}
+    for k, v in pairs(DATA.MEMORY.Progress) do
+        INSTANCE.MEMORY.Progress[k] = v
+    end
+    INSTANCE.MEMORY.Overworld = {}
+    for k, v in pairs(DATA.MEMORY.Overworld) do
+        INSTANCE.MEMORY.Overworld[k] = v
+    end
+    INSTANCE.MEMORY.OverworldItems = {}
+    for k, v in pairs(DATA.MEMORY.OverworldItems) do
+        INSTANCE.MEMORY.OverworldItems[k] = v
+    end
+    INSTANCE.MEMORY.Shops = {}
+    for k, v in pairs(DATA.MEMORY.Shops) do
+        INSTANCE.MEMORY.Shops[k] = v
+    end
+    INSTANCE.MEMORY.Npc = {}
+    for k, v in pairs(DATA.MEMORY.Npc) do
+        INSTANCE.MEMORY.Npc[k] = v
+    end
+    INSTANCE.MEMORY.DungeonChests = {}
+    for i, v in ipairs(DATA.MEMORY.DungeonChests) do
+        INSTANCE.MEMORY.DungeonChests[i] = v
+    end
+    INSTANCE.MEMORY.DungeonKeyDrops = {}
+    for i, v in ipairs(DATA.MEMORY.DungeonKeyDrops) do
+        INSTANCE.MEMORY.DungeonKeyDrops[i] = v
+    end
+    INSTANCE.MEMORY.Bosses = {}
+    for i, v in ipairs(DATA.MEMORY.Bosses) do
+        INSTANCE.MEMORY.Bosses[i] = v
+    end
+    INSTANCE.MEMORY.Underworld = {}
+    for i, v in ipairs(DATA.MEMORY.Underworld) do
+        INSTANCE.MEMORY.Underworld[i] = v
+    end
+    INSTANCE.MEMORY.UnderworldItems = {}
+    for i, v in ipairs(DATA.MEMORY.UnderworldItems) do
+        INSTANCE.MEMORY.UnderworldItems[i] = v
+    end
+    
+    SEGMENTS.DungeonId = ScriptHost:AddMemoryWatch("Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment)
+    SEGMENTS.RoomId = ScriptHost:AddMemoryWatch("Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
+    SEGMENTS.OverworldId = ScriptHost:AddMemoryWatch("Overworld Id", 0x7e008a, 1, updateOverworldIdFromMemorySegment)
+    SEGMENTS.WorldFlag = ScriptHost:AddMemoryWatch("World Flag", 0x7ef3ca, 1, updateWorldFlagFromMemorySegment)
+    
+    SEGMENTS.ItemData = ScriptHost:AddMemoryWatch("Item Data", 0x7ef340, 0x20, updateItemsFromMemorySegment)
+    SEGMENTS.HalfMagicData = ScriptHost:AddMemoryWatch("Half Magic Data", 0x7ef37b, 1, updateHalfMagicFromMemorySegment)
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        INSTANCE.MEMORY.ToggleItems = {}
+        for k, v in pairs(DATA.MEMORY.ToggleItems) do
+            INSTANCE.MEMORY.ToggleItems[k] = v
+        end
+        SEGMENTS.ToggleItemData = ScriptHost:AddMemoryWatch("Toggle Item Data", 0x7ef38c, 3, updateToggleItemsFromMemorySegment)
+        SEGMENTS.ArrowData = ScriptHost:AddMemoryWatch("Arrow Data", 0x7ef377, 1, updateToggleItemsFromMemorySegment)
+    end
+    SEGMENTS.ProgressData = ScriptHost:AddMemoryWatch("Progress Data", 0x7ef3c5, 5, updateProgressFromMemorySegment)
+    SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
+    SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
+    SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
+    SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
+    SEGMENTS.HealthData = ScriptHost:AddMemoryWatch("Health Data", 0x7ef36c, 2, updateHealthFromMemorySegment)
+    SEGMENTS.Collection = ScriptHost:AddMemoryWatch("Collection Rate", 0x7ef423, 2, updateCollectionFromMemorySegment)
+    
+    SEGMENTS.DungeonData = ScriptHost:AddMemoryWatch("Dungeon Items", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
+    SEGMENTS.DungeonKeyData = ScriptHost:AddMemoryWatch("Dungeon Keys", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
+    SEGMENTS.PendantData = ScriptHost:AddMemoryWatch("Pendant Data", 0x7ef374, 1, updateDungeonPendantFromMemorySegment)
+    SEGMENTS.CrystalData = ScriptHost:AddMemoryWatch("Crystal Data", 0x7ef37a, 1, updateDungeonCrystalFromMemorySegment)
+    
+    STATUS.AutotrackerInGame = true
+end
+
+function disposeMemoryWatch()
+    STATUS.AutotrackerInGame = false
+
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.ItemData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.HealthData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.HalfMagicData)
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        ScriptHost:RemoveMemoryWatch(SEGMENTS.ToggleItemData)
+        ScriptHost:RemoveMemoryWatch(SEGMENTS.ArrowData)
+    end
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.ProgressData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.OverworldData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.ShopData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.NPCData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.Collection)
+
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonKeyData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.PendantData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.CrystalData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonId)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomId)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.OverworldId)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.WorldFlag)
+end
+
+function numberOfSetBits(value)
+    value = value - ((value >> 1) & 0x55)
+    value = (value & 0x33) + ((value >> 2) & 0x33)
+    return (((value + (value >> 4)) & 0x0F) * 0x01)
+end

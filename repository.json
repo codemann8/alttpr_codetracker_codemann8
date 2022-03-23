@@ -17,19 +17,11 @@
                     "flags": [ "map", "pins", "chathud", "autotracker" ]
                 },
                 {
-                    "name": "Map Tracker (Map Broadcast)",
-                    "flags": [ "map", "pins", "chathud", "autotracker" ]
-                },
-                {
-                    "name": "Map Tracker (ER Broadcast)",
-                    "flags": [ "map", "pins", "chathud", "autotracker" ]
-                },
-                {
-                    "name": "Item Tracker",
+                    "name": "Item/Key Tracker",
                     "flags": [ "chathud", "autotracker" ]
                 },
                 {
-                    "name": "Item/Key Tracker",
+                    "name": "Vanilla/ROM Hack Tracker",
                     "flags": [ "chathud", "autotracker" ]
                 }
             ]

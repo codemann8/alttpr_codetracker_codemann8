@@ -9,7 +9,7 @@ end
 
 function RoomSelectSlot:onLeftClick()
     if self.roomId > 0 then
-        updateDoorSlots(self.roomId)
+        updateRoomSlots(self.roomId)
     end
 end
 
@@ -18,9 +18,5 @@ function RoomSelectSlot:onRightClick()
 end
 
 function RoomSelectSlot:canProvideCode(code)
-    if code == self.code then
-        return true
-    else
-        return false
-    end
+    return code == self.code
 end

@@ -6,19 +6,21 @@ Join the [Discord](https://discord.gg/Fk4wTn6) to get notified of updates and/or
 - Neonnite - Playing a large role into adding entrance badge icons
 
 ## Overview:
-This package is meant to encompass all aspects that are desired or missing from the existing array of LttPR packages. The intention of this package is to be a complete package, to include and cover all the ways you can play the game, such as entrance shuffle, mystery multiworld, door shuffle, and custom ROM hacks.
+This package is meant to encompass all aspects that are desired or missing from the existing array of LttPR packages. The intention of this package is to be a complete package, to include and cover all the ways you can play the game, such as entrance shuffle, mystery multiworld, door shuffle, overworld shuffle, and custom ROM hacks.
 
 #### Variants:
-All variants (Standard, Keysanity, Inverted, etc) have been combined into one variant where your game mode is set by toggling settings. This allows for Mystery Multiworld support where you don't have to disconnect EmoTracker from the multiworld to change to a different variant (losing all your marked off locations).
+All map variants (Standard, Keysanity, Inverted, etc) have been combined into one variant where your game mode is set by toggling settings. This allows for Mystery Multiworld support where you don't have to disconnect EmoTracker from the multiworld to change to a different variant (losing all your marked off locations).
 - Map Tracker
-- Map Tracker (Map Broadcast)
-- Map Tracker (ER Broadcast)
 - Item/Key Tracker
 - Vanilla/ROM Hack Item Tracker
+
+#### Settings:
+There is a new section for `Settings`. IMPORTANT: In order for the settings to save for the next session, you MUST first use the `Export Overrides` feature to export at least one setting file first. See `Settings` section near the end of this guide.
 
 ## Modes:
 All of the modes can be set by clicking the `Gear` in the `Modes` section. Additionally, there are shortcut icons for many of these modes in the `Modes` section of the tracker.
 - World State
+    - *\*Right-clicking will enable a '2' in the corner, which enables the logic for Inverted 2.0 changes\**
   - Open (Works for Standard also)
   - Inverted
 - Dungeon Items (Keysanity Options, can be toggled separately)
@@ -38,6 +40,14 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
   - Vanilla
   - Basic (Supertiles are shuffled within each dungeon)
   - Crossed (Supertiles are shuffled with all dungeons)
+- Overworld Shuffle
+  - OW Tile Swap "Mixed" (Overworld screens are randomly swapped with the other world)
+  - OW Layout (Overworld transitions are shuffled)
+  - Flute Shuffle (New flute spots are chosen)
+    - *\*This only disables the logic that uses flute to access areas*\*
+    - *\*A future version will provide a way to specify the new flute spots*\*
+  - Whirlpool Shuffle (Whirlpool connections are shuffled)
+    - *\*This only disables the logic that uses whirlpools to access areas*\*
 - Retro Mode (Shows Shops and also possible Take Any Caves)
 - Pool Mode
   - Shopsanity (Shop inventories are shuffled into the item pool)
@@ -60,18 +70,18 @@ To install, you will need to perform the following steps:
 ## Usage:
 #### Tracker Layout
 The first thing you may notice is that a few things are rearranged differently than the other LttPR packages.
-- There are 3 Map Tracker variants, all of which are identical logically, but have different Broadcast Views (a future version of this tracker will combine these 3 when EmoTracker supports making modifications to layouts on the fly)
 - Items
-  - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu, making for better pre-meditated menuing.
+  - Item layout more accurately maintains the ordering and grouping of how it is laid out in the game menu, making for better pre-meditated menuing
 - Dungeons
-  - The `Dungeons` items are arranged in the way that you see the dungeons on the world map, to support the players who prefer a more visual approach to marking dungeons. A traditional-looking layout is available as well, see `Customization` section below for more info.
+  - The `Dungeons` items are arranged in the way that you see the dungeons on the world map, to support the players who prefer a more visual approach to marking dungeons. A traditional-looking layout is available as well, see `Settings` section below for more info.
   - The Big Key icon has been replaced with an icon that supports tracking Map, Compass, and Big Key, for those who wish to incorporate that into figuring out logic or determining whether a map check is worth it. (Left-click toggles BK, right-click cycles thru the combinations of Map and Compass)
-  - The dungeon chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest counts will change on the fly when you change thru the various modes (like Keysanity, etc). The color of the chest counts will indicate the level of access you have to that dungeon, the colors used are identical to the colors used on the map. In `Crossed Door Shuffle` mode, the colors have a different meaning, see the `Door Shuffle` section for more details.
+  - The dungeon chest icons indicate the remaining items (not necessarily the number of chests) to be found. The chest counts will change on the fly when you change thru the various modes (like Keysanity, etc). The color of the chest counts will indicate the level of access you have to that dungeon, the colors used are identical to the colors used on the map. In `Crossed Door Shuffle` mode, the colors have a different meaning, see the `Door Shuffle` section for more details
+- Settings
+  - This is an area where you can enable/disable feature per your own personal preferences. There is also a `Gear` in the `Items` sections that is a shortcut to these Settings. See `Settings` section below for more information
 - Dropdowns
   - For Entrance Shuffle, this area is meant to mark off dropdown entrances as you find them
 - Miscellaneous
   - Most of these icons are niche for mode-specific uses (see `Mode-Specific Features` section below)
-  - The Big Key icon is for the GT BK Guessing Game (see `Autotracking` section below)
 - Map Area
   - Dungeon locations having a larger blip on the map compared to other locations
   - Bosses can be rearranged and the appropriate logic rules flow thru to the location, see `Boss Shuffle` section below
@@ -80,14 +90,12 @@ The first thing you may notice is that a few things are rearranged differently t
   - The Map area features a `Doors` tab, which can be used to track doors in Door Shuffle, see `Door Shuffle` section below
 
 #### Broadcast View
-The Broadcast View is a great way to give viewers a glimse of your progress. It is recommended to install the NDI plugin for OBS and use an NDI Source, this allows for a clean transparent background. In this tracker, there are 3 Map Tracker variants, each with a different Broadcast View.
-- The default variant is the most universal, as it doesn't show a map, thus giving better Mystery support.
-- The Map Broadcast variant shows the regular map in addition to the items
-- The ER Broadcast variant shows the entrance map, which is a bit larger due to the smaller size of the colored dots.
+The Broadcast View is a great way to give viewers a glimse of your progress. It is recommended to install [NDI Tools](https://ndi.tv/tools/) and the [NDI Plugin for OBS](https://github.com/Palakis/obs-ndi/releases) and use an NDI Source, this allows for a clean transparent background.
 
 Maps help with putting as much info on your stream so viewers ask less questions about what you have or haven't done yet. The colored dots have been made bigger compared to other LttPR packages so they are better visible to viewers.
 - Dungeon chests/items have been added to the Broadcast View for better visibility into what dungeons you have already visited.
 - Blips on the map have been made bigger to show up better on Broadcast View
+- Press F2 to quickly open Broadcast View
 
 #### Autotracking
 - Remaining Dungeon Items and Small Keys DO autotrack, unlike the other LttPR trackers.
@@ -96,6 +104,7 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - Aga2 is autotracked when you beat Aga2. *(This does NOT spoil Fast Ganon in Mystery modes)*
 - In Entrance Shuffle, the Dam autotracks when the dam is drained.
 - In Door Shuffle, the Attic autotracks when the TT Attic floor is bombed.
+- In OW Tile Swap (Mixed), the OW screens are automatically flipped.
 - In Legacy modes (playing old seeds or playing ROM hacks), the non-progressive bow and silvers track correctly.
 - The current dungeon is auto-pinned when player enters a dungeon, feature is disabled by default (see `Customization` section below)
 - Advanced development feature, in Beta and disabled by default, output file when certain items are obtained (see `Customization` section below)
@@ -118,7 +127,12 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - In the map area of the tracker, there is a tab labeled `Doors` which can be used to track doors, reducing the need to re-navigate rooms of a dungeon. Using the `Room Group Selector`, you can click on a group to view all the non-linear rooms in that group. You can then click on a room to add it to the list of recently visited rooms. If autotracking is enabled, this part is unnecessary as the rooms will automatically be added to the recently visited rooms. When a room is added to the recently visited rooms, question marks will also appear, by default, where there are doors in that room. Using the `Door Type Selector`, you can select the icon you want to place on a door. Clicking on a door will mark a door with the selected icon. If an icon in the `Door Type Selector` section has a `+` sign in the upper right corner, it means it is an icon group and will cycle thru different icons when you click multiple times on a particular door. Right-clicking a door will reset it to a question mark. When a room comes up in the recently visited rooms, if it was a room that was already previously brought up before and edited, those door icon changes will be remembered and displayed. For convenience, a `Dashboard` tab was also added which displays both the Overworld map and the Doors editor in one simple-to-use screen. Since the base EmoTracker application doesn't have good support for resizeable layouts (outside of Map objects), most of the Door Tracking functionality has been optimized to work for 1920x1080 a window size, or half a window size if using the vertical view.
 - In the `Miscellaneous` section of the tracker, there is a Attic icon, to indicate when you've found and bombed the Thieves' Town attic, logically required to beat Blind (even with Boss Shuffle). This is autotracked.
 - If playing with `Lobby Shuffle` but not `Entrance Shuffle`, it is recommended to also enable `Dungeon Shuffle` under the Entrance Shuffle modes. With this enabled, you can mark the dungeon entrance where Sanctuary is located; this also shows the appropriate logical access from this non-standard starting location.
-- In the map area of the tracker, there is a tab labeled `Dungeon` which shows all the supertiles in the game, which can be used as a reference. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the supertiles. If not, there are separate tabs for each of the dungeons. Boss locations appear as larger blips on the maps.
+- In the map area of the tracker, there is a tab labeled `Dungeons` which shows all the supertiles in the game, which can be used as a reference. The first tab, `All` shows the EG Map for those already familiar with how the vanilla game arranges the supertiles. If not, there are separate tabs for each of the dungeons. Boss locations appear as larger blips on the maps.
+
+#### Overworld Shuffle
+- In `OW Tile Swap` (Mixed) mode, overworld screens are swapped with their other-world counterpart. Enabling this will gray out the entire map until each of the individual screens are determined. Enabling Autotracker will flip these screens automatically. However, there is a manual way to flip them. Enabling `OW Tile Swap` turns the mode icon Blue. If you click again, it turns Yellow; and click again, it turns Red. Yellow means it is 'Single-Edit Mode' which allows you to click on one screen to flip it and automatically exits 'Edit Mode'. Red means you can flip screens indefinitely until you right click on the `OW Tile Swap` icon. While in 'Edit Mode' you will be unable to interact with the Map Locations.
+- In `OW Layout` mode, overworld transitions are shuffled. Your logical access to things are limited to the screens you have visited and the items/entrances/terrain that allow for cross-screen travel.
+  - *\*Although this is an option in the tracker, I recommend using [Dunka/Community Tracker](https://alttprtracker.dunka.net) to track OW Layout. You can use both trackers in unison for best effect.\**
 
 #### Retro Mode
 - In `Retro Mode`, when not in Entrance Shuffle, Shops and Take Any Caves show up as smaller blips on the map.
@@ -127,36 +141,46 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - In the `Miscellaneous` section of the tracker, there is a Take Any Cave icon. Left-clicking this will mark that you found the Take Any Sword, right-clicking will mark all the Take Any Heart Containers that you find.
 
 ## Customization:
-EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden as per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
+EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden and modified per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
 
-For instance, there are settings files that can be modified to enable or disable various features. The settings files will be found under the `scripts/settings` directory. More information on the various .lua settings files are in the below section.
+As far as information regarding the structure or syntax of the layout definition, or specific questions as to 'how do I mod it to do this specific thing', these are better suited for inquiry in the [EmoTracker Discord](https://emotracker.net/community/).
 
-#### Settings:
-The settings are broken out into several files, grouped by relation or its usage.
+## Settings:
+There is a new tab called `Settings` where users can specify personal preferences in tracker behavior. Additionally, there is a `Gear` icon in the `Items` section that also brings up the same display.
 
-- tracking.lua (Settings relating to content that is tracked)
-  - AUTOTRACKER_DISABLE_ITEM_TRACKING - Changes whether items are auto-tracked or not
-  - AUTOTRACKER_DISABLE_LOCATION_TRACKING - Changes whether map locations are auto-tracked or not
-  - AUTOTRACKER_DISABLE_REGION_TRACKING - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance shuffle)
+In order for the settings to save properly, you must first export at least one of the settings files (explained in the previous `Customization` section). These settings files will be found in the `settings` directory.
+
+The settings are broken out into several categories, an explanation for each of them are listed below.
+
+#### User Preferences
+  - Show All Locations - Option to `Show All Locations` by default
+  - Always Allow Clearing Locations - Option to `Always Allow Chest Manipulation` by default
+  - Auto Pin on Item Capture - Option to `Pin Locations on Item Capture` by default
+  - Auto Un-pin On Location Cleared - Option to `Unpin Locations when Cleared` by default
+  - Race Mode Default - Option to enable `Race Mode` by default
+  - Enable Debug Logging - This outputs various verbose logging messages to the Developer Console
+#### Layout Options
+  - Use Traditional Dungeon Layout - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
+  - Use Thin Horizontal Pane - This enables an alternate thinner layout of the item/dungeon portion of the tracker 
+  - Door Slot Method - In door rando mode, this determines the order in which rooms will occupy slots
+    - 1: This prioritizes replacing the oldest room with the current room, unless the room already exists (this ensures the 4 most recent rooms are displayed)
+    - 2: This ensures the most recent room stays in the first slot, bumping every room down a slot
+    - 3: This puts the most recent room in the next slot in the rotation, keeping all slots in their place
+#### Broadcast Options
+  - Map Direction - This determines which side the map shows on the Broadcast View, the `X` option hides the map
+  - Alternate Layout
+    - 1: Simple Item/Key Grid (default)
+    - 2: Advanced View - Has the largest map and most information displayed
+    - 3: Custom Broadcast - Custom user-defined view - Override `layouts/broadcast_custom.json` to define the layout - See `Customization` section below
+#### Autotracker
+  - Auto Pin Current Dungeon - This will auto-pin the current dungeon you are in when you enter a new dungeon
+  - Disable Auto Dungeon Item Tracking - Changes whether dungeon items (keys/maps/compasses) are auto-tracked or not
+  - Disable Auto Location Tracking - Changes whether map locations are auto-tracked or not
+  - Disable Auto Region Tracking - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance/overworld shuffle)
     - *\*This is already disabled in Race Mode\**
-- defaults.lua (Settings that are defaults, can be changed by user in app)
-  - PREFERENCE_DISPLAY_ALL_LOCATIONS - Option to `Show All Locations` by default
-  - PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS - Option to `Always Allow Chest Manipulation` by default
-  - PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE - Option to `Pin Locations on Item Capture` by default
-  - PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR - Option to `Unpin Locations when Cleared` by default
-  - PREFERENCE_DEFAULT_RACE_MODE_ON - Option to enable `Race Mode` by default
-- settings.lua (Features available specific to functionality in this package)
-  - AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON - This will auto-pin the current dungeon you are in when you enter a new dungeon
-  - LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW - This enables a more traditional-looking layout if the visual-oriented layout isn't favorable
-  - LAYOUT_USE_THIN_HORIZONTAL_PANE - This enables an alternate thinner layout of the item/dungeon portion of the tracker 
-  - LAYOUT_ROOM_SLOT_METHOD - In door rando mode, this determines the order in which rooms will occupy slots
-    - `top`: This ensures the most recent room stays in the first slot, bumping every room down a slot
-    - `next`: This puts the most recent room in the next slot in the rotation, keeping all slots in their place
-    - `exist` (default): Same as 'next' but if a room already exists, it will use that slot instead, but any new rooms after that will continue from the previous point (this ensures the 4 most recent rooms are displayed)
-- fileio.lua (Features relating to files that are output when certain events are triggered)
-  - AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
-  - AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
-  - AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
-- experimental.lua (Settings to enable experimental features)
-  - EXPERIMENTAL_ENABLE_DYNAMIC_REQUIREMENTS - For experimental use only, in crossed door shuffle, there are two capture grids added to each dungeon, to which the user can cycle thru the various items that can lock a dungeon. This is useful for marking items that you need to complete a dungeon later.
-  - EXPERIMENTAL_INVERTED_NEW_LOGIC - New logic rules for the upcoming version of Inverted, currently available in the OWR branch
+  - Disable Auto OW Tile Swap Tracking - Changes whether OW screens are flipped automatically upon visiting them. This only matters when `OW Tile Swap` mode is enabled.
+#### File Output
+  - *\*(Features relating to files that are output when certain events are triggered)\**
+  - Enable External Item File - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
+  - Enable External Dungeon File - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
+  - Enable External Health File - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status

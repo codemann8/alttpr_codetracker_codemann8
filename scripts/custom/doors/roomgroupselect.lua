@@ -31,30 +31,24 @@ function RoomGroupSelection:getState()
 end
 
 function RoomGroupSelection:updateIcon()
-    if self:getState() > 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. string.upper(RoomGroupSelection.Groups[self.index]) .. ".png", "overlay|images/selectedlabel.png")
-    else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/" .. string.upper(RoomGroupSelection.Groups[self.index]) .. ".png")
-    end
+    self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/dungeon/" .. string.upper(RoomGroupSelection.Groups[self.index]) .. ".png", self:getState() == 0 and "" or "overlay|images/doortracker/overlays/selectedlabel.png")
 end
 
 function RoomGroupSelection:postUpdate()
-    --update neighbors
+    --Update Neighbors
     for i = 1, #RoomGroupSelection.Groups do
         if RoomGroupSelection.Groups[i] and self.index ~= i then
-            local item = Tracker:FindObjectForCode("roomgroup_" .. RoomGroupSelection.Groups[i])
-            if item then
-                item.ItemState:setState(0)
-            end
+            Tracker:FindObjectForCode("roomgroup_" .. RoomGroupSelection.Groups[i]).ItemState:setState(0)
         end
     end
-    --update room select slots
+
+    --Update Room Select Slots
     for i = 1, 9 do
         local item = Tracker:FindObjectForCode("roomselect_" .. i)
         if item then
             if RoomGroupSelection.Selection > 0 and RoomGroupSelection.Content[RoomGroupSelection.Groups[RoomGroupSelection.Selection]][i] then
                 item.ItemState.roomId = RoomGroupSelection.Content[RoomGroupSelection.Groups[RoomGroupSelection.Selection]][i]
-                item.Icon = ImageReference:FromPackRelativePath("images/rooms/" .. string.format("%02x", item.ItemState.roomId) .. ".png")
+                item.Icon = ImageReference:FromPackRelativePath("images/maps/rooms/" .. string.format("%02x", item.ItemState.roomId) .. ".png")
             else
                 item.ItemState.roomId = 0
                 item.Icon = nil
@@ -67,7 +61,6 @@ function RoomGroupSelection:onLeftClick()
     local state = (self:getState() + 1) % 2
     RoomGroupSelection.Selection = state * self.index
     self:setState(state)
-    self:updateIcon()
     self:postUpdate()
 end
 
@@ -76,24 +69,7 @@ function RoomGroupSelection:onRightClick()
 end
 
 function RoomGroupSelection:canProvideCode(code)
-    if code == self.code then
-        return true
-    else
-        return false
-    end
-end
-
-function RoomGroupSelection:providesCode(code)
-    if code == self.code and self:getState() ~= 0 then
-        return self:getState()
-    end
-    return 0
-end
-
-function RoomGroupSelection:advanceToCode(code)
-    if code == nil or code == self.code then
-        self:setState((self:getState() + 1) % 2)
-    end
+    return code == self.code
 end
 
 function RoomGroupSelection:propertyChanged(key, value)

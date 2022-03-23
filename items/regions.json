@@ -3,956 +3,968 @@
     {
         "name": "Lost Woods West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lost_woods_west"
     },
     {
         "name": "Lost Woods East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lost_woods_east"
     },
     {
         "name": "Lumberjack Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lumberjack"
     },
     {
         "name": "Death Mountain West Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dm_west_top"
     },
     {
         "name": "Death Mountain West Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dm_west_bottom"
     },
     {
         "name": "Death Mountain East Top Hammer Bridge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dm_east_top_hammer"
     },
     {
         "name": "Death Mountain East Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dm_east_top"
     },
     {
         "name": "Death Mountain East Spiral Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "dm_east_spiral"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dm_east_spiral"
     },
     {
         "name": "Death Mountain East Mimic Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "dm_east_mimic"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dm_east_mimic"
     },
     {
         "name": "Death Mountain East Connector Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "dm_east_connect"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dm_east_connect"
     },
     {
         "name": "Death Mountain East Bottom Hookshot Bridge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dm_east_bottom_hookshot"
     },
     {
         "name": "Death Mountain East Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "dm_east_bottom"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dm_east_bottom"
     },
     {
         "name": "Turtle Rock Pegs Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_trpegs"
     },
     {
         "name": "Mountain Entry Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_mountainentry"
     },
     {
-        "name": "DM Entry Access",
+        "name": "Mountain Entry Entry Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "lw_dmentry"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_mountainentry_entry"
     },
     {
-        "name": "DM Exit Access",
+        "name": "Mountain Entry Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "lw_dmexit"
-    },
-    {
-        "name": "Zora Approach Access",
-        "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ow_zora_approach"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_mountainentry_ledge"
     },
     {
         "name": "Zora Waterfall Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "zora_waterfall"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_zora_waterfall"
+    },
+    {
+        "name": "Zora Waterfall Fairy Access",
+        "type": "toggle",
+        "img": "images/icons/gomode.png",
+        "codes": "ow_zora_waterfall_fairy"
+    },
+    {
+        "name": "Zora Access",
+        "type": "toggle",
+        "img": "images/icons/gomode.png",
+        "codes": "ow_zora"
     },
     {
         "name": "Lost Woods Pass West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lost_woods_pass_west"
     },
     {
         "name": "Lost Woods Pass East Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lost_woods_pass_east_top"
     },
     {
         "name": "Lost Woods Pass East Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_lost_woods_pass_east_bottom"
     },
     {
         "name": "Kakariko Fortune Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_kak_fortune"
     },
     {
         "name": "Kakariko Pond Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_kak_pond"
     },
     {
         "name": "Bonk Rocks Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sanc_ledge"
     },
     {
         "name": "Sanctuary Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sanc"
     },
     {
         "name": "Graveyard Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_graveyard"
     },
     {
         "name": "Graveyard Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "graveyard_ledge"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_graveyard_ledge"
     },
     {
         "name": "King's Tomb Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "kings_tomb"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_graveyard_tomb"
     },
     {
         "name": "River Bend West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_river_west"
     },
     {
         "name": "River Bend East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_river_east"
     },
     {
         "name": "River Bend Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_river_water"
     },
     {
         "name": "Potion Shop Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_witch"
     },
     {
         "name": "Potion Shop East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_witch_east"
     },
     {
         "name": "Potion Shop Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_witch_water"
     },
     {
-        "name": "Zora Warning Access",
+        "name": "Zora Approach Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ow_zora_warning"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_zora_approach"
     },
     {
         "name": "Kakariko Village Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_kakariko"
     },
     {
         "name": "Grass House Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "grass_house"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_kak_grasshouse"
     },
     {
         "name": "Bomb Hut Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "bomb_hut"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_kak_bombhut"
     },
     {
         "name": "Forgotten Forest Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_forest"
     },
     {
         "name": "Castle Perimeter Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_castle"
     },
     {
         "name": "Castle Southwest Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_castle_southwest"
     },
     {
         "name": "Castle East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_castle_east"
     },
     {
         "name": "Castle Second Floor Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "castle_top"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_castle_ledge"
     },
     {
         "name": "Castle Courtyard Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "castle_courtyard"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_castle_courtyard"
     },
     {
         "name": "Wooden Bridge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_wooden_bridge"
     },
     {
         "name": "Wooden Bridge Northeast Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_wooden_bridge_northeast"
     },
     {
         "name": "Eastern Palace Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_eastern_palace"
     },
     {
         "name": "Blacksmith Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_blacksmith"
     },
     {
         "name": "Sand Dunes Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sand_dunes"
     },
     {
         "name": "Race Game Tease Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_race_game"
     },
     {
         "name": "Race Game Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "race_game"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_race_ledge"
     },
     {
         "name": "Kakariko Suburb Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_kak_suburb"
     },
     {
         "name": "Flute Boy Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_flute_pass"
     },
     {
         "name": "Flute Boy Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_flute"
     },
     {
         "name": "Central Bonk Rocks Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_central_bonk"
     },
     {
         "name": "Links House Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_links"
     },
     {
         "name": "Stone Bridge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_stone_bridge"
     },
     {
         "name": "Stone Bridge Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_stone_bridge_water"
     },
     {
         "name": "Tree Line Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_treeline"
     },
     {
         "name": "Tree Line Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_treeline_water"
     },
     {
         "name": "Eastern Nook Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_eastern_nook"
     },
     {
         "name": "Desert Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_desert"
     },
     {
         "name": "Desert Tablet Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_desert_tablet"
     },
     {
         "name": "Desert Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "desert_ledge"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_desert_ledge"
     },
     {
         "name": "Desert Back Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "desert_back"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_desert_back"
     },
     {
         "name": "Desert Front Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "desert_front"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_desert_front"
     },
     {
         "name": "Cave 45 Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_cave45"
     },
     {
         "name": "Cave 45 Bush Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_cave45_bush"
     },
     {
         "name": "C Whirlpool West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_cwhirlpool_west"
     },
     {
         "name": "C Whirlpool East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_cwhirlpool_east"
     },
     {
         "name": "Statues Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_statues"
     },
     {
         "name": "Lake Hylia Northwest Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hylia_northwest"
     },
     {
         "name": "Lake Hylia Northeast Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hylia_northeast"
     },
     {
         "name": "Lake Hylia South Shore Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hylia_shore"
     },
     {
         "name": "Lake Hylia Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hylia_water"
     },
     {
         "name": "Upgrade Fairy Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "upgrade_fairy"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_hylia_upgrade"
     },
     {
         "name": "Ice Cave Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_cave"
     },
     {
         "name": "Desert Pass Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_desert_pass_ledge"
     },
     {
         "name": "Desert Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_desert_pass"
     },
     {
         "name": "Desert Pass Southeast Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_desert_pass_southeast"
     },
     {
         "name": "Dam Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dam"
     },
     {
         "name": "South Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_south_pass"
     },
     {
         "name": "Octoballoon Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_octoballoon"
     },
     {
         "name": "Octoballoon Waterfall Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_octoballoon_waterfall"
     },
     //Dark World
     {
         "name": "Skull Woods Forgotten Path West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_path_west"
     },
     {
         "name": "Skull Woods Forgotten Path East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_path_east"
     },
     {
         "name": "Skull Woods Front Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_front"
     },
     {
         "name": "Skull Woods Portal Entry Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_portal"
     },
     {
         "name": "Skull Woods Back Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "sw_area"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_sw_back"
     },
     {
         "name": "Dark Lumberjack Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_lumberjack"
     },
     {
         "name": "Dark Death Mountain West Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ddm_west_top"
     },
     {
         "name": "Dark Death Mountain West Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ddm_west_bottom"
     },
     {
         "name": "Dark Death Mountain East Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ddm_east_top"
     },
     {
         "name": "Dark Death Mountain East Dead End Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ddm_east_deadend"
     },
     {
         "name": "Dark Death Mountain East Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ddm_east_bottom"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_ddm_east_bottom"
     },
     {
         "name": "Dark Death Mountain Floating Island Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ddm_floating"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_ddm_floating"
     },
     {
         "name": "Dark Death Mountain TR Bridge Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ddm_tr_bridge"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_ddm_tr_bridge"
     },
     {
         "name": "Dark Death Mountain TR Safety Door Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ddm_tr_safety"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_ddm_tr_safety"
     },
     {
         "name": "Turtle Rock Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_turtlerock"
     },
     {
         "name": "Bumper Cave Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bumper"
     },
     {
         "name": "Bumper Ledge Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "bumper_cave"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_bumper_ledge"
     },
     {
         "name": "Bumper Entry Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "bumper_entry"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_bumper_entry"
     },
     {
         "name": "Catfish Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_catfish"
     },
     {
         "name": "Skull Woods Pass West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_pass_west"
     },
     {
         "name": "Skull Woods Pass East Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_pass_east_top"
     },
     {
         "name": "Skull Woods Pass East Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_sw_pass_east_bottom"
     },
     {
         "name": "Outcasts Fortune Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_outcast_fortune"
     },
     {
         "name": "Outcasts Pond Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_outcast_pond"
     },
     {
         "name": "Dark Chapel Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_chapel"
     },
     {
         "name": "Dark Graveyard Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_graveyard"
     },
     {
         "name": "Qirn Jump West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_qirn_west"
     },
     {
         "name": "Qirn Jump East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_qirn_east"
     },
     {
         "name": "Qirn Jump Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_qirn_water"
     },
     {
         "name": "Dark Witch Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_witch"
     },
     {
         "name": "Dark Witch East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_witch_east"
     },
     {
         "name": "Dark Witch Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_witch_water"
     },
     {
         "name": "Catfish Approach Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_catfish_approach"
     },
     {
         "name": "Village of Outcasts Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_outcasts"
     },
     {
         "name": "Hammer House Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "hammer_house"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_outcasts_hammer"
     },
     {
         "name": "Shield Shop Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_shield_shop"
     },
     {
         "name": "Pyramid Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_pyramid"
     },
     {
         "name": "Pyramid Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_pyramid_pass"
     },
     {
         "name": "Broken Bridge West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_broken_bridge_west"
     },
     {
         "name": "Broken Bridge East Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_broken_bridge_east_top"
     },
     {
         "name": "Broken Bridge East Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_broken_bridge_east_bottom"
     },
     {
         "name": "Palace of Darkness Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_palace"
     },
     {
         "name": "Hammer Pegs Entry Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ow_hammerpegs"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_hammerpegs_entry"
     },
     {
         "name": "Hammer Pegs Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "hammer_pegs"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_hammerpegs"
     },
     {
         "name": "Dark Dunes Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_dunes"
     },
     {
         "name": "Dig Game Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dig_game"
+    },
+    {
+        "name": "Dig Game Ledge Access",
+        "type": "toggle",
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dig_ledge"
     },
     {
         "name": "Frog Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_frog"
     },
     {
         "name": "Archery Game Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_archery"
     },
     {
         "name": "Stumpy Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_stumpy_pass"
     },
     {
         "name": "Stumpy Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_stumpy"
     },
     {
         "name": "Dark Central Bonk Rocks Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_bonk"
     },
     {
         "name": "Bomb Shop Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bomb_shop"
     },
     {
         "name": "Hammer Bridge Top Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hammer_bridge_top"
     },
     {
         "name": "Hammer Bridge Bottom Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hammer_bridge_bottom"
     },
     {
         "name": "Dark Tree Line Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ow_dark_tree_line"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dark_treeline"
     },
     {
         "name": "Dark Tree Line Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ow_dark_tree_line_water"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_dark_treeline_water"
     },
     {
         "name": "Palace of Darkness Nook Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_nook"
     },
     {
         "name": "Mire Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "mire_area"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_mire"
     },
     {
         "name": "Circle of Bushes Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bush_circle"
     },
     {
         "name": "Circle of Bushes Blocked Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bush_circle_blocked"
     },
     {
         "name": "Dark C Whirlpool West Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_cwhirlpool_west"
     },
     {
         "name": "Dark C Whirlpool East Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_cwhirlpool_east"
     },
     {
         "name": "Hype Cave Area Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_hype"
     },
     {
         "name": "Ice Lake Northwest Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_northwest"
     },
     {
         "name": "Ice Lake Northeast Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_northeast"
     },
     {
         "name": "Ice Lake Southwest Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_southwest"
     },
     {
         "name": "Ice Lake Southeast Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_southeast"
     },
     {
         "name": "Ice Lake Water Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_ice_water"
     },
     {
         "name": "Ice Palace Entrance Access",
         "type": "toggle",
-        "img": "images/0062.png",
-        "codes": "ip_area"
+        "img": "images/icons/gomode.png",
+        "codes": "ow_ice_palace"
     },
     {
         "name": "Shopping Mall Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_shopping_mall"
     },
     {
         "name": "Swamp Nook Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_swamp_nook"
     },
     {
         "name": "Swamp Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_swamp"
     },
     {
         "name": "Dark South Pass Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_dark_south_pass"
     },
     {
         "name": "Bomber Corner Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bomber_corner"
     },
     {
         "name": "Bomber Corner Waterfall Access",
         "type": "toggle",
-        "img": "images/0062.png",
+        "img": "images/icons/gomode.png",
         "codes": "ow_bomber_corner_waterfall"
     }
 ]

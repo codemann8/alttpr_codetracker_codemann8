@@ -1,0 +1,345 @@
+{
+    "broadcast_item_v_grid": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "left",
+                "margin": 0,
+                "item_margin": "1,2",
+                "item_size": 32,
+                "rows": [
+                    [
+                        "bow",
+                        "boomerang_red",
+                        "hookshot",
+                        "bomb",
+                        ""
+                    ],
+                    [
+                        "firerod",
+                        "icerod",
+                        "bombos",
+                        "ether",
+                        "quake"
+                    ],
+                    [
+                        "lamp",
+                        "hammer",
+                        "",
+                        "net",
+                        "book"
+                    ],
+                    [
+                        "bottle",
+                        "somaria",
+                        "byrna",
+                        "cape",
+                        "mirror"
+                    ],
+                    [
+                        "boots",
+                        "lift1",
+                        "flippers",
+                        "pearl",
+                        "halfmagic"
+                    ],
+                    [
+                        "sword",
+                        "shield",
+                        "armor",
+                        "agas",
+                        "gomode"
+                    ]
+                ]
+            },
+            {
+                "type": "item",
+                "item": "shovel_used",
+                "width": 24,
+                "margin": "8,82,0,0"
+            },
+            {
+                "type": "item",
+                "item": "flute",
+                "width": 24,
+                "margin": "-24,75,0,0"
+            },
+            {
+                "type": "item",
+                "item": "mushroom_used",
+                "width": 24,
+                "margin": "151,16,0,0"
+            },
+            {
+                "type": "item",
+                "item": "powder_used",
+                "width": 24,
+                "margin": "114,1,0,0"
+            }
+        ]
+    },
+    "broadcast_keys_grid": {
+        "type": "itemgrid",
+        "v_alignment": "center",
+        "margin": 0,
+        "item_margin": "1,1",
+        "item_size": 26,
+        "badge_font_size": 16,
+        "rows": [
+            [ "hc_label", "easternpalace", "desertpalace", "towerofhera", "at_label", "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock", "gt_label" ],
+            [ "hc_item", "ep_item", "dp_item", "toh_item", "at_item", "pod_item", "sp_item", "sw_item", "tt_item", "ip_item", "mm_item", "tr_item", "gt_item" ],
+            [ "hc_smallkey", "ep_smallkey", "dp_smallkey", "toh_smallkey", "at_smallkey", "pod_smallkey", "sp_smallkey", "sw_smallkey", "tt_smallkey", "ip_smallkey", "mm_smallkey", "tr_smallkey", "gt_smallkey" ],
+            [ "hc_bigkey", "ep_bigkey", "dp_bigkey", "toh_bigkey", "at_bigkey", "pod_bigkey", "sp_bigkey", "sw_bigkey", "tt_bigkey", "ip_bigkey", "mm_bigkey", "tr_bigkey", "gt_bigkey" ]
+        ]
+    },
+    "broadcast_lw_keys_grid": {
+        "type": "itemgrid",
+        "v_alignment": "center",
+        "margin": 0,
+        "item_margin": "0,0.5",
+        "item_size": 32,
+        "badge_font_size": 16,
+        "rows": [
+            [ "hc_label", "hc_item", "hc_smallkey", "hc_bigkey" ],
+            [ "easternpalace", "ep_item", "ep_smallkey", "ep_bigkey" ],
+            [ "desertpalace", "dp_item", "dp_smallkey", "dp_bigkey" ],
+            [ "towerofhera", "toh_item", "toh_smallkey", "toh_bigkey" ],
+            [ "at_label", "at_item", "at_smallkey", "at_bigkey" ]
+        ]
+    },
+    "broadcast_dw_keys_grid": {
+        "type": "itemgrid",
+        "v_alignment": "center",
+        "margin": 0,
+        "item_margin": "4.5,0",
+        "item_size": 32,
+        "badge_font_size": 16,
+        "rows": [
+            [ "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock", "gt_label" ],
+            [ "pod_item", "sp_item", "sw_item", "tt_item", "ip_item", "mm_item", "tr_item", "gt_item" ],
+            [ "pod_smallkey", "sp_smallkey", "sw_smallkey", "tt_smallkey", "ip_smallkey", "mm_smallkey", "tr_smallkey", "gt_smallkey" ],
+            [ "pod_bigkey", "sp_bigkey", "sw_bigkey", "tt_bigkey", "ip_bigkey", "mm_bigkey", "tr_bigkey", "gt_bigkey" ]
+        ]
+    },
+    "broadcast_standard": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": 10,
+        "content": [
+            {
+                "type": "layout",
+                "margin": 0,
+                "max_width": 375,
+                "max_height": 200,
+                "key": "broadcast_map"
+            },
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": 0,
+                        "content": [
+                            {
+                                "type": "layout",
+                                "margin": 0,
+                                "max_width": 200,
+                                "max_height": 360,
+                                "key": "broadcast_v_map"
+                            },
+                            {
+                                "type": "array",
+                                "orientation": "vertical",
+                                "v_alignment": "top",
+                                "background": "#3F000000",
+                                "margin": 0,
+                                "content": [
+                                    {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "margin": "0,0,4,0",
+                                        "content": [
+                                            {
+                                                "type": "layout",
+                                                "margin": 0,
+                                                "key": "broadcast_item_grid"
+                                            },
+                                            {
+                                                "type": "layout",
+                                                "margin": "-4,-2,0,0",
+                                                "key": "broadcast_lw_keys_grid"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "margin": "2,-4,0,6",
+                                        "content": [
+                                            {
+                                                "type": "layout",
+                                                "margin": "0,0,10,0",
+                                                "key": "broadcast_dw_keys_grid"
+                                            },
+                                            {
+                                                "type": "array",
+                                                "orientation": "vertical",
+                                                "margin": 0,
+                                                "content": [
+                                                    {
+                                                        "type": "itemgrid",
+                                                        "h_alignment": "center",
+                                                        "margin": "0,0,0,2",
+                                                        "item_margin": 0,
+                                                        "item_size": 32,
+                                                        "badge_font_size": 16,
+                                                        "rows": [
+                                                            [ "agas" ],
+                                                            [ "gt_crystals" ],
+                                                            [ "goal_setting" ]
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "itemgrid",
+                                                        "h_alignment": "center",
+                                                        "margin": 0,
+                                                        "item_margin": 0,
+                                                        "item_size": 32,
+                                                        "badge_font_size": 16,
+                                                        "rows": [
+                                                            [ "race_mode_small" ]
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "layout",
+                                "margin": 0,
+                                "max_width": 200,
+                                "max_height": 360,
+                                "key": "broadcast_v_right_map"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "layout",
+                "margin": 0,
+                "max_width": 375,
+                "max_height": 200,
+                "key": "broadcast_bottom_map"
+            }
+        ]
+    },
+    "broadcast_full": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": 10,
+        "content": [
+            {
+                "type": "array",
+                "orientation": "vertical",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": 0,
+                        "content": [
+                            {
+                                "type": "layout",
+                                "v_alignment": "center",
+                                "margin": "-2,-2,0,0",
+                                "max_width": 500,
+                                "max_height": 300,
+                                "key": "shared_map"
+                            },
+                            {
+                                "type": "container",
+                                "background": "#3F000000",
+                                "margin": 0,
+                                "content": {
+                                    "type": "itemgrid",
+                                    "h_alignment": "center",
+                                    "margin": "2,2,3,0",
+                                    "item_margin": "0,3",
+                                    "item_size": 42,
+                                    "badge_font_size": 20,
+                                    "rows": [
+                                        [ "gt_crystals" ],
+                                        [ "goal_setting" ],
+                                        [ "dam" ],
+                                        [ "attic" ],
+                                        [ "race_mode_small" ]
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "array",
+                        "orientation": "horizontal",
+                        "margin": "0,0,0,0",
+                        "content": [
+                            {
+                                "type": "container",
+                                "background": "#3F000000",
+                                "margin": 0,
+                                "content": {
+                                    "type": "layout",
+                                    "margin": "6,2,-1,6",
+                                    "key": "broadcast_item_v_grid"
+                                }
+                            },
+                            {
+                                "type": "container",
+                                "v_alignment": "top",
+                                "background": "#3F000000",
+                                "margin": 0,
+                                "content": {
+                                    "type": "layout",
+                                    "margin": "0,2,6,4",
+                                    "key": "broadcast_keys_grid"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "broadcast_vanilla": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": 10,
+        "content": [
+            {
+                "type": "container",
+                "background": "#3F000000",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "layout",
+                        "margin": 0,
+                        "key": "broadcast_item_grid"
+                    }
+                ]
+            }
+        ]
+    },
+    "tracker_broadcast": {
+        "type": "layout",
+        "key": "blank",
+        "margin": 0
+    }
+}
