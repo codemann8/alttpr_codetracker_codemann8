@@ -313,7 +313,7 @@
                         "h_alignment": "left",
                         "v_alignment": "center",
                         "margin": "4,0,0,2",
-                        "text": "Enable Auto Pin Current Dungeon"
+                        "text": "Auto Pin Current Dungeon"
                     }
                 ]
             },
