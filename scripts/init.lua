@@ -9,17 +9,17 @@ ScriptHost:LoadScript("settings/experimental.lua")
 
 
 --Classes & SDK
+ScriptHost:LoadScript("scripts/sdk/base/class.lua")
+ScriptHost:LoadScript("scripts/sdk/base/custom_item.lua")
 if Tracker.ActiveVariantUID ~= "vanilla" then
-    ScriptHost:LoadScript("scripts/sdk/base/class.lua")
-    ScriptHost:LoadScript("scripts/sdk/base/custom_item.lua")
     ScriptHost:LoadScript("scripts/sdk/chestcounter.lua")
     ScriptHost:LoadScript("scripts/sdk/surrogateitem.lua")
     ScriptHost:LoadScript("scripts/sdk/actionitem.lua")
 end
 
 --Custom Classes
+ScriptHost:LoadScript("scripts/custom/setting.lua")
 if Tracker.ActiveVariantUID ~= "vanilla" then
-    ScriptHost:LoadScript("scripts/custom/setting.lua")
     ScriptHost:LoadScript("scripts/custom/savestorage.lua")
     ScriptHost:LoadScript("scripts/custom/extchestcounter.lua")
     ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
@@ -66,13 +66,12 @@ Tracker:AddItems("items/items.json")
 if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddItems("items/misc.json")
 end
-
 if Tracker.ActiveVariantUID ~= "vanilla" then
     Tracker:AddItems("items/modes.json")
     Tracker:AddItems("items/labels.json")
-    Tracker:AddItems("items/prizes.json")
     Tracker:AddItems("items/dungeon_items.json")
 end
+Tracker:AddItems("items/prizes.json")
 
 if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddItems("items/regions.json")
@@ -80,8 +79,8 @@ if Tracker.ActiveVariantUID == "full_tracker" then
 end
 
 --Load Custom Item Instances
+loadSettings()
 if Tracker.ActiveVariantUID ~= "vanilla" then
-    loadSettings()
     loadMCBK()
     loadModes()
     loadSwaps()
@@ -121,9 +120,7 @@ if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddLayouts("layouts/maps.json")
 end
 
-if Tracker.ActiveVariantUID ~= "vanilla" then
-    Tracker:AddLayouts("layouts/settings.json")
-end
+Tracker:AddLayouts("layouts/settings.json")
 if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddLayouts("layouts/doors.json")
 end

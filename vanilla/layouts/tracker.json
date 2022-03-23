@@ -1,5 +1,5 @@
 {
-    "tracker_default": {
+    "tracker_horizontal": {
         "type": "container",
         "background": "#877373",
         "content": {
@@ -10,24 +10,103 @@
             "scale": 1.25,
             "content": [
                 {
-                    "type": "group",
-                    "header": "Items",
-                    "margin": 0,
-                    "header_content": {
-                        "type": "container",
-                        "content": [
-                            {
+                    "type": "array",
+                    "orientation": "horizontal",
+                    "content": [
+                        {
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "top",
+                            "margin": "0,0,2,0",
+                            "header_content": {
                                 "type": "button_popup",
                                 "style": "settings",
                                 "popup_background": "#55212121",
-                                "layout": "shared_settings"
-                            }
-                        ]
-                    },
+                                "layout": "shared_settings" // settings.json
+                            },
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_item_grid" // shared_base.json
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Dungeons",
+                            "margin": "0,0,2,0",
+                            "content": [
+                                {
+                                    "type": "array",
+                                    "orientation": "horizontal",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_basic_lw_grid" // shared_base.json
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_basic_dw_grid" // shared_base.json
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "tracker_vertical": {
+        "type": "container",
+        "background": "#877373",
+        "content": {
+            "type": "dock",
+            "dropshadow": true,
+            "h_alignment": "left",
+            "v_alignment": "top",
+            "scale": 1.25,
+            "content": [
+                {
+                    "type": "array",
+                    "orientation": "vertical",
                     "content": [
                         {
-                            "type": "layout",
-                            "key": "shared_item_grid"
+                            "type": "group",
+                            "header": "Items",
+                            "dock": "left",
+                            "header_content": {
+                                "type": "button_popup",
+                                "style": "settings",
+                                "popup_background": "#55212121",
+                                "layout": "shared_settings" // settings.json
+                            },
+                            "content": [
+                                {
+                                    "type": "layout",
+                                    "key": "shared_item_grid" // shared_base.json
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "header": "Dungeons",
+                            "content": [
+                                {
+                                    "type": "array",
+                                    "orientation": "horizontal",
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_basic_lw_grid" // shared_base.json
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "key": "shared_basic_dw_grid" // shared_base.json
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

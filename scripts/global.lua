@@ -488,7 +488,11 @@ function updateLayout(setting)
     end
     if setting == nil or setting.file == "broadcast.lua" then
         if Tracker.ActiveVariantUID == "vanilla" then
-            Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_vanilla")
+            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_vanilla_full")
+            else
+                Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_vanilla")
+            end
         elseif CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and Tracker.ActiveVariantUID == "full_tracker" then
             Layout:FindLayout("tracker_broadcast").Root.Layout = Layout:FindLayout("broadcast_full")
         elseif CONFIG.BROADCAST_ALTERNATE_LAYOUT == 3 then

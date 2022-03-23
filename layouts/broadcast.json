@@ -1,4 +1,77 @@
 {
+    "broadcast_item_grid": {
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_margin": "0,0,2,10",
+                "rows": [
+                    [
+                        "bow",
+                        "boomerang_red",
+                        "hookshot",
+                        "bomb",
+                        "",
+                        "boots",
+                        "sword"
+                    ],
+                    [
+                        "firerod",
+                        "icerod",
+                        "bombos",
+                        "ether",
+                        "quake",
+                        "lift1",
+                        "shield"
+                    ],
+                    [
+                        "lamp",
+                        "hammer",
+                        "",
+                        "net",
+                        "book",
+                        "flippers",
+                        "armor"
+                    ],
+                    [
+                        "bottle",
+                        "somaria",
+                        "byrna",
+                        "cape",
+                        "mirror",
+                        "pearl",
+                        "gomode"
+                    ]
+                ]
+            },
+            {
+                "type": "item",
+                "item": "flute",
+                "width": 24,
+                "margin": "-87,88,0,0"
+            },
+            {
+                "type": "item",
+                "item": "shovel_used",
+                "width": 24,
+                "margin": "-55,99,0,0"
+            },
+            {
+                "type": "item",
+                "item": "powder_used",
+                "width": 24,
+                "margin": "50,4,0,0"
+            },
+            {
+                "type": "item",
+                "item": "mushroom_used",
+                "width": 24,
+                "margin": "88,18,0,0"
+            }
+        ]
+    },
     "broadcast_item_v_grid": {
         "type": "container",
         "margin": 0,
@@ -332,6 +405,60 @@
                         "type": "layout",
                         "margin": 0,
                         "key": "broadcast_item_grid"
+                    }
+                ]
+            }
+        ]
+    },
+    "broadcast_vanilla_full": {
+        "type": "array",
+        "dropshadow": true,
+        "margin": 10,
+        "content": [
+            {
+                "type": "container",
+                "background": "#3F000000",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "array",
+                        "orientation" :"vertical",
+                        "margin": 0,
+                        "content": [
+                            {
+                                "type": "array",
+                                "orientation" :"horizontal",
+                                "margin": 0,
+                                "content": [
+                                    {
+                                        "type": "layout",
+                                        "margin": 0,
+                                        "key": "broadcast_item_grid"
+                                    },
+                                    {
+                                        "type": "itemgrid",
+                                        "v_alignment": "top",
+                                        "margin": "0,3,3,0",
+                                        "item_margin": "0,0,2,10",
+                                        "rows": [
+                                            [ "easternpalace" ],
+                                            [ "desertpalace" ],
+                                            [ "towerofhera" ],
+                                            [ "aga" ]
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "h_alignment": "left",
+                                "margin": "5,-1,0,0",
+                                "item_margin": "0,0,2,10",
+                                "rows": [
+                                    [ "palaceofdarkness", "swamppalace", "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock", "aga2" ]
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
