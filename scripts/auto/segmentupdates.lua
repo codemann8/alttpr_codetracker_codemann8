@@ -118,7 +118,14 @@ function updateOverworldIdFromMemorySegment(segment)
     local owarea = segment:ReadUInt8(0x7e008a)
     local MODULE = AutoTracker:ReadU8(0x7e0010, 0)
     if not (CACHE.DUNGEON == 0xff and MODULE == 0x09) then --force OW transitions to retain OW ID
-        if (owarea == 0 and (MODULE == 0x07 or MODULE == 0x05 or MODULE == 0x0e or MODULE == 0x17 or MODULE == 0x11 or MODULE == 0x06 or MODULE == 0x0f)) --transitioning into dungeons
+        if (owarea == 0 and (
+                MODULE == 0x07 or --in cave/dungeon
+                MODULE == 0x05 or --on file select screen
+                MODULE == 0x0e or --has dialogue/menu open
+                MODULE == 0x17 or --is s+q
+                MODULE == 0x1b or --on spawn select
+                MODULE == 0x11 or --falling in dropdown entrance
+                MODULE == 0x06 or MODULE == 0x0f)) --transitioning into dungeons
                 or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
             owarea = 0xff
         end
