@@ -78,7 +78,7 @@
         ]
     },
 
-    //Dropdowns
+    // Dropdowns
     {
         "name": "Secret Passage Dropdown",
         "type": "toggle",
@@ -212,7 +212,7 @@
         "codes": "dropdown_swhazard"
     },
     
-    //Door Rando Room Slots
+    // Door Rando Room Slots
     {
         "name": "Current Path",
         "type": "static",

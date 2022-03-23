@@ -1,5 +1,5 @@
 [
-    //Light World
+    // Light World
     {
         "name": "Lost Woods NW",
         "parent": "OW Lost Woods West",
@@ -4170,7 +4170,8 @@
             }
         ]
     },
-    //Dark World
+
+    // Dark World
     {
         "name": "Skull Woods SW",
         "parent": "OW Skull Woods Forgotten Path West",

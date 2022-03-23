@@ -1,5 +1,5 @@
 [
-    //Access
+    // Access
     {
         "name": "HC Access",
         "parent": "Semi-Dungeon Color",
@@ -331,7 +331,7 @@
         ]
     },
     
-    //Dungeons
+    // Dungeons
     {
         "name": "Hyrule Castle & Escape",
         "short_name": "Hyrule Castle",

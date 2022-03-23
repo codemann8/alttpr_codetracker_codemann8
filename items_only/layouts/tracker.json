@@ -21,12 +21,12 @@
                                     "type": "button_popup",
                                     "style": "settings",
                                     "popup_background": "#55212121",
-                                    "layout": "shared_settings"
+                                    "layout": "shared_settings" // settings.json
                                 },
                                 "content": [
                                     {
                                         "type": "layout",
-                                        "key": "shared_item_grid"
+                                        "key": "shared_item_grid" // shared_base.json
                                     }
                                 ]
                             },
@@ -37,7 +37,7 @@
                                 "content": [
                                     {
                                         "type": "layout",
-                                        "key": "shared_dungeon_grid" // shared_base.json or shared_dungeon_alt.json
+                                        "key": "shared_dungeon_grid" // dungeons.json
                                     }
                                 ]
                             },
@@ -49,7 +49,7 @@
                                     "type": "button_popup",
                                     "style": "settings",
                                     "popup_background": "#55212121",
-                                    "layout": "modes_popup"
+                                    "layout": "modes_popup" // shared_base.json
                                 },
                                 "content": {
                                     "type": "array",
@@ -106,7 +106,7 @@
             },
             {
                 "type": "layout",
-                "key": "ref_dyk_grid"
+                "key": "ref_dyk_grid" // shared_base.json
             }
         ]
     },
@@ -132,12 +132,12 @@
                                     "type": "button_popup",
                                     "style": "settings",
                                     "popup_background": "#55212121",
-                                    "layout": "shared_v_settings"
+                                    "layout": "shared_v_settings" // settings.json
                                 },
                                 "content": [
                                     {
                                         "type": "layout",
-                                        "key": "shared_item_grid"
+                                        "key": "shared_item_grid" // shared_base.json
                                     }
                                 ]
                             },
@@ -148,7 +148,7 @@
                                 "content": [
                                     {
                                         "type": "layout",
-                                        "key": "shared_dungeon_v_grid" // shared_base.json or shared_dungeon_alt.json
+                                        "key": "shared_dungeon_v_grid" // dungeons.json
                                     }
                                 ]
                             },
@@ -160,11 +160,11 @@
                                     "type": "button_popup",
                                     "style": "settings",
                                     "popup_background": "#55212121",
-                                    "layout": "modes_popup"
+                                    "layout": "modes_popup" // shared_base.json
                                 },
                                 "content": {
                                     "type": "layout",
-                                    "key": "shared_mode_grid"
+                                    "key": "shared_mode_grid" // shared_base.json
                                 }
                             }
                         ]
@@ -173,7 +173,7 @@
             },
             {
                 "type": "layout",
-                "key": "ref_dyk_grid"
+                "key": "ref_dyk_grid" // shared_base.json
             }
         ]
     }

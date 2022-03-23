@@ -1,5 +1,5 @@
 [
-    //Dungeons
+    // Dungeons
     {
         "name": "Hyrule Castle Main",
         "type": "static",
@@ -182,7 +182,8 @@
         "capturable": true,
         "codes": "cap_gt"
     },
-    //Dropdowns
+
+    // Dropdowns
     {
         "name": "Secret Passage Dropdown",
         "type": "static",
@@ -267,7 +268,8 @@
         "capturable": true,
         "codes": "cap_drop_swhazard"
     },
-    //Underworld
+
+    // Underworld
     {
         "name": "Link's House",
         "type": "static",
@@ -338,7 +340,8 @@
         "capturable": true,
         "codes": "cap_mimic"
     },
-    //Connectors
+
+    // Connectors
     {
         "name": "Elder House",
         "type": "static",
@@ -479,7 +482,8 @@
         "capturable": true,
         "codes": "cap_darkmountain"
     },
-    //Items
+
+    // Items
     {
         "name": "Bow Upgrade",
         "type": "static",
@@ -725,7 +729,8 @@
         "capturable": true,
         "codes": "cap_map"
     },
-    //Misc
+    
+    // Misc
     {
         "name": "Chest",
         "type": "static",

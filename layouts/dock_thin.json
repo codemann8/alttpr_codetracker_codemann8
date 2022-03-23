@@ -11,11 +11,11 @@
                     "type": "button_popup",
                     "style": "settings",
                     "popup_background": "#55212121",
-                    "layout": "modes_popup"
+                    "layout": "modes_popup" // shared_base.json
                 },
                 "content": {
                     "type": "layout",
-                    "key": "shared_mode_vertical_grid"
+                    "key": "shared_mode_vertical_grid" // shared_base.json
                 }
             },
             {
@@ -29,14 +29,14 @@
                             "type": "button_popup",
                             "style": "settings",
                             "popup_background": "#55212121",
-                            "layout": "shared_settings"
+                            "layout": "shared_settings" // settings.json
                         }
                     ]
                 },
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_item_grid"
+                        "key": "shared_item_grid" // shared_base.json
                     }
                 ]
             },
@@ -47,7 +47,7 @@
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_dungeon_grid" // shared_base.json or shared_dungeon_alt.json
+                        "key": "shared_dungeon_grid" // dungeons.json
                     }
                 ]
             },
@@ -58,13 +58,13 @@
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_misc_vertical_grid" // shared_base.json or shared_dungeon_alt.json
+                        "key": "shared_misc_vertical_grid" // shared_base.json
                     }
                 ]
             },
             {
                 "type": "layout",
-                "key": "shared_dropdown_vertical_grid" // shared_base.json or shared_dungeon_alt.json
+                "key": "shared_dropdown_vertical_grid" // shared_base.json
             }
         ]
     }

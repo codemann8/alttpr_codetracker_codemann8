@@ -1,5 +1,5 @@
 [
-    //Light World
+    // Light World
     {
         "name": "Forest Hideout Drop",
         "short_name": "Hideout Drop",
@@ -3770,7 +3770,8 @@
             }
         ]
     },
-    //Dark World
+
+    // Dark World
     {
         "name": "Skull Woods Back",
         "short_name": "SW Boss",

@@ -1,5 +1,5 @@
 [
-    //Light World
+    // Light World
     {
         "name": "Forest Hideout",
         "parent": "OW Lost Woods East",
@@ -1130,7 +1130,8 @@
             }
         ]
     },
-    //Dark World
+
+    // Dark World
     {
         "name": "Dark Lumberjack Shop",
         "short_name": "Dark LJ Shop",

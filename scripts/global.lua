@@ -311,7 +311,7 @@ function initialize()
             OBJ_RETRO:updateItem()
         end
 
-        -- --Auto-Toggle Race Mode
+        --Auto-Toggle Race Mode
         if CONFIG.PREFERENCE_DEFAULT_RACE_MODE_ON then
             OBJ_RACEMODE:setState(1)
         end

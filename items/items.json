@@ -369,7 +369,7 @@
         "img": "images/items/pearl.png",
         "codes": "pearl,moonpearl"
     },
-    // Half-Magic / Quarter-Magic
+    // Half/Quarter Magic
     {
         "name": "Half-Magic",
         "type": "progressive",

@@ -1,5 +1,5 @@
 [
-    //Direct Region Links
+    // Direct Region Links
     {
         "name": "WLW Regions",
         "access_rules": [
@@ -276,7 +276,7 @@
         ]
     },
 
-    //Region Logic
+    // Region Logic
     {
         "name": "Lake Portal",
         "access_rules": [
@@ -1366,7 +1366,7 @@
         ]
     },
     
-    //Region Entrypoints
+    // Region Entrypoints
     {
         "name": "WLW Entry",
         "access_rules": [
@@ -2300,7 +2300,7 @@
         ]
     },
 
-    //Initial Region Access
+    // Initial Region Access
     {
         "name": "WLW Access",
         "access_rules": [
@@ -3317,7 +3317,7 @@
         ]
     },
     
-    //Final Region Access Recalc
+    // Final Region Access Recalc
     {
         "name": "Vanilla OW Layout Shuffle",
         "always_allow_chest_manipulation": true,

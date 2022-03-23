@@ -1,5 +1,5 @@
 [
-    //Light World
+    // Light World
     {
         "name": "Master Sword Pedestal",
         "short_name": "Pedestal",
@@ -754,7 +754,8 @@
             }
         ]
     },
-    //Dark World
+
+    // Dark World
     {
         "name": "Bumper Ledge",
         "parent": "OW Bumper Cave",

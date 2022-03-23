@@ -133,7 +133,7 @@
                 "margin": 0,
                 "max_width": 375,
                 "max_height": 200,
-                "key": "broadcast_map"
+                "key": "broadcast_map" // maps.json
             },
             {
                 "type": "array",
@@ -150,7 +150,7 @@
                                 "margin": 0,
                                 "max_width": 200,
                                 "max_height": 360,
-                                "key": "broadcast_v_map"
+                                "key": "broadcast_v_map" // maps.json
                             },
                             {
                                 "type": "array",
@@ -226,7 +226,7 @@
                                 "margin": 0,
                                 "max_width": 200,
                                 "max_height": 360,
-                                "key": "broadcast_v_right_map"
+                                "key": "broadcast_v_right_map" // maps.json
                             }
                         ]
                     }
@@ -237,7 +237,7 @@
                 "margin": 0,
                 "max_width": 375,
                 "max_height": 200,
-                "key": "broadcast_bottom_map"
+                "key": "broadcast_bottom_map" // maps.json
             }
         ]
     },
@@ -262,7 +262,7 @@
                                 "margin": "-2,-2,0,0",
                                 "max_width": 500,
                                 "max_height": 300,
-                                "key": "shared_map"
+                                "key": "shared_map" // shared_base.json
                             },
                             {
                                 "type": "container",

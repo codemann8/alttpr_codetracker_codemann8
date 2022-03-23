@@ -1,5 +1,5 @@
 [
-    //Light World
+    // Light World
     {
         "name": "Lost Woods West Access",
         "type": "toggle",
@@ -510,7 +510,8 @@
         "img": "images/icons/gomode.png",
         "codes": "ow_octoballoon_waterfall"
     },
-    //Dark World
+
+    // Dark World
     {
         "name": "Skull Woods Forgotten Path West Access",
         "type": "toggle",

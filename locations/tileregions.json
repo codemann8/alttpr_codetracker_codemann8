@@ -1,5 +1,5 @@
 [
-    //Colors
+    // Colors
     {
         "name": "Light World Color",
         "color": "#059134"
@@ -41,7 +41,7 @@
         "color": "#701d43"
     },
     
-    //Light World
+    // Light World
     {
         "name": "OW Lost Woods West",
         "parent": "Light World Color",
@@ -1107,7 +1107,8 @@
             "whirlpool_shuffle_off,ow_kak_pond,pearl,[flippers]"
         ]
     },
-    // //Dark World
+
+    // Dark World
     {
         "name": "OW Skull Woods Front",
         "parent": "Skull Woods Area Color",

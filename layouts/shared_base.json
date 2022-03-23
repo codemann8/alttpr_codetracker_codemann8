@@ -515,7 +515,7 @@
         "content": [
             {
                 "type": "layout",
-                "key": "shared_misc_grid" // shared_base.json or shared_dungeon_alt.json
+                "key": "shared_misc_grid"
             }
         ]
     },
@@ -634,13 +634,13 @@
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_misc_grid" // shared_base.json or shared_dungeon_alt.json
+                        "key": "shared_misc_grid"
                     }
                 ]
             },
             {
                 "type": "layout",
-                "key": "shared_dropdown_grid" // shared_base.json or shared_dungeon_alt.json
+                "key": "shared_dropdown_grid"
             }
         ]
     },
@@ -655,7 +655,7 @@
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_misc_grid" // shared_base.json or shared_dungeon_alt.json
+                        "key": "shared_misc_grid"
                     }
                 ]
             }
@@ -663,7 +663,7 @@
     },
     "shared_bottom_grid": {
         "type": "layout",
-        "key": "shared_bottom_misc_grid" // shared_base.json or shared_dungeon_alt.json
+        "key": "shared_bottom_misc_grid"
     },
     "shared_pins": {
         "type": "group",
@@ -1076,7 +1076,7 @@
                 "title": "Doors",
                 "content": {
                     "type": "layout",
-                    "key": "shared_door_tab"
+                    "key": "shared_door_tab" // doors.json
                 }
             },
             {
@@ -1139,11 +1139,11 @@
                                             "type": "layout",
                                             "margin": "0,0,0,10",
                                             "scale": 2.0,
-                                            "key": "shared_doorslotselect"
+                                            "key": "shared_doorslotselect" // doors.json
                                         },
                                         {
                                             "type": "layout",
-                                            "key": "shared_doorrando_compact"
+                                            "key": "shared_doorrando_compact" // doors.json
                                         }
                                     ]
                                 }
@@ -1162,7 +1162,7 @@
                         "type": "layout",
                         "margin": "0,20,0,0",
                         "scale": 1.15,
-                        "key": "shared_settings"
+                        "key": "shared_settings" // settings.json
                     }
                 }
             }
@@ -1222,7 +1222,7 @@
                 "title": "Doors",
                 "content": {
                     "type": "layout",
-                    "key": "shared_door_v_tab"
+                    "key": "shared_door_v_tab" // doors.json
                 }
             },
             {
@@ -1234,7 +1234,7 @@
                     "content": {
                         "type": "layout",
                         "margin": "0,4,0,0",
-                        "key": "shared_v_settings"
+                        "key": "shared_v_settings" // settings.json
                     }
                 }
             }
@@ -1242,7 +1242,7 @@
     },
     "shared_dock_grid": {
         "type": "layout",
-        "key": "dock_grid",
-        "margin": 0
+        "margin": 0,
+        "key": "dock_grid" // dock.json
     }
 }

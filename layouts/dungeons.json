@@ -211,7 +211,7 @@
                 "content": [
                     {
                         "type": "layout",
-                        "key": "shared_lw_keys_alt_grid"
+                        "key": "shared_lw_keys_grid"
                     },
                     {
                         "type": "layout",
