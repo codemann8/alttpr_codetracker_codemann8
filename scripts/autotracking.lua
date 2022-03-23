@@ -84,6 +84,10 @@ function initMemoryWatch()
     for i, v in ipairs(DATA.MEMORY.Bosses) do
         INSTANCE.MEMORY.Bosses[i] = v
     end
+    INSTANCE.MEMORY.BossLocations = {}
+    for i, v in ipairs(DATA.MEMORY.BossLocations) do
+        INSTANCE.MEMORY.BossLocations[i] = v
+    end
     INSTANCE.MEMORY.Underworld = {}
     for i, v in ipairs(DATA.MEMORY.Underworld) do
         INSTANCE.MEMORY.Underworld[i] = v

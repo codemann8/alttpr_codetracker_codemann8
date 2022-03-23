@@ -334,7 +334,7 @@ function updateItemsFromMemorySegment(segment)
                                 print("Item Got:", name)
                             end
                             itemFlippedOn(name)
-                            INSTANCE.MEMORY.Items[name] = nil
+                            --INSTANCE.MEMORY.Items[name] = nil
                         end
                     end
                 else
@@ -358,7 +358,7 @@ function updateItemsFromMemorySegment(segment)
                         print("Item Got:", name)
                     end
                     itemFlippedOn(name)
-                    INSTANCE.MEMORY.Items[name] = nil
+                    --INSTANCE.MEMORY.Items[name] = nil
                 end
             end
         else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
@@ -400,7 +400,7 @@ function updateToggleItemsFromMemorySegment(segment)
                             print("Item Got:", name)
                         end
                         itemFlippedOn(name)
-                        INSTANCE.MEMORY.ToggleItems[name] = nil
+                        --INSTANCE.MEMORY.ToggleItems[name] = nil
                     end
                 end
             else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
@@ -485,7 +485,7 @@ function updateProgressFromMemorySegment(segment)
                     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                         print("Cleared:", name)
                     end
-                    INSTANCE.MEMORY.Progress[name] = nil
+                    --INSTANCE.MEMORY.Progress[name] = nil
                 end
             elseif not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
                 if not item.Owner.ModifiedByUser then
@@ -572,7 +572,7 @@ function updateOverworldFromMemorySegment(segment)
                 print("Overworld Check:", name)
             end
 
-            if cleared then
+            if value[4] ~= nil and cleared then
                 INSTANCE.MEMORY.OverworldItems[name] = nil
             end
         else --if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
@@ -840,16 +840,29 @@ DATA.MEMORY.DungeonKeyDrops = {
 }
 
 DATA.MEMORY.Bosses = {
-    { "ep",  "@Eastern Palace/Armos",              {200, 11} },
-    { "dp",  "@Desert Palace/Lanmolas",            {51, 11} },
-    { "toh", "@Tower of Hera/Moldorm",             {7, 11} },
-    { "pod", "@Palace of Darkness/King Helmasaur", {90, 11} },
-    { "sp",  "@Swamp Palace/Arrghus",              {6, 11} },
-    { "sw",  "@Skull Woods/Mothula",               {41, 11} },
-    { "tt",  "@Thieves Town/Blind",                {172, 11} },
-    { "ip",  "@Ice Palace/Kholdstare",             {222, 11} },
-    { "mm",  "@Misery Mire/Vitreous",              {144, 11} },
-    { "tr",  "@Turtle Rock/Trinexx",               {164, 11} }
+    { "ep",  {200, 11} },
+    { "dp",  {51, 11} },
+    { "toh", {7, 11} },
+    { "pod", {90, 11} },
+    { "sp",  {6, 11} },
+    { "sw",  {41, 11} },
+    { "tt",  {172, 11} },
+    { "ip",  {222, 11} },
+    { "mm",  {144, 11} },
+    { "tr",  {164, 11} }
+}
+
+DATA.MEMORY.BossLocations = {
+    "@Eastern Palace/Armos",
+    "@Desert Palace/Lanmolas",
+    "@Tower of Hera/Moldorm",
+    "@Palace of Darkness/King Helmasaur",
+    "@Swamp Palace/Arrghus",
+    "@Skull Woods/Mothula",
+    "@Thieves Town/Blind",
+    "@Ice Palace/Kholdstare",
+    "@Misery Mire/Vitreous",
+    "@Turtle Rock/Trinexx"
 }
 
 DATA.MEMORY.Underworld = {
@@ -939,31 +952,25 @@ function updateRoomsFromMemorySegment(segment)
         updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}, {61, 10}})
     end
 
-    local i = 1
-    while i <= #INSTANCE.MEMORY.Bosses do
-        local bossflag = segment:ReadUInt16(0x7ef000 + (INSTANCE.MEMORY.Bosses[i][3][1] * 2)) & (1 << 11)
-        if bossflag > 0 then
-            local item = Tracker:FindObjectForCode(INSTANCE.MEMORY.Bosses[i][1])
+    for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
+        local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
+        local item = Tracker:FindObjectForCode(boss[1])
+        if item then
+            item.Active = bossflag > 0
+        end
+
+        if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
+            item = Tracker:FindObjectForCode(INSTANCE.MEMORY.BossLocations[i])
             if item then
-                item.Active = true
+                item.AvailableChestCount = bossflag == 0 and 1 or 0
+                INSTANCE.MEMORY.BossLocations[i] = nil
+            else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print("Couldn't find location", item)
             end
+        end
 
-            if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
-                item = Tracker:FindObjectForCode(INSTANCE.MEMORY.Bosses[i][2])
-                if item then
-                    item.AvailableChestCount = 0
-                else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print("Couldn't find location", item)
-                end
-            end
-
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print("Boss Defeated:", INSTANCE.MEMORY.Bosses[i][2])
-            end
-
-            table.remove(INSTANCE.MEMORY.Bosses, i)
-        else
-            i = i + 1    
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i])
         end
     end
 
@@ -988,11 +995,25 @@ function updateRoomsFromMemorySegment(segment)
         updateDungeonChestCountFromRoomSlotList(segment, "gt", {{140, 10}, {123, 4}, {123, 5}, {123, 6}, {123, 7}, {139, 4}, {125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}, {140, 4}, {140, 5}, {140, 6}, {140, 7}, {28, 4}, {28, 5}, {28, 6}, {141, 4}, {157, 4}, {157, 5}, {157, 6}, {157, 7}, {61, 4}, {61, 5}, {61, 6}, {77, 4}})
 
         --Keysanity Dungeon Map Locations
-        updateRoomLocations(segment, INSTANCE.MEMORY.DungeonChests)
+        local i = 1
+        while i <= #INSTANCE.MEMORY.DungeonChests do
+            if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonChests[i]) then
+                table.remove(INSTANCE.MEMORY.DungeonChests, i)
+            else
+                i = i + 1
+            end
+        end
 
         --Key Drop Locations
         if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
-            updateRoomLocations(segment, INSTANCE.MEMORY.DungeonKeyDrops)
+            i = 1
+            while i <= #INSTANCE.MEMORY.DungeonKeyDrops do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonKeyDrops[i]) then
+                    table.remove(INSTANCE.MEMORY.DungeonKeyDrops, i)
+                else
+                    i = i + 1
+                end
+            end
         end
     end
 
@@ -1000,32 +1021,30 @@ function updateRoomsFromMemorySegment(segment)
     updateDungeonKeysFromMemorySegment(nil)
 
     --Miscellaneous
-    i = 1
-    while i <= #INSTANCE.MEMORY.UnderworldItems do
+    for i, value in ipairs(INSTANCE.MEMORY.UnderworldItems) do
         local remove = false
-        if INSTANCE.MEMORY.UnderworldItems[i][4] or OBJ_RACEMODE:getState() == 0 then
-            local roomData = segment:ReadUInt16(INSTANCE.MEMORY.UnderworldItems[i][2])
+        if value[4] or OBJ_RACEMODE:getState() == 0 then
+            local roomData = segment:ReadUInt16(value[2])
 
-            if (roomData & INSTANCE.MEMORY.UnderworldItems[i][3]) ~= 0 then
-                Tracker:FindObjectForCode(INSTANCE.MEMORY.UnderworldItems[i][1]).Active = true
+            if (roomData & value[3]) ~= 0 then
+                Tracker:FindObjectForCode(value[1]).Active = true
                 
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print("Obtained:", INSTANCE.MEMORY.UnderworldItems[i][1])
+                    print("Obtained:", value[1])
                 end
-                
-                remove = true
             end
-        end
-
-        if remove then
-            table.remove(INSTANCE.MEMORY.UnderworldItems, i)
-        else
-            i = i + 1
         end
     end
 
     --Underworld Locations
-    updateRoomLocations(segment, INSTANCE.MEMORY.Underworld)
+    local i = 1
+    while i <= #INSTANCE.MEMORY.Underworld do
+        if updateRoomLocation(segment, INSTANCE.MEMORY.Underworld[i]) then
+            table.remove(INSTANCE.MEMORY.Underworld, i)
+        else
+            i = i + 1
+        end
+    end
 end
 
 function updateDungeonItemsFromMemorySegment(segment)

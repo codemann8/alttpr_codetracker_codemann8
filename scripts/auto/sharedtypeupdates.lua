@@ -1,51 +1,42 @@
-function updateRoomLocations(segment, locations)
-    local i = 1
-    while i <= #locations do
-        local clearedCount = 0
-        for i, slot in ipairs(locations[i][2]) do
-            local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
+function updateRoomLocation(segment, location)
+    local clearedCount = 0
+    for i, slot in ipairs(location[2]) do
+        local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
 
-            -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            --     print(locationRef, roomData, 1 << slot[2])
-            -- end
+        -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        --     print(locationRef, roomData, 1 << slot[2])
+        -- end
 
-            if (roomData & (1 << slot[2])) ~= 0 then
+        if (roomData & (1 << slot[2])) ~= 0 then
+            clearedCount = clearedCount + 1
+        elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
+            if #location < 3 or Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", (location + 0x40) % 0x80)).ItemState:getState() == 0 then
                 clearedCount = clearedCount + 1
-            elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
-                if #locations[i] < 3 or Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", (locations[i] + 0x40) % 0x80)).ItemState:getState() == 0 then
-                    clearedCount = clearedCount + 1
-                end
             end
-        end
-
-        local remove = false
-        if clearedCount > 0 then
-            for i, loc in ipairs(locations[i][1]) do
-                location = Tracker:FindObjectForCode(loc)
-                if location then
-                    if not location.Owner.ModifiedByUser then
-                        location.AvailableChestCount = location.ChestCount - clearedCount
-                    end
-                    
-                    if location.AvailableChestCount == 0 then
-                        remove = true
-                    end
-                else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print("Couldn't find location", loc)
-                end
-            end
-
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print(locations[i][1][1], clearedCount)
-            end
-        end
-        
-        if remove then
-            table.remove(locations, i)
-        else
-            i = i + 1
         end
     end
+
+    local remove = false
+    for i, name in ipairs(location[1]) do
+        loc = Tracker:FindObjectForCode(name)
+        if loc then
+            if not loc.Owner.ModifiedByUser then
+                loc.AvailableChestCount = loc.ChestCount - clearedCount
+            end
+            
+            if loc.AvailableChestCount == 0 then
+                remove = true
+            end
+        else--if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Couldn't find location", name)
+        end
+    end
+
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print(location[1][1], clearedCount)
+    end
+
+    return remove
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
