@@ -490,7 +490,7 @@
             {
                 "type": "text",
                 "margin": 5,
-                "text": "ERROR: Could not save settings. Press F1 for more info on this error."
+                "text": "ERROR: Settings can only be saved if you Export Override at least one setting file.\nPress F1 for more details on Exporting Overrides."
             }
         ]
     },
@@ -504,7 +504,7 @@
             {
                 "type": "text",
                 "margin": 5,
-                "text": "ERROR: Could not save\nsettings. Press F1 for\nmore info on this error."
+                "text": "ERROR: Settings can only\nbe saved if you Export\nOverride at least one\nsetting file. Press F1\nfor more details."
             }
         ]
     },
@@ -616,7 +616,7 @@
                     },
                     {
                         "type": "layout",
-                        "key": "settings_v_message"
+                        "key": "ref_settings_v_message"
                     }
                 ]
             }
