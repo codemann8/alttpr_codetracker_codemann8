@@ -2,7 +2,6 @@ SEGMENTS = {}
 
 function autotracker_started()
     STATUS.AutotrackerInGame = false
-    --updateTitleFromMemorySegment(nil)
 end
 
 function autotracker_stopped()
