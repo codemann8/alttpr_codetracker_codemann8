@@ -1708,8 +1708,8 @@
         "parent": "Dark World Color",
         "access_rules": [
             "ow_hammerpegs",
-            "ow_swapped_62,@Northwest Dark World,pearl,lift2",
-            "ow_swapped_22,@Northwest Light World",
+            "@Northwest Dark World,pearl,lift2",
+            "ow_swapped_22,@Northwest Light World,lift2",
             "ow_swapped_22,@Northwest Dark World,mirror",
             "ow_hammerpegs_entry,pearl,lift2",
             "ow_swapped_22,ow_hammerpegs_entry,lift2",
