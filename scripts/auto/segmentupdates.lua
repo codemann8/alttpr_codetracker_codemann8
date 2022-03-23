@@ -65,7 +65,9 @@ function updateWorldFlagFromMemorySegment(segment)
         return false
     end
 
-    print("World")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: World")
+    end
 
     if segment then
         CACHE.WORLD = segment:ReadUInt8(0x7ef3ca)
@@ -109,7 +111,9 @@ function updateOverworldIdFromMemorySegment(segment)
         return false
     end
 
-    print("OverworldId")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: OverworldId")
+    end
 
     local owarea = segment:ReadUInt8(0x7e008a)
     local MODULE = AutoTracker:ReadU8(0x7e0010, 0)
@@ -197,7 +201,9 @@ function updateDungeonIdFromMemorySegment(segment)
         return false
     end
     
-    print("DungeonId")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: DungeonId")
+    end
 
     if (segment) then
         CACHE.DUNGEON = segment:ReadUInt8(0x7e040c)
@@ -238,7 +244,9 @@ function updateRoomIdFromMemorySegment(segment)
         return false
     end
     
-    print("RoomId")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: RoomId")
+    end
 
     CACHE.ROOM = segment:ReadUInt16(0x7e00a0)
 
@@ -313,7 +321,9 @@ function updateItemsFromMemorySegment(segment)
         return false
     end
     
-    print("Items")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Items")
+    end
 
     for name, value in pairs(INSTANCE.MEMORY.Items) do
         local item = Tracker:FindObjectForCode(name)
@@ -378,7 +388,9 @@ function updateToggleItemsFromMemorySegment(segment)
         return false
     end
     
-    print("Toggle Items")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Toggle Items")
+    end
 
     if Tracker.ActiveVariantUID ~= "vanilla" then
         for name, value in pairs(INSTANCE.MEMORY.ToggleItems) do
@@ -425,7 +437,9 @@ function updateHealthFromMemorySegment(segment)
         return false
     end
     
-    print("Health")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Health")
+    end
     
     if segment then
         local maxHealth = segment:ReadUInt8(0x7ef36c)
@@ -466,7 +480,9 @@ function updateProgressFromMemorySegment(segment)
         return false
     end
     
-    print("Progress")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Progress")
+    end
 
     for name, value in pairs(INSTANCE.MEMORY.Progress) do
         local item = Tracker:FindObjectForCode(name)
@@ -526,7 +542,9 @@ function updateOverworldFromMemorySegment(segment)
         return false
     end
     
-    print("Overworld")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Overworld")
+    end
 
     for name, value in pairs(INSTANCE.MEMORY.Overworld) do
         local location = Tracker:FindObjectForCode(name)
@@ -594,7 +612,9 @@ function updateShopsFromMemorySegment(segment)
         return false
     end
     
-    print("Shops")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Shops")
+    end
 
     for name, value in pairs(INSTANCE.MEMORY.Shops) do
         local location = Tracker:FindObjectForCode(name)
@@ -642,7 +662,9 @@ function updateNPCFromMemorySegment(segment)
         return false
     end
     
-    print("NPC")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: NPC")
+    end
 
     local data = segment:ReadUInt16(0x7ef410)
 
@@ -911,7 +933,9 @@ function updateRoomsFromMemorySegment(segment)
         return false
     end
     
-    print("Rooms")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Rooms")
+    end
 
     --Dungeon Data
     if Tracker.ActiveVariantUID == "full_tracker" then
@@ -1046,7 +1070,9 @@ function updateDungeonItemsFromMemorySegment(segment)
         return false
     end
     
-    print("Dungeon Items")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Dungeon Items")
+    end
 
     --Dungeon Items
     local bkdata = segment:ReadUInt16(0x7ef366)
@@ -1084,7 +1110,9 @@ function updateDungeonKeysFromMemorySegment(segment)
         return false
     end
     
-    print("Dungeon Keys")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Dungeon Keys")
+    end
 
     --Small Keys
     if segment and not CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING then
@@ -1120,7 +1148,9 @@ function updateDungeonPendantFromMemorySegment(segment)
         return false
     end
     
-    print("Pendant")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Pendant")
+    end
 
     if CACHE.DUNGEON < 0 then
         updateDungeonIdFromMemorySegment(nil)
@@ -1145,7 +1175,9 @@ function updateDungeonCrystalFromMemorySegment(segment)
         return false
     end
     
-    print("Crystal")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Crystal")
+    end
 
     if CACHE.DUNGEON < 0 then
         updateDungeonIdFromMemorySegment(nil)
@@ -1169,7 +1201,9 @@ function updateCollectionFromMemorySegment(segment)
         return false
     end
     
-    print("Collection")
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Collection")
+    end
     
     if CACHE.CollectionMax == nil then
         CACHE.CollectionMax = AutoTracker:ReadU16(0x7ef33e, 0)
