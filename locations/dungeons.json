@@ -937,6 +937,36 @@
         ]
     },
     {
+        "name": "Unknown Tower",
+        "parent": "Semi-Dungeon Color",
+        "access_rules": [
+            "ow_swapped_1b,@OW Castle Ledge",
+            "ow_swapped_03,@OW Dark Death Mountain West Top"
+        ],
+        "sections": [
+            {
+                "name": "Dungeon Access",
+                "hosted_item": "dummy"
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 1003,
+                "y": 790,
+                "size": 110,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_1b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1125,
+                "y": 58,
+                "size": 110,
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_03" ]
+            }
+        ]
+    },
+    {
         "name": "Agahnim's Tower",
         "parent": "AT Access",
         "sections": [
