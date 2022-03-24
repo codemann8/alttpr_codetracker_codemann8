@@ -890,7 +890,6 @@ DATA.MEMORY.BossLocations = {
 }
 
 DATA.MEMORY.Underworld = {
-    { {"@Link's House/By The Door"},     {{0, 10}} },
     { {"@Kakariko Well/Cave"},           {{47, 5}, {47, 6}, {47, 7}, {47, 8}} },
     { {"@Kakariko Well/Bombable Wall"},  {{47, 4}} },
     { {"@Hookshot Cave/Bonkable Chest"}, {{60, 7}} },
