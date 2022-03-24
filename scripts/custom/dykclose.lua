@@ -19,6 +19,10 @@ function DykCloseItem:onLeftClick()
             Tracker:FindObjectForCode("dyk_exit_" .. self.number + 1).Icon = ImageReference:FromPackRelativePath("images/overlays/overlay-x.png")
         else
             Layout:FindLayout("ref_dyk_grid").Root.Layout = nil
+            
+            if self.number == 3 then
+                ScriptHost:PushMarkdownNotification(NotificationType.Message, "Happy April Fools!")
+            end
         end
     end
 end
