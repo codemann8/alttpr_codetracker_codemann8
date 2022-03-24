@@ -47,14 +47,19 @@ function sendExternalMessage(filename, value)
 end
 
 function saveSettings(setting)
-    local baseDir = "C:/Users/" .. os.getenv("USERNAME") .. "/Documents/EmoTracker/"
+    local baseDir = "C:/Users/" .. os.getenv("USERNAME") .. "/"
+    local emoDir = "Documents/EmoTracker/"
     local packRoot = "user_overrides/alttpr_codetracker_codemann8/"
     
     local function writeOverride(path, filename, text)
-        local written = writeFile(baseDir .. packRoot, path, filename, text)
+        local written = writeFile(baseDir .. emoDir .. packRoot, path, filename, text)
     
-        if dirExists(baseDir .. "dev/") then
-            written = writeFile(baseDir .. "dev/" .. packRoot, path, filename, text) or written
+        if dirExists(baseDir .. "OneDrive/" .. emoDir) then
+            written = writeFile(baseDir .. "OneDrive/" .. emoDir .. packRoot, path, filename, text) or written
+        end
+        
+        if dirExists(baseDir .. emoDir .. "dev/") then
+            written = writeFile(baseDir .. emoDir .. "dev/" .. packRoot, path, filename, text) or written
         end
 
         Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
@@ -62,12 +67,16 @@ function saveSettings(setting)
     end
     
     local function deleteOverride(path, filename)
-        if dirExists(baseDir .. packRoot .. path .. filename) then
-            os.remove(baseDir .. packRoot .. path .. filename)
+        if dirExists(baseDir .. emoDir .. packRoot .. path .. filename) then
+            os.remove(baseDir .. emoDir .. packRoot .. path .. filename)
+        end
+
+        if dirExists(baseDir .. "OneDrive/" .. emoDir .. packRoot .. path .. filename) then
+            os.remove(baseDir .. "OneDrive/" .. emoDir .. packRoot .. path .. filename)
         end
         
-        if dirExists(baseDir .. "dev/" .. packRoot .. path .. filename) then
-            os.remove(baseDir .. "dev/" .. packRoot .. path .. filename)
+        if dirExists(baseDir .. emoDir .. "dev/" .. packRoot .. path .. filename) then
+            os.remove(baseDir .. emoDir .. "dev/" .. packRoot .. path .. filename)
         end
     end
     
