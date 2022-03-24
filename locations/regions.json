@@ -224,7 +224,7 @@
 
             "ow_swapped_05,ow_ddm_east_top",
             "ow_swapped_05,ow_ddm_floating",
-            "ow_swapped_05,ow_turtlerock"
+            "ow_swapped_07,ow_turtlerock"
         ]
     },
     {
@@ -259,7 +259,7 @@
         "access_rules": [
             "ow_swapped_45,ow_ddm_east_top",
             "ow_swapped_45,ow_ddm_floating",
-            "ow_swapped_45,ow_turtlerock",
+            "ow_swapped_47,ow_turtlerock",
 
             "ow_swapped_05,ow_dm_east_top"
         ]
