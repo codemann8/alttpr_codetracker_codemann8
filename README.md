@@ -161,6 +161,8 @@ There is a new tab called `Settings` where users can specify personal preference
 
 In order for the settings to save properly, you must first export at least one of the settings files (explained in the previous `Customization` section). These settings files will be found in the `settings` directory.
 
+*\*Known Issue for users using OneDrive - Settings won't be remembered, but they WILL still work. A fix for this is coming soon\**
+
 The settings are broken out into several categories, an explanation for each of them are listed below.
 
 #### User Preferences
