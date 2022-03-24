@@ -1,9 +1,23 @@
 # CodeTracker Full Tracker Package for EmoTracker
 Join the [Discord](https://discord.gg/Fk4wTn6) to get notified of updates and/or join the discussion of the various features!
 
-#### Special Thanks:
+#### Special Thanks
 - Kaesden - Taking ownership of anything Race Mode related
 - Neonnite - Playing a large role into adding entrance badge icons
+
+## New in v3.0:
+Version 3.0 has brought MANY changes. This section of the Readme aims to explain what has changed:
+- *\*If you had overridden files that modified aspects of this tracker, I highly recommend making a backup of these files and removing them entirely from your overrides folder. Having modifications in there from the old version will more than likely break functionality. Please review each of your changes and move them in one by one for best results.\**
+- The 3 Map Variants in the pack have been combined into one, where the `Broadcast View` can now be configured thru the `Settings` feature above. This also means that before you can use this pack, you will need to select a new variant, an error will display until you do.
+- There is a new section for `Settings`. IMPORTANT: In order for the settings to save for the next session, you MUST first use the `Export Overrides` feature to export at least one setting file first. See `Settings` section near the end of this guide.
+- Another note on Settings, there are some new options available. Please be sure to review the `Settings` section near the end of this guide for more detail on specific settings. However, a couple things worthy of mention:
+  - There is a way to get the more traditional-looking Dungeon Layout that you see in other trackers.
+  - There is a `Map Direction` option in the `Broadcast Options` which allows you to specify which side you want the map to show on the Broadcast View, or if you don't want it to show at all!
+  - If you were one of the people with a custom Broadcast layout that you defined. There is a specific file you are meant to override and modify now. And if you change the `Alternate Layout` option `3`, the custom layout will then be used. See the more detailed explanation below.
+- The autotracker script has been revamped. If you save-scum, the tracker will continue to show that you checked those locations. However, if you wanted to those locations to come back, there is a `Refresh` icon that appears in the `Autotracker` portion of the `Settings` pane.
+- OW Tile Swap (Mixed) support has been added. This allows screens to be flipped from one world to the other independently. With autotracking enabled, these screens will auto-flip when you visit each screen. See `Mode-Specific Features` section below for a more detailed explanation on how to use this feature.
+- `Flute Shuffle` and `Whirlpool Shuffle` support have been added. Currently both of these only just limited the logic rules/access. The icons for these 2 modes are ONLY located in the `Overworld Shuffle` part of the `Modes` popup. Careful, they are a bit hidden. A future version will expand on the Flute Shuffle part and actually let you define the new flute spots.
+- GTBK Guessing Game autotracking icon has been replaced by the `Race Mode` icon, which displays the current collection rate but only if NOT in Race Mode
 
 ## Overview:
 This package is meant to encompass all aspects that are desired or missing from the existing array of LttPR packages. The intention of this package is to be a complete package, to include and cover all the ways you can play the game, such as entrance shuffle, mystery multiworld, door shuffle, overworld shuffle, and custom ROM hacks.
@@ -13,9 +27,6 @@ All map variants (Standard, Keysanity, Inverted, etc) have been combined into on
 - Map Tracker
 - Item/Key Tracker
 - Vanilla/ROM Hack Item Tracker
-
-#### Settings:
-There is a new section for `Settings`. IMPORTANT: In order for the settings to save for the next session, you MUST first use the `Export Overrides` feature to export at least one setting file first. See `Settings` section near the end of this guide.
 
 ## Modes:
 All of the modes can be set by clicking the `Gear` in the `Modes` section. Additionally, there are shortcut icons for many of these modes in the `Modes` section of the tracker.
@@ -171,7 +182,7 @@ The settings are broken out into several categories, an explanation for each of 
   - Alternate Layout
     - 1: Simple Item/Key Grid (default)
     - 2: Advanced View - Has the largest map and most information displayed
-    - 3: Custom Broadcast - Custom user-defined view - Override `layouts/broadcast_custom.json` to define the layout - See `Customization` section below
+    - 3: Custom Broadcast - Custom user-defined view - Override `layouts/broadcast_custom.json` to define the layout - See `Customization` section above
 #### Autotracker
   - Auto Pin Current Dungeon - This will auto-pin the current dungeon you are in when you enter a new dungeon
   - Disable Auto Dungeon Item Tracking - Changes whether dungeon items (keys/maps/compasses) are auto-tracked or not
@@ -180,7 +191,7 @@ The settings are broken out into several categories, an explanation for each of 
     - *\*This is already disabled in Race Mode\**
   - Disable Auto OW Tile Swap Tracking - Changes whether OW screens are flipped automatically upon visiting them. This only matters when `OW Tile Swap` mode is enabled.
 #### File Output
-  - *\*(Features relating to files that are output when certain events are triggered)\**
+*\*(Features relating to files that are output when certain events are triggered)\**
   - Enable External Item File - For advanced usage only, in Beta, will export a item.txt file in `C:/Users/<user>/Documents/EmoTracker` when a new item is collected
   - Enable External Dungeon File - For advanced usage only, in Beta, will export a dungeon.txt in `C:/Users/<user>/Documents/EmoTracker` when the player enters a new area of the game
   - Enable External Health File - For advanced usage only, in Beta, will export a health.txt in `C:/Users/<user>/Documents/EmoTracker` when the player has a change in health/status
