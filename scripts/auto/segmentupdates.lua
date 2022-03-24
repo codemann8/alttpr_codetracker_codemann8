@@ -343,13 +343,13 @@ function updateItemsFromMemorySegment(segment)
                     else
                         if not item.Active or not STATUS.AutotrackerInGame then
                             item.Active = segment:ReadUInt8(value[1]) & value[2] > 0
-                        end
         
-                        if item.Active then
-                            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                                print("Item Got:", name)
+                            if item.Active and STATUS.AutotrackerInGame then
+                                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                                    print("Item Got:", name)
+                                end
+                                itemFlippedOn(name)
                             end
-                            itemFlippedOn(name)
                         end
                     end
                 else
@@ -360,19 +360,22 @@ function updateItemsFromMemorySegment(segment)
             elseif #value > 1 then
                 local data = segment:ReadUInt8(value[1]) + value[3]
                 if data > item.CurrentStage or not STATUS.AutotrackerInGame then
-                    itemFlippedOn(name)
                     item.CurrentStage = data
+
+                    if STATUS.AutotrackerInGame then
+                        itemFlippedOn(name)
+                    end
                 end
             else
                 if not item.Active or not STATUS.AutotrackerInGame then
                     item.Active = segment:ReadUInt8(value[1]) > 0
-                end
 
-                if item.Active then
-                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print("Item Got:", name)
+                    if item.Active and STATUS.AutotrackerInGame then
+                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                            print("Item Got:", name)
+                        end
+                        itemFlippedOn(name)
                     end
-                    itemFlippedOn(name)
                 end
             end
         else
