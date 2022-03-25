@@ -844,6 +844,7 @@
     },
     "shared_map": {
         "type": "container",
+        "v_alignment": "center",
         "content": [
             {
                 "type": "layout",
@@ -857,6 +858,7 @@
     },
     "shared_v_map": {
         "type": "container",
+        "v_alignment": "center",
         "content": [
             {
                 "type": "layout",
