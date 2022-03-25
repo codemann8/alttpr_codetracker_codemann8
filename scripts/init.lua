@@ -1,5 +1,6 @@
 --User Config
 CONFIG = {}
+ScriptHost:LoadScript("settings/documents.lua")
 ScriptHost:LoadScript("settings/defaults.lua")
 ScriptHost:LoadScript("settings/layout.lua")
 ScriptHost:LoadScript("settings/broadcast.lua")

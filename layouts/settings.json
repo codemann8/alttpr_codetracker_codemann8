@@ -490,7 +490,7 @@
             {
                 "type": "text",
                 "margin": 5,
-                "text": "ERROR: Settings can only be saved if you Export Override at least one setting file.\nPress F1 for more details on Exporting Overrides."
+                "text": "ERROR: See the Developer Console for more details on the error."
             }
         ]
     },
@@ -504,7 +504,7 @@
             {
                 "type": "text",
                 "margin": 5,
-                "text": "ERROR: Settings can only\nbe saved if you Export\nOverride at least one\nsetting file. Press F1\nfor more details."
+                "text": "ERROR: See the Developer Console\nfor more details on the error."
             }
         ]
     },

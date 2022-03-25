@@ -47,19 +47,33 @@ function sendExternalMessage(filename, value)
 end
 
 function saveSettings(setting)
-    local baseDir = os.getenv("USERPROFILE") .. "\\"
     local emoDir = "Documents\\EmoTracker\\"
     local packRoot = "user_overrides\\alttpr_codetracker_codemann8\\"
     
     local function writeOverride(path, filename, text)
-        local written = writeFile(baseDir .. emoDir .. packRoot, path, filename, text)
-    
-        if dirExists(baseDir .. "OneDrive\\" .. emoDir) then
-            written = writeFile(baseDir .. "OneDrive\\" .. emoDir .. packRoot, path, filename, text) or written
+        local fullDir = ""
+
+        if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
+            fullDir = os.getenv("OneDrive") .. "\\" .. emoDir
+        elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
+            fullDir = CONFIG.DOCUMENTS_FOLDER
+        else
+            print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
+            print("OneDrive:", os.getenv("OneDrive"))
+            print("UserProfile:", os.getenv("UserProfile"))
         end
+
+        local written = false
+        if fullDir ~= "" then
+            written = writeFile(fullDir .. emoDir .. packRoot, path, filename, text)
         
-        if dirExists(baseDir .. emoDir .. "dev\\") then
-            written = writeFile(baseDir .. emoDir .. "dev\\" .. packRoot, path, filename, text) or written
+            if dirExists(fullDir .. emoDir .. "dev\\") then
+                written = writeFile(fullDir .. emoDir .. "dev\\" .. packRoot, path, filename, text) or written
+            end
+
+            if not written then
+                print("ERROR: User hasn't overridden any settings files yet. Press F1 to read the documentation for steps to resolve.")
+            end
         end
 
         Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
@@ -67,22 +81,30 @@ function saveSettings(setting)
     end
     
     local function deleteOverride(path, filename)
-        if dirExists(baseDir .. emoDir .. packRoot .. path .. filename) then
-            os.remove(baseDir .. emoDir .. packRoot .. path .. filename)
+        local fullDir = ""
+        
+        if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
+            fullDir = os.getenv("OneDrive") .. "\\" .. emoDir
+        elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
+            fullDir = CONFIG.DOCUMENTS_FOLDER
+        else
+            print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
+            print("OneDrive:", os.getenv("OneDrive"))
+            print("UserProfile:", os.getenv("UserProfile"))
+            return false
         end
 
-        if dirExists(baseDir .. "OneDrive\\" .. emoDir .. packRoot .. path .. filename) then
-            os.remove(baseDir .. "OneDrive\\" .. emoDir .. packRoot .. path .. filename)
+        if dirExists(fullDir .. emoDir .. packRoot .. path .. filename) then
+            os.remove(fullDir .. emoDir .. packRoot .. path .. filename)
         end
         
-        if dirExists(baseDir .. emoDir .. "dev\\" .. packRoot .. path .. filename) then
-            os.remove(baseDir .. emoDir .. "dev\\" .. packRoot .. path .. filename)
+        if dirExists(fullDir .. emoDir .. "dev\\" .. packRoot .. path .. filename) then
+            os.remove(fullDir .. emoDir .. "dev\\" .. packRoot .. path .. filename)
         end
     end
     
     local textOutput = ""
     local isDefault = true
-    print(setting.file)
     for textcode, data in pairs(DATA.SettingsData[setting.file]) do
         local name = data[1]
         local code = data[2]
@@ -101,8 +123,7 @@ function saveSettings(setting)
 end
 
 function writeFile(rootpath, localpath, filename, text)
-    if not dirExists(rootpath ..localpath) then
-        print("ERROR: Directory doesn't exist")
+    if not dirExists(rootpath .. localpath) then
         --Tracker.ActiveGamePackage:ExportUserOverride(localpath .. filename)
         --TODO: Revisit when Emo adds ability to export overrides from code
         return false
