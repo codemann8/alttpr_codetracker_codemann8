@@ -144,7 +144,9 @@ end
 
 
 --Base Memory Watches
-ScriptHost:AddMemoryWatch("ROM Title", 0x007fc0, 21, updateTitleFromMemorySegment)
+if not CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER then
+    ScriptHost:AddMemoryWatch("ROM Title", 0x007fc0, 21, updateTitleFromMemorySegment)
+end
 ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 1000)
 
 

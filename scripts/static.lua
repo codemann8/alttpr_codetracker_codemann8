@@ -22,7 +22,8 @@ DATA.SettingsHeader = {
         "CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING",
         "CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING",
         "CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING",
-        "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"
+        "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING",
+        "CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER"
     }},
     { "fileio.lua", {
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE",
@@ -54,7 +55,8 @@ DATA.SettingsData = {
         ["CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING"] =  {"Disable Auto Dungeon Item Tracking",   "settings_auto_dungeon_item",      2, false, CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING"] =      {"Disable Auto Location Tracking",       "settings_auto_location",          2, false, CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING"] =       {"Disable Auto OW Tile Swap Tracking",   "settings_auto_owmixed",           2, false, CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING},
-        ["CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"] =        {"Disable Auto Region Tracking",         "settings_auto_region",            2, false, CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING}
+        ["CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"] =        {"Disable Auto Region Tracking",         "settings_auto_region",            2, false, CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING},
+        ["CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER"] =             {"Disable ROM Header Check",             "settings_auto_header",            2, false, CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER}
     },
     ["fileio.lua"] = {
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE"] =      {"Enable External Item File",            "settings_fileio_item",            2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE},
