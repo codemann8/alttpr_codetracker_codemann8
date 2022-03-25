@@ -36,7 +36,7 @@ function sendExternalMessage(filename, value)
         if (filename == "item" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE)
                 or (filename == "dungeon" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE)
                 or (filename == "health" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
-            local file = io.open("C:/Users/" .. os.getenv("USERNAME") .. "/Documents/EmoTracker/" .. filename .. ".txt", "w+")
+            local file = io.open(os.getenv("USERPROFILE") .. "\\Documents\\EmoTracker\\" .. filename .. ".txt", "w+")
             if file then
                 io.output(file)
                 io.write(value)
@@ -47,19 +47,19 @@ function sendExternalMessage(filename, value)
 end
 
 function saveSettings(setting)
-    local baseDir = "C:/Users/" .. os.getenv("USERNAME") .. "/"
-    local emoDir = "Documents/EmoTracker/"
-    local packRoot = "user_overrides/alttpr_codetracker_codemann8/"
+    local baseDir = os.getenv("USERPROFILE") .. "\\"
+    local emoDir = "Documents\\EmoTracker\\"
+    local packRoot = "user_overrides\\alttpr_codetracker_codemann8\\"
     
     local function writeOverride(path, filename, text)
         local written = writeFile(baseDir .. emoDir .. packRoot, path, filename, text)
     
-        if dirExists(baseDir .. "OneDrive/" .. emoDir) then
-            written = writeFile(baseDir .. "OneDrive/" .. emoDir .. packRoot, path, filename, text) or written
+        if dirExists(baseDir .. "OneDrive\\" .. emoDir) then
+            written = writeFile(baseDir .. "OneDrive\\" .. emoDir .. packRoot, path, filename, text) or written
         end
         
-        if dirExists(baseDir .. emoDir .. "dev/") then
-            written = writeFile(baseDir .. emoDir .. "dev/" .. packRoot, path, filename, text) or written
+        if dirExists(baseDir .. emoDir .. "dev\\") then
+            written = writeFile(baseDir .. emoDir .. "dev\\" .. packRoot, path, filename, text) or written
         end
 
         Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
@@ -71,12 +71,12 @@ function saveSettings(setting)
             os.remove(baseDir .. emoDir .. packRoot .. path .. filename)
         end
 
-        if dirExists(baseDir .. "OneDrive/" .. emoDir .. packRoot .. path .. filename) then
-            os.remove(baseDir .. "OneDrive/" .. emoDir .. packRoot .. path .. filename)
+        if dirExists(baseDir .. "OneDrive\\" .. emoDir .. packRoot .. path .. filename) then
+            os.remove(baseDir .. "OneDrive\\" .. emoDir .. packRoot .. path .. filename)
         end
         
-        if dirExists(baseDir .. emoDir .. "dev/" .. packRoot .. path .. filename) then
-            os.remove(baseDir .. emoDir .. "dev/" .. packRoot .. path .. filename)
+        if dirExists(baseDir .. emoDir .. "dev\\" .. packRoot .. path .. filename) then
+            os.remove(baseDir .. emoDir .. "dev\\" .. packRoot .. path .. filename)
         end
     end
     
@@ -94,9 +94,9 @@ function saveSettings(setting)
         textOutput = textOutput .. textcode .. " = " .. tostring(otherSetting:getState()) .. "\n"
     end
     if isDefault then
-        deleteOverride("settings/", setting.file)
+        deleteOverride("settings\\", setting.file)
     else
-        writeOverride("settings/", setting.file, textOutput)
+        writeOverride("settings\\", setting.file, textOutput)
     end
 end
 
