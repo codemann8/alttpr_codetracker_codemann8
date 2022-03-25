@@ -152,7 +152,7 @@ Maps help with putting as much info on your stream so viewers ask less questions
 - In the `Miscellaneous` section of the tracker, there is a Take Any Cave icon. Left-clicking this will mark that you found the Take Any Sword, right-clicking will mark all the Take Any Heart Containers that you find.
 
 ## Customization:
-EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden and modified per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Overrides Folder` and it will bring you to where you can modify the file.
+EmoTracker's base functionality allows users to modify aspects of any package to suit the users' needs. There may be aspects of this package that you may not like. These can be configured by clicking the `Gear icon -> Advanced -> Export Overrides`. This brings up a window with all the files that encompass this package, any of these files can be overridden and modified per user preference, but it is recommended to only override files when you know what they do. USER BEWARE: When files are overridden, you risk not getting access to new features as they come out in new releases. When you export overrides, you can click the `Gear icon -> Advanced -> Open Override Folder` and it will bring you to where you can modify the file.
 
 As far as information regarding the structure or syntax of the layout definition, or specific questions as to 'how do I mod it to do this specific thing', these are better suited for inquiry in the [EmoTracker Discord](https://emotracker.net/community/).
 
@@ -161,7 +161,7 @@ There is a new tab called `Settings` where users can specify personal preference
 
 In order for the settings to save properly, you must first export at least one of the settings files (explained in the previous `Customization` section). These settings files will be found in the `settings` directory.
 
-*\*Known Issue for users using OneDrive - Settings won't be remembered, but they WILL still work. A fix for this is coming soon\**
+If you continue to get an error when attempting to change settings, it is likely due to the tracker being unable to determine your computer's 'Documents' folder. You can specify a custom location by overriding the `settings/documents.lua` file and modify that file in a text editor. If you don't know where your Documents folder is located, you can find out by clicking on `Gear icon -> Advanced -> Open Override Folder`
 
 The settings are broken out into several categories, an explanation for each of them are listed below.
 
