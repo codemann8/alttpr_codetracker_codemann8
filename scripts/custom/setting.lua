@@ -84,6 +84,8 @@ function Setting:updateSetting()
             CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING" then
             CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING = self:getState()
+        elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING" then
+            CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING" then
             CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING = self:getState()
         end

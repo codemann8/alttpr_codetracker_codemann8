@@ -50,7 +50,7 @@ DATA.SettingsData = {
         ["CONFIG.BROADCAST_ALTERNATE_LAYOUT"] =                 {"Alternate Layout",                     "settings_broadcast_altlayout",    3, 1,     CONFIG.BROADCAST_ALTERNATE_LAYOUT}
     },
     ["tracking.lua"] = {
-        ["CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON"] = {"Auto Pin Current Dungeon",      "settings_auto_pindungeon",               2, false, CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON},
+        ["CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON"] = {"Auto Pin Current Dungeon",             "settings_auto_pindungeon",        2, false, CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON},
         ["CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING"] =  {"Disable Auto Dungeon Item Tracking",   "settings_auto_dungeon_item",      2, false, CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING"] =      {"Disable Auto Location Tracking",       "settings_auto_location",          2, false, CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING"] =       {"Disable Auto OW Tile Swap Tracking",   "settings_auto_owmixed",           2, false, CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING},
