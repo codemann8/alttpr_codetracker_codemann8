@@ -21,15 +21,14 @@ function updateRoomLocation(segment, location)
             end
             
             if loc.AvailableChestCount == 0 then
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print("Location cleared:", location[1][1], clearedCount)
+                end
                 remove = true
             end
         else
             print("Couldn't find location", name)
         end
-    end
-
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print(location[1][1], clearedCount)
     end
 
     return remove
@@ -60,9 +59,9 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots)
             end
         end
 
-        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print(doorKeyRef, clearedCount)
-        end
+        -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        --     print(doorKeyRef, clearedCount)
+        -- end
 
         doorKey.AcquiredCount = clearedCount
     else
@@ -78,9 +77,9 @@ function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlo
             for i, slot in ipairs(roomSlots) do
                 local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
 
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix, roomData, 1 << slot[2])
-                end
+                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                --     print(dungeonPrefix, roomData, 1 << slot[2])
+                -- end
 
                 if (roomData & (1 << slot[2])) ~= 0 then
                     clearedCount = clearedCount + 1

@@ -29,50 +29,54 @@ function initMemoryWatch()
     STATUS.LastMajorItem = os.time()
 
     INSTANCE.MEMORY.Items = {}
+    INSTANCE.MEMORY.ToggleItems = {}
+    INSTANCE.MEMORY.Progress = {}
+    INSTANCE.MEMORY.Overworld = {}
+    INSTANCE.MEMORY.OverworldItems = {}
+    INSTANCE.MEMORY.Shops = {}
+    INSTANCE.MEMORY.Npc = {}
+    INSTANCE.MEMORY.DungeonChests = {}
+    INSTANCE.MEMORY.DungeonKeyDrops = {}
+    INSTANCE.MEMORY.Bosses = {}
+    INSTANCE.MEMORY.BossLocations = {}
+    INSTANCE.MEMORY.Underworld = {}
+    INSTANCE.MEMORY.UnderworldItems = {}
+
     for k, v in pairs(DATA.MEMORY.Items) do
         INSTANCE.MEMORY.Items[k] = v
     end
-    INSTANCE.MEMORY.Progress = {}
     for k, v in pairs(DATA.MEMORY.Progress) do
         INSTANCE.MEMORY.Progress[k] = v
     end
-    INSTANCE.MEMORY.Overworld = {}
-    for k, v in pairs(DATA.MEMORY.Overworld) do
-        INSTANCE.MEMORY.Overworld[k] = v
-    end
-    INSTANCE.MEMORY.OverworldItems = {}
     for k, v in pairs(DATA.MEMORY.OverworldItems) do
         INSTANCE.MEMORY.OverworldItems[k] = v
     end
-    INSTANCE.MEMORY.Shops = {}
-    for k, v in pairs(DATA.MEMORY.Shops) do
-        INSTANCE.MEMORY.Shops[k] = v
-    end
-    INSTANCE.MEMORY.Npc = {}
-    for k, v in pairs(DATA.MEMORY.Npc) do
-        INSTANCE.MEMORY.Npc[k] = v
-    end
-    INSTANCE.MEMORY.DungeonChests = {}
     for i, v in ipairs(DATA.MEMORY.DungeonChests) do
         INSTANCE.MEMORY.DungeonChests[i] = v
     end
-    INSTANCE.MEMORY.DungeonKeyDrops = {}
     for i, v in ipairs(DATA.MEMORY.DungeonKeyDrops) do
         INSTANCE.MEMORY.DungeonKeyDrops[i] = v
     end
-    INSTANCE.MEMORY.Bosses = {}
     for i, v in ipairs(DATA.MEMORY.Bosses) do
         INSTANCE.MEMORY.Bosses[i] = v
     end
-    INSTANCE.MEMORY.BossLocations = {}
     for i, v in ipairs(DATA.MEMORY.BossLocations) do
         INSTANCE.MEMORY.BossLocations[i] = v
     end
-    INSTANCE.MEMORY.Underworld = {}
-    for i, v in ipairs(DATA.MEMORY.Underworld) do
-        INSTANCE.MEMORY.Underworld[i] = v
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        for k, v in pairs(DATA.MEMORY.Overworld) do
+            INSTANCE.MEMORY.Overworld[k] = v
+        end
+        for k, v in pairs(DATA.MEMORY.Shops) do
+            INSTANCE.MEMORY.Shops[k] = v
+        end
+        for k, v in pairs(DATA.MEMORY.Npc) do
+            INSTANCE.MEMORY.Npc[k] = v
+        end
+        for i, v in ipairs(DATA.MEMORY.Underworld) do
+            INSTANCE.MEMORY.Underworld[i] = v
+        end
     end
-    INSTANCE.MEMORY.UnderworldItems = {}
     for i, v in ipairs(DATA.MEMORY.UnderworldItems) do
         INSTANCE.MEMORY.UnderworldItems[i] = v
     end
@@ -87,7 +91,6 @@ function initMemoryWatch()
     SEGMENTS.HalfMagicData = ScriptHost:AddMemoryWatch("Half Magic Data", 0x7ef37b, 1, updateHalfMagicFromMemorySegment)
     SEGMENTS.ProgressData = ScriptHost:AddMemoryWatch("Progress Data", 0x7ef3c5, 5, updateProgressFromMemorySegment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
-        INSTANCE.MEMORY.ToggleItems = {}
         for k, v in pairs(DATA.MEMORY.ToggleItems) do
             INSTANCE.MEMORY.ToggleItems[k] = v
         end

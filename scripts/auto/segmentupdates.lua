@@ -523,7 +523,9 @@ function updateProgressFromMemorySegment(segment)
                     INSTANCE.MEMORY.Progress[name] = nil
                 end
             end
-        elseif CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and Tracker.ActiveVariantUID ~= "vanilla" then
+        elseif Tracker.ActiveVariantUID == "items_only" then
+            INSTANCE.MEMORY.Progress[name] = nil
+        elseif CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and Tracker.ActiveVariantUID == "full_tracker" then
             print("Couldn't find item:", name)
         end
     end
@@ -950,7 +952,7 @@ function updateRoomsFromMemorySegment(segment)
     end
 
     --Dungeon Data
-    if Tracker.ActiveVariantUID == "full_tracker" then
+    if Tracker.ActiveVariantUID ~= "vanilla" then
         if OBJ_DOORSHUFFLE:getState() == 0 then
             --Doors Opened
             updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
@@ -989,22 +991,25 @@ function updateRoomsFromMemorySegment(segment)
             item.Active = bossflag > 0
         end
 
-        if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID == "full_tracker" then
+        if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
             item = Tracker:FindObjectForCode(INSTANCE.MEMORY.BossLocations[i])
             if item then
                 item.AvailableChestCount = bossflag == 0 and 1 or 0
-                INSTANCE.MEMORY.BossLocations[i] = nil
+                
+                if item.AvailableChestCount == 0 then
+                    INSTANCE.MEMORY.BossLocations[i] = nil
+
+                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                        print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i])
+                    end
+                end
             else
                 print("Couldn't find location", item)
             end
         end
-
-        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i])
-        end
     end
 
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" then
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" then
         return true
     end
 

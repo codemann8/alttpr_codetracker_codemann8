@@ -26,45 +26,46 @@ function tracker_on_accessibility_updated()
         -- loc = Tracker:FindObjectForCode("@TR Bridge Test")
         -- print("TR Bridge Test = " .. tostring(loc.AccessibilityLevel))
 
-        if Tracker.ActiveVariantUID == "full_tracker" then
+        if Tracker.ActiveVariantUID ~= "vanilla" then
             --Update Dungeon Chest Icons
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print("Before chest update: " .. os.clock() - STATUS.START_CLOCK)
-            end
+            -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            --     print("Before chest update: " .. os.clock() - STATUS.START_CLOCK)
+            -- end
             for i = 1, #DATA.DungeonList do
                 local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
                 if item then
                     item:UpdateBadgeAndIcon()
                 end
             end
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print("After chest update: " .. os.clock() - STATUS.START_CLOCK)
-            end
+            -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            --     print("After chest update: " .. os.clock() - STATUS.START_CLOCK)
+            -- end
 
-            --Update Ghost Badges
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print("Before ghost update: " .. os.clock() - STATUS.START_CLOCK)
-            end
+            if Tracker.ActiveVariantUID == "full_tracker" then
+                --Update Ghost Badges
+                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                --     print("Before ghost update: " .. os.clock() - STATUS.START_CLOCK)
+                -- end
+                updateGhosts(DATA.CaptureBadgeOverworld, false, false)
+                if OBJ_ENTRANCE:getState() < 2 then
+                    updateGhosts(DATA.CaptureBadgeUnderworld, false, true)
+                end
+                if OBJ_ENTRANCE:getState() > 0 then
+                    updateGhosts(DATA.CaptureBadgeEntrances, true, true)
+                    updateGhosts(DATA.CaptureBadgeDungeons, true, true)
+                    
+                    if OBJ_ENTRANCE:getState() > 1 then
+                        updateGhosts(DATA.CaptureBadgeConnectors, true, true)
+                        updateGhosts(DATA.CaptureBadgeDropdowns, true, true)
 
-            updateGhosts(DATA.CaptureBadgeOverworld, false, false)
-            if OBJ_ENTRANCE:getState() < 2 then
-                updateGhosts(DATA.CaptureBadgeUnderworld, false, true)
-            end
-            if OBJ_ENTRANCE:getState() > 0 then
-                updateGhosts(DATA.CaptureBadgeEntrances, true, true)
-                updateGhosts(DATA.CaptureBadgeDungeons, true, true)
-                
-                if OBJ_ENTRANCE:getState() > 1 then
-                    updateGhosts(DATA.CaptureBadgeConnectors, true, true)
-                    updateGhosts(DATA.CaptureBadgeDropdowns, true, true)
-
-                    if OBJ_ENTRANCE:getState() == 4 then
-                        updateGhosts(DATA.CaptureBadgeInsanity, true, true)
+                        if OBJ_ENTRANCE:getState() == 4 then
+                            updateGhosts(DATA.CaptureBadgeInsanity, true, true)
+                        end
                     end
                 end
-            end
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print("After ghost update: " .. os.clock() - STATUS.START_CLOCK)
+                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                --     print("After ghost update: " .. os.clock() - STATUS.START_CLOCK)
+                -- end
             end
         end
     end
