@@ -54,7 +54,7 @@ function saveSettings(setting)
         local fullDir = ""
 
         if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-            fullDir = os.getenv("OneDrive") .. "\\" .. emoDir
+            fullDir = os.getenv("OneDrive") .. "\\"
         elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
             fullDir = CONFIG.DOCUMENTS_FOLDER
         else
@@ -84,7 +84,7 @@ function saveSettings(setting)
         local fullDir = ""
         
         if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-            fullDir = os.getenv("OneDrive") .. "\\" .. emoDir
+            fullDir = os.getenv("OneDrive") .. "\\"
         elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
             fullDir = CONFIG.DOCUMENTS_FOLDER
         else
