@@ -161,7 +161,7 @@ There is a new tab called `Settings` where users can specify personal preference
 
 In order for the settings to save properly, you must first export at least one of the settings files (explained in the previous `Customization` section). These settings files will be found in the `settings` directory.
 
-If you continue to get an error when attempting to change settings, it is likely due to the tracker being unable to determine your computer's 'Documents' folder. You can specify a custom location by overriding the `settings/documents.lua` file and modify that file in a text editor. If you don't know where your Documents folder is located, you can find out by clicking on `Gear icon -> Advanced -> Open Override Folder`
+If you continue to get an error when attempting to change settings, it is likely due to the tracker being unable to determine your computer's 'Documents' folder. You can specify a custom location by overriding the `settings/documents.lua` file and modify that file in a text editor (don't include the 'Documents' folder itself). If you don't know where your Documents folder is located, you can find out by clicking on `Gear icon -> Advanced -> Open Override Folder`
 
 The settings are broken out into several categories, an explanation for each of them are listed below.
 
