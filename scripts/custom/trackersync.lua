@@ -11,6 +11,7 @@ end
 
 function TrackerSync:onLeftClick()
     if STATUS.AutotrackerInGame then
+        ScriptHost:PushMarkdownNotification(NotificationType.Message, "Autotracker Refreshed")
         disposeMemoryWatch()
         initMemoryWatch()
     end
