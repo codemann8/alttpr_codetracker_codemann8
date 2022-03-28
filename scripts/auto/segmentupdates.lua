@@ -412,9 +412,7 @@ function updateToggleItemsFromMemorySegment(segment)
                 if #value > 2 then
                     value[3](segment)
                 elseif segment:ContainsAddress(value[1]) then
-                    if not item.Active or not STATUS.AutotrackerInGame then
-                        item.Active = segment:ReadUInt8(value[1]) & value[2] > 0
-                    end
+                    item.Active = segment:ReadUInt8(value[1]) & value[2] > 0
     
                     if item.Active then
                         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
