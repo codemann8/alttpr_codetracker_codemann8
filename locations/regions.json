@@ -1371,12 +1371,17 @@
         "name": "WLW Entry",
         "access_rules": [
             "@WLW Regions",
+            
+            "ow_swapped_53,world_state_open,entrance_shuffle_minor,door_shuffle_off", //sanc start
+            "ow_swapped_13,world_state_inverted", //dark chapel start
+            "entrance_shuffle_minor,ow_swapped_5b", //assumed access from Links
+            "entrance_shuffle_minor,ow_swapped_69",
+            "entrance_shuffle_minor,ow_swapped_5d,ow_swapped_6d",
+            
             "ow_swapped,40,ow_sw_back,mirror",
             "ow_swapped,00,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
             "ow_swapped_4f,ow_zora_waterfall_fairy,flippers",
             "ow_swapped_0f,ow_zora_waterfall_fairy,flippers,mirror",
-            "ow_swapped_53,world_state_open,entrance_shuffle_minor,door_shuffle_off", //sanc start
-            "ow_swapped_13,world_state_inverted", //dark chapel start
             "ow_swapped_54,ow_graveyard_tomb,lift2",
             "ow_swapped_14,ow_graveyard_tomb,mirror",
             "ow_swapped,18,ow_outcasts_hammer,hammer",
@@ -1824,9 +1829,11 @@
         "name": "WDW Entry",
         "access_rules": [
             "@WDW Regions",
-            "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
+            
             "ow_swapped_13,world_state_open,entrance_shuffle_minor,door_shuffle_off", //sanc start
             "ow_swapped_53,world_state_inverted", //dark chapel start
+
+            "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
             "ow_swapped_14,ow_graveyard_ledge,pearl",
             "ow_swapped_14,ow_graveyard_tomb,pearl,lift2",
             "ow_swapped_58,ow_outcasts_hammer,pearl,hammer",
