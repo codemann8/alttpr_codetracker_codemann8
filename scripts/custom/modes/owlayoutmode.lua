@@ -38,4 +38,9 @@ function OverworldLayoutMode:postUpdate()
         Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
         Tracker.AlwaysAllowClearing = CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
     end
+
+    for i = 1, #DATA.OverworldIds do
+        Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState:updateIcon()
+        Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i] + 0x40)).ItemState:updateIcon()
+    end
 end
