@@ -205,6 +205,17 @@ DATA.OverworldIds = {
     0x30, 0x32, 0x33, 0x34, 0x35, 0x37, 0x3a, 0x3b, 0x3c, 0x3f
 }
 
+DATA.MegatileOverworlds = {
+    [0x00] = true,
+    [0x03] = true,
+    [0x05] = true,
+    [0x18] = true,
+    [0x1b] = true,
+    [0x1e] = true,
+    [0x30] = true,
+    [0x35] = true
+}
+
 DATA.OverworldIdRegionMap = {
     [0x02] = "ow_lumberjack", [0x03] = "ow_dm_west_bottom", [0x07] = "ow_trpegs", [0x0a] = "ow_mountainentry",
     [0x11] = "ow_kak_fortune", [0x12] = "ow_kak_pond", [0x13] = "ow_sanc",

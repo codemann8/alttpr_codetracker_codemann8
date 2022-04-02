@@ -61,14 +61,15 @@ function OWSwap:updateSurrogate()
 end
 
 function OWSwap:updateIcon()
+    local border = "overlay|images/maps/overworld/ow-tile-border" .. (DATA.MegatileOverworlds[self.owid % 0x40] and "-half" or "") .. ".png"
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png", border)
     elseif self:getState() == 1 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", border)
     elseif self:getState() == 2 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", "saturation|0.2")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", "saturation|0.2," .. border)
     else
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png", "saturation|0.2")
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png", "saturation|0.2," .. border)
     end
 end
 
