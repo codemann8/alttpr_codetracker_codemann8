@@ -68,6 +68,8 @@ function Setting:updateSetting()
             CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW = self:getState()
         elseif self.textcode == "CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE" then
             CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE = self:getState()
+        elseif self.textcode == "CONFIG.LAYOUT_HIDE_MAP_GRIDLINES" then
+            CONFIG.LAYOUT_HIDE_MAP_GRIDLINES = self:getState()
         elseif self.textcode == "CONFIG.LAYOUT_ROOM_SLOT_METHOD" then
             CONFIG.LAYOUT_ROOM_SLOT_METHOD = self:getState()
         end

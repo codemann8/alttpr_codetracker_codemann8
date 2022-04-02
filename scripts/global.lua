@@ -472,6 +472,12 @@ function updateLayout(setting)
                     Layout:FindLayout("shared_pins").Root.MaxHeight = 306
                 end
             end
+            if setting == nil or setting.textcode == "CONFIG.LAYOUT_HIDE_MAP_GRIDLINES" then
+                for i = 1, #DATA.OverworldIds do
+                    Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState:updateIcon()
+                    Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i] + 0x40)).ItemState:updateIcon()
+                end
+            end
         end
     end
     if setting == nil or setting.file == "broadcast.lua" then

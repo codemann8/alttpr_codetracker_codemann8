@@ -202,6 +202,27 @@
                 "content": [
                     {
                         "type": "item",
+                        "item": "settings_layout_hidegridlines",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Hide Map Gridlines"
+                    }
+                ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
                         "item": "settings_layout_doorslot",
                         "width": 20
                     },

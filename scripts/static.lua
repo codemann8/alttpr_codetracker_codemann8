@@ -11,6 +11,7 @@ DATA.SettingsHeader = {
     { "layout.lua", {
         "CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW",
         "CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE",
+        "CONFIG.LAYOUT_HIDE_MAP_GRIDLINES",
         "CONFIG.LAYOUT_ROOM_SLOT_METHOD"
     }},
     { "broadcast.lua", {
@@ -44,6 +45,7 @@ DATA.SettingsData = {
     ["layout.lua"] = {
         ["CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW"] =       {"Enable Traditional Dungeon Layout",    "settings_layout_altdungeon",      2, false, CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW},
         ["CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE"] =            {"Enable Thin Horizontal Pane",          "settings_layout_thinhoriz",       2, false, CONFIG.LAYOUT_USE_THIN_HORIZONTAL_PANE},
+        ["CONFIG.LAYOUT_HIDE_MAP_GRIDLINES"] =                  {"Hide Map Gridlines",                   "settings_layout_hidegridlines",   2, false, CONFIG.LAYOUT_HIDE_MAP_GRIDLINES},
         ["CONFIG.LAYOUT_ROOM_SLOT_METHOD"] =                    {"Door Rando Slot Method",               "settings_layout_doorslot",        3, 1,     CONFIG.LAYOUT_ROOM_SLOT_METHOD}
     },
     ["broadcast.lua"] = {
