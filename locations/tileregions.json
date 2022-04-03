@@ -1995,11 +1995,36 @@
         ]
     },
     {
+        "name": "OW Ice Lake Water",
+        "parent": "Water Area Color",
+        "access_rules": [
+            "ow_ice_water",
+            "ow_swapped_75,@Lake Dark World",
+            "ow_swapped_35,@Lake Light World",
+
+            "ow_ice_northwest,pearl,[flippers]",
+            "ow_ice_northeast,pearl,[flippers]",
+            "ow_ice_southwest,pearl,[flippers]",
+            "ow_ice_southeast,pearl,[flippers]",
+            "ow_swapped_35,ow_ice_northwest,[flippers]",
+            "ow_swapped_35,ow_ice_northeast,[flippers]",
+            "ow_swapped_35,ow_ice_southwest,[flippers]",
+            "ow_swapped_35,ow_ice_southeast,[flippers]",
+            "ow_swapped_35,inverted_orig,ow_ice_palace,[flippers]",
+            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_northeast,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_water,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_upgrade,[flippers],mirror"
+        ]
+    },
+    {
         "name": "OW Ice Lake Island",
         "parent": "Water Area Color",
         "access_rules": [
             "ow_ice_palace",
             "ow_swapped_75,@Lake Light World,lift2",
+            "ow_swapped_75,inverted_orig,@OW Ice Lake Water",
             "ow_swapped_35,inverted_orig,@Lake Light World",
             "ow_swapped_35,@Lake Dark World,mirror",
             "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,flippers", //prob soon to be removed from logic
@@ -2028,35 +2053,11 @@
             "ow_swapped_35,ow_ice_southwest,[flippers],lift2,pearl,mirror",
             "ow_swapped_35,ow_ice_southeast,[flippers],lift2,pearl,mirror",
             "ow_swapped_35,ow_ice_water,lift2,pearl,[flippers],mirror",
-            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_northeast,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
+            "ow_swapped_35,ow_hylia_northwest,pearl,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_northeast,pearl,[flippers],mirror",
+            "ow_swapped_35,ow_hylia_shore,pearl,[flippers],mirror",
             "ow_swapped_35,ow_hylia_water,mirror",
             "ow_swapped_35,ow_hylia_upgrade,mirror"
-        ]
-    },
-    {
-        "name": "OW Ice Lake Water",
-        "parent": "Water Area Color",
-        "access_rules": [
-            "ow_ice_water",
-            "ow_swapped_75,@Lake Dark World",
-            "ow_swapped_35,@Lake Light World",
-
-            "ow_ice_northwest,pearl,[flippers]",
-            "ow_ice_northeast,pearl,[flippers]",
-            "ow_ice_southwest,pearl,[flippers]",
-            "ow_ice_southeast,pearl,[flippers]",
-            "ow_swapped_35,ow_ice_northwest,[flippers]",
-            "ow_swapped_35,ow_ice_northeast,[flippers]",
-            "ow_swapped_35,ow_ice_southwest,[flippers]",
-            "ow_swapped_35,ow_ice_southeast,[flippers]",
-            "ow_swapped_35,inverted_orig,ow_ice_palace,[flippers]",
-            "ow_swapped_35,ow_hylia_northwest,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_northeast,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_shore,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_water,mirror,[flippers]",
-            "ow_swapped_35,ow_hylia_upgrade,mirror,[flippers]"
         ]
     },
     {
