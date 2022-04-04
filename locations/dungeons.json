@@ -1861,9 +1861,13 @@
             {
                 "name": "Spike Room",
                 "access_rules": [
-                    "pool_keydrop_off,[hookshot]",
+                    "pool_keydrop_off,hookshot",
                     "pool_keydrop_off,ip_smallkey:1",
-                    "pool_keydrop_on,ip_smallkey:2,[hookshot]",
+                    "pool_keydrop_off,somaria,[hookshot]",
+                    "pool_keydrop_off,somaria,[ip_smallkey:1]",
+                    "pool_keydrop_on,ip_smallkey:1,somaria,[ip_smallkey:2],[hookshot]",
+                    "pool_keydrop_on,ip_smallkey:1,somaria,[ip_smallkey:3]",
+                    "pool_keydrop_on,ip_smallkey:2,hookshot",
                     "pool_keydrop_on,ip_smallkey:3",
                     "keysanity_smallkey_off",
                     "door_shuffle_on"
