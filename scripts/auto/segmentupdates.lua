@@ -412,9 +412,10 @@ function updateToggleItemsFromMemorySegment(segment)
                 if #value > 2 then
                     value[3](segment)
                 elseif segment:ContainsAddress(value[1]) then
+                    local itemActive = item.Active
                     item.Active = segment:ReadUInt8(value[1]) & value[2] > 0
     
-                    if item.Active then
+                    if not itemActive and item.Active then
                         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                             print("Item Got:", name)
                         end
