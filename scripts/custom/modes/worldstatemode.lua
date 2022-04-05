@@ -65,6 +65,8 @@ function WorldStateMode:postUpdate()
             item:setStateExternal((item:getState() + 1) % item:getCount())
         end
     end
+
+    updateMaps()
 end
 
 function WorldStateMode:save()

@@ -33,5 +33,7 @@ end
 function PoolMode:postUpdate()
     if self.itemCode == "keydrop" then
         updateChests()
+    elseif self.itemCode == "district" then
+        updateMaps()
     end
 end

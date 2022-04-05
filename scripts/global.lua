@@ -220,6 +220,7 @@ function loadModes()
     OBJ_MIXED = OverworldMixedMode(false):linkSurrogate(OverworldMixedMode(true))
     OBJ_OWSHUFFLE = OverworldLayoutMode(false):linkSurrogate(OverworldLayoutMode(true))
     OBJ_RETRO = RetroMode(false):linkSurrogate(RetroMode(true))
+    OBJ_DISTRICT = PoolMode(0, "District")
     PoolMode(0, "Shopsanity"):linkSurrogate(PoolMode(1, "Shopsanity"))
     OBJ_POOL_KEYDROP = PoolMode(0, "Key Drop")
     OBJ_POOL_KEYDROP:linkSurrogate(PoolMode(1, "Key Drop"):linkSurrogate(PoolMode(2, "Key Drop"):linkSurrogate(OBJ_POOL_KEYDROP, true), true), true)
@@ -396,6 +397,20 @@ function updateChests()
 
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("After chest change: " .. os.clock() - STATUS.START_CLOCK)
+    end
+end
+
+function updateMaps()
+    local e = Layout:FindLayout("map").Root.Maps:GetEnumerator()
+    e:MoveNext()
+    if OBJ_DISTRICT:getState() > 0 then
+        e.Current.Image = ImageReference:FromPackRelativePath("images/maps/overworld/ow-district-" .. (OBJ_WORLDSTATE:getState() == 0 and "lw" or "dw") .. ".png")
+        e:MoveNext()
+        e.Current.Image = ImageReference:FromPackRelativePath("images/maps/overworld/ow-district-" .. (OBJ_WORLDSTATE:getState() == 0 and "dw" or "lw") .. ".png")
+    else
+        e.Current.Image = ImageReference:FromPackRelativePath("images/maps/overworld/ow_transparent.png")
+        e:MoveNext()
+        e.Current.Image = ImageReference:FromPackRelativePath("images/maps/overworld/ow_transparent.png")
     end
 end
 

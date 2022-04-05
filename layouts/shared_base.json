@@ -123,16 +123,42 @@
                         "header_background": "#3e4b57",
                         "content":[
                             {
-                                "type": "container",
-                                "margin": "-10,-10,-10,-7",
+                                "type": "array",
+                                "orientation": "vertical",
+                                "margin": "-5,-5,-5,-2",
                                 "content": [
                                     {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "content": [
+                                            {
+                                                "type": "itemgrid",
+                                                "margin": 0,
+                                                "item_margin": 0,
+                                                "item_width": 168,
+                                                "item_height": 24,
+                                                "rows": [
+                                                    [ "pool_shopsanity" ]
+                                                ]
+                                            },
+                                            {
+                                                "type": "itemgrid",
+                                                "margin": 0,
+                                                "item_margin": 0,
+                                                "item_size": 24,
+                                                "rows": [
+                                                    [ "pool_district" ]
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
                                         "type": "itemgrid",
+                                        "margin": 0,
                                         "item_margin": 0,
                                         "item_width": 192,
                                         "item_height": 24,
                                         "rows": [
-                                            [ "pool_shopsanity" ],
                                             [ "pool_keydrop" ]
                                         ]
                                     }
