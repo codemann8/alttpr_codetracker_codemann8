@@ -265,20 +265,99 @@
         "max_quantity": 8
     },
 
+    // Enemy Keys
+    {
+        "name": "Hyrule Castle Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "hc_enemykey",
+        "max_quantity": 4
+    },
+    {
+        "name": "Eastern Palace Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ep_enemykey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Desert Palace Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "dp_enemykey",
+        "max_quantity": 0
+    },
+    {
+        "name": "Aga Tower Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "at_enemykey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Swamp Palace Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sp_enemykey",
+        "max_quantity": 0
+    },
+    {
+        "name": "Skull Woods Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "sw_enemykey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Thieves Town Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tt_enemykey",
+        "max_quantity": 0
+    },
+    {
+        "name": "Ice Palace Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "ip_enemykey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Misery Mire Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "mm_enemykey",
+        "max_quantity": 1
+    },
+    {
+        "name": "Turtle Rock Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "tr_enemykey",
+        "max_quantity": 2
+    },
+    {
+        "name": "Ganon's Tower Enemy Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "gt_enemykey",
+        "max_quantity": 1
+    },
+
     // Pot Keys
     {
         "name": "Hyrule Castle Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "hc_potkey",
-        "max_quantity": 4
+        "max_quantity": 0
     },
     {
         "name": "Eastern Palace Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "ep_potkey",
-        "max_quantity": 2
+        "max_quantity": 1
     },
     {
         "name": "Desert Palace Pot Key",
@@ -292,7 +371,7 @@
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "at_potkey",
-        "max_quantity": 2
+        "max_quantity": 0
     },
     {
         "name": "Swamp Palace Pot Key",
@@ -306,7 +385,7 @@
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "sw_potkey",
-        "max_quantity": 2
+        "max_quantity": 1
     },
     {
         "name": "Thieves Town Pot Key",
@@ -320,28 +399,28 @@
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "ip_potkey",
-        "max_quantity": 4
+        "max_quantity": 2
     },
     {
         "name": "Misery Mire Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "mm_potkey",
-        "max_quantity": 3
+        "max_quantity": 2
     },
     {
         "name": "Turtle Rock Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "tr_potkey",
-        "max_quantity": 2
+        "max_quantity": 0
     },
     {
         "name": "Ganon's Tower Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "gt_potkey",
-        "max_quantity": 4
+        "max_quantity": 3
     },
     
     // Compasses

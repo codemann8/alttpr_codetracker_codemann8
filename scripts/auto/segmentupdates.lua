@@ -969,18 +969,25 @@ function updateRoomsFromMemorySegment(segment)
             updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
         end
 
-        --Pot and Enemy Keys
-        updateDoorKeyCountFromRoomSlotList(segment, "hc_potkey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}, {153, 10}})
+        --Enemy Keys
+        updateDoorKeyCountFromRoomSlotList(segment, "hc_enemykey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "ep_enemykey", {{153, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "at_enemykey", {{192, 10}, {176, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "sw_enemykey", {{57, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "ip_enemykey", {{14, 10}, {62, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "mm_enemykey", {{193, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "tr_enemykey", {{182, 10}, {19, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "gt_enemykey", {{61, 10}})
+
+        --Pot Keys
+        updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}})
         updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "at_potkey", {{192, 10}, {176, 10}})
         updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}, {57, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}})
         updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{14, 10}, {62, 10}, {63, 10}, {159, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {193, 10}, {161, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "tr_potkey", {{182, 10}, {19, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}, {61, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{63, 10}, {159, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {161, 10}})
+        updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}})
     end
 
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do

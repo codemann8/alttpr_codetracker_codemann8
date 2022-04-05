@@ -90,6 +90,7 @@ function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlo
             local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
             local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
             local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+            local enemykey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
             local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
             local dungeonItems = 0
 
@@ -114,10 +115,16 @@ function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlo
                 print(dungeonPrefix .. " Chests:", clearedCount)
             end
 
-            if potkey and OBJ_POOL_KEYDROP:getState() > 0 then
-                local addedKeys = potkey.AcquiredCount
-                if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
-                    addedKeys = addedKeys - 1
+            if OBJ_POOL_KEYDROP:getState() > 0 then
+                local addedKeys = 0
+                if potkey then
+                    addedKeys = potkey.AcquiredCount
+                end
+                if enemykey then
+                    addedKeys = addedKeys + enemykey.AcquiredCount
+                    if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
+                        addedKeys = addedKeys - 1
+                    end
                 end
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                     print(dungeonPrefix .. " Key Drops:", addedKeys)
