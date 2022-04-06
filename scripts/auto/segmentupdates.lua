@@ -1,6 +1,6 @@
 function updateTitleFromMemorySegment(segment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
-        local value = segment:ReadUInt8(0x007fd3)
+        local value = segment:ReadUInt8(0x702013)
         if value > 0 then
             if string.char(value) == "O" then
                 if OBJ_WORLDSTATE:getProperty("version") ~= 1 then

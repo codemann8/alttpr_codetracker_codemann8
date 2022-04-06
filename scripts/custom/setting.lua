@@ -90,8 +90,6 @@ function Setting:updateSetting()
             CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING" then
             CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING = self:getState()
-        elseif self.textcode == "CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER" then
-            CONFIG.AUTOTRACKER_DISABLE_ROM_HEADER = self:getState()
         end
     elseif self.file == "fileio.lua" then
         if self.textcode == "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE" then
