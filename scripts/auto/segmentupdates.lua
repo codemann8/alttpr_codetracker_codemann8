@@ -1009,7 +1009,7 @@ function updateRoomsFromMemorySegment(segment)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
         local item = Tracker:FindObjectForCode(boss[1])
-        if item then
+        if item and OBJ_GLITCHMODE:getState() < 3 then
             item.Active = bossflag > 0
         end
 
@@ -1288,7 +1288,7 @@ function updateDungeonKeysFromMemorySegment(segment)
 end
 
 function updateDungeonPendantFromMemorySegment(segment)
-    if OBJ_RACEMODE:getState() > 0 or not isInGame() then
+    if OBJ_RACEMODE:getState() > 0 or OBJ_GLITCHMODE:getState() > 2 or not isInGame() then
         return false
     end
     
@@ -1315,7 +1315,7 @@ function updateDungeonPendantFromMemorySegment(segment)
 end
 
 function updateDungeonCrystalFromMemorySegment(segment)
-    if OBJ_RACEMODE:getState() > 0 or not isInGame() then
+    if OBJ_RACEMODE:getState() > 0 or OBJ_GLITCHMODE:getState() > 2 or not isInGame() then
         return false
     end
     

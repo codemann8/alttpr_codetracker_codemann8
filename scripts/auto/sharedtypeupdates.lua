@@ -39,13 +39,13 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
     if OBJ_RACEMODE:getState() == 0 then
         local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
         if item then
-            if segment then
+            if segment and OBJ_GLITCHMODE:getState() < 2 then
                 local value = segment:ReadUInt8(address)
                 if value > 0 then
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
                 item.CollectedCount = value
-            elseif not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM then
+            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
                 local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
                 local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
