@@ -1,7 +1,8 @@
 function updateTitleFromMemorySegment(segment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
-        local value = segment:ReadUInt8(0x702013)
+        local value = segment:ReadUInt8(0x702000)
         if value > 0 then
+            value = segment:ReadUInt8(0x702013)
             if string.char(value) == "O" then
                 if OBJ_WORLDSTATE:getProperty("version") ~= 1 then
                     OBJ_WORLDSTATE.clicked = true
@@ -14,6 +15,12 @@ function updateTitleFromMemorySegment(segment)
                     OBJ_WORLDSTATE.ignorePostUpdate = true
                     OBJ_WORLDSTATE:setProperty("version", 0)
                 end
+            end
+
+            INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
+            if INSTANCE.NEW_POTDROP_SYSTEM and STATUS.AutotrackerInGame then
+                SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
+                SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
             end
         end
     end
@@ -823,50 +830,57 @@ DATA.MEMORY.DungeonChests = {
     { {"@Ganon's Tower/Validation", "@GT Validation/Chest"}, {{77, 4}} }
 }
 
-DATA.MEMORY.DungeonKeyDrops = {
-    { {"@Hyrule Castle & Escape/Key Guard", "@HC Key Guard/Guard"}, {{114, 10}} },
-    { {"@Hyrule Castle & Escape/Boomerang Guard", "@HC Boomerang/Guard"}, {{113, 10}} },
-    { {"@Hyrule Castle & Escape/Ball 'N Chain Guard", "@HC Ball 'N Chain/Guard"}, {{128, 10}} },
-    { {"@Hyrule Castle & Escape/Key Rat", "@HC Key Rat/Rat"}, {{33, 10}} },
+DATA.MEMORY.DungeonEnemyDrops = {
+    { {"@Hyrule Castle & Escape/Key Guard", "@HC Key Guard/Guard"}, {{114, 10}}, {{114, 15}} },
+    { {"@Hyrule Castle & Escape/Boomerang Guard", "@HC Boomerang/Guard"}, {{113, 10}}, {{113, 14}} },
+    { {"@Hyrule Castle & Escape/Ball 'N Chain Guard", "@HC Ball 'N Chain/Guard"}, {{128, 10}}, {{128, 13}} },
+    { {"@Hyrule Castle & Escape/Key Rat", "@HC Key Rat/Rat"}, {{33, 10}}, {{33, 15}} },
 
-    { {"@Eastern Palace/Dark Pot Key", "@EP Dark Pot/Pot"}, {{186, 10}} },
-    { {"@Eastern Palace/Dark Eyegore", "@EP Dark Eyegore/Eyegore"}, {{153, 10}} },
+    { {"@Eastern Palace/Dark Eyegore", "@EP Dark Eyegore/Eyegore"}, {{153, 10}}, {{153, 12}} },
 
-    { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Pot"}, {{99, 10}} },
-    { {"@Desert Palace/Beamos Hall Key", "@DP Beamos Hall/Pot"}, {{83, 10}} },
-    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Pot"}, {{67, 10}} },
+    { {"@Agahnim's Tower/Bow Guard", "@AT Bow Guard/Guard"}, {{192, 10}}, {{192, 12}} },
+    { {"@Agahnim's Tower/Circle of Pots Key", "@AT Circle of Pots/Guard"}, {{176, 10}}, {{176, 5}} },
 
-    { {"@Agahnim's Tower/Bow Guard", "@AT Bow Guard/Guard"}, {{192, 10}} },
-    { {"@Agahnim's Tower/Circle of Pots Key", "@AT Circle of Pots/Guard"}, {{176, 10}} },
+    { {"@Skull Woods/Gibdo Key", "@SW Gibdo/Gibdo"}, {{57, 10}}, {{57, 14}} },
 
-    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Pot"}, {{56, 10}} },
-    { {"@Swamp Palace/Front Flood Key", "@SP Front Flood Pot/Pot"}, {{55, 10}} },
-    { {"@Swamp Palace/Hookshot Key", "@SP Hookshot Pot/Pot"}, {{54, 10}} },
-    { {"@Swamp Palace/Left Flood Key", "@SP Left Flood Pot/Pot"}, {{53, 10}} },
-    { {"@Swamp Palace/Waterway Key", "@SP Waterway/Pot"}, {{22, 10}} },
+    { {"@Ice Palace/Lobby Key", "@IP Lobby/Bari"}, {{14, 10}}, {{14, 12}} },
+    { {"@Ice Palace/Conveyor Key", "@IP Conveyor/Bari"}, {{62, 10}}, {{62, 7}} },
+    
+    { {"@Misery Mire/Conveyor Jelly", "@MM Conveyor Switch/Bari"}, {{193, 10}}, {{193, 6}} },
 
-    { {"@Skull Woods/West Lobby Key", "@SW West Lobby/Pot"}, {{86, 10}} },
-    { {"@Skull Woods/Gibdo Key", "@SW Gibdo/Gibdo"}, {{57, 10}} },
+    { {"@Turtle Rock/Chain Chomp Pokey", "@TR Chain Chomp/Pokey"}, {{182, 10}}, {{182, 10}} },
+    { {"@Turtle Rock/Lava Pokey", "@TR Lava Pokey/Pokey"}, {{19, 10}}, {{19, 9}} },
 
-    { {"@Thieves Town/Hallway Key", "@TT Hallway/Pot"}, {{188, 10}} },
-    { {"@Thieves Town/Spike Switch Key", "@TT Spike Switch/Pot"}, {{171, 10}} },
+    { {"@Ganon's Tower/Mini Helmasaur Key", "@GT Mini Helmasaur/Mini Helmasaur"}, {{61, 10}}, {{61, 13}} }
+}
 
-    { {"@Ice Palace/Lobby Key", "@IP Lobby/Bari"}, {{14, 10}} },
-    { {"@Ice Palace/Conveyor Key", "@IP Conveyor/Bari"}, {{62, 10}} },
-    { {"@Ice Palace/Boulder Key", "@IP Tongue Pull/Boulder"}, {{63, 10}} },
-    { {"@Ice Palace/Ice Hell Key", "@IP Hell on Ice/Pot"}, {{159, 10}} },
+DATA.MEMORY.DungeonPotDrops = {
+    { {"@Eastern Palace/Dark Pot Key", "@EP Dark Pot/Pot"}, {{186, 10}}, {{186, 11}} },
+    
+    { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Pot"}, {{99, 10}}, {{99, 10}} },
+    { {"@Desert Palace/Beamos Hall Key", "@DP Beamos Hall/Pot"}, {{83, 10}}, {{83, 13}} },
+    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Pot"}, {{67, 10}}, {{67, 7}} },
 
-    { {"@Misery Mire/Spike Key", "@MM Spike Room/Pot"}, {{179, 10}} },
-    { {"@Misery Mire/Fishbone Key", "@MM Fishbone Room/Pot"}, {{161, 10}} },
-    { {"@Misery Mire/Conveyor Jelly", "@MM Conveyor Switch/Bari"}, {{193, 10}} },
+    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Pot"}, {{56, 10}}, {{56, 11}} },
+    { {"@Swamp Palace/Front Flood Key", "@SP Front Flood Pot/Pot"}, {{55, 10}}, {{55, 15}} },
+    { {"@Swamp Palace/Hookshot Key", "@SP Hookshot Pot/Pot"}, {{54, 10}}, {{54, 11}} },
+    { {"@Swamp Palace/Left Flood Key", "@SP Left Flood Pot/Pot"}, {{53, 10}}, {{53, 15}} },
+    { {"@Swamp Palace/Waterway Key", "@SP Waterway/Pot"}, {{22, 10}}, {{22, 7}} },
 
-    { {"@Turtle Rock/Chain Chomp Pokey", "@TR Chain Chomp/Pokey"}, {{182, 10}} },
-    { {"@Turtle Rock/Lava Pokey", "@TR Lava Pokey/Pokey"}, {{19, 10}} },
+    { {"@Skull Woods/West Lobby Key", "@SW West Lobby/Pot"}, {{86, 10}}, {{86, 2}} },
 
-    { {"@Ganon's Tower/Conveyor Bumper Key", "@GT Conveyor Bumper/Pot"}, {{139, 10}} },
-    { {"@Ganon's Tower/Double Switch Key", "@GT Double Switch/Pot"}, {{155, 10}} },
-    { {"@Ganon's Tower/Post-Compass Key", "@GT Post-Compass/Pot"}, {{123, 10}} },
-    { {"@Ganon's Tower/Mini Helmasaur Key", "@GT Mini Helmasaur/Mini Helmasaur"}, {{61, 10}} }
+    { {"@Thieves Town/Hallway Key", "@TT Hallway/Pot"}, {{188, 10}}, {{188, 14}} },
+    { {"@Thieves Town/Spike Switch Key", "@TT Spike Switch/Pot"}, {{171, 10}}, {{171, 15}} },
+
+    { {"@Ice Palace/Boulder Key", "@IP Tongue Pull/Boulder"}, {{63, 10}}, {{63, 9}} },
+    { {"@Ice Palace/Ice Hell Key", "@IP Hell on Ice/Pot"}, {{159, 10}}, {{159, 11}} },
+
+    { {"@Misery Mire/Spike Key", "@MM Spike Room/Pot"}, {{179, 10}}, {{179, 15}} },
+    { {"@Misery Mire/Fishbone Key", "@MM Fishbone Room/Pot"}, {{161, 10}}, {{161, 15}} },
+
+    { {"@Ganon's Tower/Conveyor Bumper Key", "@GT Conveyor Bumper/Pot"}, {{139, 10}}, {{139, 14}} },
+    { {"@Ganon's Tower/Double Switch Key", "@GT Double Switch/Pot"}, {{155, 10}}, {{155, 14}} },
+    { {"@Ganon's Tower/Post-Compass Key", "@GT Post-Compass/Pot"}, {{123, 10}}, {{123, 11}} }
 }
 
 DATA.MEMORY.Bosses = {
@@ -969,25 +983,27 @@ function updateRoomsFromMemorySegment(segment)
             updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
         end
 
-        --Enemy Keys
-        updateDoorKeyCountFromRoomSlotList(segment, "hc_enemykey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "ep_enemykey", {{153, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "at_enemykey", {{192, 10}, {176, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "sw_enemykey", {{57, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "ip_enemykey", {{14, 10}, {62, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "mm_enemykey", {{193, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "tr_enemykey", {{182, 10}, {19, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "gt_enemykey", {{61, 10}})
+        if not INSTANCE.NEW_POTDROP_SYSTEM then
+            --Enemy Keys
+            updateDoorKeyCountFromRoomSlotList(segment, "hc_enemykey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ep_enemykey", {{153, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "at_enemykey", {{192, 10}, {176, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sw_enemykey", {{57, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ip_enemykey", {{14, 10}, {62, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "mm_enemykey", {{193, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "tr_enemykey", {{182, 10}, {19, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "gt_enemykey", {{61, 10}})
 
-        --Pot Keys
-        updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{63, 10}, {159, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {161, 10}})
-        updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}})
+            --Pot Keys
+            updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{63, 10}, {159, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {161, 10}})
+            updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}})
+        end
     end
 
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
@@ -1047,12 +1063,23 @@ function updateRoomsFromMemorySegment(segment)
 
         --Key Drop Locations
         if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
-            i = 1
-            while i <= #INSTANCE.MEMORY.DungeonKeyDrops do
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonKeyDrops[i]) then
-                    table.remove(INSTANCE.MEMORY.DungeonKeyDrops, i)
-                else
-                    i = i + 1
+            if not INSTANCE.NEW_POTDROP_SYSTEM then
+                i = 1
+                while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i]) then
+                        table.remove(INSTANCE.MEMORY.DungeonEnemyDrops, i)
+                    else
+                        i = i + 1
+                    end
+                end
+
+                i = 1
+                while i <= #INSTANCE.MEMORY.DungeonPotDrops do
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i]) then
+                        table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
+                    else
+                        i = i + 1
+                    end
                 end
             end
         end
@@ -1086,6 +1113,92 @@ function updateRoomsFromMemorySegment(segment)
             i = i + 1
         end
     end
+end
+
+function updateRoomEnemiesFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+    
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Room Enemies")
+    end
+
+    if not INSTANCE.NEW_POTDROP_SYSTEM or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" then
+        return false
+    end
+
+    --Enemy Keys
+    updateDoorKeyCountFromRoomSlotList(segment, "hc_enemykey", {{114, 15}, {113, 14}, {128, 13}, {33, 15}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "ep_enemykey", {{153, 12}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "at_enemykey", {{192, 12}, {176, 5}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "sw_enemykey", {{57, 14}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "ip_enemykey", {{14, 12}, {62, 7}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "mm_enemykey", {{193, 6}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "tr_enemykey", {{182, 10}, {19, 9}}, 0x7850)
+    updateDoorKeyCountFromRoomSlotList(segment, "gt_enemykey", {{61, 13}}, 0x7850)
+
+    if OBJ_RACEMODE:getState() == 0 then
+        --Enemy Key Drop Locations
+        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
+            i = 1
+            while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i], 0x7850) then
+                    table.remove(INSTANCE.MEMORY.DungeonEnemyDrops, i)
+                else
+                    i = i + 1
+                end
+            end
+        end
+    end
+
+    --Refresh Dungeon Calc
+    -- for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+    --     updateDungeonChestCountFromRoomSlotList(nil, dungeonPrefix)
+    -- end
+end
+
+function updateRoomPotsFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+    
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Room Pots")
+    end
+
+    if not INSTANCE.NEW_POTDROP_SYSTEM or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" then
+        return false
+    end
+
+    --Pot Keys
+    updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 11}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 13}, {67, 7}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 11}, {55, 15}, {54, 11}, {53, 15}, {22, 7}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 2}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 14}, {171, 15}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{63, 9}, {159, 11}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 15}, {161, 15}}, 0x7600)
+    updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 14}, {155, 14}, {123, 11}}, 0x7600)
+
+    if OBJ_RACEMODE:getState() == 0 then
+        --Key Drop Locations
+        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
+            i = 1
+            while i <= #INSTANCE.MEMORY.DungeonPotDrops do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7600) then
+                    table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
+                else
+                    i = i + 1
+                end
+            end
+        end
+    end
+
+    --Refresh Dungeon Calc
+    -- for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+    --     updateDungeonChestCountFromRoomSlotList(nil, dungeonPrefix)
+    -- end
 end
 
 function updateDungeonItemsFromMemorySegment(segment)

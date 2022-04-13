@@ -36,7 +36,8 @@ function initMemoryWatch()
     INSTANCE.MEMORY.Shops = {}
     INSTANCE.MEMORY.Npc = {}
     INSTANCE.MEMORY.DungeonChests = {}
-    INSTANCE.MEMORY.DungeonKeyDrops = {}
+    INSTANCE.MEMORY.DungeonEnemyDrops = {}
+    INSTANCE.MEMORY.DungeonPotDrops = {}
     INSTANCE.MEMORY.Bosses = {}
     INSTANCE.MEMORY.BossLocations = {}
     INSTANCE.MEMORY.Underworld = {}
@@ -54,8 +55,11 @@ function initMemoryWatch()
     for i, v in ipairs(DATA.MEMORY.DungeonChests) do
         INSTANCE.MEMORY.DungeonChests[i] = v
     end
-    for i, v in ipairs(DATA.MEMORY.DungeonKeyDrops) do
-        INSTANCE.MEMORY.DungeonKeyDrops[i] = v
+    for i, v in ipairs(DATA.MEMORY.DungeonEnemyDrops) do
+        INSTANCE.MEMORY.DungeonEnemyDrops[i] = v
+    end
+    for i, v in ipairs(DATA.MEMORY.DungeonPotDrops) do
+        INSTANCE.MEMORY.DungeonPotDrops[i] = v
     end
     for i, v in ipairs(DATA.MEMORY.Bosses) do
         INSTANCE.MEMORY.Bosses[i] = v
@@ -98,6 +102,10 @@ function initMemoryWatch()
         SEGMENTS.ArrowData = ScriptHost:AddMemoryWatch("Arrow Data", 0x7ef377, 1, updateToggleItemsFromMemorySegment)
     end
     SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
+    if INSTANCE.NEW_POTDROP_SYSTEM then
+        SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
+        SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
+    end
     if Tracker.ActiveVariantUID == "full_tracker" then
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
         SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
@@ -127,6 +135,8 @@ function disposeMemoryWatch()
     end
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ProgressData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomPotData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomEnemyData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.OverworldData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ShopData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.NPCData)

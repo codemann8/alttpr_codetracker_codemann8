@@ -1,8 +1,9 @@
-function updateRoomLocation(segment, location)
+function updateRoomLocation(segment, location, offset)
+    offset = offset or 0
     local clearedCount = 0
-    for i, slot in ipairs(location[2]) do
-        local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
-
+    for i, slot in ipairs(offset == 0 and location[2] or location[3]) do
+        local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
+        
         if (roomData & (1 << slot[2])) ~= 0 then
             clearedCount = clearedCount + 1
         elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
@@ -41,17 +42,18 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
     end
 end
 
-function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots)
+function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offset)
+    offset = offset or 0
     local doorKey = Tracker:FindObjectForCode(doorKeyRef)
     if doorKey then
         local clearedCount = 0
         for i, slot in ipairs(roomSlots) do
-            local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
+            local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
 
             if (roomData & (1 << slot[2])) ~= 0 then
                 clearedCount = clearedCount + 1
             elseif #slot > 2 then
-                roomData = segment:ReadUInt16(0x7ef000 + (slot[3] * 2))
+                roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[3] * 2))
 
                 if (roomData & (1 << slot[4])) ~= 0 then
                     clearedCount = clearedCount + 1
