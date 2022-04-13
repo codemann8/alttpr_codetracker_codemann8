@@ -53,7 +53,7 @@
             "ow_swapped_40,ow_sw_path_west,mirror",
             "ow_swapped_40,ow_sw_path_east,mirror",
             "ow_swapped_40,ow_sw_portal,mirror",
-            "ow_swapped_40,sw_area,mirror",
+            "ow_swapped_40,ow_sw_back,mirror",
             "ow_swapped_40,ow_sw_front,mirror",
             "ow_swapped_00,pearl,ow_lost_woods_east"
         ]
@@ -69,7 +69,7 @@
             "ow_swapped_40,ow_sw_path_east,mirror",
             "ow_swapped_40,ow_sw_front,mirror",
             "ow_swapped_40,ow_sw_portal,mirror",
-            "ow_swapped_40,sw_area,pearl,mirror",
+            "ow_swapped_40,ow_sw_back,pearl,mirror",
             "ow_swapped_00,pearl,ow_lost_woods_west"
         ]
     },
@@ -1163,19 +1163,24 @@
         "name": "OW Skull Woods Back",
         "parent": "Skull Woods Area Color",
         "access_rules": [
-            "sw_area",
-            "ow_swapped_40,@Northwest Dark World,entrance_shuffle_minor,door_shuffle_off",
-            "ow_swapped_00,@Northwest Light World,entrance_shuffle_minor,door_shuffle_off",
+            "ow_sw_back",
+            "ow_swapped_40,@Northwest Dark World,entrance_shuffle_minor,[door_shuffle_off]",
+            "ow_swapped_40,@Northwest Dark World,entrance_shuffle_crossed,[door_shuffle_off]",
+            "ow_swapped_00,@Northwest Light World,entrance_shuffle_minor,[door_shuffle_off]",
+            "ow_swapped_00,@Northwest Light World,entrance_shuffle_crossed,[door_shuffle_off]",
             "ow_swapped_00,@Northwest Dark World,mirror",
             "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock,pearl,boots,[nothing]",
             "ow_swapped_07,glitch_mode_owg,@OW Turtle Rock,boots,[nothing]",
             "glitch_mode_major,@OW Turtle Rock,[nothing]",
 
-            "entrance_shuffle_minor,door_shuffle_off,ow_sw_front",
-            "entrance_shuffle_minor,door_shuffle_off,ow_sw_portal,pearl,lift1",
+            "entrance_shuffle_minor,[door_shuffle_off],ow_sw_front",
+            "entrance_shuffle_crossed,[door_shuffle_off],ow_sw_front",
+            "entrance_shuffle_minor,[door_shuffle_off],ow_sw_portal,pearl,lift1",
+            "entrance_shuffle_crossed,[door_shuffle_off],ow_sw_portal,pearl,lift1",
             "ow_swapped_00,ow_lost_woods_west,mirror",
             "ow_swapped_00,ow_lost_woods_east,pearl,mirror",
-            "ow_swapped_00,entrance_shuffle_minor,door_shuffle_off,ow_sw_portal,lift1"
+            "ow_swapped_00,entrance_shuffle_minor,[door_shuffle_off],ow_sw_portal,lift1",
+            "ow_swapped_00,entrance_shuffle_crossed,[door_shuffle_off],ow_sw_portal,lift1"
         ]
     },
     {
