@@ -1,4 +1,97 @@
 [
+    // Chests
+    {
+        "name": "Hyrule Castle Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "hc_chest",
+        "max_quantity": 8
+    },
+    {
+        "name": "Eastern Palace Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "ep_chest",
+        "max_quantity": 6
+    },
+    {
+        "name": "Desert Palace Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "dp_chest",
+        "max_quantity": 6
+    },
+    {
+        "name": "Tower of Hera Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "toh_chest",
+        "max_quantity": 6
+    },
+    {
+        "name": "Aga Tower Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "at_chest",
+        "max_quantity": 2
+    },
+    {
+        "name": "Palace of Darkness Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "pod_chest",
+        "max_quantity": 14
+    },
+    {
+        "name": "Swamp Palace Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "sp_chest",
+        "max_quantity": 10
+    },
+    {
+        "name": "Skull Woods Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "sw_chest",
+        "max_quantity": 8
+    },
+    {
+        "name": "Thieves Town Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "tt_chest",
+        "max_quantity": 8
+    },
+    {
+        "name": "Ice Palace Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "ip_chest",
+        "max_quantity": 8
+    },
+    {
+        "name": "Misery Mire Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "mm_chest",
+        "max_quantity": 8
+    },
+    {
+        "name": "Turtle Rock Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "tr_chest",
+        "max_quantity": 12
+    },
+    {
+        "name": "Ganon's Tower Chest",
+        "type": "consumable",
+        "img": "images/0058.png",
+        "codes": "gt_chest",
+        "max_quantity": 27
+    },
+    
     // Big Keys
     {
         "name": "Hyrule Castle Big Key",

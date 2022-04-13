@@ -36,9 +36,66 @@ function updateRoomLocation(segment, location, offset)
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
-    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
-    if item and segment then
-        item.CollectedCount = segment:ReadUInt8(address)
+    if OBJ_RACEMODE:getState() == 0 then
+        local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
+        if item then
+            if segment then
+                item.CollectedCount = segment:ReadUInt8(address)
+            else
+                local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
+                local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+                local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
+                local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+                local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+                local enemykey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
+                local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
+                local dungeonItems = 0
+
+                if map.Active and OBJ_KEYMAP:getState() == 0 then
+                    dungeonItems = dungeonItems + 1
+                end
+
+                if compass.Active and OBJ_KEYCOMPASS:getState() == 0 then
+                    dungeonItems = dungeonItems + 1
+                end
+
+                if smallkey.AcquiredCount and OBJ_KEYSMALL:getState() == 0 then
+                    dungeonItems = dungeonItems + smallkey.AcquiredCount
+                end
+
+                if bigkey.Active and OBJ_KEYBIG:getState() == 0 and dungeonPrefix ~= "hc" then
+                    dungeonItems = dungeonItems + 1
+                end
+
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix .. " Dungeon Items:", dungeonItems)
+                    print(dungeonPrefix .. " Chests:", chest.AcquiredCount)
+                end
+
+                if OBJ_POOL_KEYDROP:getState() > 0 then
+                    local addedKeys = 0
+                    if potkey then
+                        addedKeys = potkey.AcquiredCount
+                    end
+                    if enemykey then
+                        addedKeys = addedKeys + enemykey.AcquiredCount
+                        if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
+                            addedKeys = addedKeys - 1
+                        end
+                    end
+                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                        print(dungeonPrefix .. " Key Drops:", addedKeys)
+                    end
+                    item.RemainingCount = math.max(item.MaxCount - ((chest.AcquiredCount - dungeonItems) + addedKeys), 0)
+                else
+                    item.RemainingCount = math.max(item.MaxCount - (chest.AcquiredCount - dungeonItems), 0)
+                end
+
+                if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix .. " Items:", item.CollectedCount)
+                end
+            end
+        end
     end
 end
 
@@ -72,68 +129,24 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offs
 end
 
 function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlots)
-    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
+    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
     if item then
         if OBJ_DOORSHUFFLE:getState() < 2 then
             local clearedCount = 0
-            for i, slot in ipairs(roomSlots) do
-                local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
+            if segment then
+                for i, slot in ipairs(roomSlots) do
+                    local roomData = segment:ReadUInt16(0x7ef000 + (slot[1] * 2))
 
-                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                --     print(dungeonPrefix, roomData, 1 << slot[2])
-                -- end
+                    -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    --     print(dungeonPrefix, roomData, 1 << slot[2])
+                    -- end
 
-                if (roomData & (1 << slot[2])) ~= 0 then
-                    clearedCount = clearedCount + 1
-                end
-            end
-
-            local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
-            local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
-            local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-            local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
-            local enemykey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
-            local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-            local dungeonItems = 0
-
-            if map.Active and OBJ_KEYMAP:getState() == 0 then
-                dungeonItems = dungeonItems + 1
-            end
-
-            if compass.Active and OBJ_KEYCOMPASS:getState() == 0 then
-                dungeonItems = dungeonItems + 1
-            end
-
-            if smallkey.AcquiredCount and OBJ_KEYSMALL:getState() == 0 then
-                dungeonItems = dungeonItems + smallkey.AcquiredCount
-            end
-
-            if bigkey.Active and OBJ_KEYBIG:getState() == 0 and dungeonPrefix ~= "hc" then
-                dungeonItems = dungeonItems + 1
-            end
-
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print(dungeonPrefix .. " Dungeon Items:", dungeonItems)
-                print(dungeonPrefix .. " Chests:", clearedCount)
-            end
-
-            if OBJ_POOL_KEYDROP:getState() > 0 then
-                local addedKeys = 0
-                if potkey then
-                    addedKeys = potkey.AcquiredCount
-                end
-                if enemykey then
-                    addedKeys = addedKeys + enemykey.AcquiredCount
-                    if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
-                        addedKeys = addedKeys - 1
+                    if (roomData & (1 << slot[2])) ~= 0 then
+                        clearedCount = clearedCount + 1
                     end
                 end
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " Key Drops:", addedKeys)
-                end
-                item.RemainingCount = math.max(item.MaxCount - ((clearedCount - dungeonItems) + addedKeys), 0)
-            else
-                item.RemainingCount = math.max(item.MaxCount - (clearedCount - dungeonItems), 0)
+
+                item.AcquiredCount = clearedCount
             end
         end
     else

@@ -1083,10 +1083,12 @@ function updateRoomsFromMemorySegment(segment)
                 end
             end
         end
-    end
 
-    --Refresh Dungeon Calc
-    updateDungeonKeysFromMemorySegment(nil)
+        --Refresh Dungeon Calc
+        for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+            updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+        end
+    end
 
     --Miscellaneous
     for i, value in ipairs(INSTANCE.MEMORY.UnderworldItems) do
@@ -1150,12 +1152,12 @@ function updateRoomEnemiesFromMemorySegment(segment)
                 end
             end
         end
-    end
 
-    --Refresh Dungeon Calc
-    -- for i, dungeonPrefix in ipairs(DATA.DungeonList) do
-    --     updateDungeonChestCountFromRoomSlotList(nil, dungeonPrefix)
-    -- end
+        --Refresh Dungeon Calc
+        for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+            updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+        end
+    end
 end
 
 function updateRoomPotsFromMemorySegment(segment)
@@ -1193,12 +1195,12 @@ function updateRoomPotsFromMemorySegment(segment)
                 end
             end
         end
-    end
 
-    --Refresh Dungeon Calc
-    -- for i, dungeonPrefix in ipairs(DATA.DungeonList) do
-    --     updateDungeonChestCountFromRoomSlotList(nil, dungeonPrefix)
-    -- end
+        --Refresh Dungeon Calc
+        for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+            updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+        end
+    end
 end
 
 function updateDungeonItemsFromMemorySegment(segment)
@@ -1235,10 +1237,10 @@ function updateDungeonItemsFromMemorySegment(segment)
         if OBJ_DOORSHUFFLE:getState() == 0 then
             updateDungeonKeysFromPrefix(segment, DATA.DungeonList[i], 0x7ef37c + DATA.DungeonData[DATA.DungeonList[i]][4])
         end
-    end
 
-    --Refresh Dungeon Calc
-    updateDungeonKeysFromMemorySegment(nil)
+        --Refresh Dungeon Calc
+        updateChestCountFromDungeon(nil, DATA.DungeonList[i], nil)
+    end
 end
 
 function updateDungeonKeysFromMemorySegment(segment)
@@ -1262,20 +1264,26 @@ function updateDungeonKeysFromMemorySegment(segment)
     end
 
     --Collected Chests/Items In Dungeons
-    if OBJ_DOORSHUFFLE:getState() == 2 and OBJ_RACEMODE:getState() == 0 then
-        updateChestCountFromDungeon(segment, "hc", 0x7ef4c0)
-        updateChestCountFromDungeon(segment, "ep", 0x7ef4c1)
-        updateChestCountFromDungeon(segment, "dp", 0x7ef4c2)
-        updateChestCountFromDungeon(segment, "toh", 0x7ef4c9)
-        updateChestCountFromDungeon(segment, "at", 0x7ef4c3)
-        updateChestCountFromDungeon(segment, "pod", 0x7ef4c5)
-        updateChestCountFromDungeon(segment, "sp", 0x7ef4c4)
-        updateChestCountFromDungeon(segment, "sw", 0x7ef4c7)
-        updateChestCountFromDungeon(segment, "tt", 0x7ef4ca)
-        updateChestCountFromDungeon(segment, "ip", 0x7ef4c8)
-        updateChestCountFromDungeon(segment, "mm", 0x7ef4c6)
-        updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
-        updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
+    if OBJ_RACEMODE:getState() == 0 then
+        if OBJ_DOORSHUFFLE:getState() == 2 then
+            updateChestCountFromDungeon(segment, "hc", 0x7ef4c0)
+            updateChestCountFromDungeon(segment, "ep", 0x7ef4c1)
+            updateChestCountFromDungeon(segment, "dp", 0x7ef4c2)
+            updateChestCountFromDungeon(segment, "toh", 0x7ef4c9)
+            updateChestCountFromDungeon(segment, "at", 0x7ef4c3)
+            updateChestCountFromDungeon(segment, "pod", 0x7ef4c5)
+            updateChestCountFromDungeon(segment, "sp", 0x7ef4c4)
+            updateChestCountFromDungeon(segment, "sw", 0x7ef4c7)
+            updateChestCountFromDungeon(segment, "tt", 0x7ef4ca)
+            updateChestCountFromDungeon(segment, "ip", 0x7ef4c8)
+            updateChestCountFromDungeon(segment, "mm", 0x7ef4c6)
+            updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
+            updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
+        else
+            for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+                updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+            end
+        end
     end
 end
 
