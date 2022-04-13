@@ -18,6 +18,7 @@ CACHE.CollectionRate = 0
 
 INSTANCE = {}
 INSTANCE.NEW_KEY_SYSTEM = false
+INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = false
 INSTANCE.NEW_POTDROP_SYSTEM = false
 
 INSTANCE.DUNGEON_PRIZE_DATA = 0x0000
@@ -225,7 +226,7 @@ function loadModes()
     PoolMode(0, "Shopsanity"):linkSurrogate(PoolMode(1, "Shopsanity"))
     OBJ_POOL_KEYDROP = PoolMode(0, "Key Drop")
     OBJ_POOL_KEYDROP:linkSurrogate(PoolMode(1, "Key Drop"):linkSurrogate(PoolMode(2, "Key Drop"):linkSurrogate(OBJ_POOL_KEYDROP, true), true), true)
-    GlitchMode(false):linkSurrogate(GlitchMode(true))
+    OBJ_GLITCHMODE = GlitchMode(false):linkSurrogate(GlitchMode(true))
     OBJ_RACEMODE = RaceMode(false):linkSurrogate(RaceMode(true))
 
     GTCrystalReq()

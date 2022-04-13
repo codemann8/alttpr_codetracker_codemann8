@@ -40,8 +40,12 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
         local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
         if item then
             if segment then
-                item.CollectedCount = segment:ReadUInt8(address)
-            else
+                local value = segment:ReadUInt8(address)
+                if value > 0 then
+                    INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
+                end
+                item.CollectedCount = value
+            elseif not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
                 local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
                 local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
