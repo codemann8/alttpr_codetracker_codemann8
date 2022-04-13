@@ -23,7 +23,7 @@ end
 function RaceMode:updateText(collection)
     if self.suffix == "_small" then
         if self:getState() == 0 then
-            collection = collection and collection or CACHE.CollectionRate
+            collection = collection or CACHE.CollectionRate
             self.ItemInstance.BadgeText = tostring(math.floor(collection))
         else
             self.ItemInstance.BadgeText = nil
