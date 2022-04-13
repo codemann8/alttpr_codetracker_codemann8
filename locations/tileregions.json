@@ -1165,8 +1165,10 @@
         "access_rules": [
             "ow_sw_back",
             "ow_swapped_40,@Northwest Dark World,entrance_shuffle_minor,[door_shuffle_off]",
+            "ow_swapped_40,@Northwest Dark World,entrance_shuffle_lite,[door_shuffle_off]",
             "ow_swapped_40,@Northwest Dark World,entrance_shuffle_crossed,[door_shuffle_off]",
             "ow_swapped_00,@Northwest Light World,entrance_shuffle_minor,[door_shuffle_off]",
+            "ow_swapped_00,@Northwest Light World,entrance_shuffle_lite,[door_shuffle_off]",
             "ow_swapped_00,@Northwest Light World,entrance_shuffle_crossed,[door_shuffle_off]",
             "ow_swapped_00,@Northwest Dark World,mirror",
             "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock,pearl,boots,[nothing]",
@@ -1174,12 +1176,15 @@
             "glitch_mode_major,@OW Turtle Rock,[nothing]",
 
             "entrance_shuffle_minor,[door_shuffle_off],ow_sw_front",
+            "entrance_shuffle_lite,[door_shuffle_off],ow_sw_front",
             "entrance_shuffle_crossed,[door_shuffle_off],ow_sw_front",
             "entrance_shuffle_minor,[door_shuffle_off],ow_sw_portal,pearl,lift1",
+            "entrance_shuffle_lite,[door_shuffle_off],ow_sw_portal,pearl,lift1",
             "entrance_shuffle_crossed,[door_shuffle_off],ow_sw_portal,pearl,lift1",
             "ow_swapped_00,ow_lost_woods_west,mirror",
             "ow_swapped_00,ow_lost_woods_east,pearl,mirror",
             "ow_swapped_00,entrance_shuffle_minor,[door_shuffle_off],ow_sw_portal,lift1",
+            "ow_swapped_00,entrance_shuffle_lite,[door_shuffle_off],ow_sw_portal,lift1",
             "ow_swapped_00,entrance_shuffle_crossed,[door_shuffle_off],ow_sw_portal,lift1"
         ]
     },
