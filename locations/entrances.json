@@ -3831,14 +3831,14 @@
                 "x": 118,
                 "y": 254,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 118,
                 "y": 254,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -3866,14 +3866,14 @@
                 "x": 244,
                 "y": 164,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 244,
                 "y": 164,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -3901,16 +3901,14 @@
                 "x": 350,
                 "y": 275,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_on" ],
-                "force_invisibility_rules": [ "entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_dungeon" ]
             },
             {
                 "map": "lightworld",
                 "x": 350,
                 "y": 275,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_on" ],
-                "force_invisibility_rules": [ "entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_dungeon" ]
             }
         ]
     },
@@ -3935,14 +3933,14 @@
                 "x": 284,
                 "y": 284,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 284,
                 "y": 284,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -3966,14 +3964,14 @@
                 "x": 312,
                 "y": 358,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 312,
                 "y": 358,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -3997,14 +3995,14 @@
                 "x": 398,
                 "y": 358,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 398,
                 "y": 358,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -4029,14 +4027,14 @@
                 "x": 368,
                 "y": 292,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 368,
                 "y": 292,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },
@@ -4065,14 +4063,14 @@
                 "x": 380,
                 "y": 226,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 380,
                 "y": 226,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
             }
         ]
     },

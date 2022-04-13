@@ -2980,7 +2980,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3008,7 +3008,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3036,7 +3036,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3064,7 +3064,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3092,7 +3092,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3120,7 +3120,7 @@
         "sections": [
             {
                 "name": "Entrance",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],
@@ -3148,7 +3148,7 @@
         "sections": [
             {
                 "name": "Dropdown",
-                "visibility_rules": [ "entrance_shuffle_insanity" ],
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1
             }
         ],

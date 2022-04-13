@@ -51,12 +51,14 @@ function tracker_on_accessibility_updated()
                     updateGhosts(DATA.CaptureBadgeUnderworld, false, true)
                 end
                 if OBJ_ENTRANCE:getState() > 0 then
-                    updateGhosts(DATA.CaptureBadgeEntrances, true, true)
                     updateGhosts(DATA.CaptureBadgeDungeons, true, true)
                     
                     if OBJ_ENTRANCE:getState() > 1 then
+                        updateGhosts(DATA.CaptureBadgeEntrances, true, true)
                         updateGhosts(DATA.CaptureBadgeConnectors, true, true)
                         updateGhosts(DATA.CaptureBadgeDropdowns, true, true)
+                        updateGhosts(DATA.CaptureBadgeSWDungeons, true, true)
+                        updateGhosts(DATA.CaptureBadgeSWDropdowns, true, true)
 
                         if OBJ_ENTRANCE:getState() == 4 then
                             updateGhosts(DATA.CaptureBadgeInsanity, true, true)

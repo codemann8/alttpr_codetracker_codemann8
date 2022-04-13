@@ -436,10 +436,16 @@ DATA.CaptureBadgeInsanity = {
     "@Sanctuary Exit/Entrance",
     "@Useless Fairy Exit/Entrance",
     "@Secret Passage Exit/Entrance",
-    "@Ganon Hole Exit/Entrance",
+    "@Ganon Hole Exit/Entrance"
+}
+
+DATA.CaptureBadgeSWDungeons = {
     "@Skull Woods Back South/Entrance",
     "@Skull Woods Front Right/Entrance",
-    "@Skull Woods Front Left/Entrance",
+    "@Skull Woods Front Left/Entrance"
+}
+
+DATA.CaptureBadgeSWDropdowns = {
     "@Skull Woods Back Drop/Dropdown",
     "@Skull Woods Big Chest Drop/Dropdown",
     "@Skull Woods Front Right Drop/Dropdown",

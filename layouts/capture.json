@@ -123,6 +123,18 @@
             ]
         }
     },
+    "tracker_capture_dropdown_sw": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 60,
+            "rows": [
+                [ "cap_drop_swpinball", "cap_drop_swcompass", "cap_drop_swbigchest", "cap_drop_swhazard" ]
+            ]
+        }
+    },
     "tracker_capture_bosses": {
         "type": "container",
         "content": {
