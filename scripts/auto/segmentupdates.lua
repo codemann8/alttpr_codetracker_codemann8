@@ -955,6 +955,23 @@ DATA.MEMORY.UnderworldItems = {
     { "mushroom_used", 0x7ef212, 0x80, true }
 }
 
+DATA.MEMORY.DungeonFlags = {
+    --          enemy drops                                  pot keys                                            doors
+    ["hc"] =  { {{114, 10}, {113, 10}, {128, 10}, {33, 10}}, nil,                                                {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}}},
+    ["ep"] =  { {{153, 10}},                                 {{186, 10}},                                        {{186, 15, 185, 15}, {153, 15}}},
+    ["dp"] =  { nil,                                         {{99, 10}, {83, 10}, {67, 10}},                     {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}}},
+    ["toh"] = { nil,                                         nil,                                                {{119, 15}}},
+    ["at"] =  { {{192, 10}, {176, 10}},                      nil,                                                {{224, 13}, {208, 15}, {192, 13}, {176, 13}}},
+    ["pod"] = { nil,                                         nil,                                                {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}}},
+    ["sp"] =  { nil,                                         {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}}, {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}}},
+    ["sw"] =  { {{57, 10}},                                  {{86, 10}},                                         {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}}},
+    ["tt"] =  { nil,                                         {{188, 10}, {171, 10}},                             {{188, 15}, {171, 15}, {68, 14}}},
+    ["ip"] =  { {{14, 10}, {62, 10}},                        {{63, 10}, {159, 10}},                              {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}}},
+    ["mm"] =  { {{193, 10}},                                 {{179, 10}, {161, 10}},                             {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}}},
+    ["tr"] =  { {{182, 10}, {19, 10}},                       nil,                                                {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}}},
+    ["gt"] =  { {{61, 10}},                                  {{139, 10}, {155, 10}, {123, 10}},                  {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}}}
+}
+
 function updateRoomsFromMemorySegment(segment)
     if not isInGame() then
         return false
@@ -966,43 +983,23 @@ function updateRoomsFromMemorySegment(segment)
 
     --Dungeon Data
     if Tracker.ActiveVariantUID ~= "vanilla" then
-        if OBJ_DOORSHUFFLE:getState() == 0 then
+        for dungeonPrefix, data in pairs(DATA.MEMORY.DungeonFlags) do
             --Doors Opened
-            updateDoorKeyCountFromRoomSlotList(segment, "hc_door", {{114, 15}, {113, 15}, {50, 15, 34, 15}, {17, 13, 33, 15}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ep_door", {{186, 15, 185, 15}, {153, 15}})
-            updateDoorKeyCountFromRoomSlotList(segment, "dp_door", {{133, 14}, {99, 15}, {83, 13, 67, 13}, {67, 14}})
-            updateDoorKeyCountFromRoomSlotList(segment, "toh_door", {{119, 15}})
-            updateDoorKeyCountFromRoomSlotList(segment, "at_door", {{224, 13}, {208, 15}, {192, 13}, {176, 13}})
-            updateDoorKeyCountFromRoomSlotList(segment, "pod_door", {{74, 13, 58, 15}, {10, 15}, {42, 14, 26, 12}, {26, 14, 25, 14}, {26, 15}, {11, 13}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sp_door", {{40, 15}, {56, 14, 55, 12}, {55, 13}, {54, 13, 53, 15}, {54, 14, 38, 15}, {22, 14}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sw_door", {{87, 13, 88, 14}, {104, 14, 88, 13}, {86, 15}, {89, 15, 73, 13}, {57, 14}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tt_door", {{188, 15}, {171, 15}, {68, 14}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ip_door", {{14, 15}, {62, 14, 78, 14}, {94, 15, 95, 15}, {126, 15, 142, 15}, {158, 15}, {190, 14, 191, 15}})
-            updateDoorKeyCountFromRoomSlotList(segment, "mm_door", {{179, 15}, {194, 14, 193, 14}, {193, 15}, {194, 15, 195, 15}, {161, 15, 177, 14}, {147, 14}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tr_door", {{198, 15, 182, 13}, {182, 12}, {182, 15}, {19, 15, 20, 14}, {4, 15}, {197, 15, 196, 15}})
-            updateDoorKeyCountFromRoomSlotList(segment, "gt_door", {{140, 13}, {139, 14}, {155, 15}, {125, 13}, {141, 14}, {123, 14, 124, 13}, {61, 14}, {61, 13, 77, 15}})
-        end
+            if OBJ_DOORSHUFFLE:getState() == 0 then
+                updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_door", data[3])
+            end
 
-        if not INSTANCE.NEW_POTDROP_SYSTEM then
-            --Enemy Keys
-            updateDoorKeyCountFromRoomSlotList(segment, "hc_enemykey", {{114, 10}, {113, 10}, {128, 10}, {33, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ep_enemykey", {{153, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "at_enemykey", {{192, 10}, {176, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sw_enemykey", {{57, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ip_enemykey", {{14, 10}, {62, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "mm_enemykey", {{193, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tr_enemykey", {{182, 10}, {19, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "gt_enemykey", {{61, 10}})
+            if not INSTANCE.NEW_POTDROP_SYSTEM then
+                --Enemy Keys
+                if data[1] then
+                    updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_enemykey", data[1])
+                end
 
-            --Pot Keys
-            updateDoorKeyCountFromRoomSlotList(segment, "ep_potkey", {{186, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "dp_potkey", {{99, 10}, {83, 10}, {67, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sp_potkey", {{56, 10}, {55, 10}, {54, 10}, {53, 10}, {22, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "sw_potkey", {{86, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "tt_potkey", {{188, 10}, {171, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "ip_potkey", {{63, 10}, {159, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "mm_potkey", {{179, 10}, {161, 10}})
-            updateDoorKeyCountFromRoomSlotList(segment, "gt_potkey", {{139, 10}, {155, 10}, {123, 10}})
+                --Pot Keys
+                if data[2] then
+                    updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_potkey", data[2])
+                end
+            end
         end
     end
 
