@@ -1372,7 +1372,7 @@
         "access_rules": [
             "@WLW Regions",
             
-            "ow_swapped_53,world_state_open,entrance_shuffle_minor,door_shuffle_off", //sanc start
+            "ow_swapped_53,world_state_open,entrance_shuffle_minor,door_shuffle_sameset", //sanc start
             "ow_swapped_13,world_state_inverted", //dark chapel start
             "entrance_shuffle_minor,ow_swapped_5b", //assumed access from Links
             "entrance_shuffle_minor,ow_swapped_69",
@@ -1829,8 +1829,8 @@
         "name": "WDW Entry",
         "access_rules": [
             "@WDW Regions",
-            
-            "ow_swapped_13,world_state_open,entrance_shuffle_minor,door_shuffle_off", //sanc start
+
+            "ow_swapped_13,world_state_open,entrance_shuffle_minor,door_shuffle_sameset", //sanc start
             "ow_swapped_53,world_state_inverted", //dark chapel start
 
             "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
