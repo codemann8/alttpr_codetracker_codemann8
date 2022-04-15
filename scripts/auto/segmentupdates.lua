@@ -1185,7 +1185,7 @@ function updateRoomPotsFromMemorySegment(segment)
 end
 
 function updateTempDoorsFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or INSTANCE.NEW_KEY_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
+    if INSTANCE.NEW_KEY_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or not isInGame() then
         return false
     end
 
@@ -1216,7 +1216,7 @@ function updateTempDoorsFromMemorySegment(segment)
 end
 
 function updateTempRoomFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or INSTANCE.NEW_POTDROP_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
+    if INSTANCE.NEW_POTDROP_SYSTEM or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
         return false
     end
     
