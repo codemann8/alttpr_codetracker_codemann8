@@ -132,6 +132,38 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offs
     end
 end
 
+function updateDoorKeyFromTempRoom(doorKeyRef, data, tempValue)
+    local modified = false
+    if data then
+        local doorKey = Tracker:FindObjectForCode(doorKeyRef)
+        local clearedCount = 0
+        
+        for i, slot in ipairs(data) do
+            if slot[1] == CACHE.ROOM then
+                if (tempValue & (1 << slot[2])) ~= 0 then
+                    clearedCount = clearedCount + 1
+                end
+            else
+                local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
+                if (roomData & (1 << slot[2])) ~= 0 then
+                    clearedCount = clearedCount + 1
+                end
+            end
+        end
+
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print(doorKeyRef, clearedCount)
+        end
+
+        if doorKey.AcquiredCount ~= clearedCount then
+            doorKey.AcquiredCount = clearedCount
+            modified = true
+        end
+    end
+
+    return modified
+end
+
 function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlots)
     local item = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
     if item then

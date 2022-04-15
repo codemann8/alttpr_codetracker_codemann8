@@ -1206,58 +1206,11 @@ function updateTempRoomFromMemorySegment(segment)
                     print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", value))
                 end
 
-                --Enemy Keys
-                if DATA.MEMORY.DungeonFlags[dungeonPrefix][1] then
-                    local doorKey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
-                    local clearedCount = 0
-                    
-                    for i, slot in ipairs(DATA.MEMORY.DungeonFlags[dungeonPrefix][1]) do
-                        if slot[1] == CACHE.ROOM then
-                            if (value & (1 << slot[2])) ~= 0 then
-                                clearedCount = clearedCount + 1
-                            end
-                        else
-                            local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
-                            if (roomData & (1 << slot[2])) ~= 0 then
-                                clearedCount = clearedCount + 1
-                            end
-                        end
-                    end
-
-                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print(dungeonPrefix .. "_enemykey", clearedCount)
-                    end
-
-                    doorKey.AcquiredCount = clearedCount
+                local modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_enemykey", DATA.MEMORY.DungeonFlags[dungeonPrefix][1], value)
+                if modified or updateDoorKeyFromTempRoom(dungeonPrefix .. "_potkey", DATA.MEMORY.DungeonFlags[dungeonPrefix][2], value) then
+                    --Refresh Dungeon Calc
+                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
                 end
-                    
-                --Pot Keys
-                if DATA.MEMORY.DungeonFlags[dungeonPrefix][2] then
-                    local doorKey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-                    local clearedCount = 0
-                    
-                    for i, slot in ipairs(DATA.MEMORY.DungeonFlags[dungeonPrefix][2]) do
-                        if slot[1] == CACHE.ROOM then
-                            if (value & (1 << slot[2])) ~= 0 then
-                                clearedCount = clearedCount + 1
-                            end
-                        else
-                            local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
-                            if (roomData & (1 << slot[2])) ~= 0 then
-                                clearedCount = clearedCount + 1
-                            end
-                        end
-                    end
-
-                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print(dungeonPrefix .. "_potkey", clearedCount)
-                    end
-
-                    doorKey.AcquiredCount = clearedCount
-                end
-
-                --Refresh Dungeon Calc
-                updateChestCountFromDungeon(nil, dungeonPrefix, nil)
             end
         end
     end
