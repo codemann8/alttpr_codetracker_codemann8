@@ -113,6 +113,7 @@ function initMemoryWatch()
     end
     
     if Tracker.ActiveVariantUID ~= "vanilla" then
+        SEGMENTS.TempDoorData = ScriptHost:AddMemoryWatch("Temp Door Data", 0x7e0400, 1, updateTempDoorsFromMemorySegment)
         SEGMENTS.TempRoomData = ScriptHost:AddMemoryWatch("Temp Room Data", 0x7e0403, 1, updateTempRoomFromMemorySegment)
         SEGMENTS.Collection = ScriptHost:AddMemoryWatch("Collection Rate", 0x7ef423, 2, updateCollectionFromMemorySegment)
         SEGMENTS.DungeonData = ScriptHost:AddMemoryWatch("Dungeon Items", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
@@ -134,6 +135,7 @@ function disposeMemoryWatch()
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ArrowData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ProgressData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.TempDoorData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.TempRoomData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomPotData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomEnemyData)

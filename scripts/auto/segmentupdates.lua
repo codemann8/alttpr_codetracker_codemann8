@@ -1184,6 +1184,37 @@ function updateRoomPotsFromMemorySegment(segment)
     end
 end
 
+function updateTempDoorsFromMemorySegment(segment)
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or INSTANCE.NEW_KEY_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
+        return false
+    end
+
+    CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
+    if CACHE.DUNGEON < 0xff then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: Temp Doors")
+        end
+
+        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
+        if CACHE.ROOM > 0 then
+            local dungeonPrefix = DATA.RoomDungeons[CACHE.ROOM]
+            if dungeonPrefix then
+                dungeonPrefix = DATA.DungeonIdMap[dungeonPrefix]
+                local value = segment:ReadUInt8(0x7e0400) << 8
+                
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", value))
+                end
+
+                if updateDoorKeyFromTempRoom(dungeonPrefix .. "_door", DATA.MEMORY.DungeonFlags[dungeonPrefix][3], value) then
+                    --Refresh Dungeon Calc
+                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+                end
+            end
+        end
+    end
+end
+
 function updateTempRoomFromMemorySegment(segment)
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or INSTANCE.NEW_POTDROP_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
         return false
