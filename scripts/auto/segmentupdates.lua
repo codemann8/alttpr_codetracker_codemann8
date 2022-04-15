@@ -1184,6 +1184,85 @@ function updateRoomPotsFromMemorySegment(segment)
     end
 end
 
+function updateTempRoomFromMemorySegment(segment)
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or INSTANCE.NEW_POTDROP_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
+        return false
+    end
+    
+    CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
+    if CACHE.DUNGEON < 0xff then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: Temp Room")
+        end
+
+        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
+        if CACHE.ROOM > 0 then
+            local dungeonPrefix = DATA.RoomDungeons[CACHE.ROOM]
+            if dungeonPrefix then
+                dungeonPrefix = DATA.DungeonIdMap[dungeonPrefix]
+                local value = segment:ReadUInt8(0x7e0403) << 4
+                
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", value))
+                end
+
+                --Enemy Keys
+                if DATA.MEMORY.DungeonFlags[dungeonPrefix][1] then
+                    local doorKey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
+                    local clearedCount = 0
+                    
+                    for i, slot in ipairs(DATA.MEMORY.DungeonFlags[dungeonPrefix][1]) do
+                        if slot[1] == CACHE.ROOM then
+                            if (value & (1 << slot[2])) ~= 0 then
+                                clearedCount = clearedCount + 1
+                            end
+                        else
+                            local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
+                            if (roomData & (1 << slot[2])) ~= 0 then
+                                clearedCount = clearedCount + 1
+                            end
+                        end
+                    end
+
+                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                        print(dungeonPrefix .. "_enemykey", clearedCount)
+                    end
+
+                    doorKey.AcquiredCount = clearedCount
+                end
+                    
+                --Pot Keys
+                if DATA.MEMORY.DungeonFlags[dungeonPrefix][2] then
+                    local doorKey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
+                    local clearedCount = 0
+                    
+                    for i, slot in ipairs(DATA.MEMORY.DungeonFlags[dungeonPrefix][2]) do
+                        if slot[1] == CACHE.ROOM then
+                            if (value & (1 << slot[2])) ~= 0 then
+                                clearedCount = clearedCount + 1
+                            end
+                        else
+                            local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
+                            if (roomData & (1 << slot[2])) ~= 0 then
+                                clearedCount = clearedCount + 1
+                            end
+                        end
+                    end
+
+                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                        print(dungeonPrefix .. "_potkey", clearedCount)
+                    end
+
+                    doorKey.AcquiredCount = clearedCount
+                end
+
+                --Refresh Dungeon Calc
+                updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+            end
+        end
+    end
+end
+
 function updateDungeonItemsFromMemorySegment(segment)
     if CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING or not isInGame() then
         return false
