@@ -130,10 +130,8 @@ function disposeMemoryWatch()
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ItemData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.HealthData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.HalfMagicData)
-    if Tracker.ActiveVariantUID ~= "vanilla" then
-        ScriptHost:RemoveMemoryWatch(SEGMENTS.ToggleItemData)
-        ScriptHost:RemoveMemoryWatch(SEGMENTS.ArrowData)
-    end
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.ToggleItemData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.ArrowData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.ProgressData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.TempRoomData)
