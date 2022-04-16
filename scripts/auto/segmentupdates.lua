@@ -896,7 +896,7 @@ DATA.MEMORY.Underworld = {
     { {"@Hookshot Cave/Bonkable Chest"}, {{60, 7}} },
     { {"@Hookshot Cave/Back"},           {{60, 4}, {60, 5}, {60, 6}} },
     { {"@Secret Passage/Hallway"},       {{85, 4}} },
-    { {"@Forest Hideout/Stash"},         {{225, 9, 4}},                     0x00 },
+    { {"@Forest Hideout/Stash"},         {{225, 9, 4}},              0x00 },
     { {"@Lumberjack Cave/Cave"},         {{226, 9}} },
     { {"@Spectacle Rock/Cave"},          {{234, 10, 2}} },
     { {"@Paradox Cave/Top"},             {{239, 4}, {239, 5}, {239, 6}, {239, 7}, {239, 8}} },
@@ -917,7 +917,7 @@ DATA.MEMORY.Underworld = {
     { {"@Waterfall Fairy/Cave"},         {{276, 4}, {276, 5}} },
     { {"@Pyramid Fairy/Big Bomb Spot"},  {{278, 4}, {278, 5}} },
     { {"@Spike Cave/Cave"},              {{279, 4}} },
-    { {"@Graveyard Ledge/Cave"},         {{283, 9, 8}} },
+    { {"@Graveyard Ledge/Cave"},         {{283, 9, 8}},              0x14 },
     { {"@Cave 45/Circle of Bushes"},     {{283, 10}} }, --2, Game is bugged and uses the same sub-room slot as the front part of Graveyard Ledge
     { {"@C-Shaped House/House"},         {{284, 4}} },
     { {"@Blind's House/Basement"},       {{285, 5}, {285, 6}, {285, 7}, {285, 8}} },
