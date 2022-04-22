@@ -913,7 +913,7 @@
         "short_name": "DM Descent Exit",
         "parent": "OW Mountain Entry",
         "access_rules": [
-            "ow_swapped_4a,bumper_cave,mirror",
+            "ow_swapped_4a,ow_bumper_ledge,mirror",
             "ow_swapped_4a,glitch_mode_owg,boots",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_major"
@@ -951,7 +951,7 @@
         "short_name": "DM Entry",
         "parent": "OW Mountain Entry",
         "access_rules": [
-            "ow_swapped_4a,bumper_entry,mirror",
+            "ow_swapped_4a,ow_bumper_entry,mirror",
             "ow_swapped_4a,lift1",
             "ow_swapped_4a,glitch_mode_owg,boots",
             "pearl,lift1",

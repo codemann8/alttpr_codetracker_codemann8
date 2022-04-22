@@ -763,13 +763,12 @@
             {
                 "name": "Ledge",
                 "access_rules": [
+                    "ow_bumper_ledge",
                     "ow_swapped_4a,entrance_shuffle_minor,pearl,lift1,cape",
-                    "ow_swapped_4a,ow_bumper_ledge",
-                    "ow_bumper_ledge,mirror",
+                    "ow_swapped_0a,ow_mountainentry_ledge,mirror",
                     "ow_swapped_0a,inverted_orig,entrance_shuffle_minor,@OW Mountain Entry,pearl,lift1,cape,mirror",
                     "ow_swapped_0a,inverted_new,entrance_shuffle_minor,lift1,cape",
                     "ow_swapped_0a,inverted_new,entrance_shuffle_minor,@OW Death Mountain West Bottom,[lamp],mirror",
-                    "ow_swapped_0a,inverted_new,ow_mountainentry_ledge,mirror",
                     "glitch_mode_owg,pearl,boots",
                     "ow_swapped_0a,glitch_mode_owg,boots",
                     "glitch_mode_major",
