@@ -1200,6 +1200,13 @@
             "glitch_mode_major,mirror"
         ]
     },
+    {
+        "name": "WDDM To EDW",
+        "access_rules": [
+            "glitch_mode_owg,boots,mirror",
+            "glitch_mode_major,mirror"
+        ]
+    },
 
     {
         "name": "WDM Bottom To Top",
@@ -1769,6 +1776,10 @@
                     "glitch_mode_owg,boots",
                     "glitch_mode_major"
                 ]
+            },
+            {
+                "name": "WDM Bottom Entry To EDW",
+                "access_rules": [ "@WDDM To EDW" ]
             }
         ]
     },
@@ -2216,6 +2227,10 @@
             {
                 "name": "WDDM Bottom Entry To WLW",
                 "access_rules": [ "@WDDM To WLW" ]
+            },
+            {
+                "name": "WDDM Bottom Entry To EDW",
+                "access_rules": [ "@WDDM To EDW" ]
             },
             {
                 "name": "WDDM Bottom Entry To EDDM",
@@ -2738,6 +2753,10 @@
                     "glitch_mode_owg,boots",
                     "glitch_mode_major"
                 ]
+            },
+            {
+                "name": "WDM Bottom Access To EDW",
+                "access_rules": [ "@WDDM To EDW" ]
             }
         ]
     },
@@ -3235,6 +3254,10 @@
                 "access_rules": [ "@WDDM To WLW" ]
             },
             {
+                "name": "WDDM Bottom Access To EDW",
+                "access_rules": [ "@WDDM To EDW" ]
+            },
+            {
                 "name": "WDDM Bottom Access To EDDM",
                 "access_rules": [
                     "@DDM Broken Bridge",
@@ -3541,11 +3564,13 @@
                     "@NELW Access To EDW",
                     "@SELW Access To EDW",
                     "@LLW Access To EDW",
+                    "@WDM Bottom Access To EDW",
                     "@WDW Access To EDW",
                     "@SDW Access To EDW",
                     "@NEDW Access To EDW",
                     "@SEDW Access To EDW",
-                    "@ZDW Access To EDW"
+                    "@ZDW Access To EDW",
+                    "@WDDM Bottom Access To EDW"
                 ]
             },
             {
