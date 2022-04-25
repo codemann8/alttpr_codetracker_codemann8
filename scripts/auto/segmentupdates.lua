@@ -357,16 +357,15 @@ function updateItemsFromMemorySegment(segment)
                     end
                 end
             else
-                if not item.Active or not STATUS.AutotrackerInGame then
-                    item.Active = segment:ReadUInt8(value[1]) > 0
-
-                    if item.Active and STATUS.AutotrackerInGame then
-                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                            print("Item Got:", name)
-                        end
-                        itemFlippedOn(name)
+                local newStatus = segment:ReadUInt8(value[1]) > 0
+                if not item.Active and newStatus and STATUS.AutotrackerInGame then
+                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                        print("Item Got:", name)
                     end
+                    itemFlippedOn(name)
                 end
+                
+                item.Active = newStatus
             end
         else
             print("Couldn't find item:", name)
