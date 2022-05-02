@@ -883,6 +883,7 @@
         "name": "EDW To SEDW",
         "access_rules": [
             "pearl,[flippers]",
+            "pearl,ow_swapped_2d,ow_swapped_35",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_major"
         ]
