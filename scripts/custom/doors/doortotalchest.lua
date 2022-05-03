@@ -16,8 +16,12 @@ function DoorTotalChest:getState()
     return self:getProperty("state")
 end
 
+function DoorTotalChest:isEnabled()
+    return not(OBJ_DOORSHUFFLE:getState() < 2 or (self:getProperty("itemType") == "smallkey" and OBJ_KEYSMALL:getState() == 2))
+end
+
 function DoorTotalChest:updateIcon()
-    if OBJ_DOORSHUFFLE:getState() < 2 or (self:getProperty("itemType") == "smallkey" and OBJ_KEYSMALL:getState() == 2) then
+    if not(self:isEnabled()) then
         self.ItemInstance.Icon = ""
         self.ItemInstance.BadgeText = nil
     else
@@ -31,7 +35,7 @@ function DoorTotalChest:updateIcon()
 end
 
 function DoorTotalChest:onLeftClick()
-    if OBJ_DOORSHUFFLE:getState() == 2 then
+    if self:isEnabled() then
         local item = Tracker:FindObjectForCode(DATA.DungeonList[OBJ_DOORDUNGEON:getState()] .. "_" .. self:getProperty("itemType"))
         if item.ItemState and item.ItemState.MaxCount then
             item = item.ItemState
@@ -55,7 +59,7 @@ function DoorTotalChest:onLeftClick()
 end
 
 function DoorTotalChest:onRightClick()
-    if OBJ_DOORSHUFFLE:getState() == 2 and self:getState() < 999 then
+    if self:isEnabled() and self:getState() < 999 then
         local item = Tracker:FindObjectForCode(DATA.DungeonList[OBJ_DOORDUNGEON:getState()] .. "_" .. self:getProperty("itemType"))
         if item.ItemState and item.ItemState.MaxCount then
             item = item.ItemState
