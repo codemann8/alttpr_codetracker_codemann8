@@ -14,7 +14,7 @@ function itemFlippedOn(item)
         elseif item == "glove" then
             local object = Tracker:FindObjectForCode(item)
             if object.CurrentStage == 1 then
-                sendExternalMessage("item", "gloves")
+                sendExternalMessage("item", "glove")
             elseif object.CurrentStage == 2 then
                 sendExternalMessage("item", "mitts")
             end
