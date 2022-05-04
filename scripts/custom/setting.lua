@@ -13,7 +13,7 @@ function Setting:init(name, code, file, textcode, count, default, current)
         current = default
     end
 
-    self:setState(current and current or default)
+    self:setState(current == nil and default or current)
 end
 
 function Setting:setState(state)
