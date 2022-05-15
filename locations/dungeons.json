@@ -955,14 +955,14 @@
                 "x": 1003,
                 "y": 790,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_1b" ]
+                "restrict_visibility_rules": [ "ow_mixed_on,entrance_shuffle_off,ow_swapped_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 1125,
                 "y": 58,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_03" ]
+                "restrict_visibility_rules": [ "ow_mixed_on,entrance_shuffle_off,ow_swapped_03" ]
             }
         ]
     },

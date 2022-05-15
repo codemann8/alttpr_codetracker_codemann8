@@ -31,6 +31,17 @@ function OverworldMixedMode:onRightClick()
     end
 end
 
+function OverworldMixedMode:providesCode(code)
+    if self.suffix == "" then
+        if code == "ow_mixed_off" and self:getState() == 0 then
+            return 1
+        elseif code == "ow_mixed_on" and self:getState() > 0 then
+            return 1
+        end
+    end
+    return 0
+end
+
 function OverworldMixedMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/ow_mixed" .. self.suffix .. ".png", "@disabled")
