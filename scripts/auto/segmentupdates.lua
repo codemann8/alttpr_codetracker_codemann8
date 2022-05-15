@@ -2,19 +2,16 @@ function updateTitleFromMemorySegment(segment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
         local value = segment:ReadUInt8(0x702000)
         if value > 0 then
-            value = segment:ReadUInt8(0x702013)
-            if string.char(value) == "O" then
-                if OBJ_WORLDSTATE:getProperty("version") ~= 1 then
-                    OBJ_WORLDSTATE.clicked = true
-                    OBJ_WORLDSTATE.ignorePostUpdate = true
-                    OBJ_WORLDSTATE:setProperty("version", 1)
-                end
-            else
-                if OBJ_WORLDSTATE:getProperty("version") ~= 0 then
-                    OBJ_WORLDSTATE.clicked = true
-                    OBJ_WORLDSTATE.ignorePostUpdate = true
-                    OBJ_WORLDSTATE:setProperty("version", 0)
-                end
+            value = string.char(segment:ReadUInt8(0x702013)) == 'O' and 1 or 0
+            if OBJ_WORLDSTATE:getProperty("version") ~= value then
+                OBJ_WORLDSTATE.clicked = true
+                OBJ_WORLDSTATE.ignorePostUpdate = true
+                OBJ_WORLDSTATE:setProperty("version", value)
+            end
+
+            INSTANCE.NEW_SRAM_SYSTEM = AutoTracker:ReadU16(0x701ffe, 0) > 1
+            if INSTANCE.NEW_SRAM_SYSTEM and STATUS.AutotrackerInGame then
+                SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
             end
 
             INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
@@ -618,13 +615,15 @@ function updateShopsFromMemorySegment(segment)
         print("Segment: Shops")
     end
 
+    offset = INSTANCE.NEW_SRAM_SYSTEM and 0x71b6 or 0
+
     for name, value in pairs(INSTANCE.MEMORY.Shops) do
         local location = Tracker:FindObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
                 local clearedCount = 0
                 for i, slot in ipairs(value[1]) do
-                    clearedCount = clearedCount + (segment:ReadUInt8(slot) > 0 and 1 or 0)
+                    clearedCount = clearedCount + (segment:ReadUInt8(slot + offset) > 0 and 1 or 0)
                 end
                 
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
@@ -1310,19 +1309,25 @@ function updateDungeonKeysFromMemorySegment(segment)
     --Collected Chests/Items In Dungeons
     if OBJ_RACEMODE:getState() == 0 then
         if OBJ_DOORSHUFFLE:getState() == 2 then
-            updateChestCountFromDungeon(segment, "hc", 0x7ef4c0)
-            updateChestCountFromDungeon(segment, "ep", 0x7ef4c1)
-            updateChestCountFromDungeon(segment, "dp", 0x7ef4c2)
-            updateChestCountFromDungeon(segment, "toh", 0x7ef4c9)
-            updateChestCountFromDungeon(segment, "at", 0x7ef4c3)
-            updateChestCountFromDungeon(segment, "pod", 0x7ef4c5)
-            updateChestCountFromDungeon(segment, "sp", 0x7ef4c4)
-            updateChestCountFromDungeon(segment, "sw", 0x7ef4c7)
-            updateChestCountFromDungeon(segment, "tt", 0x7ef4ca)
-            updateChestCountFromDungeon(segment, "ip", 0x7ef4c8)
-            updateChestCountFromDungeon(segment, "mm", 0x7ef4c6)
-            updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
-            updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
+            if INSTANCE.NEW_SRAM_SYSTEM then
+                for dungeonPrefix, data in pairs(DATA.DungeonData) do
+                    updateChestCountFromDungeon(segment, dungeonPrefix, 0x7ef4c0 + data[4])
+                end
+            else
+                updateChestCountFromDungeon(segment, "hc", 0x7ef4c0)
+                updateChestCountFromDungeon(segment, "ep", 0x7ef4c1)
+                updateChestCountFromDungeon(segment, "dp", 0x7ef4c2)
+                updateChestCountFromDungeon(segment, "toh", 0x7ef4c9)
+                updateChestCountFromDungeon(segment, "at", 0x7ef4c3)
+                updateChestCountFromDungeon(segment, "pod", 0x7ef4c5)
+                updateChestCountFromDungeon(segment, "sp", 0x7ef4c4)
+                updateChestCountFromDungeon(segment, "sw", 0x7ef4c7)
+                updateChestCountFromDungeon(segment, "tt", 0x7ef4ca)
+                updateChestCountFromDungeon(segment, "ip", 0x7ef4c8)
+                updateChestCountFromDungeon(segment, "mm", 0x7ef4c6)
+                updateChestCountFromDungeon(segment, "tr", 0x7ef4cb)
+                updateChestCountFromDungeon(segment, "gt", 0x7ef4cc)
+            end
         else
             for i, dungeonPrefix in ipairs(DATA.DungeonList) do
                 updateChestCountFromDungeon(nil, dungeonPrefix, nil)
