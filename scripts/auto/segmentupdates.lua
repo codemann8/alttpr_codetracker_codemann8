@@ -129,6 +129,7 @@ function updateOverworldIdFromMemorySegment(segment)
                 MODULE == 0x07 or --in cave/dungeon
                 MODULE == 0x05 or --on file select screen
                 MODULE == 0x0e or --has dialogue/menu open
+                MODULE == 0x12 or --game over
                 MODULE == 0x17 or --is s+q
                 MODULE == 0x1b or --on spawn select
                 MODULE == 0x11 or --falling in dropdown entrance
