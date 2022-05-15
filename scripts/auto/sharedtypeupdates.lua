@@ -44,6 +44,13 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 if value > 0 then
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
+                if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
+                    -- TODO: Probably remove this when HC/Escape counts are correctly using one slot
+                    local otherValue = segment:ReadUInt8(address + 1)
+                    if value ~= otherValue then
+                        value = value + otherValue
+                    end
+                end
                 item.CollectedCount = value
             elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
