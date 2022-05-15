@@ -301,12 +301,12 @@ DATA.LinkedRoomSurrogates = {
 }
 
 DATA.LinkedOverworldScreens = {
-    [0x1a] = "1b",
-    [0x1b] = "1a",
-    [0x28] = "29",
-    [0x29] = "28",
-    [0x30] = "3a",
-    [0x3a] = "30"
+--     [0x1a] = "1b",
+--     [0x1b] = "1a",
+--     [0x28] = "29",
+--     [0x29] = "28",
+--     [0x30] = "3a",
+--     [0x3a] = "30"
 }
 
 DATA.CaptureBadgeEntrances = {
