@@ -19,6 +19,9 @@ function updateTitleFromMemorySegment(segment)
                 SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
                 SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
             end
+
+            -- TODO: Remove this when Dungeon Compass Count bitfield is properly flagged when 'always on'
+            INSTANCE.COMPASS_MODE = AutoTracker:ReadU16(0x30803c, 0)
         end
     end
 end
@@ -1333,6 +1336,22 @@ function updateDungeonKeysFromMemorySegment(segment)
                 updateChestCountFromDungeon(nil, dungeonPrefix, nil)
             end
         end
+    end
+end
+
+function updateDungeonTotalsFromMemorySegment(segment)
+    if not segment or OBJ_DOORSHUFFLE:getState() < 2 or OBJ_RACEMODE:getState() > 0 or not isInGame() then
+        return false
+    end
+    
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Dungeon Totals")
+    end
+
+    --Dungeon Total Checks Seen
+    local seenFlags = segment:ReadUInt16(0x7ef403)
+    for dungeonPrefix, data in pairs(DATA.DungeonData) do
+        updateDungeonTotal(dungeonPrefix, seenFlags)
     end
 end
 

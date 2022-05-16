@@ -52,6 +52,11 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     end
                 end
                 item.CollectedCount = value
+
+                -- TODO: Remove this when Dungeon Compass Count bitfield is properly flagged when 'always on'
+                if value > 0 and INSTANCE.COMPASS_MODE & 0x02 > 0 then
+                    updateDungeonTotal(dungeonPrefix, 0xffff)
+                end
             elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
                 local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
@@ -236,6 +241,27 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - (potKeys.AcquiredCount - offsetKey)
         else
             chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
+        end
+    end
+end
+
+function updateDungeonTotal(dungeonPrefix, seenFlags)
+    if INSTANCE.NEW_SRAM_SYSTEM and seenFlags & DATA.DungeonData[dungeonPrefix][3] > 0 then
+        local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
+        if item.MaxCount == 999 then
+            local value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4], 0)
+            if dungeonPrefix == "hc" then
+                -- TODO: Revisit when HC/Escape are correctly displaying the correct total amounts
+                local otherValue = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0)
+                if value ~= otherValue then
+                    value = value + otherValue
+                end
+            end
+            item.MaxCount = value
+
+            if OBJ_DOORDUNGEON:getState() == DATA.DungeonData[dungeonPrefix][2] then
+                OBJ_DOORCHEST:setState(item.MaxCount)
+            end
         end
     end
 end
