@@ -125,7 +125,7 @@ function initMemoryWatch()
         SEGMENTS.PendantData = ScriptHost:AddMemoryWatch("Pendant Data", 0x7ef374, 1, updateDungeonPendantFromMemorySegment)
         SEGMENTS.CrystalData = ScriptHost:AddMemoryWatch("Crystal Data", 0x7ef37a, 1, updateDungeonCrystalFromMemorySegment)
         if INSTANCE.NEW_SRAM_SYSTEM then
-            SEGMENTS.DungeonTotalsData = ScriptHost:AddMemoryWatch("Dungeon Totals Data", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
+            SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
         end
     end
     
@@ -153,7 +153,7 @@ function disposeMemoryWatch()
 
     ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonKeyData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonTotalsData)
+    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonTotals)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.PendantData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.CrystalData)
     ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonId)

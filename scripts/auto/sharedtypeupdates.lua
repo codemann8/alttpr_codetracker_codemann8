@@ -45,7 +45,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
                 if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
-                    -- TODO: Probably remove this when HC/Escape counts are correctly using one slot
                     local otherValue = segment:ReadUInt8(address + 1)
                     if value ~= otherValue then
                         value = value + otherValue
@@ -251,11 +250,7 @@ function updateDungeonTotal(dungeonPrefix, seenFlags)
         if item.MaxCount == 999 then
             local value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4], 0)
             if dungeonPrefix == "hc" then
-                -- TODO: Revisit when HC/Escape are correctly displaying the correct total amounts
-                local otherValue = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0)
-                if value ~= otherValue then
-                    value = value + otherValue
-                end
+                value = math.max(value, AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0))
             end
             item.MaxCount = value
 

@@ -12,6 +12,7 @@ function updateTitleFromMemorySegment(segment)
             INSTANCE.NEW_SRAM_SYSTEM = AutoTracker:ReadU16(0x701ffe, 0) > 1
             if INSTANCE.NEW_SRAM_SYSTEM and STATUS.AutotrackerInGame then
                 SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
+                SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
             end
 
             INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
