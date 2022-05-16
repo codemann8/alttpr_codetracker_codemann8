@@ -13,6 +13,7 @@ function updateTitleFromMemorySegment(segment)
             if INSTANCE.NEW_SRAM_SYSTEM and STATUS.AutotrackerInGame then
                 SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
                 SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
+                SEGMENTS.DungeonsCompleted = ScriptHost:AddMemoryWatch("Dungeons Completed", 0x7ef472, 2, updateDungeonsCompletedFromMemorySegment)
             end
 
             INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
@@ -990,7 +991,7 @@ function updateRoomsFromMemorySegment(segment)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
         local item = Tracker:FindObjectForCode(boss[1])
-        if item and OBJ_GLITCHMODE:getState() < 3 then
+        if item and OBJ_GLITCHMODE:getState() < 3 and not INSTANCE.NEW_SRAM_SYSTEM then
             item.Active = bossflag > 0
         end
 
@@ -1353,6 +1354,24 @@ function updateDungeonTotalsFromMemorySegment(segment)
     local seenFlags = segment:ReadUInt16(0x7ef403)
     for dungeonPrefix, data in pairs(DATA.DungeonData) do
         updateDungeonTotal(dungeonPrefix, seenFlags)
+    end
+end
+
+function updateDungeonsCompletedFromMemorySegment(segment)
+    if not segment or not INSTANCE.NEW_SRAM_SYSTEM or not isInGame() then
+        return false
+    end
+    
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Dungeons Completed")
+    end
+
+    local data = segment:ReadUInt16(0x7ef472)
+    for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
+        local item = Tracker:FindObjectForCode(boss[1])
+        if item then
+            item.Active = data & DATA.DungeonData[boss[1]][3] > 0
+        end
     end
 end
 
