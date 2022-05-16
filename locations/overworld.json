@@ -821,6 +821,10 @@
         "sections": [
             {
                 "name": "Ring of Stones",
+                "access_rules": [
+                    "ow_swapped_0f",
+                    "pearl"
+                ],
                 "item_count": 1
             }
         ],
