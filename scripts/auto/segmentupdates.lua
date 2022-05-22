@@ -352,7 +352,7 @@ function updateItemsFromMemorySegment(segment)
                 value[4](segment)
             elseif #value > 1 then
                 local data = segment:ReadUInt8(value[1]) + value[3]
-                if data > item.CurrentStage or not STATUS.AutotrackerInGame then
+                if (item.CurrentStage >= value[3] or data > value[3]) and (data > item.CurrentStage or not STATUS.AutotrackerInGame) then
                     item.CurrentStage = data
 
                     if STATUS.AutotrackerInGame then
