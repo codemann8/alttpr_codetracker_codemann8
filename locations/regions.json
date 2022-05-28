@@ -1848,6 +1848,9 @@
             "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
             "ow_swapped_14,ow_graveyard_ledge,pearl",
             "ow_swapped_14,ow_graveyard_tomb,pearl,lift2",
+            "ow_swapped_5b,aga2,ow_swapped_1d,[aga],[mirror]",
+            "ow_swapped_5b,aga2,ow_swapped_15,pearl,[flippers],[aga],[mirror]",
+            "ow_swapped_1b,aga2,[aga],[mirror]",
             "ow_swapped_58,ow_outcasts_hammer,pearl,hammer",
             "ow_swapped_62,ow_hammerpegs,pearl,lift2",
             "ow_swapped_62,ow_hammerpegs,pearl,[lift2],hookshot" //TODO: Revisit with bombbag mode, this requires bombs or sword
@@ -1896,6 +1899,10 @@
         "access_rules": [
             "@WDW Regions",
             "@SDW Regions",
+            "ow_swapped_5b,aga2,ow_swapped_2d,[aga],[mirror]",
+            "ow_swapped_5b,aga2,hammer,[aga],[mirror]",
+            "ow_swapped_5b,aga2,ow_swapped_35,pearl,[flippers],[aga],[mirror]",
+            "ow_swapped_1b,aga2,[aga],[mirror]",
             "ow_swapped_30,ow_desert_back,pearl,lift1",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers"
         ],
@@ -1943,6 +1950,8 @@
         "access_rules": [
             "aga,[mirror]",
             "@EDW Regions",
+            "ow_swapped_5b,aga2,[aga],[mirror]",
+            "ow_swapped_1b,aga2,pearl,lift1,[aga],[mirror]",
             "ow_swapped_1b,ow_castle_ledge,pearl,lift1",
             "ow_swapped_1b,ow_castle_courtyard,pearl,lift1",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers"
