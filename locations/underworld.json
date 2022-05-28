@@ -1645,11 +1645,62 @@
                 "name": "Get Big Bomb",
                 "access_rules": [
                     "entrance_shuffle_all",
-                    "ow_swapped_5b,@OW Bomb Shop",
-                    "ow_swapped_1b,ow_swapped_2c,inverted_new,@OW Bomb Shop",
-                    "ow_swapped_1b,ow_swapped_6c,mirror,inverted_new,@OW Bomb Shop",
-                    "ow_swapped_1b,ow_swapped_6c,inverted_orig,@OW Links House",
-                    "ow_swapped_1b,ow_swapped_2c,mirror,inverted_orig,@OW Links House"
+                    "ow_swapped_6c,inverted_new,@OW Bomb Shop",
+                    "ow_swapped_2c,inverted_new,@OW Links House",
+                    "world_state_open,ow_swapped_6c,inverted_orig,@OW Bomb Shop",
+                    "world_state_open,ow_swapped_2c,inverted_orig,@OW Links House",
+                    "world_state_inverted,ow_swapped_6c,inverted_orig,@OW Links House",
+                    "world_state_inverted,ow_swapped_2c,inverted_orig,@OW Bomb Shop"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "SDW To EDW",
+                "access_rules": [
+                    "ow_swapped_2d",
+                    "pearl,hammer",
+                    "ow_swapped_5b,aga,mirror",
+                    "ow_swapped,35,pearl,[flippers]",
+                    "ow_swapped_1b,pearl,lift1",
+                    "glitch_mode_owg,pearl,boots",
+                    "glitch_mode_major,bottle"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "SLW To EDW",
+                "access_rules": [
+                    "ow_swapped_5b,aga",
+                    "aga,pearl,lift1",
+                    "lift1,hammer,pearl"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "SLW To ELW",
+                "access_rules": [
+                    "ow_swapped_6d",
+                    "hammer",
+                    "ow_swapped_75,[flippers]",
+                    "glitch_mode_owg,boots",
+                    "glitch_mode_major",
+                    "ow_swapped_5b,lift1"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Escort Big Bomb",
+                "access_rules": [
+                    "entrance_shuffle_all",
+                    "ow_layout_on,@Pyramid Fairy/Get Big Bomb",
+                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_6c,ow_swapped_5b,@Pyramid Fairy/SDW To EDW",
+                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_6c,ow_swapped_1b,mirror",
+                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_5b,@Pyramid Fairy/SLW To EDW",
+                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_1b,@Pyramid Fairy/SLW To ELW"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1657,9 +1708,9 @@
             {
                 "name": "Big Bomb Spot",
                 "access_rules": [
-                    "@Pyramid Fairy/Get Big Bomb,crystal56:2",
-                    "@Pyramid Fairy/Get Big Bomb,crystal:7",
-                    "@Pyramid Fairy/Get Big Bomb,prize:10",
+                    "@Pyramid Fairy/Escort Big Bomb,crystal56:2",
+                    "@Pyramid Fairy/Escort Big Bomb,crystal:7",
+                    "@Pyramid Fairy/Escort Big Bomb,prize:10",
                     "ow_swapped_5b,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
                     "ow_swapped_5b,@OW Death Mountain West Bottom,glitch_mode_major,mirror"
                 ],
