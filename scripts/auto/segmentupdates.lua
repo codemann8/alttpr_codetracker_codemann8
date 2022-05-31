@@ -573,6 +573,10 @@ function updateOverworldFromMemorySegment(segment)
         end
     end
 
+    if OBJ_RACEMODE:getState() > 0 then
+        return true
+    end
+
     for name, value in pairs(INSTANCE.MEMORY.OverworldItems) do
         local item = Tracker:FindObjectForCode(name)
         if item then
