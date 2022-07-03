@@ -2828,7 +2828,6 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "clear_as_group": true,
                         "item_count": 4
                     }
                 ],

@@ -1176,7 +1176,6 @@
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": true,
                 "item_count": 2
             },
             {
@@ -2415,7 +2414,6 @@
                     "door_shuffle_crossed,[mirrorshield]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "clear_as_group": true,
                 "item_count": 4
             },
             {
