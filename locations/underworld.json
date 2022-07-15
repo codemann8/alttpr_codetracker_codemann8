@@ -222,6 +222,10 @@
             },
             {
                 "name": "Items",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "pearl"
+                ],
                 "visibility_rules": [ "pool_shopsanity_on" ],
                 "capture_item": true,
                 "item_count": 3
