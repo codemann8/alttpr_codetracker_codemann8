@@ -714,7 +714,8 @@
                 "name": "Closet",
                 "access_rules": [
                     "ow_swapped_5e",
-                    "pearl"
+                    "pearl",
+                    "mirror,boots,[pearl]"
                 ],
                 "short_name": "Back",
                 "item_count": 3
@@ -787,6 +788,7 @@
         "access_rules": [
             "ow_swapped_69",
             "pearl",
+            "mirror,[pearl]",
             "{}"
         ],
         "sections": [
