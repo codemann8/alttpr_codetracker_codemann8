@@ -1742,6 +1742,7 @@
         "parent": "Dark World Color",
         "access_rules": [
             "ow_dig_game",
+            "ow_dig_ledge",
             "ow_swapped_68,@South Dark World",
             "ow_swapped_28,@South Light World",
             "ow_swapped_28,ow_race_game,mirror",
