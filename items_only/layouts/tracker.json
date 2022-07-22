@@ -81,10 +81,9 @@
                                             "margin": 0,
                                             "item_margin": 0,
                                             "item_width": 40,
-                                            "item_height": 20,
+                                            "item_height": 40,
                                             "rows": [
-                                                [ "pool_shopsanity_small" ],
-                                                [ "pool_keydrop_small" ]
+                                                [ "pool_keydrop_base" ]
                                             ]
                                         },
                                         {
