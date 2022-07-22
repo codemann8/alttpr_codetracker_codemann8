@@ -135,10 +135,10 @@
                                                 "type": "itemgrid",
                                                 "margin": 0,
                                                 "item_margin": 0,
-                                                "item_width": 168,
+                                                "item_width": 84,
                                                 "item_height": 24,
                                                 "rows": [
-                                                    [ "pool_shopsanity" ]
+                                                    [ "pool_shopsanity", "pool_bonkdrop" ]
                                                 ]
                                             },
                                             {
@@ -329,14 +329,32 @@
                 ]
             },
             {
-                "type": "itemgrid",
-                "margin": "1,0",
-                "item_margin": 0,
-                "item_width": 40,
-                "item_height": 20,
-                "rows": [
-                    [ "pool_shopsanity_small" ],
-                    [ "pool_keydrop_small" ]
+                "type": "array",
+                "orientation": "vertical",
+                "h_alignment": "left",
+                "v_alignment": "top",
+                "margin": 0,
+                "content": [
+                    {
+                        "type": "itemgrid",
+                        "margin": "1,0",
+                        "item_margin": 0,
+                        "item_width": 20,
+                        "item_height": 20,
+                        "rows": [
+                            [ "pool_shopsanity_small", "pool_bonkdrop_small" ]
+                        ]
+                    },
+                    {
+                        "type": "itemgrid",
+                        "margin": "1,0",
+                        "item_margin": 0,
+                        "item_width": 40,
+                        "item_height": 20,
+                        "rows": [
+                            [ "pool_keydrop_small" ]
+                        ]
+                    }
                 ]
             },
             {
@@ -383,14 +401,32 @@
                         ]
                     },
                     {
-                        "type": "itemgrid",
+                        "type": "array",
+                        "orientation": "vertical",
+                        "h_alignment": "left",
+                        "v_alignment": "top",
                         "margin": 0,
-                        "item_margin": 0,
-                        "item_width": 40,
-                        "item_height": 20,
-                        "rows": [
-                            [ "pool_shopsanity_small" ],
-                            [ "pool_keydrop_small" ]
+                        "content": [
+                            {
+                                "type": "itemgrid",
+                                "margin": "1,0",
+                                "item_margin": 0,
+                                "item_width": 20,
+                                "item_height": 20,
+                                "rows": [
+                                    [ "pool_shopsanity_small", "pool_bonkdrop_small" ]
+                                ]
+                            },
+                            {
+                                "type": "itemgrid",
+                                "margin": "1,0",
+                                "item_margin": 0,
+                                "item_width": 40,
+                                "item_height": 20,
+                                "rows": [
+                                    [ "pool_keydrop_small" ]
+                                ]
+                            }
                         ]
                     },
                     {
