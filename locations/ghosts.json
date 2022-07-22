@@ -59,26 +59,21 @@
         "sections": [
             {
                 "name": "Stash",
-                "visibility_rules": [ "entrance_shuffle_minor,world_state_inverted" ],
+                "visibility_rules": [ "entrance_shuffle_minor" ],
                 "item_count": 1
             }
         ],
         "map_locations": [
-            {
-                "map": "lightworld",
-                "x": 364,
-                "y": 328,
-                "size":0,
-                "badge_size": 96,
-                "restrict_visibility_rules": [ "ow_swapped_40" ]
-            },
             {
                 "map": "darkworld",
                 "x": 364,
                 "y": 328,
                 "size":0,
                 "badge_size": 96,
-                "restrict_visibility_rules": [ "ow_swapped_00" ]
+                "restrict_visibility_rules": [
+                    "world_state_inverted,ow_swapped_40",
+                    "world_state_open,ow_swapped_00"
+                ]
             }
         ]
     },
@@ -2488,7 +2483,8 @@
         "sections": [
             {
                 "name": "Circle of Bushes",
-                "item_count": 1
+                "item_count": 1,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor" ]
             }
         ],
         "map_locations": [
@@ -2497,8 +2493,7 @@
                 "x": 552,
                 "y": 1645,
                 "size": 0,
-                "badge_size": 96,
-                "restrict_visibility_rules": [ "ow_swapped_72" ]
+                "badge_size": 96
             },
             {
                 "map": "darkworld",
@@ -2506,7 +2501,10 @@
                 "y": 1645,
                 "size": 0,
                 "badge_size": 96,
-                "restrict_visibility_rules": [ "ow_swapped_32" ]
+                "restrict_visibility_rules": [
+                    "world_state_inverted,ow_swapped_72",
+                    "world_state_open,ow_swapped_32"
+                ]
             }
         ]
     },
