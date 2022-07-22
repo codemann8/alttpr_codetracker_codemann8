@@ -59,7 +59,6 @@
         "sections": [
             {
                 "name": "Stash",
-                "visibility_rules": [ "entrance_shuffle_minor" ],
                 "item_count": 1
             }
         ],
@@ -70,10 +69,7 @@
                 "y": 328,
                 "size":0,
                 "badge_size": 96,
-                "restrict_visibility_rules": [
-                    "world_state_inverted,ow_swapped_40",
-                    "world_state_open,ow_swapped_00"
-                ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_00" ]
             }
         ]
     },
@@ -2483,8 +2479,7 @@
         "sections": [
             {
                 "name": "Circle of Bushes",
-                "item_count": 1,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor" ]
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -2501,10 +2496,7 @@
                 "y": 1645,
                 "size": 0,
                 "badge_size": 96,
-                "restrict_visibility_rules": [
-                    "world_state_inverted,ow_swapped_72",
-                    "world_state_open,ow_swapped_32"
-                ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_32" ]
             }
         ]
     },
