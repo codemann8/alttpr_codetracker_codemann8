@@ -61,7 +61,8 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
     - *\*This only disables the logic that uses whirlpools to access areas*\*
 - Retro Mode (Shows Shops and also possible Take Any Caves)
 - Pool Mode
-  - Shopsanity (Shop inventories are shuffled into the item pool)
+  - Shops (Shop inventories are shuffled into the item pool)
+  - Bonks (Bonk drops are shuffled into the item pool)
   - District Map (This ONLY enables a map overlay to show the boundary lines for Districts)
   - Key Drops (Enemies and Pots, that normally drop keys, are shuffled into the item pool)
 - Glitch Logic
