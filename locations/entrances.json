@@ -1125,28 +1125,34 @@
                 "x": 806,
                 "y": 600,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_53,ow_layout_off,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [ "ow_swapped_53,ow_layout_off,pool_bonkdrop_off,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
                 "x": 806,
                 "y": 550,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_53,ow_layout_on,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [
+                    "ow_swapped_53,ow_layout_on,entrance_shuffle_all",
+                    "ow_swapped_53,pool_bonkdrop_on,entrance_shuffle_all"
+                ]
             },
             {
                 "map": "darkworld",
                 "x": 806,
                 "y": 600,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_13,ow_layout_off,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [ "ow_swapped_13,ow_layout_off,pool_bonkdrop_off,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
                 "x": 806,
                 "y": 550,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_13,ow_layout_on,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [
+                    "ow_swapped_13,ow_layout_on,entrance_shuffle_all",
+                    "ow_swapped_13,pool_bonkdrop_on,entrance_shuffle_all"
+                ]
             }
         ]
     },
@@ -1344,14 +1350,14 @@
             {
                 "map": "lightworld",
                 "x": 1295,
-                "y": 626,
+                "y": 611,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_swapped_55,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
                 "x": 1295,
-                "y": 626,
+                "y": 611,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_swapped_15,entrance_shuffle_all" ]
             }
@@ -2762,7 +2768,7 @@
             {
                 "map": "lightworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1290,
                 "size": 64,
                 "restrict_visibility_rules": [
                     "ow_swapped_6e,entrance_shuffle_crossed",
@@ -2772,7 +2778,7 @@
             {
                 "map": "lightworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1290,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_6e,entrance_shuffle_minor",
@@ -2782,7 +2788,7 @@
             {
                 "map": "darkworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1290,
                 "size": 64,
                 "restrict_visibility_rules": [
                     "ow_swapped_2e,entrance_shuffle_crossed",
@@ -2792,7 +2798,7 @@
             {
                 "map": "darkworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1290,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_2e,entrance_shuffle_minor",
@@ -5578,7 +5584,7 @@
             {
                 "map": "darkworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1290,
                 "size": 64,
                 "restrict_visibility_rules": [
                     "ow_swapped_6e,entrance_shuffle_crossed",
@@ -5588,7 +5594,7 @@
             {
                 "map": "darkworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1290,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_6e,entrance_shuffle_minor",
@@ -5598,7 +5604,7 @@
             {
                 "map": "lightworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1290,
                 "size": 64,
                 "restrict_visibility_rules": [
                     "ow_swapped_2e,entrance_shuffle_crossed",
@@ -5608,7 +5614,7 @@
             {
                 "map": "lightworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1290,
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_2e,entrance_shuffle_minor",

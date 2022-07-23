@@ -65,8 +65,8 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 364,
-                "y": 328,
+                "x": 442,
+                "y": 280,
                 "size":0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_00" ]
@@ -1154,7 +1154,7 @@
             {
                 "map": "lightworld",
                 "x": 1299,
-                "y": 626,
+                "y": 616,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_55" ]
@@ -1162,7 +1162,7 @@
             {
                 "map": "darkworld",
                 "x": 1299,
-                "y": 626,
+                "y": 616,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_15" ]
@@ -2205,7 +2205,7 @@
             {
                 "map": "lightworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1285,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_6e" ],
@@ -2214,7 +2214,7 @@
             {
                 "map": "darkworld",
                 "x": 1650,
-                "y": 1295,
+                "y": 1285,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_2e" ],
@@ -3743,7 +3743,7 @@
             {
                 "map": "darkworld",
                 "x": 1616,
-                "y": 668,
+                "y": 680,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_56" ],
@@ -3752,7 +3752,7 @@
             {
                 "map": "lightworld",
                 "x": 1616,
-                "y": 668,
+                "y": 680,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_16" ],
@@ -4287,7 +4287,7 @@
             {
                 "map": "darkworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1285,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_6e" ],
@@ -4296,7 +4296,7 @@
             {
                 "map": "lightworld",
                 "x": 1656,
-                "y": 1296,
+                "y": 1285,
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_2e" ],

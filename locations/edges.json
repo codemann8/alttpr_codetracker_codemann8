@@ -421,14 +421,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 639,
+                "x": 619,
                 "y": 477,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_4a" ]
             },
             {
                 "map": "darkworld",
-                "x": 639,
+                "x": 619,
                 "y": 477,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_0a" ]
@@ -740,14 +740,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 639,
+                "x": 619,
                 "y": 527,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_52" ]
             },
             {
                 "map": "darkworld",
-                "x": 639,
+                "x": 619,
                 "y": 527,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_12" ]
@@ -1002,14 +1002,14 @@
             {
                 "map": "lightworld",
                 "x": 978,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_53" ]
             },
             {
                 "map": "darkworld",
                 "x": 978,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_13" ]
             }
@@ -1031,14 +1031,14 @@
             {
                 "map": "lightworld",
                 "x": 1028,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_54" ]
             },
             {
                 "map": "darkworld",
                 "x": 1028,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -1060,14 +1060,14 @@
             {
                 "map": "lightworld",
                 "x": 1229,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_54" ]
             },
             {
                 "map": "darkworld",
                 "x": 1229,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -1089,14 +1089,14 @@
             {
                 "map": "lightworld",
                 "x": 1279,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "darkworld",
                 "x": 1279,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
             }
@@ -1117,14 +1117,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "darkworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
@@ -1146,14 +1146,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "darkworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
@@ -1874,14 +1874,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_5d" ]
             },
             {
                 "map": "darkworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_1d" ]
@@ -1906,14 +1906,14 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_5d" ]
             },
             {
                 "map": "darkworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_1d" ]
@@ -3154,14 +3154,14 @@
             {
                 "map": "lightworld",
                 "x": 728,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_72" ]
             },
             {
                 "map": "darkworld",
                 "x": 728,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_32" ]
             }
@@ -3212,14 +3212,14 @@
             {
                 "map": "lightworld",
                 "x": 778,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_73" ]
             },
             {
                 "map": "darkworld",
                 "x": 778,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_33" ]
             }
@@ -4567,14 +4567,14 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 639,
+                "x": 619,
                 "y": 477,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_4a" ]
             },
             {
                 "map": "lightworld",
-                "x": 639,
+                "x": 619,
                 "y": 477,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_0a" ]
@@ -4857,7 +4857,7 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 639,
+                "x": 619,
                 "y": 527,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_52" ]
@@ -5119,14 +5119,14 @@
             {
                 "map": "darkworld",
                 "x": 978,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_53" ]
             },
             {
                 "map": "lightworld",
                 "x": 978,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_13" ]
             }
@@ -5148,14 +5148,14 @@
             {
                 "map": "darkworld",
                 "x": 1028,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_54" ]
             },
             {
                 "map": "lightworld",
                 "x": 1028,
-                "y": 646,
+                "y": 700,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -5177,14 +5177,14 @@
             {
                 "map": "darkworld",
                 "x": 1229,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_54" ]
             },
             {
                 "map": "lightworld",
                 "x": 1229,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -5206,14 +5206,14 @@
             {
                 "map": "darkworld",
                 "x": 1279,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "lightworld",
                 "x": 1279,
-                "y": 689,
+                "y": 659,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
             }
@@ -5234,14 +5234,14 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "lightworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
@@ -5263,14 +5263,14 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_55" ]
             },
             {
                 "map": "lightworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 728,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
@@ -5933,14 +5933,14 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_5d" ]
             },
             {
                 "map": "lightworld",
-                "x": 1327,
+                "x": 1347,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_1d" ]
@@ -5970,14 +5970,14 @@
         "map_locations": [
             {
                 "map": "darkworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_5d" ]
             },
             {
                 "map": "lightworld",
-                "x": 1403,
+                "x": 1406,
                 "y": 778,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_1d" ]
@@ -7201,14 +7201,14 @@
             {
                 "map": "darkworld",
                 "x": 728,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_72" ]
             },
             {
                 "map": "lightworld",
                 "x": 728,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_32" ]
             }
@@ -7259,14 +7259,14 @@
             {
                 "map": "darkworld",
                 "x": 778,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_73" ]
             },
             {
                 "map": "lightworld",
                 "x": 778,
-                "y": 1633,
+                "y": 1580,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_33" ]
             }

@@ -273,6 +273,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_lost_woods_pass_west",
+            "ow_swapped_50,@Northwest Light World",
+            "ow_swapped_10,@Northwest Dark World",
+
             "ow_swapped_50,ow_sw_pass_west,mirror",
             "ow_swapped_50,ow_sw_pass_east_top,pearl,mirror",
             "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2,hammer,mirror"
@@ -283,6 +286,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_lost_woods_pass_east_top",
+            "ow_swapped_50,@Northwest Light World",
+            "ow_swapped_10,@Northwest Dark World",
+
             "ow_swapped_50,ow_sw_pass_east_top,mirror",
             "ow_swapped_50,ow_sw_pass_west,pearl,mirror",
             "ow_swapped_50,ow_sw_pass_east_bottom,pearl,lift2,hammer,mirror",
@@ -323,6 +329,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_kak_pond",
+            "ow_swapped_52,@Northwest Light World",
+            "ow_swapped_12,@Northwest Dark World",
+
             "ow_swapped_52,flute_shuffle_off,whirlpool_shuffle_off,@Flute Access,[flippers]",
             "ow_swapped_52,whirlpool_shuffle_off,ow_octoballoon,[flippers]",
             "ow_swapped_52,ow_outcast_pond,mirror"
@@ -498,6 +507,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_forest",
+            "ow_swapped_5a,@Northwest Light World",
+            "ow_swapped_1a,@Northwest Dark World",
+
             "ow_swapped_5a,ow_shield_shop,mirror"
         ]
     },
@@ -634,6 +646,9 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_wooden_bridge",
+            "ow_swapped_5d,@Northwest Light World",
+            "ow_swapped_1d,@Northwest Dark World",
+
             "ow_swapped_5d,ow_wooden_bridge_northeast",
             "ow_swapped_5d,ow_broken_bridge_west,mirror",
             "ow_swapped_5d,ow_broken_bridge_east_top,mirror",

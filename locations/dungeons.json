@@ -500,14 +500,14 @@
             },
             {
                 "map": "lightworld",
-                "x": 1003,
+                "x": 963,
                 "y": 969,
                 "size": 80,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
             },
             {
                 "map": "darkworld",
-                "x": 1003,
+                "x": 963,
                 "y": 978,
                 "size": 80,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1b" ]
@@ -1051,8 +1051,8 @@
             },
             {
                 "map": "lightworld",
-                "x": 1003,
-                "y": 713,
+                "x": 1043,
+                "y": 969,
                 "size": 80,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
             },
@@ -1073,8 +1073,8 @@
             },
             {
                 "map": "darkworld",
-                "x": 1003,
-                "y": 713,
+                "x": 1043,
+                "y": 978,
                 "size": 80,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43,ow_swapped_1b" ]
             },
@@ -2812,8 +2812,8 @@
             },
             {
                 "map": "darkworld",
-                "x": 1003,
-                "y": 704,
+                "x": 1043,
+                "y": 978,
                 "size": 80,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_03,ow_swapped_1b" ]
             }

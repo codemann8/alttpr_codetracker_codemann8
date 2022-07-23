@@ -92,6 +92,55 @@
         ]
     },
     {
+        "name": "Lost Woods Tree",
+        "parent": "OW Lost Woods East",
+        "access_rules": [
+            "ow_swapped_40",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 311,
+                "y": 290,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_40" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 308,
+                "y": 290,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_40" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 311,
+                "y": 290,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_00" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 308,
+                "y": 290,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_00" ]
+            }
+        ]
+    },
+    {
         "name": "Ether Tablet",
         "parent": "OW Death Mountain West Top",
         "sections": [
@@ -244,6 +293,153 @@
         ]
     },
     {
+        "name": "Death Mountain Bonk Rocks",
+        "parent": "OW Death Mountain East Top",
+        "access_rules": [
+            "ow_swapped_45",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Rock",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-rock.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1652,
+                "y": 115,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1652,
+                "y": 110,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_45" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1652,
+                "y": 115,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_05" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1652,
+                "y": 110,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Mountain Entry Pull Tree",
+        "parent": "OW Mountain Entry",
+        "access_rules": [
+            "ow_swapped_4a",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 612,
+                "y": 322,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 612,
+                "y": 308,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 612,
+                "y": 322,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_0a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 612,
+                "y": 308,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
+        "name": "Mountain Entry Southeast Tree",
+        "parent": "OW Mountain Entry",
+        "access_rules": [
+            "ow_swapped_4a",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 698,
+                "y": 455,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 698,
+                "y": 455,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 698,
+                "y": 455,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_0a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 698,
+                "y": 455,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_0a" ]
+            }
+        ]
+    },
+    {
         "name": "Zora's Domain",
         "parent": "OW Zora Waterfall",
         "sections": [
@@ -320,6 +516,422 @@
         ]
     },
     {
+        "name": "Lost Woods Pass West Tree",
+        "parent": "OW Lost Woods Pass West",
+        "access_rules": [
+            "ow_swapped_50",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 55,
+                "y": 596,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_50" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 55,
+                "y": 596,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_50" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 55,
+                "y": 596,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_10" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 55,
+                "y": 596,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_10" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Portal Tree",
+        "parent": "OW Lost Woods Pass East Top",
+        "access_rules": [
+            "ow_swapped_50",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 180,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_50" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 180,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_50" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 180,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_10" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 180,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_10" ]
+            }
+        ]
+    },
+    {
+        "name": "Fortune Bonk Rocks",
+        "parent": "OW Kakariko Fortune",
+        "access_rules": [
+            "ow_swapped_51",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Rock",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-rock.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 314,
+                "y": 627,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_51" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 308,
+                "y": 627,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_51" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 314,
+                "y": 627,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_11" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 308,
+                "y": 627,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_11" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Pond Tree",
+        "parent": "OW Kakariko Pond",
+        "access_rules": [
+            "ow_swapped_52",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 659,
+                "y": 590,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_52" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 659,
+                "y": 590,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_52" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 659,
+                "y": 590,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_12" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 659,
+                "y": 590,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_12" ]
+            }
+        ]
+    },
+    {
+        "name": "Bonk Rocks Tree",
+        "parent": "OW Bonk Rocks",
+        "access_rules": [
+            "ow_swapped_53",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 842,
+                "y": 618,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_53" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 838,
+                "y": 618,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_53" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 856,
+                "y": 616,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_53" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 842,
+                "y": 616,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_13" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 838,
+                "y": 616,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_13" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 856,
+                "y": 616,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_13" ]
+            }
+        ]
+    },
+    {
+        "name": "Sanctuary Tree",
+        "parent": "OW Sanctuary",
+        "access_rules": [
+            "ow_swapped_53",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 941,
+                "y": 640,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_53" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 941,
+                "y": 612,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_53" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 941,
+                "y": 640,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_13" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 941,
+                "y": 612,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_13" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend West Tree",
+        "parent": "OW River Bend West",
+        "access_rules": [
+            "ow_swapped_55",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1296,
+                "y": 706,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_55" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1290,
+                "y": 714,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1296,
+                "y": 706,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_15" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1290,
+                "y": 714,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
+            }
+        ]
+    },
+    {
+        "name": "River Bend East Tree",
+        "parent": "OW River Bend East",
+        "access_rules": [
+            "ow_swapped_55",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1456,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_55" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1418,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_55" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1440,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1456,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_15" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1418,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_15" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1440,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
+            }
+        ]
+    },
+    {
         "name": "Bottle Vendor",
         "parent": "OW Kakariko Village",
         "sections": [
@@ -392,6 +1004,301 @@
         ]
     },
     {
+        "name": "Blinds Hideout Tree",
+        "parent": "OW Kakariko Village",
+        "access_rules": [
+            "ow_swapped_58",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 178,
+                "y": 840,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 168,
+                "y": 805,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 178,
+                "y": 840,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 168,
+                "y": 805,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Kakariko Welcome Tree",
+        "parent": "OW Kakariko Village",
+        "access_rules": [
+            "ow_swapped_58",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 416,
+                "y": 1152,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 423,
+                "y": 1152,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 416,
+                "y": 1152,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_18" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 423,
+                "y": 1152,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Forgotten Forest Trees",
+        "parent": "OW Forgotten Forest",
+        "access_rules": [
+            "ow_swapped_5a",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Trees",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 584,
+                "y": 913,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 584,
+                "y": 913,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 584,
+                "y": 913,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 584,
+                "y": 913,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1a" ]
+            }
+        ]
+    },
+    {
+        "name": "Hyrule Castle Tree",
+        "parent": "OW Castle Courtyard",
+        "access_rules": [
+            "ow_swapped_5b",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 913,
+                "y": 909,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 925,
+                "y": 900,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 913,
+                "y": 909,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 925,
+                "y": 900,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Wooden Bridge Tree",
+        "parent": "OW Wooden Bridge",
+        "access_rules": [
+            "ow_swapped_5d",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1341,
+                "y": 820,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5d" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1341,
+                "y": 830,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5d" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1341,
+                "y": 820,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1d" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1341,
+                "y": 830,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1d" ]
+            }
+        ]
+    },
+    {
+        "name": "Eastern Palace Tree",
+        "parent": "OW Eastern Palace",
+        "access_rules": [
+            "ow_swapped_5e",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1796,
+                "y": 1184,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1796,
+                "y": 1184,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1796,
+                "y": 1184,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1796,
+                "y": 1184,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1e" ]
+            }
+        ]
+    },
+    {
         "name": "Race Game",
         "parent": "OW Race Game",
         "access_rules": [
@@ -460,8 +1367,8 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 600,
-                "y": 1350,
+                "x": 590,
+                "y": 1330,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6a" ]
             },
             {
@@ -473,8 +1380,8 @@
             },
             {
                 "map": "darkworld",
-                "x": 600,
-                "y": 1350,
+                "x": 590,
+                "y": 1330,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_2a" ]
             },
             {
@@ -483,6 +1390,105 @@
                 "y": 1320,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2a" ]
+            }
+        ]
+    },
+    {
+        "name": "Flute Boy Trees",
+        "parent": "OW Flute Boy",
+        "access_rules": [
+            "ow_swapped_6a",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Trees",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 652,
+                "y": 1417,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6a" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 652,
+                "y": 1427,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 652,
+                "y": 1417,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_2a" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 652,
+                "y": 1427,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2a" ]
+            }
+        ]
+    },
+    {
+        "name": "Central Bonk Rocks Tree",
+        "parent": "OW Central Bonk Rocks",
+        "access_rules": [
+            "ow_swapped_6b",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 908,
+                "y": 1376,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 916,
+                "y": 1396,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 908,
+                "y": 1376,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_2b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 916,
+                "y": 1396,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2b" ]
             }
         ]
     },
@@ -547,6 +1553,56 @@
                 "y": 1390,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_swapped_2d" ]
+            }
+        ]
+    },
+    {
+        "name": "Tree Line Trees",
+        "parent": "OW Tree Line",
+        "access_rules": [
+            "ow_swapped_6e",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree 2\\Tree 4",
+                "access_rules": [
+                    "aga,boots",
+                    "aga,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1630,
+                "y": 1348,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6e" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1630,
+                "y": 1353,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1630,
+                "y": 1348,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_2e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1630,
+                "y": 1353,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2e" ]
             }
         ]
     },
@@ -671,6 +1727,56 @@
         ]
     },
     {
+        "name": "Flute Boy Approach Trees",
+        "parent": "OW Cave 45",
+        "access_rules": [
+            "ow_swapped_72",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "East Trees",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 702,
+                "y": 1641,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_72" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 702,
+                "y": 1641,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_72" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 702,
+                "y": 1641,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_32" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 702,
+                "y": 1641,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_32" ]
+            }
+        ]
+    },
+    {
         "name": "Sunken Treasure",
         "parent": "OW Dam",
         "sections": [
@@ -756,6 +1862,55 @@
     },
 
     // Dark World
+    {
+        "name": "Dark Lumberjack Tree",
+        "parent": "OW Dark Lumberjack",
+        "access_rules": [
+            "ow_swapped_02",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "East Trees",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 569,
+                "y": 162,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_02" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 569,
+                "y": 172,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_02" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 569,
+                "y": 162,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_42" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 569,
+                "y": 172,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_42" ]
+            }
+        ]
+    },
     {
         "name": "Bumper Ledge",
         "parent": "OW Bumper Cave",
@@ -858,6 +2013,265 @@
         ]
     },
     {
+        "name": "Dark Fortune Bonk Rocks",
+        "parent": "OW Outcast Fortune",
+        "access_rules": [
+            "ow_swapped_11",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Rock",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-rock.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 314,
+                "y": 627,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_11" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 308,
+                "y": 627,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_11" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 314,
+                "y": 627,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_51" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 308,
+                "y": 627,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_51" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Graveyard Bonk Rocks",
+        "parent": "OW Dark Graveyard",
+        "access_rules": [
+            "ow_swapped_14",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Rocks",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-rock.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1121,
+                "y": 616,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_14" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1121,
+                "y": 606,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_14" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1121,
+                "y": 616,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_54" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1121,
+                "y": 606,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_54" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump West Tree",
+        "parent": "OW Qirn Jump West",
+        "access_rules": [
+            "ow_swapped_15",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1296,
+                "y": 706,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_15" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1290,
+                "y": 714,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1296,
+                "y": 706,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1290,
+                "y": 714,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+            }
+        ]
+    },
+    {
+        "name": "Qirn Jump East Tree",
+        "parent": "OW Qirn Jump East",
+        "access_rules": [
+            "ow_swapped_15",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1456,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_15" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1418,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_15" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 144066,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1456,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1418,
+                "y": 619,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_55" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1440,
+                "y": 619,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Witch Tree",
+        "parent": "OW Dark Witch",
+        "access_rules": [
+            "ow_swapped_16",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1587,
+                "y": 612,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_16" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1567,
+                "y": 612,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_16" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1587,
+                "y": 612,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_56" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1567,
+                "y": 612,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_56" ]
+            }
+        ]
+    },
+    {
         "name": "Pyramid Ledge",
         "parent": "OW Pyramid",
         "sections": [
@@ -892,6 +2306,104 @@
                 "y": 922,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1b" ]
+            }
+        ]
+    },
+    {
+        "name": "Pyramid Tree",
+        "parent": "OW Pyramid",
+        "access_rules": [
+            "ow_swapped_1b",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 933,
+                "y": 1086,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1b" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 933,
+                "y": 1086,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 933,
+                "y": 1086,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 933,
+                "y": 1086,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+            }
+        ]
+    },
+    {
+        "name": "Palace of Darkness Tree",
+        "parent": "OW Palace of Darkness",
+        "access_rules": [
+            "ow_swapped_1e",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1882,
+                "y": 1128,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_1e" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1882,
+                "y": 1128,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_1e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1882,
+                "y": 1128,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1882,
+                "y": 1128,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
             }
         ]
     },
@@ -1106,6 +2618,105 @@
                 "y": 1383,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2a" ]
+            }
+        ]
+    },
+    {
+        "name": "Dark Tree Line Trees",
+        "parent": "OW Dark Tree Line",
+        "access_rules": [
+            "ow_swapped_2e",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Tree 2\\Tree 3\\Tree 4",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-tree.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "clear_as_group": true,
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1630,
+                "y": 1348,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_2e" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1630,
+                "y": 1353,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_2e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1630,
+                "y": 1348,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6e" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1630,
+                "y": 1353,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6e" ]
+            }
+        ]
+    },
+    {
+        "name": "Hype Cave Statue",
+        "parent": "OW Hype",
+        "access_rules": [
+            "ow_swapped_34",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Statue",
+                "access_rules": [
+                    "boots",
+                    "sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-statue.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1113,
+                "y": 1652,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_34" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1113,
+                "y": 1662,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_34" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1113,
+                "y": 1652,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_74" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1113,
+                "y": 1662,
+                "size": 64,
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_74" ]
             }
         ]
     },
