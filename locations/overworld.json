@@ -92,7 +92,7 @@
         ]
     },
     {
-        "name": "Lost Woods Tree",
+        "name": "Lost Woods Hideout Tree",
         "parent": "OW Lost Woods East",
         "access_rules": [
             "ow_swapped_40",
@@ -1871,7 +1871,7 @@
         ],
         "sections": [
             {
-                "name": "East Trees",
+                "name": "Tree",
                 "access_rules": [
                     "boots",
                     "sword,quake"
@@ -2135,27 +2135,27 @@
         "map_locations": [
             {
                 "map": "lightworld",
-                "x": 1296,
-                "y": 706,
+                "x": 1340,
+                "y": 680,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_15" ]
             },
             {
                 "map": "lightworld",
-                "x": 1290,
-                "y": 714,
+                "x": 1340,
+                "y": 690,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
             },
             {
                 "map": "darkworld",
-                "x": 1296,
-                "y": 706,
+                "x": 1340,
+                "y": 680,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_55" ]
             },
             {
                 "map": "darkworld",
-                "x": 1290,
-                "y": 714,
+                "x": 1340,
+                "y": 690,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
             }
@@ -2196,7 +2196,7 @@
             },
             {
                 "map": "lightworld",
-                "x": 144066,
+                "x": 1440,
                 "y": 619,
                 "size": 64,
                 "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_15" ]
