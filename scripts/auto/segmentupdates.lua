@@ -521,19 +521,51 @@ function updateProgressFromMemorySegment(segment)
 end
 
 DATA.MEMORY.Overworld = {
-    ["@Spectacle Rock/Up On Top"] =           { 0x03 },
-    ["@Floating Island/Island"] =             { 0x05 },
-    ["@Race Game/Take This Trash"] =          { 0x28 },
-    ["@Grove Digging Spot/Hidden Treasure"] = { 0x2a, updateShovelIndicatorStatus },
-    ["@Desert Ledge/Ledge"] =                 { 0x30 },
-    ["@Lake Hylia Island/Island"] =           { 0x35 },
-    ["@Dam/Outside"] =                        { 0x3b },
-    ["@Sunken Treasure/Drain The Dam"] =      { 0x3b },
-    ["@Bumper Ledge/Ledge"] =                 { 0x4a },
-    ["@Pyramid Ledge/Ledge"] =                { 0x5b },
-    ["@Digging Game/Dig For Treasure"] =      { 0x68 },
-    ["@Master Sword Pedestal/Pedestal"] =     { 0x80 },
-    ["@Zora's Domain/Ledge"] =                { 0x81 }
+    ["@Lost Woods Hideout Tree/Tree"] =                 { 0x00, 0x10 },
+    ["@Spectacle Rock/Up On Top"] =                     { 0x03, 0x40 },
+    ["@Floating Island/Island"] =                       { 0x05, 0x40 },
+    ["@Death Mountain Bonk Rocks/Rock"] =               { 0x05, 0x10 },
+    ["@Mountain Entry Pull Tree/Tree"] =                { 0x0a, 0x10 },
+    ["@Mountain Entry Southeast Tree/Tree"] =           { 0x0a, 0x08 },
+    ["@Lost Woods Pass West Tree/Tree"] =               { 0x10, 0x10 },
+    ["@Kakariko Portal Tree/Tree"] =                    { 0x10, 0x08 },
+    ["@Fortune Bonk Rocks/Rock"] =                      { 0x11, 0x10 },
+    ["@Kakariko Pond Tree/Tree"] =                      { 0x12, 0x10 },
+    ["@Bonk Rocks Tree/Tree"] =                         { 0x13, 0x10 },
+    ["@Sanctuary Tree/Tree"] =                          { 0x13, 0x08 },
+    ["@River Bend West Tree/Tree"] =                    { 0x15, 0x10 },
+    ["@River Bend East Tree/Tree"] =                    { 0x15, 0x08 },
+    ["@Blinds Hideout Tree/Tree"] =                     { 0x18, 0x10 },
+    ["@Kakariko Welcome Tree/Tree"] =                   { 0x18, 0x08 },
+    ["@Forgotten Forest Trees/Trees"] =                 { 0x1a, 0x18 },
+    ["@Hyrule Castle Tree/Tree"] =                      { 0x1b, 0x10 },
+    ["@Wooden Bridge Tree/Tree"] =                      { 0x1d, 0x10 },
+    ["@Eastern Palace Tree/Tree"] =                     { 0x1e, 0x10 },
+    ["@Race Game/Take This Trash"] =                    { 0x28, 0x40 },
+    ["@Grove Digging Spot/Hidden Treasure"] =           { 0x2a, 0x40, updateShovelIndicatorStatus },
+    ["@Flute Boy Trees/Trees"] =                        { 0x2a, 0x18 },
+    ["@Central Bonk Rocks Tree/Tree"] =                 { 0x2b, 0x10 },
+    ["@Tree Line Trees/Tree 2\\Tree 4"] =               { 0x2e, 0x1c },
+    ["@Desert Ledge/Ledge"] =                           { 0x30, 0x40 },
+    ["@Flute Boy Approach Trees/East Trees"] =          { 0x32, 0x18 },
+    ["@Lake Hylia Island/Island"] =                     { 0x35, 0x40 },
+    ["@Dam/Outside"] =                                  { 0x3b, 0x40 },
+    ["@Sunken Treasure/Drain The Dam"] =                { 0x3b, 0x40 },
+    ["@Dark Lumberjack Tree/Tree"] =                    { 0x42, 0x10 },
+    ["@Bumper Ledge/Ledge"] =                           { 0x4a, 0x40 },
+    ["@Dark Fortune Bonk Rocks/Rock"] =                 { 0x51, 0x18 },
+    ["@Dark Graveyard Bonk Rocks/Rocks"] =              { 0x54, 0x1c },
+    ["@Qirn Jump West Tree/Tree"] =                     { 0x55, 0x10 },
+    ["@Qirn Jump East Tree/Tree"] =                     { 0x55, 0x08 },
+    ["@Dark Witch Tree/Tree"] =                         { 0x56, 0x10 },
+    ["@Pyramid Ledge/Ledge"] =                          { 0x5b, 0x40 },
+    ["@Pyramid Tree/Tree"] =                            { 0x5b, 0x10 },
+    ["@Palace of Darkness Tree/Tree"] =                 { 0x5e, 0x10 },
+    ["@Digging Game/Dig For Treasure"] =                { 0x68, 0x40 },
+    ["@Dark Tree Line Trees/Tree 2\\Tree 3\\Tree 4"] =  { 0x6e, 0x1c },
+    ["@Hype Cave Statue/Statue"] =                      { 0x74, 0x10 },
+    ["@Master Sword Pedestal/Pedestal"] =               { 0x80, 0x40 },
+    ["@Zora's Domain/Ledge"] =                          { 0x81, 0x40 }
 }
 
 DATA.MEMORY.OverworldItems = {
@@ -554,14 +586,14 @@ function updateOverworldFromMemorySegment(segment)
         local location = Tracker:FindObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
-                location.AvailableChestCount = location.ChestCount - (segment:ReadUInt8(0x7ef280 + value[1]) & 0x40 > 0 and 1 or 0)
+                location.AvailableChestCount = location.ChestCount - numberOfSetBits(segment:ReadUInt8(0x7ef280 + value[1]) & value[2])
                 
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and location.AvailableChestCount == 0 then
                     print("Overworld Check:", name)
                 end
 
-                if #value > 1 then
-                    value[2](location.AvailableChestCount == 0)
+                if #value > 2 then
+                    value[3](location.AvailableChestCount == 0)
                 end
             end
 
