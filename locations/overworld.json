@@ -2725,8 +2725,12 @@
         "short_name": "GT Sign",
         "parent": "Dark Death Mountain Color",
         "access_rules": [
-            "world_state_open,@OW Dark Death Mountain West Top",
-            "world_state_inverted,@OW Castle Ledge"
+            "inverted_orig,world_state_open,@OW Dark Death Mountain West Top",
+            "inverted_orig,world_state_inverted,@OW Castle Ledge",
+            
+            "inverted_new,ow_swapped_43,@OW Dark Death Mountain West Top",
+            "inverted_new,ow_swapped_03,ow_swapped_5b,@OW Dark Death Mountain West Top",
+            "inverted_new,ow_swapped_03,ow_swapped_1b,@OW Castle Ledge"
         ],
         "sections": [
             {
