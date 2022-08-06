@@ -125,8 +125,8 @@
         "name": "Mimic Cave",
         "parent": "OW Death Mountain East Top",
         "access_rules": [
-            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_keydrop_off,tr_smallkey:2,mirror",
-            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_keydrop_on,tr_smallkey:3,mirror",
+            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_enemydrop_off,tr_smallkey:2,mirror",
+            "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,pool_enemydrop_on,tr_smallkey:3,mirror",
             "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,[firerod],keysanity_smallkey_off,mirror",
             "ow_swapped_45,entrance_shuffle_minor,@OW TR Bridge,mirror",
             "ow_swapped_45,glitch_mode_owg,mirror",
