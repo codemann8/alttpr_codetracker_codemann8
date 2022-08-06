@@ -62,12 +62,57 @@
         ]
     },
     {
+        "name": "Death Mountain Descent",
+        "short_name": "DM Descent",
+        "parent": "OW Death Mountain West Bottom",
+        "access_rules": [ "@Death Mountain Descent Front" ],
+        "sections": [
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_43,[lamp]",
+                    "pearl,[lamp]",
+                    "mirror,[pearl],[lamp]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/entrances/pot-collected.png",
+                "item_count": 6
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 796,
+                "y": 272,
+                "restrict_visibility_rules": [ "ow_swapped_43,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 796,
+                "y": 272,
+                "restrict_visibility_rules": [ "ow_swapped_03,entrance_shuffle_minor,pool_cavepot_on" ]
+            }
+        ]
+    },
+    {
         "name": "Old Man",
         "parent": "OW Death Mountain West Bottom",
         "sections": [
             {
                 "name": "Bring Him Home",
                 "access_rules": [ "[lamp]" ],
+                "item_count": 1
+            },
+            {
+                "name": "Pot",
+                "access_rules": [
+                    "ow_swapped_43",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
                 "item_count": 1
             }
         ],
@@ -162,6 +207,49 @@
         ]
     },
     {
+        "name": "Fairy Ascension",
+        "short_name": "EDM Ledge",
+        "parent": "OW Death Mountain East Bottom",
+        "access_rules": [ "@Fairy Ascension Bottom" ],
+        "sections": [
+            {
+                "name": "Fairy Pots",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "item_count": 2
+            },
+            {
+                "name": "Superbunny Pots",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "item_count": 2
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1598,
+                "y": 300,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1598,
+                "y": 300,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_minor,pool_cavepot_on" ]
+            }
+        ]
+    },
+    {
         "name": "Paradox Cave",
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
@@ -170,12 +258,34 @@
         ],
         "sections": [
             {
+                "name": "Top",
+                "item_count": 5
+            },
+            {
                 "name": "Bottom",
                 "item_count": 2
             },
             {
-                "name": "Top",
-                "item_count": 5
+                "name": "Cave Pots",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "pearl"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
+            },
+            {
+                "name": "Block Pot",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -352,6 +462,13 @@
             {
                 "name": "Cave",
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 8
             }
         ],
         "map_locations": [
@@ -468,6 +585,40 @@
                     "glitch_mode_major,bottle"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Bomb Wall Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
+            },
+            {
+                "name": "Chest Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
+            },
+            {
+                "name": "Exit Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
             }
         ],
         "map_locations": [
@@ -490,6 +641,18 @@
         "parent": "OW Kakariko Village",
         "sections": [
             {
+                "name": "Entry Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 4
+            },
+            {
                 "name": "Basement",
                 "short_name": "Main",
                 "access_rules": [
@@ -509,6 +672,17 @@
                     "glitch_mode_major,bottle"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Bomb Wall Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 6
             }
         ],
         "map_locations": [
@@ -527,15 +701,59 @@
         ]
     },
     {
-        "name": "Chicken House",
+        "name": "Elder House",
         "parent": "OW Kakariko Village",
-        "access_rules": [
-            "ow_swapped_58",
-            "pearl"
-        ],
         "sections": [
             {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 3
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 370,
+                "y": 830,
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_minor" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 370,
+                "y": 830,
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_minor" ]
+            }
+        ]
+    },
+    {
+        "name": "Chicken House",
+        "parent": "OW Kakariko Village",
+        "sections": [
+            {
+                "name": "Pot",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Bombable Wall",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl"
+                ],
                 "item_count": 1
             }
         ],
@@ -562,6 +780,18 @@
                 "name": "By The Bed",
                 "access_rules": [ "bottle" ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
             }
         ],
         "map_locations": [
@@ -632,14 +862,28 @@
     {
         "name": "Tavern",
         "parent": "OW Kakariko Village",
+        "access_rules": [
+            "ow_swapped_58",
+            "pearl",
+            "[pearl],mirror"
+        ],
         "sections": [
             {
                 "name": "Back Room",
-                "access_rules": [
-                    "ow_swapped_58",
-                    "pearl",
-                    "[pearl],mirror"
-                ],
+                "item_count": 1
+            },
+            {
+                "name": "Back Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
+            },
+            {
+                "name": "Front Pot",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
                 "item_count": 1
             }
         ],
@@ -688,7 +932,14 @@
             {
                 "name": "Hallway",
                 "item_count": 1
-            }									
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
+            }
         ],
         "map_locations": [
             {
@@ -718,6 +969,18 @@
                     "mirror,boots,[pearl]"
                 ],
                 "short_name": "Back",
+                "item_count": 3
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_5e",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
                 "item_count": 3
             },
             {
@@ -765,6 +1028,13 @@
                     "somaria,mushroom,[powder]"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
             }
         ],
         "map_locations": [
@@ -830,6 +1100,13 @@
             {
                 "name": "By The Door",
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 3
             }
         ],
         "map_locations": [
@@ -945,6 +1222,21 @@
                 ],
                 "capture_item": true,
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_72,@OW Bush Circle,mirror",
+                    "ow_swapped_72,glitch_mode_owg,boots",
+                    "ow_swapped_32,inverted_orig",
+                    "ow_swapped_32,inverted_new,glitch_mode_none",
+                    "ow_swapped_32,inverted_new,glitch_mode_owg,pearl,boots",
+                    "glitch_mode_major"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 6
             }
         ],
         "map_locations": [
@@ -1209,6 +1501,22 @@
                     "hammer,lift1,[cape],halfmagic"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Boulder",
+                "access_rules": [ "@Spike Cave/Cave" ],
+                "chest_unopened_img": "images/icons/keydrops/pot-boulder.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [ "@Spike Cave/Cave" ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 8
             }
         ],
         "map_locations": [
@@ -1239,6 +1547,24 @@
         ],
         "sections": [
             {
+                "name": "Front Pot",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
+            },
+            {
+                "name": "Bonk Pots",
+                "access_rules": [
+                    "boots",
+                    "hookshot"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 3
+            },
+            {
                 "name": "Bonkable Chest",
                 "short_name": "Front",
                 "access_rules": [
@@ -1248,12 +1574,30 @@
                 "item_count": 1
             },
             {
+                "name": "Hook Pots",
+                "access_rules": [
+                    "hookshot",
+                    "[hookshot],boots"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 4
+            },
+            {
                 "name": "Back",
                 "access_rules": [
                     "hookshot",
                     "[hookshot],boots"
                 ],
                 "item_count": 3
+            },
+            {
+                "name": "Back Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 2
             }
         ],
         "map_locations": [
@@ -1274,14 +1618,21 @@
     {
         "name": "Superbunny Cave",
         "parent": "OW Dark Death Mountain East Bottom",
+        "access_rules": [
+            "[pearl]",
+            "ow_swapped_05",
+            "glitch_mode_owg"
+        ],
         "sections": [
             {
                 "name": "Cave",
-                "access_rules": [
-                    "[pearl]",
-                    "ow_swapped_05",
-                    "glitch_mode_owg"
-                ],
+                "item_count": 2
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
                 "item_count": 2
             }
         ],
@@ -1384,6 +1735,42 @@
                 "x": 1745,
                 "y": 328,
                 "restrict_visibility_rules": [ "pool_shopsanity_on,entrance_shuffle_dungeon,ow_swapped_05" ]
+            }
+        ]
+    },
+    {
+        "name": "Bumper Cave",
+        "parent": "OW Bumper Cave",
+        "access_rules": [
+            "ow_swapped_4a,pearl,lift1,cape",
+            "ow_swapped_0a,inverted_orig,@OW Mountain Entry,pearl,lift1,cape,mirror",
+            "ow_swapped_0a,inverted_new,lift1,cape",
+            "ow_swapped_0a,inverted_new,@OW Death Mountain West Bottom,[lamp],mirror",
+            "glitch_mode_owg,pearl,boots",
+            "ow_swapped_0a,glitch_mode_owg,boots",
+            "glitch_mode_major"
+        ],
+        "sections": [
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 5
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "darkworld",
+                "x": 722,
+                "y": 390,
+                "restrict_visibility_rules": [ "ow_swapped_4a,entrance_shuffle_minor" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 722,
+                "y": 390,
+                "restrict_visibility_rules": [ "ow_swapped_0a,entrance_shuffle_minor" ]
             }
         ]
     },
@@ -1576,6 +1963,13 @@
             {
                 "name": "Downstairs",
                 "item_count": 1
+            },
+            {
+                "name": "Pot",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1751,6 +2145,13 @@
                 "name": "Cave",
                 "access_rules": [ "hammer" ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 4
             }
         ],
         "map_locations": [

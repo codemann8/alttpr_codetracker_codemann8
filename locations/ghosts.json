@@ -260,7 +260,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_42" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -269,7 +269,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_02" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -763,7 +763,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_45" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -772,7 +772,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_05" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -1326,7 +1326,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_58" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -1335,7 +1335,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_18" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -1440,7 +1440,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_58" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -1449,7 +1449,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_18" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -1556,7 +1556,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_58" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -1565,7 +1565,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_18" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -1644,7 +1644,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_58" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -1653,7 +1653,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_18" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -2834,7 +2834,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_77" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -2843,7 +2843,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_37" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -2894,7 +2894,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_7a" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "darkworld",
@@ -2903,7 +2903,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_3a" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -4117,7 +4117,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_5e" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "lightworld",
@@ -4126,7 +4126,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_1e" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -4437,7 +4437,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_70" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "lightworld",
@@ -4446,7 +4446,7 @@
                 "size": 0,
                 "badge_size": 128,
                 "restrict_visibility_rules": [ "ow_swapped_30" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },
@@ -4641,7 +4641,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_77" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             },
             {
                 "map": "lightworld",
@@ -4650,7 +4650,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_37" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_cavepot_off" ]
             }
         ]
     },

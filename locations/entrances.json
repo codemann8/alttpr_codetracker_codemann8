@@ -105,7 +105,10 @@
                 "x": 370,
                 "y": 40,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_40,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [
+                    "ow_swapped_40,entrance_shuffle_crossed",
+                    "ow_swapped_40,entrance_shuffle_insanity"
+                ]
             },
             {
                 "map": "lightworld",
@@ -122,7 +125,10 @@
                 "x": 370,
                 "y": 40,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_00,entrance_shuffle_all" ]
+                "restrict_visibility_rules": [
+                    "ow_swapped_00,entrance_shuffle_crossed",
+                    "ow_swapped_00,entrance_shuffle_insanity"
+                ]
             },
             {
                 "map": "darkworld",
@@ -221,16 +227,29 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_42",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 2
             },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -250,12 +269,18 @@
             },
             {
                 "map": "lightworld",
+                "x": 685,
+                "y": 132,
+                "restrict_visibility_rules": [ "ow_swapped_42,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "lightworld",
                 "x": 673,
                 "y": 132,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_42,entrance_shuffle_minor",
-                    "ow_swapped_42,entrance_shuffle_lite"
+                    "ow_swapped_42,retro_mode_on,pool_cavepot_off,entrance_shuffle_minor",
+                    "ow_swapped_42,retro_mode_on,pool_cavepot_off,entrance_shuffle_lite"
                 ]
             },
             {
@@ -267,12 +292,18 @@
             },
             {
                 "map": "darkworld",
+                "x": 685,
+                "y": 132,
+                "restrict_visibility_rules": [ "ow_swapped_02,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "darkworld",
                 "x": 673,
                 "y": 132,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_02,entrance_shuffle_minor",
-                    "ow_swapped_02,entrance_shuffle_lite"
+                    "ow_swapped_02,retro_mode_on,pool_cavepot_off,entrance_shuffle_minor",
+                    "ow_swapped_02,retro_mode_on,pool_cavepot_off,entrance_shuffle_lite"
                 ]
             }
         ]
@@ -479,8 +510,33 @@
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
                 "item_count": 1,
                 "hosted_item": "ow_dm_west_bottom"
+            },
+            {
+                "name": "West Pots",
+                "access_rules": [
+                    "ow_swapped_43",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 2
+            },
+            {
+                "name": "Dark Pots",
+                "access_rules": [
+                    "ow_swapped_43,[lamp]",
+                    "pearl,[lamp]",
+                    "mirror,[pearl],[lamp]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 4
             }
         ],
         "map_locations": [
@@ -492,11 +548,35 @@
                 "restrict_visibility_rules": [ "ow_swapped_43,entrance_shuffle_all" ]
             },
             {
+                "map": "lightworld",
+                "x": 902,
+                "y": 454,
+                "restrict_visibility_rules": [ "ow_swapped_43,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1075,
+                "y": 333,
+                "restrict_visibility_rules": [ "ow_swapped_43,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
                 "map": "darkworld",
                 "x": 902,
                 "y": 460,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_swapped_03,entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 902,
+                "y": 454,
+                "restrict_visibility_rules": [ "ow_swapped_03,entrance_shuffle_minor,pool_cavepot_on" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1075,
+                "y": 333,
+                "restrict_visibility_rules": [ "ow_swapped_03,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -762,9 +842,20 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,retro_mode_on,pool_cavepot_off",
+                    "entrance_shuffle_lite,retro_mode_on,pool_cavepot_off"
                 ],
+                "item_count": 1
+            },
+            {
+                "name": "Pot",
+                "access_rules": [
+                    "ow_swapped_45,hookshot",
+                    "pearl,hookshot"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
                 "item_count": 1
             },
             {
@@ -772,6 +863,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -787,10 +879,13 @@
                 "x": 1692,
                 "y": 315,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_45,entrance_shuffle_crossed",
-                    "ow_swapped_45,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_all" ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1676,
+                "y": 315,
+                "restrict_visibility_rules": [ "ow_swapped_45,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "lightworld",
@@ -798,8 +893,8 @@
                 "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_45,pool_shopsanity_off,entrance_shuffle_minor",
-                    "ow_swapped_45,pool_shopsanity_off,entrance_shuffle_lite"
+                    "ow_swapped_45,pool_shopsanity_off,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_45,pool_shopsanity_off,entrance_shuffle_lite,pool_cavepot_off"
                 ]
             },
             {
@@ -808,8 +903,8 @@
                 "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_45,pool_shopsanity_on,entrance_shuffle_minor",
-                    "ow_swapped_45,pool_shopsanity_on,entrance_shuffle_lite"
+                    "ow_swapped_45,pool_shopsanity_on,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_45,pool_shopsanity_on,entrance_shuffle_lite,pool_cavepot_off"
                 ]
             },
             {
@@ -817,10 +912,13 @@
                 "x": 1692,
                 "y": 315,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_05,entrance_shuffle_crossed",
-                    "ow_swapped_05,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_all" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1676,
+                "y": 315,
+                "restrict_visibility_rules": [ "ow_swapped_05,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
@@ -828,8 +926,8 @@
                 "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_05,pool_shopsanity_off,entrance_shuffle_minor",
-                    "ow_swapped_05,pool_shopsanity_off,entrance_shuffle_lite"
+                    "ow_swapped_05,pool_shopsanity_off,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_05,pool_shopsanity_off,entrance_shuffle_lite,pool_cavepot_off"
                 ]
             },
             {
@@ -838,8 +936,8 @@
                 "y": 291,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_05,pool_shopsanity_on,entrance_shuffle_minor",
-                    "ow_swapped_05,pool_shopsanity_on,entrance_shuffle_lite"
+                    "ow_swapped_05,pool_shopsanity_on,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_05,pool_shopsanity_on,entrance_shuffle_lite,pool_cavepot_off"
                 ]
             }
         ]
@@ -1500,16 +1598,29 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 2
             },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -1525,10 +1636,7 @@
                 "x": 100,
                 "y": 944,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_crossed",
-                    "ow_swapped_58,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -1536,19 +1644,22 @@
                 "y": 944,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_minor",
-                    "ow_swapped_58,entrance_shuffle_lite"
+                    "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "ow_swapped_58,entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 100,
+                "y": 944,
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 100,
                 "y": 944,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_crossed",
-                    "ow_swapped_18,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -1556,9 +1667,15 @@
                 "y": 944,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_minor",
-                    "ow_swapped_18,entrance_shuffle_lite"
+                    "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "ow_swapped_18,entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 100,
+                "y": 944,
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -1669,9 +1786,21 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
+                "item_count": 1
+            },
+            {
+                "name": "Pot",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "mirror,[pearl]"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
                 "item_count": 1
             },
             {
@@ -1679,6 +1808,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -1694,10 +1824,7 @@
                 "x": 415,
                 "y": 956,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_crossed",
-                    "ow_swapped_58,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -1705,19 +1832,22 @@
                 "y": 956,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_minor",
-                    "ow_swapped_58,entrance_shuffle_lite"
+                    "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_58,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 415,
+                "y": 956,
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 415,
                 "y": 956,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_crossed",
-                    "ow_swapped_18,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -1725,9 +1855,15 @@
                 "y": 956,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_minor",
-                    "ow_swapped_18,entrance_shuffle_lite"
+                    "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_18,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 415,
+                "y": 956,
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -1885,16 +2021,24 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pot",
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 9
             },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -1910,10 +2054,7 @@
                 "x": 56,
                 "y": 1195,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_crossed",
-                    "ow_swapped_58,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -1921,19 +2062,22 @@
                 "y": 1195,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_minor",
-                    "ow_swapped_58,entrance_shuffle_lite"
+                    "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_58,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 56,
+                "y": 1175,
+                "restrict_visibility_rules": [ "ow_swapped_58,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 56,
                 "y": 1195,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_crossed",
-                    "ow_swapped_18,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -1941,9 +2085,15 @@
                 "y": 1195,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_minor",
-                    "ow_swapped_18,entrance_shuffle_lite"
+                    "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_18,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 56,
+                "y": 1175,
+                "restrict_visibility_rules": [ "ow_swapped_18,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -1991,6 +2141,11 @@
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
+                "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
+                    "entrance_shuffle_crossed",
+                    "entrance_shuffle_insanity"
+                ],
                 "item_count": 1,
                 "hosted_item": "ow_kakariko"
             }
@@ -2001,20 +2156,14 @@
                 "x": 322,
                 "y": 1201,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_58,entrance_shuffle_crossed",
-                    "ow_swapped_58,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
             },
             {
                 "map": "darkworld",
                 "x": 322,
                 "y": 1201,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_18,entrance_shuffle_crossed",
-                    "ow_swapped_18,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
         ]
     },
@@ -3530,10 +3679,18 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [ "lift1" ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 4
             },
             {
                 "name": "Entrance",
@@ -3541,6 +3698,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -3556,10 +3714,7 @@
                 "x": 1822,
                 "y": 1602,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_77,entrance_shuffle_crossed",
-                    "ow_swapped_77,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_77,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -3567,19 +3722,22 @@
                 "y": 1602,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_77,entrance_shuffle_minor",
-                    "ow_swapped_77,entrance_shuffle_lite"
+                    "ow_swapped_77,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_77,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1612,
+                "restrict_visibility_rules": [ "ow_swapped_77,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 1822,
                 "y": 1602,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_37,entrance_shuffle_crossed",
-                    "ow_swapped_37,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_37,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -3587,9 +3745,15 @@
                 "y": 1602,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_37,entrance_shuffle_minor",
-                    "ow_swapped_37,entrance_shuffle_lite"
+                    "ow_swapped_37,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_37,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1612,
+                "restrict_visibility_rules": [ "ow_swapped_37,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -3680,10 +3844,18 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,pool_cavepot_off,retro_mode_on",
+                    "entrance_shuffle_lite,pool_cavepot_off,retro_mode_on"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [ "lift1" ],
+                "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 10
             },
             {
                 "name": "Entrance",
@@ -3691,6 +3863,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -3706,10 +3879,7 @@
                 "x": 625,
                 "y": 1920,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_7a,entrance_shuffle_crossed",
-                    "ow_swapped_7a,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_7a,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -3717,19 +3887,22 @@
                 "y": 1920,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_7a,entrance_shuffle_minor",
-                    "ow_swapped_7a,entrance_shuffle_lite"
+                    "ow_swapped_7a,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_7a,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 625,
+                "y": 1920,
+                "restrict_visibility_rules": [ "ow_swapped_7a,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "darkworld",
                 "x": 625,
                 "y": 1920,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_3a,entrance_shuffle_crossed",
-                    "ow_swapped_3a,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_3a,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -3737,9 +3910,15 @@
                 "y": 1920,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_3a,entrance_shuffle_minor",
-                    "ow_swapped_3a,entrance_shuffle_lite"
+                    "ow_swapped_3a,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_3a,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 625,
+                "y": 1920,
+                "restrict_visibility_rules": [ "ow_swapped_3a,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -5237,16 +5416,28 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,retro_mode_on,pool_cavepot_off",
+                    "entrance_shuffle_lite,retro_mode_on,pool_cavepot_off"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_1e",
+                    "pearl"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 4
             },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -5262,10 +5453,7 @@
                 "x": 1706,
                 "y": 1008,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_5e,entrance_shuffle_crossed",
-                    "ow_swapped_5e,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_5e,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -5273,19 +5461,22 @@
                 "y": 1008,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_5e,entrance_shuffle_minor",
-                    "ow_swapped_5e,entrance_shuffle_lite"
+                    "ow_swapped_5e,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_5e,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1706,
+                "y": 1008,
+                "restrict_visibility_rules": [ "ow_swapped_5e,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "lightworld",
                 "x": 1706,
                 "y": 1008,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_1e,entrance_shuffle_crossed",
-                    "ow_swapped_1e,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_1e,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -5293,9 +5484,15 @@
                 "y": 1008,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_1e,entrance_shuffle_minor",
-                    "ow_swapped_1e,entrance_shuffle_lite"
+                    "ow_swapped_1e,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_1e,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1706,
+                "y": 1008,
+                "restrict_visibility_rules": [ "ow_swapped_1e,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -5861,16 +6058,28 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,retro_mode_on,pool_cavepot_off",
+                    "entrance_shuffle_lite,retro_mode_on,pool_cavepot_off"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_30",
+                    "pearl"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 6
             },
             {
                 "name": "Entrance",
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -5886,10 +6095,7 @@
                 "x": 400,
                 "y": 1655,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_70,entrance_shuffle_crossed",
-                    "ow_swapped_70,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_70,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -5897,19 +6103,22 @@
                 "y": 1655,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_70,entrance_shuffle_minor",
-                    "ow_swapped_70,entrance_shuffle_lite"
+                    "ow_swapped_70,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_70,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 400,
+                "y": 1655,
+                "restrict_visibility_rules": [ "ow_swapped_70,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "lightworld",
                 "x": 400,
                 "y": 1655,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_30,entrance_shuffle_crossed",
-                    "ow_swapped_30,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_30,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -5917,9 +6126,15 @@
                 "y": 1655,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_30,entrance_shuffle_minor",
-                    "ow_swapped_30,entrance_shuffle_lite"
+                    "ow_swapped_30,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_30,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 400,
+                "y": 1655,
+                "restrict_visibility_rules": [ "ow_swapped_30,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
@@ -6193,10 +6408,18 @@
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
-                    "entrance_shuffle_minor,retro_mode_on",
-                    "entrance_shuffle_lite,retro_mode_on"
+                    "entrance_shuffle_minor,retro_mode_on,pool_cavepot_off",
+                    "entrance_shuffle_lite,retro_mode_on,pool_cavepot_off"
                 ],
                 "item_count": 1
+            },
+            {
+                "name": "Pots",
+                "access_rules": [ "lift1" ],
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
+                "item_count": 4
             },
             {
                 "name": "Entrance",
@@ -6204,6 +6427,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_cavepot_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -6219,10 +6443,7 @@
                 "x": 1822,
                 "y": 1602,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_77,entrance_shuffle_crossed",
-                    "ow_swapped_77,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_77,entrance_shuffle_all" ]
             },
             {
                 "map": "darkworld",
@@ -6230,19 +6451,22 @@
                 "y": 1602,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_77,entrance_shuffle_minor",
-                    "ow_swapped_77,entrance_shuffle_lite"
+                    "ow_swapped_77,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_77,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1822,
+                "y": 1602,
+                "restrict_visibility_rules": [ "ow_swapped_77,entrance_shuffle_minor,pool_cavepot_on" ]
             },
             {
                 "map": "lightworld",
                 "x": 1822,
                 "y": 1602,
                 "size": 64,
-                "restrict_visibility_rules": [
-                    "ow_swapped_37,entrance_shuffle_crossed",
-                    "ow_swapped_37,entrance_shuffle_insanity"
-                ]
+                "restrict_visibility_rules": [ "ow_swapped_37,entrance_shuffle_all" ]
             },
             {
                 "map": "lightworld",
@@ -6250,9 +6474,15 @@
                 "y": 1602,
                 "size": 48,
                 "restrict_visibility_rules": [
-                    "ow_swapped_37,entrance_shuffle_minor",
-                    "ow_swapped_37,entrance_shuffle_lite"
+                    "ow_swapped_37,entrance_shuffle_minor,pool_cavepot_off",
+                    "ow_swapped_37,entrance_shuffle_lite,pool_cavepot_off"
                 ]
+            },
+            {
+                "map": "lightworld",
+                "x": 1822,
+                "y": 1602,
+                "restrict_visibility_rules": [ "ow_swapped_37,entrance_shuffle_minor,pool_cavepot_on" ]
             }
         ]
     },
