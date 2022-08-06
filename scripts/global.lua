@@ -340,9 +340,7 @@ function updateChests()
     end
 
     for i = 1, #DATA.DungeonList do
-        local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
         local key = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_smallkey")
-        
         if OBJ_DOORSHUFFLE:getState() == 2 then
             key.MaxCount = 999
             key.Icon = ImageReference:FromPackRelativePath("images/items/smallkey.png", key.AcquiredCount > 0 and "" or "@disabled")
@@ -350,10 +348,6 @@ function updateChests()
             if (OBJ_POOL_ENEMYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
                 local bk = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey")
                 bk.Icon = ImageReference:FromPackRelativePath("images/items/bigkey.png", bk.Active and "" or "@disabled")
-            end
-            
-            if item.MaxCount ~= 999 then
-                item.MaxCount = 999
             end
         else
             local newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
@@ -371,7 +365,14 @@ function updateChests()
             elseif (OBJ_POOL_ENEMYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
                 Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey").Icon = ""
             end
+        end
 
+        local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
+        if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
+            if item.MaxCount ~= 999 then
+                item.MaxCount = 999
+            end
+        else
             newMax = DATA.DungeonData[DATA.DungeonList[i]][5]
             if OBJ_POOL_ENEMYDROP:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7] + (DATA.DungeonList[i] == "hc" and 1 or 0)

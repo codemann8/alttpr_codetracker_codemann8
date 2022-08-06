@@ -251,7 +251,7 @@ function updateDungeonIdFromMemorySegment(segment)
         end
 
         --Auto-pin Dungeon Chests
-        if Tracker.ActiveVariantUID == "full_tracker" and CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 then
+        if Tracker.ActiveVariantUID == "full_tracker" and CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2 then
             for i = 0, 26, 2 do
                 Tracker:FindObjectForCode(DATA.DungeonData[DATA.DungeonIdMap[i]][1]).Pinned = DATA.DungeonIdMap[i] == DATA.DungeonIdMap[CACHE.DUNGEON]
             end
@@ -1352,7 +1352,7 @@ function updateDungeonKeysFromMemorySegment(segment)
 
     --Collected Chests/Items In Dungeons
     if OBJ_RACEMODE:getState() == 0 then
-        if OBJ_DOORSHUFFLE:getState() == 2 then
+        if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
             if INSTANCE.NEW_SRAM_SYSTEM then
                 for dungeonPrefix, data in pairs(DATA.DungeonData) do
                     updateChestCountFromDungeon(segment, dungeonPrefix, 0x7ef4c0 + data[4])
@@ -1381,7 +1381,7 @@ function updateDungeonKeysFromMemorySegment(segment)
 end
 
 function updateDungeonTotalsFromMemorySegment(segment)
-    if not segment or OBJ_DOORSHUFFLE:getState() < 2 or OBJ_RACEMODE:getState() > 0 or not isInGame() then
+    if not segment or (OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2) or OBJ_RACEMODE:getState() > 0 or not isInGame() then
         return false
     end
     

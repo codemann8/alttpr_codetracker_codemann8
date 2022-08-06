@@ -56,7 +56,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 if value > 0 and INSTANCE.COMPASS_MODE & 0x02 > 0 then
                     updateDungeonTotal(dungeonPrefix, 0xffff)
                 end
-            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 then
+            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2 then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
                 local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
                 local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
@@ -176,7 +176,7 @@ end
 function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlots)
     local item = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
     if item then
-        if OBJ_DOORSHUFFLE:getState() < 2 then
+        if OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2 then
             local clearedCount = 0
             if segment then
                 for i, slot in ipairs(roomSlots) do
