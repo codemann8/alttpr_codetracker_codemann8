@@ -229,6 +229,12 @@ function loadModes()
     PoolMode(0, "Bonk Drop"):linkSurrogate(PoolMode(1, "Bonk Drop"))
     OBJ_POOL_KEYDROP = PoolMode(0, "Key Drop")
     OBJ_POOL_KEYDROP:linkSurrogate(PoolMode(1, "Key Drop"):linkSurrogate(PoolMode(2, "Key Drop"):linkSurrogate(OBJ_POOL_KEYDROP, true), true), true)
+    OBJ_POOL_ENEMYDROP = PoolMode(0, "Enemy Drop")
+    OBJ_POOL_ENEMYDROP:linkSurrogate(PoolMode(1, "Enemy Drop"):linkSurrogate(PoolMode(2, "Enemy Drop"):linkSurrogate(OBJ_POOL_ENEMYDROP, true), true), true)
+    OBJ_POOL_DUNGEONPOT = PoolPotMode(0, "Dungeon Pot")
+    OBJ_POOL_DUNGEONPOT:linkSurrogate(PoolPotMode(1, "Dungeon Pot"):linkSurrogate(PoolPotMode(2, "Dungeon Pot"):linkSurrogate(OBJ_POOL_DUNGEONPOT, true), true), true)
+    OBJ_POOL_CAVEPOT = PoolPotMode(0, "Cave Pot")
+    OBJ_POOL_CAVEPOT:linkSurrogate(PoolPotMode(2, "Cave Pot"):linkSurrogate(OBJ_POOL_CAVEPOT, true), true)
     OBJ_GLITCHMODE = GlitchMode(false):linkSurrogate(GlitchMode(true))
     OBJ_RACEMODE = RaceMode(false):linkSurrogate(RaceMode(true))
 
@@ -341,7 +347,7 @@ function updateChests()
             key.MaxCount = 999
             key.Icon = ImageReference:FromPackRelativePath("images/items/smallkey.png", key.AcquiredCount > 0 and "" or "@disabled")
             
-            if (OBJ_POOL_KEYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
+            if (OBJ_POOL_ENEMYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
                 local bk = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey")
                 bk.Icon = ImageReference:FromPackRelativePath("images/items/bigkey.png", bk.Active and "" or "@disabled")
             end
@@ -351,21 +357,27 @@ function updateChests()
             end
         else
             local newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
-            if OBJ_POOL_KEYDROP:getState() > 0 then
+            if OBJ_POOL_ENEMYDROP:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7]
+            end
+            if OBJ_POOL_DUNGEONPOT:getState() > 0 then
+                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
             end
             key.MaxCount = newMax
 
-            if OBJ_POOL_KEYDROP:getState() > 0 and DATA.DungeonList[i] == "hc" then
+            if OBJ_POOL_ENEMYDROP:getState() > 0 and DATA.DungeonList[i] == "hc" then
                 local bk = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey")
                 bk.Icon = ImageReference:FromPackRelativePath("images/items/bigkey.png", bk.Active and "" or "@disabled")
-            elseif (OBJ_POOL_KEYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
+            elseif (OBJ_POOL_ENEMYDROP:getState() == 0 and DATA.DungeonList[i] == "hc") or DATA.DungeonList[i] == "at" then
                 Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey").Icon = ""
             end
 
             newMax = DATA.DungeonData[DATA.DungeonList[i]][5]
-            if OBJ_POOL_KEYDROP:getState() > 0 then
+            if OBJ_POOL_ENEMYDROP:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7] + (DATA.DungeonList[i] == "hc" and 1 or 0)
+            end
+            if OBJ_POOL_DUNGEONPOT:getState() > 0 then
+                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
             end
 
             if OBJ_KEYMAP:getState() == 0 and DATA.DungeonList[i] ~= "at" then
@@ -377,7 +389,7 @@ function updateChests()
             if OBJ_KEYSMALL:getState() == 0 and key then
                 newMax = newMax - key.MaxCount
             end
-            if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_KEYDROP:getState() > 0) then
+            if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
                 newMax = newMax - 1
             end
             item.MaxCount = newMax

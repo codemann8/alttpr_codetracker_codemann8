@@ -81,9 +81,18 @@
                                             "margin": 0,
                                             "item_margin": 0,
                                             "item_width": 40,
-                                            "item_height": 40,
+                                            "item_height": 20,
                                             "rows": [
-                                                [ "pool_keydrop_base" ]
+                                                [ "pool_enemydrop_base" ]
+                                            ]
+                                        },
+                                        {
+                                            "type": "itemgrid",
+                                            "margin": 0,
+                                            "item_margin": 0,
+                                            "item_size": 20,
+                                            "rows": [
+                                                [ "pool_dungeonpot_base", "pool_cavepot_base" ]
                                             ]
                                         },
                                         {

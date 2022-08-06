@@ -87,24 +87,22 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     print(dungeonPrefix .. " Chests:", chest.AcquiredCount)
                 end
 
-                if OBJ_POOL_KEYDROP:getState() > 0 then
-                    local addedKeys = 0
-                    if potkey then
-                        addedKeys = potkey.AcquiredCount
+                local addedKeys = 0
+                if OBJ_POOL_ENEMYDROP:getState() > 0 and enemykey then
+                    addedKeys = addedKeys + enemykey.AcquiredCount
+                    if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
+                        addedKeys = addedKeys - 1
                     end
-                    if enemykey then
-                        addedKeys = addedKeys + enemykey.AcquiredCount
-                        if OBJ_KEYBIG:getState() == 0 and dungeonPrefix == "hc" and bigkey.Active then
-                            addedKeys = addedKeys - 1
-                        end
-                    end
-                    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print(dungeonPrefix .. " Key Drops:", addedKeys)
-                    end
-                    item.RemainingCount = math.max(item.MaxCount - ((chest.AcquiredCount - dungeonItems) + addedKeys), 0)
-                else
-                    item.RemainingCount = math.max(item.MaxCount - (chest.AcquiredCount - dungeonItems), 0)
                 end
+                if OBJ_POOL_DUNGEONPOT:getState() > 0  and potkey then
+                    addedKeys = addedKeys + potkey.AcquiredCount
+                end
+
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and addedKeys > 0 then
+                    print(dungeonPrefix .. " Key Drops:", addedKeys)
+                end
+
+                item.RemainingCount = math.max(item.MaxCount - ((chest.AcquiredCount - dungeonItems) + addedKeys), 0)
 
                 if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
                     print(dungeonPrefix .. " Items:", item.CollectedCount)
@@ -231,16 +229,19 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
             currentKeys = segment:ReadUInt8(address)
         end
 
+        local enemyKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
         local potKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-        if potKeys and OBJ_POOL_KEYDROP:getState() == 0 then
-            local offsetKey = 0
+        local addedKeys = 0
+        if enemyKeys and OBJ_POOL_ENEMYDROP:getState() == 0 then
+            addedKeys = addedKeys + potKeys.AcquiredCount
             if dungeonPrefix == "hc" and Tracker:FindObjectForCode("hc_bigkey").Active then
-                offsetKey = 1
+                addedKeys = addedKeys - 1
             end
-            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - (potKeys.AcquiredCount - offsetKey)
-        else
-            chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount
         end
+        if potKeys and OBJ_POOL_DUNGEONPOT:getState() == 0 then
+            addedKeys = addedKeys + potKeys.AcquiredCount
+        end
+        chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - addedKeys
     end
 end
 

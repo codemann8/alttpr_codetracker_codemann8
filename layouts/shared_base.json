@@ -156,10 +156,10 @@
                                         "type": "itemgrid",
                                         "margin": 0,
                                         "item_margin": 0,
-                                        "item_width": 192,
+                                        "item_width": 64,
                                         "item_height": 24,
                                         "rows": [
-                                            [ "pool_keydrop" ]
+                                            [ "pool_enemydrop", "pool_dungeonpot", "pool_cavepot" ]
                                         ]
                                     }
                                 ]
@@ -339,8 +339,7 @@
                         "type": "itemgrid",
                         "margin": "1,0",
                         "item_margin": 0,
-                        "item_width": 20,
-                        "item_height": 20,
+                        "item_size": 20,
                         "rows": [
                             [ "pool_shopsanity_small", "pool_bonkdrop_small" ]
                         ]
@@ -349,10 +348,9 @@
                         "type": "itemgrid",
                         "margin": "1,0",
                         "item_margin": 0,
-                        "item_width": 40,
-                        "item_height": 20,
+                        "item_size": 20,
                         "rows": [
-                            [ "pool_keydrop_small" ]
+                            [ "pool_enemydrop_small", "pool_dungeonpot_small" ]
                         ]
                     }
                 ]
@@ -411,8 +409,7 @@
                                 "type": "itemgrid",
                                 "margin": "1,0",
                                 "item_margin": 0,
-                                "item_width": 20,
-                                "item_height": 20,
+                                "item_size": 20,
                                 "rows": [
                                     [ "pool_shopsanity_small", "pool_bonkdrop_small" ]
                                 ]
@@ -421,10 +418,9 @@
                                 "type": "itemgrid",
                                 "margin": "1,0",
                                 "item_margin": 0,
-                                "item_width": 40,
-                                "item_height": 20,
+                                "item_size": 20,
                                 "rows": [
-                                    [ "pool_keydrop_small" ]
+                                    [ "pool_enemydrop_small", "pool_dungeonpot_small" ]
                                 ]
                             }
                         ]

@@ -1080,7 +1080,7 @@ function updateRoomsFromMemorySegment(segment)
         end
 
         --Key Drop Locations
-        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
+        if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
             if not INSTANCE.NEW_POTDROP_SYSTEM then
                 i = 1
                 while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
@@ -1090,7 +1090,10 @@ function updateRoomsFromMemorySegment(segment)
                         i = i + 1
                     end
                 end
-
+            end
+        end
+        if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
+            if not INSTANCE.NEW_POTDROP_SYSTEM then
                 i = 1
                 while i <= #INSTANCE.MEMORY.DungeonPotDrops do
                     if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i]) then
@@ -1170,7 +1173,7 @@ function updateRoomEnemiesFromMemorySegment(segment)
 
     if OBJ_RACEMODE:getState() == 0 then
         --Enemy Key Drop Locations
-        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
+        if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
                 if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i], 0x7850) then
@@ -1206,7 +1209,7 @@ function updateRoomPotsFromMemorySegment(segment)
 
     if OBJ_RACEMODE:getState() == 0 then
         --Key Drop Locations
-        if OBJ_POOL_KEYDROP and OBJ_POOL_KEYDROP:getState() > 0 then
+        if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonPotDrops do
                 if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7600) then

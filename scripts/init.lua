@@ -45,6 +45,7 @@ if Tracker.ActiveVariantUID ~= "vanilla" then
     ScriptHost:LoadScript("scripts/custom/modes/owmixedmode.lua")
     ScriptHost:LoadScript("scripts/custom/modes/retromode.lua")
     ScriptHost:LoadScript("scripts/custom/modes/poolmode.lua")
+    ScriptHost:LoadScript("scripts/custom/modes/poolpotmode.lua")
     ScriptHost:LoadScript("scripts/custom/modes/glitchmode.lua")
     ScriptHost:LoadScript("scripts/custom/modes/racemode.lua")
     ScriptHost:LoadScript("scripts/custom/modes/gtcrystalreq.lua")
