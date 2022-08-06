@@ -1145,8 +1145,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
