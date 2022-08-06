@@ -1457,7 +1457,7 @@ function updateDungeonCrystalFromMemorySegment(segment)
     local crystalData = segment:ReadUInt8(0x7ef37a)
 
     local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
-    if dungeon and (not dungeon.Active and dungeon.CurrentStage == 0) then
+    if dungeon and dungeon.CurrentStage == 0 then
         local diffData = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ crystalData
         if numberOfSetBits(diffData) == 1 and diffData & crystalData > 0 then
             dungeon.CurrentStage = 1
