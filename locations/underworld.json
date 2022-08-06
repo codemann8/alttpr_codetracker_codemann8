@@ -212,8 +212,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
@@ -585,8 +585,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "entrance_shuffle_minor,pool_shopsanity_off,retro_mode_on",
                     "entrance_shuffle_minor,pool_shopsanity_off,keysanity_smallkey_universal"
@@ -975,8 +975,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "entrance_shuffle_minor,pool_shopsanity_off,retro_mode_on",
                     "entrance_shuffle_minor,pool_shopsanity_off,keysanity_smallkey_universal"
@@ -1331,8 +1331,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
@@ -1393,8 +1393,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
@@ -1516,8 +1516,8 @@
                     "hammer",
                     "ow_swapped_18,@OW Kakariko Village,pearl,mirror"
                 ],
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
@@ -1599,8 +1599,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
@@ -1834,8 +1834,8 @@
         "sections": [
             {
                 "name": "Shop",
-                "chest_unopened_img": "images/icons/pool/potionshop.png",
-                "chest_opened_img": "images/icons/pool/potionshop.png",
+                "chest_unopened_img": "images/icons/entrances/potionshop.png",
+                "chest_opened_img": "images/icons/entrances/potionshop.png",
                 "visibility_rules": [
                     "pool_shopsanity_off,retro_mode_on",
                     "pool_shopsanity_off,keysanity_smallkey_universal"
