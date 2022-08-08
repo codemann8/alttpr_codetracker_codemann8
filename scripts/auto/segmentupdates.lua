@@ -1,5 +1,7 @@
 function updateTitleFromMemorySegment(segment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
+        INSTANCE.VERSION_MAJOR = segment:ReadUInt16(0x701ffc)
+        INSTANCE.VERSION_MINOR = segment:ReadUInt16(0x701ffe)
         local value = segment:ReadUInt8(0x702000)
         if value > 0 then
             value = string.char(segment:ReadUInt8(0x702013)) == 'O' and 1 or 0
@@ -9,7 +11,7 @@ function updateTitleFromMemorySegment(segment)
                 OBJ_WORLDSTATE:setProperty("version", value)
             end
 
-            INSTANCE.NEW_SRAM_SYSTEM = AutoTracker:ReadU16(0x701ffe, 0) > 1
+            INSTANCE.NEW_SRAM_SYSTEM = INSTANCE.VERSION_MINOR > 1
             if INSTANCE.NEW_SRAM_SYSTEM and STATUS.AutotrackerInGame then
                 SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
                 SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
@@ -1168,7 +1170,7 @@ function updateRoomEnemiesFromMemorySegment(segment)
     --Enemy Keys
     for dungeonPrefix, data in pairs(DATA.MEMORY.NewDropData) do
         if data[1] then
-            updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_enemykey", data[1], 0x7850)
+            updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_enemykey", data[1], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268)
         end
     end
 
@@ -1177,8 +1179,8 @@ function updateRoomEnemiesFromMemorySegment(segment)
         if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i], 0x7850) then
                     table.remove(INSTANCE.MEMORY.DungeonEnemyDrops, i)
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268) then
                 else
                     i = i + 1
                 end
@@ -1208,7 +1210,7 @@ function updateRoomPotsFromMemorySegment(segment)
     --Pot Keys
     for dungeonPrefix, data in pairs(DATA.MEMORY.NewDropData) do
         if data[2] then
-            updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_potkey", data[2], 0x7600)
+            updateDoorKeyCountFromRoomSlotList(segment, dungeonPrefix .. "_potkey", data[2], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018)
         end
     end
 
@@ -1217,8 +1219,8 @@ function updateRoomPotsFromMemorySegment(segment)
         if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonPotDrops do
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7600) then
                     table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
                 else
                     i = i + 1
                 end

@@ -103,8 +103,8 @@ function initMemoryWatch()
     end
     SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
     if INSTANCE.NEW_POTDROP_SYSTEM then
-        SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
-        SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
+        SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6600 or 0x7f6018, 0x250, updateRoomPotsFromMemorySegment)
+        SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
