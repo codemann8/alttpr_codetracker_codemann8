@@ -366,8 +366,20 @@ function updateChests()
             end
         end
 
+        if key.MaxCount == 0 or OBJ_KEYSMALL:getState() == 2 then
+            key.Icon = ""
+            key.BadgeText = nil
+            key.IgnoreUserInput = true
+        else
+            if key.MaxCount > 0 then
+                key.DisplayAsFractionOfMax = true
+                key.DisplayAsFractionOfMax = false
+            end
+            key.IgnoreUserInput = false
+        end
+
         local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
-        if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
+        if shouldChestCountUp() then
             if item.MaxCount ~= 999 then
                 item.MaxCount = 999
             end
@@ -379,32 +391,24 @@ function updateChests()
             if OBJ_POOL_DUNGEONPOT:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
             end
-
-            if OBJ_KEYMAP:getState() == 0 and DATA.DungeonList[i] ~= "at" then
-                newMax = newMax - 1
-            end
-            if OBJ_KEYCOMPASS:getState() == 0 and DATA.DungeonList[i] ~= "hc" and DATA.DungeonList[i] ~= "at" then
-                newMax = newMax - 1
-            end
-            if OBJ_KEYSMALL:getState() == 0 and key then
-                newMax = newMax - key.MaxCount
-            end
-            if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
-                newMax = newMax - 1
-            end
             item.MaxCount = newMax
         end
 
-        if key.MaxCount == 0 or OBJ_KEYSMALL:getState() == 2 then
-            key.Icon = ""
-            key.BadgeText = nil
-            key.IgnoreUserInput = true
-        else
-            if key.MaxCount > 0 then
-                key.DisplayAsFractionOfMax = true
-                key.DisplayAsFractionOfMax = false
+        if not shouldChestCountUp() or OBJ_DOORSHUFFLE:getState() < 2 then
+            newMax = 0
+            if OBJ_KEYMAP:getState() == 0 and DATA.DungeonList[i] ~= "at" then
+                newMax = newMax + 1
             end
-            key.IgnoreUserInput = false
+            if OBJ_KEYCOMPASS:getState() == 0 and DATA.DungeonList[i] ~= "hc" and DATA.DungeonList[i] ~= "at" then
+                newMax = newMax + 1
+            end
+            if OBJ_KEYSMALL:getState() == 0 and key then
+                newMax = newMax + key.MaxCount
+            end
+            if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
+                newMax = newMax + 1
+            end
+            item.ExemptedCount = newMax
         end
 
         OBJ_DOORDUNGEON:updateIcon()
@@ -733,6 +737,10 @@ function refreshDoorSlots()
             end
         end
     end
+end
+
+function shouldChestCountUp()
+    return OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1
 end
 
 function shouldShowRoom(roomId, xCoord, yCoord)

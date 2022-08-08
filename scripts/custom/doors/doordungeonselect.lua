@@ -16,7 +16,7 @@ function DoorDungeonSelect:getState()
 end
 
 function DoorDungeonSelect:updateIcon()
-    if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
+    if shouldChestCountUp() then
         local item = Tracker:FindObjectForCode(DATA.DungeonList[self:getState()] .. "_item").ItemState
         OBJ_DOORCHEST:setState(item.MaxCount)
         item = Tracker:FindObjectForCode(DATA.DungeonList[self:getState()] .. "_smallkey")
@@ -55,13 +55,13 @@ function DoorDungeonSelect:updateIcon()
 end
 
 function DoorDungeonSelect:onLeftClick()
-    if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
+    if shouldChestCountUp() then
         self:setState((self:getState()) % 13 + 1)
     end
 end
 
 function DoorDungeonSelect:onRightClick()
-    if OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1 then
+    if shouldChestCountUp() then
         self:setState((self:getState() - 2) % 13 + 1)
     end
 end

@@ -17,7 +17,10 @@ function DoorTotalChest:getState()
 end
 
 function DoorTotalChest:isEnabled()
-    return not((OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2) or (self:getProperty("itemType") == "smallkey" and (OBJ_KEYSMALL:getState() == 2 or (OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() > 1))))
+    if self:getProperty("itemType") == "smallkey" then
+        return shouldChestCountUp() and OBJ_KEYSMALL:getState() ~= 2 and OBJ_DOORSHUFFLE:getState() == 2
+    end
+    return shouldChestCountUp()
 end
 
 function DoorTotalChest:updateIcon()
