@@ -36,8 +36,8 @@ function initMemoryWatch()
     INSTANCE.MEMORY.Shops = {}
     INSTANCE.MEMORY.Npc = {}
     INSTANCE.MEMORY.DungeonChests = {}
-    INSTANCE.MEMORY.DungeonEnemyDrops = {}
-    INSTANCE.MEMORY.DungeonPotDrops = {}
+    INSTANCE.MEMORY.DungeonEnemyKeys = {}
+    INSTANCE.MEMORY.DungeonPotKeys = {}
     INSTANCE.MEMORY.Bosses = {}
     INSTANCE.MEMORY.BossLocations = {}
     INSTANCE.MEMORY.Underworld = {}
@@ -55,11 +55,11 @@ function initMemoryWatch()
     for i, v in ipairs(DATA.MEMORY.DungeonChests) do
         INSTANCE.MEMORY.DungeonChests[i] = v
     end
-    for i, v in ipairs(DATA.MEMORY.DungeonEnemyDrops) do
-        INSTANCE.MEMORY.DungeonEnemyDrops[i] = v
+    for i, v in ipairs(DATA.MEMORY.DungeonEnemyKeys) do
+        INSTANCE.MEMORY.DungeonEnemyKeys[i] = v
     end
-    for i, v in ipairs(DATA.MEMORY.DungeonPotDrops) do
-        INSTANCE.MEMORY.DungeonPotDrops[i] = v
+    for i, v in ipairs(DATA.MEMORY.DungeonPotKeys) do
+        INSTANCE.MEMORY.DungeonPotKeys[i] = v
     end
     for i, v in ipairs(DATA.MEMORY.Bosses) do
         INSTANCE.MEMORY.Bosses[i] = v

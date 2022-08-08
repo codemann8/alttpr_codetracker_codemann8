@@ -850,7 +850,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Ganon's Tower/Validation", "@GT Validation/Chest"}, {{77, 4}} }
 }
 
-DATA.MEMORY.DungeonEnemyDrops = {
+DATA.MEMORY.DungeonEnemyKeys = {
     { {"@Hyrule Castle & Escape/Key Guard", "@HC Key Guard/Guard"}, {{114, 10}}, {{114, 15}} },
     { {"@Hyrule Castle & Escape/Boomerang Guard", "@HC Boomerang/Guard"}, {{113, 10}}, {{113, 14}} },
     { {"@Hyrule Castle & Escape/Ball 'N Chain Guard", "@HC Ball 'N Chain/Guard"}, {{128, 10}}, {{128, 13}} },
@@ -874,7 +874,7 @@ DATA.MEMORY.DungeonEnemyDrops = {
     { {"@Ganon's Tower/Mini Helmasaur Key", "@GT Mini Helmasaur/Mini Helmasaur"}, {{61, 10}}, {{61, 13}} }
 }
 
-DATA.MEMORY.DungeonPotDrops = {
+DATA.MEMORY.DungeonPotKeys = {
     { {"@Eastern Palace/Dark Pot Key", "@EP Dark Pot/Pot"}, {{186, 10}}, {{186, 11}} },
     
     { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Pot"}, {{99, 10}}, {{99, 10}} },
@@ -1082,9 +1082,9 @@ function updateRoomsFromMemorySegment(segment)
         if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
             if not INSTANCE.NEW_POTDROP_SYSTEM then
                 i = 1
-                while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i]) then
-                        table.remove(INSTANCE.MEMORY.DungeonEnemyDrops, i)
+                while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i]) then
+                        table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
                     else
                         i = i + 1
                     end
@@ -1094,9 +1094,9 @@ function updateRoomsFromMemorySegment(segment)
         if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
             if not INSTANCE.NEW_POTDROP_SYSTEM then
                 i = 1
-                while i <= #INSTANCE.MEMORY.DungeonPotDrops do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i]) then
-                        table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
+                while i <= #INSTANCE.MEMORY.DungeonPotKeys do
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i]) then
+                        table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
                     else
                         i = i + 1
                     end
@@ -1178,9 +1178,9 @@ function updateRoomEnemiesFromMemorySegment(segment)
         --Enemy Key Drop Locations
         if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
             i = 1
-            while i <= #INSTANCE.MEMORY.DungeonEnemyDrops do
-                    table.remove(INSTANCE.MEMORY.DungeonEnemyDrops, i)
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268) then
+            while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268) then
+                    table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
                 else
                     i = i + 1
                 end
@@ -1218,9 +1218,9 @@ function updateRoomPotsFromMemorySegment(segment)
         --Key Drop Locations
         if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
             i = 1
-            while i <= #INSTANCE.MEMORY.DungeonPotDrops do
-                    table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+            while i <= #INSTANCE.MEMORY.DungeonPotKeys do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+                    table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
                 else
                     i = i + 1
                 end
