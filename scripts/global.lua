@@ -381,9 +381,11 @@ function updateChests()
         end
 
         local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
+        local seenFlags = AutoTracker:ReadU16(0x7ef403, 0)
         if shouldChestCountUp() then
             if item.MaxCount ~= 999 then
                 item.MaxCount = 999
+                updateDungeonTotal(DATA.DungeonList[i], seenFlags)
             end
         else
             newMax = DATA.DungeonData[DATA.DungeonList[i]][5]
