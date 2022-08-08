@@ -654,66 +654,68 @@ function removeGhost(section)
 end
 
 function updateRoomSlots(roomId, forceUpdate)
-    local roomToLoad = roomId
-    if DATA.LinkedRoomSurrogates[roomId] then
-        roomToLoad = DATA.LinkedRoomSurrogates[roomId]
-    end
-    local shouldUpdate = false
-    if roomToLoad > 0 and INSTANCE.DOORSLOTS[roomToLoad] and INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
-        if CONFIG.LAYOUT_ROOM_SLOT_METHOD == 2 then --always have the current room in slot 1
-            local carried = INSTANCE.ROOMSLOTS[1][1]
-            INSTANCE.ROOMSLOTS[1][1] = roomToLoad
-            for r = 2, #INSTANCE.ROOMSLOTS do
-                if INSTANCE.ROOMSLOTS[r][1] == roomToLoad then
-                    INSTANCE.ROOMSLOTS[r][1] = carried
-                    break
-                end
-                local temp = INSTANCE.ROOMSLOTS[r][1]
-                INSTANCE.ROOMSLOTS[r][1] = carried
-                carried = temp
-            end
-            INSTANCE.ROOMCURSORPOSITION = 1
-        elseif CONFIG.LAYOUT_ROOM_SLOT_METHOD == 3 then --always place the next room after the last
-            INSTANCE.ROOMCURSORPOSITION = (INSTANCE.ROOMCURSORPOSITION % 4) + 1
-            INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] = roomToLoad
-        else --method 1, default, prioritize replacing the oldest room
-            local found = false
-            for r = 1, #INSTANCE.ROOMSLOTS do
-                if INSTANCE.ROOMSLOTS[r][1] == roomToLoad then
-                    INSTANCE.ROOMCURSORPOSITION = r
-                    found = true
-                    break
-                end
-            end
-
-            local age = INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][2]
-            for r = 1, #INSTANCE.ROOMSLOTS do
-                if found then
-                    if INSTANCE.ROOMSLOTS[r][2] <= age and INSTANCE.ROOMSLOTS[r][2] ~= 0 then
-                        INSTANCE.ROOMSLOTS[r][2] = (INSTANCE.ROOMSLOTS[r][2] % age) + 1
-                    end
-                else
-                    if INSTANCE.ROOMSLOTS[r][2] == 0 or INSTANCE.ROOMSLOTS[r][2] == 4 then
-                        INSTANCE.ROOMCURSORPOSITION = r
-                        if INSTANCE.ROOMSLOTS[r][2] == 0 then
-                            INSTANCE.ROOMSLOTS[r][2] = 1
-                            break
-                        end
-                        INSTANCE.ROOMSLOTS[r][2] = 1
-                    else
-                        INSTANCE.ROOMSLOTS[r][2] = INSTANCE.ROOMSLOTS[r][2] + 1
-                    end
-                end
-            end
-
-            if not found then
-                INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] = roomToLoad
-            end
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        local roomToLoad = roomId
+        if DATA.LinkedRoomSurrogates[roomId] then
+            roomToLoad = DATA.LinkedRoomSurrogates[roomId]
         end
-        shouldUpdate = true
-    end
-    if shouldUpdate or forceUpdate then
-        refreshDoorSlots()
+        local shouldUpdate = false
+        if roomToLoad > 0 and INSTANCE.DOORSLOTS[roomToLoad] and INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] ~= roomToLoad and shouldShowRoom(roomToLoad, AutoTracker:ReadU16(0x7e0022, 0), AutoTracker:ReadU16(0x7e0020, 0)) then
+            if CONFIG.LAYOUT_ROOM_SLOT_METHOD == 2 then --always have the current room in slot 1
+                local carried = INSTANCE.ROOMSLOTS[1][1]
+                INSTANCE.ROOMSLOTS[1][1] = roomToLoad
+                for r = 2, #INSTANCE.ROOMSLOTS do
+                    if INSTANCE.ROOMSLOTS[r][1] == roomToLoad then
+                        INSTANCE.ROOMSLOTS[r][1] = carried
+                        break
+                    end
+                    local temp = INSTANCE.ROOMSLOTS[r][1]
+                    INSTANCE.ROOMSLOTS[r][1] = carried
+                    carried = temp
+                end
+                INSTANCE.ROOMCURSORPOSITION = 1
+            elseif CONFIG.LAYOUT_ROOM_SLOT_METHOD == 3 then --always place the next room after the last
+                INSTANCE.ROOMCURSORPOSITION = (INSTANCE.ROOMCURSORPOSITION % 4) + 1
+                INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] = roomToLoad
+            else --method 1, default, prioritize replacing the oldest room
+                local found = false
+                for r = 1, #INSTANCE.ROOMSLOTS do
+                    if INSTANCE.ROOMSLOTS[r][1] == roomToLoad then
+                        INSTANCE.ROOMCURSORPOSITION = r
+                        found = true
+                        break
+                    end
+                end
+
+                local age = INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][2]
+                for r = 1, #INSTANCE.ROOMSLOTS do
+                    if found then
+                        if INSTANCE.ROOMSLOTS[r][2] <= age and INSTANCE.ROOMSLOTS[r][2] ~= 0 then
+                            INSTANCE.ROOMSLOTS[r][2] = (INSTANCE.ROOMSLOTS[r][2] % age) + 1
+                        end
+                    else
+                        if INSTANCE.ROOMSLOTS[r][2] == 0 or INSTANCE.ROOMSLOTS[r][2] == 4 then
+                            INSTANCE.ROOMCURSORPOSITION = r
+                            if INSTANCE.ROOMSLOTS[r][2] == 0 then
+                                INSTANCE.ROOMSLOTS[r][2] = 1
+                                break
+                            end
+                            INSTANCE.ROOMSLOTS[r][2] = 1
+                        else
+                            INSTANCE.ROOMSLOTS[r][2] = INSTANCE.ROOMSLOTS[r][2] + 1
+                        end
+                    end
+                end
+
+                if not found then
+                    INSTANCE.ROOMSLOTS[INSTANCE.ROOMCURSORPOSITION][1] = roomToLoad
+                end
+            end
+            shouldUpdate = true
+        end
+        if shouldUpdate or forceUpdate then
+            refreshDoorSlots()
+        end
     end
 end
 
