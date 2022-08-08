@@ -128,7 +128,13 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offs
         local clearedCount = 0
         for i, slot in ipairs(roomSlots) do
             local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
-
+            
+            if CACHE.ROOM == slot[1] and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                if not (string.sub(doorKeyRef, -5) == "_door" and INSTANCE.NEW_KEY_SYSTEM) then
+                    print(doorKeyRef, string.format("0x%04x", roomData), slot[2])
+                end
+            end
+            
             if (roomData & (1 << slot[2])) ~= 0 then
                 clearedCount = clearedCount + 1
             elseif #slot > 2 then
