@@ -23,7 +23,6 @@ INSTANCE.NEW_POTDROP_SYSTEM = false
 INSTANCE.NEW_SRAM_SYSTEM = false
 
 INSTANCE.DUNGEON_PRIZE_DATA = 0x0000
-INSTANCE.COMPASS_MODE = 0x00 -- TODO: Remove this when Dungeon Compass Count bitfield is properly flagged when 'always on'
 
 INSTANCE.ROOMCURSORPOSITION = 1
 INSTANCE.ROOMSLOTS = { {0, 0}, {0, 0}, {0, 0}, {0, 0} }

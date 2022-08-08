@@ -21,9 +21,6 @@ function updateTitleFromMemorySegment(segment)
                 SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
                 SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
             end
-
-            -- TODO: Remove this when Dungeon Compass Count bitfield is properly flagged when 'always on'
-            INSTANCE.COMPASS_MODE = AutoTracker:ReadU16(0x30803c, 0)
         end
     end
 end

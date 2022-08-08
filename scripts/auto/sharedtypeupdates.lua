@@ -51,11 +51,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     end
                 end
                 item.CollectedCount = value
-
-                -- TODO: Remove this when Dungeon Compass Count bitfield is properly flagged when 'always on'
-                if value > 0 and INSTANCE.COMPASS_MODE & 0x02 > 0 then
-                    updateDungeonTotal(dungeonPrefix, 0xffff)
-                end
             elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and OBJ_DOORSHUFFLE:getState() < 2 and OBJ_POOL_DUNGEONPOT:getState() < 2 then
                 local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
                 local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
