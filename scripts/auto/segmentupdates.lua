@@ -1281,7 +1281,7 @@ function updateRoomPotsFromMemorySegment(segment)
 
     if OBJ_RACEMODE:getState() == 0 then
         if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
-            --Key Drop Locations
+            --Key Pot Locations
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonPotKeys do
                 if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then

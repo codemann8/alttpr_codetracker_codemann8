@@ -31,7 +31,7 @@ function PoolMode:updateIcon()
 end
 
 function PoolMode:postUpdate()
-    if self.itemCode == "keydrop" or self.itemCode == "enemydrop" then
+    if self.itemCode == "enemydrop" then
         updateChests()
     elseif self.itemCode == "district" then
         updateMaps()
