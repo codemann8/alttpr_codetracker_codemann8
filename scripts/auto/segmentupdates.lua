@@ -20,8 +20,9 @@ function updateTitleFromMemorySegment(segment)
 
             INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
             if INSTANCE.NEW_POTDROP_SYSTEM and STATUS.AutotrackerInGame then
-                SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
-                SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
+                -- TODO: if this is brought back, remember to change the address
+                --SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
+                --SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
             end
         end
     end
