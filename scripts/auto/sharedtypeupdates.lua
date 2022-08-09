@@ -11,7 +11,7 @@ function updateRoomLocation(segment, location, offset)
             
             if loc.AvailableChestCount == 0 then
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print("Location cleared:", location[1][1], clearedCount)
+                    print("Location cleared:", locName, count)
                 end
                 remove = true
             end
@@ -104,9 +104,16 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     end
                 end
                 if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(item.code .. " direct", value, item.DeductedCount, item.ExemptedCount, item.MaxCount)
+                    print(dungeonPrefix .. " from direct memory:")
+                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
                 end
                 item.CollectedCount = value
+
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount)
+                    print(dungeonPrefix .. " Checks:", item.CollectedCount)
+                end
             elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and not shouldChestCountUp() then
                 local value = chest.AcquiredCount
                 if enemykey and OBJ_POOL_ENEMYDROP:getState() > 0 then
@@ -116,7 +123,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     value = value + potkey.AcquiredCount
                 end
                 if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(item.code .. " calc", value, item.DeductedCount, item.ExemptedCount, item.MaxCount)
+                    print(dungeonPrefix .. " after calculation:")
+                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
                 end
                 item.CollectedCount = value
             elseif OBJ_GLITCHMODE:getState() < 2 and address then
@@ -131,14 +140,11 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     end
                 end
                 if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " adhoc direct", value, item.DeductedCount, item.ExemptedCount, item.MaxCount)
+                    print(dungeonPrefix .. " adhoc direct memory:")
+                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
                 end
                 item.CollectedCount = value
-            end
-
-            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount)
-                print(dungeonPrefix .. " Checks:", item.CollectedCount)
             end
         end
     end

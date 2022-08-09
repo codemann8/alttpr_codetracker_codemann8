@@ -666,8 +666,8 @@ function updateShopsFromMemorySegment(segment)
                     clearedCount = clearedCount + (segment:ReadUInt8(slot + offset) > 0 and 1 or 0)
                 end
                 
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(name, clearedCount)
+                if location.AvailableChestCount ~= location.ChestCount - clearedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print("Location checked: ", name, clearedCount)
                 end
 
                 location.AvailableChestCount = location.ChestCount - clearedCount
@@ -713,11 +713,12 @@ function updateNPCFromMemorySegment(segment)
         local location = Tracker:FindObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(name, (data & value[1]) ~= 0 and 1 or 0)
+                local clearedCount = (data & value[1]) ~= 0 and 1 or 0
+                if location.AvailableChestCount ~= location.ChestCount - clearedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print("Location cleared: ", name, clearedCount)
                 end
 
-                location.AvailableChestCount = location.ChestCount - ((data & value[1]) ~= 0 and 1 or 0)
+                location.AvailableChestCount = location.ChestCount - clearedCount
 
                 if #value > 1 then
                     value[2](location.AvailableChestCount == 0)
