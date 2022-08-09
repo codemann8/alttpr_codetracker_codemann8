@@ -2027,11 +2027,11 @@
                 "item_count": 1
             },
             {
-                "name": "Pot",
+                "name": "Pots",
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "entrance_shuffle_minor,pool_cavepot_on" ],
-                "item_count": 9
+                "item_count": 8
             },
             {
                 "name": "Entrance",
