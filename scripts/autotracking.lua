@@ -38,6 +38,8 @@ function initMemoryWatch()
     INSTANCE.MEMORY.DungeonChests = {}
     INSTANCE.MEMORY.DungeonEnemyKeys = {}
     INSTANCE.MEMORY.DungeonPotKeys = {}
+    INSTANCE.MEMORY.DungeonPotDrops = {}
+    INSTANCE.MEMORY.CavePotDrops = {}
     INSTANCE.MEMORY.Bosses = {}
     INSTANCE.MEMORY.BossLocations = {}
     INSTANCE.MEMORY.Underworld = {}
@@ -60,6 +62,12 @@ function initMemoryWatch()
     end
     for i, v in ipairs(DATA.MEMORY.DungeonPotKeys) do
         INSTANCE.MEMORY.DungeonPotKeys[i] = v
+    end
+    for i, v in ipairs(DATA.MEMORY.DungeonPotDrops) do
+        INSTANCE.MEMORY.DungeonPotDrops[i] = v
+    end
+    for i, v in ipairs(DATA.MEMORY.CavePotDrops) do
+        INSTANCE.MEMORY.CavePotDrops[i] = v
     end
     for i, v in ipairs(DATA.MEMORY.Bosses) do
         INSTANCE.MEMORY.Bosses[i] = v

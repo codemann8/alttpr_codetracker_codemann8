@@ -1,24 +1,12 @@
 function updateRoomLocation(segment, location, offset)
     offset = offset or 0
-    local clearedCount = 0
-    for i, slot in ipairs(offset == 0 and location[2] or location[3]) do
-        local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
-        
-        if (roomData & (1 << slot[2])) ~= 0 then
-            clearedCount = clearedCount + 1
-        elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
-            if #location < 3 or Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", (location[3] + 0x40) % 0x80)).ItemState:getState() == 0 or Tracker:FindObjectForCode("pearl").Active then
-                clearedCount = clearedCount + 1
-            end
-        end
-    end
-
-    local remove = false
-    for i, name in ipairs(location[1]) do
-        loc = Tracker:FindObjectForCode(name)
+    local shouldRemove = false
+    local function markLocation(locName, count)
+        local remove = false
+        loc = Tracker:FindObjectForCode(locName)
         if loc then
             if not loc.Owner.ModifiedByUser then
-                loc.AvailableChestCount = loc.ChestCount - clearedCount
+                loc.AvailableChestCount = loc.ChestCount - count
             end
             
             if loc.AvailableChestCount == 0 then
@@ -30,9 +18,42 @@ function updateRoomLocation(segment, location, offset)
         else
             print("Couldn't find location", name)
         end
+
+        return remove
     end
 
-    return remove
+    local clearedCount = 0
+    if offset > 0 and type(location[1]) == "string" then
+        -- Cave/Dungeon Pots
+        for i, room in ipairs(location[2]) do
+            local roomData = segment:ReadUInt16(0x7ef000 + offset + (room[1] * 2))
+            for j, flag in ipairs(room[2]) do
+                if (roomData & (1 << flag)) ~= 0 then
+                    clearedCount = clearedCount + 1
+                end
+            end
+        end
+
+        shouldRemove = markLocation(location[1], clearedCount)
+    else
+        for i, slot in ipairs(offset == 0 and location[2] or location[3]) do
+            local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
+            
+            if (roomData & (1 << slot[2])) ~= 0 then
+                clearedCount = clearedCount + 1
+            elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
+                if #location < 3 or Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", (location[3] + 0x40) % 0x80)).ItemState:getState() == 0 or Tracker:FindObjectForCode("pearl").Active then
+                    clearedCount = clearedCount + 1
+                end
+            end
+        end
+
+        for i, name in ipairs(location[1]) do
+            shouldRemove = markLocation(name, clearedCount)
+        end
+    end
+
+    return shouldRemove
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
@@ -63,6 +84,12 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
 
             if bigkey.Active and OBJ_KEYBIG:getState() == 0 and (dungeonPrefix ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
                 dungeonItems = dungeonItems + 1
+            end
+
+            if OBJ_DOORSHUFFLE:getState() < 2 then
+                item.DeductedCount = dungeonItems
+            else
+                item.DeductedCount = 0
             end
 
             if segment and OBJ_GLITCHMODE:getState() < 2 then
@@ -107,10 +134,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     print(dungeonPrefix .. " adhoc direct", value, item.DeductedCount, item.ExemptedCount, item.MaxCount)
                 end
                 item.CollectedCount = value
-            end
-
-            if OBJ_DOORSHUFFLE:getState() < 2 then
-                item.DeductedCount = dungeonItems
             end
 
             if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then

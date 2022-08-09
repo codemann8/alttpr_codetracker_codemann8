@@ -879,9 +879,9 @@ DATA.MEMORY.DungeonPotKeys = {
     
     { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Pot"}, {{99, 10}}, {{99, 10}} },
     { {"@Desert Palace/Beamos Hall Key", "@DP Beamos Hall/Pot"}, {{83, 10}}, {{83, 13}} },
-    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Pot"}, {{67, 10}}, {{67, 7}} },
+    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Pot"}, {{67, 10}}, {{67, 8}} },
 
-    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Pot"}, {{56, 10}}, {{56, 11}} },
+    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Pot"}, {{56, 10}}, {{56, 12}} },
     { {"@Swamp Palace/Front Flood Key", "@SP Front Flood Pot/Pot"}, {{55, 10}}, {{55, 15}} },
     { {"@Swamp Palace/Hookshot Key", "@SP Hookshot Pot/Pot"}, {{54, 10}}, {{54, 11}} },
     { {"@Swamp Palace/Left Flood Key", "@SP Left Flood Pot/Pot"}, {{53, 10}}, {{53, 15}} },
@@ -901,6 +901,57 @@ DATA.MEMORY.DungeonPotKeys = {
     { {"@Ganon's Tower/Conveyor Bumper Key", "@GT Conveyor Bumper/Pot"}, {{139, 10}}, {{139, 14}} },
     { {"@Ganon's Tower/Double Switch Key", "@GT Double Switch/Pot"}, {{155, 10}}, {{155, 14}} },
     { {"@Ganon's Tower/Post-Compass Key", "@GT Post-Compass/Pot"}, {{123, 10}}, {{123, 11}} }
+}
+
+DATA.MEMORY.DungeonPotDrops = {
+
+}
+
+DATA.MEMORY.CavePotDrops = {
+    { "@Lumberjack House/Pots",           {{0x11f, {14, 15}}} },
+    { "@Death Mountain Descent/Pots",     {{0xe6,  {12, 13, 14, 15}}, {0xe7, {14, 15}}} },
+    { "@Old Man/Pot",                     {{0xf1,  {15}}} },
+    { "@Old Man Home/West Pots",          {{0xe4,  {14, 15}}} },
+    { "@Old Man Home/Dark Pots",          {{0xe5,  {12, 13, 14, 15}}} },
+    { "@Fairy Ascension/Fairy Pots",      {{0xfd,  {14, 15}}} },
+    { "@Fairy Ascension/Superbunny Pots", {{0xfd,  {12, 13}}} },
+    { "@Hookshot Fairy Cave/Pot",         {{0x10c, {15}}} },
+    { "@Paradox Cave/Bomb Wall Pots",     {{0xff,  {14, 15}}} },
+    { "@Paradox Cave/Block Pot",          {{0xff,  {13}}} },
+    { "@Graveyard Ledge/Pots",            {{0x11b, {2, 3, 4, 5, 6, 7, 8, 9}}} },
+    { "@Kakariko Well/Bomb Wall Pots",    {{0x2f,  {12, 13, 14, 15}}} },
+    { "@Kakariko Well/Chest Pots",        {{0x2f,  {10, 11}}} },
+    { "@Kakariko Well/Exit Pots",         {{0x2f,  {8, 9}}} },
+    { "@Blind's House/Entry Pots",        {{0x119, {12, 13, 14, 15}}} },
+    { "@Blind's House/Bomb Wall Pots",    {{0x11d, {10, 11, 12, 13, 14, 15}}} },
+    { "@Elder House/Pots",                {{0xf3,  {13, 14, 15}}} },
+    { "@Left Snitch House/Pots",          {{0x101, {13, 14}}} },
+    { "@Right Snitch House/Pot",          {{0x101, {15}}} },
+    { "@Chicken House/Pot",               {{0x108, {15}}} },
+    { "@Sick Kid/Pots",                   {{0x102, {14, 15}}} },
+    { "@Bomb Hut/Pots",                   {{0x107, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@Tavern/Back Pots",                {{0x103, {14, 15}}} },
+    { "@Tavern/Front Pot",                {{0x103, {13}}} },
+    { "@Secret Passage/Pots",             {{0x55,  {14, 15}}} },
+    { "@Sahasrahla's Hut/Pots",           {{0x105, {13, 14, 15}}} },
+    { "@Magic Bat/Pots",                  {{0xe3,  {14, 15}}} },
+    { "@Link's House/Pots",               {{0x104, {13, 14, 15}}} },
+    { "@Cave 45/Pots",                    {{0x11b, {10, 11, 12, 13, 14, 15}}} },
+    { "@Twenty Rupee Cave/Pots",          {{0x125, {12, 13, 14, 15}}} },
+    { "@Fifty Rupee Cave/Pots",           {{0x124, {6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@Spike Cave/Boulder",              {{0x117, {7}}} },
+    { "@Spike Cave/Pots",                 {{0x117, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@Hookshot Cave/Front Pot",         {{0x3c,  {10}}} },
+    { "@Hookshot Cave/Bonk Pots",         {{0x3c,  {8, 9, 11}}} },
+    { "@Hookshot Cave/Hook Pots",         {{0x3c,  {12, 13, 14, 15}}} },
+    { "@Hookshot Cave/Back Pots",         {{0x2c,  {14, 15}}} },
+    { "@Superbunny Cave/Pots",            {{0xe8,  {15}}, {0xf8, {15}}} },
+    { "@Bumper Cave/Pots",                {{0xeb,  {11, 12, 13, 14, 15}}} },
+    { "@Brewery/Pot",                     {{0x106, {15}}} },
+    { "@Dark Sahasrahla/Pots",            {{0x11a, {12, 13, 14, 15}}} },
+    { "@Hammer Pegs/Pots",                {{0x127, {12, 13, 14, 15} }} },
+    { "@Mire Hint Cave/Pots",             {{0x114, {10, 11, 12, 13, 14, 15}}} },
+    { "@Spike Hint Cave/Pots",            {{0x125, {8, 9, 10, 11}}} }
 }
 
 DATA.MEMORY.Bosses = {
@@ -1145,11 +1196,11 @@ DATA.MEMORY.NewDropData = {
     --          enemy drops                                  pot keys
     ["hc"] =  { {{114, 15}, {113, 14}, {128, 13}, {33, 15}}, nil },
     ["ep"] =  { {{153, 12}},                                 {{186, 11}} },
-    ["dp"] =  { nil,                                         {{99, 10}, {83, 13}, {67, 7}} },
+    ["dp"] =  { nil,                                         {{99, 10}, {83, 13}, {67, 8}} },
     ["toh"] = { nil,                                         nil },
     ["at"] =  { {{192, 12}, {176, 5}},                       nil },
     ["pod"] = { nil,                                         nil },
-    ["sp"] =  { nil,                                         {{56, 11}, {55, 15}, {54, 11}, {53, 15}, {22, 7}} },
+    ["sp"] =  { nil,                                         {{56, 12}, {55, 15}, {54, 11}, {53, 15}, {22, 7}} },
     ["sw"] =  { {{57, 14}},                                  {{86, 2}} },
     ["tt"] =  { nil,                                         {{188, 14}, {171, 15}} },
     ["ip"] =  { {{14, 12}, {62, 7}},                         {{63, 9}, {159, 11}} },
@@ -1214,15 +1265,39 @@ function updateRoomPotsFromMemorySegment(segment)
         end
     end
 
+    --Cave Pot Drop Locations
+    if OBJ_POOL_CAVEPOT and OBJ_POOL_CAVEPOT:getState() > 0 then
+        i = 1
+        while i <= #INSTANCE.MEMORY.CavePotDrops do
+            if updateRoomLocation(segment, INSTANCE.MEMORY.CavePotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+                table.remove(INSTANCE.MEMORY.CavePotDrops, i)
+            else
+                i = i + 1
+            end
+        end
+    end
+
     if OBJ_RACEMODE:getState() == 0 then
-        --Key Drop Locations
         if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
+            --Key Drop Locations
             i = 1
             while i <= #INSTANCE.MEMORY.DungeonPotKeys do
                 if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
                     table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
                 else
                     i = i + 1
+                end
+            end
+
+            --Dungeon Pot Drop Locations
+            if OBJ_POOL_DUNGEONPOT:getState() > 1 then
+                i = 1
+                while i <= #INSTANCE.MEMORY.DungeonPotDrops do
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+                        table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
+                    else
+                        i = i + 1
+                    end
                 end
             end
         end

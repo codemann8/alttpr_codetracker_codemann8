@@ -342,6 +342,7 @@ function updateChests()
 
     for i = 1, #DATA.DungeonList do
         local key = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_smallkey")
+        local newMax = 0
         if OBJ_DOORSHUFFLE:getState() == 2 then
             key.MaxCount = 999
             key.Icon = ImageReference:FromPackRelativePath("images/items/smallkey.png", key.AcquiredCount > 0 and "" or "@disabled")
@@ -351,7 +352,7 @@ function updateChests()
                 bk.Icon = ImageReference:FromPackRelativePath("images/items/bigkey.png", bk.Active and "" or "@disabled")
             end
         else
-            local newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
+            newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
             if OBJ_POOL_ENEMYDROP:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7]
             end
@@ -398,8 +399,8 @@ function updateChests()
             item.MaxCount = newMax
         end
 
+        newMax = 0
         if not shouldChestCountUp() or OBJ_DOORSHUFFLE:getState() < 2 then
-            newMax = 0
             if OBJ_KEYMAP:getState() == 0 and DATA.DungeonList[i] ~= "at" then
                 newMax = newMax + 1
             end
@@ -412,8 +413,8 @@ function updateChests()
             if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
                 newMax = newMax + 1
             end
-            item.ExemptedCount = newMax
         end
+        item.ExemptedCount = newMax
 
         OBJ_DOORDUNGEON:updateIcon()
         OBJ_DOORCHEST:updateIcon()
