@@ -64,7 +64,11 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
   - Shops (Shop inventories are shuffled into the item pool)
   - Bonks (Bonk drops are shuffled into the item pool)
   - District Map (This ONLY enables a map overlay to show the boundary lines for Districts)
-  - Key Drops (Enemies and Pots, that normally drop keys, are shuffled into the item pool)
+  - Enemy Drops (normally drop keys, shuffled into the item pool)
+  - Dungeon Pot Drops
+    - Key Pots (shuffled into the item pool)
+    - Dungeon Pots (tracker assumes a variable amount of pots are shuffled into the pool)
+  - Cave Pot Drops (all pots outside of dungeons are shuffled into the item pool)
 - Glitch Logic
   - None
   - OWG (Overworld Glitches)
