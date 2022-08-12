@@ -877,7 +877,7 @@
                 "name": "Front Pot",
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
-                "visibility_rules": [ "pool_cavepot_on" ],
+                "visibility_rules": [ "pool_cavepot_on,entrance_shuffle_minor" ],
                 "item_count": 1
             }
         ],
