@@ -675,7 +675,7 @@
             {
                 "name": "Popo Chest",
                 "access_rules": [
-                    "door_shuffle_off,pool_keypoy_off,[dp_smallkey:1]",
+                    "door_shuffle_off,pool_keypot_off,[dp_smallkey:1]",
                     "door_shuffle_off,pool_keypot_off,keysanity_smallkey_off",
                     "door_shuffle_off,pool_keypot_on,dp_smallkey:1,[dp_smallkey:4]",
                     "door_shuffle_off,pool_keypot_on,keysanity_smallkey_off",
