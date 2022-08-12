@@ -2204,8 +2204,10 @@
         "short_name": "AT Entrance",
         "parent": "OW Castle Ledge",
         "access_rules": [
-            "inverted_new,aga",
-            "inverted_new,$canClearAgaTowerBarrier",
+            "ow_swapped_43,inverted_new,aga",
+            "ow_swapped_5b,inverted_new,aga",
+            "ow_swapped_43,inverted_new,$canClearAgaTowerBarrier",
+            "ow_swapped_5b,inverted_new,$canClearAgaTowerBarrier",
             "ow_swapped_03,ow_swapped_1b,inverted_new,@GT Entry",
             "world_state_open,inverted_orig,aga",
             "world_state_open,inverted_orig,$canClearAgaTowerBarrier",
