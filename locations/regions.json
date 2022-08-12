@@ -1948,7 +1948,6 @@
     {
         "name": "EDW Entry",
         "access_rules": [
-            "aga,[mirror]",
             "@EDW Regions",
             "ow_swapped_5b,aga2,[aga],[mirror]",
             "ow_swapped_1b,aga2,pearl,lift1,[aga],[mirror]",
