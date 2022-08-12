@@ -1,5 +1,13 @@
 ExtendedChestCounter = ChestCounter:extend()
 ExtendedChestCounter:set {
+    CollectedCount = {
+        value = 0,
+        set = function(self, value) return math.min(math.max(value, self.MinCount), self.MaxCount - self.ExemptedCount) end,
+        afterSet = function(self)
+                self:UpdateBadgeAndIcon()
+                self:InvalidateAccessibility()
+            end
+    },
     ExemptedCount = {
         value = 0,
         afterSet = function(self)
