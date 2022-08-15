@@ -4,6 +4,7 @@ end
 
 function tracker_on_finish_loading_save_file()
     updateAllGhosts()
+    updateLayout()
     STATUS.TRACKER_READY = true
 end
 

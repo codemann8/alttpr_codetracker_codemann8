@@ -520,6 +520,12 @@ function updateLayout(setting)
                 end
             end
         end
+        if setting == nil then
+            updateMaps()
+            OBJ_DOORSHUFFLE:postUpdate()
+            OBJ_ENTRANCE:postUpdate()
+            OBJ_MIXED:postUpdate()
+        end
     end
     if setting == nil or setting.file == "broadcast.lua" then
         if Tracker.ActiveVariantUID == "vanilla" then
