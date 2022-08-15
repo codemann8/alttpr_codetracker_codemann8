@@ -3,6 +3,7 @@ function tracker_on_begin_loading_save_file()
 end
 
 function tracker_on_finish_loading_save_file()
+    updateAllGhosts()
     STATUS.TRACKER_READY = true
 end
 
@@ -41,34 +42,7 @@ function tracker_on_accessibility_updated()
             --     print("After chest update: " .. os.clock() - STATUS.START_CLOCK)
             -- end
 
-            if Tracker.ActiveVariantUID == "full_tracker" then
-                --Update Ghost Badges
-                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                --     print("Before ghost update: " .. os.clock() - STATUS.START_CLOCK)
-                -- end
-                updateGhosts(DATA.CaptureBadgeOverworld, false, false)
-                if OBJ_ENTRANCE:getState() < 2 then
-                    updateGhosts(DATA.CaptureBadgeUnderworld, false, true)
-                end
-                if OBJ_ENTRANCE:getState() > 0 then
-                    updateGhosts(DATA.CaptureBadgeDungeons, true, true)
-                    
-                    if OBJ_ENTRANCE:getState() > 1 then
-                        updateGhosts(DATA.CaptureBadgeEntrances, true, true)
-                        updateGhosts(DATA.CaptureBadgeConnectors, true, true)
-                        updateGhosts(DATA.CaptureBadgeDropdowns, true, true)
-                        updateGhosts(DATA.CaptureBadgeSWDungeons, true, true)
-                        updateGhosts(DATA.CaptureBadgeSWDropdowns, true, true)
-
-                        if OBJ_ENTRANCE:getState() == 4 then
-                            updateGhosts(DATA.CaptureBadgeInsanity, true, true)
-                        end
-                    end
-                end
-                -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                --     print("After ghost update: " .. os.clock() - STATUS.START_CLOCK)
-                -- end
-            end
+            updateAllGhosts()
         end
     end
 end
