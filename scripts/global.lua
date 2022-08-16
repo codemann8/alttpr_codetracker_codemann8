@@ -249,19 +249,19 @@ function loadSwaps()
 end
 
 function loadDungeonChests()
-    ExtendedChestCounter("Hyrule Castle Items",      "hc",  "@Hyrule Castle & Escape", 6)
-    ExtendedChestCounter("Eastern Palace Items",     "ep",  "@Eastern Palace",         3)
-    ExtendedChestCounter("Desert Palace Items",      "dp",  "@Desert Palace",          2)
-    ExtendedChestCounter("Tower of Hera Items",      "toh", "@Tower of Hera",          2)
-    ExtendedChestCounter("Aganihm's Tower Items",    "at",  "@Agahnim's Tower",        0)
-    ExtendedChestCounter("Palace of Darkness Items", "pod", "@Palace of Darkness",     5)
-    ExtendedChestCounter("Swamp Palace Items",       "sp",  "@Swamp Palace",           6)
-    ExtendedChestCounter("Skull Woods Items",        "sw",  "@Skull Woods",            2)
-    ExtendedChestCounter("Thieves Town Items",       "tt",  "@Thieves Town",           4)
-    ExtendedChestCounter("Ice Palace Items",         "ip",  "@Ice Palace",             3)
-    ExtendedChestCounter("Misery Mire Items",        "mm",  "@Misery Mire",            2)
-    ExtendedChestCounter("Turtle Rock Items",        "tr",  "@Turtle Rock",            5)
-    ExtendedChestCounter("Ganon's Tower Items",      "gt",  "@Ganon's Tower",          20)
+    ExtendedChestCounter("Hyrule Castle Items",      "hc",  "@Hyrule Castle & Escape", 8,  2)
+    ExtendedChestCounter("Eastern Palace Items",     "ep",  "@Eastern Palace",         6,  3)
+    ExtendedChestCounter("Desert Palace Items",      "dp",  "@Desert Palace",          6,  4)
+    ExtendedChestCounter("Tower of Hera Items",      "toh", "@Tower of Hera",          6,  4)
+    ExtendedChestCounter("Aganihm's Tower Items",    "at",  "@Agahnim's Tower",        2,  2)
+    ExtendedChestCounter("Palace of Darkness Items", "pod", "@Palace of Darkness",     14, 9)
+    ExtendedChestCounter("Swamp Palace Items",       "sp",  "@Swamp Palace",           10, 4)
+    ExtendedChestCounter("Skull Woods Items",        "sw",  "@Skull Woods",            8,  6)
+    ExtendedChestCounter("Thieves Town Items",       "tt",  "@Thieves Town",           8,  4)
+    ExtendedChestCounter("Ice Palace Items",         "ip",  "@Ice Palace",             8,  5)
+    ExtendedChestCounter("Misery Mire Items",        "mm",  "@Misery Mire",            8,  6)
+    ExtendedChestCounter("Turtle Rock Items",        "tr",  "@Turtle Rock",            12, 7)
+    ExtendedChestCounter("Ganon's Tower Items",      "gt",  "@Ganon's Tower",          27, 7)
 end
 
 function loadDoorObjects()
@@ -398,21 +398,33 @@ function updateChests()
         end
 
         newMax = 0
+        local newDeducted = 0
         if not shouldChestCountUp() or OBJ_DOORSHUFFLE:getState() < 2 then
             if OBJ_KEYMAP:getState() == 0 and DATA.DungeonList[i] ~= "at" then
                 newMax = newMax + 1
+                if Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_map").Active then
+                    newDeducted = newDeducted + 1
+                end
             end
             if OBJ_KEYCOMPASS:getState() == 0 and DATA.DungeonList[i] ~= "hc" and DATA.DungeonList[i] ~= "at" then
                 newMax = newMax + 1
+                if Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_compass").Active then
+                    newDeducted = newDeducted + 1
+                end
             end
             if OBJ_KEYSMALL:getState() == 0 and key then
                 newMax = newMax + key.MaxCount
+                newDeducted = newDeducted + key.AcquiredCount
             end
             if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
                 newMax = newMax + 1
+                if Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey").Active then
+                    newDeducted = newDeducted + 1
+                end
             end
         end
         item.ExemptedCount = newMax
+        item.DeductedCount = newDeducted
 
         OBJ_DOORDUNGEON:updateIcon()
         OBJ_DOORCHEST:updateIcon()

@@ -2,7 +2,7 @@ ExtendedChestCounter = ChestCounter:extend()
 ExtendedChestCounter:set {
     CollectedCount = {
         value = 0,
-        set = function(self, value) return math.min(math.max(value, self.MinCount), self.MaxCount - self.ExemptedCount) end,
+        set = function(self, value) return math.min(math.max(value, self.DeductedCount), self.MaxCount) end,
         afterSet = function(self)
                 self:UpdateBadgeAndIcon()
                 self:InvalidateAccessibility()
@@ -21,16 +21,17 @@ ExtendedChestCounter:set {
             end
     },
     RemainingCount = {
-        get = function(self) return self.MaxCount - self.CollectedCount - self.ExemptedCount + self.DeductedCount end
+        get = function(self) return (self.MaxCount - self.ExemptedCount) - math.max(0, self.CollectedCount - self.DeductedCount) end
     },
 }
 
-function ExtendedChestCounter:init(name, dungeonCode, sectionName, initialMaxCount)
+function ExtendedChestCounter:init(name, dungeonCode, sectionName, initialMaxCount, initialExemptCount)
     self:createItem(name)
     self.code = dungeonCode .. "_item"
     self:setProperty("dungeon", dungeonCode)
     self:setProperty("sectionName", sectionName)
     self.MaxCount = initialMaxCount
+    self.ExemptedCount = initialExemptCount
 end
 
 function ExtendedChestCounter:UpdateBadgeAndIcon()
