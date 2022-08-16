@@ -21,7 +21,7 @@ ExtendedChestCounter:set {
             end
     },
     RemainingCount = {
-        get = function(self) return (self.MaxCount - self.ExemptedCount) - math.max(0, self.CollectedCount - self.DeductedCount) end
+        get = function(self) return math.max(0, (self.MaxCount - self.ExemptedCount) - math.max(0, self.CollectedCount - self.DeductedCount)) end
     },
 }
 
