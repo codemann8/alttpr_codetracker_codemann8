@@ -520,7 +520,7 @@ function updateLayout(setting)
                 end
             end
         end
-        if setting == nil then
+        if Tracker.ActiveVariantUID == "full_tracker" and setting == nil then
             updateMaps()
             OBJ_DOORSHUFFLE:postUpdate()
             OBJ_ENTRANCE:postUpdate()
