@@ -90,3 +90,33 @@ end
 function ExtendedChestCounter:InvalidateAccessibility()
     
 end
+
+function ExtendedChestCounter:save()
+    local data = {}
+    data["min_count"] = self.MinCount
+    data["max_count"] = self.MaxCount
+    data["collected_count"] = self.CollectedCount
+    data["exempted_count"] = self.ExemptedCount
+    data["deducted_count"] = self.DeductedCount
+    return data
+end
+
+function ExtendedChestCounter:load(data)
+    if data["max_count"] ~= nil then
+        self.MaxCount = data["max_count"]
+    end
+    if data["min_count"] ~= nil then
+        self.MinCount = data["min_count"]
+    end
+    if data["collected_count"] ~= nil then
+        self.CollectedCount = data["collected_count"]
+    end
+    if data["exempted_count"] ~= nil then
+        self.ExemptedCount = data["exempted_count"]
+    end
+    if data["deducted_count"] ~= nil then
+        self.DeductedCount = data["deducted_count"]
+    end
+    
+    return true
+end
