@@ -86,7 +86,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 dungeonItems = dungeonItems + 1
             end
 
-            if OBJ_DOORSHUFFLE:getState() < 2 then
+            if OBJ_DOORSHUFFLE:getState() < 2 and OBJ_GLITCHMODE:getState() < 2 then
                 item.DeductedCount = dungeonItems
             else
                 item.DeductedCount = 0
@@ -114,7 +114,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount)
                     print(dungeonPrefix .. " Checks:", item.CollectedCount)
                 end
-            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM or OBJ_GLITCHMODE:getState() > 1) and not shouldChestCountUp() then
+            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM and OBJ_GLITCHMODE:getState() < 2) and not shouldChestCountUp() then
                 local value = chest.AcquiredCount
                 if enemykey and OBJ_POOL_ENEMYDROP:getState() > 0 then
                     value = value + enemykey.AcquiredCount
