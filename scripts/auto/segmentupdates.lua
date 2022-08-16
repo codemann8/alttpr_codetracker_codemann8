@@ -194,7 +194,7 @@ function updateOverworldIdFromMemorySegment(segment)
                                 local canReach = true
                                 if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
                                     for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
-                                        if not Tracker:FindObjectForCode(item).Active then
+                                        if Tracker:ProviderCountForCode(item) == 0 then
                                             canReach = false
                                             break
                                         end
