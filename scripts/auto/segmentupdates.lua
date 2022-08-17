@@ -1518,7 +1518,7 @@ function updateDungeonPendantFromMemorySegment(segment)
     local pendantData = segment:ReadUInt8(0x7ef374)
 
     local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
-    if dungeon and not dungeon.Active and dungeon.CurrentStage == 0 then
+    if dungeon and dungeon.CurrentStage == 0 then
 
         local diffData = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ pendantData
         if numberOfSetBits(diffData) == 1 and diffData & pendantData > 0 then
