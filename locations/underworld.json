@@ -97,10 +97,10 @@
     {
         "name": "Old Man",
         "parent": "OW Death Mountain West Bottom",
+        "access_rules": [ "[lamp]" ],
         "sections": [
             {
                 "name": "Bring Him Home",
-                "access_rules": [ "[lamp]" ],
                 "item_count": 1
             },
             {
