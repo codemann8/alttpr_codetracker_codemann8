@@ -1796,7 +1796,8 @@
                 "name": "Blind",
                 "access_rules": [
                     "@Thieves Town/Blind Access,$canDamageBoss|@Thieves Town/Blind",
-                    "{@Thieves Town/Blind Access}"
+                    "{@Thieves Town/Hallway Key}",
+                    "{door_shuffle_on}"
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
