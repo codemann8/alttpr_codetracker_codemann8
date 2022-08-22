@@ -3288,7 +3288,7 @@
             },
             {
                 "name": "GT Bob",
-                "access_rules": [ "@Ganon's Tower/Bob\\Ice Armos" ],
+                "access_rules": [ "@Ganon's Tower/Bob" ],
                 "sections": [
                     {
                         "name": "Chest",
@@ -3315,7 +3315,7 @@
             },
             {
                 "name": "GT Ice Armos",
-                "access_rules": [ "@Ganon's Tower/Bob\\Ice Armos" ],
+                "access_rules": [ "@Ganon's Tower/Ice Armos" ],
                 "sections": [
                     {
                         "name": "Chest",

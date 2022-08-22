@@ -703,15 +703,21 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_race_ledge",
-            "ow_swapped_68,entrance_shuffle_minor,@South Light World",
+            "ow_swapped_68,entrance_shuffle_minor,@South Light World,bombs",
+            "ow_swapped_68,entrance_shuffle_minor,@South Light World,boots",
             "ow_swapped_68,@South Dark World,mirror",
-            "ow_swapped_28,entrance_shuffle_minor,@South Dark World,pearl",
+            "ow_swapped_28,entrance_shuffle_minor,@South Dark World,pearl,bombs",
+            "ow_swapped_28,entrance_shuffle_minor,@South Dark World,pearl,boots",
+            "ow_swapped_28,entrance_shuffle_minor,@South Dark World,mirror,[pearl],boots",
 
             "ow_swapped_68,ow_dig_game,pearl,lift2,mirror",
             "ow_swapped_68,ow_dig_game,pearl,[lift2],hookshot,mirror",
             "ow_swapped_68,ow_dig_ledge,mirror",
-            "ow_swapped_68,entrance_shuffle_minor,ow_kak_suburb",
-            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,pearl"
+            "ow_swapped_68,entrance_shuffle_minor,ow_kak_suburb,bombs",
+            "ow_swapped_68,entrance_shuffle_minor,ow_kak_suburb,boots",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,pearl,bombs",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,pearl,boots",
+            "ow_swapped_28,entrance_shuffle_minor,ow_kak_suburb,mirror,[pearl],boots"
         ]
     },
     {

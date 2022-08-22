@@ -359,6 +359,14 @@ function updateItemsFromMemorySegment(segment)
                         itemFlippedOn(name)
                     end
                 end
+            elseif name == "bombs" then
+                local data = segment:ReadUInt8(value[1])
+                if item.CurrentStage > 0 or data > 0 then
+                    if item.CurrentStage == 0 and data > 0 and STATUS.AutotrackerInGame then
+                        itemFlippedOn(name)
+                    end
+                    item.CurrentStage = data > 0 and 2 or 1
+                end
             else
                 local newStatus = segment:ReadUInt8(value[1]) > 0
                 if not item.Active and newStatus and STATUS.AutotrackerInGame then
@@ -569,8 +577,8 @@ DATA.MEMORY.Overworld = {
 }
 
 DATA.MEMORY.OverworldItems = {
-    ["dam"] =   { 0x3b, 0x20, true, nil },
-    ["bombs"] = { 0x5b, 0x02, nil, 1 }
+    ["dam"] =   { 0x3b, 0x20, true, nil }
+    --["bombs"] = { 0x5b, 0x02, nil, 1 } -- pyramid crack
 }
 
 function updateOverworldFromMemorySegment(segment)
@@ -842,9 +850,8 @@ DATA.MEMORY.DungeonChests = {
     { {"@Ganon's Tower/Firesnake", "@GT Firesnake/Chest"}, {{125, 4}} },
     { {"@Ganon's Tower/Rando Room", "@GT Rando Room/Chest"}, {{124, 4}, {124, 5}, {124, 6}, {124, 7}} },
     { {"@Ganon's Tower/Compass Room", "@GT Compass Room/Chest"}, {{157, 4}, {157, 5}, {157, 6}, {157, 7}} },
-    { {"@Ganon's Tower/Bob\\Ice Armos"}, {{140, 7}, {28, 4}, {28, 5}, {28, 6}} },
-    { {"@GT Bob/Chest"}, {{140, 7}} },
-    { {"@GT Ice Armos/Chest"}, {{28, 4}, {28, 5}, {28, 6}} },
+    { {"@Ganon's Tower/Bob", "@GT Bob/Chest"}, {{140, 7}} },
+    { {"@Ganon's Tower/Ice Armos", "@GT Ice Armos/Chest"}, {{28, 4}, {28, 5}, {28, 6}} },
     { {"@Ganon's Tower/Tile Room", "@GT Tile Room/Chest"}, {{141, 4}} },
     { {"@Ganon's Tower/Big Chest", "@GT Big Chest/Chest"}, {{140, 4}} },
     { {"@Ganon's Tower/Mini Helmasaur", "@GT Mini Helmasaur/Chest"}, {{61, 4}, {61, 5}} },

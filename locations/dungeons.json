@@ -282,12 +282,21 @@
         "name": "TR Laser Entrance",
         "access_rules": [
             "@OW TR Isolated",
-            "@TR Main Entrance,somaria,[lamp],pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,tr_bigkey",
-            "@TR Main Entrance,somaria,[lamp],pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,keysanity_bigkey_off",
-            "@TR Main Entrance,somaria,[lamp],pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,tr_bigkey",
-            "@TR Main Entrance,somaria,[lamp],pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,keysanity_bigkey_off",
-            "@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off,tr_bigkey",
-            "@TR Main Entrance,somaria,[lamp],keysanity_smallkey_off,keysanity_bigkey_off",
+            
+            "@TR Main Entrance,somaria,[lamp],bombs,pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],bombs,pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,keysanity_bigkey_off",
+            "@TR Main Entrance,somaria,[lamp],bombs,pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],bombs,pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,keysanity_bigkey_off",
+            "@TR Main Entrance,somaria,[lamp],bombs,keysanity_smallkey_off,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],bombs,keysanity_smallkey_off,keysanity_bigkey_off",
+            
+            "@TR Main Entrance,somaria,[lamp],boots,pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],boots,pool_enemydrop_off,[tr_smallkey:3],tr_smallkey:2,keysanity_bigkey_off",
+            "@TR Main Entrance,somaria,[lamp],boots,pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],boots,pool_enemydrop_on,[tr_smallkey:5],tr_smallkey:4,keysanity_bigkey_off",
+            "@TR Main Entrance,somaria,[lamp],boots,keysanity_smallkey_off,tr_bigkey",
+            "@TR Main Entrance,somaria,[lamp],boots,keysanity_smallkey_off,keysanity_bigkey_off",
+            
             "entrance_shuffle_off,@TR Main Entrance,door_shuffle_on",
             //TODO: Add access from Bridge Entrances?
             "entrance_shuffle_on"
@@ -435,7 +444,7 @@
                 "item_count": 1
             },
             {
-                "name": "Back",
+                "name": "Back Drop",
                 "access_rules": [
                     "@HC Sanc Drop Access",
                     "@HC Access,door_shuffle_off,pool_enemydrop_off,[hc_smallkey:1],[firesource]",
@@ -444,6 +453,15 @@
                     "@HC Access,door_shuffle_off,pool_enemydrop_on,keysanity_smallkey_off,[firesource]",
                     "@HC Sanc Access,door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Back",
+                "access_rules": [
+                    "@Hyrule Castle & Escape/Back Drop,bombs",
+                    "@Hyrule Castle & Escape/Back Drop,boots"
+                ],
                 "clear_as_group": true,
                 "item_count": 3
             },
@@ -451,7 +469,7 @@
                 "name": "Sanctuary",
                 "access_rules": [
                     "@HC Sanc Access",
-                    "@Hyrule Castle & Escape/Back"
+                    "@Hyrule Castle & Escape/Back Drop"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1135,7 +1153,7 @@
             {
                 "name": "Arena Ledge",
                 "access_rules": [
-                    "@Palace of Darkness/Bow Side"
+                    "@Palace of Darkness/Bow Side,bombs"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1163,10 +1181,10 @@
             {
                 "name": "Big Key Chest",
                 "access_rules": [
-                    "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5]",
-                    "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5]",
-                    "door_shuffle_off,keysanity_smallkey_off",
-                    "@PoD Special Access,[nothing]",
+                    "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5],bombs",
+                    "door_shuffle_off,pod_smallkey:2,[pod_smallkey:5],bombs",
+                    "door_shuffle_off,keysanity_smallkey_off,bombs",
+                    "@PoD Special Access,bombs,[nothing]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1187,13 +1205,12 @@
             {
                 "name": "Big Chest",
                 "access_rules": [
-                    "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],pod_bigkey",
-                    "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],keysanity_bigkey_off",
-                    "door_shuffle_basic,pod_bigkey",
-                    "door_shuffle_basic,keysanity_bigkey_off",
-                    "@PoD Special Access,pod_bigkey,[nothing]",
-                    "@PoD Special Access,keysanity_bigkey_off,[nothing]",
-                    "door_shuffle_crossed"
+                    "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],pod_bigkey,bombs",
+                    "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],keysanity_bigkey_off,bombs",
+                    "door_shuffle_basic,pod_bigkey,bombs",
+                    "door_shuffle_basic,keysanity_bigkey_off,bombs",
+                    "@PoD Special Access,pod_bigkey,bombs,[nothing]",
+                    "@PoD Special Access,keysanity_bigkey_off,bombs,[nothing]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1318,7 +1335,7 @@
                 "item_count": 1
             },
             {
-                "name": "Bomb Wall",
+                "name": "Beyond Lobby",
                 "access_rules": [
                     "door_shuffle_off,flippers,sp_smallkey:1",
                     "door_shuffle_off,flippers,keysanity_smallkey_off",
@@ -1326,13 +1343,21 @@
                     "door_shuffle_off,glitch_mode_hybrid,[@MM Special Access/Left Side Access],@ToH Special Access/Compass Chest",
                     "door_shuffle_on"
                 ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Bomb Wall",
+                "access_rules": [
+                    "@Swamp Palace/Beyond Lobby,bombs"
+                ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
                 "name": "Pot Row Key",
                 "access_rules": [
-                    "@Swamp Palace/Bomb Wall"
+                    "@Swamp Palace/Beyond Lobby"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -1356,9 +1381,9 @@
             {
                 "name": "South Side",
                 "access_rules": [
-                    "door_shuffle_off,pool_keypot_off,@Swamp Palace/Bomb Wall,hammer",
-                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Bomb Wall,sp_smallkey:3,hammer",
-                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Bomb Wall,keysanity_smallkey_off,hammer",
+                    "door_shuffle_off,pool_keypot_off,@Swamp Palace/Beyond Lobby,hammer",
+                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,sp_smallkey:3,hammer",
+                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,keysanity_smallkey_off,hammer",
                     "door_shuffle_off,glitch_mode_hybrid,@MM Special Access/Left Side Access",
                     "door_shuffle_off,glitch_mode_hybrid,@ToH Special Access/Compass Chest",
                     "door_shuffle_on"
@@ -1556,8 +1581,10 @@
             {
                 "name": "Big Chest",
                 "access_rules": [
-                    "sw_bigkey",
-                    "keysanity_bigkey_off"
+                    "sw_bigkey,bombs",
+                    "keysanity_bigkey_off,bombs",
+                    "door_shuffle_on,sw_bigkey",
+                    "door_shuffle_on,keysanity_bigkey_off"
                 ],
                 "item_count": 1
             },
@@ -1759,7 +1786,8 @@
                 "access_rules": [
                     "@Thieves Town/Attic Chest,@Thieves Town/Prison Cell",
                     "door_shuffle_basic,@Thieves Town/Prison Cell",
-                    "door_shuffle_crossed,attic,@Thieves Town/Prison Cell"
+                    "door_shuffle_crossed,attic,@Thieves Town/Prison Cell",
+                    "$canEngageTTBoss"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1855,9 +1883,37 @@
                 "item_count": 1
             },
             {
+                "name": "Spike Room Access",
+                "access_rules": [
+                    "pool_enemydrop_off,bombs,hookshot",
+                    "pool_enemydrop_off,somaria,[bombs],[hookshot]",
+                    "pool_enemydrop_on,ip_smallkey:2,bombs,hookshot",
+                    "pool_enemydrop_on,ip_smallkey:1,somaria,[ip_smallkey:2],[bombs],[hookshot]",
+                    
+                    "pool_enemydrop_off,pool_potkey_off,ip_smallkey:1,[ip_smallkey:2],bombs",
+                    "pool_enemydrop_off,pool_potkey_off,somaria,[ip_smallkey:2],[bombs]",
+                    "pool_enemydrop_on,pool_potkey_off,ip_smallkey:2,[ip_smallkey:4],bombs",
+                    "pool_enemydrop_on,pool_potkey_off,ip_smallkey:1,somaria,[ip_smallkey:4],[bombs]",
+                    "pool_enemydrop_off,pool_potkey_on,ip_smallkey:1,[ip_smallkey:4],bombs",
+                    "pool_enemydrop_off,pool_potkey_on,somaria,[ip_smallkey:4],[bombs]",
+                    "pool_enemydrop_on,pool_potkey_on,ip_smallkey:3,[ip_smallkey:6],bombs",
+                    "pool_enemydrop_on,pool_potkey_on,ip_smallkey:1,somaria,[ip_smallkey:6],[bombs]",
+                    "keysanity_smallkey_off,bombs",
+                    "keysanity_smallkey_off,somaria,[bombs]",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Conveyor Key",
                 "access_rules": [
-                    "@Ice Palace/Pengator Room"
+                    "@Ice Palace/Pengator Room,bombs",
+                    "[@Ice Palace/Spike Room Access],ip_smallkey:2",
+                    "[@Ice Palace/Spike Room Access],pool_enemydrop_off,ip_smallkey:1",
+                    "[@Ice Palace/Spike Room Access],pool_potkey_off,ip_smallkey:1,hammer,lift1",
+                    "[@Ice Palace/Spike Room Access],pool_potkey_off,pool_enemydrop_off,hammer,lift1",
+                    "[@Ice Palace/Spike Room Access],keysanity_smallkey_off"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_enemydrop_on" ],
                 "chest_unopened_img": "images/icons/keydrops/enemy-jelly.png",
@@ -1867,21 +1923,7 @@
             {
                 "name": "Spike Room",
                 "access_rules": [
-                    "pool_enemydrop_off,hookshot",
-                    "pool_enemydrop_off,somaria,[hookshot]",
-                    "pool_enemydrop_on,ip_smallkey:2,hookshot",
-                    "pool_enemydrop_on,ip_smallkey:1,somaria,[ip_smallkey:2],[hookshot]",
-                    
-                    "pool_enemydrop_off,pool_potkey_off,ip_smallkey:1,[ip_smallkey:2]",
-                    "pool_enemydrop_off,pool_potkey_off,somaria,[ip_smallkey:2]",
-                    "pool_enemydrop_on,pool_potkey_off,ip_smallkey:2,[ip_smallkey:4]",
-                    "pool_enemydrop_on,pool_potkey_off,ip_smallkey:1,somaria,[ip_smallkey:4]",
-                    "pool_enemydrop_off,pool_potkey_on,ip_smallkey:1,[ip_smallkey:4]",
-                    "pool_enemydrop_off,pool_potkey_on,somaria,[ip_smallkey:4]",
-                    "pool_enemydrop_on,pool_potkey_on,ip_smallkey:3,[ip_smallkey:6]",
-                    "pool_enemydrop_on,pool_potkey_on,ip_smallkey:1,somaria,[ip_smallkey:6]",
-                    "keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "@Ice Palace/Spike Room Access"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1889,10 +1931,10 @@
             {
                 "name": "Boulder Key",
                 "access_rules": [
-                    "@Ice Palace/Spike Room,lift1,hammer",
-                    "pool_enemydrop_off,[@Ice Palace/Spike Room],somaria,lift1,hammer",
-                    "pool_enemydrop_on,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,lift1,hammer",
-                    "keysanity_smallkey_off,[@Ice Palace/Spike Room],somaria,lift1,hammer",
+                    "@Ice Palace/Spike Room Access,lift1,hammer",
+                    "pool_enemydrop_off,[@Ice Palace/Spike Room Access],somaria,lift1,hammer",
+                    "pool_enemydrop_on,[@Ice Palace/Spike Room Access],ip_smallkey:1,somaria,lift1,hammer",
+                    "keysanity_smallkey_off,[@Ice Palace/Spike Room Access],somaria,lift1,hammer",
                     "door_shuffle_on,lift1,hammer"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
@@ -1911,31 +1953,20 @@
             {
                 "name": "Ice Breaker",
                 "access_rules": [
-                    "@Ice Palace/Spike Room,lift1,hammer",
-                    "pool_enemydrop_off,[@Ice Palace/Spike Room],somaria,[lift1],[hammer]",
-                    "pool_enemydrop_on,[@Ice Palace/Spike Room],ip_smallkey:1,somaria,[lift1],[hammer]",
-                    "keysanity_smallkey_off,[@Ice Palace/Spike Room],somaria,[lift1],[hammer]",
+                    "@Ice Palace/Spike Room Access,lift1,hammer",
+                    "pool_enemydrop_off,[@Ice Palace/Spike Room Access],somaria,[lift1],[hammer]",
+                    "pool_enemydrop_on,[@Ice Palace/Spike Room Access],ip_smallkey:1,somaria,[lift1],[hammer]",
+                    "keysanity_smallkey_off,[@Ice Palace/Spike Room Access],somaria,[lift1],[hammer]",
                     "door_shuffle_on,somaria,[lift1],[hammer]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
-                "name": "Spike Cross",
-                "access_rules": [
-                    "pool_enemydrop_off",
-                    "pool_enemydrop_on,ip_smallkey:2",
-                    "keysanity_smallkey_off",
-                    "door_shuffle_on"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
                 "name": "Freezor Chest",
                 "access_rules": [
-                    "@Ice Palace/Spike Cross,firerod",
-                    "@Ice Palace/Spike Cross,$canUseMedallions,bombos"
+                    "@Ice Palace/Conveyor Key,firerod",
+                    "@Ice Palace/Conveyor Key,$canUseMedallions,bombos"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1943,7 +1974,7 @@
             {
                 "name": "Ice Hell Key",
                 "access_rules": [
-                    "@Ice Palace/Spike Cross"
+                    "@Ice Palace/Conveyor Key"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -1953,7 +1984,7 @@
             {
                 "name": "Ice T",
                 "access_rules": [
-                    "@Ice Palace/Spike Cross"
+                    "@Ice Palace/Conveyor Key"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1961,8 +1992,8 @@
             {
                 "name": "Big Chest",
                 "access_rules": [
-                    "@Ice Palace/Spike Cross,ip_bigkey",
-                    "@Ice Palace/Spike Cross,keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,ip_bigkey",
+                    "@Ice Palace/Conveyor Key,keysanity_bigkey_off",
                     "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1971,18 +2002,18 @@
             {
                 "name": "Kholdstare Access",
                 "access_rules": [
-                    "@Ice Palace/Spike Cross,[somaria],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,[somaria],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_off,pool_keypot_off,[ip_smallkey:1],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_off,pool_keypot_off,[ip_smallkey:1],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_on,pool_keypot_off,[ip_smallkey:2],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_on,pool_keypot_off,[ip_smallkey:2],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_off,pool_keypot_on,[ip_smallkey:2],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_off,pool_keypot_on,[ip_smallkey:2],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_on,pool_keypot_on,[ip_smallkey:3],[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,pool_enemydrop_on,pool_keypot_on,[ip_smallkey:3],keysanity_bigkey_off",
-                    "@Ice Palace/Spike Cross,keysanity_smallkey_off,[ip_bigkey]",
-                    "@Ice Palace/Spike Cross,keysanity_smallkey_off,keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,[somaria],[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,[somaria],keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_off,pool_keypot_off,[ip_smallkey:1],[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_off,pool_keypot_off,[ip_smallkey:1],keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_on,pool_keypot_off,[ip_smallkey:2],[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_on,pool_keypot_off,[ip_smallkey:2],keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_off,pool_keypot_on,[ip_smallkey:2],[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_off,pool_keypot_on,[ip_smallkey:2],keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_on,pool_keypot_on,[ip_smallkey:3],[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,pool_enemydrop_on,pool_keypot_on,[ip_smallkey:3],keysanity_bigkey_off",
+                    "@Ice Palace/Conveyor Key,keysanity_smallkey_off,[ip_bigkey]",
+                    "@Ice Palace/Conveyor Key,keysanity_smallkey_off,keysanity_bigkey_off",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -2386,7 +2417,7 @@
                 "item_count": 1
             },
             {
-                "name": "Crystaroller Chest",
+                "name": "Bomb Wall",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,keysanity_bigkey_off",
@@ -2397,7 +2428,16 @@
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off",
                     "@TR Bridge Entrances,tr_bigkey",
-                    "@TR Bridge Entrances,keysanity_bigkey_off",
+                    "@TR Bridge Entrances,keysanity_bigkey_off"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Crystaroller Chest",
+                "access_rules": [
+                    "@Turtle Rock/Bomb Wall,bombs",
+                    "@Turtle Rock/Bomb Wall,boots",
                     "@TR Laser Entrance,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
@@ -2406,7 +2446,7 @@
                 "item_count": 1
             },
             {
-                "name": "Laser Bridge",
+                "name": "Pre-Laser Forward Path",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,[tr_smallkey:3],tr_bigkey,[lamp]",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,[tr_smallkey:3],keysanity_bigkey_off,[lamp]",
@@ -2419,7 +2459,16 @@
                     "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],tr_bigkey,somaria,[lamp]",
                     "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],keysanity_bigkey_off,somaria,[lamp]",
                     "@TR Bridge Entrances,keysanity_smallkey_off,tr_bigkey,somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,keysanity_bigkey_off,somaria,[lamp]",
+                    "@TR Bridge Entrances,keysanity_smallkey_off,keysanity_bigkey_off,somaria,[lamp]"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Laser Bridge",
+                "access_rules": [
+                    "@Turtle Rock/Pre-Laser Forward Path,bombs",
+                    "@Turtle Rock/Pre-Laser Forward Path,boots",
                     "@TR Laser Entrance",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access,[cape]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access,[byrna]",
@@ -2434,12 +2483,20 @@
             {
                 "name": "Peg Maze Door",
                 "access_rules": [
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],[lamp]",
-                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,somaria,[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],bombs,[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],bombs,[lamp]",
+                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,bombs,[lamp]",
+                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],bombs,somaria,[lamp]",
+                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],bombs,somaria,[lamp]",
+                    "@TR Bridge Entrances,keysanity_smallkey_off,bombs,somaria,[lamp]",
+                    
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],boots,[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],boots,[lamp]",
+                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,boots,[lamp]",
+                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],boots,somaria,[lamp]",
+                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],boots,somaria,[lamp]",
+                    "@TR Bridge Entrances,keysanity_smallkey_off,boots,somaria,[lamp]",
+                    
                     "@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4]",
                     "@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
                     "@TR Laser Entrance,keysanity_smallkey_off",
@@ -2538,7 +2595,8 @@
             {
                 "name": "Stalfos Room",
                 "access_rules": [
-                    "hammer,[hookshot]",
+                    "hammer,bombs,[hookshot]",
+                    "hammer,boots,[hookshot]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -2546,11 +2604,32 @@
                 "item_count": 4
             },
             {
+                "name": "Pit Room Traversal",
+                "access_rules": [
+                    "hammer,hookshot",
+                    "hammer,boots",
+                    "hammer,bombs,[hookshot]",
+                    "hammer,bombs,[boots]",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Map Chest",
+                "access_rules": [
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_off,[gt_smallkey:3]",
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_on,gt_smallkey:1,[gt_smallkey:7]",
+                    "@Ganon's Tower/Pit Room Traversal,keysanity_smallkey_off",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
+                "item_count": 1
+            },
+            {
                 "name": "Double Switch Key",
                 "access_rules": [
-                    "hammer,[hookshot]",
-                    "hammer,[boots]",
-                    "door_shuffle_on"
+                    "@Ganon's Tower/Pit Room Traversal"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -2558,26 +2637,19 @@
                 "item_count": 1
             },
             {
-                "name": "Map Chest",
-                "access_rules": [
-                    "@Ganon's Tower/Double Switch Key,pool_keypot_off,[gt_smallkey:3]",
-                    "@Ganon's Tower/Double Switch Key,pool_keypot_on,gt_smallkey:1,[gt_smallkey:7]",
-                    "@Ganon's Tower/Double Switch Key,keysanity_smallkey_off",
-                    "door_shuffle_on"
-                ],
-                "visibility_rules": [ "door_shuffle_sameset" ],
-                "item_count": 1
-            },
-            {
                 "name": "Firesnake",
                 "access_rules": [
                     "pool_keypot_off,[gt_smallkey:2],hammer,hookshot",
+                    "pool_keypot_off,[gt_smallkey:2],hammer,bombs,[hookshot]",
                     "pool_keypot_off,[gt_smallkey:2],hammer,boots,[hookshot]",
                     "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,hookshot",
+                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,bombs,[hookshot]",
                     "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,boots,[hookshot]",
                     "keysanity_smallkey_off,hammer,hookshot",
+                    "keysanity_smallkey_off,hammer,bombs,[hookshot]",
                     "keysanity_smallkey_off,hammer,boots,[hookshot]",
                     "door_shuffle_on,hookshot",
+                    "door_shuffle_on,bombs,[hookshot]",
                     "door_shuffle_on,boots,[hookshot]"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -2586,9 +2658,9 @@
             {
                 "name": "Rando Room",
                 "access_rules": [
-                    "@Ganon's Tower/Firesnake,pool_keypot_off,[gt_smallkey:3]",
-                    "@Ganon's Tower/Firesnake,pool_keypot_on,gt_smallkey:2,[gt_smallkey:7]",
-                    "@Ganon's Tower/Firesnake,keysanity_smallkey_off",
+                    "@Ganon's Tower/Firesnake,pool_keypot_off,[gt_smallkey:3],bombs",
+                    "@Ganon's Tower/Firesnake,pool_keypot_on,gt_smallkey:2,[gt_smallkey:7],bombs",
+                    "@Ganon's Tower/Firesnake,keysanity_smallkey_off,bombs",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -2627,7 +2699,7 @@
                 "item_count": 1
             },
             {
-                "name": "Ice Armos Access",
+                "name": "Bob",
                 "access_rules": [
                     "@Ganon's Tower/Firesnake,pool_keypot_off,[gt_smallkey:3]",
                     "@Ganon's Tower/Firesnake,pool_keypot_on,gt_smallkey:2,[gt_smallkey:7]",
@@ -2637,20 +2709,20 @@
                     "@Ganon's Tower/Compass Room,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
-                "visibility_rules": [ "nothing" ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
-                "name": "Bob\\Ice Armos",
+                "name": "Ice Armos",
                 "access_rules": [
-                    "@Ganon's Tower/Ice Armos Access,$canDamageBoss|@Ganon's Tower/Bob\\Ice Armos",
-                    "{@Ganon's Tower/Ice Armos Access}"
+                    "@Ganon's Tower/Bob,bombs,$canDamageBoss|@Ganon's Tower/Ice Armos",
+                    "{@Ganon's Tower/Bob,bombs}"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
-                "clear_as_group": false,
-                "item_count": 4
+                "clear_as_group": true,
+                "item_count": 3
             },
             {
                 "name": "Big Chest",
@@ -2714,11 +2786,11 @@
             {
                 "name": "Pre-Moldorm",
                 "access_rules": [
-                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_off,pool_keypot_off,[gt_smallkey:3]",
-                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_off,pool_keypot_on,[gt_smallkey:6]",
-                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_on,pool_keypot_off,gt_smallkey:1,[gt_smallkey:4]",
-                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_on,pool_keypot_on,gt_smallkey:1,[gt_smallkey:7]",
-                    "@Ganon's Tower/Mini Helmasaur,keysanity_smallkey_off",
+                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_off,pool_keypot_off,[gt_smallkey:3],bombs",
+                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_off,pool_keypot_on,[gt_smallkey:6],bombs",
+                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_on,pool_keypot_off,gt_smallkey:1,[gt_smallkey:4],bombs",
+                    "@Ganon's Tower/Mini Helmasaur,pool_enemydrop_on,pool_keypot_on,gt_smallkey:1,[gt_smallkey:7],bombs",
+                    "@Ganon's Tower/Mini Helmasaur,keysanity_smallkey_off,bombs",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],

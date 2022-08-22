@@ -91,6 +91,13 @@
                 "item_count": 1
             },
             {
+                "name": "Blind At Home",
+                "access_rules": [
+                    "@Bosses/Blind,bombs"
+                ],
+                "item_count": 1
+            },
+            {
                 "name": "Kholdstare",
                 "access_rules": [
                     "firerod,sword",

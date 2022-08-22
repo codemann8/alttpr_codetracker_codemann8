@@ -30,21 +30,24 @@
     // Bombs
     {
         "name": "Bombs",
-        "type": "progressive_toggle",
-        "initial_stage_idx": 0,
+        "type": "progressive",
+        "initial_stage_idx": 1,
+        "allow_disabled": false,
         "stages": [
             {
                 "img": "images/items/bomb.png",
+                "-img_mods": "@disabled",
+                "img_mods": "@disabled,overlay|images/overlays/bomb-bag.png",
+                "codes": ""
+            },
+            {
+                "img": "images/items/bomb.png",
+                "img_mods": "@disabled",
                 "codes": "bombs,bomb",
                 "secondary_codes": "none,default,clear"
             },
             {
-                "img": "images/items/bomb.png",
-                "img_mods": "overlay|images/overlays/redbomb.png",
-                "disabled_img": "images/items/bomb.png",
-                "disabled_img_mods": "@disabled,overlay|images/overlays/redbomb.png",
-                "codes": "bombs,bomb",
-                "secondary_codes": "bigbomb,superbomb,redbomb,pyramid,pyramidfairy,cherrybomb"
+                "img": "images/items/bomb.png"
             }
         ]
     },

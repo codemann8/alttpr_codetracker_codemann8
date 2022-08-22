@@ -257,13 +257,14 @@
             },
             {
                 "name": "Bottom",
+                "access_rules": [ "bombs" ],
                 "item_count": 2
             },
             {
                 "name": "Bomb Wall Pots",
                 "access_rules": [
-                    "ow_swapped_45",
-                    "pearl"
+                    "ow_swapped_45,bombs",
+                    "pearl,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -313,6 +314,7 @@
         "name": "Paradox Cave Shop",
         "short_name": "Paradox Shop",
         "parent": "OW Death Mountain East Bottom",
+        "access_rules": [ "bombs" ],
         "sections": [
             {
                 "name": "Shop",
@@ -462,6 +464,7 @@
             },
             {
                 "name": "Cave",
+                "access_rules": [ "bombs" ],
                 "item_count": 1
             }
         ],
@@ -564,8 +567,8 @@
             {
                 "name": "Bomb Wall Pots",
                 "access_rules": [
-                    "ow_swapped_58",
-                    "pearl"
+                    "ow_swapped_58,bombs",
+                    "pearl,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -576,9 +579,9 @@
                 "name": "Bombable Wall",
                 "short_name": "Bomb",
                 "access_rules": [
-                    "ow_swapped_58",
-                    "pearl",
-                    "glitch_mode_major,bottle"
+                    "ow_swapped_58,bombs",
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "item_count": 1
             },
@@ -660,8 +663,8 @@
             {
                 "name": "Bomb Wall Pots",
                 "access_rules": [
-                    "ow_swapped_58",
-                    "pearl"
+                    "ow_swapped_58,bombs",
+                    "pearl,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -672,9 +675,9 @@
                 "name": "Bombable Wall",
                 "short_name": "Bomb",
                 "access_rules": [
-                    "ow_swapped_58",
-                    "pearl",
-                    "glitch_mode_major,bottle"
+                    "ow_swapped_58,bombs",
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "item_count": 1
             }
@@ -745,8 +748,8 @@
             {
                 "name": "Bombable Wall",
                 "access_rules": [
-                    "ow_swapped_58",
-                    "pearl"
+                    "ow_swapped_58,bombs",
+                    "pearl,bombs"
                 ],
                 "item_count": 1
             }
@@ -970,8 +973,10 @@
             {
                 "name": "Closet",
                 "access_rules": [
-                    "ow_swapped_5e",
-                    "pearl",
+                    "ow_swapped_5e,bombs",
+                    "ow_swapped_5e,boots",
+                    "pearl,bombs",
+                    "pearl,boots",
                     "mirror,boots,[pearl]"
                 ],
                 "short_name": "Back",
@@ -1173,6 +1178,7 @@
         "sections": [
             {
                 "name": "Cave",
+                "access_rules": [ "bombs" ],
                 "item_count": 1
             }
         ],
@@ -1341,6 +1347,7 @@
         "sections": [
             {
                 "name": "Cave",
+                "access_rules": [ "bombs" ],
                 "item_count": 5
             }
         ],
@@ -1369,6 +1376,7 @@
         "sections": [
             {
                 "name": "Cave",
+                "access_rules": [ "bombs" ],
                 "item_count": 1
             }
         ],
@@ -1588,6 +1596,7 @@
             },
             {
                 "name": "Back Pots",
+                "access_rules": [ "bombs" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on" ],
@@ -1949,9 +1958,9 @@
         "name": "Brewery",
         "parent": "OW Village of Outcasts",
         "access_rules": [
-            "pearl",
-            "ow_swapped_18",
-            "glitch_mode_major,bottle"
+            "pearl,bombs",
+            "ow_swapped_18,bombs,",
+            "glitch_mode_major,bottle,bombs"
         ],
         "sections": [
             {
@@ -2199,9 +2208,9 @@
         "name": "Hype Cave",
         "parent": "OW Hype",
         "access_rules": [
-            "pearl",
-            "ow_swapped_34",
-            "glitch_mode_major,bottle"
+            "pearl,bombs",
+            "ow_swapped_34,bombs",
+            "glitch_mode_major,bottle,bombs"
         ],
         "sections": [
             {

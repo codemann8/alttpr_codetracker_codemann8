@@ -242,7 +242,7 @@
             {
                 "name": "Island",
                 "access_rules": [
-                    "ow_swapped_45,@OW Dark Death Mountain East Top,entrance_shuffle_minor,pearl,lift1,mirror",
+                    "ow_swapped_45,@OW Dark Death Mountain East Top,entrance_shuffle_minor,pearl,lift1,bombs,mirror",
                     "ow_swapped_45,ow_ddm_floating,mirror",
                     "ow_swapped_45,glitch_mode_owg,boots",
                     "ow_swapped_05,glitch_mode_none",

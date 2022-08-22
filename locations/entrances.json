@@ -2011,8 +2011,8 @@
         "name": "Bomb Hut",
         "parent": "OW Kakariko Village",
         "access_rules": [
-            "ow_swapped_58",
-            "pearl"
+            "ow_swapped_58,bombs",
+            "pearl,bombs"
         ],
         "sections": [
             {
@@ -3311,8 +3311,8 @@
         "short_name": "LW Hype Cave",
         "parent": "OW Statues",
         "access_rules": [
-            "ow_swapped_74",
-            "pearl"
+            "ow_swapped_74,bombs",
+            "pearl,bombs"
         ],
         "sections": [
             {
@@ -3500,6 +3500,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "access_rules": [ "bombs" ],
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
@@ -3569,6 +3570,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "access_rules": [ "bombs" ],
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
@@ -5238,6 +5240,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "access_rules": [ "bombs" ],
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
@@ -5426,8 +5429,10 @@
             {
                 "name": "Pots",
                 "access_rules": [
-                    "ow_swapped_1e",
-                    "pearl"
+                    "ow_swapped_1e,bombs",
+                    "ow_swapped_1e,boots",
+                    "pearl,bombs",
+                    "pearl,boots"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -6068,8 +6073,8 @@
             {
                 "name": "Pots",
                 "access_rules": [
-                    "ow_swapped_30",
-                    "pearl"
+                    "ow_swapped_30,bombs",
+                    "pearl,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -6152,6 +6157,7 @@
         "sections": [
             {
                 "name": "Entrance",
+                "access_rules": [ "bombs" ],
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "capture_item": true,
@@ -6248,9 +6254,9 @@
         "short_name": "Dark Hylia Fairy",
         "parent": "OW Shopping Mall",
         "access_rules": [
-            "pearl",
-            "ow_swapped_37",
-            "glitch_mode_major,bottle"
+            "pearl,bombs",
+            "ow_swapped_37,bombs",
+            "glitch_mode_major,bottle,bombs"
         ],
         "sections": [
             {

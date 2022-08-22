@@ -44,11 +44,28 @@ function canDamageBoss(locationRef)
     else
         boss = locationRef:sub(locationRef:find("/") + 1)
     end
-    if boss == "Bob\\Ice Armos" then
+    if boss == "Ice Armos" then
         boss = "Armos"
     end
+    if locationRef == "@Thieves Town/Blind" and boss == "Blind" then
+        return 1, Tracker:FindObjectForCode("@Bosses/Blind At Home").AccessibilityLevel
+    else
+        return 1, Tracker:FindObjectForCode("@Bosses/" .. boss).AccessibilityLevel
+    end
+end
 
-    return 1, Tracker:FindObjectForCode("@Bosses/" .. boss).AccessibilityLevel
+function canEngageTTBoss()
+    local boss = Tracker:FindObjectForCode("@Thieves Town/Blind")
+    if boss and boss.CapturedItem then
+        boss = boss.CapturedItem.Name
+    else
+        boss = "Blind"
+    end
+    if boss ~= "Blind" then
+        return 1, Tracker:FindObjectForCode("@Thieves Town/Hallway Key").AccessibilityLevel
+    else
+        return 1, AccessibilityLevel.None
+    end
 end
 
 function magicExtensions()
