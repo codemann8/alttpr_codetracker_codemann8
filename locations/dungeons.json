@@ -1582,7 +1582,9 @@
                 "name": "Big Chest",
                 "access_rules": [
                     "sw_bigkey,bombs",
+                    "sw_bigkey,boots,[bombs]",
                     "keysanity_bigkey_off,bombs",
+                    "keysanity_bigkey_off,boots[bombs]",
                     "door_shuffle_on,sw_bigkey",
                     "door_shuffle_on,keysanity_bigkey_off"
                 ],
