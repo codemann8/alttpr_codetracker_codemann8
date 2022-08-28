@@ -64,7 +64,7 @@ function DoorShuffleMode:postUpdate()
         INSTANCE.NEW_KEY_SYSTEM = false
     end
 
-    if self:getState() == 2 then
+    if shouldChestCountUp() then
         Tracker.AutoUnpinLocationsOnClear = false
         Layout:FindLayout("shared_doortotal_v_grid").Root.MaxWidth = -1
     else

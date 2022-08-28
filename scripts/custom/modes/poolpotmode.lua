@@ -74,6 +74,14 @@ end
 function PoolPotMode:postUpdate()
     if self.itemCode == "dungeonpot" then
         updateChests()
+
+        if shouldChestCountUp() then
+            Tracker.AutoUnpinLocationsOnClear = false
+            Layout:FindLayout("shared_doortotal_v_grid").Root.MaxWidth = -1
+        else
+            Tracker.AutoUnpinLocationsOnClear = CONFIG.PREFERENCE_AUTO_UNPIN_LOCATIONS_ON_CLEAR
+            Layout:FindLayout("shared_doortotal_v_grid").Root.MaxWidth = 0
+        end
     elseif self.itemCode == "cavepot" then
         Tracker:FindObjectForCode("pool_dungeonpot_small").ItemState:updateIcon()
     end
