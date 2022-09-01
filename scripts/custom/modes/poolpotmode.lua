@@ -21,9 +21,6 @@ function PoolPotMode:onLeftClick()
         self.clicked = true
         self:setState((self:getState() + 1) % self:getCount())
     else
-        if OBJ_POOL_DUNGEONPOT:getState() == OBJ_POOL_DUNGEONPOT:getCount() - 1 then
-            OBJ_POOL_CAVEPOT:setStateExternal((OBJ_POOL_CAVEPOT:getState() + 1) % OBJ_POOL_CAVEPOT:getCount())
-        end
         OBJ_POOL_DUNGEONPOT:setStateExternal((OBJ_POOL_DUNGEONPOT:getState() + 1) % OBJ_POOL_DUNGEONPOT:getCount())
     end
 end
@@ -33,10 +30,7 @@ function PoolPotMode:onRightClick()
         self.clicked = true
         self:setState((self:getState() - 1) % self:getCount())
     else
-        if OBJ_POOL_DUNGEONPOT:getState() == 0 then
-            OBJ_POOL_CAVEPOT:setStateExternal((OBJ_POOL_CAVEPOT:getState() - 1) % OBJ_POOL_CAVEPOT:getCount())
-        end
-        OBJ_POOL_DUNGEONPOT:setStateExternal((OBJ_POOL_DUNGEONPOT:getState() - 1) % OBJ_POOL_DUNGEONPOT:getCount())
+        OBJ_POOL_CAVEPOT:setStateExternal((OBJ_POOL_CAVEPOT:getState() + 1) % OBJ_POOL_CAVEPOT:getCount())
     end
 end
 
