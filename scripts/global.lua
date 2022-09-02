@@ -393,6 +393,9 @@ function updateChests()
             end
             if OBJ_POOL_DUNGEONPOT:getState() > 0 then
                 newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
+                if OBJ_POOL_DUNGEONPOT:getState() > 2 then
+                    newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][9]
+                end
             end
             item.MaxCount = newMax
         end
@@ -794,7 +797,7 @@ function refreshDoorSlots()
 end
 
 function shouldChestCountUp()
-    return OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() > 1
+    return OBJ_DOORSHUFFLE:getState() == 2 or OBJ_POOL_DUNGEONPOT:getState() == 2
 end
 
 function shouldShowRoom(roomId, xCoord, yCoord)

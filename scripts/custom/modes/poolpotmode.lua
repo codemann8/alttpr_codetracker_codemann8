@@ -12,7 +12,7 @@ function PoolPotMode:init(altNum, item)
     self:setState(0)
 
     if self.itemCode == "dungeonpot" then
-        self:setCount(3)
+        self:setCount(4)
     end
 end
 
@@ -41,6 +41,8 @@ function PoolPotMode:updateIcon()
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_cavekeypot_small.png", "@disabled")
             elseif OBJ_POOL_DUNGEONPOT:getState() == 1 then
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_keypot_small.png")
+            elseif OBJ_POOL_DUNGEONPOT:getState() == 2 then
+                self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_variedpot_small.png")
             else
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_dungeonpot_small.png")
             end
@@ -49,15 +51,17 @@ function PoolPotMode:updateIcon()
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_cavepot_small.png")
             elseif OBJ_POOL_DUNGEONPOT:getState() == 1 then
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_cavekeypot_small.png")
+            elseif OBJ_POOL_DUNGEONPOT:getState() == 2 then
+                self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_cavevariedpot_small.png")
             else
                 self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_allpot_small.png")
             end
         end
     else
-        itemCodeLocal = self.itemCode == "dungeonpot" and "keypot" or self.itemCode
+        itemCodeLocal = self.itemCode == "dungeonpot" and (self:getState() == 2 and "variedpot" or "keypot") or self.itemCode
         if self:getState() == 0 then
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_" .. itemCodeLocal .. self.suffix .. ".png", "@disabled")
-        elseif self.itemCode == "dungeonpot" and self:getState() == 1 then
+        elseif self.itemCode == "dungeonpot" and (self:getState() == 1 or self:getState() == 2) then
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_" .. itemCodeLocal .. self.suffix .. ".png")
         else
             self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/pool_" .. self.itemCode .. self.suffix .. ".png")
@@ -86,7 +90,7 @@ function PoolPotMode:providesCode(code)
         if self.baseCode ~= "pool_dungeonpot" then
             if code == self.baseCode .. "_off" and self:getState() == 0 then
                 return 1
-            elseif code == self.baseCode .. "_on" and self:getState() == 1 then
+            elseif code == self.baseCode .. "_on" and self:getState() > 0 then
                 return 1
             end
         else

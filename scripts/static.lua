@@ -162,20 +162,20 @@ DATA.DykTexts = {
 
 DATA.DungeonList = { "hc", "ep", "dp", "toh", "at", "pod", "sp", "sw", "tt", "ip", "mm", "tr", "gt" }
 
-DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys
-    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0 },
-    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1 },
-    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3 },
-    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0 },
-    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5 },
-    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0 },
-    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2 },
-    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1 },
-    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2 },
-    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0 },
-    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2 },
-    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0 },
-    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3 }
+DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots
+    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0,  46 },
+    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1,  57 },
+    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3,  53 },
+    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0,  29 },
+    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5,  66 },
+    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0,  53 },
+    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2,  46 },
+    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1,  90 },
+    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2,  61 },
+    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0,  43 },
+    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2,  52 },
+    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0,  63 },
+    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3, 117 }
 }
 
 DATA.DungeonIdMap = {
