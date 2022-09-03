@@ -98,9 +98,9 @@ function PoolPotMode:providesCode(code)
                 return 1
             elseif code == "pool_keypot_on" and self:getState() > 0 then
                 return 1
-            elseif code == "pool_dungeonpot_off" and self:getState() < 2 then
+            elseif code == "pool_dungeonpot_off" and self:getState() <= 1 then
                 return 1
-            elseif code == "pool_dungeonpot_on" and self:getState() == 2 then
+            elseif code == "pool_dungeonpot_on" and self:getState() >= 2 then
                 return 1
             end
         end
