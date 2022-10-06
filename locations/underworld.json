@@ -2102,8 +2102,10 @@
                     "ow_layout_on,@Pyramid Fairy/Get Big Bomb",
                     "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_6c,ow_swapped_5b,@Pyramid Fairy/SDW To EDW",
                     "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_6c,ow_swapped_1b,mirror",
-                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_5b,@Pyramid Fairy/SLW To EDW",
-                    "ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_1b,@Pyramid Fairy/SLW To ELW"
+                    "inverted_new,ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_5b,@Pyramid Fairy/SLW To EDW",
+                    "inverted_new,ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_1b,@Pyramid Fairy/SLW To ELW",
+                    "inverted_orig,ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_5b,@Pyramid Fairy/SDW To EDW",
+                    "inverted_orig,ow_layout_off,@Pyramid Fairy/Get Big Bomb,ow_swapped_2c,ow_swapped_1b,@Pyramid Fairy/SDW To ELW"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
