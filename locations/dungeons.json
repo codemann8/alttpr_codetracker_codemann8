@@ -275,6 +275,7 @@
             "@OW TR Bridge,glitch_mode_hybrid,boots",
             "@OW TR Bridge,glitch_mode_owg,[cape]",
             "@OW TR Bridge,glitch_mode_owg,[byrna]",
+            "@OW TR Bridge,door_shuffle_on",
             "entrance_shuffle_on"
         ]
     },
@@ -297,7 +298,7 @@
             "@TR Main Entrance,somaria,[lamp],boots,keysanity_smallkey_off,tr_bigkey",
             "@TR Main Entrance,somaria,[lamp],boots,keysanity_smallkey_off,keysanity_bigkey_off",
             
-            "entrance_shuffle_off,@TR Main Entrance,door_shuffle_on",
+            "@TR Main Entrance,door_shuffle_on",
             //TODO: Add access from Bridge Entrances?
             "entrance_shuffle_on"
         ]
@@ -1043,7 +1044,7 @@
                     "$canRemoveCurtains,pool_enemydrop_off,at_smallkey:2,[lamp]",
                     "$canRemoveCurtains,pool_enemydrop_on,at_smallkey:4,[lamp]",
                     "$canRemoveCurtains,keysanity_smallkey_off,[lamp]",
-                    "door_shuffle_crossed"
+                    "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -2202,7 +2203,7 @@
                 "access_rules": [
                     "@MM Special Access/Mire 2,mm_bigkey,[lamp],somaria",
                     "@MM Special Access/Mire 2,keysanity_bigkey_off,[lamp],somaria",
-                    "@MM Special Access/Mire 2,door_shuffle_on"
+                    "@MM Special Access/Mire 2,@Misery Mire/Dungeon Access,door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -2288,7 +2289,8 @@
                 "name": "Dungeon Access",
                 "access_rules": [
                     "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria",
-                    "door_shuffle_on,@Turtle Rock/Open Entrance,@TR Main Entrance"
+                    "door_shuffle_on,@Turtle Rock/Open Entrance,@TR Main Entrance",
+                    "@TR Bridge Entrances",
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
                 "hosted_item": "dummy"
@@ -2514,8 +2516,7 @@
                 "access_rules": [
                     "@Turtle Rock/Peg Maze Door,somaria,tr_bigkey",
                     "@Turtle Rock/Peg Maze Door,somaria,keysanity_bigkey_off",
-                    "door_shuffle_basic,@Turtle Rock/Dungeon Access",
-                    "door_shuffle_crossed"
+                    "door_shuffle_on,@Turtle Rock/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -2734,9 +2735,8 @@
                     "@Ganon's Tower/Firesnake,keysanity_bigkey_off",
                     "@Ganon's Tower/Compass Room,gt_bigkey",
                     "@Ganon's Tower/Compass Room,keysanity_bigkey_off",
-                    "door_shuffle_basic,gt_bigkey",
-                    "door_shuffle_basic,keysanity_bigkey_off",
-                    "door_shuffle_crossed"
+                    "door_shuffle_on,gt_bigkey",
+                    "door_shuffle_on,keysanity_bigkey_off"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -2838,9 +2838,9 @@
                     "@Ganon's Tower/Validation,sword",
                     "@Ganon's Tower/Validation,hammer",
                     "@Ganon's Tower/Validation,net",
-                    "door_shuffle_crossed,sword",
-                    "door_shuffle_crossed,hammer",
-                    "door_shuffle_crossed,net"
+                    "door_shuffle_on,sword",
+                    "door_shuffle_on,hammer",
+                    "door_shuffle_on,net"
                 ],
                 "hosted_item": "aga2"
             }
