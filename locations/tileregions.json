@@ -885,10 +885,10 @@
         "access_rules": [
             "ow_desert_tablet",
             "ow_swapped_70,@South Dark World,mirror",
-            "ow_swapped_30,inverted_orig,@South Light World",
-            "ow_swapped_30,glitch_mode_none,@South Light World",
-            "ow_swapped_30,inverted_new,glitch_mode_owg,@South Light World,pearl,boots",
-            "ow_swapped_30,inverted_new,glitch_mode_major,@South Light World",
+            "ow_swapped_30,inverted_orig,@South Dark World",
+            "ow_swapped_30,glitch_mode_none,@South Dark World",
+            "ow_swapped_30,inverted_new,glitch_mode_owg,@South Dark World,pearl,boots",
+            "ow_swapped_30,inverted_new,glitch_mode_major,@South Dark World",
 
             "ow_swapped_70,glitch_mode_owg,@South Light World,boots",
             "ow_swapped_70,glitch_mode_major,@South Light World"
