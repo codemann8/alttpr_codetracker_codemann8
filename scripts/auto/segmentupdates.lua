@@ -4,7 +4,11 @@ function updateTitleFromMemorySegment(segment)
         INSTANCE.VERSION_MINOR = segment:ReadUInt16(0x701ffe)
         local value = segment:ReadUInt8(0x702000)
         if value > 0 then
-            value = string.char(segment:ReadUInt8(0x702013)) == 'O' and 1 or 0
+            if string.char(segment:ReadUInt8(0x702001)) == 'R' then
+                value = string.char(segment:ReadUInt8(0x702013)) == 'O' and 1 or 0
+            else
+                value = string.char(AutoTracker:ReadU8(0x2a8000, 0)) == 'O' and 1 or 0
+            end
             if OBJ_WORLDSTATE:getProperty("version") ~= value then
                 OBJ_WORLDSTATE.clicked = true
                 OBJ_WORLDSTATE.ignorePostUpdate = true
