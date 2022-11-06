@@ -286,8 +286,13 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_lost_woods_pass_east_top",
-            "ow_swapped_50,@Northwest Light World",
-            "ow_swapped_10,@Northwest Dark World",
+            "ow_swapped_50,@Northwest Light World,lift2,hammer",
+            "ow_swapped_50,ow_swapped_00,@Northwest Light World,lift1",
+            "ow_swapped_50,ow_swapped_40,@Northwest Light World",
+            "ow_swapped_50,@Northwest Dark World,pearl,mirror",
+            "ow_swapped_50,ow_swapped_40,@Northwest Dark World,mirror",
+            "ow_swapped_10,@Northwest Dark World,pearl,lift1",
+            "ow_swapped_10,ow_swapped_40,@Northwest Dark World",
 
             "ow_swapped_50,ow_sw_pass_east_top,mirror",
             "ow_swapped_50,ow_sw_pass_west,pearl,mirror",
