@@ -295,9 +295,11 @@ function updateDungeonTotal(dungeonPrefix, seenFlags)
     if INSTANCE.NEW_SRAM_SYSTEM and seenFlags & DATA.DungeonData[dungeonPrefix][3] > 0 then
         local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
         if item.MaxCount == 999 then
-            local value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4], 0)
+            local value = 0
             if dungeonPrefix == "hc" then
-                value = math.max(value, AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0))
+                value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0)
+            else
+                value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4], 0)
             end
             item.MaxCount = value
 
