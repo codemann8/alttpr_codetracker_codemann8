@@ -1628,15 +1628,22 @@
         ],
         "sections": [
             {
+                "name": "Top Pot",
+                "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                "visibility_rules": [ "pool_cavepot_on" ],
+                "item_count": 1
+            },
+            {
                 "name": "Cave",
                 "item_count": 2
             },
             {
-                "name": "Pots",
+                "name": "Pot",
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on" ],
-                "item_count": 2
+                "item_count": 1
             }
         ],
         "map_locations": [
