@@ -24,6 +24,8 @@ INSTANCE.NEW_SRAM_SYSTEM = false
 INSTANCE.VERSION_MAJOR = 0
 INSTANCE.VERSION_MINOR = 0
 
+INSTANCE.MISSING_SECTIONS = {}
+
 INSTANCE.DUNGEON_PRIZE_DATA = 0x0000
 
 INSTANCE.ROOMCURSORPOSITION = 1
@@ -331,6 +333,7 @@ function initialize()
     end
 
     updateLayout()
+    initMissingSections()
 end
 
 function updateChests()
@@ -596,6 +599,32 @@ function updateDyk()
     e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
     e:MoveNext()
     e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
+end
+
+function initMissingSections()
+    --It is possible to define locations in separate pieces that use an identical Location Header name,
+    --and they all do correctly show up on their respective maps, but the problem is only the first
+    --Location Header is able to be retrieved by Tracker:FindObjectForCode(), so this bit of code
+    --loops thru all the Map Locations and stores the locations that FindObjectForCode() cannot.
+    --Beware, the locations that end up here probably cannot be referenced in logic access rules.
+    maps = Layout:FindLayout("search_maps").Root.Maps:GetEnumerator()
+    maps:MoveNext()
+    while (maps.Current ~= nil) do
+        locations = maps.Current.Locations:GetEnumerator()
+        locations:MoveNext()
+        while (locations.Current ~= nil) do
+            sections = locations.Current.Location.Sections:GetEnumerator()
+            sections:MoveNext()
+            while (sections.Current ~= nil) do
+                if not Tracker:FindObjectForCode("@" .. locations.Current.Location.Name .. "/" .. sections.Current.Name) then
+                    INSTANCE.MISSING_SECTIONS["@" .. locations.Current.Location.Name .. "/" .. sections.Current.Name] = sections.Current
+                end
+                sections:MoveNext()
+            end
+            locations:MoveNext()
+        end
+        maps:MoveNext()
+    end
 end
 
 function updateAllGhosts()

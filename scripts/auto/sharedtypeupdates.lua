@@ -4,6 +4,9 @@ function updateRoomLocation(segment, location, offset)
     local function markLocation(locName, count)
         local remove = false
         loc = Tracker:FindObjectForCode(locName)
+        if not loc then
+            loc = INSTANCE.MISSING_SECTIONS[locName]
+        end
         if loc then
             if not loc.Owner.ModifiedByUser then
                 loc.AvailableChestCount = loc.ChestCount - count

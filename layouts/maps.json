@@ -3,6 +3,10 @@
         "type": "map",
         "maps": [ "lightworld", "darkworld" ]
     },
+    "search_maps": {
+        "type": "map",
+        "maps": [ "darkworld", "dungeon_egmap" ]
+    },
     "broadcast_map": {
         "type": "layout",
         "key": "blank",
