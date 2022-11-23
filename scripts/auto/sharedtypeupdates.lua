@@ -19,7 +19,7 @@ function updateRoomLocation(segment, location, offset)
                 remove = true
             end
         else
-            print("Couldn't find location", name)
+            print("Couldn't find location", locName)
         end
 
         return remove

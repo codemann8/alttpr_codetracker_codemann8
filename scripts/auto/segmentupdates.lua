@@ -772,7 +772,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Tower of Hera/Lobby", "@TH Lobby/Chest"}, {{119, 4}} },
     { {"@Tower of Hera/Cage", "@TH Cage/Item"}, {{135, 10}} },
     { {"@Tower of Hera/Basement", "@TH Basement/Chest"}, {{135, 4}} },
-    { {"@Tower of Hera/Compass Chest", "@TH Compass Chest/Chest"}, {{39, 5}} },
+    { {"@Tower of Hera/Compass Chest", "@TH Compass Room/Chest"}, {{39, 5}} },
     { {"@Tower of Hera/Big Chest", "@TH Big Chest/Chest"}, {{39, 4}} },
     { {"@Tower of Hera/Moldorm", "@TH Moldorm/Prize"}, {{7, 11}} },
 
@@ -804,7 +804,7 @@ DATA.MEMORY.DungeonChests = {
 
     { {"@Skull Woods/Map Chest", "@SW Map Chest/Chest"}, {{88, 5}} },
     { {"@Skull Woods/Gibdo Prison", "@SW Gibdo Prison/Chest"}, {{87, 5}} },
-    { {"@Skull Woods/Compass Chest", "@SW Compass Chest/Chest"}, {{103, 4}} },
+    { {"@Skull Woods/Compass Chest", "@SW Compass Room/Chest"}, {{103, 4}} },
     { {"@Skull Woods/Pinball", "@SW Pinball/Chest"}, {{104, 4}} },
     { {"@Skull Woods/Statue Switch", "@SW Statue Switch/Chest"}, {{87, 4}} },
     { {"@Skull Woods/Big Chest", "@SW Big Chest/Chest"}, {{88, 4}} },
@@ -838,7 +838,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Misery Mire/Big Chest", "@MM Big Chest/Chest"}, {{195, 4}} },
     { {"@Misery Mire/Vitreous", "@MM Vitreous/Prize"}, {{144, 11}} },
 
-    { {"@Turtle Rock/Compass Room", "@TR Compass Chest/Chest"}, {{214, 4}} },
+    { {"@Turtle Rock/Compass Room", "@TR Compass Room/Chest"}, {{214, 4}} },
     { {"@Turtle Rock/Roller Room", "@TR Roller Room/Chest"}, {{183, 4}, {183, 5}} },
     { {"@Turtle Rock/Chain Chomp", "@TR Chain Chomp/Chest"}, {{182, 4}} },
     { {"@Turtle Rock/Lava Chest", "@TR Lava/Chest"}, {{20, 4}} },
@@ -888,36 +888,229 @@ DATA.MEMORY.DungeonEnemyKeys = {
 }
 
 DATA.MEMORY.DungeonPotKeys = {
-    { {"@Eastern Palace/Dark Pot Key", "@EP Dark Pot/Pot"}, {{186, 10}}, {{186, 11}} },
+    { {"@Eastern Palace/Dark Pot Key", "@EP Dark Pots/Key Pot"}, {{186, 10}}, {{186, 11}} },
     
-    { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Pot"}, {{99, 10}}, {{99, 10}} },
-    { {"@Desert Palace/Beamos Hall Key", "@DP Beamos Hall/Pot"}, {{83, 10}}, {{83, 13}} },
-    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Pot"}, {{67, 10}}, {{67, 8}} },
+    { {"@Desert Palace/Back Lobby Key", "@DP Back Lobby/Key Pot"}, {{99, 10}}, {{99, 10}} },
+    { {"@Desert Palace/Beamos Hall Key", "@DP Beamos Hall/Key Pot"}, {{83, 10}}, {{83, 13}} },
+    { {"@Desert Palace/Back Tiles Key", "@DP Back Tiles/Key Pot"}, {{67, 10}}, {{67, 8}} },
 
-    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Pot"}, {{56, 10}}, {{56, 12}} },
+    { {"@Swamp Palace/Pot Row Key", "@SP Pot Row/Key Pot"}, {{56, 10}}, {{56, 12}} },
     { {"@Swamp Palace/Front Flood Key", "@SP Front Flood Pot/Pot"}, {{55, 10}}, {{55, 15}} },
-    { {"@Swamp Palace/Hookshot Key", "@SP Hookshot Pot/Pot"}, {{54, 10}}, {{54, 11}} },
-    { {"@Swamp Palace/Left Flood Key", "@SP Left Flood Pot/Pot"}, {{53, 10}}, {{53, 15}} },
-    { {"@Swamp Palace/Waterway Key", "@SP Waterway/Pot"}, {{22, 10}}, {{22, 7}} },
+    { {"@Swamp Palace/Hookshot Key", "@SP Hookshot Ledges/Key Pot"}, {{54, 10}}, {{54, 11}} },
+    { {"@Swamp Palace/Left Flood Key", "@SP Left Flood Key/Pot"}, {{53, 10}}, {{53, 15}} },
+    { {"@Swamp Palace/Waterway Key", "@SP Waterway/Key Pot"}, {{22, 10}}, {{22, 7}} },
 
-    { {"@Skull Woods/West Lobby Key", "@SW West Lobby/Pot"}, {{86, 10}}, {{86, 2}} },
+    { {"@Skull Woods/West Lobby Key", "@SW West Lobby/Key Pot"}, {{86, 10}}, {{86, 2}} },
 
-    { {"@Thieves Town/Hallway Key", "@TT Hallway/Pot"}, {{188, 10}}, {{188, 14}} },
+    { {"@Thieves Town/Hallway Key", "@TT Hallway/Key Pot"}, {{188, 10}}, {{188, 14}} },
     { {"@Thieves Town/Spike Switch Key", "@TT Spike Switch/Pot"}, {{171, 10}}, {{171, 15}} },
 
     { {"@Ice Palace/Boulder Key", "@IP Tongue Pull/Boulder"}, {{63, 10}}, {{63, 9}} },
-    { {"@Ice Palace/Ice Hell Key", "@IP Hell on Ice/Pot"}, {{159, 10}}, {{159, 11}} },
+    { {"@Ice Palace/Ice Hell Key", "@IP Hell on Ice/Key Pot"}, {{159, 10}}, {{159, 11}} },
 
-    { {"@Misery Mire/Spike Key", "@MM Spike Room/Pot"}, {{179, 10}}, {{179, 15}} },
-    { {"@Misery Mire/Fishbone Key", "@MM Fishbone Room/Pot"}, {{161, 10}}, {{161, 15}} },
+    { {"@Misery Mire/Spike Key", "@MM Spike Room/Key Pot"}, {{179, 10}}, {{179, 15}} },
+    { {"@Misery Mire/Fishbone Key", "@MM Fishbone/Key Pot"}, {{161, 10}}, {{161, 15}} },
 
-    { {"@Ganon's Tower/Conveyor Bumper Key", "@GT Conveyor Bumper/Pot"}, {{139, 10}}, {{139, 14}} },
-    { {"@Ganon's Tower/Double Switch Key", "@GT Double Switch/Pot"}, {{155, 10}}, {{155, 14}} },
-    { {"@Ganon's Tower/Post-Compass Key", "@GT Post-Compass/Pot"}, {{123, 10}}, {{123, 11}} }
+    { {"@Ganon's Tower/Conveyor Bumper Key", "@GT Conveyor Bumper/Key Pot"}, {{139, 10}}, {{139, 14}} },
+    { {"@Ganon's Tower/Double Switch Key", "@GT Double Switch/Key Pot"}, {{155, 10}}, {{155, 14}} },
+    { {"@Ganon's Tower/Post-Compass Key", "@GT Post-Compass/Key Pot"}, {{123, 10}}, {{123, 11}} }
 }
 
 DATA.MEMORY.DungeonPotDrops = {
+    { "@HC West Lobby/Pots",             {{0x60, {14, 15}}} },
+    { "@HC West Corridor/Pots",          {{0x50, {14, 15}}} },
+    { "@HC East Lobby/Pot",              {{0x62, {15}}} },
+    { "@HC East Corridor/Pots",          {{0x52, {14, 15}}} },
+    { "@HC Basement Abyss/Pots",         {{0x82, {13, 14, 15}}} },
+    { "@HC Prison/Pots",                 {{0x80, {13, 14, 15}}} },
+    { "@HC Escape Trap/Pots",            {{0x41, {12, 13, 14, 15}}} },
+    { "@HC Dark Cross/Pot",              {{0x32, {15}}} },
+    { "@HC Damp Rats/Pots",              {{0x21, {10, 11, 12, 13, 14, 15}}} },
+    { "@HC Back/Pots",                   {{0x11, {10, 11, 12, 13, 14, 15}}} },
+    { "@HC Rat Switch/Pots",             {{0x02, {12, 13, 14, 15}}} },
 
+    { "@EP Lobby/Pots",                  {{0xc9, {13, 14, 15}}} }, --switch is 13
+    { "@EP Cannonball/Pots",             {{0xb9, {12, 13, 14, 15}}} },
+    { "@EP Decision/Pots",               {{0xa9, {8, 9, 10, 11}}} }, --switch is 10/11
+    { "@EP East Switch/Pots",            {{0xaa, {11, 12, 13, 14, 15}}} }, --switch is 11
+    { "@EP Hook/Hidden Pots",            {{0xaa, {8, 9, 10}}} },
+    { "@EP Stalfos Spawn/Pots",          {{0xa8, {11, 12, 13, 14, 15}}} },
+    { "@EP Big Chest Room/Pots",         {{0xa9, {12, 13, 14, 15}}} },
+    { "@EP Dark Pots/Pots",              {{0xba, {8, 9, 10, 12, 13, 14, 15}}} },
+    { "@EP Big Key Chest/Pots",          {{0xb8, {13, 14, 15}}} }, --switch is 15
+    { "@EP Dark Eyegore/Pots",           {{0x99, {14, 15}}} },
+    { "@EP Dual Antifairy/Pots",         {{0xda, {12, 13, 14, 15}}} }, --switch is 13
+    { "@EP Cannonball Rapid Fire/Pots",  {{0xd9, {14, 15}}} },
+    { "@EP Red Eyegore/Pots",            {{0xd8, {8, 9}}} },
+    { "@EP Boss Guards/Pots",            {{0xd8, {10, 11, 12, 13, 14, 15}}} },
+
+    { "@DP Main Lobby/Pots",             {{0x84, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@DP Eyegore Switch/Pots",         {{0x74, {9, 10, 11, 12, 13, 14, 15}}} }, --switch is 14
+    { "@DP Northeast Corner/Pots",       {{0x75, {13, 14, 15}}} },
+    { "@DP East Lobby/Pots",             {{0x85, {14, 15}}} },
+    { "@DP Big Chest Approach/Pots",     {{0x73, {6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} }, --switch is 13
+    { "@DP West Lobby/Pots",             {{0x83, {12, 13, 14, 15}}} },
+    { "@DP Back Lobby/Pots",             {{0x63, {11, 12, 13, 14, 15}}} },
+    { "@DP Beamos Hall/Pots",            {{0x53, {12, 14, 15}}} },
+    { "@DP Back Tiles/Pots",             {{0x43, {9, 10, 11}}} },
+    { "@DP Pre-Lanmolas/Pots",           {{0x43, {12, 13, 14, 15}}} },
+
+    { "@TH Basement Switch/Pots",        {{0x87, {10, 11, 12, 13, 14, 15}}} },
+    { "@TH Basement/Pots",               {{0x87, {8, 9}}} },
+    { "@TH Second Floor/Pots",           {{0x31, {14, 15}}} },
+    { "@TH Compass Room/Pots",           {{0x27, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@TH Imprisoned Pots/Pots",        {{0x17, {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} },
+
+    { "@AT Dark Chest/Pots",             {{0xd0, {9, 10, 11, 12, 13, 14, 15}}} },
+    { "@AT Dark Pits/Pots",              {{0xc0, {12, 13, 14, 15}}} },
+    { "@AT Circle of Pots/Pots",         {{0xb0, {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} },
+
+    { "@PoD Lobby/West Pots",            {{0x4a, {12, 13, 14, 15}}} }, --switch is 15
+    { "@PoD Lobby/Pots",                 {{0x4a, {6, 7, 8, 9, 10, 11}}} }, --switch is 8
+    { "@PoD Shooter/Pots",               {{0x09, {13, 14, 15}}} }, --switch is 13
+    { "@PoD Mimics 1/Pots",              {{0x4b, {14, 15}}} },
+    { "@PoD Bow Side/Pots",              {{0x2b, {6, 7, 8, 9}}} },
+    { "@PoD Arena/Pots",                 {{0x2a, {14, 15}}} },
+    { "@PoD Stalfos Basement/Pots",      {{0x0a, {9, 10, 11, 12, 13, 14, 15}}} }, --switch is 13
+    { "@PoD Fallng Bridge/Pots",         {{0x1a, {12, 13, 14, 15}}} },
+    { "@PoD Harmless Hellway/Pots",      {{0x1a, {10, 11}}} },
+    { "@PoD Sexy Statue/Pots",           {{0x2b, {10, 11, 12, 13, 14, 15}}} }, --switch is 14
+    { "@PoD Mimics 2/Pots",              {{0x1b, {14, 15}}} },
+    { "@PoD Lonely Turtle/Pots",         {{0x0b, {14, 15}}} },
+
+    { "@SP Pot Row/Pots",                {{0x38, {13, 14, 15}}} },
+    { "@SP Front Flood Pot/Pot",         {{0x37, {14}}} },
+    { "@SP Isolated Ledge/Pots",         {{0x36, {14, 15}}} },
+    { "@SP Hookshot Ledges/Pot",         {{0x36, {10}}} },
+    { "@SP Hookshot Ledges/West Pots",   {{0x36, {12, 13}}} },
+    { "@SP Hookshot Ledges/North Pots",  {{0x36, {8, 9}}} },
+    { "@SP South Pots/Pots",             {{0x46, {14, 15}}} },
+    { "@SP Left Flood Area/Pots",        {{0x35, {3, 4, 5, 6, 7, 8}}} },
+    { "@SP Left Flood Area West/Pot",    {{0x35, {9}}} },
+    { "@SP Attic/Pots",                  {{0x54, {12, 13, 14, 15}}} },
+    { "@SP Far Left Chest/Pots",         {{0x34, {14, 15}}} },
+    { "@SP Big Key Chest/Pots",          {{0x35, {10, 11, 12, 13, 14}}} },
+    { "@SP Statue Switch/Pots",          {{0x26, {11, 12, 13}}} }, --switch is 13
+    { "@SP Medusa Protection/Pots",      {{0x26, {14, 15}}} },
+    { "@SP Drain Switch/Pot",            {{0x76, {15}}} },
+    { "@SP Flooded Treasure/Pots",       {{0x76, {13, 14}}} },
+    { "@SP Waterfall Storage Room/Pots", {{0x66, {10, 11, 12, 13, 14, 15}}} },
+    { "@SP Waterfall Hidden Path/Pots",  {{0x66, {6, 7, 8, 9}}} },
+    { "@SP Waterway/Pots",               {{0x16, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+
+    { "@SW Circle of Pots/Pots",         {{0x58, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}}} },
+    { "@SW Behind Big Chest/Pots",       {{0x58, {12, 13, 14, 15}}} },
+    { "@SW Gibdo Prison/Pots",           {{0x57, {10, 11, 12, 13}}} },
+    { "@SW Compass Room/Pots",           {{0x67, {5, 6, 7, 8, 9}}} },
+    { "@SW Firebar Dropdown/Pots",       {{0x67, {10, 11, 12, 13, 14, 15}}} },
+    { "@SW Pinball/Pots",                {{0x68, {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@SW Statue Switch/Pots",          {{0x57, {7, 8, 9}}} }, --switch is 7
+    { "@SW Statue Switch/Pot",           {{0x57, {14}}} },
+    { "@SW Small Room/Pot",              {{0x57, {15}}} },
+    { "@SW West Lobby/Pot",              {{0x56, {1}}} },
+    { "@SW West Lobby/Dropdown Pots",    {{0x56, {13, 14, 15}}} },
+    { "@SW Many Pots/Pots",              {{0x56, {3, 4, 5, 6, 7, 8, 9, 10, 11, 12}}} },
+    { "@SW Bridge/Hidden Pots",          {{0x59, {14, 15}}} },
+    { "@SW Bridge/Catwalk Pots",         {{0x59, {12, 13}}} },
+    { "@SW Star Pots/Pots",              {{0x49, {5, 6, 7, 8, 9, 10, 11, 12, 13}}} },
+    { "@SW Torch Pots/Pots",             {{0x49, {14, 15}}} },
+    { "@SW Gibdo/Pots",                  {{0x39, {14, 15}}} },
+    { "@SW Mothula Hole/Pots",           {{0x39, {12, 13}}} },
+
+    { "@TT Main Lobby/Pots",             {{0xdb, {12, 13, 14, 15}}} },
+    { "@TT Ambush/Pots",                 {{0xcb, {12, 13, 14, 15}}} },
+    { "@TT NE Lobby/West Pots",          {{0xcc, {14, 15}}} },
+    { "@TT NE Lobby/East Pots",          {{0xcc, {12, 13}}} },
+    { "@TT SE Lobby/Pots",               {{0xdc, {12, 13, 14, 15}}} },
+    { "@TT Hallway/Pot",                 {{0xbc, {15}}} },
+    { "@TT Pot Alcove Top/Pots",         {{0xbc, {4, 5}}} },
+    { "@TT Pot Alcove Main/Pots",        {{0xbc, {6, 7, 8, 9}}} },
+    { "@TT Pot Alcove Bottom/Pots",      {{0xbc, {2, 3}}} },
+    { "@TT Attic Switch Pots/Pots",      {{0x64, {9, 10, 11, 12, 13, 14, 15}}} }, --switch is 9
+    { "@TT Attic/Pots",                  {{0x65, {14, 15}}} },
+    { "@TT Toilet Bowl/Pots",            {{0xbc, {10, 11, 12, 13}}} }, --switch is 12
+    { "@TT Basement Entry/Pots",         {{0x45, {14, 15}}} },
+    { "@TT Basement Entry/Boulder",      {{0x45, {9}}} },
+    { "@TT Basement Conveyor/Boulder",   {{0x44, {15}}} },
+    { "@TT Prison Cell/Pots",            {{0x45, {10, 11, 12, 13}}} },
+
+    { "@IP Pengator Switch/Pot",         {{0x1f, {14, 15}}} }, --switch is 15
+    { "@IP Bomb Pit/Pot",                {{0x1e, {15}}} },
+    { "@IP Stalfos Knights/Pots",        {{0x3e, {12, 13, 14, 15}}} },
+    { "@IP Tongue Pull/Pots",            {{0x3f, {10, 11, 12, 13, 14, 15}}} }, --switch is 11
+    { "@IP Ice Breaker/Pots",            {{0x1f, {12, 13}}} },
+    { "@IP Bomb Jump/Pots",              {{0x4e, {12, 13, 14, 15}}} }, --switch is 13
+    { "@IP Bomb Jump/Solo Pot",          {{0x4e, {11}}} },
+    { "@IP Falling Square/Pots",         {{0x5e, {12, 13, 14, 15}}} },
+    { "@IP Tall Ice/Pots",               {{0x7e, {12, 13, 14, 15}}} }, --switch is 13
+    { "@IP Hell on Ice/Pots",            {{0x9f, {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15}}} }, --switch is 12
+    { "@IP Lonely Freezor/Pots",         {{0x8e, {14, 15}}} },
+    { "@IP Basement Switch/Pots",        {{0xbf, {10, 11, 12, 13, 14, 15}}} },
+    { "@IP Pre-Kholdstare/Pots",         {{0xce, {14, 15}}} },
+    { "@IP Pre-Kholdstare/Boulder",      {{0xce, {10}}} },
+    { "@IP Pre-Kholdstare/Hammer Pots",  {{0xce, {12, 13}}} },
+
+    { "@MM Main Hub/Pots",               {{0xc2, {12, 13, 14, 15}}} }, --switch is 15
+    { "@MM Spike Room/Pot",              {{0xb3, {13, 14}}} }, --switch is 13
+    { "@MM Fishbone/North Pots",         {{0xa1, {11, 12, 13, 14}}} },
+    { "@MM Fishbone/South Pots",         {{0xa1, {5, 6, 7, 8, 9, 10}}} },
+    { "@MM Hourglass/Pots",              {{0xb1, {14, 15}}} },
+    { "@MM Neglected Room/Pots",         {{0xd1, {10, 11, 12, 13}}} },
+    { "@MM Conveyor Wall/Pots",          {{0xd1, {14, 15}}} },
+    { "@MM Big Door/Pots",               {{0xb2, {10, 11, 12, 13, 14, 15}}} },
+    { "@MM Bridge/Pot",                  {{0xa2, {15}}} },
+    { "@MM Dark Shooter/Pot",            {{0x93, {13, 15}}} }, --switch is 15
+    { "@MM Block X/Boulder",             {{0x93, {14}}} },
+    { "@MM Dark Crystal/Pots",           {{0x92, {12, 13, 14, 15}}} },
+    { "@MM Falling Foes/Pots",           {{0x91, {14, 15}}} },
+
+    { "@TR Lobby/Pots",                  {{0xd6, {14, 15}}} },
+    { "@TR Hub/Pots",                    {{0xc6, {14, 15}}} },
+    { "@TR Torches Ledge/Pots",          {{0xc7, {12, 13}}} },
+    { "@TR Torches/Pots",                {{0xc7, {14, 15}}} },
+    { "@TR Roller Room/Pot",             {{0xb7, {15}}} },
+    { "@TR Tile Room/Pot",               {{0xb6, {15}}} },
+    { "@TR Pipes/Northeast Pots",        {{0x15, {11, 12, 13, 14, 15}}} },
+    { "@TR Pipes/Northwest Pots",        {{0x15, {8, 9, 10}}} },
+    { "@TR Pipes/Pot",                   {{0x15, {7}}} },
+    { "@TR Double Pokey/Pots",           {{0x24, {12, 13, 14, 15}}} },
+    { "@TR Laser Death/Pots",            {{0x23, {11, 12, 13, 14, 15}}} },
+    { "@TR Pokey Dash/Pots",             {{0x04, {12, 13, 14, 15}}} },
+    { "@TR Tongue Pull/Pots",            {{0x04, {10, 11}}} },
+    { "@TR Dark Room/Pots",              {{0xb5, {10, 11, 12, 13, 14, 15}}} }, --switch is 13
+    { "@TR Peg Maze/Pots",               {{0xc4, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@TR Final Ride/Pots",             {{0xb4, {14, 15}}} },
+
+    { "@GT Hope Room/Pot",               {{0x8c, {14, 15}}} }, --switch is 15
+    { "@GT Conveyor Bumper/Pot",         {{0x8b, {15}}} },
+    { "@GT Hookshot Pits/Island Pot",    {{0x8b, {11}}} },
+    { "@GT Hookshot Pits/Pots",          {{0x8b, {12, 13}}} },
+    { "@GT Map Chest/Pots",              {{0x8b, {9, 10}}} },
+    { "@GT Double Switch/Pot",           {{0x9b, {15}}} },
+    { "@GT Firesnake/Pots",              {{0x7d, {13, 14, 15}}} },
+    { "@GT Warps/Pots",                  {{0x9b, {12, 13}}} },
+    { "@GT Mini Warp/Pot",               {{0x7d, {12}}} },
+    { "@GT Petting Zoo/Pots",            {{0x7d, {10, 11}}} },
+    { "@GT Conveyor Torches/Pots",       {{0x8d, {14, 15}}} },
+    { "@GT Checkerboard Pots/Pots",      {{0x8d, {11, 12, 13}}} },
+    { "@GT Conveyor Crystal/Pots",       {{0x9d, {14, 15}}} },
+    { "@GT Compass Room/Pots",           {{0x9d, {12, 13}}} },
+    { "@GT Post-Compass/Pots",           {{0x7b, {12, 13, 14, 15}}} },
+    { "@GT Falling Bridge/Pots",         {{0x7c, {12, 13, 14, 15}}} },
+    { "@GT Invisifloor/Pots",            {{0x9c, {14, 15}}} },
+    { "@GT Bob/Pots",                    {{0x8c, {9, 10, 11, 12, 13}}} },
+    { "@GT Crystal Paths/Pots",          {{0x6b, {10, 11, 12, 13, 14, 15}}} },
+    { "@GT Mimics/Pots",                 {{0x6b, {8, 9}}} },
+    { "@GT Sneaky Spikes/Pots",          {{0x5b, {13, 14, 15}}} }, --switch is 14
+    { "@GT Refill/Pots",                 {{0x5c, {8, 9, 10, 11, 12, 13, 14, 15}}} },
+    { "@GT Gauntlet Conveyor/Pots",      {{0x5d, {12, 13, 14, 15}}} },
+    { "@GT Conveyor Spikes/Pots",        {{0x5d, {8, 9, 10, 11}}} },
+    { "@GT Ice Gauntlet/Pots",           {{0x6d, {12, 13, 14, 15}}} },
+    { "@GT Post Lanmolas/Pots",          {{0x6c, {12, 13, 14, 15}}} },
+    { "@GT Climb Torches/Pots",          {{0x96, {10, 11, 12, 13, 14, 15}}} },
+    { "@GT Staredown/Pots",              {{0x96, {8, 9}}} },
+    { "@GT Mini Helmasaur/Pots",         {{0x3d, {14, 15}}} },
+    { "@GT Pre-Moldorm/Pots",            {{0x3d, {9, 10, 11, 12, 13}}} }
 }
 
 DATA.MEMORY.CavePotDrops = {
@@ -1283,7 +1476,7 @@ function updateRoomPotsFromMemorySegment(segment)
     if OBJ_POOL_CAVEPOT and OBJ_POOL_CAVEPOT:getState() > 0 then
         i = 1
         while i <= #INSTANCE.MEMORY.CavePotDrops do
-            if updateRoomLocation(segment, INSTANCE.MEMORY.CavePotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+            if updateRoomLocation(segment, INSTANCE.MEMORY.CavePotDrops[i], 0x7018) then
                 table.remove(INSTANCE.MEMORY.CavePotDrops, i)
             else
                 i = i + 1
@@ -1307,7 +1500,7 @@ function updateRoomPotsFromMemorySegment(segment)
             if OBJ_POOL_DUNGEONPOT:getState() > 1 then
                 i = 1
                 while i <= #INSTANCE.MEMORY.DungeonPotDrops do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7018) then
                         table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
                     else
                         i = i + 1
