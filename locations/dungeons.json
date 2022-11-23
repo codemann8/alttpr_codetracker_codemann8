@@ -1217,8 +1217,8 @@
                 "access_rules": [
                     "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],pod_bigkey,bombs",
                     "door_shuffle_off,@Palace of Darkness/Big Key Chest,[lamp],keysanity_bigkey_off,bombs",
-                    "door_shuffle_basic,pod_bigkey",
-                    "door_shuffle_basic,keysanity_bigkey_off",
+                    "door_shuffle_on,pod_bigkey",
+                    "door_shuffle_on,keysanity_bigkey_off",
                     "@PoD Special Access,pod_bigkey,bombs,[nothing]",
                     "@PoD Special Access,keysanity_bigkey_off,bombs,[nothing]"
                 ],
@@ -2052,7 +2052,7 @@
                     "pool_enemydrop_off,[@Ice Palace/Spike Room Access],somaria,[lift1],[hammer]",
                     "pool_enemydrop_on,[@Ice Palace/Spike Room Access],ip_smallkey:1,somaria,[lift1],[hammer]",
                     "keysanity_smallkey_off,[@Ice Palace/Spike Room Access],somaria,[lift1],[hammer]",
-                    "door_shuffle_on,somaria,[lift1],[hammer]"
+                    "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -2441,7 +2441,9 @@
                     "@TR Bridge Entrances,keysanity_smallkey_off,somaria",
                     "@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria",
                     "@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
-                    "@TR Laser Entrance,keysanity_smallkey_off,somaria"
+                    "@TR Laser Entrance,keysanity_smallkey_off,somaria",
+                    "door_shuffle_basic,@Turtle Rock/Dungeon Access",
+                    "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -2570,7 +2572,9 @@
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off",
                     "@TR Bridge Entrances,tr_bigkey",
-                    "@TR Bridge Entrances,keysanity_bigkey_off"
+                    "@TR Bridge Entrances,keysanity_bigkey_off",
+                    "door_shuffle_basic,@Turtle Rock/Dungeon Access",
+                    "door_shuffle_crossed"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
