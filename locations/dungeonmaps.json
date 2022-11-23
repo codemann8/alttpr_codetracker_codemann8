@@ -4579,6 +4579,7 @@
                 "sections": [
                     {
                         "name": "Prize",
+                        "hosted_item": "thievestown",
                         "item_count": 1
                     }
                 ],
@@ -5322,6 +5323,7 @@
                 "sections": [
                     {
                         "name": "Prize",
+                        "hosted_item": "icepalace",
                         "item_count": 1
                     }
                 ],
@@ -5946,6 +5948,7 @@
                 "sections": [
                     {
                         "name": "Prize",
+                        "hosted_item": "miserymire",
                         "item_count": 1
                     }
                 ],
@@ -6794,6 +6797,7 @@
                 "sections": [
                     {
                         "name": "Prize",
+                        "hosted_item": "turtlerock",
                         "item_count": 1
                     }
                 ],
