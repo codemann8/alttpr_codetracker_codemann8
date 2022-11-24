@@ -931,7 +931,7 @@ DATA.MEMORY.DungeonPotDrops = {
 
     { "@EP Lobby/Pots",                  {{0xc9, {13, 14, 15}}} }, --switch is 13
     { "@EP Cannonball/Pots",             {{0xb9, {12, 13, 14, 15}}} },
-    { "@EP Decision/Pots",               {{0xa9, {8, 9, 10, 11}}} }, --switch is 10/11
+    { "@EP Decision/Pots",               {{0xa9, {8, 9, 10, 11}}} },
     { "@EP East Switch/Pots",            {{0xaa, {11, 12, 13, 14, 15}}} }, --switch is 11
     { "@EP Hook/Hidden Pots",            {{0xaa, {8, 9, 10}}} },
     { "@EP Stalfos Spawn/Pots",          {{0xa8, {11, 12, 13, 14, 15}}} },
@@ -979,7 +979,7 @@ DATA.MEMORY.DungeonPotDrops = {
     { "@PoD Lonely Turtle/Pots",         {{0x0b, {14, 15}}} },
 
     { "@SP Pot Row/Pots",                {{0x38, {13, 14, 15}}} },
-    { "@SP Front Flood Pot/Pot",         {{0x37, {14}}} },
+    { "@SP Front Flood Upper/Pot",       {{0x37, {14}}} },
     { "@SP Isolated Ledge/Pots",         {{0x36, {14, 15}}} },
     { "@SP Hookshot Ledges/Pot",         {{0x36, {10}}} },
     { "@SP Hookshot Ledges/West Pots",   {{0x36, {12, 13}}} },

@@ -633,7 +633,7 @@
                         "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                         "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                         "visibility_rules": [ "pool_dungeonpot_on" ],
-                        "item_count": 2
+                        "item_count": 4
                     }
                 ],
                 "map_locations": [
