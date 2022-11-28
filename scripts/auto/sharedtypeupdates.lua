@@ -153,27 +153,46 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
     end
 end
 
-function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offset)
+function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offset, potSlots)
     offset = offset or 0
     local doorKey = Tracker:FindObjectForCode(doorKeyRef)
     if doorKey then
-        local clearedCount = 0
-        for i, slot in ipairs(roomSlots) do
-            local roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[1] * 2))
+        local function countSlot(roomId, roomSlot, otherRoomId, otherSlot)
+            local clearedCount = 0
+            local roomData = segment:ReadUInt16(0x7ef000 + offset + (roomId * 2))
             
-            if CACHE.ROOM == slot[1] and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            if CACHE.ROOM == roomId and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                 if not (string.sub(doorKeyRef, -5) == "_door" and INSTANCE.NEW_KEY_SYSTEM) then
-                    print(doorKeyRef, string.format("0x%04x", roomData), slot[2])
+                    print(doorKeyRef, string.format("0x%04x", roomData), roomSlot)
                 end
             end
             
-            if (roomData & (1 << slot[2])) ~= 0 then
+            if (roomData & (1 << roomSlot)) ~= 0 then
                 clearedCount = clearedCount + 1
-            elseif #slot > 2 then
-                roomData = segment:ReadUInt16(0x7ef000 + offset + (slot[3] * 2))
+            elseif otherRoomId then
+                roomData = segment:ReadUInt16(0x7ef000 + offset + (otherRoomId * 2))
 
-                if (roomData & (1 << slot[4])) ~= 0 then
+                if (roomData & (1 << otherSlot)) ~= 0 then
                     clearedCount = clearedCount + 1
+                end
+            end
+            return clearedCount
+        end
+
+        local clearedCount = 0
+        if roomSlots then
+            for i, slot in ipairs(roomSlots) do
+                if #slot > 2 then
+                    clearedCount = clearedCount + countSlot(slot[1], slot[2], slot[3], slot[4])
+                else
+                    clearedCount = clearedCount + countSlot(slot[1], slot[2])
+                end
+            end
+        end
+        if potSlots then
+            for i, room in ipairs(potSlots) do
+                for i, slot in ipairs(room[2]) do
+                    clearedCount = clearedCount + countSlot(room[1], slot)
                 end
             end
         end
@@ -188,21 +207,35 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offs
     end
 end
 
-function updateDoorKeyFromTempRoom(doorKeyRef, data, tempValue)
+function updateDoorKeyFromTempRoom(doorKeyRef, data, tempValue, dataMore)
     local modified = false
     if data then
+        local function countSlot(roomId, roomSlot)
+            local clearedCount = 0
+            if roomId == CACHE.ROOM then
+                if (tempValue & (1 << roomSlot)) ~= 0 then
+                    clearedCount = clearedCount + 1
+                end
+            else
+                local roomData = AutoTracker:ReadU16(0x7ef000 + (roomId * 2), 0)
+                if (roomData & (1 << roomSlot)) ~= 0 then
+                    clearedCount = clearedCount + 1
+                end
+            end
+            return clearedCount
+        end
+
         local doorKey = Tracker:FindObjectForCode(doorKeyRef)
         local clearedCount = 0
         
         for i, slot in ipairs(data) do
-            if slot[1] == CACHE.ROOM then
-                if (tempValue & (1 << slot[2])) ~= 0 then
-                    clearedCount = clearedCount + 1
-                end
-            else
-                local roomData = AutoTracker:ReadU16(0x7ef000 + (slot[1] * 2), 0)
-                if (roomData & (1 << slot[2])) ~= 0 then
-                    clearedCount = clearedCount + 1
+            clearedCount = clearedCount + countSlot(slot[1], slot[2])
+        end
+
+        if dataMore then
+            for i, room in ipairs(dataMore) do
+                for j, slot in ipairs(room[2]) do
+                    clearedCount = clearedCount + countSlot(room[1], slot)
                 end
             end
         end

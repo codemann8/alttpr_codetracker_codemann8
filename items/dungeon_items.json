@@ -460,10 +460,24 @@
         "max_quantity": 3
     },
     {
+        "name": "Tower of Hera Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "toh_potkey",
+        "max_quantity": 0
+    },
+    {
         "name": "Aga Tower Pot Key",
         "type": "consumable",
         "img": "images/items/smallkey.png",
         "codes": "at_potkey",
+        "max_quantity": 0
+    },
+    {
+        "name": "Palace of Darkness Pot Key",
+        "type": "consumable",
+        "img": "images/items/smallkey.png",
+        "codes": "pod_potkey",
         "max_quantity": 0
     },
     {

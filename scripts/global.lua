@@ -342,6 +342,7 @@ function updateChests()
     end
 
     for i = 1, #DATA.DungeonList do
+        local dungData = DATA.DungeonData[DATA.DungeonList[i]]
         local key = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_smallkey")
         local newMax = 0
         if OBJ_DOORSHUFFLE:getState() == 2 then
@@ -353,12 +354,12 @@ function updateChests()
                 bk.Icon = ImageReference:FromPackRelativePath("images/items/bigkey.png", bk.Active and "" or "@disabled")
             end
         else
-            newMax = DATA.DungeonData[DATA.DungeonList[i]][6]
+            newMax = dungData[6]
             if OBJ_POOL_ENEMYDROP:getState() > 0 then
-                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7]
+                newMax = newMax + dungData[7]
             end
             if OBJ_POOL_DUNGEONPOT:getState() > 0 then
-                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
+                newMax = newMax + dungData[8]
             end
             key.MaxCount = newMax
 
@@ -390,14 +391,14 @@ function updateChests()
                 updateDungeonTotal(DATA.DungeonList[i], seenFlags)
             end
         else
-            newMax = DATA.DungeonData[DATA.DungeonList[i]][5]
+            newMax = dungData[5]
             if OBJ_POOL_ENEMYDROP:getState() > 0 then
-                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][7] + (DATA.DungeonList[i] == "hc" and 1 or 0)
+                newMax = newMax + dungData[7] + (DATA.DungeonList[i] == "hc" and 1 or 0)
             end
             if OBJ_POOL_DUNGEONPOT:getState() > 0 then
-                newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][8]
+                newMax = newMax + dungData[8]
                 if OBJ_POOL_DUNGEONPOT:getState() > 2 then
-                    newMax = newMax + DATA.DungeonData[DATA.DungeonList[i]][9]
+                    newMax = newMax + dungData[9]
                 end
             end
             item.MaxCount = newMax
@@ -426,6 +427,15 @@ function updateChests()
                 newMax = newMax + 1
                 if Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey").Active then
                     newDeducted = newDeducted + 1
+                end
+            end
+
+            local potKeys = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_potkey")
+            if potKeys then
+                if OBJ_POOL_DUNGEONPOT:getState() > 1 then
+                    potKeys.MaxCount = dungData[8] + dungData[9]
+                else
+                    potKeys.MaxCount = dungData[8]
                 end
             end
         end
