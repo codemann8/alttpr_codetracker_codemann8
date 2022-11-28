@@ -70,7 +70,8 @@
                 "name": "Bunny Rules",
                 "access_rules": [
                     "ow_swapped_70,pearl",
-                    "ow_swapped_30"
+                    "ow_swapped_30",
+                    "glitch_mode_major,bottle"
                 ],
                 "item_count": 1
             },
