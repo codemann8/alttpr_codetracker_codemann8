@@ -163,7 +163,7 @@ DATA.DykTexts = {
 DATA.DungeonList = { "hc", "ep", "dp", "toh", "at", "pod", "sp", "sw", "tt", "ip", "mm", "tr", "gt" }
 
 DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots
-    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 35 },
+    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 34 },
     ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1, 50 },
     ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3, 47 },
     ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0, 25 },
