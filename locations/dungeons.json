@@ -245,6 +245,13 @@
         ]
     },
     {
+        "name": "TR Side Access",
+        "access_rules": [
+            "ow_swapped_05",
+            "entrance_shuffle_on"
+        ]
+    },
+    {
         "name": "TR Main Entrance",
         "access_rules": [
             "ow_swapped_47,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
@@ -2437,12 +2444,12 @@
                 "name": "Compass Room",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,somaria",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,somaria",
-                    "@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria",
-                    "@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
-                    "@TR Laser Entrance,keysanity_smallkey_off,somaria",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,somaria",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:6],somaria",
+                    "@TR Side Access,@TR Laser Entrance,keysanity_smallkey_off,somaria",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2467,10 +2474,10 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:1",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:2]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
-                    "@TR Bridge Entrances,tr_smallkey:1,[tr_smallkey:5]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off",
-                    "@TR Laser Entrance,tr_smallkey:1,[tr_smallkey:5],somaria,[lamp]",
-                    "@TR Laser Entrance,keysanity_smallkey_off,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,tr_smallkey:1,[tr_smallkey:5]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off",
+                    "@TR Side Access,@TR Laser Entrance,tr_smallkey:1,[tr_smallkey:5],somaria,[lamp]",
+                    "@TR Side Access,@TR Laser Entrance,keysanity_smallkey_off,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2486,8 +2493,8 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:2",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:3]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
-                    "@TR Bridge Entrances",
-                    "@TR Laser Entrance,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances",
+                    "@TR Side Access,@TR Laser Entrance,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2500,8 +2507,8 @@
                     "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3",
                     "@Turtle Rock/Dungeon Access,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
-                    "@TR Bridge Entrances",
-                    "@TR Laser Entrance,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances",
+                    "@TR Side Access,@TR Laser Entrance,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2516,12 +2523,12 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:4,[tr_smallkey:6]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
-                    "@TR Bridge Entrances,pool_enemydrop_off,[tr_smallkey:4]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off",
-                    "@TR Laser Entrance,pool_enemydrop_off,[tr_smallkey:4],somaria,[lamp]",
-                    "@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
-                    "@TR Laser Entrance,keysanity_smallkey_off,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,[tr_smallkey:4]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_off,[tr_smallkey:4],somaria,[lamp]",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
+                    "@TR Side Access,@TR Laser Entrance,keysanity_smallkey_off,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2535,7 +2542,7 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
-                    "@TR Bridge Entrances",
+                    "@TR Side Access,@TR Bridge Entrances",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2572,8 +2579,8 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4],keysanity_bigkey_off",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off",
-                    "@TR Bridge Entrances,tr_bigkey",
-                    "@TR Bridge Entrances,keysanity_bigkey_off",
+                    "@TR Side Access,@TR Bridge Entrances,tr_bigkey",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_bigkey_off",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2585,7 +2592,7 @@
                 "access_rules": [
                     "@Turtle Rock/Bomb Wall,bombs",
                     "@Turtle Rock/Bomb Wall,boots",
-                    "@TR Laser Entrance,somaria,[lamp]",
+                    "@TR Side Access,@TR Laser Entrance,somaria,[lamp]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
@@ -2601,12 +2608,12 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:4,[tr_smallkey:5],keysanity_bigkey_off,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:3],tr_bigkey,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:3],keysanity_bigkey_off,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],tr_bigkey,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],keysanity_bigkey_off,somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,tr_bigkey,somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,keysanity_bigkey_off,somaria,[lamp]"
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:3],tr_bigkey,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:3],keysanity_bigkey_off,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],tr_bigkey,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:5],keysanity_bigkey_off,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,tr_bigkey,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,keysanity_bigkey_off,somaria,[lamp]"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -2616,7 +2623,7 @@
                 "access_rules": [
                     "@Turtle Rock/Pre-Laser Forward Path,bombs",
                     "@Turtle Rock/Pre-Laser Forward Path,boots",
-                    "@TR Laser Entrance",
+                    "@TR Side Access,@TR Laser Entrance",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access,[cape]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access,[byrna]",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access,[mirrorshield]",
@@ -2633,20 +2640,20 @@
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],bombs,[lamp]",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],bombs,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,bombs,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],bombs,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],bombs,somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,bombs,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],bombs,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],bombs,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,bombs,somaria,[lamp]",
                     
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],boots,[lamp]",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],boots,[lamp]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,boots,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],boots,somaria,[lamp]",
-                    "@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],boots,somaria,[lamp]",
-                    "@TR Bridge Entrances,keysanity_smallkey_off,boots,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],boots,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],boots,somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,boots,somaria,[lamp]",
                     
-                    "@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4]",
-                    "@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
-                    "@TR Laser Entrance,keysanity_smallkey_off",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4]",
+                    "@TR Side Access,@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
+                    "@TR Side Access,@TR Laser Entrance,keysanity_smallkey_off",
                     "door_shuffle_basic,@Turtle Rock/Dungeon Access",
                     "door_shuffle_crossed"
                 ],
