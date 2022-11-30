@@ -47,62 +47,6 @@ function sendExternalMessage(filename, value)
 end
 
 function saveSettings(setting)
-    local emoDir = "Documents\\EmoTracker\\"
-    local packRoot = "user_overrides\\alttpr_codetracker_codemann8\\"
-    
-    local function writeOverride(path, filename, text)
-        local fullDir = ""
-
-        if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-            fullDir = os.getenv("OneDrive") .. "\\"
-        elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
-            fullDir = CONFIG.DOCUMENTS_FOLDER
-        else
-            print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
-            print("OneDrive:", os.getenv("OneDrive"))
-            print("UserProfile:", os.getenv("UserProfile"))
-        end
-
-        local written = false
-        if fullDir ~= "" then
-            written = writeFile(fullDir .. emoDir .. packRoot, path, filename, text)
-        
-            if dirExists(fullDir .. emoDir .. "dev\\") then
-                written = writeFile(fullDir .. emoDir .. "dev\\" .. packRoot, path, filename, text) or written
-            end
-
-            if not written then
-                print("ERROR: User hasn't overridden any settings files yet. Press F1 to read the documentation for steps to resolve.")
-            end
-        end
-
-        Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
-        Layout:FindLayout("ref_settings_v_message").Root.Layout = not written and Layout:FindLayout("settings_v_message") or nil
-    end
-    
-    local function deleteOverride(path, filename)
-        local fullDir = ""
-        
-        if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-            fullDir = os.getenv("OneDrive") .. "\\"
-        elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
-            fullDir = CONFIG.DOCUMENTS_FOLDER
-        else
-            print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
-            print("OneDrive:", os.getenv("OneDrive"))
-            print("UserProfile:", os.getenv("UserProfile"))
-            return false
-        end
-
-        if dirExists(fullDir .. emoDir .. packRoot .. path .. filename) then
-            os.remove(fullDir .. emoDir .. packRoot .. path .. filename)
-        end
-        
-        if dirExists(fullDir .. emoDir .. "dev\\" .. packRoot .. path .. filename) then
-            os.remove(fullDir .. emoDir .. "dev\\" .. packRoot .. path .. filename)
-        end
-    end
-    
     local textOutput = ""
     local isDefault = true
     for textcode, data in pairs(DATA.SettingsData[setting.file]) do
@@ -120,6 +64,61 @@ function saveSettings(setting)
     else
         writeOverride("settings\\", setting.file, textOutput)
     end
+end
+
+function writeOverride(path, filename, text)
+    local fullDir, packRoot = getFullDir()
+
+    local written = false
+    if fullDir ~= nil then
+        written = writeFile(fullDir .. packRoot, path, filename, text)
+    
+        if dirExists(fullDir .. "dev\\") then
+            written = writeFile(fullDir .. "dev\\" .. packRoot, path, filename, text) or written
+        end
+
+        if not written then
+            print("ERROR: User hasn't overridden any settings files yet. Press F1 to read the documentation for steps to resolve.")
+        end
+    end
+
+    Layout:FindLayout("ref_settings_message").Root.Layout = not written and Layout:FindLayout("settings_message") or nil
+    Layout:FindLayout("ref_settings_v_message").Root.Layout = not written and Layout:FindLayout("settings_v_message") or nil
+end
+
+function deleteOverride(path, filename)
+    local fullDir, packRoot = getFullDir()
+
+    if dirExists(fullDir .. packRoot .. path .. filename) then
+        os.remove(fullDir .. packRoot .. path .. filename)
+    end
+    
+    if dirExists(fullDir .. "dev\\" .. packRoot .. path .. filename) then
+        os.remove(fullDir .. "dev\\" .. packRoot .. path .. filename)
+    end
+end
+
+function getFullDir()
+    local emoDir = "Documents\\EmoTracker\\"
+    local packRoot = "user_overrides\\alttpr_codetracker_codemann8\\"
+    local baseDir = ""
+    
+    if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
+        baseDir = os.getenv("OneDrive") .. "\\"
+    elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
+        baseDir = CONFIG.DOCUMENTS_FOLDER
+    else
+        print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
+        print("OneDrive:", os.getenv("OneDrive"))
+        print("UserProfile:", os.getenv("UserProfile"))
+        return nil, nil
+    end
+
+    if baseDir == "" then
+        return nil, nil
+    end
+
+    return baseDir .. emoDir, packRoot
 end
 
 function writeFile(rootpath, localpath, filename, text)
