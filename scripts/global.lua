@@ -308,7 +308,7 @@ function initialize()
         updateDyk()
 
         if Tracker.ActiveVariantUID == "full_tracker" then
-            CaptureBadgeCache = {}
+            CACHE.CaptureBadges = {}
         
             --Link Dungeon Locations to Chest Items
             for i = 1, #DATA.DungeonList do
@@ -676,14 +676,14 @@ end
 
 function updateGhost(section, clearSection, markHostedItem)
     local target, hiddenTarget
-    if not CaptureBadgeCache[section] then
+    if not CACHE.CaptureBadges[section] then
         local tempSection = section:gsub("/", " Ghost/")
         target = Tracker:FindObjectForCode(section)
         hiddenTarget = Tracker:FindObjectForCode(tempSection)
-        CaptureBadgeCache[section] = {target, hiddenTarget, nil, nil}
+        CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
     else
-        target = CaptureBadgeCache[section][1]
-        hiddenTarget = CaptureBadgeCache[section][2]
+        target = CACHE.CaptureBadges[section][1]
+        hiddenTarget = CACHE.CaptureBadges[section][2]
     end
 
     if target == nil or hiddenTarget == nil then
@@ -692,18 +692,18 @@ function updateGhost(section, clearSection, markHostedItem)
     elseif target.CapturedItem and hiddenTarget and not hiddenTarget.Visible then
         removeGhost(section)
     end
-    if target.CapturedItem ~= CaptureBadgeCache[section][4] and hiddenTarget.Visible then
-        if CaptureBadgeCache[section][3] then
-            hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[section][3])
-            CaptureBadgeCache[section][3] = nil
-            CaptureBadgeCache[section][4] = nil
+    if target.CapturedItem ~= CACHE.CaptureBadges[section][4] and hiddenTarget.Visible then
+        if CACHE.CaptureBadges[section][3] then
+            hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
+            CACHE.CaptureBadges[section][3] = nil
+            CACHE.CaptureBadges[section][4] = nil
         end
         if target.CapturedItem and hiddenTarget.Visible then
-            CaptureBadgeCache[section][3] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-            CaptureBadgeCache[section][4] = target.CapturedItem
+            CACHE.CaptureBadges[section][3] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
+            CACHE.CaptureBadges[section][4] = target.CapturedItem
             if clearSection then
                 target.AvailableChestCount = 0
-                target.CapturedItem = CaptureBadgeCache[section][4]
+                target.CapturedItem = CACHE.CaptureBadges[section][4]
             end
             if markHostedItem then
                 if target.HostedItem then
@@ -726,22 +726,22 @@ end
 
 function removeGhost(section)
     local target, hiddenTarget
-    if not CaptureBadgeCache[section] then
+    if not CACHE.CaptureBadges[section] then
         local tempSection = section:gsub("/", " Ghost/")
         target = Tracker:FindObjectForCode(section)
         hiddenTarget = Tracker:FindObjectForCode(tempSection)
-        CaptureBadgeCache[section] = {target, hiddenTarget, nil, nil}
+        CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
     else
-        target = CaptureBadgeCache[section][1]
-        hiddenTarget = CaptureBadgeCache[section][2]
+        target = CACHE.CaptureBadges[section][1]
+        hiddenTarget = CACHE.CaptureBadges[section][2]
     end
 
     if target == nil or hiddenTarget == nil then
         print("Failed to resolve " .. section .. " please check for typos.")
-    elseif CaptureBadgeCache[section][4] then
-        hiddenTarget.Owner:RemoveBadge(CaptureBadgeCache[section][3])
-        CaptureBadgeCache[section][3] = nil
-        CaptureBadgeCache[section][4] = nil
+    elseif CACHE.CaptureBadges[section][4] then
+        hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
+        CACHE.CaptureBadges[section][3] = nil
+        CACHE.CaptureBadges[section][4] = nil
     end
 end
 
