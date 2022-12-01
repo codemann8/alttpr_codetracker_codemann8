@@ -1,5 +1,6 @@
 --User Config
 CONFIG = {}
+BACKUP = {}
 ScriptHost:LoadScript("settings/documents.lua")
 ScriptHost:LoadScript("settings/defaults.lua")
 ScriptHost:LoadScript("settings/layout.lua")
@@ -7,6 +8,7 @@ ScriptHost:LoadScript("settings/broadcast.lua")
 ScriptHost:LoadScript("settings/tracking.lua")
 ScriptHost:LoadScript("settings/fileio.lua")
 ScriptHost:LoadScript("settings/experimental.lua")
+ScriptHost:LoadScript("settings/backup.lua")
 
 
 --Classes & SDK
@@ -26,6 +28,7 @@ if Tracker.ActiveVariantUID ~= "vanilla" then
     ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
     ScriptHost:LoadScript("scripts/custom/dykclose.lua")
     ScriptHost:LoadScript("scripts/custom/trackersync.lua")
+    ScriptHost:LoadScript("scripts/custom/trackerrestore.lua")
     if Tracker.ActiveVariantUID == "full_tracker" then
         ScriptHost:LoadScript("scripts/custom/owswap.lua")
 

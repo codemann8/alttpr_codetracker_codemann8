@@ -98,6 +98,8 @@ function Setting:updateSetting()
             CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE = self:getState()
         elseif self.textcode == "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE" then
             CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE = self:getState()
+        elseif self.textcode == "CONFIG.ENABLE_BACKUP_FILE" then
+            CONFIG.ENABLE_BACKUP_FILE = self:getState()
         end
     end
     if STATUS.TRACKER_READY then

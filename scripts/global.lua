@@ -5,6 +5,7 @@ STATUS.START_CLOCK = os.clock()
 STATUS.START_DATE = os.date("*t")
 STATUS.TRACKER_READY = false
 STATUS.ACCESS_COUNTER = 0
+STATUS.GameStarted = 0
 
 CONFIG.LAYOUT_SHOW_MAP_GRIDLINES = false
 
@@ -24,7 +25,9 @@ INSTANCE.NEW_SRAM_SYSTEM = false
 INSTANCE.VERSION_MAJOR = 0
 INSTANCE.VERSION_MINOR = 0
 
+INSTANCE.LOCATION_CACHE = {}
 INSTANCE.MISSING_SECTIONS = {}
+INSTANCE.OWSWAPS = {}
 
 INSTANCE.DUNGEON_PRIZE_DATA = 0x0000
 
@@ -228,8 +231,8 @@ function loadModes()
     OBJ_OWSHUFFLE = OverworldLayoutMode(false):linkSurrogate(OverworldLayoutMode(true))
     OBJ_RETRO = RetroMode(false):linkSurrogate(RetroMode(true))
     OBJ_DISTRICT = PoolMode(0, "District")
-    PoolMode(0, "Shopsanity"):linkSurrogate(PoolMode(1, "Shopsanity"))
-    PoolMode(0, "Bonk Drop"):linkSurrogate(PoolMode(1, "Bonk Drop"))
+    OBJ_POOL_SHOP = PoolMode(0, "Shopsanity"):linkSurrogate(PoolMode(1, "Shopsanity"))
+    OBJ_POOL_BONK = PoolMode(0, "Bonk Drop"):linkSurrogate(PoolMode(1, "Bonk Drop"))
     OBJ_POOL_ENEMYDROP = PoolMode(0, "Enemy Drop")
     OBJ_POOL_ENEMYDROP:linkSurrogate(PoolMode(1, "Enemy Drop"):linkSurrogate(PoolMode(2, "Enemy Drop"):linkSurrogate(OBJ_POOL_ENEMYDROP, true), true), true)
     OBJ_POOL_DUNGEONPOT = PoolPotMode(0, "Dungeon Pot")
@@ -239,13 +242,35 @@ function loadModes()
     OBJ_GLITCHMODE = GlitchMode(false):linkSurrogate(GlitchMode(true))
     OBJ_RACEMODE = RaceMode(false):linkSurrogate(RaceMode(true))
 
-    GTCrystalReq()
+    OBJ_GTCRYSTALS = GTCrystalReq()
+
+    MODES = {
+        ["world_state_mode"] = OBJ_WORLDSTATE,
+        ["keysanity_map"] = OBJ_KEYMAP,
+        ["keysanity_compass"] = OBJ_KEYCOMPASS,
+        ["keysanity_smallkey"] = OBJ_KEYSMALL,
+        ["keysanity_bigkey"] = OBJ_KEYBIG,
+        ["entrance_shuffle"] = OBJ_ENTRANCE,
+        ["door_shuffle"] = OBJ_DOORSHUFFLE,
+        ["ow_mixed"] = OBJ_MIXED,
+        ["ow_layout"] = OBJ_OWSHUFFLE,
+        ["retro_mode"] = OBJ_RETRO,
+        ["pool_district"] = OBJ_DISTRICT,
+        ["pool_shopsanity"] = OBJ_POOL_SHOP,
+        ["pool_bonkdrop"] = OBJ_POOL_BONK,
+        ["pool_enemydrop"] = OBJ_POOL_ENEMYDROP,
+        ["pool_dungeonpot"] = OBJ_POOL_DUNGEONPOT,
+        ["pool_cavepot"] = OBJ_POOL_CAVEPOT,
+        ["glitch_mode"] = OBJ_GLITCHMODE,
+        ["race_mode"] = OBJ_RACEMODE,
+        ["gt_crystals"] = OBJ_GTCRYSTALS
+    }
 end
 
 function loadSwaps()
     if Tracker.ActiveVariantUID == "full_tracker" then
         for i = 1, #DATA.OverworldIds do
-            OWSwap(DATA.OverworldIds[i]):linkSurrogate(OWSwap(DATA.OverworldIds[i] + 0x40))
+            INSTANCE.OWSWAPS[i] = OWSwap(DATA.OverworldIds[i]):linkSurrogate(OWSwap(DATA.OverworldIds[i] + 0x40))
         end
     end
 end
@@ -299,6 +324,7 @@ function loadMisc()
         DykCloseItem(2)
         DykCloseItem(3)
         TrackerSync()
+        TrackerRestore()
         SaveStorage()
     end
 end
@@ -623,6 +649,9 @@ function initMissingSections()
         local locations = maps.Current.Locations:GetEnumerator()
         locations:MoveNext()
         while (locations.Current ~= nil) do
+            if maps.Current.Name == "darkworld" then
+                INSTANCE.LOCATION_CACHE[locations.Current.Location.Name] = locations.Current.Location
+            end
             local sections = locations.Current.Location.Sections:GetEnumerator()
             sections:MoveNext()
             while (sections.Current ~= nil) do
@@ -690,9 +719,11 @@ function updateGhost(section, clearSection, markHostedItem)
         print("Failed to resolve " .. section .. " please check for typos.")
         return false
     elseif target.CapturedItem and hiddenTarget and not hiddenTarget.Visible then
+        INSTANCE.CAPTURE_BADGES_CHANGED = true
         removeGhost(section)
     end
     if target.CapturedItem ~= CACHE.CaptureBadges[section][4] and hiddenTarget.Visible then
+        INSTANCE.CAPTURE_BADGES_CHANGED = true
         if CACHE.CaptureBadges[section][3] then
             hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
             CACHE.CaptureBadges[section][3] = nil

@@ -43,7 +43,14 @@ function tracker_on_accessibility_updated()
             --     print("After chest update: " .. os.clock() - STATUS.START_CLOCK)
             -- end
 
+            INSTANCE.CAPTURE_BADGES_CHANGED = false
             updateAllGhosts()
+            if INSTANCE.CAPTURE_BADGES_CHANGED then
+                if STATUS.GameStarted == 0 then
+                    STATUS.GameStarted = os.time()
+                end
+                saveBackup()
+            end
         end
     end
 end

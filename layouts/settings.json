@@ -498,6 +498,40 @@
                         "text": "Enable External Health File"
                     }
                 ]
+            },
+            {
+                "type": "array",
+                "orientation": "horizontal",
+                "v_alignment": "center",
+                "margin": "0,0,0,1",
+                "scale": 0.75,
+                "content": [
+                    {
+                        "type": "item",
+                        "item": "settings_fileio_backup",
+                        "width": 20
+                    },
+                    {
+                        "type": "text",
+                        "h_alignment": "left",
+                        "v_alignment": "center",
+                        "margin": "4,0,0,2",
+                        "text": "Enable Backup File"
+                    },
+                    {
+                        "type": "container",
+                        "margin": "0,0,0,2",
+                        "content": [
+                            {
+                                "type": "item",
+                                "item": "tracker_restore",
+                                "v_alignment": "center",
+                                "margin": "10,0,0,0",
+                                "height": 16
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

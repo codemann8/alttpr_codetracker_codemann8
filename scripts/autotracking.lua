@@ -136,6 +136,7 @@ function initMemoryWatch()
         end
     end
     
+    STATUS.GameStarted = os.time()
     STATUS.LastMajorItem = os.time()
 
     STATUS.AutotrackerInGame = true

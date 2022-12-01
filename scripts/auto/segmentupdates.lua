@@ -235,6 +235,8 @@ function updateDungeonIdFromMemorySegment(segment)
         CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
     end
 
+    saveBackup()
+
     if CACHE.DUNGEON < 0xff then
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
             print("CURRENT DUNGEON:", DATA.DungeonIdMap[CACHE.DUNGEON], CACHE.DUNGEON, string.format("0x%2X", CACHE.DUNGEON))

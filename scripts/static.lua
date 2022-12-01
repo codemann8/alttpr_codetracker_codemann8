@@ -28,7 +28,8 @@ DATA.SettingsHeader = {
     { "fileio.lua", {
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE",
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE",
-        "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"
+        "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE",
+        "CONFIG.ENABLE_BACKUP_FILE"
     }}
 }
 
@@ -60,7 +61,8 @@ DATA.SettingsData = {
     ["fileio.lua"] = {
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE"] =      {"Enable External Item File",            "settings_fileio_item",            2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE},
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE"] =  {"Enable External Dungeon File",         "settings_fileio_dungeon",         2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE},
-        ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"] =    {"Enable External Health File",          "settings_fileio_health",          2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE}
+        ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE"] =    {"Enable External Health File",          "settings_fileio_health",          2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE},
+        ["CONFIG.ENABLE_BACKUP_FILE"] =                         {"Enable Backup File",                   "settings_fileio_backup",          2, false, CONFIG.ENABLE_BACKUP_FILE}
     }
 }
 
