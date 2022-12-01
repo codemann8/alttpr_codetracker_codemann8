@@ -68,7 +68,7 @@ function ChestCounter:UpdateBadgeAndIcon()
 end
 
 function ChestCounter:InvalidateAccessibility()
-    self.ItemInstance:InvalidateAccessibility()
+    --self.ItemInstance:InvalidateAccessibility()
 end
 
 function ChestCounter:Increment(count)

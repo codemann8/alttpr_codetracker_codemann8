@@ -617,13 +617,13 @@ function initMissingSections()
     --Location Header is able to be retrieved by Tracker:FindObjectForCode(), so this bit of code
     --loops thru all the Map Locations and stores the locations that FindObjectForCode() cannot.
     --Beware, the locations that end up here probably cannot be referenced in logic access rules.
-    maps = Layout:FindLayout("search_maps").Root.Maps:GetEnumerator()
+    local maps = Layout:FindLayout("search_maps").Root.Maps:GetEnumerator()
     maps:MoveNext()
     while (maps.Current ~= nil) do
-        locations = maps.Current.Locations:GetEnumerator()
+        local locations = maps.Current.Locations:GetEnumerator()
         locations:MoveNext()
         while (locations.Current ~= nil) do
-            sections = locations.Current.Location.Sections:GetEnumerator()
+            local sections = locations.Current.Location.Sections:GetEnumerator()
             sections:MoveNext()
             while (sections.Current ~= nil) do
                 if not Tracker:FindObjectForCode("@" .. locations.Current.Location.Name .. "/" .. sections.Current.Name) then

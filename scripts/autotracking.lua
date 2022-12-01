@@ -26,8 +26,6 @@ ScriptHost:LoadScript("scripts/auto/segmentupdates.lua")
 
 
 function initMemoryWatch()
-    STATUS.LastMajorItem = os.time()
-
     INSTANCE.MEMORY.Items = {}
     INSTANCE.MEMORY.ToggleItems = {}
     INSTANCE.MEMORY.Progress = {}
@@ -138,6 +136,8 @@ function initMemoryWatch()
         end
     end
     
+    STATUS.LastMajorItem = os.time()
+
     STATUS.AutotrackerInGame = true
 end
 

@@ -24,8 +24,8 @@ if Tracker.ActiveVariantUID ~= "vanilla" then
     ScriptHost:LoadScript("scripts/custom/savestorage.lua")
     ScriptHost:LoadScript("scripts/custom/extchestcounter.lua")
     ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
-        ScriptHost:LoadScript("scripts/custom/dykclose.lua")
-        ScriptHost:LoadScript("scripts/custom/trackersync.lua")
+    ScriptHost:LoadScript("scripts/custom/dykclose.lua")
+    ScriptHost:LoadScript("scripts/custom/trackersync.lua")
     if Tracker.ActiveVariantUID == "full_tracker" then
         ScriptHost:LoadScript("scripts/custom/owswap.lua")
 
