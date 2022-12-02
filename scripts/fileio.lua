@@ -1,5 +1,5 @@
 function itemFlippedOn(item)
-    if os.time() - STATUS.LastMajorItem > 2 and STATUS.AutotrackerInGame then
+    if os.clock() - STATUS.LastMajorItem > 2 and STATUS.AutotrackerInGame then
         if item == "sword" then
             local object = Tracker:FindObjectForCode(item)
             if object.CurrentStage == 2 then
@@ -27,7 +27,7 @@ function itemFlippedOn(item)
             sendExternalMessage("item", item)
         end
         
-        STATUS.LastMajorItem = os.time()
+        STATUS.LastMajorItem = os.clock()
     end
 end
 
