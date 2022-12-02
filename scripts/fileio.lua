@@ -72,14 +72,15 @@ function saveBackup()
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
         
-        textOutput = textOutput .. "BACKUP.TOGGLE_ITEMS = {\n"
-        objects = {
-            "dropdown_uncle","dropdown_sanc","dropdown_lumberjack","dropdown_thief",
-            "dropdown_well","dropdown_bat","dropdown_fairy","dropdown_ganon",
-            "dropdown_swpinball","dropdown_swcompass","dropdown_swbigchest","dropdown_swhazard",
+        local toggles = {
+            "dropdown_uncle", "dropdown_sanc", "dropdown_lumberjack", "dropdown_thief",
+            "dropdown_well", "dropdown_bat", "dropdown_fairy", "dropdown_ganon",
+            "dropdown_swpinball", "dropdown_swcompass", "dropdown_swbigchest", "dropdown_swhazard",
+            "easternpalace", "desertpalace", "towerofhera", "palaceofdarkness", "swamppalace",
+            "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock",
             "takeanycave"
         }
-        regions = {
+        local regions = {
             "ow_lost_woods_west", "ow_lost_woods_east", "ow_lumberjack", "ow_dm_west_top", "ow_dm_west_bottom",
             "ow_dm_east_top_hammer", "ow_dm_east_top", "ow_dm_east_spiral", "ow_dm_east_mimic", "ow_dm_east_connect", "ow_dm_east_bottom_hookshot", "ow_dm_east_bottom",
             "ow_trpegs", "ow_mountainentry", "ow_mountainentry_entry", "ow_mountainentry_ledge", "ow_zora_waterfall", "ow_zora_waterfall_fairy", "ow_zora",
@@ -105,7 +106,31 @@ function saveBackup()
             "ow_ice_northwest", "ow_ice_northeast", "ow_ice_southwest", "ow_ice_southeast", "ow_ice_water", "ow_ice_palace",
             "ow_shopping_mall", "ow_swamp_nook", "ow_swamp", "ow_dark_south_pass", "ow_bomber_corner", "ow_bomber_corner_waterfall"
         }
-        for i, icon in pairs(objects) do
+        local progressives = {
+            "bombs","bombos","ether","quake","sword",
+
+            "takeanycave", "flute_shuffle", "whirlpool_shuffle", "goal_setting",
+            "easternpalace", "desertpalace", "towerofhera", "palaceofdarkness", "swamppalace",
+            "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock"
+        }
+        local items = {
+            "bow", "boomerang_blue", "boomerang_red", "hookshot", "bombs", "powder", "mushroom", "boots", "sword",
+            "firerod", "icerod", "bombos", "ether", "quake", "halfmagic", "lift1", "shield",
+            "lamp", "hammer", "ocarina", "net", "book", "shovel", "flippers", "armor",
+            "bottle", "somaria", "byrna", "cape", "mirror", "aga", "aga2", "moonpearl", "gomode"
+        }
+        for i, itemCode in pairs(items) do
+            local item = Tracker:FindObjectForCode(itemCode)
+            if type(item.Active) == "boolean" then
+                table.insert(toggles, itemCode)
+            end
+            if type(item.CurrentStage) == "number" then
+                table.insert(progressives, itemCode)
+            end
+        end
+
+        textOutput = textOutput .. "BACKUP.TOGGLE_ITEMS = {\n"
+        for i, icon in pairs(toggles) do
             textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. (Tracker:FindObjectForCode(icon).Active and "true" or "false") .. ",\n"
         end
         for i, icon in pairs(regions) do
@@ -117,11 +142,7 @@ function saveBackup()
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 
         textOutput = textOutput .. "BACKUP.PROGRESSIVE_ITEMS = {\n"
-        objects = {
-            "bombs","bombos","ether","quake","sword","takeanycave","flute_shuffle","whirlpool_shuffle","goal_setting",
-            "easternpalace","desertpalace","towerofhera","palaceofdarkness","swamppalace","skullwoods","thievestown","icepalace","miserymire","turtlerock"
-        }
-        for i, icon in pairs(objects) do
+        for i, icon in pairs(progressives) do
             textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. math.floor(Tracker:FindObjectForCode(icon).CurrentStage) .. ",\n"
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
@@ -193,7 +214,8 @@ function saveBackup()
         for i = 1, #DATA.DungeonList do
             local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
             local key = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_smallkey")
-            textOutput = textOutput .. "    [\"" .. DATA.DungeonList[i] .. "\"] = {" .. math.floor(item.CollectedCount) .. "," .. math.floor(item.MaxCount) .. "," .. math.floor(key.AcquiredCount) .. "," .. math.floor(key.MaxCount) .. "},\n"
+            local mcbk = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_mcbk").ItemState
+            textOutput = textOutput .. "    [\"" .. DATA.DungeonList[i] .. "\"] = {" .. math.floor(item.CollectedCount) .. "," .. math.floor(item.MaxCount) .. "," .. math.floor(key.AcquiredCount) .. "," .. math.floor(key.MaxCount) .. "," .. math.floor(mcbk:getState()) .. "},\n"
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
         
@@ -322,19 +344,26 @@ function postRestoreBackup()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Restoring Backup File")
     end
+    INSTANCE.BACKUP_RUNNING = false
 
     if BACKUP.DUNGEON_COUNTS ~= nil then
         for dungeonPrefix, data in pairs(BACKUP.DUNGEON_COUNTS) do
             local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
             local key = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+            local mcbk = Tracker:FindObjectForCode(dungeonPrefix .. "_mcbk").ItemState
+            local bk = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+            local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+            local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
             item.MaxCount = data[2]
             item.CollectedCount = data[1]
             key.MaxCount = data[4]
             key.AcquiredCount = data[3]
+            mcbk:setState(data[5])
+            bk.Active = data[5] & 4 > 0
+            compass.Active = data[5] & 2 > 0
+            map.Active = data[5] & 1 > 0
         end
     end
-
-    INSTANCE.BACKUP_RUNNING = false
 end
 
 function saveSettings(setting)
