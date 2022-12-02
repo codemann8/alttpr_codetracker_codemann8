@@ -1,19 +1,14 @@
-GTCrystalReq = CustomItem:extend()
+GTCrystalReq = SurrogateItem:extend()
 
 function GTCrystalReq:init()
     self:createItem("GT Crystal Requirement")
     self.code = "gt_crystals"
     self.ItemInstance.Name = "GT Crystal Requirement"
 
+    self:initSuffix(false)
+
+    self:setCount(9)
     self:setState(8)
-end
-
-function GTCrystalReq:setState(state)
-    self:setProperty("state", state)
-end
-
-function GTCrystalReq:getState()
-    return self:getProperty("state")
 end
 
 function GTCrystalReq:updateIcon()
@@ -38,18 +33,6 @@ function GTCrystalReq:updateIcon()
     end
 end
 
-function GTCrystalReq:onLeftClick()
-    self:setState((self:getState() - 1) % 9)
-end
-
-function GTCrystalReq:onRightClick()
-    self:setState((self:getState() + 1) % 9)
-end
-
-function GTCrystalReq:canProvideCode(code)
-    return code == self.code
-end
-
 function GTCrystalReq:providesCode(code)
     if code == self.code then
         if Tracker:ProviderCountForCode("prize") > 10 or Tracker:ProviderCountForCode("crystal") >= math.min(self:getState(), 7) then
@@ -59,23 +42,4 @@ function GTCrystalReq:providesCode(code)
         return 1
     end
     return 0
-end
-
-function GTCrystalReq:save()
-    local saveData = {}
-    saveData["state"] = self:getState()
-    return saveData
-end
-
-function GTCrystalReq:load(data)
-    if data["state"] ~= nil then
-        self:setState(data["state"])
-    end
-    return true
-end
-
-function GTCrystalReq:propertyChanged(key, value)
-    if key == "state" then
-        self:updateIcon()
-    end
 end
