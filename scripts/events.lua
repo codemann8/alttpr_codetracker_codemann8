@@ -47,10 +47,14 @@ function tracker_on_accessibility_updated()
             updateAllGhosts()
             if INSTANCE.CAPTURE_BADGES_CHANGED then
                 if STATUS.GameStarted == 0 then
-                    STATUS.GameStarted = os.time()
+                    STATUS.GameStarted = os.clock()
                 end
                 saveBackup()
             end
+        end
+
+        if INSTANCE.BACKUP_RUNNING then
+            postRestoreBackup()
         end
     end
 end

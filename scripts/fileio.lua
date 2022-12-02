@@ -47,7 +47,7 @@ function sendExternalMessage(filename, value)
 end
 
 function saveBackup()
-    if CONFIG.ENABLE_BACKUP_FILE and os.time() - STATUS.GameStarted > 300 then
+    if CONFIG.ENABLE_BACKUP_FILE and os.clock() - STATUS.GameStarted > 300 then
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
             print("Saving Backup File")
         end
@@ -109,7 +109,10 @@ function saveBackup()
             textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. (Tracker:FindObjectForCode(icon).Active and "true" or "false") .. ",\n"
         end
         for i, icon in pairs(regions) do
-            textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. (Tracker:FindObjectForCode(icon).Active and "true" or "false") .. ",\n"
+            local reg = Tracker:FindObjectForCode(icon)
+            if reg.Active then
+                textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. (reg.Active and "true" or "false") .. ",\n"
+            end
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 
@@ -174,8 +177,23 @@ function saveBackup()
         textOutput = textOutput .. "BACKUP.CLEARED_LOCATIONS = { \n"
         for locName, loc in pairs(INSTANCE.LOCATION_CACHE) do
             if loc.ModifiedByUser and loc.AccessibilityLevel.Cleared then
-                textOutput = textOutput .. "    \"" .. locName .. "\",\n"
+                local sections = loc.Sections:GetEnumerator()
+                sections:MoveNext()
+                while (sections.Current ~= nil) do
+                    if sections.Current.Visible then
+                        textOutput = textOutput .. "    \"@" .. locName .. "/" .. sections.Current.Name .. "\",\n"
+                    end
+                    sections:MoveNext()
+                end
             end
+        end
+        textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
+        
+        textOutput = textOutput .. "BACKUP.DUNGEON_COUNTS = {\n"
+        for i = 1, #DATA.DungeonList do
+            local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
+            local key = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_smallkey")
+            textOutput = textOutput .. "    [\"" .. DATA.DungeonList[i] .. "\"] = {" .. math.floor(item.CollectedCount) .. "," .. math.floor(item.MaxCount) .. "," .. math.floor(key.AcquiredCount) .. "," .. math.floor(key.MaxCount) .. "},\n"
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
         
@@ -207,20 +225,21 @@ function restoreBackup()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Restoring Backup File")
     end
+    INSTANCE.BACKUP_RUNNING = true
 
     if BACKUP.MODE_SETTINGS ~= nil then
         for mode, value in pairs(BACKUP.MODE_SETTINGS) do
             if mode == "world_state_mode_inverted" then
                 OBJ_WORLDSTATE:setProperty("version", value)
             else
-                MODES[mode]:setState(value)
+                MODES[mode]:setStateExternal(value)
             end
         end
     end
 
     if BACKUP.OWSWAPS ~= nil then
         for i, value in pairs(BACKUP.OWSWAPS) do
-            INSTANCE.OWSWAPS[i]:setState(value)
+            INSTANCE.OWSWAPS[i]:setStateExternal(value)
         end
     end
 
@@ -237,17 +256,10 @@ function restoreBackup()
     end
 
     if BACKUP.CLEARED_LOCATIONS ~= nil then
-        for i, locName in pairs(BACKUP.CLEARED_LOCATIONS) do
-            local loc = INSTANCE.LOCATION_CACHE[locName]
-            local sections = loc.Sections:GetEnumerator()
-            sections:MoveNext()
-            while (sections.Current ~= nil) do
-                if sections.Current.Visible then
-                    sections.Current.AvailableChestCount = 0
-                end
-                sections:MoveNext()
-            end
-            loc.ModifiedByUser = true
+        for i, sectionName in pairs(BACKUP.CLEARED_LOCATIONS) do
+            local section = Tracker:FindObjectForCode(sectionName)
+            section.AvailableChestCount = 0
+            section.Owner.ModifiedByUser = true
         end
     end
 
@@ -304,6 +316,25 @@ function restoreBackup()
     end
 
     refreshDoorSlots()
+end
+
+function postRestoreBackup()
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Restoring Backup File")
+    end
+
+    if BACKUP.DUNGEON_COUNTS ~= nil then
+        for dungeonPrefix, data in pairs(BACKUP.DUNGEON_COUNTS) do
+            local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
+            local key = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+            item.MaxCount = data[2]
+            item.CollectedCount = data[1]
+            key.MaxCount = data[4]
+            key.AcquiredCount = data[3]
+        end
+    end
+
+    INSTANCE.BACKUP_RUNNING = false
 end
 
 function saveSettings(setting)
