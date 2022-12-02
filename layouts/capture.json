@@ -86,7 +86,7 @@
             "item_size": 40,
             "rows": [
                 [ "cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc", "cap_ep", "cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback", "cap_toh", "cap_at" ],
-                [ "cap_pod", "cap_sp", "cap_swback", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
+                [ "cap_pod", "cap_sp", "cap_sw", "cap_tt", "cap_ip", "cap_mm", "cap_trmain", "cap_trleft", "cap_trright", "cap_trback", "cap_gt" ],
                 [ "", "cap_swbacksouth", "cap_swfrontleft", "cap_swfrontright", "", "", "", "", "", "", "" ],
                 [ "cap_drop_uncle", "cap_drop_lumberjack", "cap_drop_hideout", "cap_drop_well", "cap_drop_bat", "cap_drop_fairy", "cap_drop_ganon" ],
                 [ "cap_granny", "cap_brother", "cap_oldman", "cap_mtncave", "cap_mtncave_back", "cap_spec_left", "cap_spec_top", "cap_spec_bottom", "cap_spiral_top", "cap_spiral_bottom" ],
