@@ -773,8 +773,8 @@
             "ow_swapped_1b",
             "ow_swapped_29",
             "pearl,lift2",
-            "whirlpool_shuffle_off,ow_swapped_33,ow_swapped_15,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_3f,ow_swapped_12,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_swapped_15,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_3f,ow_swapped_12,pearl,[flippers]",
             "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_33,ow_swapped_15,pearl",
             "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_33,ow_swapped_15,bottle"
         ]
@@ -1081,7 +1081,7 @@
     {
         "name": "LDW To ZLW",
         "access_rules": [
-            "whirlpool_shuffle_off,[flippers],mirror",
+            "whirlpool_shuffle_off,mirror",
             "whirlpool_shuffle_off,ow_swapped_35,mirror"
         ]
     },
@@ -1128,15 +1128,13 @@
     {
         "name": "ZDW To SELW",
         "access_rules": [
-            "whirlpool_shuffle_off,mirror,pearl,[flippers]",
-            "whirlpool_shuffle_off,mirror,ow_swapped_4f,ow_swapped_75,[flippers]"
+            "whirlpool_shuffle_off,mirror,[flippers]"
         ]
     },
     {
         "name": "ZDW To LLW",
         "access_rules": [
-            "whirlpool_shuffle_off,mirror,pearl,[flippers]",
-            "whirlpool_shuffle_off,mirror,ow_swapped_4f,ow_swapped_75,[flippers]"
+            "whirlpool_shuffle_off,mirror,[flippers]"
         ]
     },
     {
