@@ -628,7 +628,7 @@
                 "access_rules": [
                     "door_shuffle_off,retro_mode_off,bow,@Eastern Palace/Post Dark Eyegore",
                     "door_shuffle_off,retro_mode_on,arrows,bow,@Eastern Palace/Post Dark Eyegore",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Eastern Palace/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -789,7 +789,7 @@
                 "name": "Lanmolas Access",
                 "access_rules": [
                     "@Desert Palace/Stonewall",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Desert Palace/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -915,7 +915,7 @@
                     "glitch_mode_hybrid,@MM Special Access/Left Side Access,toh_bigkey",
                     "glitch_mode_hybrid,@MM Special Access/Left Side Access,[mm_bigkey],hookshot",
                     "glitch_mode_hybrid,@MM Special Access/Left Side Access,[toh_bigkey],hookshot",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Tower of Hera/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1061,7 +1061,7 @@
                     "$canRemoveCurtains,pool_enemydrop_off,at_smallkey:2,[lamp]",
                     "$canRemoveCurtains,pool_enemydrop_on,at_smallkey:4,[lamp]",
                     "$canRemoveCurtains,keysanity_smallkey_off,[lamp]",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Agahnim's Tower/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1284,7 +1284,7 @@
                     "door_shuffle_off,@Palace of Darkness/Lonely Turtle,pod_smallkey:1,[pod_smallkey:6],keysanity_bigkey_off",
                     "door_shuffle_off,@Palace of Darkness/Lonely Turtle,keysanity_smallkey_off,pod_bigkey",
                     "door_shuffle_off,@Palace of Darkness/Lonely Turtle,keysanity_smallkey_off,keysanity_bigkey_off",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Palace of Darkness/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1503,7 +1503,7 @@
                     "door_shuffle_off,pool_keypot_off,@Swamp Palace/Waterway Key",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Waterway Key,sp_smallkey:5,[sp_smallkey:6]",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Waterway Key,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Swamp Palace/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1667,7 +1667,7 @@
                     "@Skull Woods/Gibdo Key,pool_keypot_on,pool_enemydrop_off,sw_smallkey:1,[sw_smallkey:4]",
                     "@Skull Woods/Gibdo Key,pool_keypot_on,pool_enemydrop_on,sw_smallkey:2,[sw_smallkey:5]",
                     "@Skull Woods/Gibdo Key,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Skull Woods/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -1859,7 +1859,7 @@
                 "access_rules": [
                     "@Thieves Town/Blind Access,$canDamageBoss|@Thieves Town/Blind",
                     "{@Thieves Town/Hallway Key}",
-                    "{door_shuffle_on}"
+                    "{door_shuffle_on,@Thieves Town/Dungeon Access}"
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
@@ -2137,7 +2137,7 @@
                     "@Ice Palace/Big Key Door,pool_enemydrop_off,pool_keypot_on,[ip_smallkey:3],[somaria]",
                     "@Ice Palace/Big Key Door,pool_enemydrop_on,pool_keypot_on,[ip_smallkey:5],[somaria]",
                     "@Ice Palace/Basement Switch",
-                    "door_shuffle_on"
+                    "door_shuffle_on,@Ice Palace/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
@@ -2654,8 +2654,7 @@
                     "@TR Side Access,@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4]",
                     "@TR Side Access,@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
                     "@TR Side Access,@TR Laser Entrance,keysanity_smallkey_off",
-                    "door_shuffle_basic,@Turtle Rock/Dungeon Access",
-                    "door_shuffle_crossed"
+                    "door_shuffle_on,@Turtle Rock/Dungeon Access"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
