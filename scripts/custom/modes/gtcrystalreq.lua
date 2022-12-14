@@ -33,6 +33,14 @@ function GTCrystalReq:updateIcon()
     end
 end
 
+function GTCrystalReq:onLeftClick()
+    self:setState((self:getState() - 1) % self:getCount())
+end
+
+function GTCrystalReq:onRightClick()
+    self:setState((self:getState() + 1) % self:getCount())
+end
+
 function GTCrystalReq:providesCode(code)
     if code == self.code then
         if Tracker:ProviderCountForCode("prize") > 10 or Tracker:ProviderCountForCode("crystal") >= math.min(self:getState(), 7) then
