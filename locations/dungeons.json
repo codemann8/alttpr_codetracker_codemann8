@@ -1830,6 +1830,7 @@
                     "door_shuffle_basic,keysanity_bigkey_off",
                     "door_shuffle_crossed"
                 ],
+                "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
             },
             {
