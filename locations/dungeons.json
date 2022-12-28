@@ -1197,6 +1197,17 @@
                 "item_count": 1
             },
             {
+                "name": "Bomb Floor",
+                "access_rules": [
+                    "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,bombs",
+                    "door_shuffle_off,pod_smallkey:1,bombs",
+                    "@PoD Special Access,bombs,[nothing]",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Big Key Chest",
                 "access_rules": [
                     "door_shuffle_off,@Palace of Darkness/Bow Side,hammer,pod_smallkey:1,[pod_smallkey:5],bombs",
@@ -1815,7 +1826,7 @@
             {
                 "name": "Basement Boulders",
                 "access_rules": [
-                    "pool_keypot_off,@Thieves Town/Attic Chest,lift1",
+                    "@Thieves Town/Spike Switch Key,lift1",
                     "door_shuffle_on,lift1"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -2505,8 +2516,10 @@
             {
                 "name": "Lava Pokey",
                 "access_rules": [
-                    "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3",
-                    "@Turtle Rock/Dungeon Access,tr_smallkey:3,[tr_smallkey:4]",
+                    "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,pool_enemydrop_off,tr_smallkey:2",
+                    "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,pool_enemydrop_on,tr_smallkey:3",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,[tr_smallkey:3]",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Side Access,@TR Bridge Entrances",
                     "@TR Side Access,@TR Laser Entrance,somaria,[lamp]",
@@ -2636,21 +2649,25 @@
                 "item_count": 4
             },
             {
+                "name": "Peg Maze Door Helper",
+                "access_rules": [
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],[lamp]",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],[lamp]",
+                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],somaria,[lamp]",
+                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,somaria,[lamp]"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Peg Maze Door",
                 "access_rules": [
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],bombs,[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],bombs,[lamp]",
-                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,bombs,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],bombs,somaria,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],bombs,somaria,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,bombs,somaria,[lamp]",
-                    
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:3,[tr_smallkey:4],boots,[lamp]",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:5,[tr_smallkey:6],boots,[lamp]",
-                    "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,boots,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4],boots,somaria,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6],boots,somaria,[lamp]",
-                    "@TR Side Access,@TR Bridge Entrances,keysanity_smallkey_off,boots,somaria,[lamp]",
+                    "@Turtle Rock/Peg Maze Door Helper,bombs,tr_bigkey",
+                    "@Turtle Rock/Peg Maze Door Helper,bombs,keysanity_bigkey_off",
+                    "@Turtle Rock/Peg Maze Door Helper,boots,tr_bigkey",
+                    "@Turtle Rock/Peg Maze Door Helper,boots,keysanity_bigkey_off",
                     
                     "@TR Side Access,@TR Laser Entrance,pool_enemydrop_off,tr_smallkey:1,[tr_smallkey:4]",
                     "@TR Side Access,@TR Laser Entrance,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:6]",
@@ -2748,6 +2765,7 @@
             {
                 "name": "Stalfos Room",
                 "access_rules": [
+                    "hammer,hookshot",
                     "hammer,bombs,[hookshot]",
                     "hammer,boots,[hookshot]",
                     "door_shuffle_on"
@@ -2762,7 +2780,6 @@
                     "hammer,hookshot",
                     "hammer,boots",
                     "hammer,bombs,[hookshot]",
-                    "hammer,bombs,[boots]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
@@ -2924,6 +2941,15 @@
                     "@Ganon's Tower/Mimics,gt_bigkey",
                     "@Ganon's Tower/Mimics,keysanity_bigkey_off",
                     "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Refill",
+                "access_rules": [
+                    "@Ganon's Tower/Gauntlet,[boots],bombs",
+                    "door_shuffle_on,[boots]"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1

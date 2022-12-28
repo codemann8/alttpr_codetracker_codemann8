@@ -2200,6 +2200,31 @@
                 ]
             },
             {
+                "name": "PoD Basement Ledge",
+                "access_rules": [ "@Palace of Darkness/Bomb Floor" ],
+                "sections": [
+                    {
+                        "name": "Pots",
+                        "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
+                        "chest_opened_img": "images/icons/keydrops/pot-collected.png",
+                        "visibility_rules": [ "pool_dungeonpot_on" ],
+                        "item_count": 2
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "dungeon_egmap",
+                        "x": 2630,
+                        "y": 136
+                    },
+                    {
+                        "map": "dungeon_pod",
+                        "x": 78,
+                        "y": 497
+                    }
+                ]
+            },
+            {
                 "name": "PoD Stalfos Basement",
                 "access_rules": [ "@Palace of Darkness/Stalfos Basement" ],
                 "sections": [
@@ -2208,7 +2233,7 @@
                         "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                         "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                         "visibility_rules": [ "pool_dungeonpot_on" ],
-                        "item_count": 6
+                        "item_count": 4
                     }
                 ],
                 "map_locations": [
@@ -2218,19 +2243,9 @@
                         "y": 69
                     },
                     {
-                        "map": "dungeon_egmap",
-                        "x": 2630,
-                        "y": 136
-                    },
-                    {
                         "map": "dungeon_pod",
                         "x": 246,
                         "y": 409
-                    },
-                    {
-                        "map": "dungeon_pod",
-                        "x": 78,
-                        "y": 497
                     }
                 ]
             },
@@ -2257,7 +2272,7 @@
                 ]
             },
             {
-                "name": "PoD Fallng Bridge",
+                "name": "PoD Falling Bridge",
                 "access_rules": [ "@Palace of Darkness/Turtle Room" ],
                 "sections": [
                     {
@@ -3246,7 +3261,10 @@
             },
             {
                 "name": "SP Waterway",
-                "access_rules": [ "@Swamp Palace/Waterway Key" ],
+                "access_rules": [
+                    "@Swamp Palace/Waterway Key,bombs",
+                    "@Swamp Palace/Waterway Key,door_shuffle_on"
+                ],
                 "sections": [
                     {
                         "name": "Pots",
@@ -4456,7 +4474,7 @@
             },
             {
                 "name": "TT Basement Entry",
-                "access_rules": [ "@Thieves Town/Basement Boulder" ],
+                "access_rules": [ "@Thieves Town/Basement Boulders" ],
                 "sections": [
                     {
                         "name": "Boulder",
@@ -4481,7 +4499,7 @@
             },
             {
                 "name": "TT Basement Conveyor",
-                "access_rules": [ "@Thieves Town/Basement Boulder" ],
+                "access_rules": [ "@Thieves Town/Basement Boulders" ],
                 "sections": [
                     {
                         "name": "Boulder",
@@ -6968,7 +6986,7 @@
             },
             {
                 "name": "GT Hookshot Pits",
-                "access_rules": [ "@Ganon's Tower/Stalfos Room" ],
+                "access_rules": [ "@Ganon's Tower/Pit Room Traversal" ],
                 "sections": [
                     {
                         "name": "Island Pot",
@@ -7796,7 +7814,7 @@
             },
             {
                 "name": "GT Refill",
-                "access_rules": [ "@Ganon's Tower/Gauntlet" ],
+                "access_rules": [ "@Ganon's Tower/Refill" ],
                 "sections": [
                     {
                         "name": "Pots",

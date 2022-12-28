@@ -973,8 +973,9 @@ DATA.MEMORY.DungeonPotDrops = {
     { "@PoD Mimics 1/Pots",              {{0x4b, {14, 15}}} },
     { "@PoD Bow Side/Pots",              {{0x2b, {6, 7, 8, 9}}} },
     { "@PoD Arena/Pots",                 {{0x2a, {14, 15}}} },
-    { "@PoD Stalfos Basement/Pots",      {{0x0a, {9, 10, 11, 12, 13, 14, 15}}} }, --switch is 13
-    { "@PoD Fallng Bridge/Pots",         {{0x1a, {12, 13, 14, 15}}} },
+    { "@PoD Basement Ledge/Pots",        {{0x0a, {9, 10}}} },
+    { "@PoD Stalfos Basement/Pots",      {{0x0a, {11, 12, 13, 14, 15}}} }, --switch is 13
+    { "@PoD Falling Bridge/Pots",        {{0x1a, {12, 13, 14, 15}}} },
     { "@PoD Harmless Hellway/Pots",      {{0x1a, {10, 11}}} },
     { "@PoD Sexy Statue/Pots",           {{0x2b, {10, 11, 12, 13, 14, 15}}} }, --switch is 14
     { "@PoD Mimics 2/Pots",              {{0x1b, {14, 15}}} },
