@@ -2323,7 +2323,9 @@
         "access_rules": [
             "ow_swapped_5b,[mirror]",
             "ow_swapped_5b,[ow_castle_ledge]",
-            "ow_swapped_1b,pearl"
+            "ow_swapped_1b,pearl",
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror"
         ],
         "sections": [
             {
@@ -2359,7 +2361,9 @@
         "parent": "OW Castle Perimeter",
         "access_rules": [
             "ow_swapped_5b",
-            "pearl"
+            "pearl",
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror"
         ],
         "sections": [
             {

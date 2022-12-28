@@ -604,6 +604,10 @@
             "ow_swapped_5b,entrance_shuffle_off,door_shuffle_off,ow_pyramid_pass,mirror",
             "ow_swapped_1b,entrance_shuffle_off,door_shuffle_off,ow_castle_southwest,pearl",
             "ow_swapped_1b,entrance_shuffle_off,door_shuffle_off,ow_castle_east,pearl,lift1",
+
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
+            "ow_swapped_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror",
+
             "entrance_shuffle_off,door_shuffle_off,ow_castle_courtyard"
         ]
     },
