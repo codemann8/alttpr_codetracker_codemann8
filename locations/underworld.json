@@ -451,12 +451,16 @@
             "ow_swapped_14,pearl",
             "ow_swapped_54,glitch_mode_owg,@OW Death Mountain West Bottom,boots",
             "glitch_mode_owg,@OW Death Mountain West Bottom,pearl,boots",
-            "glitch_mode_owg,@OW Death Mountain West Bottom,mirror",
             "glitch_mode_major,@OW Death Mountain West Bottom"
         ],
         "sections": [
             {
                 "name": "Pots",
+                "access_rules": [
+                    "ow_swapped_54",
+                    "pearl",
+                    "glitch_mode_owg,ow_swapped_14,mirror"
+                ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on" ],
@@ -464,7 +468,10 @@
             },
             {
                 "name": "Cave",
-                "access_rules": [ "bombs" ],
+                "access_rules": [
+                    "ow_swapped_54,bombs",
+                    "pearl,bombs"
+                ],
                 "item_count": 1
             }
         ],
