@@ -3788,7 +3788,7 @@
             },
             {
                 "name": "SW Star Pots",
-                "access_rules": [ "@Skull Woods/Many Pots" ],
+                "access_rules": [ "@Skull Woods/Back Pots" ],
                 "sections": [
                     {
                         "name": "Pots",
@@ -3813,7 +3813,7 @@
             },
             {
                 "name": "SW Torch Pots",
-                "access_rules": [ "@Skull Woods/Many Pots" ],
+                "access_rules": [ "@Skull Woods/Back Pots" ],
                 "sections": [
                     {
                         "name": "Pots",

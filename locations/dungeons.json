@@ -1660,9 +1660,18 @@
                 "item_count": 1
             },
             {
+                "name": "Back Pots",
+                "access_rules": [
+                    "@Skull Woods/Bridge,@Skull Woods/Many Pots",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Gibdo Key",
                 "access_rules": [
-                    "@Skull Woods/Bridge,@Skull Woods/Many Pots,firesource,[firerod],$canRemoveCurtains",
+                    "@Skull Woods/Back Pots,firesource,[firerod],$canRemoveCurtains",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "pool_enemydrop_on" ],
