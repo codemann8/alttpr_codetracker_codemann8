@@ -3321,7 +3321,7 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
+                "access_rules": [ "$purple" ],
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
@@ -3771,7 +3771,7 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
+                "access_rules": [ "$purple" ],
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
@@ -4350,8 +4350,8 @@
             {
                 "name": "Take Any Cave",
                 "access_rules": [
-                    "ow_swapped_43,@OW Dark Death Mountain West Bottom,[nothing]",
-                    "ow_swapped_03,@OW Mountain Entry,pearl,lift1,cape,mirror,[nothing]"
+                    "ow_swapped_43,@OW Dark Death Mountain West Bottom,$purple",
+                    "ow_swapped_03,@OW Mountain Entry,pearl,lift1,cape,mirror,$purple"
                 ],
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
@@ -5661,7 +5661,7 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [ "boots,[nothing]" ],
+                "access_rules": [ "boots,$purple" ],
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [
@@ -6265,7 +6265,7 @@
         "sections": [
             {
                 "name": "Take Any Cave",
-                "access_rules": [ "[nothing]" ],
+                "access_rules": [ "$purple" ],
                 "chest_unopened_img": "images/icons/takeanycave.png",
                 "chest_opened_img": "images/icons/takeanycave.png",
                 "visibility_rules": [

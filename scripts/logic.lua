@@ -149,3 +149,7 @@ function hasNotSeenTurtleMedallion()
         return 1
     end
 end
+
+function purple()
+    return 1, AccessibilityLevel.Glitch
+end
