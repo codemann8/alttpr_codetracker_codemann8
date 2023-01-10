@@ -384,6 +384,11 @@ function saveSettings(setting)
     else
         writeOverride("settings\\", setting.file, textOutput)
     end
+
+    postSettings()
+end
+
+function postSettings()
 end
 
 function writeOverride(path, filename, text)
