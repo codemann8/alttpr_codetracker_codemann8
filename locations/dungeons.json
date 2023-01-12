@@ -1981,12 +1981,8 @@
                 "name": "Spike Cross Access",
                 "access_rules": [
                     //bomb floor
-                    "pool_enemydrop_off,pool_keypot_off,bombs,hammer,lift1",
-                    "pool_enemydrop_off,pool_keypot_off,ip_smallkey:1,bombs",
-                    "pool_enemydrop_on,pool_keypot_off,ip_smallkey:2,bombs,hammer,lift1",
-                    "pool_enemydrop_on,pool_keypot_off,ip_smallkey:3,bombs",
-                    "pool_enemydrop_off,pool_keypot_on,ip_smallkey:1,bombs",
-                    "pool_enemydrop_on,pool_keypot_on,ip_smallkey:3,bombs",
+                    "pool_enemydrop_off,bombs",
+                    "pool_enemydrop_on,ip_smallkey:2,bombs",
                     "keysanity_smallkey_off,bombs",
                     //icebreaker
                     "pool_enemydrop_off,pool_keypot_off,somaria,hammer,lift1,[bombs]",
