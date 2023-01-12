@@ -1200,7 +1200,7 @@
     {
         "name": "North Bonk Rocks",
         "short_name": "Bonk Rocks",
-        "-parent": "OW Bonk Rocks",
+        "parent": "OW Bonk Rocks",
         "access_rules": [
             "ow_swapped_53",
             "pearl"
