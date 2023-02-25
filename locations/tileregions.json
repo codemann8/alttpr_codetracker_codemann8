@@ -587,8 +587,7 @@
         "parent": "Light World Color",
         "access_rules": [
             "ow_castle_ledge",
-            "@OW Helper Castle,entrance_shuffle_off,[door_shuffle_off]",
-            "@OW Helper Castle,entrance_shuffle_off,ow_swapped_1b,ow_swapped_43",
+            "@OW Helper Castle,entrance_shuffle_off",
             "ow_swapped_5b,@East Dark World,mirror",
             "ow_swapped_1b,aga,[mirror]",
             "ow_swapped_1b,aga2,[aga],[mirror]",
