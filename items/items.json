@@ -36,7 +36,6 @@
         "stages": [
             {
                 "img": "images/items/bomb.png",
-                "-img_mods": "@disabled",
                 "img_mods": "@disabled,overlay|images/overlays/bomb-bag.png",
                 "codes": ""
             },
