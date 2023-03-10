@@ -34,6 +34,7 @@ DATA.SettingsHeader = {
 }
 
 DATA.SettingsData = {
+    --   SETTING NAME                                            Setting Label                           Item Code                  # Options  Default  Variable Name
     ["defaults.lua"] = {
         ["CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS"] =           {"Show All Locations",                   "settings_base_showlocations",     2, true,  CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS},
         ["CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS"] = {"Always Allow Clearing Locations",      "settings_base_allowclearing",     2, true,  CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS},

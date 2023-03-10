@@ -139,7 +139,7 @@ function EntranceShuffleMode:postUpdate()
         Tracker.DisplayAllLocations = true
         Tracker.AlwaysAllowClearing = true
     else
-        Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
+        -- Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
         Tracker.AlwaysAllowClearing = CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
     end
 end

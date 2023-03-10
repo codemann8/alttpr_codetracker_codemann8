@@ -499,9 +499,10 @@ function updateLayout(setting)
         end
 
         if setting == nil or setting.file == "defaults.lua" then
-            if setting == nil or setting.textcode == "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS" then
-                Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
-            end
+            Tracker.DisplayAllLocations = true
+            -- if setting == nil or setting.textcode == "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS" then
+            --     Tracker.DisplayAllLocations = CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS
+            -- end
             if setting == nil or setting.textcode == "CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS" then
                 Tracker.AlwaysAllowClearing = CONFIG.PREFERENCE_ALWAYS_ALLOW_CLEARING_LOCATIONS
             end
