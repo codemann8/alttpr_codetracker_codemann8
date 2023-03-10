@@ -614,21 +614,11 @@ function updateLayout(setting)
 end
 
 function updateDyk()
-    local e = Layout:FindLayout("dyk_lines_grid").Root.Children:GetEnumerator()
-    e:MoveNext()
-    
     if Tracker.ActiveVariantUID == "full_tracker" or Tracker.ActiveVariantUID == "items_only" or Tracker.ActiveVariantUID == "vanilla" then
         local text = DATA.DykTexts[math.random(1, #DATA.DykTexts)]
-        e.Current.Text = text[1]
-        e:MoveNext()
-        e.Current.Text = table.concat({table.unpack(text, 2, #text - 1)}, "\n")
-        e:MoveNext()
-        e.Current.Text = text[#text]
+        updateModal(text[1], table.concat({table.unpack(text, 2, #text - 1)}, "\n"), text[#text])
     else
-        e:MoveNext()
-        e.Current.Background = "#80aa0000"
-        e.Current.Text = "The package variants have changed, please select a new variant"
-        e:MoveNext()
+        updateModal("", "The package variants have changed, please select a new variant", "")
     end
     
     e = Layout:FindLayout("dyk_close_troll").Root.Items:GetEnumerator()
@@ -636,6 +626,17 @@ function updateDyk()
     e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
     e:MoveNext()
     e.Current.Margin = string.format("%i,%i,0,0", math.random(10, 550), math.random(10, 132))
+end
+
+function updateModal(first_line, body_line, last_line)
+    local e = Layout:FindLayout("dyk_lines_grid").Root.Children:GetEnumerator()
+    e:MoveNext()
+    
+    e.Current.Text = first_line
+    e:MoveNext()
+    e.Current.Text = body_line
+    e:MoveNext()
+    e.Current.Text = last_line
 end
 
 function initMissingSections()

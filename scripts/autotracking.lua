@@ -2,6 +2,12 @@ SEGMENTS = {}
 
 function autotracker_started()
     STATUS.AutotrackerInGame = false
+    
+    name = getmetatable(AutoTracker.ActiveConnector)["__name"]
+    if (string.sub(name, 14, 16) == "Lua") then
+        updateModal("Your autotracking method is outdated!", "...and will be DISABLED in the future!\nUsing the LUA autotracking method is outdated and very slow\ncompared to the SD2SNES option, even if you are using an emulator.\nIt is recommended to install and use SNI to connect the autotracker.", "For more info and support, please ask in the EmoTracker Discord.")
+        Layout:FindLayout("ref_dyk_grid").Root.Layout = Layout:FindLayout("shared_dyk_grid")
+    end
 end
 
 function autotracker_stopped()
