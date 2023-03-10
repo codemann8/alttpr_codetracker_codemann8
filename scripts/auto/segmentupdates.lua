@@ -1224,6 +1224,7 @@ DATA.MEMORY.Underworld = {
     { {"@Blind's House/Bombable Wall"},  {{285, 4}} },
     { {"@Hype Cave/Cave"},               {{286, 4}, {286, 5}, {286, 6}, {286, 7}, {286, 10}} },
     { {"@Ice Rod Cave/Cave"},            {{288, 4}} },
+    { {"@Cold Bee Cave/Fairy Statue"},   {{288, 9}} },
     { {"@Mini Moldorm Cave/Cave"},       {{291, 4}, {291, 5}, {291, 6}, {291, 7}, {291, 10}} },
     { {"@Bonk Rocks/Cave"},              {{292, 4}} },
     { {"@Checkerboard Cave/Cave"},       {{294, 9, 1}} },

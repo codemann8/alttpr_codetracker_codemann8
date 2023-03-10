@@ -3630,6 +3630,7 @@
                 "chest_unopened_img": "images/icons/entrances/door-closed.png",
                 "chest_opened_img": "images/icons/entrances/door-open.png",
                 "visibility_rules": [
+                    "entrance_shuffle_lite,pool_bonkdrop_on",
                     "entrance_shuffle_crossed",
                     "entrance_shuffle_insanity"
                 ],
@@ -3646,6 +3647,7 @@
                 "y": 1530,
                 "size": 64,
                 "restrict_visibility_rules": [
+                    "ow_swapped_77,entrance_shuffle_lite,pool_bonkdrop_on",
                     "ow_swapped_77,entrance_shuffle_crossed",
                     "ow_swapped_77,entrance_shuffle_insanity"
                 ]
@@ -3657,7 +3659,7 @@
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_77,entrance_shuffle_minor",
-                    "ow_swapped_77,entrance_shuffle_lite"
+                    "ow_swapped_77,entrance_shuffle_lite,pool_bonkdrop_off"
                 ]
             },
             {
@@ -3666,6 +3668,7 @@
                 "y": 1530,
                 "size": 64,
                 "restrict_visibility_rules": [
+                    "ow_swapped_37,entrance_shuffle_lite,pool_bonkdrop_on",
                     "ow_swapped_37,entrance_shuffle_crossed",
                     "ow_swapped_37,entrance_shuffle_insanity"
                 ]
@@ -3677,7 +3680,7 @@
                 "size": 48,
                 "restrict_visibility_rules": [
                     "ow_swapped_37,entrance_shuffle_minor",
-                    "ow_swapped_37,entrance_shuffle_lite"
+                    "ow_swapped_37,entrance_shuffle_lite,pool_bonkdrop_off"
                 ]
             }
         ]

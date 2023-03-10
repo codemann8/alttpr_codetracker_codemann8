@@ -1405,6 +1405,41 @@
         ]
     },
     {
+        "name": "Cold Bee Cave",
+        "parent": "OW Ice Cave",
+        "access_rules": [
+            "ow_swapped_77",
+            "pearl"
+        ],
+        "sections": [
+            {
+                "name": "Fairy Statue",
+                "access_rules": [
+                    "bombs,boots",
+                    "bombs,sword,quake"
+                ],
+                "chest_unopened_img": "images/icons/keydrops/bonk-shrine.png",
+                "chest_opened_img": "images/icons/keydrops/bonk-collected.png",
+                "visibility_rules": [ "pool_bonkdrop_on" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 1867,
+                "y": 1537,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_77" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 1867,
+                "y": 1537,
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_37" ]
+            }
+        ]
+    },
+    {
         "name": "Dam",
         "parent": "OW Dam",
         "access_rules": [

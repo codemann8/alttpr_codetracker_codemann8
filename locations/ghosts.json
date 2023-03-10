@@ -2804,7 +2804,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_77" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_bonkdrop_off" ]
             },
             {
                 "map": "darkworld",
@@ -2813,7 +2813,7 @@
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_37" ],
-                "force_invisibility_rules": [ "entrance_shuffle_lite" ]
+                "force_invisibility_rules": [ "entrance_shuffle_lite,pool_bonkdrop_off" ]
             }
         ]
     },
