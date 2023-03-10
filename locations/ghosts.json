@@ -1494,7 +1494,7 @@
             {
                 "map": "lightworld",
                 "x": 310,
-                "y": 1070,
+                "y": 1060,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_58" ]
@@ -1502,7 +1502,7 @@
             {
                 "map": "darkworld",
                 "x": 310,
-                "y": 1070,
+                "y": 1060,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_18" ]
@@ -1628,7 +1628,7 @@
         ]
     },
     {
-        "name": "Tavern Entrance Ghost",
+        "name": "Tavern Back Ghost",
         "sections": [
             {
                 "name": "Entrance",
@@ -1640,7 +1640,35 @@
             {
                 "map": "lightworld",
                 "x": 322,
-                "y": 1201,
+                "y": 1139,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_58" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 322,
+                "y": 1139,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "ow_swapped_18" ]
+            }
+        ]
+    },
+    {
+        "name": "Tavern Front Ghost",
+        "sections": [
+            {
+                "name": "Entrance",
+                "visibility_rules": [ "entrance_shuffle_all" ],
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "lightworld",
+                "x": 322,
+                "y": 1223,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_58" ],
@@ -1649,7 +1677,7 @@
             {
                 "map": "darkworld",
                 "x": 322,
-                "y": 1201,
+                "y": 1223,
                 "size": 0,
                 "badge_size": 96,
                 "restrict_visibility_rules": [ "ow_swapped_18" ],

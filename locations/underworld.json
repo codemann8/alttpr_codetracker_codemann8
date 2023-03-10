@@ -864,7 +864,7 @@
         ]
     },
     {
-        "name": "Tavern",
+        "name": "Tavern Back",
         "parent": "OW Kakariko Village",
         "access_rules": [
             "ow_swapped_58",
@@ -872,6 +872,19 @@
             "[pearl],mirror"
         ],
         "sections": [
+            {
+                "name": "Entrance",
+                "chest_unopened_img": "images/icons/entrances/door-closed.png",
+                "chest_opened_img": "images/icons/entrances/door-open.png",
+                "capture_item": true,
+                "capture_item_layout": "tracker_capture_entrance",
+                "visibility_rules": [
+                    "entrance_shuffle_all",
+                    "entrance_shuffle_insanity"
+                ],
+                "item_count": 1,
+                "hosted_item": "ow_kakariko"
+            },
             {
                 "name": "Back Room",
                 "item_count": 1

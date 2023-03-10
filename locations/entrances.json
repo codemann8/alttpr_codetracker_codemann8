@@ -2141,7 +2141,7 @@
         ]
     },
     {
-        "name": "Tavern Entrance",
+        "name": "Tavern Front",
         "short_name": "Tavern",
         "parent": "OW Kakariko Village",
         "sections": [
@@ -2164,14 +2164,14 @@
             {
                 "map": "lightworld",
                 "x": 322,
-                "y": 1201,
+                "y": 1211,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_swapped_58" ]
             },
             {
                 "map": "darkworld",
                 "x": 322,
-                "y": 1201,
+                "y": 1211,
                 "size": 64,
                 "restrict_visibility_rules": [ "ow_swapped_18" ]
             }
