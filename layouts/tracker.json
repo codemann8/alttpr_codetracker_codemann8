@@ -55,32 +55,39 @@
                         "h_alignment": "stretch",
                         "content": [
                             {
-                                "type": "dock",
-                                "h_alignment": "stretch",
+                                "type": "scroll",
+                                "horizontal_scrollbar_visibility": "disabled",
+                                "vertical_scrollbar_visibility": "hidden",
                                 "content": [
                                     {
-                                        "type": "layout",
-                                        "dock": "top",
-                                        "key": "shared_dock_v_grid" // shared_base.json
-                                    },
-                                    {
-                                        "type": "group",
-                                        "header": "Pinned Locations",
-                                        "max_width": 388,
-                                        "content": {
-                                            "type": "scroll",
-                                            "horizontal_scrollbar_visibility": "disabled",
-                                            "vertical_scrollbar_visibility": "hidden",
-                                            "content": {
-                                                "type": "recentpins",
-                                                "style": "wrap",
-                                                "h_alignment": "left",
-                                                "v_alignment": "top",
-                                                "orientation": "horizontal",
-                                                "scale": 1.15,
-                                                "compact": true
+                                        "type": "dock",
+                                        "h_alignment": "stretch",
+                                        "content": [
+                                            {
+                                                "type": "layout",
+                                                "dock": "top",
+                                                "key": "shared_dock_v_grid" // shared_base.json
+                                            },
+                                            {
+                                                "type": "group",
+                                                "header": "Pinned Locations",
+                                                "max_width": 388,
+                                                "content": {
+                                                    "type": "scroll",
+                                                    "horizontal_scrollbar_visibility": "disabled",
+                                                    "vertical_scrollbar_visibility": "hidden",
+                                                    "content": {
+                                                        "type": "recentpins",
+                                                        "style": "wrap",
+                                                        "h_alignment": "left",
+                                                        "v_alignment": "top",
+                                                        "orientation": "horizontal",
+                                                        "scale": 1.15,
+                                                        "compact": true
+                                                    }
+                                                }
                                             }
-                                        }
+                                        ]
                                     }
                                 ]
                             }
