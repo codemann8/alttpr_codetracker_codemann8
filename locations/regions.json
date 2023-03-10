@@ -21,7 +21,6 @@
 
             "ow_swapped_00,ow_sw_front",
             "ow_swapped_02,ow_dark_lumberjack",
-            "ow_swapped_0a,ow_bumper_ledge",
             "ow_swapped_0a,ow_bumper_entry",
             "ow_swapped_11,ow_outcast_fortune",
             "ow_swapped_13,ow_chapel",
@@ -107,7 +106,6 @@
         "access_rules": [
             "ow_swapped_40,ow_sw_front",
             "ow_swapped_42,ow_dark_lumberjack",
-            "ow_swapped_4a,ow_bumper_ledge",
             "ow_swapped_4a,ow_bumper_entry",
             "ow_swapped_51,ow_outcast_fortune",
             "ow_swapped_53,ow_chapel",
@@ -1390,6 +1388,12 @@
             "ow_swapped,00,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
             "ow_swapped_4f,ow_zora_waterfall_fairy,flippers",
             "ow_swapped_0f,ow_zora_waterfall_fairy,flippers,mirror",
+            "ow_swapped_4a,ow_bumper_ledge,mirror",
+            "ow_swapped_4a,ow_bumper_ledge,mirror",
+            "ow_swapped_4a,ow_bumper_ledge,mirror",
+            "ow_swapped_0a,ow_bumper_ledge,[sword]",
+            "ow_swapped_0a,ow_bumper_ledge,[cape]",
+            "ow_swapped_0a,ow_bumper_ledge,[byrna]",
             "ow_swapped_54,ow_graveyard_tomb,lift2",
             "ow_swapped_14,ow_graveyard_tomb,mirror",
             "ow_swapped,18,ow_outcasts_hammer,hammer",
@@ -1846,6 +1850,9 @@
             "ow_swapped_53,world_state_inverted", //dark chapel start
 
             "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
+            "ow_swapped_4a,ow_bumper_ledge,[pearl],[sword]",
+            "ow_swapped_4a,ow_bumper_ledge,[pearl],[cape]",
+            "ow_swapped_4a,ow_bumper_ledge,[pearl],[byrna]",
             "ow_swapped_14,ow_graveyard_ledge,pearl",
             "ow_swapped_14,ow_graveyard_tomb,pearl,lift2",
             "ow_swapped_5b,aga2,ow_swapped_1d,[aga],[mirror]",

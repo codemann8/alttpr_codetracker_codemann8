@@ -1371,18 +1371,46 @@
         ]
     },
     {
-        "name": "OW Bumper Cave",
+        "name": "OW Bumper Cave Helper",
         "parent": "Dark World Color",
         "access_rules": [
             "ow_bumper",
             "ow_bumper_entry",
-            "ow_bumper_ledge",
             "ow_swapped_4a,@Northwest Dark World",
             "ow_swapped_0a,@Northwest Light World",
 
             "ow_swapped_0a,ow_mountainentry,mirror",
             "ow_swapped_0a,ow_mountainentry_ledge,mirror",
             "ow_swapped_0a,ow_mountainentry_entry,mirror"
+        ]
+    },
+    {
+        "name": "OW Bumper Ledge",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "ow_bumper_ledge",
+            "ow_swapped_0a,ow_mountainentry_ledge,mirror",
+            "ow_swapped_4a,entrance_shuffle_minor,@OW Bumper Cave Helper,pearl,lift1,cape",
+            "ow_swapped_0a,inverted_orig,entrance_shuffle_minor,@OW Mountain Entry,pearl,lift1,cape,mirror",
+            "ow_swapped_0a,inverted_new,entrance_shuffle_minor,@OW Bumper Cave Helper,lift1,cape",
+            "ow_swapped_0a,inverted_new,entrance_shuffle_minor,@OW Death Mountain West Bottom,[lamp],mirror",
+            "@OW Bumper Cave Helper,glitch_mode_owg,pearl,boots",
+            "@OW Bumper Cave Helper,ow_swapped_0a,glitch_mode_owg,boots",
+            "@OW Bumper Cave Helper,glitch_mode_major",
+            "{@OW Bumper Cave Helper}"
+        ]
+    },
+    {
+        "name": "OW Bumper Cave",
+        "parent": "Dark World Color",
+        "access_rules": [
+            "@OW Bumper Cave Helper",
+            "ow_swapped_4a,@OW Bumper Ledge,[pearl],[sword]",
+            "ow_swapped_4a,@OW Bumper Ledge,[pearl],[cape]",
+            "ow_swapped_4a,@OW Bumper Ledge,[pearl],[byrna]",
+            "ow_swapped_0a,@OW Bumper Ledge,[sword]",
+            "ow_swapped_0a,@OW Bumper Ledge,[cape]",
+            "ow_swapped_0a,@OW Bumper Ledge,[byrna]"
         ]
     },
     {
