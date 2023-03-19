@@ -299,7 +299,7 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 
     if INSTANCE.NEW_KEY_SYSTEM then
         if address > 0x7ef400 then
-            chestKeys.AcquiredCount = segment:ReadUInt8(address) + (dungeonPrefix == "hc" and segment:ReadUInt8(address + 1) or 0)
+            chestKeys.AcquiredCount = math.max(segment:ReadUInt8(address), (dungeonPrefix == "hc" and segment:ReadUInt8(address + 1) or 0))
         end
     elseif OBJ_KEYSMALL:getState() < 2 and address < 0x7ef400 then
         local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
