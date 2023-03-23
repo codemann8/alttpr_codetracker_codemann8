@@ -1237,7 +1237,7 @@
             "ow_swapped_03,@West Top Death Mountain",
             "ow_swapped_03,inverted_orig,ow_ddm_west_bottom",
             "ow_swapped_03,ow_dm_west_top,mirror",
-            "ow_swapped_03,ow_dm_west_bottom,mirror",
+            "ow_swapped_03,inverted_orig,ow_dm_west_bottom,mirror",
             "ow_swapped_03,inverted_new,flute_shuffle_off,@Flute Access",
 
             "ow_swapped_03,entrance_shuffle_minor,inverted_orig,ow_swapped_4a,ow_mountainentry,lift1,[lamp]",
