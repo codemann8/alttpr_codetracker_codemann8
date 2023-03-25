@@ -64,9 +64,9 @@ function OWSwap:updateIcon()
     local border = CONFIG.LAYOUT_SHOW_MAP_GRIDLINES or OBJ_MIXED:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0
     border = border and "overlay|images/maps/overworld/ow-tile-border" .. (DATA.MegatileOverworlds[self.owid % 0x40] and "-half" or "") .. ".png" or ""
     if self:getState() == 0 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png", border)
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", self.owid) .. ".png", "saturation|0.75," .. border)
     elseif self:getState() == 1 then
-        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", border)
+        self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", "saturation|0.75," .. border)
     elseif self:getState() == 2 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/maps/overworld/" .. string.format("%02x", (self.owid + 0x40) % 0x80)  .. ".png", "saturation|0.2," .. border)
     else
