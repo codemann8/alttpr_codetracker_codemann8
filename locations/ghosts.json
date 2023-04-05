@@ -4096,7 +4096,15 @@
                 "y": 868,
                 "size": 0,
                 "badge_size": 96,
-                "restrict_visibility_rules": [ "ow_swapped_1b" ]
+                "restrict_visibility_rules": [ "inverted_orig,ow_swapped_1b" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 830,
+                "y": 770,
+                "size": 0,
+                "badge_size": 96,
+                "restrict_visibility_rules": [ "inverted_new,ow_swapped_1b" ]
             }
         ]
     },

@@ -5358,7 +5358,8 @@
         "short_name": "Pyramid Exit",
         "parent": "Dark World Color",
         "access_rules": [
-            "ow_swapped_1b,@OW Castle Ledge"
+            "inverted_new,ow_swapped_1b,@OW Castle Ledge",
+            "inverted_orig,ow_swapped_1b,@OW Castle Courtyard"
         ],
         "sections": [
             {
@@ -5383,7 +5384,14 @@
                 "x": 901,
                 "y": 868,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_swapped_1b,entrance_shuffle_insanity" ]
+                "restrict_visibility_rules": [ "inverted_orig,ow_swapped_1b,entrance_shuffle_insanity" ]
+            },
+            {
+                "map": "darkworld",
+                "x": 840,
+                "y": 770,
+                "size": 64,
+                "restrict_visibility_rules": [ "inverted_new,ow_swapped_1b,entrance_shuffle_insanity" ]
             }
         ]
     },
