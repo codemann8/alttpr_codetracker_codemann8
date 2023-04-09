@@ -866,11 +866,6 @@
     {
         "name": "Tavern Back",
         "parent": "OW Kakariko Village",
-        "access_rules": [
-            "ow_swapped_58",
-            "pearl",
-            "[pearl],mirror"
-        ],
         "sections": [
             {
                 "name": "Entrance",
@@ -887,10 +882,20 @@
             },
             {
                 "name": "Back Room",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "[pearl],mirror"
+                ],
                 "item_count": 1
             },
             {
                 "name": "Back Pots",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "[pearl],mirror"
+                ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on" ],
@@ -898,6 +903,11 @@
             },
             {
                 "name": "Front Pot",
+                "access_rules": [
+                    "ow_swapped_58",
+                    "pearl",
+                    "[pearl],mirror"
+                ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on,entrance_shuffle_minor" ],
