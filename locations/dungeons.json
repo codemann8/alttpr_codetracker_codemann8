@@ -734,9 +734,10 @@
             {
                 "name": "Back Lobby Key",
                 "access_rules": [
-                    "door_shuffle_off,lift1",
+                    "door_shuffle_off,ow_swapped_70,lift1",
+                    "door_shuffle_off,pearl,lift1",
                     "door_shuffle_off,ow_swapped_70,glitch_mode_owg,boots",
-                    "door_shuffle_off,ow_swapped_30,glitch_mode_owg,pearl,boots",
+                    "door_shuffle_off,glitch_mode_owg,pearl,boots",
                     "door_shuffle_off,glitch_mode_major",
                     "door_shuffle_on",
                     "entrance_shuffle_on"
