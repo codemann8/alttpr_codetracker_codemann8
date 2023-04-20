@@ -203,6 +203,7 @@
         "access_rules": [
             "ow_swapped_7b,entrance_shuffle_off,@OW Swamp,mirror,pearl,flippers",
             "ow_swapped_3b,entrance_shuffle_off,@OW Dam,mirror,[pearl],flippers",
+            "glitch_mode_owg,ow_swapped_3b,entrance_shuffle_off,@OW Dam,mirror,flippers",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],@MM Special Access/Left Side Access,[mm_bigkey]",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],@MM Special Access/Left Side Access,[toh_bigkey]",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],[@MM Special Access/Left Side Access],@ToH Special Access/Compass Chest,[toh_bigkey]",
