@@ -38,8 +38,9 @@
                 "name": "Cave",
                 "access_rules": [
                     "ow_swapped_42,aga,boots",
-                    "ow_swapped_02,aga,pearl,boots",
-                    "ow_swapped_02,aga,[pearl],boots,mirror",
+                    "aga,pearl,boots",
+                    "aga,[pearl],boots,mirror",
+                    "glitch_mode_major,bottle,aga,boots",
                     "{}"
                 ],
                 "capture_item": true,
@@ -65,14 +66,16 @@
         "name": "Death Mountain Descent",
         "short_name": "DM Descent",
         "parent": "OW Death Mountain West Bottom",
-        "access_rules": [ "@Death Mountain Descent Front" ],
+        "access_rules": [ "@Death Mountain Descent Front,[lamp]" ],
         "sections": [
             {
                 "name": "Pots",
                 "access_rules": [
-                    "ow_swapped_43,[lamp]",
-                    "pearl,[lamp]",
-                    "mirror,[pearl],[lamp]"
+                    "ow_swapped_43",
+                    "pearl",
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -108,7 +111,9 @@
                 "access_rules": [
                     "ow_swapped_43",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -143,7 +148,7 @@
         "access_rules": [
             "ow_swapped_45",
             "[pearl]",
-            "glitch_mode_owg"
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -212,7 +217,8 @@
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "@Fairy Ascension Bottom,ow_swapped_45",
-            "@Fairy Ascension Bottom,[pearl]"
+            "@Fairy Ascension Bottom,[pearl]",
+            "glitch_mode_owg"
         ],
         "sections": [
             {
@@ -275,7 +281,8 @@
                 "name": "Block Pot",
                 "access_rules": [
                     "ow_swapped_45",
-                    "[pearl]"
+                    "[pearl]",
+                    "glitch_mode_owg"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -596,7 +603,8 @@
                 "name": "Chest Pots",
                 "access_rules": [
                     "ow_swapped_58",
-                    "[pearl]"
+                    "[pearl]",
+                    "glitch_mode_owg"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -608,7 +616,7 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "[pearl]",
-                    "ow_swapped_18,glitch_mode_owg"
+                    "glitch_mode_owg"
                 ],
                 "item_count": 4
             },
@@ -617,7 +625,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -649,7 +659,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -663,7 +675,8 @@
                     "ow_swapped_58",
                     "pearl",
                     "[pearl],mirror",
-                    "ow_swapped_18,glitch_mode_owg,mirror"
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "item_count": 4
             },
@@ -713,7 +726,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -745,7 +760,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -785,7 +802,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -885,7 +904,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "[pearl],mirror"
+                    "[pearl],mirror",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "item_count": 1
             },
@@ -894,7 +915,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "[pearl],mirror"
+                    "[pearl],mirror",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -906,7 +929,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "[pearl],mirror"
+                    "[pearl],mirror",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -995,7 +1020,9 @@
                 "access_rules": [
                     "ow_swapped_5e",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -1009,7 +1036,9 @@
                     "ow_swapped_5e,boots",
                     "pearl,bombs",
                     "pearl,boots",
-                    "mirror,boots,[pearl]"
+                    "mirror,boots,[pearl]",
+                    "glitch_mode_owg,mirror,boots",
+                    "glitch_mode_major,bottle,boots"
                 ],
                 "short_name": "Back",
                 "item_count": 3
@@ -1090,6 +1119,8 @@
             "ow_swapped_69",
             "pearl",
             "mirror,[pearl]",
+            "glitch_mode_owg,mirror",
+            "glitch_mode_major,bottle",
             "{}"
         ],
         "sections": [
@@ -1125,7 +1156,9 @@
             "ow_swapped_6c,@OW Links House",
             "ow_swapped_2c,inverted_orig,@OW Bomb Shop",
             "ow_swapped_2c,inverted_new,@OW Links House,pearl",
-            "ow_swapped_2c,inverted_new,@OW Links House,[pearl],mirror"
+            "ow_swapped_2c,inverted_new,@OW Links House,[pearl],mirror",
+            "ow_swapped_2c,inverted_new,@OW Links House,glitch_mode_owg,mirror",
+            "ow_swapped_2c,inverted_new,@OW Links House,glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1905,10 +1938,10 @@
         "name": "Chest Game",
         "parent": "OW Village of Outcasts",
         "access_rules": [
+            "ow_swapped_18",
             "pearl",
             "[pearl],mirror",
             "glitch_mode_owg,mirror",
-            "ow_swapped_18",
             "glitch_mode_major,bottle"
         ],
         "sections": [
@@ -1936,10 +1969,10 @@
         "name": "C-Shaped House",
         "parent": "OW Village of Outcasts",
         "access_rules": [
+            "ow_swapped_18",
             "pearl",
             "[pearl],mirror",
             "glitch_mode_owg,mirror",
-            "ow_swapped_18",
             "glitch_mode_major,bottle"
         ],
         "sections": [
@@ -1968,10 +2001,10 @@
         "short_name": "VoO Shop",
         "parent": "OW Village of Outcasts",
         "access_rules": [
-            "ow_swapped_58,pearl",
-            "ow_swapped_58,[pearl],boots,bottle",
-            "ow_swapped_58,[pearl],boots,mirror",
-            "ow_swapped_18"
+            "ow_swapped_18",
+            "pearl",
+            "[pearl],boots,bottle",
+            "[pearl],boots,mirror"
         ],
         "sections": [
             {
