@@ -332,8 +332,9 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "@GT Crystals",
-            "glitch_mode_owg,ow_swapped_03,boots",
-            "glitch_mode_owg,pearl,boots",
+            "glitch_mode_owg,ow_swapped_43,pearl,boots",
+            "glitch_mode_owg,ow_swapped_5b,pearl,boots",
+            "glitch_mode_owg,ow_swapped_5b,ow_swapped_03,boots",
             "glitch_mode_major"
         ]
     },
