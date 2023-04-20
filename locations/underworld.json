@@ -9,6 +9,7 @@
                 "access_rules": [
                     "ow_swapped_40",
                     "pearl",
+                    "glitch_mode_major,bottle",
                     "{ow_swapped_00}"
                 ],
                 "capture_item": true,
@@ -180,7 +181,8 @@
             "door_shuffle_off,ow_swapped_45,@TR Main Entrance,somaria,[firerod],keysanity_smallkey_off,mirror",
             "ow_swapped_45,entrance_shuffle_minor,@OW TR Bridge,mirror",
             "ow_swapped_45,glitch_mode_owg,mirror",
-            "ow_swapped_05,pearl"
+            "ow_swapped_05,pearl",
+            "ow_swapped_05,glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -254,23 +256,34 @@
         "parent": "OW Death Mountain East Bottom",
         "access_rules": [
             "ow_swapped_45",
-            "pearl"
+            "[pearl]",
+            "glitch_mode_owg"
         ],
         "sections": [
             {
                 "name": "Top",
+                "access_rules": [
+                    "ow_swapped_45",
+                    "pearl",
+                    "glitch_mode_major,bottle"
+                ],
                 "item_count": 5
             },
             {
                 "name": "Bottom",
-                "access_rules": [ "bombs" ],
+                "access_rules": [
+                    "ow_swapped_45,bombs",
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
+                ],
                 "item_count": 2
             },
             {
                 "name": "Bomb Wall Pots",
                 "access_rules": [
                     "ow_swapped_45,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -279,11 +292,6 @@
             },
             {
                 "name": "Block Pot",
-                "access_rules": [
-                    "ow_swapped_45",
-                    "[pearl]",
-                    "glitch_mode_owg"
-                ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
                 "visibility_rules": [ "pool_cavepot_on" ],
@@ -337,7 +345,8 @@
                 "name": "Items",
                 "access_rules": [
                     "ow_swapped_45",
-                    "pearl"
+                    "pearl",
+                    "glitch_mode_major,bottle"
                 ],
                 "visibility_rules": [ "pool_shopsanity_on" ],
                 "capture_item": true,
@@ -378,7 +387,8 @@
         "parent": "OW Zora Waterfall",
         "access_rules": [
             "ow_swapped_4f",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -414,7 +424,8 @@
         "parent": "OW Bonk Rocks",
         "access_rules": [
             "ow_swapped_53",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -466,7 +477,8 @@
                 "access_rules": [
                     "ow_swapped_54",
                     "pearl",
-                    "glitch_mode_owg,ow_swapped_14,mirror"
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -477,7 +489,8 @@
                 "name": "Cave",
                 "access_rules": [
                     "ow_swapped_54,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "item_count": 1
             }
@@ -582,7 +595,8 @@
                 "name": "Bomb Wall Pots",
                 "access_rules": [
                     "ow_swapped_58,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -684,7 +698,8 @@
                 "name": "Bomb Wall Pots",
                 "access_rules": [
                     "ow_swapped_58,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -773,7 +788,8 @@
                 "name": "Bombable Wall",
                 "access_rules": [
                     "ow_swapped_58,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "item_count": 1
             }
@@ -1238,7 +1254,8 @@
         "parent": "OW Desert",
         "access_rules": [
             "ow_swapped_70",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1407,7 +1424,8 @@
         "parent": "OW Lake Hylia South Shore",
         "access_rules": [
             "ow_swapped_75",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1436,7 +1454,8 @@
         "parent": "OW Ice Cave",
         "access_rules": [
             "ow_swapped_77",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1465,7 +1484,8 @@
         "parent": "OW Ice Cave",
         "access_rules": [
             "ow_swapped_77",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2004,7 +2024,8 @@
             "ow_swapped_18",
             "pearl",
             "[pearl],boots,bottle",
-            "[pearl],boots,mirror"
+            "[pearl],boots,mirror",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {

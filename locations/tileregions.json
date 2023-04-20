@@ -292,7 +292,7 @@
             "ow_swapped_50,@Northwest Dark World,pearl,mirror",
             "ow_swapped_50,ow_swapped_40,@Northwest Dark World,mirror",
             "ow_swapped_10,@Northwest Dark World,pearl,lift1",
-            "ow_swapped_10,ow_swapped_40,@Northwest Dark World",
+            "ow_swapped_10,ow_swapped_00,@Northwest Dark World",
 
             "ow_swapped_50,ow_sw_pass_east_top,mirror",
             "ow_swapped_50,ow_sw_pass_west,pearl,mirror",
@@ -771,6 +771,7 @@
             "ow_flute",
             "ow_swapped_6a,@South Light World",
             "ow_swapped_2a,@South Dark World,pearl",
+            "ow_swapped_2a,@South Dark World,glitch_mode_major,bottle",
             "ow_swapped_6a,ow_stumpy,mirror"
         ]
     },

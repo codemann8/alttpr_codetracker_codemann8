@@ -56,6 +56,7 @@
                 "access_rules": [
                     "ow_swapped_40",
                     "pearl",
+                    "glitch_mode_major,bottle",
                     "{ow_swapped_00}"
                 ],
                 "capture_item": true,
@@ -96,7 +97,8 @@
         "parent": "OW Lost Woods East",
         "access_rules": [
             "ow_swapped_40",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -297,7 +299,8 @@
         "parent": "OW Death Mountain East Top",
         "access_rules": [
             "ow_swapped_45",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -346,7 +349,8 @@
         "parent": "OW Mountain Entry",
         "access_rules": [
             "ow_swapped_4a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -395,7 +399,8 @@
         "parent": "OW Mountain Entry",
         "access_rules": [
             "ow_swapped_4a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -520,7 +525,8 @@
         "parent": "OW Lost Woods Pass West",
         "access_rules": [
             "ow_swapped_50",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -569,7 +575,8 @@
         "parent": "OW Lost Woods Pass East Top",
         "access_rules": [
             "ow_swapped_50",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -618,7 +625,8 @@
         "parent": "OW Kakariko Fortune",
         "access_rules": [
             "ow_swapped_51",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -667,7 +675,8 @@
         "parent": "OW Kakariko Pond",
         "access_rules": [
             "ow_swapped_52",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -716,7 +725,8 @@
         "parent": "OW Bonk Rocks",
         "access_rules": [
             "ow_swapped_53",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -777,7 +787,8 @@
         "parent": "OW Sanctuary",
         "access_rules": [
             "ow_swapped_53",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -826,7 +837,8 @@
         "parent": "OW River Bend West",
         "access_rules": [
             "ow_swapped_55",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -875,7 +887,8 @@
         "parent": "OW River Bend East",
         "access_rules": [
             "ow_swapped_55",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1008,7 +1021,8 @@
         "parent": "OW Kakariko Village",
         "access_rules": [
             "ow_swapped_58",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1057,7 +1071,8 @@
         "parent": "OW Kakariko Village",
         "access_rules": [
             "ow_swapped_58",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1106,7 +1121,8 @@
         "parent": "OW Forgotten Forest",
         "access_rules": [
             "ow_swapped_5a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1156,7 +1172,8 @@
         "parent": "OW Castle Courtyard",
         "access_rules": [
             "ow_swapped_5b",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1205,7 +1222,8 @@
         "parent": "OW Wooden Bridge",
         "access_rules": [
             "ow_swapped_5d",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1254,7 +1272,8 @@
         "parent": "OW Eastern Palace",
         "access_rules": [
             "ow_swapped_5e",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1355,7 +1374,8 @@
         "parent": "OW Flute Boy",
         "access_rules": [
             "ow_swapped_6a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1398,7 +1418,8 @@
         "parent": "OW Flute Boy",
         "access_rules": [
             "ow_swapped_6a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1448,7 +1469,8 @@
         "parent": "OW Central Bonk Rocks",
         "access_rules": [
             "ow_swapped_6b",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1561,7 +1583,8 @@
         "parent": "OW Tree Line",
         "access_rules": [
             "ow_swapped_6e",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1731,7 +1754,8 @@
         "parent": "OW Cave 45",
         "access_rules": [
             "ow_swapped_72",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1867,7 +1891,8 @@
         "parent": "OW Dark Lumberjack",
         "access_rules": [
             "ow_swapped_02",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -1966,7 +1991,8 @@
                 "name": "Ring of Stones",
                 "access_rules": [
                     "ow_swapped_0f",
-                    "pearl"
+                    "pearl",
+                    "glitch_mode_major,bottle"
                 ],
                 "item_count": 1
             }
@@ -2005,7 +2031,8 @@
         "parent": "OW Outcast Fortune",
         "access_rules": [
             "ow_swapped_11",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2055,7 +2082,8 @@
         "parent": "OW Dark Graveyard",
         "access_rules": [
             "ow_swapped_14",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2105,7 +2133,8 @@
         "parent": "OW Qirn Jump West",
         "access_rules": [
             "ow_swapped_15",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2154,7 +2183,8 @@
         "parent": "OW Qirn Jump East",
         "access_rules": [
             "ow_swapped_15",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2215,7 +2245,8 @@
         "parent": "OW Dark Witch",
         "access_rules": [
             "ow_swapped_16",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2234,7 +2265,7 @@
             {
                 "map": "lightworld",
                 "x": 1587,
-                "y": 612,
+                "y": 602,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_16" ]
             },
             {
@@ -2247,7 +2278,7 @@
             {
                 "map": "darkworld",
                 "x": 1587,
-                "y": 612,
+                "y": 602,
                 "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_56" ]
             },
             {
@@ -2302,7 +2333,8 @@
         "parent": "OW Pyramid",
         "access_rules": [
             "ow_swapped_1b",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2351,7 +2383,8 @@
         "parent": "OW Palace of Darkness",
         "access_rules": [
             "ow_swapped_1e",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2614,7 +2647,8 @@
         "parent": "OW Dark Tree Line",
         "access_rules": [
             "ow_swapped_2e",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -2664,7 +2698,8 @@
         "parent": "OW Hype",
         "access_rules": [
             "ow_swapped_34",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {

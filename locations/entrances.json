@@ -237,7 +237,9 @@
                 "access_rules": [
                     "ow_swapped_42",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -521,7 +523,9 @@
                 "access_rules": [
                     "ow_swapped_43",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -533,7 +537,9 @@
                 "access_rules": [
                     "ow_swapped_43,[lamp]",
                     "pearl,[lamp]",
-                    "mirror,[pearl],[lamp]"
+                    "mirror,[pearl],[lamp]",
+                    "glitch_mode_owg,mirror,[lamp]",
+                    "glitch_mode_major,bottle,[lamp]"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -853,7 +859,8 @@
                 "name": "Pot",
                 "access_rules": [
                     "ow_swapped_45,hookshot",
-                    "pearl,hookshot"
+                    "pearl,hookshot",
+                    "glitch_mode_major,bottle,hookshot"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -1612,7 +1619,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -1802,7 +1811,9 @@
                 "access_rules": [
                     "ow_swapped_58",
                     "pearl",
-                    "mirror,[pearl]"
+                    "mirror,[pearl]",
+                    "glitch_mode_owg,mirror",
+                    "glitch_mode_major,bottle"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -2020,7 +2031,8 @@
         "parent": "OW Kakariko Village",
         "access_rules": [
             "ow_swapped_58,bombs",
-            "pearl,bombs"
+            "pearl,bombs",
+            "glitch_mode_major,bottle,bombs"
         ],
         "sections": [
             {
@@ -3506,7 +3518,8 @@
         "parent": "OW Lake Hylia South Shore",
         "access_rules": [
             "ow_swapped_75",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3688,7 +3701,8 @@
         "parent": "OW Ice Cave",
         "access_rules": [
             "ow_swapped_77",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -3855,7 +3869,8 @@
         "parent": "OW Desert Pass",
         "access_rules": [
             "ow_swapped_7a",
-            "pearl"
+            "pearl",
+            "glitch_mode_major,bottle"
         ],
         "sections": [
             {
@@ -5456,7 +5471,10 @@
                     "ow_swapped_1e,bombs",
                     "ow_swapped_1e,boots",
                     "pearl,bombs",
-                    "pearl,boots"
+                    "pearl,boots",
+                    "glitch_mode_owg,mirror,boots",
+                    "glitch_mode_major,bottle,bombs",
+                    "glitch_mode_major,bottle,boots"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
@@ -6100,7 +6118,8 @@
                 "name": "Pots",
                 "access_rules": [
                     "ow_swapped_30,bombs",
-                    "pearl,bombs"
+                    "pearl,bombs",
+                    "glitch_mode_major,bottle,bombs"
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
