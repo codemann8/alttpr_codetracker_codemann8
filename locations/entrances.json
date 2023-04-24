@@ -1100,10 +1100,9 @@
         "short_name": "Waterfall Fairy",
         "parent": "OW Zora Waterfall",
         "access_rules": [
-            "ow_swapped_4f,flippers",
-            "ow_swapped_4f,[flippers],pearl",
-            "ow_swapped_4f,[flippers],boots",
+            "ow_swapped_4f,[flippers]",
             "ow_swapped_4f,glitch_mode_owg,boots",
+            "ow_swapped_4f,glitch_mode_owg,pearl",
             "ow_swapped_0f,pearl,[flippers]",
             "glitch_mode_owg,pearl"
         ],
