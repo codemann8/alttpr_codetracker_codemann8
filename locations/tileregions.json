@@ -1355,6 +1355,8 @@
             "ow_swapped_45,glitch_mode_owg,@OW Dark Death Mountain West Bottom,pearl,boots,mirror,[nothing]",
             "ow_swapped_05,@OW Death Mountain East Top,mirror",
             "ow_swapped_05,ow_dm_east_connect,mirror",
+            "ow_swapped_05,inverted_new,ow_dm_east_spiral,mirror",
+            "ow_swapped_05,inverted_new,ow_dm_east_mimic,mirror",
             "ow_swapped_45,glitch_mode_major,mirror,pearl",
             "ow_swapped_45,glitch_mode_major,mirror,bottle"
         ]
