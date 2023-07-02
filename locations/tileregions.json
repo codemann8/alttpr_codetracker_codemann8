@@ -2091,6 +2091,13 @@
         ]
     },
     {
+        "name": "OW Helper Hype Statues",
+        "access_rules": [
+            "ow_swapped_74,@OW Hype",
+            "ow_swapped_34,@OW Statues"
+        ]
+    },
+    {
         "name": "OW Ice Lake Island",
         "parent": "Water Area Color",
         "access_rules": [
@@ -2101,11 +2108,15 @@
             "ow_swapped_35,inverted_orig,@OW Ice Lake Water",
             "ow_swapped_35,@OW Lake Hylia Water,mirror",
             "ow_swapped_35,@Lake Dark World,mirror",
-            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,flippers", //prob soon to be removed from logic
-            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,mirror,[flippers]",
-            "ow_swapped_75,glitch_mode_owg,@OW Hype,pearl,boots,bottle,[flippers]",
-            "ow_swapped_75,glitch_mode_major,@OW Hype,mirror",
-            "ow_swapped_75,glitch_mode_major,@OW Hype,bottle,flippers", //prob soon to be removed from logic
+            "glitch_mode_owg,@OW Helper Hype Statues,pearl,boots,flippers,[nothing]",
+            "glitch_mode_owg,@OW Helper Hype Statues,pearl,boots,mirror,[nothing]",
+            "glitch_mode_owg,@OW Helper Hype Statues,pearl,boots,bottle,[nothing]",
+            "ow_swapped_35,glitch_mode_owg,@OW Helper Hype Statues,boots,flippers,[nothing]",
+            "ow_swapped_35,glitch_mode_owg,@OW Helper Hype Statues,boots,mirror,[nothing]",
+            "ow_swapped_35,glitch_mode_owg,@OW Helper Hype Statues,boots,bottle,[nothing]",
+            "ow_swapped_75,glitch_mode_major,@OW Helper Hype Statues,mirror",
+            "glitch_mode_major,@OW Helper Hype Statues,bottle,flippers",
+            "ow_swapped_35,glitch_mode_major,@OW Helper Hype Statues,flippers",
             
             "ow_swapped_75,ow_ice_water,[flippers],mirror,lift2",
             "ow_swapped_75,ow_hylia_northwest,[flippers],lift2",
