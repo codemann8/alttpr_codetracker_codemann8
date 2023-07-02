@@ -531,9 +531,7 @@
                 "access_rules": [
                     "lift2,boots",
                     "ow_swapped_54,@OW Dark Graveyard,pearl,mirror,boots",
-                    "ow_swapped_54,glitch_mode_owg,@OW Death Mountain West Bottom,boots",
-                    "glitch_mode_owg,@OW Death Mountain West Bottom,pearl,boots",
-                    "glitch_mode_major,@OW Death Mountain West Bottom"
+                    "glitch_mode_owg,@OW Death Mountain West Bottom,boots"
                 ],
                 "item_count": 1
             }

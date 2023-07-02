@@ -1393,8 +1393,12 @@
         "access_rules": [
             "ow_swapped_54,@OW Graveyard,lift2",
             "ow_swapped_54,@OW Dark Graveyard,pearl,mirror",
+            "ow_swapped_54,Graveyard Ledge Cave,sword2,hookshot,[nothing]",
+            "ow_swapped_54,Graveyard Ledge Cave,bombs,hookshot,[nothing]",
             "@OW Graveyard,pearl,lift2",
-            "ow_swapped_54,@OW Death Mountain West Bottom,glitch_mode_owg",
+            "Graveyard Ledge Cave,pearl,sword2,hookshot,[nothing]",
+            "Graveyard Ledge Cave,pearl,bombs,hookshot,[nothing]",
+            "@OW Death Mountain West Bottom,glitch_mode_owg",
             "@OW Death Mountain West Bottom,glitch_mode_owg,pearl",
             "glitch_mode_major"
         ],
