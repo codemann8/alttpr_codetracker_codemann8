@@ -1657,6 +1657,8 @@
                     "ow_swapped_40,pearl,firerod",
                     "ow_swapped_40,entrance_shuffle_off,[pearl],boots,firerod,mirror",
                     "ow_swapped_40,entrance_shuffle_off,[pearl],boots,firerod,bottle",
+                    "ow_swapped_40,glitch_mode_owg,entrance_shuffle_off,boots,firerod,mirror",
+                    "ow_swapped_40,glitch_mode_owg,entrance_shuffle_off,boots,firerod,bottle",
                     "ow_swapped_00,firerod",
                     "door_shuffle_on",
                     "entrance_shuffle_on"
