@@ -1090,8 +1090,8 @@
             "ow_swapped_62,hammer",
             "ow_swapped_62,@OW Hammer Pegs,mirror",
             "pearl,hammer",
-            "ow_swapped_62,glitch_mode_owg,boots",
-            "glitch_mode_owg,pearl,boots",
+            "ow_swapped_62,glitch_mode_owg,boots,[nothing]",
+            "glitch_mode_owg,pearl,boots,[nothing]",
             "glitch_mode_major"
         ],
         "sections": [

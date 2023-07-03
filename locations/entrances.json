@@ -2578,7 +2578,7 @@
                 "access_rules": [
                     "hammer",
                     "ow_swapped_62,pearl,lift2,mirror",
-                    "glitch_mode_owg,boots",
+                    "glitch_mode_owg,boots,[nothing]",
                     "glitch_mode_major",
                     "{entrance_shuffle_lite}",
                     "{entrance_shuffle_crossed}"
