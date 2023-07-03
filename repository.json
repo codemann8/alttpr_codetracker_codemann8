@@ -5,11 +5,11 @@
             "name": "CodeTracker Full Tracker",
             "author": "codemann8",
             "game_name": "A Link to the Past Randomizer",
-            "version": "3.0.5.2",
+            "version": "3.0.5.3",
             "flags": [ "map", "pins", "chathud", "autotracker" ],
             "required_app_version": "2.3.8.16",
             "uid": "alttpr_codetracker_codemann8",
-            "link": "https://github.com/codemann8/alttpr_codetracker_codemann8/releases/download/3.0.5.2/alttpr_codetracker_codemann8.zip",
+            "link": "https://github.com/codemann8/alttpr_codetracker_codemann8/releases/download/3.0.5.3/alttpr_codetracker_codemann8.zip",
             "documentation_url": "https://github.com/codemann8/alttpr_codetracker_codemann8/blob/master/README.md",
             "variants": [
                 {
