@@ -2245,7 +2245,8 @@
                     "@Pyramid Fairy/Escort Big Bomb,crystal:7",
                     "@Pyramid Fairy/Escort Big Bomb,prize:10",
                     "ow_swapped_5b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
-                    "ow_swapped_5b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror"
+                    "ow_swapped_5b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror",
+                    "@OW Helper Pyramid Moat,[nothing]"
                 ],
                 "item_count": 2
             }
