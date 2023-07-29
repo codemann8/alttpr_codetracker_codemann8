@@ -262,6 +262,10 @@ function restoreBackup()
     if BACKUP.OWSWAPS ~= nil then
         for i, value in pairs(BACKUP.OWSWAPS) do
             INSTANCE.OWSWAPS[i]:setStateExternal(value)
+            if value < 2 then
+                INSTANCE.OWSWAPS[i].modified = true
+                Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", INSTANCE.OWSWAPS[i].owid + 0x40)).ItemState.modified = true
+            end
         end
     end
 
@@ -362,6 +366,17 @@ function postRestoreBackup()
             bk.Active = data[5] & 4 > 0
             compass.Active = data[5] & 2 > 0
             map.Active = data[5] & 1 > 0
+        end
+    end
+
+    for i = 1, #DATA.OverworldIds do
+        local item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
+        if item.modified then
+            item:updateIcon()
+        end
+        item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i] + 0x40)).ItemState
+        if item.modified then
+            item:updateIcon()
         end
     end
 end
