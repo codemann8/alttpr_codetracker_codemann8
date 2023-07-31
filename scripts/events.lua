@@ -8,7 +8,7 @@ function tracker_on_finish_loading_save_file()
     STATUS.TRACKER_READY = true
 end
 
-function tracker_on_accessibility_updating() end
+--function tracker_on_accessibility_updating() end
 
 function tracker_on_accessibility_updated()
     if STATUS.TRACKER_READY then
