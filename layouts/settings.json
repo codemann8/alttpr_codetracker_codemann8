@@ -389,7 +389,7 @@
                 "content": [
                     {
                         "type": "item",
-                        "item": "settings_auto_region",
+                        "item": "settings_auto_entrance",
                         "width": 20
                     },
                     {
@@ -397,7 +397,7 @@
                         "h_alignment": "left",
                         "v_alignment": "center",
                         "margin": "4,0,0,2",
-                        "text": "Disable Auto Region Tracking"
+                        "text": "Disable Auto Entrance Tracking"
                     }
                 ]
             },

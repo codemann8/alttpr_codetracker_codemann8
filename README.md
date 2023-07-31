@@ -195,8 +195,9 @@ The settings are broken out into several categories, an explanation for each of 
   - Auto Pin Current Dungeon - This will auto-pin the current dungeon you are in when you enter a new dungeon
   - Disable Auto Dungeon Item Tracking - Changes whether dungeon items (keys/maps/compasses) are auto-tracked or not
   - Disable Auto Location Tracking - Changes whether map locations are auto-tracked or not
-  - Disable Auto Region Tracking - Changes whether regions are auto-tracked or not (regions are used for access to areas of the overworld in entrance/overworld shuffle)
+  - Disable Auto Entrance Tracking - Changes whether entrances are auto-tracked or not
     - *\*This is already disabled in Race Mode\**
+    - If Insanity ER is enabled, entrances will only be autotracked when going from the Overworld to the Underworld
   - Disable Auto OW Tile Swap Tracking - Changes whether OW screens are flipped automatically upon visiting them. This only matters when `OW Tile Swap` mode is enabled.
 #### File Output
 *\*(Features relating to files that are output when certain events are triggered)\**

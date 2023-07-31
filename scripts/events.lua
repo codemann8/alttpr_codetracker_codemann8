@@ -64,4 +64,8 @@ function tracker_on_pack_ready()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Package ready at: " .. os.clock() - STATUS.START_CLOCK)
     end
+    deleteOverride("", "autoerlog.txt")
+    printLog("**********************************")
+    printLog("**********************************")
+    printLog("**********************************")
 end

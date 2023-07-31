@@ -23,7 +23,7 @@ DATA.SettingsHeader = {
         "CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING",
         "CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING",
         "CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING",
-        "CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"
+        "CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING"
     }},
     { "fileio.lua", {
         "CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE",
@@ -57,7 +57,7 @@ DATA.SettingsData = {
         ["CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING"] =  {"Disable Auto Dungeon Item Tracking",   "settings_auto_dungeon_item",      2, false, CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING"] =      {"Disable Auto Location Tracking",       "settings_auto_location",          2, false, CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING},
         ["CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING"] =       {"Disable Auto OW Tile Swap Tracking",   "settings_auto_owmixed",           2, false, CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING},
-        ["CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING"] =        {"Disable Auto Region Tracking",         "settings_auto_region",            2, false, CONFIG.AUTOTRACKER_DISABLE_REGION_TRACKING}
+        ["CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING"] =      {"Disable Auto Entrance Tracking",       "settings_auto_entrance",          2, false, CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING}
     },
     ["fileio.lua"] = {
         ["CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE"] =      {"Enable External Item File",            "settings_fileio_item",            2, false, CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE},
@@ -165,20 +165,20 @@ DATA.DykTexts = {
 
 DATA.DungeonList = { "hc", "ep", "dp", "toh", "at", "pod", "sp", "sw", "tt", "ip", "mm", "tr", "gt" }
 
-DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots
-    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 34 },
-    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1, 50 },
-    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3, 47 },
-    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0, 25 },
-    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5, 56 },
-    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0, 39 },
-    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2, 37 },
-    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81 },
-    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2, 51 },
-    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0, 37 },
-    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2, 44 },
-    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0, 49 },
-    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3, 89 }
+DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots, capture badges
+    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 34, {"cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc"} },
+    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1, 50, "cap_ep" },
+    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3, 47, {"cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback"} },
+    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0, 25, "cap_at" },
+    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5, 56, "cap_sp" },
+    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0, 39, "cap_pod" },
+    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2, 37, "cap_mm" },
+    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81, {"cap_sw", "cap_swbacksouth", "cap_swfrontleft", "cap_swfrontright"} },
+    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2, 51, "cap_ip" },
+    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0, 37, "cap_toh" },
+    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2, 44, "cap_tt" },
+    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0, 49, {"cap_trmain", "cap_trleft", "cap_trright", "cap_trback"} },
+    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3, 89, "cap_gt" }
 }
 
 DATA.DungeonIdMap = {
@@ -310,6 +310,418 @@ DATA.LinkedOverworldScreens = {
 --     [0x29] = "28",
 --     [0x30] = "3a",
 --     [0x3a] = "30"
+}
+
+DATA.OverworldSlotAliases = {
+    [0x01] = 0x00, [0x08] = 0x00, [0x09] = 0x00,
+    [0x04] = 0x03, [0x0b] = 0x03, [0x0c] = 0x03,
+    [0x06] = 0x05, [0x0d] = 0x05, [0x0e] = 0x05,
+    [0x19] = 0x18, [0x20] = 0x18, [0x21] = 0x18,
+    [0x1c] = 0x1b, [0x23] = 0x1b, [0x24] = 0x1b,
+    [0x1f] = 0x1e, [0x26] = 0x1e, [0x27] = 0x1e,
+    [0x31] = 0x30, [0x38] = 0x30, [0x39] = 0x30,
+    [0x36] = 0x35, [0x3d] = 0x35, [0x3e] = 0x35,
+    
+    [0x41] = 0x40, [0x48] = 0x40, [0x49] = 0x40,
+    [0x44] = 0x43, [0x4b] = 0x43, [0x4c] = 0x43,
+    [0x46] = 0x45, [0x4d] = 0x45, [0x4e] = 0x45,
+    [0x59] = 0x58, [0x60] = 0x58, [0x61] = 0x58,
+    [0x5c] = 0x5b, [0x63] = 0x5b, [0x64] = 0x5b,
+    [0x5f] = 0x5e, [0x66] = 0x5e, [0x67] = 0x5e,
+    [0x71] = 0x70, [0x78] = 0x70, [0x79] = 0x70,
+    [0x76] = 0x75, [0x7d] = 0x75, [0x7e] = 0x75,
+
+    [0x82] = 0x81, [0x89] = 0x81, [0x8a] = 0x81
+}
+
+-- OWID = { LocationName, Y Coord, X Coord, Time Tolerance, IsDropdown }
+DATA.OverworldEntranceData = {
+    [0x00] = {
+        {"@Forest Chest Game/Entrance",                 0x02f0, 0x0008, 2.0, false},
+        {"@Forest Hideout Exit/Entrance",               0x02e8, 0x0248, 0.5, false},
+        {"@Forest Hideout Drop/Dropdown",               0x0300, 0x0198, 0.5, true}
+    },
+    [0x02] = {
+        {"@Lumberjack Tree Exit/Entrance",              0x0548, 0x0068, 1.0, false},
+        {"@Lumberjack Tree/Dropdown",                   0x04c8, 0x00ac, 0.4, true},
+        {"@Lumberjack House/Entrance",                  0x0558, 0x00d8, 0.4, false}
+    },
+    [0x03] = {
+        {"@Tower of Hera Entrance/Entrance",            0x08f0, 0x0068, 2.0, false},
+        {"@Spectacle Rock Top/Entrance",                0x07c8, 0x0188, 0.8, false},
+        {"@Spectacle Rock Bottom/Entrance",             0x07c8, 0x0238, 0.5, false},
+        {"@Spectacle Rock Left/Entrance",               0x0748, 0x0218, 0.5, false},
+        {"@Death Mountain Entry Back/Entrance",         0x0678, 0x02e8, 1.0, false},
+        {"@Old Man Home/Entrance",                      0x0728, 0x03a8, 1.0, false},
+        {"@Old Man Back Door/Entrance",                 0x0888, 0x0278, 2.0, false},
+        {"@Death Mountain Descent Front/Entrance",      0x0648, 0x0218, 1.0, false}
+    },
+    [0x05] = {
+        {"@Paradox Cave Middle/Entrance",               0x0da8, 0x0238, 0.2, false},
+        {"@Paradox Cave Bottom/Entrance",               0x0dc8, 0x0358, 2.0, false},
+        {"@Paradox Cave Top/Entrance",                  0x0db8, 0x00e8, 2.0, false},
+        {"@Fairy Ascension Bottom/Entrance",            0x0d18, 0x0218, 1.0, false},
+        {"@Fairy Ascension Top/Entrance",               0x0d18, 0x01b8, 0.8, false},
+        {"@Spiral Cave Top/Entrance",                   0x0cb8, 0x0158, 0.8, false},
+        {"@Spiral Cave Bottom/Entrance",                0x0cc8, 0x01f8, 0.6, false},
+        {"@Hookshot Fairy Cave/Entrance",               0x0d78, 0x0238, 0.2, false},
+        {"@Mimic Cave Entrance/Entrance",               0x0d78, 0x0158, 0.8, false}
+    },
+    [0x0a] = {
+        {"@Death Mountain Descent Back/Entrance",       0x05b8, 0x0258, 2.0, false},
+        {"@Death Mountain Entry Cave/Entrance",         0x05a8, 0x02b8, 2.0, false}
+    },
+    [0x0f] = "@Waterfall Fairy Cave/Entrance", --0x0e60, 0x0208
+    [0x11] = "@Kakariko Fortune Teller/Entrance", --0x02f8, 0x0508
+    [0x13] = {
+        {"@North Bonk Rocks/Entrance",                  0x0638, 0x04a8, 2.0, false},
+        {"@Sanctuary Exit/Entrance",                    0x0758, 0x0414, 2.0, false}
+    },
+    [0x14] = {
+        {"@Graveyard Ledge Cave/Entrance",              0x0918, 0x0448, 2.0, false},
+        {"@King's Tomb Grave/Entrance",                 0x0998, 0x04a8, 2.0, false},
+        {"@Sanctuary Grave/Dropdown",                   0x0848, 0x042c, 2.0, true}
+    },
+    [0x15] = {
+        {"@Useless Fairy Exit/Entrance",                0x0aa8, 0x0448, 0.6, false},
+        {"@Useless Fairy Drop/Dropdown",                0x0a40, 0x0478, 0.4, true}
+    },
+    [0x16] = "@Witch's Hut/Entrance", --0x0cc8, 0x0538
+    [0x18] = {
+        {"@Kakariko Well Exit/Entrance",                0x00b8, 0x06b8, 1.0, false},
+        {"@Kakariko Well Drop/Dropdown",                0x0058, 0x063c, 1.0, true},
+        {"@Blind's House Entrance/Entrance",            0x0208, 0x0698, 0.6, false},
+        {"@Elder Left Door/Entrance",                   0x0268, 0x0698, 0.6, false},
+        {"@Elder Right Door/Entrance",                  0x02a8, 0x0698, 0.6, false},
+        {"@Left Snitch House/Entrance",                 0x00c8, 0x0758, 2.0, false},
+        {"@Right Snitch House/Entrance",                0x0348, 0x0798, 2.0, false},
+        {"@Chicken House Entrance/Entrance",            0x0188, 0x0888, 1.0, false},
+        {"@Sick Kid Entrance/Entrance",                 0x0278, 0x0868, 0.3, false},
+        {"@Grass House/Entrance",                       0x0338, 0x0868, 2.0, false},
+        {"@Bomb Hut/Entrance",                          0x0068, 0x0968, 2.0, false},
+        {"@Kakariko Shop Entrance/Entrance",            0x01b8, 0x0938, 1.0, false},
+        {"@Tavern Back/Entrance",                       0x0288, 0x091c, 0.3, true},
+        {"@Tavern Back/Entrance",                       0x0288, 0x0908, 0.3, true}, -- backup
+        {"@Tavern Front/Entrance",                      0x0288, 0x0968, 1.0, false}
+    },
+    [0x1b] = {
+        {"@Castle Main Entrance/Entrance",              0x07f8, 0x06cc, 2.0, false},
+        {"@Castle Left Entrance/Entrance",              0x0728, 0x0604, 0.2, false},
+        {"@Castle Right Entrance/Entrance",             0x08c8, 0x0604, 1.0, false},
+        {"@Agahnim's Tower Entrance/Entrance",          0x07f8, 0x0634, 0.2, false},
+        {"@Secret Passage Exit/Entrance",               0x08c8, 0x06c8, 2.0, false},
+        {"@Secret Passage Drop/Dropdown",               0x0980, 0x0624, 2.0, true},
+        {"@Ganon Hole Exit/Entrance",                   0x0728, 0x06c8, 1.0, false},
+        {"@Ganon Hole Exit/Entrance",                   0x06e8, 0x0604, 0.2, false}, --Inverted 2.0
+        {"@Ganon Hole/Dropdown",                        0x07f8, 0x0624, 0.2, true}
+    },
+    [0x1e] = {
+        {"@Sahasrahla's Hut Entrance/Entrance",         0x0cf0, 0x0728, 2.0, false},
+        {"@Eastern Palace Entrance/Entrance",           0x0f50, 0x0618, 2.0, false}
+    },
+    [0x22] = {
+        {"@Smith's House/Entrance",                     0x04d8, 0x0868, 1.0, false},
+        {"@Magic Bat Exit/Entrance",                    0x0500, 0x08c8, 0.2, false},
+        {"@Magic Bat Drop/Dropdown",                    0x0530, 0x08e8, 0.2, true}
+    },
+    [0x28] = "@Quarreling Brothers Left/Entrance", --0x01b8, 0x0b58
+    [0x29] = {
+        {"@Quarreling Brothers Right/Entrance",         0x0238, 0x0b58, 1.0, false},
+        {"@Library Entrance/Entrance",                  0x0278, 0x0a68, 1.0, false},
+        {"@Kakariko Chest Game/Entrance",               0x0368, 0x0b18, 2.0, false}
+    },
+    [0x2b] = "@Central Bonk Rocks/Entrance", --0x0788, 0x0a68
+    [0x2c] = "@Link's House Entrance/Entrance", --0x08b8, 0x0ae8
+    [0x2e] = "@Trees Fairy Cave/Entrance", --0x0d28, 0x0a38
+    [0x2f] = "@Long Fairy Cave/Entrance", --0x0fa8, 0x0b18
+    [0x30] = {
+        {"@Desert Front Entrance/Entrance",             0x0128, 0x0ca8, 2.0, false},
+        {"@Desert Left Entrance/Entrance",              0x0088, 0x0c98, 2.0, false},
+        {"@Desert Right Entrance/Entrance",             0x01c8, 0x0c98, 2.0, false},
+        {"@Desert Back Entrance/Entrance",              0x0128, 0x0c28, 2.0, false},
+        {"@Checkerboard Cave Entrance/Entrance",        0x02c8, 0x0c68, 2.0, false},
+        {"@Aginah's Cave Entrance/Entrance",            0x0328, 0x0d18, 2.0, false}
+    },
+    [0x32] = "@Cave 45 Entrance/Entrance", --0x0438, 0x0d18
+    [0x34] = "@Hype Fairy Cave/Entrance", --0x0988, 0x0c58
+    [0x35] = {
+        {"@Lake Fortune Teller/Entrance",               0x0a58, 0x0cb8, 2.0, false},
+        {"@Lake Shop Entrance/Entrance",                0x0b98, 0x0c28, 2.0, false},
+        {"@Mini Moldorm Cave Entrance/Entrance",        0x0a68, 0x0ee8, 2.0, false},
+        {"@Upgrade Fairy/Entrance",                     0x0ca8, 0x0d88, 2.0, false}
+    },
+    [0x37] = {
+        {"@Ice Rod Cave Entrance/Entrance",             0x0e48, 0x0c38, 0.2, false},
+        {"@Cold Bee Cave/Entrance",                     0x0e98, 0x0c38, 0.2, false},
+        {"@Twenty Rupee Cave/Entrance",                 0x0e68, 0x0c88, 0.2, false}
+    },
+    [0x3a] = {
+        {"@Fifty Rupee Cave/Entrance",                  0x04f8, 0x0f48, 2.0, false},
+        {"@Desert Fairy Cave/Entrance",                 0x0468, 0x0e28, 2.0, false}
+    },
+    [0x3b] = "@Dam Entrance/Entrance", --0x0778, 0x0ed8
+    [0x40] = {
+        {"@Skull Woods Front Right/Entrance",           0x02e8, 0x0248, 0.4, false},
+        {"@Skull Woods Front Left/Entrance",            0x0248, 0x0238, 2.0, false},
+        {"@Skull Woods Back South/Entrance",            0x00e8, 0x01f8, 2.0, false},
+        {"@Skull Woods Back/Entrance",                  0x0098, 0x00b8, 2.0, false},
+        {"@Skull Woods Back/Entrance",                  0x0098, 0x0100, 2.0, false}, -- alternate
+        {"@Skull Woods Back Drop/Dropdown",             0x01e8, 0x0170, 2.0, true},
+        {"@Skull Woods Back Drop/Dropdown",             0x01e8, 0x0120, 2.0, true}, -- backup
+        {"@Skull Woods Big Chest Drop/Dropdown",        0x0300, 0x0194, 0.4, true},
+        {"@Skull Woods Front Right Drop/Dropdown",      0x0318, 0x0230, 0.4, true},
+        {"@Skull Woods Front Left Drop/Dropdown",       0x0278, 0x0250, 1.0, true},
+    },
+    [0x42] = "@Dark Lumberjack/Entrance", --0x0558, 0x00c8
+    [0x43] = {
+        {"@Ganon's Tower Entrance/Entrance",            0x08f8, 0x0028, 2.0, false},
+        {"@Ganon's Tower Entrance/Entrance",            0x08f8, 0x00a4, 2.0, false},
+        {"@Spike Cave Entrance/Entrance",               0x0928, 0x0238, 2.0, false},
+        {"@Dark Mountain Fairy/Entrance",               0x0678, 0x02e8, 2.0, false}
+    },
+    [0x45] = {
+        {"@Hookshot Cave Island/Entrance",              0x0cc8, 0x0038, 2.0, false},
+        {"@Superbunny Cave Top/Entrance",               0x0db8, 0x00e8, 1.0, false},
+        {"@Hookshot Cave Entrance/Entrance",            0x0d48, 0x0108, 2.0, false},
+        {"@Turtle Ledge Left Entrance/Entrance",        0x0cb8, 0x0158, 1.0, false},
+        {"@Turtle Ledge Right Entrance/Entrance",       0x0d78, 0x0158, 1.0, false},
+        {"@Turtle Laser Bridge Entrance/Entrance",      0x0d18, 0x01b8, 2.0, false},
+        {"@Superbunny Cave Bottom/Entrance",            0x0d78, 0x0238, 0.2, false},
+        {"@Dark Death Mountain Shop Entrance/Entrance", 0x0daa, 0x0238, 0.2, false}
+    },
+    [0x47] = "@Turtle Rock Entrance/Entrance", --0x0f08, 0x0128
+    [0x4a] = {
+        {"@Bumper Cave Bottom/Entrance",                0x05a8, 0x02b8, 2.0, false},
+        {"@Bumper Cave Top/Entrance",                   0x05b8, 0x0258, 2.0, false}
+    },
+    [0x51] = "@Village of Outcasts Fortune Teller/Entrance", --0x02f8, 0x0508
+    [0x53] = "@Dark Chapel/Entrance", --0x0758, 0x0448
+    [0x56] = "@Dark Witch's Hut Entrance/Entrance", --0x0cd8, 0x0548
+    [0x58] = {
+        {"@Chest Game Entrance/Entrance",               0x00c8, 0x0758, 2.0, false},
+        {"@Thieves Town Entrance/Entrance",             0x01f8, 0x07a8, 2.0, false},
+        {"@C-Shaped House Entrance/Entrance",           0x0348, 0x0798, 2.0, false},
+        {"@Brewery Entrance/Entrance",                  0x01b8, 0x0938, 2.0, false},
+        {"@Hammer House/Entrance",                      0x0338, 0x0868, 2.0, false}
+    },
+    [0x5a] = "@Shield Shop Entrance/Entrance", --0x0548, 0x0738
+    [0x5b] = {
+        {"@Pyramid Fairy Cave/Entrance",                0x0778, 0x07a8, 2.0, false},
+        {"@Ganon Hole/Dropdown",                        0x07f0, 0x0680, 2.0, true},--90->24
+        {"@Ganon Hole Exit/Entrance",                   0x06e8, 0x07a8, 2.0, false}
+    },
+    [0x5e] = {
+        {"@Palace of Darkness Entrance/Entrance",       0x0f50, 0x0628, 2.0, false},
+        {"@Dark Sahasrahla/Entrance",                   0x0d90, 0x07e8, 2.0, false}
+    },
+    [0x62] = "@Hammer Pegs Cave/Entrance", --0x0508, 0x09a8
+    [0x69] = "@Archery Game/Entrance", --0x0368, 0x0b18
+    [0x6b] = "@Dark Bonk Rocks/Entrance", --0x0788, 0x0a68
+    [0x6c] = "@Bomb Shop/Entrance", --0x08b8, 0x0ae8
+    [0x6e] = "@Dark Trees Fairy/Entrance", --0x0d28, 0x0a38
+    [0x6f] = "@East Storyteller Cave/Entrance", --0x0fa8, 0x0b18
+    [0x70] = {
+        {"@Misery Mire Entrance/Entrance",              0x0128, 0x0cc8, 2.0, false},
+        {"@Mire Shed Cave/Entrance",                    0x0098, 0x0cb8, 2.0, false},
+        {"@Mire Hint Cave/Entrance",                    0x0328, 0x0d18, 2.0, false},
+        {"@Mire Fairy/Entrance",                        0x01b8, 0x0cb8, 2.0, false}
+    },
+    [0x74] = "@Hype Cave Entrance/Entrance", --0x0988, 0x0c58
+    [0x75] = {
+        {"@Ice Palace Entrance/Entrance",               0x0cb8, 0x0db8, 2.0, false},
+        {"@Dark Lake Shop Entrance/Entrance",           0x0a58, 0x0cb8, 2.0, false}
+    },
+    [0x77] = {
+        {"@Dark Lake Hylia Fairy/Entrance",             0x0e48, 0x0c38, 0.2, false},
+        {"@Spike Hint Cave/Entrance",                   0x0e68, 0x0c88, 0.2, false},
+        {"@Hamburger Helper Cave/Entrance",             0x0e98, 0x0c38, 0.2, false}
+    },
+    [0x7b] = "@Swamp Palace Entrance/Entrance" --0x0778, 0x0ed8
+}
+
+-- Data can be defined 3 ways:
+-- A) A string, if in all cases one icon will be used
+-- B) A tuple, if one icon will be used, but conditional (dark rooms)
+--    {"icon_name", is_dungeon, is_dark_room}
+-- C) A list of all possible entrypoints
+--    {x_coord, y_coord, "icon_name"}
+DATA.RoomLobbyData = {
+    [0x0000] = "cap_drop_ganon",
+    [0x0008] = "cap_drop_fairy",
+    [0x000c] = {"cap_gt", true},
+    [0x000e] = {"cap_ip", true},
+    [0x0010] = "cap_drop_ganon",
+    [0x0011] = {
+        {0x0393, 0x024c, "cap_drop_sanc"},
+        {0x0393, 0x029c, "cap_drop_sanc"}
+    },
+    [0x0012] = {"cap_hcsanc", true},
+    [0x0018] = "cap_drop_fairy",
+    [0x0023] = {"cap_trleft", true},
+    [0x0024] = {"cap_trright", true},
+    [0x0028] = {"cap_sp", true},
+    [0x002c] = "cap_hookcave",
+    [0x002f] = "cap_drop_well",
+    [0x003c] = "cap_hookcave",
+    --[0x0048] = {"cap_drop_swbigchest", true},
+    [0x004a] = {"cap_pod", true},
+    [0x0055] = "cap_drop_uncle",
+    [0x0056] = {
+        {0x0c78, 0x0bd8, "cap_swbacksouth"},
+        {0x0d40, 0x0a18, "cap_drop_swhazard"},
+        {0x0d40, 0x0a68, "cap_drop_swhazard"}
+    },
+    [0x0057] = {"cap_swfrontleft", true},
+    [0x0058] = {
+        {0x1078, 0x0bd8, "cap_swfrontright"},
+        {0x1190, 0x0a18, "cap_drop_swbigchest"},
+        {0x1190, 0x0a68, "cap_drop_swbigchest"}
+    },
+    [0x0059] = {"cap_sw", true}, --"cap_swback" insanity is handled elsewhere
+    [0x0060] = {"cap_hcleft", true},
+    [0x0061] = {"cap_hcmain", true},
+    [0x0062] = {"cap_hcright", true},
+    [0x0063] = {"cap_dpback", true},
+    [0x0067] = {
+        {0xe80, 0x0c18, "cap_drop_swcompass"},
+        {0xe80, 0x0c68, "cap_drop_swcompass"}
+    },
+    [0x0068] = "cap_drop_swpinball",
+    [0x0077] = {"cap_toh", true},
+    [0x0083] = {"cap_dpleft", true},
+    [0x0084] = {"cap_dpmain", true},
+    [0x0085] = {"cap_dpright", true},
+    [0x0098] = {"cap_mm", true},
+    [0x00c9] = {"cap_ep", true},
+    [0x00d5] = {"cap_trback", true},
+    [0x00d6] = {"cap_trmain", true},
+    [0x00db] = {"cap_tt", true},
+    [0x00df] = "cap_paradox_top",
+    [0x00e0] = {"cap_at", true},
+    [0x00e1] = "cap_drop_hideout",
+    [0x00e2] = "cap_drop_lumberjack",
+    [0x00e3] = "cap_drop_bat",
+    [0x00e4] = "cap_mtncave",
+    [0x00e5] = {"cap_mtncave_back", false, true},
+    [0x00e6] = {"cap_darkmountain", false, true},
+    [0x00e7] = {"cap_darkmountain", false, true},
+    [0x00e8] = "cap_bunny_top",
+    [0x00ea] = "cap_spec_top",
+    [0x00eb] = "cap_bumper_top",
+    [0x00ed] = "cap_fairyascension",
+    [0x00ee] = "cap_spiral_top",
+    [0x00ef] = "cap_paradox_middle",
+    [0x00f0] = {"cap_oldman", false, true},
+    [0x00f1] = {"cap_oldman", false, true},
+    [0x00f2] = "cap_granny",
+    [0x00f3] = "cap_granny",
+    [0x00f4] = "cap_brother",
+    [0x00f5] = "cap_brother",
+    [0x00f8] = "cap_bunny_bottom",
+    [0x00f9] = "cap_spec_left",
+    [0x00fa] = "cap_spec_bottom",
+    [0x00fb] = "cap_bumper",
+    [0x00fd] = "cap_fairyascension",
+    [0x00fe] = "cap_spiral_bottom",
+    [0x00ff] = "cap_paradox_bottom",
+    [0x0100] = "", -- Forest Gamble
+    [0x0101] = {
+        {0x0378, 0x21e6, "", "cap_chest"}, -- Snitch West
+        {0x0278, 0x21e6, "", "cap_chest"} -- Snitch East
+    },
+    [0x0102] = "cap_sickkid",
+    [0x0103] = {
+        {0x0678, 0x2020, "cap_chest"}, -- Tavern Back
+        {0x0678, 0x21e6, "", "cap_chest"}, -- Tavern Front
+        {0x0778, 0x21e6, ""} -- Beds
+    },
+    [0x0104] = "cap_link",
+    [0x0105] = "cap_sah",
+    [0x0106] = "cap_chest", -- Brewery/Chest Game
+    [0x0107] = {
+        {0x0f78, 0x21e6, "cap_bombfarm", "cap_chest"}, -- Bomb Hut
+        {0x0e78, 0x21e6, "cap_library"}
+    },
+    [0x0108] = "cap_chest", -- Chicken House
+    [0x0109] = "cap_potionshop",
+    [0x010a] = "cap_chest", -- Aginah
+    [0x010b] = "cap_dam",
+    [0x010c] = {
+        {0x1978, 0x21e6, "", "cap_chest"}, -- Hookshot Fairy
+        {0x1878, 0x21e6, "cap_mimic"}
+    },
+    [0x010d] = "cap_chest", -- Mire Shed
+    [0x010e] = "", -- Hamburger Helper/ Dark East Hint
+    [0x010f] = "cap_shop", -- DW Shops
+    [0x0110] = "cap_shop", -- Red Shield Shop
+    [0x0111] = "cap_rupee", -- Archery Game
+    [0x0112] = {
+        {0x0578, 0x23e6, "cap_shop"}, -- Hylia/DDM Shop
+        {0x0478, 0x23e6, ""} -- Dark Chapel
+    },
+    [0x0113] = "cap_chest", -- Kings Tomb
+    [0x0114] = {
+        {0x0878, 0x23e6, "cap_chest"}, -- Waterfall Fairy
+        {0x0978, 0x23e6, "", "cap_chest"} -- Mire Hint
+    },
+    [0x0115] = {
+        {0x0b78, 0x023e6, "cap_fairycave"}, -- Fairy Fountains
+        {0x0a78, 0x23e6, "cap_shop"} -- Upgrade Fairy
+    },
+    [0x0116] = "cap_chest", -- Pyramid Fairy
+    [0x0117] = "cap_spike",
+    [0x0118] = "", -- Kakariko Gamble
+    [0x0119] = "cap_chest", -- Blinds Hideout
+    [0x011a] = {
+        {0x1578, 0x23e6, "", "cap_chest"} -- Pod Hint
+    },
+    [0x011b] = {
+        {0x1778, 0x23e6, "cap_bombfarm", "cap_chest"}, -- Graveyard
+        {0x1678, 0x23ce, "cap_chest"} -- Cave 45
+    },
+    [0x011c] = {
+        {0x1878, 0x23e6, "cap_redbomb"},
+        {0x1978, 0x23e6, "cap_chest"} -- C-Shaped House
+    },
+    [0x011e] = {
+        {0x1d78, 0x23e6, "cap_chest"}, -- Hype
+        {0x1c78, 0x23e6, ""} -- Long Fairy
+    },
+    [0x011f] = {
+        {0x1f78, 0x23e6, "cap_shop"}, -- Kakariko Shop
+        {0x1e78, 0x23e6, "", "cap_chest"} -- Lumberjack
+    },
+    [0x0120] = {
+        {0x0078, 0x25e6, "cap_chest"}, -- Ice Rod
+        {0x0178, 0x25e6, "", "", "cap_chest"} -- Cold Bee
+    },
+    [0x0121] = "cap_smith",
+    [0x0122] = "", -- Fortune Tellers
+    [0x0123] = "cap_chest", -- Mini Moldorm
+    [0x0124] = {
+        {0x0978, 0x25e6, "cap_chest"}, -- Bonk Rocks
+        {0x0878, 0x25e6, "cap_rupee", "cap_chest"} -- 50 Rupee
+    },
+    [0x0125] = {
+        {0x0b78, 0x25e6, "", "cap_chest"}, -- Spike Hint
+        {0x0a78, 0x25e6, "cap_rupee", "cap_chest"} -- 20 Rupee
+    },
+    [0x0126] = {
+        {0x0d78, 0x25e6, "cap_chest"}, -- Checkerboard
+        {0x0c78, 0x25e6, ""} -- Bonk Fairies
+    },
+    [0x0127] = "cap_chest" -- Hammerpegs
+}
+
+DATA.DropdownCouples = {
+    ["@Forest Hideout Exit/Entrance"] = "@Forest Hideout Drop/Dropdown",
+    ["@Lumberjack Tree Exit/Entrance"] = "@Lumberjack Tree/Dropdown",
+    ["@Sanctuary Exit/Entrance"] = "@Sanctuary Grave/Dropdown",
+    ["@Useless Fairy Exit/Entrance"] = "@Useless Fairy Drop/Dropdown",
+    ["@Kakariko Well Exit/Entrance"] = "@Kakariko Well Drop/Dropdown",
+    ["@Secret Passage Exit/Entrance"] = "@Secret Passage Drop/Dropdown",
+    ["@Ganon Hole Exit/Entrance"] = "@Ganon Hole/Dropdown",
+    ["@Magic Bat Exit/Entrance"] = "@Magic Bat Drop/Dropdown"
 }
 
 DATA.CaptureBadgeEntrances = {

@@ -11,7 +11,6 @@ function autotracker_started()
 end
 
 function autotracker_stopped()
-    STATUS.AutotrackerInGame = false
     disposeMemoryWatch()
 end
 
@@ -20,8 +19,14 @@ function isInGame(segment)
     return isInGameFromModule()
 end
 
-function isInGameFromModule()
-    return CACHE.MODULE > 0x05 and CACHE.MODULE < 0x1c and CACHE.MODULE ~= 0x14 and CACHE.MODULE ~= 0x19 and CACHE.MODULE ~= 0x1a
+function isInGameFromModule(moduleId)
+    local function foo(mod)
+        return mod > 0x05 and mod < 0x1c and mod ~= 0x14 and mod ~= 0x19 and mod ~= 0x1a
+    end
+    if moduleId then
+        return foo(moduleId)
+    end
+    return foo(CACHE.MODULE)
 end
 
 
@@ -119,13 +124,9 @@ function initMemoryWatch()
         SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
+        SEGMENTS.CoordinateData = ScriptHost:AddMemoryWatch("Coord Data", 0x7e0020, 4, updateCoordinateFromMemorySegment, 80)
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
         SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
-        if INSTANCE.NEW_SRAM_SYSTEM then
-            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
-        else
-            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
-        end
     end
     
     if Tracker.ActiveVariantUID ~= "vanilla" then
@@ -151,38 +152,46 @@ end
 function disposeMemoryWatch()
     STATUS.AutotrackerInGame = false
 
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.ItemData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.HealthData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.HalfMagicData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.ToggleItemData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.ArrowData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.ProgressData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.TempDoorData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.TempRoomData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomPotData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomEnemyData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.OverworldData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.ShopData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.NPCData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.Collection)
+    local function disposeSegment(segment)
+        if segment then
+            ScriptHost:RemoveMemoryWatch(segment)
+        end
+        segment = nil
+    end
 
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonKeyData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonTotals)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonsCompleted)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.PendantData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.CrystalData)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonId)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomId)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.OverworldId)
-    ScriptHost:RemoveMemoryWatch(SEGMENTS.WorldFlag)
+    disposeSegment(SEGMENTS.ItemData)
+    disposeSegment(SEGMENTS.HealthData)
+    disposeSegment(SEGMENTS.HalfMagicData)
+    disposeSegment(SEGMENTS.ToggleItemData)
+    disposeSegment(SEGMENTS.ArrowData)
+    disposeSegment(SEGMENTS.ProgressData)
+    disposeSegment(SEGMENTS.RoomData)
+    disposeSegment(SEGMENTS.TempDoorData)
+    disposeSegment(SEGMENTS.TempRoomData)
+    disposeSegment(SEGMENTS.RoomPotData)
+    disposeSegment(SEGMENTS.RoomEnemyData)
+    disposeSegment(SEGMENTS.CoordinateData)
+    disposeSegment(SEGMENTS.OverworldData)
+    disposeSegment(SEGMENTS.ShopData)
+    disposeSegment(SEGMENTS.NPCData)
+    disposeSegment(SEGMENTS.Collection)
+
+    disposeSegment(SEGMENTS.DungeonData)
+    disposeSegment(SEGMENTS.DungeonKeyData)
+    disposeSegment(SEGMENTS.DungeonTotals)
+    disposeSegment(SEGMENTS.DungeonsCompleted)
+    disposeSegment(SEGMENTS.PendantData)
+    disposeSegment(SEGMENTS.CrystalData)
+    disposeSegment(SEGMENTS.DungeonId)
+    disposeSegment(SEGMENTS.RoomId)
+    disposeSegment(SEGMENTS.OverworldId)
+    disposeSegment(SEGMENTS.WorldFlag)
 end
 
 
 --Base Memory Watches
 ScriptHost:AddMemoryWatch("ROM Title", 0x701ffc, 25, updateTitleFromMemorySegment)
-ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 1000)
+ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 40)
 
 
 function numberOfSetBits(value)
