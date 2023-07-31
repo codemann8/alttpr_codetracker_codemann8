@@ -219,6 +219,12 @@ function saveBackup()
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
         
+        textOutput = textOutput .. "BACKUP.MULTIDUNGEONCAPTURES = { \n"
+        for roomId, data in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
+            textOutput = textOutput .. "    [" .. math.floor(roomId) .. "] = \"" .. data .. "\",\n"
+        end
+        textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
+
         textOutput = textOutput .. "BACKUP.DUNGEON_PRIZE_DATA = " .. math.floor(INSTANCE.DUNGEON_PRIZE_DATA) .. "\n"
         textOutput = textOutput .. "BACKUP.ROOMCURSORPOSITION = " .. math.floor(INSTANCE.ROOMCURSORPOSITION) .. "\n"
 
@@ -318,6 +324,12 @@ function restoreBackup()
         end
     end
 
+    if BACKUP.MULTIDUNGEONCAPTURES ~= nil then
+        for roomId, data in pairs(BACKUP.MULTIDUNGEONCAPTURES) do
+            INSTANCE.MULTIDUNGEONCAPTURES[roomId] = data
+        end
+    end
+
     if BACKUP.DUNGEON_PRIZE_DATA ~= nil then
         INSTANCE.DUNGEON_PRIZE_DATA = BACKUP.DUNGEON_PRIZE_DATA
     end
@@ -411,10 +423,10 @@ function writeOverride(path, filename, text)
 
     local written = false
     if fullDir ~= nil then
-        written = writeFile(fullDir .. packRoot, path, filename, text)
+        written = writeFile(fullDir .. "user_overrides\\" .. packRoot, path, filename, text)
     
         if dirExists(fullDir .. "dev\\") then
-            written = writeFile(fullDir .. "dev\\" .. packRoot, path, filename, text) or written
+            written = writeFile(fullDir .. "dev\\user_overrides\\" .. packRoot, path, filename, text) or written
         end
 
         if not written then
@@ -429,18 +441,38 @@ end
 function deleteOverride(path, filename)
     local fullDir, packRoot = getFullDir()
 
-    if dirExists(fullDir .. packRoot .. path .. filename) then
-        os.remove(fullDir .. packRoot .. path .. filename)
+    if dirExists(fullDir .. "user_overrides\\" .. packRoot .. path .. filename) then
+        os.remove(fullDir .. "user_overrides\\" .. packRoot .. path .. filename)
     end
     
-    if dirExists(fullDir .. "dev\\" .. packRoot .. path .. filename) then
-        os.remove(fullDir .. "dev\\" .. packRoot .. path .. filename)
+    if dirExists(fullDir .. "dev\\user_overrides\\" .. packRoot .. path .. filename) then
+        os.remove(fullDir .. "dev\\user_overrides\\" .. packRoot .. path .. filename)
+    end
+end
+
+function printLog(text)
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print(text)
+    end
+    
+    local fullDir, packRoot = getFullDir()
+    local written = false
+    if fullDir ~= nil then
+        if dirExists(fullDir .. "user_overrides\\" .. packRoot) then
+            local file = io.open(fullDir .. "user_overrides\\" .. packRoot .. "autoerlog.txt", "a")
+            if file then
+                io.output(file)
+                io.write(text .. "\n")
+                io.close(file)
+                return true
+            end
+        end
     end
 end
 
 function getFullDir()
     local emoDir = "Documents\\EmoTracker\\"
-    local packRoot = "user_overrides\\alttpr_codetracker_codemann8\\"
+    local packRoot = "alttpr_codetracker_codemann8\\"
     local baseDir = ""
     
     if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
