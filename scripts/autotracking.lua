@@ -124,9 +124,14 @@ function initMemoryWatch()
         SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
-        SEGMENTS.CoordinateData = ScriptHost:AddMemoryWatch("Coord Data", 0x7e0020, 4, updateCoordinateFromMemorySegment, 80)
+        SEGMENTS.CoordinateData = ScriptHost:AddMemoryWatch("Coord Data", 0x7e001b, 9, updateCoordinateFromMemorySegment, 80)
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
         SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
+        if INSTANCE.NEW_SRAM_SYSTEM then
+            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
+        else
+            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
+        end
     end
     
     if Tracker.ActiveVariantUID ~= "vanilla" then
@@ -191,7 +196,7 @@ end
 
 --Base Memory Watches
 ScriptHost:AddMemoryWatch("ROM Title", 0x701ffc, 25, updateTitleFromMemorySegment)
-ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 40)
+ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 150)
 
 
 function numberOfSetBits(value)

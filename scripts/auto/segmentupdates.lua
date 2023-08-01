@@ -71,9 +71,7 @@ function updateModuleFromMemorySegment(segment)
             initMemoryWatch()
         end
 
-        if isInGameFromModule() then
-            updateCoordinateFromMemorySegment(nil)
-        else
+        if not isInGameFromModule() then
             resetCoords()
         end
 
@@ -89,26 +87,6 @@ function updateModuleFromMemorySegment(segment)
 
             doStatsMessage()
         end
-    end
-end
-
-function updateIndoorFlagFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: Indoor")
-    end
-
-    if segment then
-        CACHE.INDOOR = segment:ReadUInt8(0x7e001b) == 1
-    else
-        CACHE.INDOOR = AutoTracker:ReadU8(0x7e001b, 0) == 1
-    end
-
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("INDOOR:", CACHE.INDOOR ~= 0 and "Yes" or "No")
     end
 end
 
@@ -342,12 +320,15 @@ function updateCoordinateFromMemorySegment(segment)
     
     local yCoord = 0
     local xCoord = 0
+    local prevIndoor = CACHE.INDOOR
     if segment then
         yCoord = segment:ReadUInt16(0x7e0020)
         xCoord = segment:ReadUInt16(0x7e0022)
+        CACHE.INDOOR = segment:ReadUInt8(0x7e001b) == 1
     else
         yCoord = AutoTracker:ReadU16(0x7e0020, 0)
         xCoord = AutoTracker:ReadU16(0x7e0022, 0)
+        CACHE.INDOOR = AutoTracker:ReadU8(0x7e001b, 0) == 1
     end
 
     local function findClosestEntrance(owid, coordX, coordY)
@@ -362,13 +343,12 @@ function updateCoordinateFromMemorySegment(segment)
                 for i,ent in ipairs(DATA.OverworldEntranceData[owid]) do
                     if ent[2] == 0 or ent[3] == 0 then
                         printLog(string.format("MISSING OW COORD: 0x%2X: %4Xx%4X", owid, coordX, coordY))
-                    elseif STATUS.LAST_COORD[2] < ent[4] then
-                        local offset = (not ent[5]) and 0x08 or 0x0 -- dropdowns/tavern shouldn't use offset
-                        local distance = calcDistance(coordX, coordY, ent[2], ent[3] + offset, ent[5])
-                        minDistance = math.min(distance, minDistance)
-                        if distance == minDistance then
-                            closestEntrance = ent[1]
-                        end
+                    end
+                    local offset = (not ent[5]) and 0x08 or 0x0 -- dropdowns/tavern shouldn't use offset
+                    local distance = calcDistance(coordX, coordY, ent[2], ent[3] + offset, ent[5])
+                    minDistance = math.min(distance, minDistance)
+                    if distance == minDistance then
+                        closestEntrance = ent[1]
                     end
                 end
             end
@@ -498,6 +478,8 @@ function updateCoordinateFromMemorySegment(segment)
     end
 
     local function updateCoords(x, y, transition)
+        local clock = os.clock()
+        STATUS.LAST_COORD = {clock, clock - STATUS.LAST_COORD[1]}
         CACHE.COORDS.CURRENT.X = x
         CACHE.COORDS.CURRENT.Y = y
         local s = 0
@@ -530,122 +512,129 @@ function updateCoordinateFromMemorySegment(segment)
         end
         CACHE.COORDS.CURRENT.S = s
         CACHE.COORDS.CURRENT.D = CACHE.DUNGEON
+    end
+
+    local function waitForBetterState()
+        STATUS.COORD_NOT_READY = true
         local clock = os.clock()
         STATUS.LAST_COORD = {clock, clock - STATUS.LAST_COORD[1]}
     end
 
-    if math.abs(yCoord - CACHE.COORDS.CURRENT.Y) > 100 or math.abs(xCoord - CACHE.COORDS.CURRENT.X) > 100 then
-        local prevIndoor = CACHE.INDOOR
-        updateIndoorFlagFromMemorySegment(nil)
         -- TODO: This process doesn't quite work for autotracking DR and OWR connections
-        if prevIndoor ~= CACHE.INDOOR then
-            if not CACHE.INDOOR then
-                sId = ((yCoord >> 9) << 3) + (xCoord >> 9)
-                if DATA.OverworldSlotAliases[sId] ~= nil then
-                    sId = DATA.OverworldSlotAliases[sId]
+    if prevIndoor ~= CACHE.INDOOR or STATUS.COORD_NOT_READY then
+        if xCoord == CACHE.COORDS.CURRENT.X and y == CACHE.COORDS.CURRENT.Y then
+            waitForBetterState()
+            return false
+        end
+        if not CACHE.INDOOR then
+            sId = ((yCoord >> 9) << 3) + (xCoord >> 9)
+            if DATA.OverworldSlotAliases[sId] ~= nil then
+                sId = DATA.OverworldSlotAliases[sId]
+            end
+            if CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
+                updateOverworldIdFromMemorySegment(nil)
+            end
+            if CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
+                waitForBetterState()
+                return false
+            end
+            sId = CACHE.OWAREA
+        else
+            local mod = AutoTracker:ReadU8(0x7e0010, 0)
+            if mod == 0x06 then
+                waitForBetterState()
+                return false
+            end
+            sId = ((yCoord >> 9) << 4) + (xCoord >> 9)
+            updateRoomIdFromMemorySegment(nil)
+            updateDungeonIdFromMemorySegment(nil)
+        end
+
+        CACHE.COORDS.PREVIOUS.X = CACHE.COORDS.CURRENT.X
+        CACHE.COORDS.PREVIOUS.Y = CACHE.COORDS.CURRENT.Y
+        CACHE.COORDS.PREVIOUS.S = CACHE.COORDS.CURRENT.S
+        CACHE.COORDS.PREVIOUS.D = CACHE.COORDS.CURRENT.D
+        
+        updateCoords(xCoord, yCoord, true)
+        STATUS.COORD_NOT_READY = false
+        printLog("----------------------------------")
+        printLog(string.format("Last Update: %f @ %f", STATUS.LAST_COORD[2], os.clock()))
+        printLog(string.format("Coord Change: 0x%4X: %4Xx%4X @ 0x%2X | 0x%2X: %4Xx%4X", CACHE.COORDS.PREVIOUS.S, CACHE.COORDS.PREVIOUS.X, CACHE.COORDS.PREVIOUS.Y, CACHE.DUNGEON, CACHE.COORDS.CURRENT.S, CACHE.COORDS.CURRENT.X, CACHE.COORDS.CURRENT.Y))
+        
+        if CACHE.COORDS.PREVIOUS.S ~= 0xffff and CACHE.COORDS.CURRENT.S ~= 0xffff and STATUS.LAST_COORD[2] < 4.0 then
+            local function findEntranceRoomPair(owCoord, uwCoord)
+                local ent, dist = findClosestEntrance(owCoord.S, owCoord.X, owCoord.Y)
+                local room = nil
+                if ent ~= nil then
+                    printLog(string.format("Entrance: %s %f", ent, dist))
+                    room = findRoom(uwCoord.D, uwCoord.S, uwCoord.X, uwCoord.Y)
+                    if room ~= nil then
+                        printLog(string.format("Room: %s", room))
+                        local newroom = adjustRoom(uwCoord.D, uwCoord.S, room, ent)
+                        if room ~= newroom then
+                            printLog(string.format("Adjusted Room: %s", newroom == "" and "(blank)" or newroom))
+                        end
+                        room = newroom
+                    end
                 end
-                if CACHE.OWAREA == 0xff or sId ~= CACHE.OWAREA & 0x3f then
-                    updateOverworldIdFromMemorySegment(nil)
-                end
-                if CACHE.OWAREA == 0xff then
-                    sleep(20)
-                    updateOverworldIdFromMemorySegment(nil)
-                end
-                sId = CACHE.OWAREA
-            else
-                updateDungeonIdFromMemorySegment(nil)
-                sId = ((yCoord >> 9) << 4) + (xCoord >> 9)
-                if sId ~= CACHE.ROOM then
-                    sleep(20)
-                    updateRoomIdFromMemorySegment(nil)
-                end
+                return ent, room
             end
 
-            CACHE.COORDS.PREVIOUS.X = CACHE.COORDS.CURRENT.X
-            CACHE.COORDS.PREVIOUS.Y = CACHE.COORDS.CURRENT.Y
-            CACHE.COORDS.PREVIOUS.S = CACHE.COORDS.CURRENT.S
-            CACHE.COORDS.PREVIOUS.D = CACHE.COORDS.CURRENT.D
-            
-            updateCoords(xCoord, yCoord, true)
-            printLog("----------------------------------")
-            printLog(string.format("Last Update: %f", STATUS.LAST_COORD[2]))
-            printLog(string.format("Coord Change: 0x%4X: %4Xx%4X @ 0x%2X | 0x%2X: %4Xx%4X", CACHE.COORDS.PREVIOUS.S, CACHE.COORDS.PREVIOUS.X, CACHE.COORDS.PREVIOUS.Y, CACHE.DUNGEON, CACHE.COORDS.CURRENT.S, CACHE.COORDS.CURRENT.X, CACHE.COORDS.CURRENT.Y))
-            
-            if CACHE.COORDS.PREVIOUS.S ~= 0xffff and CACHE.COORDS.CURRENT.S ~= 0xffff and STATUS.LAST_COORD[2] < 2.0 then
-                local function findEntranceRoomPair(owCoord, uwCoord)
-                    local ent, dist = findClosestEntrance(owCoord.S, owCoord.X, owCoord.Y)
-                    local room = nil
-                    if ent ~= nil then
-                        printLog(string.format("Entrance: %s %f", ent, dist))
-                        room = findRoom(uwCoord.D, uwCoord.S, uwCoord.X, uwCoord.Y)
-                        if room ~= nil then
-                            printLog(string.format("Room: %s", room))
-                            local newroom = adjustRoom(uwCoord.D, uwCoord.S, room, ent)
-                            if room ~= newroom then
-                                printLog(string.format("Adjusted Room: %s", newroom == "" and "(blank)" or newroom))
-                            end
-                            room = newroom
-                        end
+            local owEntrance = nil
+            local uwRoom = nil
+            local owId = nil
+            local roomId = nil
+            local dungeonId = nil
+            if not CACHE.INDOOR then
+                --UW->OW
+                owId = CACHE.COORDS.CURRENT.S
+                roomId = CACHE.COORDS.PREVIOUS.S
+                dungeonId = CACHE.COORDS.PREVIOUS.D
+                if OBJ_ENTRANCE:getState() < 4 then
+                    if CACHE.COORDS.PREVIOUS.S ~= 0x0d and CACHE.COORDS.PREVIOUS.S ~= 0x20 -- aga bosses
+                            and CACHE.COORDS.PREVIOUS.S ~= 0x33 and CACHE.COORDS.PREVIOUS.S ~= 0x29 and CACHE.COORDS.PREVIOUS.S ~= 0xa4 then -- multi-entrance bosses
+                        owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
                     end
-                    return ent, room
+                else
+                    --TODO: this else case isnt necessary if there is no print statement down below
+                    updateCoords(xCoord, yCoord, false)
+                    return nil
                 end
+            else
+                --OW->UW
+                owId = CACHE.COORDS.PREVIOUS.S
+                roomId = CACHE.COORDS.CURRENT.S
+                dungeonId = CACHE.COORDS.CURRENT.D
+                owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.PREVIOUS, CACHE.COORDS.CURRENT)
+            end
 
-                local owEntrance = nil
-                local uwRoom = nil
-                local owId = nil
-                local roomId = nil
-                local dungeonId = nil
-                if not CACHE.INDOOR then
-                    --UW->OW
-                    owId = CACHE.COORDS.CURRENT.S
-                    roomId = CACHE.COORDS.PREVIOUS.S
-                    dungeonId = CACHE.COORDS.PREVIOUS.D
-                    if OBJ_ENTRANCE:getState() < 4 then
-                        if CACHE.COORDS.PREVIOUS.S ~= 0x0d and CACHE.COORDS.PREVIOUS.S ~= 0x20 -- aga bosses
-                                and CACHE.COORDS.PREVIOUS.S ~= 0x33 and CACHE.COORDS.PREVIOUS.S ~= 0x29 and CACHE.COORDS.PREVIOUS.S ~= 0xa4 then -- multi-entrance bosses
-                            owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
+            if owEntrance ~= nil and uwRoom ~= nil then
+                if DATA.DropdownCouples[owEntrance] ~= nil and OBJ_ENTRANCE:getState() < 4 then
+                    owEntrance = DATA.DropdownCouples[owEntrance]
+                end
+                section = Tracker:FindObjectForCode(owEntrance)
+                if not (section.CapturedItem or section.AvailableChestCount == 0) then
+                    if uwRoom ~= "" then
+                        captureItem = Tracker:FindObjectForCode(uwRoom)
+                        section.CapturedItem = captureItem
+                        updateGhost(owEntrance, true, true)
+                        if dungeonId < 0xff then
+                            if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then
+                                INSTANCE.MULTIDUNGEONCAPTURES[roomId] = uwRoom
+                            end
                         end
                     else
-                        --TODO: this else case isnt necessary if there is no print statement down below
-                        updateCoords(xCoord, yCoord, false)
-                        return nil
-                    end
-                else
-                    --OW->UW
-                    owId = CACHE.COORDS.PREVIOUS.S
-                    roomId = CACHE.COORDS.CURRENT.S
-                    dungeonId = CACHE.COORDS.CURRENT.D
-                    owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.PREVIOUS, CACHE.COORDS.CURRENT)
-                end
-
-                if owEntrance ~= nil and uwRoom ~= nil then
-                    if DATA.DropdownCouples[owEntrance] ~= nil and OBJ_ENTRANCE:getState() < 4 then
-                        owEntrance = DATA.DropdownCouples[owEntrance]
-                    end
-                    section = Tracker:FindObjectForCode(owEntrance)
-                    if not (section.CapturedItem or section.AvailableChestCount == 0) then
-                        if uwRoom ~= "" then
-                            captureItem = Tracker:FindObjectForCode(uwRoom)
-                            section.CapturedItem = captureItem
-                            updateGhost(owEntrance, true, true)
-                            if dungeonId < 0xff then
-                                if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then
-                                    INSTANCE.MULTIDUNGEONCAPTURES[roomId] = uwRoom
-                                end
-                            end
-                        else
-                            section.AvailableChestCount = 0
-                            if section.HostedItem then
-                                section.HostedItem.Active = true
-                            end
-                        end
-                        if OBJ_ENTRANCE:getState() < 4 then
-                            resetCoords()
+                        section.AvailableChestCount = 0
+                        if section.HostedItem then
+                            section.HostedItem.Active = true
                         end
                     end
-                else
-                    printLog("NO ICON PLACED")
+                    if OBJ_ENTRANCE:getState() < 4 then
+                        resetCoords()
+                    end
                 end
+            else
+                printLog("NO ICON PLACED")
             end
         end
     end
