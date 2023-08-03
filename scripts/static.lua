@@ -651,18 +651,18 @@ DATA.RoomLobbyData = {
         {0x1878, 0x21e6, "cap_mimic"}
     },
     [0x010d] = "cap_chest", -- Mire Shed
-    [0x010e] = "", -- Hamburger Helper/ Dark East Hint
+    [0x010e] = "cap_hint", -- Hamburger Helper/ Dark East Hint
     [0x010f] = "cap_shop", -- DW Shops
     [0x0110] = "cap_shop", -- Red Shield Shop
     [0x0111] = "cap_rupee", -- Archery Game
     [0x0112] = {
         {0x0578, 0x23e6, "cap_shop"}, -- Hylia/DDM Shop
-        {0x0478, 0x23e6, ""} -- Dark Chapel
+        {0x0478, 0x23e6, "cap_hint"} -- Dark Chapel
     },
     [0x0113] = "cap_chest", -- Kings Tomb
     [0x0114] = {
         {0x0878, 0x23e6, "cap_chest"}, -- Waterfall Fairy
-        {0x0978, 0x23e6, "", "cap_chest"} -- Mire Hint
+        {0x0978, 0x23e6, "cap_hint", "cap_chest"} -- Mire Hint
     },
     [0x0115] = {
         {0x0b78, 0x023e6, "cap_fairycave"}, -- Fairy Fountains
@@ -673,7 +673,7 @@ DATA.RoomLobbyData = {
     [0x0118] = "", -- Kakariko Gamble
     [0x0119] = "cap_chest", -- Blinds Hideout
     [0x011a] = {
-        {0x1578, 0x23e6, "", "cap_chest"} -- Pod Hint
+        {0x1578, 0x23e6, "cap_hint", "cap_chest"} -- Pod Hint
     },
     [0x011b] = {
         {0x1778, 0x23e6, "cap_bombfarm", "cap_chest"}, -- Graveyard
@@ -703,7 +703,7 @@ DATA.RoomLobbyData = {
         {0x0878, 0x25e6, "cap_rupee", "cap_chest"} -- 50 Rupee
     },
     [0x0125] = {
-        {0x0b78, 0x25e6, "", "cap_chest"}, -- Spike Hint
+        {0x0b78, 0x25e6, "cap_hint", "cap_chest"}, -- Spike Hint
         {0x0a78, 0x25e6, "cap_rupee", "cap_chest"} -- 20 Rupee
     },
     [0x0126] = {

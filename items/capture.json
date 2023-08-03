@@ -482,6 +482,13 @@
         "capturable": true,
         "codes": "cap_darkmountain"
     },
+    {
+        "name": "Unknown Dark Connector",
+        "type": "static",
+        "img": "images/capture/connectors/dark-unknown.png",
+        "capturable": true,
+        "codes": "cap_darkunknown"
+    },
 
     // Items
     {
@@ -765,6 +772,13 @@
         "img": "images/capture/misc/shop.png",
         "capturable": true,
         "codes": "cap_shop"
+    },
+    {
+        "name": "Hint",
+        "type": "static",
+        "img": "images/capture/misc/hint.png",
+        "capturable": true,
+        "codes": "cap_hint"
     },
     {
         "name": "Important Location",
