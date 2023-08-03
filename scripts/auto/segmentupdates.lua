@@ -629,6 +629,14 @@ function updateCoordinateFromMemorySegment(segment)
                             section.HostedItem.Active = true
                         end
                     end
+                    if owEntrance == "@Tavern Back/Entrance" then
+                        local item = Tracker:FindObjectForCode("tavern_mode")
+                        if roomId ~= 0x103 or uwRoom == "" then
+                            item.CurrentStage = 2
+                        else
+                            item.CurrentStage = 1
+                        end
+                    end
                     if OBJ_ENTRANCE:getState() < 4 then
                         resetCoords()
                     end

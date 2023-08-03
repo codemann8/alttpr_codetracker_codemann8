@@ -41,6 +41,29 @@
             }
         ]
     },
+    // Tavern Shuffled
+    {
+        "name": "Tavern Shuffled",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/entrances/door-closed.png",
+                "codes": "tavern_mode,tavern_unknown",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/entrances/door-closed.png",
+                "codes": "tavern_mode,tavern_vanilla",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/entrances/door-closed.png",
+                "codes": "tavern_mode,tavern_shuffled",
+                "inherit_codes": false
+            }
+        ]
+    },
     // Goal
     {
         "name": "Goal Setting",

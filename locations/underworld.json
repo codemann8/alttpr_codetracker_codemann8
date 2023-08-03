@@ -907,8 +907,10 @@
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_entrance",
                 "visibility_rules": [
-                    "entrance_shuffle_all",
-                    "entrance_shuffle_insanity"
+                    "entrance_shuffle_all,tavern_unknown",
+                    "entrance_shuffle_all,tavern_shuffled",
+                    "entrance_shuffle_insanity,tavern_unknown",
+                    "entrance_shuffle_insanity,tavern_shuffled"
                 ],
                 "item_count": 1,
                 "hosted_item": "ow_kakariko"
@@ -921,6 +923,10 @@
                     "[pearl],mirror",
                     "glitch_mode_owg,mirror",
                     "glitch_mode_major,bottle"
+                ],
+                "visibility_rules": [
+                    "tavern_unknown",
+                    "tavern_vanilla"
                 ],
                 "item_count": 1
             },
@@ -935,7 +941,10 @@
                 ],
                 "chest_unopened_img": "images/icons/keydrops/pot-lw.png",
                 "chest_opened_img": "images/icons/keydrops/pot-collected.png",
-                "visibility_rules": [ "pool_cavepot_on" ],
+                "visibility_rules": [
+                    "pool_cavepot_on,tavern_unknown",
+                    "pool_cavepot_on,tavern_vanilla"
+                ],
                 "item_count": 2
             },
             {
