@@ -102,9 +102,7 @@ function initMemoryWatch()
         INSTANCE.MEMORY.UnderworldItems[i] = v
     end
     
-    SEGMENTS.DungeonId = ScriptHost:AddMemoryWatch("Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment)
-    SEGMENTS.RoomId = ScriptHost:AddMemoryWatch("Room Id", 0x7e00a0, 2, updateRoomIdFromMemorySegment)
-    SEGMENTS.OverworldId = ScriptHost:AddMemoryWatch("Overworld Id", 0x7e008a, 1, updateOverworldIdFromMemorySegment)
+    SEGMENTS.DungeonId = ScriptHost:AddMemoryWatch("Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment, 200)
     SEGMENTS.WorldFlag = ScriptHost:AddMemoryWatch("World Flag", 0x7ef3ca, 1, updateWorldFlagFromMemorySegment)
     SEGMENTS.HealthData = ScriptHost:AddMemoryWatch("Health Data", 0x7ef36c, 2, updateHealthFromMemorySegment)
     
@@ -124,7 +122,6 @@ function initMemoryWatch()
         SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
-        SEGMENTS.CoordinateData = ScriptHost:AddMemoryWatch("Coord Data", 0x7e001b, 9, updateCoordinateFromMemorySegment, 80)
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
         SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
         if INSTANCE.NEW_SRAM_SYSTEM then
@@ -175,7 +172,6 @@ function disposeMemoryWatch()
     disposeSegment(SEGMENTS.TempRoomData)
     disposeSegment(SEGMENTS.RoomPotData)
     disposeSegment(SEGMENTS.RoomEnemyData)
-    disposeSegment(SEGMENTS.CoordinateData)
     disposeSegment(SEGMENTS.OverworldData)
     disposeSegment(SEGMENTS.ShopData)
     disposeSegment(SEGMENTS.NPCData)
@@ -188,15 +184,13 @@ function disposeMemoryWatch()
     disposeSegment(SEGMENTS.PendantData)
     disposeSegment(SEGMENTS.CrystalData)
     disposeSegment(SEGMENTS.DungeonId)
-    disposeSegment(SEGMENTS.RoomId)
-    disposeSegment(SEGMENTS.OverworldId)
     disposeSegment(SEGMENTS.WorldFlag)
 end
 
 
 --Base Memory Watches
 ScriptHost:AddMemoryWatch("ROM Title", 0x701ffc, 25, updateTitleFromMemorySegment)
-ScriptHost:AddMemoryWatch("Module Id", 0x7e0010, 1, updateModuleFromMemorySegment, 150)
+ScriptHost:AddMemoryWatch("Location State", 0x7e0010, 0x92, updateLocationFromMemorySegment, 80)
 
 
 function numberOfSetBits(value)

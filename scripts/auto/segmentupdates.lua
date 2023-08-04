@@ -44,6 +44,65 @@ function updateTitleFromMemorySegment(segment)
         end
     end
 end
+
+function updateLocationFromMemorySegment(segment)
+    local moduleId = segment:ReadUInt8(0x7e0010)
+
+    if moduleId ~= CACHE.MODULE then
+        updateModuleFromMemorySegment(segment)
+    end
+
+    if isInGameFromModule() then
+        -- Overworld Id
+        local owarea = 0xffff
+        if segment then
+            owarea = segment:ReadUInt8(0x7e008a)
+        else
+            owarea = AutoTracker:ReadU8(0x7e008a, 0)
+        end
+        updateDungeonIdFromMemorySegment(nil)
+        if not (CACHE.DUNGEON == 0xff and CACHE.MODULE == 0x09) then --force OW transitions to retain OW ID
+            if (owarea == 0 and (
+                    CACHE.MODULE == 0x07 or --in cave/dungeon
+                    CACHE.MODULE == 0x05 or --on file select screen
+                    CACHE.MODULE == 0x0e or --has dialogue/menu open
+                    CACHE.MODULE == 0x12 or --game over
+                    CACHE.MODULE == 0x17 or --is s+q
+                    CACHE.MODULE == 0x1b or --on spawn select
+                    CACHE.MODULE == 0x11 or --falling in dropdown entrance
+                    CACHE.MODULE == 0x08 or --loading overworld
+                    CACHE.MODULE == 0x0b or --special overworld areas
+                    CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f)) --transitioning into dungeons
+                    or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
+                owarea = 0xff
+            end
+        end
+
+        if owarea ~= CACHE.OWAREA then
+            if CACHE.OWAREA == 0xff then
+                updateWorldFlagFromMemorySegment(nil)
+            end
+            CACHE.OWAREA = owarea
+            updateOverworldIdFromMemorySegment(segment)
+        end
+
+        -- Room Id
+        local room = 0xffff
+        if segment then
+            room = segment:ReadUInt16(0x7e00a0)
+        else
+            room = AutoTracker:ReadU16(0x7e00a0, 0)
+        end
+
+        if room ~= CACHE.ROOM then
+            CACHE.ROOM = room
+            updateRoomIdFromMemorySegment(segment)
+        end
+
+        -- Coordinates
+        updateCoordinateFromMemorySegment(segment)
+    end
+end
     
 function updateModuleFromMemorySegment(segment)
     local moduleId = nil
@@ -137,7 +196,7 @@ function updateWorldFlagFromMemorySegment(segment)
 end
 
 function updateOverworldIdFromMemorySegment(segment)
-    if not isInGame() then
+    if not isInGameFromModule() then
         return false
     end
 
@@ -145,100 +204,68 @@ function updateOverworldIdFromMemorySegment(segment)
         print("Segment: OverworldId")
     end
 
-    local owarea = 0xffff
-    if segment then
-        owarea = segment:ReadUInt8(0x7e008a)
-    else
-        owarea = AutoTracker:ReadU8(0x7e008a, 0)
-    end
-    local MODULE = AutoTracker:ReadU8(0x7e0010, 0)
-    if not (CACHE.DUNGEON == 0xff and MODULE == 0x09) then --force OW transitions to retain OW ID
-        if (owarea == 0 and (
-                MODULE == 0x07 or --in cave/dungeon
-                MODULE == 0x05 or --on file select screen
-                MODULE == 0x0e or --has dialogue/menu open
-                MODULE == 0x12 or --game over
-                MODULE == 0x17 or --is s+q
-                MODULE == 0x1b or --on spawn select
-                MODULE == 0x11 or --falling in dropdown entrance
-                MODULE == 0x08 or --loading overworld
-                MODULE == 0x0b or --special overworld areas
-                MODULE == 0x06 or MODULE == 0x0f)) --transitioning into dungeons
-                or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
-            owarea = 0xff
-        end
-    end
-
-    if CACHE.OWAREA ~= owarea then
-        if CACHE.OWAREA == 0xff then
-            updateWorldFlagFromMemorySegment(nil)
+    if CACHE.OWAREA < 0xff and Tracker.ActiveVariantUID ~= "vanilla" and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+        --OW Shuffle Autotracking
+        if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
+            updateRoomSlots(CACHE.OWAREA + 0x1000)
         end
 
-        CACHE.OWAREA = owarea
-
-        if CACHE.OWAREA < 0xff and Tracker.ActiveVariantUID ~= "vanilla" and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
-            --OW Shuffle Autotracking
-            if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
-                updateRoomSlots(CACHE.OWAREA + 0x1000)
+        --OW Mixed Autotracking
+        if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
+            if CACHE.OWAREA == 0 and MODULE ~= 0x09 then
+                print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
+                print("^ Module:", string.format("0x%02x", MODULE), "< REPORT THIS TO CODEMAN ^")
             end
+            
+            local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+            if not swap.modified then
+                CACHE.WORLD = AutoTracker:ReadU8(0x7ef3ca, 0)
 
-            --OW Mixed Autotracking
-            if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
-                if CACHE.OWAREA == 0 and MODULE ~= 0x09 then
-                    print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
-                    print("^ Module:", string.format("0x%02x", MODULE), "< REPORT THIS TO CODEMAN ^")
+                local swapped = CACHE.OWAREA < CACHE.WORLD
+                swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
+                if OBJ_WORLDSTATE:getState() > 0 then
+                    swapped = not swapped
                 end
-                
-                local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                if not swap.modified then
-                    CACHE.WORLD = AutoTracker:ReadU8(0x7ef3ca, 0)
+                swap:updateSwap(swapped and 1 or 0)
+                swap:updateItem()
+            end
+        end
 
-                    local swapped = CACHE.OWAREA < CACHE.WORLD
-                    swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
-                    if OBJ_WORLDSTATE:getState() > 0 then
-                        swapped = not swapped
+        --Region Autotracking
+        if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
+            if CACHE.OWAREA < 0xff then
+                if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
+                    local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
+                    if region then
+                        region.Active = true
                     end
-                    swap:updateSwap(swapped and 1 or 0)
-                    swap:updateItem()
-                end
-            end
-
-            --Region Autotracking
-            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
-                if CACHE.OWAREA < 0xff then
-                    if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
-                        if region then
-                            region.Active = true
-                        end
-                    --TODO: Handle better with new mixed functionality
-                    elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
-                        if not region.Active then
-                            local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                            if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
-                                local canReach = true
-                                if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
-                                    for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
-                                        if Tracker:ProviderCountForCode(item) == 0 then
-                                            canReach = false
-                                            break
-                                        end
+                --TODO: Handle better with new mixed functionality
+                elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
+                    local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
+                    if not region.Active then
+                        local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                        if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
+                            local canReach = true
+                            if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
+                                for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
+                                    if Tracker:ProviderCountForCode(item) == 0 then
+                                        canReach = false
+                                        break
                                     end
                                 end
-                                if canReach then
-                                    region.Active = true
-                                end
+                            end
+                            if canReach then
+                                region.Active = true
                             end
                         end
-                    end  
-                end
+                    end
+                end  
             end
         end
+    end
 
-        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print("CURRENT OW:", CACHE.OWAREA, string.format("0x%2X", CACHE.OWAREA))
-        end
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("CURRENT OW:", CACHE.OWAREA, string.format("0x%2X", CACHE.OWAREA))
     end
 end
 
@@ -288,18 +315,12 @@ function updateDungeonIdFromMemorySegment(segment)
 end
 
 function updateRoomIdFromMemorySegment(segment)
-    if not isInGame() and CACHE.MODULE ~= 0x05 then
+    if not isInGameFromModule() and CACHE.MODULE ~= 0x05 then
         return false
     end
     
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: RoomId")
-    end
-
-    if segment then
-        CACHE.ROOM = segment:ReadUInt16(0x7e00a0)
-    else
-        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
     end
 
     if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE:getState() > 0 and CACHE.MODULE ~= 0x19 and CACHE.MODULE ~= 0x1a then
@@ -314,7 +335,7 @@ end
 
 CACHE.COORDS = { PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }, CURRENT = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }}
 function updateCoordinateFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGame() then
+    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGameFromModule() then
         return false
     end
     
@@ -537,28 +558,28 @@ function updateCoordinateFromMemorySegment(segment)
             waitForBetterState()
             return false
         end
+        local mod = 0
+        if segment then
+            mod = segment:ReadUInt8(0x7e0010)
+        else
+            mod = AutoTracker:ReadU8(0x7e0010, 0)
+        end
         if not CACHE.INDOOR then
             sId = ((yCoord >> 9) << 3) + (xCoord >> 9)
             if DATA.OverworldSlotAliases[sId] ~= nil then
                 sId = DATA.OverworldSlotAliases[sId]
             end
-            if CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
-                updateOverworldIdFromMemorySegment(nil)
-            end
-            if CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
+            if mod ~= 0x09 or CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
                 waitForBetterState()
                 return false
             end
             sId = CACHE.OWAREA
         else
-            local mod = AutoTracker:ReadU8(0x7e0010, 0)
-            if mod == 0x06 then
+            sId = ((yCoord >> 9) << 4) + (xCoord >> 9)
+            if mod ~= 0x07 or sId ~= CACHE.ROOM then
                 waitForBetterState()
                 return false
             end
-            sId = ((yCoord >> 9) << 4) + (xCoord >> 9)
-            updateRoomIdFromMemorySegment(nil)
-            updateDungeonIdFromMemorySegment(nil)
         end
 
         CACHE.COORDS.PREVIOUS.X = CACHE.COORDS.CURRENT.X
