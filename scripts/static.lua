@@ -374,7 +374,7 @@ DATA.OverworldEntranceData = {
     [0x0f] = "@Waterfall Fairy Cave/Entrance", --0x0e60, 0x0208
     [0x11] = "@Kakariko Fortune Teller/Entrance", --0x02f8, 0x0508
     [0x13] = {
-        {"@North Bonk Rocks/Entrance",                  0x0638, 0x04a8, 2.0, false},
+        {"@North Bonk Rocks/Entrance",                  0x0638, 0x04a0, 2.0, false},
         {"@Sanctuary Exit/Entrance",                    0x0758, 0x0414, 2.0, false}
     },
     [0x14] = {
@@ -421,8 +421,8 @@ DATA.OverworldEntranceData = {
     },
     [0x22] = {
         {"@Smith's House/Entrance",                     0x04d8, 0x0868, 1.0, false},
-        {"@Magic Bat Exit/Entrance",                    0x0500, 0x08c8, 0.2, false},
-        {"@Magic Bat Drop/Dropdown",                    0x0530, 0x08e8, 0.2, true}
+        {"@Magic Bat Exit/Entrance",                    0x0508, 0x08c4, 0.2, false},
+        {"@Magic Bat Drop/Dropdown",                    0x0528, 0x08e0, 0.2, true}
     },
     [0x28] = "@Quarreling Brothers Left/Entrance", --0x01b8, 0x0b58
     [0x29] = {
@@ -439,7 +439,7 @@ DATA.OverworldEntranceData = {
         {"@Desert Left Entrance/Entrance",              0x0088, 0x0c98, 2.0, false},
         {"@Desert Right Entrance/Entrance",             0x01c8, 0x0c98, 2.0, false},
         {"@Desert Back Entrance/Entrance",              0x0128, 0x0c28, 2.0, false},
-        {"@Checkerboard Cave Entrance/Entrance",        0x02c8, 0x0c68, 2.0, false},
+        {"@Checkerboard Cave Entrance/Entrance",        0x02c8, 0x0c5c, 2.0, false},
         {"@Aginah's Cave Entrance/Entrance",            0x0328, 0x0d18, 2.0, false}
     },
     [0x32] = "@Cave 45 Entrance/Entrance", --0x0438, 0x0d18
@@ -453,10 +453,10 @@ DATA.OverworldEntranceData = {
     [0x37] = {
         {"@Ice Rod Cave Entrance/Entrance",             0x0e48, 0x0c38, 0.2, false},
         {"@Cold Bee Cave/Entrance",                     0x0e98, 0x0c38, 0.2, false},
-        {"@Twenty Rupee Cave/Entrance",                 0x0e68, 0x0c88, 0.2, false}
+        {"@Twenty Rupee Cave/Entrance",                 0x0e68, 0x0c80, 0.2, false}
     },
     [0x3a] = {
-        {"@Fifty Rupee Cave/Entrance",                  0x04f8, 0x0f48, 2.0, false},
+        {"@Fifty Rupee Cave/Entrance",                  0x04f8, 0x0f40, 2.0, false},
         {"@Desert Fairy Cave/Entrance",                 0x0468, 0x0e28, 2.0, false}
     },
     [0x3b] = "@Dam Entrance/Entrance", --0x0778, 0x0ed8
@@ -480,9 +480,9 @@ DATA.OverworldEntranceData = {
         {"@Dark Mountain Fairy/Entrance",               0x0678, 0x02e8, 2.0, false}
     },
     [0x45] = {
-        {"@Hookshot Cave Island/Entrance",              0x0cc8, 0x0038, 2.0, false},
+        {"@Hookshot Cave Island/Entrance",              0x0cc8, 0x0034, 2.0, false},
         {"@Superbunny Cave Top/Entrance",               0x0db8, 0x00e8, 1.0, false},
-        {"@Hookshot Cave Entrance/Entrance",            0x0d48, 0x0108, 2.0, false},
+        {"@Hookshot Cave Entrance/Entrance",            0x0d48, 0x00fc, 2.0, false},
         {"@Turtle Ledge Left Entrance/Entrance",        0x0cb8, 0x0158, 1.0, false},
         {"@Turtle Ledge Right Entrance/Entrance",       0x0d78, 0x0158, 1.0, false},
         {"@Turtle Laser Bridge Entrance/Entrance",      0x0d18, 0x01b8, 2.0, false},
@@ -533,8 +533,8 @@ DATA.OverworldEntranceData = {
     },
     [0x77] = {
         {"@Dark Lake Hylia Fairy/Entrance",             0x0e48, 0x0c38, 0.2, false},
-        {"@Spike Hint Cave/Entrance",                   0x0e68, 0x0c88, 0.2, false},
-        {"@Hamburger Helper Cave/Entrance",             0x0e98, 0x0c38, 0.2, false}
+        {"@Hamburger Helper Cave/Entrance",             0x0e98, 0x0c38, 0.2, false},
+        {"@Spike Hint Cave/Entrance",                   0x0e68, 0x0c80, 0.2, false}
     },
     [0x7b] = "@Swamp Palace Entrance/Entrance" --0x0778, 0x0ed8
 }
@@ -647,7 +647,7 @@ DATA.RoomLobbyData = {
     [0x010a] = "cap_chest", -- Aginah
     [0x010b] = "cap_dam",
     [0x010c] = {
-        {0x1978, 0x21e6, "", "cap_chest"}, -- Hookshot Fairy
+        {0x1978, 0x21e6, "cap_fairycave", "cap_chest"}, -- Hookshot Fairy
         {0x1878, 0x21e6, "cap_mimic"}
     },
     [0x010d] = "cap_chest", -- Mire Shed
@@ -685,7 +685,7 @@ DATA.RoomLobbyData = {
     },
     [0x011e] = {
         {0x1d78, 0x23e6, "cap_chest"}, -- Hype
-        {0x1c78, 0x23e6, ""} -- Long Fairy
+        {0x1c78, 0x23e6, "cap_fairycave"} -- Long Fairy
     },
     [0x011f] = {
         {0x1f78, 0x23e6, "cap_shop"}, -- Kakariko Shop
@@ -693,7 +693,7 @@ DATA.RoomLobbyData = {
     },
     [0x0120] = {
         {0x0078, 0x25e6, "cap_chest"}, -- Ice Rod
-        {0x0178, 0x25e6, "", "", "cap_chest"} -- Cold Bee
+        {0x0178, 0x25e6, "cap_fairycave", "cap_fairycave", "cap_chest"} -- Cold Bee
     },
     [0x0121] = "cap_smith",
     [0x0122] = "", -- Fortune Tellers
@@ -708,7 +708,7 @@ DATA.RoomLobbyData = {
     },
     [0x0126] = {
         {0x0d78, 0x25e6, "cap_chest"}, -- Checkerboard
-        {0x0c78, 0x25e6, ""} -- Bonk Fairies
+        {0x0c78, 0x25e6, "cap_fairycave"} -- Bonk Fairies
     },
     [0x0127] = "cap_chest" -- Hammerpegs
 }

@@ -331,8 +331,7 @@ function updateCoordinateFromMemorySegment(segment)
         CACHE.INDOOR = AutoTracker:ReadU8(0x7e001b, 0) == 1
     end
 
-    local function findClosestEntrance(owid, coordX, coordY)
-        local entrance = nil
+    local function findClosestEntrance(owid, coordX, coordY, entrance, room)
         local minDistance = 9999
         local closestEntrance = nil
         if DATA.OverworldEntranceData[owid] ~= nil then
@@ -341,21 +340,31 @@ function updateCoordinateFromMemorySegment(segment)
                 minDistance = 0
             else
                 for i,ent in ipairs(DATA.OverworldEntranceData[owid]) do
-                    if ent[2] == 0 or ent[3] == 0 then
-                        printLog(string.format("MISSING OW COORD: 0x%2X: %4Xx%4X", owid, coordX, coordY))
+                    local e = ent[1]
+                    if owid & 0x3f == 0x1b and e:find("^Ganon") then
+                        local is_swapped = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", owid | 0x40)).ItemState:getState()
+                        if is_swapped < 2 and is_swapped << 6 == owid & 0x40 then
+                            goto continue
+                        end
                     end
-                    local offset = (not ent[5]) and 0x08 or 0x0 -- dropdowns/tavern shouldn't use offset
-                    local distance = calcDistance(coordX, coordY, ent[2], ent[3] + offset, ent[5])
-                    minDistance = math.min(distance, minDistance)
-                    if distance == minDistance then
-                        closestEntrance = ent[1]
+                    if DATA.DropdownCouples[e] ~= nil and OBJ_ENTRANCE:getState() < 4 then
+                        e = DATA.DropdownCouples[e]
                     end
+                    if not room or (room:find("^cap_drop_") ~= nil == ent[1]:find("Dropdown") ~= nil) or OBJ_ENTRANCE:getState() == 4 then
+                        local offset = (not ent[5]) and 0x08 or 0x0 -- dropdowns/tavern shouldn't use offset
+                        local distance = calcDistance(coordX, coordY, ent[2], ent[3] + offset, ent[5])
+                        minDistance = math.min(distance, minDistance)
+                        if distance == minDistance then
+                            closestEntrance = e
+                        end
+                    end
+                    ::continue::
                 end
             end
         else
             printLog(string.format("MISSING OW SCREEN: 0x%2X: ", owid))
         end
-        if entrance == nil and minDistance < 60 then
+        if closestEntrance ~= nil and minDistance < 60 then
             entrance = closestEntrance
         end
         if entrance == nil then
@@ -380,7 +389,7 @@ function updateCoordinateFromMemorySegment(segment)
                 end
                 if #DATA.RoomLobbyData[roomId] > 2 and DATA.RoomLobbyData[roomId][3] and not Tracker:FindObjectForCode("lamp").Active then
                     --dark room and no lamp
-                    return nil
+                    return "cap_darkunknown"
                 end
                 return DATA.RoomLobbyData[roomId][1]
             else
@@ -414,7 +423,7 @@ function updateCoordinateFromMemorySegment(segment)
         if dungeonId < 0xff then
             local dungeonPrefix = DATA.DungeonIdMap[dungeonId]
             local data = DATA.DungeonData[dungeonPrefix]
-            if room:find("_drop_") or type(data[10]) == "string" then
+            if room:find("^cap_drop_") or type(data[10]) == "string" then
                 print("drop case")
                 return room
             end
@@ -426,11 +435,13 @@ function updateCoordinateFromMemorySegment(segment)
                 if dungeonPrefix == "sw" then
                     room = "cap_sw"
                     if entrance:find("Skull Woods") and entrance ~= "@Skull Woods Back/Entrance" then
+                        suppressLog = true
+                        printLog("SW METRO AREA - ICON SKIPPED")
                         return nil
                     end
                 elseif dungeonPrefix == "hc" then
                     printLog(string.format("hc case %s %s 0x%4X", entrance, room, roomId))
-                    if DATA.DropdownCouples[entrance] ~= nil then
+                    if DATA.DropdownCouples[entrance] ~= nil or entrance:find("Dropdown") then
                         return "cap_drop_sanc"
                     end
                 end
@@ -576,6 +587,7 @@ function updateCoordinateFromMemorySegment(segment)
                         end
                         room = newroom
                     end
+                    ent, dist = findClosestEntrance(owCoord.S, owCoord.X, owCoord.Y, ent, room)
                 end
                 return ent, room
             end
@@ -585,6 +597,7 @@ function updateCoordinateFromMemorySegment(segment)
             local owId = nil
             local roomId = nil
             local dungeonId = nil
+            local suppressLog = false
             if not CACHE.INDOOR then
                 --UW->OW
                 owId = CACHE.COORDS.CURRENT.S
@@ -594,6 +607,9 @@ function updateCoordinateFromMemorySegment(segment)
                     if CACHE.COORDS.PREVIOUS.S ~= 0x0d and CACHE.COORDS.PREVIOUS.S ~= 0x20 -- aga bosses
                             and CACHE.COORDS.PREVIOUS.S ~= 0x33 and CACHE.COORDS.PREVIOUS.S ~= 0x29 and CACHE.COORDS.PREVIOUS.S ~= 0xa4 then -- multi-entrance bosses
                         owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
+                    else
+                        suppressLog = true
+                        printLog("BOSS DEFEATED - ICON SKIPPED")
                     end
                 else
                     --TODO: this else case isnt necessary if there is no print statement down below
@@ -609,11 +625,8 @@ function updateCoordinateFromMemorySegment(segment)
             end
 
             if owEntrance ~= nil and uwRoom ~= nil then
-                if DATA.DropdownCouples[owEntrance] ~= nil and OBJ_ENTRANCE:getState() < 4 then
-                    owEntrance = DATA.DropdownCouples[owEntrance]
-                end
                 section = Tracker:FindObjectForCode(owEntrance)
-                if not (section.CapturedItem or section.AvailableChestCount == 0) then
+                if not ((section.CapturedItem and section.CapturedItem.Name ~= "Unknown Dark Connector") or section.AvailableChestCount == 0) then
                     if uwRoom ~= "" then
                         captureItem = Tracker:FindObjectForCode(uwRoom)
                         section.CapturedItem = captureItem
@@ -641,7 +654,7 @@ function updateCoordinateFromMemorySegment(segment)
                         resetCoords()
                     end
                 end
-            else
+            elseif not suppressLog then
                 printLog("NO ICON PLACED")
             end
         end
