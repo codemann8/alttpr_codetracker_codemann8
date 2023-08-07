@@ -544,7 +544,7 @@ DATA.OverworldEntranceData = {
 -- B) A tuple, if one icon will be used, but conditional (dark rooms)
 --    {"icon_name", is_dungeon, is_dark_room}
 -- C) A list of all possible entrypoints
---    {x_coord, y_coord, "icon_name"}
+--    {x_coord, y_coord, "default_icon", "icon_if_cavepots", "icon_if_bonkdrops"}
 DATA.RoomLobbyData = {
     [0x0000] = "cap_drop_ganon",
     [0x0008] = "cap_drop_fairy",
