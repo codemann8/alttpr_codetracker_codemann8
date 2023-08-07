@@ -359,11 +359,11 @@ function resetCoords()
     CACHE.COORDS.PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }
 end
 
-function calcDistance(linkX, linkY, pointX, pointY, is_dropdown)
+function calcDistance(linkX, linkY, pointX, pointY, use_normal_distance)
     local xCoefficient = 1
     local yCoefficient = 1
-    if not is_dropdown then
-        xCoefficient = 2 -- devalue X coordinate difference
+    if not use_normal_distance then
+        xCoefficient = 2 -- devalue X coordinate deviation
         yCoefficient = 0.5
         if linkY < pointY then
             yCoefficient = 4 -- devalue when link is above the entrance

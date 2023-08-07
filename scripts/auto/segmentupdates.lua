@@ -21,16 +21,6 @@ function updateTitleFromMemorySegment(segment)
             end
             if INSTANCE.NEW_SRAM_SYSTEM then
                 SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
-                if STATUS.AutotrackerInGame then
-                    if SEGMENTS.DungeonTotals then
-                        ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonTotals)
-                    end
-                    if SEGMENTS.DungeonsCompleted then
-                        ScriptHost:RemoveMemoryWatch(SEGMENTS.DungeonsCompleted)
-                    end
-                    SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
-                    SEGMENTS.DungeonsCompleted = ScriptHost:AddMemoryWatch("Dungeons Completed", 0x7ef472, 2, updateDungeonsCompletedFromMemorySegment)
-                end
             else
                 SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
             end
@@ -46,11 +36,7 @@ function updateTitleFromMemorySegment(segment)
 end
 
 function updateLocationFromMemorySegment(segment)
-    local moduleId = segment:ReadUInt8(0x7e0010)
-
-    if moduleId ~= CACHE.MODULE then
-        updateModuleFromMemorySegment(segment)
-    end
+    updateModuleFromMemorySegment(segment)
 
     if isInGameFromModule() then
         -- Overworld Id
@@ -103,6 +89,119 @@ function updateLocationFromMemorySegment(segment)
         updateCoordinateFromMemorySegment(segment)
     end
 end
+
+function updateDungeonWorksheetFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    if CACHE.DUNGEON ~= segment:ReadUInt8(0x7e040c) then
+        updateDungeonIdFromMemorySegment(segment)
+    end
+
+    if CACHE.DUNGEON < 0xff and not INSTANCE.NEW_KEY_SYSTEM and OBJ_DOORSHUFFLE:getState() == 0 and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: Temp Room/Doors")
+        end
+    
+        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
+        if CACHE.ROOM > 0 then
+            local dungeonPrefix = DATA.RoomDungeons[CACHE.ROOM]
+            if dungeonPrefix then
+                dungeonPrefix = DATA.DungeonIdMap[dungeonPrefix]
+                local valueDoor = segment:ReadUInt8(0x7e0400) << 8
+                local valueRoom = segment:ReadUInt8(0x7e0403) << 4
+                
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", valueDoor), string.format("0x%2X", valueRoom))
+                end
+
+                local modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_door", DATA.MEMORY.DungeonFlags[dungeonPrefix][3], valueDoor)
+                modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_enemykey", DATA.MEMORY.DungeonFlags[dungeonPrefix][1], valueRoom) or modified
+                modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_potkey", DATA.MEMORY.DungeonFlags[dungeonPrefix][2], valueRoom) or modified
+                if modified then
+                    --Refresh Dungeon Calc
+                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+                end
+            end
+        end
+    end
+end
+
+function updateRandoDataFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    if INSTANCE.NEW_SRAM_SYSTEM and OBJ_RACEMODE:getState() == 0 and shouldChestCountUp() and CACHE.DungeonsSeen ~= segment:ReadUInt16(0x7ef403) then
+        updateDungeonTotalsFromMemorySegment(segment)
+    end
+
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        if CACHE.NPCData ~= segment:ReadUInt16(0x7ef410) then
+            updateNPCFromMemorySegment(segment)
+        end
+    end
+
+    if CACHE.CollectionRate & 0xff ~= segment:ReadUInt8(0x7ef423) then
+        updateCollectionFromMemorySegment(segment)
+    end
+end
+
+function updateDungeonAdditionalFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    updateDungeonKeysFromMemorySegment(segment)
+
+    if INSTANCE.NEW_SRAM_SYSTEM and CACHE.DungeonsCompleted ~= segment:ReadUInt16(0x7ef472) then
+        updateDungeonsCompletedFromMemorySegment(segment)
+    end
+end
+
+function updateMiscFromMemorySegment(segment)
+    if not isInGame() then
+        return false
+    end
+
+    if CACHE.WORLD ~= segment:ReadUInt8(0x7ef3ca) then
+        updateWorldFlagFromMemorySegment(segment)
+    end
+
+    local data = segment:ReadUInt16(0x7ef3c5) + segment:ReadUInt16(0x7ef3c7) + segment:ReadUInt8(0x7ef3c9)
+    if CACHE.ProgressData ~= data then
+        CACHE.ProgressData = data
+        updateProgressFromMemorySegment(segment)
+    end
+
+    if Tracker.ActiveVariantUID ~= "vanilla" then
+        if OBJ_RACEMODE:getState() == 0 and OBJ_GLITCHMODE:getState() <= 3 then
+            if CACHE.CrystalData ~= segment:ReadUInt8(0x7ef37a) then
+                updateDungeonCrystalFromMemorySegment(segment)
+            end
+            if CACHE.PendantData ~= segment:ReadUInt8(0x7ef374) then
+                updateDungeonPendantFromMemorySegment(segment)
+            end
+        end
+    end
+
+    data = segment:ReadUInt16(0x7ef38c) + segment:ReadUInt8(0x7ef38e) + segment:ReadUInt8(0x7ef377)
+    if CACHE.ToggleItemData ~= data then
+        CACHE.ToggleItemData = data
+        updateToggleItemsFromMemorySegment(segment)
+    end
+
+    if CACHE.HalfMagicData ~= segment:ReadUInt8(0x7ef37b) then
+        updateHalfMagicFromMemorySegment(segment)
+    end
+
+    data = segment:ReadUInt16(0x7ef36c)
+    if CACHE.HealthData ~= data then
+        CACHE.HealthData = data
+        updateHealthFromMemorySegment(segment)
+    end
+end
     
 function updateModuleFromMemorySegment(segment)
     local moduleId = nil
@@ -150,7 +249,7 @@ function updateModuleFromMemorySegment(segment)
 end
 
 function updateWorldFlagFromMemorySegment(segment)
-    if not isInGame() then
+    if not segment and not isInGame() then
         return false
     end
 
@@ -270,7 +369,7 @@ function updateOverworldIdFromMemorySegment(segment)
 end
 
 function updateDungeonIdFromMemorySegment(segment)
-    if not isInGame() then
+    if not segment and not isInGame() then
         return false
     end
     
@@ -799,10 +898,6 @@ DATA.MEMORY.ToggleItems = {
 }
 
 function updateToggleItemsFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Toggle Items")
     end
@@ -832,25 +927,17 @@ function updateToggleItemsFromMemorySegment(segment)
 end
 
 function updateHalfMagicFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
-    local value = segment:ReadUInt8(0x7ef37b)
-    if value > 0 then
+    CACHE.HalfMagicData = segment:ReadUInt8(0x7ef37b)
+    if CACHE.HalfMagicData > 0 then
         local item = Tracker:FindObjectForCode("halfmagic")
-        if value > item.CurrentStage or not STATUS.AutotrackerInGame then
+        if CACHE.HalfMagicData > item.CurrentStage or not STATUS.AutotrackerInGame then
             itemFlippedOn("halfmagic")
-            item.CurrentStage = value
+            item.CurrentStage = CACHE.HalfMagicData
         end
     end
 end
 
 function updateHealthFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Health")
     end
@@ -890,10 +977,6 @@ DATA.MEMORY.Progress = {
 }
 
 function updateProgressFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Progress")
     end
@@ -1112,7 +1195,7 @@ DATA.MEMORY.Npc = {
 }
 
 function updateNPCFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
+    if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or (not segment and not isInGame()) then
         return false
     end
     
@@ -1120,13 +1203,13 @@ function updateNPCFromMemorySegment(segment)
         print("Segment: NPC")
     end
 
-    local data = segment:ReadUInt16(0x7ef410)
+    CACHE.NPCData = segment:ReadUInt16(0x7ef410)
 
     for name, value in pairs(INSTANCE.MEMORY.Npc) do
         local location = Tracker:FindObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
-                local clearedCount = (data & value[1]) ~= 0 and 1 or 0
+                local clearedCount = (CACHE.NPCData & value[1]) ~= 0 and 1 or 0
                 if location.AvailableChestCount ~= location.ChestCount - clearedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                     print("Location cleared: ", name, clearedCount)
                 end
@@ -1924,68 +2007,9 @@ function updateRoomPotsFromMemorySegment(segment)
     end
 end
 
-function updateTempDoorsFromMemorySegment(segment)
-    if INSTANCE.NEW_KEY_SYSTEM or OBJ_DOORSHUFFLE:getState() > 0 or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or not isInGame() then
-        return false
-    end
-
-    CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
-    if CACHE.DUNGEON < 0xff then
-        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print("Segment: Temp Doors")
-        end
-
-        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
-        if CACHE.ROOM > 0 then
-            local dungeonPrefix = DATA.RoomDungeons[CACHE.ROOM]
-            if dungeonPrefix then
-                dungeonPrefix = DATA.DungeonIdMap[dungeonPrefix]
-                local value = segment:ReadUInt8(0x7e0400) << 8
                 
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", value))
-                end
-
-                if updateDoorKeyFromTempRoom(dungeonPrefix .. "_door", DATA.MEMORY.DungeonFlags[dungeonPrefix][3], value) then
-                    --Refresh Dungeon Calc
-                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
-                end
-            end
-        end
-    end
-end
-
-function updateTempRoomFromMemorySegment(segment)
-    if INSTANCE.NEW_POTDROP_SYSTEM or CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or OBJ_DOORSHUFFLE:getState() > 0 or not isInGame() then
-        return false
-    end
     
-    CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
-    if CACHE.DUNGEON < 0xff then
-        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print("Segment: Temp Room")
-        end
-
-        CACHE.ROOM = AutoTracker:ReadU16(0x7e00a0, 0)
-        if CACHE.ROOM > 0 then
-            local dungeonPrefix = DATA.RoomDungeons[CACHE.ROOM]
-            if dungeonPrefix then
-                dungeonPrefix = DATA.DungeonIdMap[dungeonPrefix]
-                local value = segment:ReadUInt8(0x7e0403) << 4
                 
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix, string.format("0x%2X:", CACHE.ROOM), string.format("0x%2X", value))
-                end
-
-                local modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_enemykey", DATA.MEMORY.DungeonFlags[dungeonPrefix][1], value)
-                if modified or updateDoorKeyFromTempRoom(dungeonPrefix .. "_potkey", DATA.MEMORY.DungeonFlags[dungeonPrefix][2], value) then
-                    --Refresh Dungeon Calc
-                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
-                end
-            end
-        end
-    end
-end
 
 function updateDungeonItemsFromMemorySegment(segment)
     if CONFIG.AUTOTRACKER_DISABLE_DUNGEON_ITEM_TRACKING or not isInGame() then
@@ -2028,10 +2052,6 @@ function updateDungeonItemsFromMemorySegment(segment)
 end
 
 function updateDungeonKeysFromMemorySegment(segment)
-    if not segment or not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Dungeon Keys")
     end
@@ -2078,97 +2098,76 @@ function updateDungeonKeysFromMemorySegment(segment)
 end
 
 function updateDungeonTotalsFromMemorySegment(segment)
-    if not segment or (not shouldChestCountUp()) or OBJ_RACEMODE:getState() > 0 or not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Dungeon Totals")
     end
 
     --Dungeon Total Checks Seen
-    local seenFlags = segment:ReadUInt16(0x7ef403)
+    CACHE.DungeonsSeen = segment:ReadUInt16(0x7ef403)
     for i, dungeonPrefix in ipairs(DATA.DungeonList) do
-        updateDungeonTotal(dungeonPrefix, seenFlags)
+        updateDungeonTotal(dungeonPrefix, CACHE.DungeonsSeen)
     end
 end
 
 function updateDungeonsCompletedFromMemorySegment(segment)
-    if not segment or not INSTANCE.NEW_SRAM_SYSTEM or not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Dungeons Completed")
     end
 
-    local data = segment:ReadUInt16(0x7ef472)
+    CACHE.DungeonsCompleted = segment:ReadUInt16(0x7ef472)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local item = Tracker:FindObjectForCode(boss[1])
         if item then
-            item.Active = data & DATA.DungeonData[boss[1]][3] > 0
+            item.Active = CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0
         end
     end
 end
 
 function updateDungeonPendantFromMemorySegment(segment)
-    if OBJ_RACEMODE:getState() > 0 or OBJ_GLITCHMODE:getState() > 2 or not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Pendant")
     end
 
-    if CACHE.DUNGEON < 0 then
+    if CACHE.DUNGEON == 0xff then
         updateDungeonIdFromMemorySegment(nil)
     end
     
-    local pendantData = segment:ReadUInt8(0x7ef374)
+    CACHE.PendantData = segment:ReadUInt8(0x7ef374)
 
     local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
     if dungeon and dungeon.CurrentStage == 0 then
-
-        local diffData = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ pendantData
-        if numberOfSetBits(diffData) == 1 and diffData & pendantData > 0 then
-            dungeon.CurrentStage = diffData & pendantData == 4 and 4 or 3
+        local diffData = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
+        if numberOfSetBits(diffData) == 1 and diffData & CACHE.PendantData > 0 then
+            dungeon.CurrentStage = diffData & CACHE.PendantData == 4 and 4 or 3
         end
     end
 
-    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0x00ff) + (pendantData << 8)
+    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0x00ff) + (CACHE.PendantData << 8)
 end
 
 function updateDungeonCrystalFromMemorySegment(segment)
-    if OBJ_RACEMODE:getState() > 0 or OBJ_GLITCHMODE:getState() > 2 or not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Crystal")
     end
 
-    if CACHE.DUNGEON < 0 then
+    if CACHE.DUNGEON == 0xff then
         updateDungeonIdFromMemorySegment(nil)
     end
 
-    local crystalData = segment:ReadUInt8(0x7ef37a)
+    CACHE.CrystalData = segment:ReadUInt8(0x7ef37a)
 
     local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
     if dungeon and dungeon.CurrentStage == 0 then
-        local diffData = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ crystalData
-        if numberOfSetBits(diffData) == 1 and diffData & crystalData > 0 then
+        local diffData = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
+        if numberOfSetBits(diffData) == 1 and diffData & CACHE.CrystalData > 0 then
             dungeon.CurrentStage = 1
         end
     end
 
-    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) + crystalData
+    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) + CACHE.CrystalData
 end
 
 function updateCollectionFromMemorySegment(segment)
-    if not isInGame() then
-        return false
-    end
-    
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Segment: Collection")
     end

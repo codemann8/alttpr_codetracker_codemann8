@@ -14,7 +14,7 @@ function autotracker_stopped()
     disposeMemoryWatch()
 end
 
-function isInGame(segment)
+function isInGame()
     updateModuleFromMemorySegment(nil)
     return isInGameFromModule()
 end
@@ -102,46 +102,29 @@ function initMemoryWatch()
         INSTANCE.MEMORY.UnderworldItems[i] = v
     end
     
-    SEGMENTS.DungeonId = ScriptHost:AddMemoryWatch("Dungeon Id", 0x7e040c, 1, updateDungeonIdFromMemorySegment, 200)
-    SEGMENTS.WorldFlag = ScriptHost:AddMemoryWatch("World Flag", 0x7ef3ca, 1, updateWorldFlagFromMemorySegment)
-    SEGMENTS.HealthData = ScriptHost:AddMemoryWatch("Health Data", 0x7ef36c, 2, updateHealthFromMemorySegment)
+    SEGMENTS.DungeonWorksheet = ScriptHost:AddMemoryWatch("Dungeon Worksheet", 0x7e0400, 0xd, updateDungeonWorksheetFromMemorySegment, 200)
     
     SEGMENTS.ItemData = ScriptHost:AddMemoryWatch("Item Data", 0x7ef340, 0x20, updateItemsFromMemorySegment)
-    SEGMENTS.HalfMagicData = ScriptHost:AddMemoryWatch("Half Magic Data", 0x7ef37b, 1, updateHalfMagicFromMemorySegment)
-    SEGMENTS.ProgressData = ScriptHost:AddMemoryWatch("Progress Data", 0x7ef3c5, 5, updateProgressFromMemorySegment)
+    SEGMENTS.MiscData = ScriptHost:AddMemoryWatch("Misc Data", 0x7ef36c, 0x5f, updateMiscFromMemorySegment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
         for k, v in pairs(DATA.MEMORY.ToggleItems) do
             INSTANCE.MEMORY.ToggleItems[k] = v
         end
-        SEGMENTS.ToggleItemData = ScriptHost:AddMemoryWatch("Toggle Item Data", 0x7ef38c, 3, updateToggleItemsFromMemorySegment)
-        SEGMENTS.ArrowData = ScriptHost:AddMemoryWatch("Arrow Data", 0x7ef377, 1, updateToggleItemsFromMemorySegment)
-    end
-    SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
-    if INSTANCE.NEW_POTDROP_SYSTEM then
-        SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6600 or 0x7f6018, 0x250, updateRoomPotsFromMemorySegment)
-        SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
+        SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
+        if INSTANCE.NEW_POTDROP_SYSTEM then
+            SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6600 or 0x7f6018, 0x250, updateRoomPotsFromMemorySegment)
+            SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
+        end
+        SEGMENTS.RandoData = ScriptHost:AddMemoryWatch("Rando Data", 0x7ef403, 0x22, updateRandoDataFromMemorySegment)
+        SEGMENTS.DungeonData = ScriptHost:AddMemoryWatch("Dungeon Items", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
+        SEGMENTS.DungeonAdditional = ScriptHost:AddMemoryWatch("Dungeon Additional", 0x7ef472, 0x7e, updateDungeonAdditionalFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
-        SEGMENTS.NPCData = ScriptHost:AddMemoryWatch("NPC Data", 0x7ef410, 2, updateNPCFromMemorySegment)
         if INSTANCE.NEW_SRAM_SYSTEM then
             SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
         else
             SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
-        end
-    end
-    
-    if Tracker.ActiveVariantUID ~= "vanilla" then
-        SEGMENTS.TempDoorData = ScriptHost:AddMemoryWatch("Temp Door Data", 0x7e0400, 1, updateTempDoorsFromMemorySegment)
-        SEGMENTS.TempRoomData = ScriptHost:AddMemoryWatch("Temp Room Data", 0x7e0403, 1, updateTempRoomFromMemorySegment)
-        SEGMENTS.Collection = ScriptHost:AddMemoryWatch("Collection Rate", 0x7ef423, 2, updateCollectionFromMemorySegment)
-        SEGMENTS.DungeonData = ScriptHost:AddMemoryWatch("Dungeon Items", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
-        SEGMENTS.DungeonKeyData = ScriptHost:AddMemoryWatch("Dungeon Keys", 0x7ef4a0, 0x50, updateDungeonKeysFromMemorySegment)
-        SEGMENTS.PendantData = ScriptHost:AddMemoryWatch("Pendant Data", 0x7ef374, 1, updateDungeonPendantFromMemorySegment)
-        SEGMENTS.CrystalData = ScriptHost:AddMemoryWatch("Crystal Data", 0x7ef37a, 1, updateDungeonCrystalFromMemorySegment)
-        if INSTANCE.NEW_SRAM_SYSTEM then
-            SEGMENTS.DungeonTotals = ScriptHost:AddMemoryWatch("Dungeon Totals", 0x7ef403, 2, updateDungeonTotalsFromMemorySegment)
-            SEGMENTS.DungeonsCompleted = ScriptHost:AddMemoryWatch("Dungeons Completed", 0x7ef472, 2, updateDungeonsCompletedFromMemorySegment)
         end
     end
     
@@ -162,29 +145,15 @@ function disposeMemoryWatch()
     end
 
     disposeSegment(SEGMENTS.ItemData)
-    disposeSegment(SEGMENTS.HealthData)
-    disposeSegment(SEGMENTS.HalfMagicData)
-    disposeSegment(SEGMENTS.ToggleItemData)
-    disposeSegment(SEGMENTS.ArrowData)
-    disposeSegment(SEGMENTS.ProgressData)
     disposeSegment(SEGMENTS.RoomData)
-    disposeSegment(SEGMENTS.TempDoorData)
-    disposeSegment(SEGMENTS.TempRoomData)
     disposeSegment(SEGMENTS.RoomPotData)
     disposeSegment(SEGMENTS.RoomEnemyData)
     disposeSegment(SEGMENTS.OverworldData)
     disposeSegment(SEGMENTS.ShopData)
-    disposeSegment(SEGMENTS.NPCData)
-    disposeSegment(SEGMENTS.Collection)
 
+    disposeSegment(SEGMENTS.RandoData)
     disposeSegment(SEGMENTS.DungeonData)
-    disposeSegment(SEGMENTS.DungeonKeyData)
-    disposeSegment(SEGMENTS.DungeonTotals)
-    disposeSegment(SEGMENTS.DungeonsCompleted)
-    disposeSegment(SEGMENTS.PendantData)
-    disposeSegment(SEGMENTS.CrystalData)
-    disposeSegment(SEGMENTS.DungeonId)
-    disposeSegment(SEGMENTS.WorldFlag)
+    disposeSegment(SEGMENTS.DungeonAdditional)
 end
 
 
