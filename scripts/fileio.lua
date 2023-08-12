@@ -47,10 +47,13 @@ function sendExternalMessage(filename, value)
 end
 
 function saveBackup()
-    if CONFIG.ENABLE_BACKUP_FILE and os.clock() - STATUS.GameStarted > 300 then
+    local clock = os.clock()
+    if CONFIG.ENABLE_BACKUP_FILE and clock - STATUS.GameStarted > 300 and clock - STATUS.LAST_BACKUP > 60 then
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
             print("Saving Backup File")
         end
+
+        STATUS.LAST_BACKUP = clock
 
         local textOutput = ""
         

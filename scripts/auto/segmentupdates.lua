@@ -87,6 +87,10 @@ function updateLocationFromMemorySegment(segment)
 
         -- Coordinates
         updateCoordinateFromMemorySegment(segment)
+        
+        if CACHE.MODULE ~= 0x06 and CACHE.MODULE ~= 0x08 and owChanged ~= uwChanged then
+            saveBackup()
+        end
     end
 end
 
@@ -382,8 +386,6 @@ function updateDungeonIdFromMemorySegment(segment)
     else
         CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
     end
-
-    saveBackup()
 
     if CACHE.DUNGEON < 0xff then
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
