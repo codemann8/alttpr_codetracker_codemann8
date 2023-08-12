@@ -31,6 +31,34 @@ function itemFlippedOn(item)
     end
 end
 
+function updateDungeonImage(dungeonId)
+    if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
+        if dungeonId < 0xff then
+            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                sendExternalMessage("dungeon", "er-" .. DATA.DungeonIdMap[dungeonId])
+            else
+                sendExternalMessage("dungeon", DATA.DungeonIdMap[dungeonId])
+            end
+        else
+            if CACHE.OWAREA < 0xff then
+                --Update Dungeon Image
+                if CACHE.WORLD == 0x40 then
+                    if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                        sendExternalMessage("dungeon", "er-dw")
+                    else
+                        sendExternalMessage("dungeon", "dw")
+                    end
+                else
+                    if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                        sendExternalMessage("dungeon", "er-lw")
+                    else
+                        sendExternalMessage("dungeon", "lw")
+                    end
+                end
+            end
+    end
+end
+
 function sendExternalMessage(filename, value)
     if value then
         if (filename == "item" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE)

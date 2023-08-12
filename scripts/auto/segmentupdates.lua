@@ -261,22 +261,7 @@ function updateWorldFlagFromMemorySegment(segment)
             end
         end
 
-        if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE and OWAREA < 0xff then
-            --Update Dungeon Image
-            if CACHE.WORLD == 0x40 then
-                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                    sendExternalMessage("dungeon", "er-dw")
-                else
-                    sendExternalMessage("dungeon", "dw")
-                end
-            else
-                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                    sendExternalMessage("dungeon", "er-lw")
-                else
-                    sendExternalMessage("dungeon", "lw")
-                end
-            end
-        end
+        updateDungeonImage(0xff, OWAREA)
 
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
             print("CURRENT WORLD:", CACHE.WORLD, string.format("0x%2X", CACHE.WORLD))
@@ -415,15 +400,6 @@ function updateDungeonIdFromMemorySegment(segment)
             --Set Door Dungeon Selector
             if Tracker.ActiveVariantUID ~= "vanilla" then
                 OBJ_DOORDUNGEON:setState(DATA.DungeonData[DATA.DungeonIdMap[CACHE.DUNGEON]][2])
-            end
-
-            --Update Dungeon Image
-            if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
-                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                    sendExternalMessage("dungeon", "er-" .. DATA.DungeonIdMap[CACHE.DUNGEON])
-                else
-                    sendExternalMessage("dungeon", DATA.DungeonIdMap[CACHE.DUNGEON])
-                end
             end
 
             --Auto-pin Dungeon Chests
@@ -724,6 +700,8 @@ function updateCoordinateFromMemorySegment(segment)
                 updateDungeonIdFromMemorySegment(nil)
             end
         end
+
+        updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
 
         if sId ~= CACHE.COORDS.CURRENT.S or xCoord & 0xfe00 ~= CACHE.COORDS.CURRENT.X & 0xfe00 or yCoord & 0xfe00 ~= CACHE.COORDS.CURRENT.Y & 0xfe00 then
             CACHE.COORDS.PREVIOUS.X = CACHE.COORDS.CURRENT.X
