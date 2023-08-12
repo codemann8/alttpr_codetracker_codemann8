@@ -1,8 +1,6 @@
 SEGMENTS = {}
 
 function autotracker_started()
-    STATUS.AutotrackerInGame = false
-    
     name = getmetatable(AutoTracker.ActiveConnector)["__name"]
     if (string.sub(name, 14, 16) == "Lua") then
         updateModal("Your autotracking method is outdated!", "...and will be DISABLED in the future!\nUsing the LUA autotracking method is outdated and very slow\ncompared to the SD2SNES option, even if you are using an emulator.\nIt is recommended to install and use SNI to connect the autotracker.", "For more info and support, please ask in the EmoTracker Discord.")
@@ -111,27 +109,16 @@ function initMemoryWatch()
             INSTANCE.MEMORY.ToggleItems[k] = v
         end
         SEGMENTS.RoomData = ScriptHost:AddMemoryWatch("Room Data", 0x7ef000, 0x250, updateRoomsFromMemorySegment)
-        if INSTANCE.NEW_POTDROP_SYSTEM then
-            SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6600 or 0x7f6018, 0x250, updateRoomPotsFromMemorySegment)
-            SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
-        end
         SEGMENTS.RandoData = ScriptHost:AddMemoryWatch("Rando Data", 0x7ef403, 0x22, updateRandoDataFromMemorySegment)
         SEGMENTS.DungeonData = ScriptHost:AddMemoryWatch("Dungeon Items", 0x7ef364, 0x26, updateDungeonItemsFromMemorySegment)
         SEGMENTS.DungeonAdditional = ScriptHost:AddMemoryWatch("Dungeon Additional", 0x7ef472, 0x7e, updateDungeonAdditionalFromMemorySegment)
     end
     if Tracker.ActiveVariantUID == "full_tracker" then
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
-        if INSTANCE.NEW_SRAM_SYSTEM then
-            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
-        else
-            SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
-        end
     end
     
     STATUS.GameStarted = os.clock()
     STATUS.LastMajorItem = os.clock()
-
-    STATUS.AutotrackerInGame = true
 end
 
 function disposeMemoryWatch()
@@ -160,7 +147,7 @@ end
 --Base Memory Watches
 ScriptHost:AddMemoryWatch("ROM Title", 0x701ffc, 25, updateTitleFromMemorySegment)
 ScriptHost:AddMemoryWatch("Location State", 0x7e0010, 0x92, updateLocationFromMemorySegment, 80)
-
+initMemoryWatch()
 
 function numberOfSetBits(value)
     value = value - ((value >> 1) & 0x55)

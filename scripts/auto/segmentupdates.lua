@@ -16,20 +16,35 @@ function updateTitleFromMemorySegment(segment)
             end
 
             INSTANCE.NEW_SRAM_SYSTEM = INSTANCE.VERSION_MINOR > 1
-            if SEGMENTS.ShopData then
-                ScriptHost:RemoveMemoryWatch(SEGMENTS.ShopData)
-            end
-            if INSTANCE.NEW_SRAM_SYSTEM then
-                SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
-            else
-                SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
-            end
-
             INSTANCE.NEW_POTDROP_SYSTEM = AutoTracker:ReadU8(0x28AA50, 0) > 0
-            if INSTANCE.NEW_POTDROP_SYSTEM and STATUS.AutotrackerInGame then
-                -- TODO: if this is brought back, remember to change the address
-                --SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", 0x7f6600, 0x250, updateRoomPotsFromMemorySegment)
-                --SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", 0x7f6850, 0x250, updateRoomEnemiesFromMemorySegment)
+
+            if SEGMENTS.ShopData == nil or SEGMENTS.ShopData:ContainsAddress(0x7f64b8) ~= INSTANCE.NEW_SRAM_SYSTEM then
+                if SEGMENTS.ShopData then
+                    ScriptHost:RemoveMemoryWatch(SEGMENTS.ShopData)
+                end
+                if INSTANCE.NEW_SRAM_SYSTEM then
+                    SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7f64b8, 0x20, updateShopsFromMemorySegment)
+                else
+                    SEGMENTS.ShopData = ScriptHost:AddMemoryWatch("Shop Data", 0x7ef302, 0x20, updateShopsFromMemorySegment)
+                end
+            end
+            
+            if INSTANCE.NEW_POTDROP_SYSTEM then
+                if SEGMENTS.RoomPotData == nil then
+                    SEGMENTS.RoomPotData = ScriptHost:AddMemoryWatch("Room Pot Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6600 or 0x7f6018, 0x250, updateRoomPotsFromMemorySegment)
+                end
+                if SEGMENTS.RoomEnemyData == nil then
+                    SEGMENTS.RoomEnemyData = ScriptHost:AddMemoryWatch("Room Enemy Data", INSTANCE.VERSION_MINOR < 2 and 0x7f6850 or 0x7f6268, 0x250, updateRoomEnemiesFromMemorySegment)
+                end
+            else
+                if SEGMENTS.RoomPotData then
+                    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomPotData)
+                    SEGMENTS.RoomPotData = nil
+                end
+                if SEGMENTS.RoomEnemyData then
+                    ScriptHost:RemoveMemoryWatch(SEGMENTS.RoomEnemyData)
+                    SEGMENTS.RoomEnemyData = nil
+                end
             end
         end
     end
@@ -38,51 +53,15 @@ end
 function updateLocationFromMemorySegment(segment)
     updateModuleFromMemorySegment(segment)
 
-    if isInGameFromModule() then
+    if isInGameFromModule() and segment:ReadUInt8(0x7e0010) ~= 0x0e then
         -- Overworld Id
-        local owarea = 0xffff
-        if segment then
-            owarea = segment:ReadUInt8(0x7e008a)
-        else
-            owarea = AutoTracker:ReadU8(0x7e008a, 0)
-        end
-        updateDungeonIdFromMemorySegment(nil)
-        if not (CACHE.DUNGEON == 0xff and CACHE.MODULE == 0x09) then --force OW transitions to retain OW ID
-            if (owarea == 0 and (
-                    CACHE.MODULE == 0x07 or --in cave/dungeon
-                    CACHE.MODULE == 0x05 or --on file select screen
-                    CACHE.MODULE == 0x0e or --has dialogue/menu open
-                    CACHE.MODULE == 0x12 or --game over
-                    CACHE.MODULE == 0x17 or --is s+q
-                    CACHE.MODULE == 0x1b or --on spawn select
-                    CACHE.MODULE == 0x11 or --falling in dropdown entrance
-                    CACHE.MODULE == 0x08 or --loading overworld
-                    CACHE.MODULE == 0x0b or --special overworld areas
-                    CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f)) --transitioning into dungeons
-                    or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
-                owarea = 0xff
-            end
-        end
+        local owChanged = updateOverworldIdFromMemorySegment(segment)
 
-        if owarea ~= CACHE.OWAREA then
-            if CACHE.OWAREA == 0xff then
-                updateWorldFlagFromMemorySegment(nil)
-            end
-            CACHE.OWAREA = owarea
-            updateOverworldIdFromMemorySegment(segment)
         end
 
         -- Room Id
-        local room = 0xffff
-        if segment then
-            room = segment:ReadUInt16(0x7e00a0)
-        else
-            room = AutoTracker:ReadU16(0x7e00a0, 0)
-        end
+        local uwChanged = updateRoomIdFromMemorySegment(segment)
 
-        if room ~= CACHE.ROOM then
-            CACHE.ROOM = room
-            updateRoomIdFromMemorySegment(segment)
         end
 
         -- Coordinates
@@ -123,6 +102,7 @@ function updateDungeonWorksheetFromMemorySegment(segment)
                 local modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_door", DATA.MEMORY.DungeonFlags[dungeonPrefix][3], valueDoor)
                 modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_enemykey", DATA.MEMORY.DungeonFlags[dungeonPrefix][1], valueRoom) or modified
                 modified = updateDoorKeyFromTempRoom(dungeonPrefix .. "_potkey", DATA.MEMORY.DungeonFlags[dungeonPrefix][2], valueRoom) or modified
+                
                 if modified then
                     --Refresh Dungeon Calc
                     updateChestCountFromDungeon(nil, dungeonPrefix, nil)
@@ -181,11 +161,9 @@ function updateMiscFromMemorySegment(segment)
 
     if Tracker.ActiveVariantUID ~= "vanilla" then
         if OBJ_RACEMODE:getState() == 0 and OBJ_GLITCHMODE:getState() <= 3 then
-            if CACHE.CrystalData ~= segment:ReadUInt8(0x7ef37a) then
-                updateDungeonCrystalFromMemorySegment(segment)
-            end
-            if CACHE.PendantData ~= segment:ReadUInt8(0x7ef374) then
-                updateDungeonPendantFromMemorySegment(segment)
+            if CACHE.CrystalData ~= segment:ReadUInt8(0x7ef37a)
+                    or CACHE.PendantData ~= segment:ReadUInt8(0x7ef374) then
+                updatePrizeFromMemorySegment(segment)
             end
         end
     end
@@ -215,7 +193,7 @@ function updateModuleFromMemorySegment(segment)
         moduleId = AutoTracker:ReadU8(0x7e0010, 0)
     end
 
-    if moduleId ~= CACHE.MODULE and moduleId ~= 0x0e then
+    if moduleId ~= CACHE.MODULE and moduleId ~= 0x0e and moduleId ~= 0x0f then
         --Update Dungeon Id when starting at Sanctuary
         if CACHE.MODULE == 0x05 and moduleId == 0x07 then
             CACHE.MODULE = moduleId
@@ -229,8 +207,7 @@ function updateModuleFromMemorySegment(segment)
         end
 
         if not STATUS.AutotrackerInGame and isInGameFromModule() then
-            disposeMemoryWatch()
-            initMemoryWatch()
+            STATUS.AutotrackerInGame = true
         end
 
         if not isInGameFromModule() then
@@ -248,53 +225,62 @@ function updateModuleFromMemorySegment(segment)
             sendExternalMessage("health", "win")
 
             doStatsMessage()
+
+            STATUS.AutotrackerInGame = false
         end
     end
 end
 
 function updateWorldFlagFromMemorySegment(segment)
-    if not segment and not isInGame() then
+    if not segment and not isInGameFromModule() then
         return false
     end
 
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: World")
-    end
-
+    local MODULE = CACHE.MODULE
+    local OWAREA = CACHE.OWAREA
+    local WORLD = 0xff
     if segment then
-        CACHE.WORLD = segment:ReadUInt8(0x7ef3ca)
+        WORLD = segment:ReadUInt8(0x7ef3ca)
+        MODULE = AutoTracker:ReadU8(0x7e0010, 0)
+        OWAREA = AutoTracker:ReadU8(0x7e008a, 0)
     else
-        CACHE.WORLD = AutoTracker:ReadU8(0x7ef3ca, 0)
+        WORLD = AutoTracker:ReadU8(0x7ef3ca, 0)
     end
-    local OWAREA = AutoTracker:ReadU8(0x7e008a, 0)
-    local MODULE = AutoTracker:ReadU8(0x7e0010, 0)
 
-    if not (CACHE.DUNGEON == 0xff and MODULE == 0x09) then --force OW transitions to retain OW ID
-        if (OWAREA == 0 and (MODULE == 0x07 or MODULE == 0x05 or MODULE == 0x0e or MODULE == 0x17 or MODULE == 0x11 or MODULE == 0x06 or MODULE == 0x0f)) --transitioning into dungeons
-                or OWAREA > 0x81 then --transitional OW IDs are ignored ie. 0x96
-            OWAREA = 0xff
+    if WORLD ~= CACHE.WORLD then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: World")
         end
-    end
 
-    if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE and OWAREA < 0xff then
-        --Update Dungeon Image
-        if CACHE.WORLD == 0x40 then
-            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                sendExternalMessage("dungeon", "er-dw")
-            else
-                sendExternalMessage("dungeon", "dw")
-            end
-        else
-            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                sendExternalMessage("dungeon", "er-lw")
-            else
-                sendExternalMessage("dungeon", "lw")
+        CACHE.WORLD = WORLD
+
+        if MODULE ~= 0x09 then --force OW transitions to retain OW ID
+            if (OWAREA == 0 and (MODULE == 0x07 or MODULE == 0x05 or MODULE == 0x0e or MODULE == 0x17 or MODULE == 0x11 or MODULE == 0x06 or MODULE == 0x0f)) --transitioning into dungeons
+                    or OWAREA > 0x81 then --transitional OW IDs are ignored ie. 0x96
+                OWAREA = 0xff
             end
         end
-    end
 
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("CURRENT WORLD:", CACHE.WORLD, string.format("0x%2X", CACHE.WORLD))
+        if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE and OWAREA < 0xff then
+            --Update Dungeon Image
+            if CACHE.WORLD == 0x40 then
+                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                    sendExternalMessage("dungeon", "er-dw")
+                else
+                    sendExternalMessage("dungeon", "dw")
+                end
+            else
+                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                    sendExternalMessage("dungeon", "er-lw")
+                else
+                    sendExternalMessage("dungeon", "lw")
+                end
+            end
+        end
+
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("CURRENT WORLD:", CACHE.WORLD, string.format("0x%2X", CACHE.WORLD))
+        end
     end
 end
 
@@ -303,68 +289,98 @@ function updateOverworldIdFromMemorySegment(segment)
         return false
     end
 
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: OverworldId")
+    local owarea = 0xffff
+    if segment then
+        owarea = segment:ReadUInt8(0x7e008a)
+    else
+        owarea = AutoTracker:ReadU8(0x7e008a, 0)
     end
 
-    if CACHE.OWAREA < 0xff and Tracker.ActiveVariantUID ~= "vanilla" and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
-        --OW Shuffle Autotracking
-        if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
-            updateRoomSlots(CACHE.OWAREA + 0x1000)
+    if CACHE.MODULE ~= 0x09 then --force OW transitions to retain OW ID
+        if (owarea == 0 and (
+                CACHE.MODULE == 0x07 or --in cave/dungeon
+                CACHE.MODULE == 0x05 or --on file select screen
+                CACHE.MODULE == 0x0e or --has dialogue/menu open
+                CACHE.MODULE == 0x12 or --game over
+                CACHE.MODULE == 0x17 or --is s+q
+                CACHE.MODULE == 0x1b or --on spawn select
+                CACHE.MODULE == 0x11 or --falling in dropdown entrance
+                CACHE.MODULE == 0x08 or --loading overworld
+                CACHE.MODULE == 0x0b or --special overworld areas
+                CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f)) --transitioning into dungeons
+                or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
+            owarea = 0xff
+        end
+    end
+
+    if owarea ~= CACHE.OWAREA then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: OverworldId")
         end
 
-        --OW Mixed Autotracking
-        if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
-            if CACHE.OWAREA == 0 and MODULE ~= 0x09 then
-                print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
-                print("^ Module:", string.format("0x%02x", MODULE), "< REPORT THIS TO CODEMAN ^")
-            end
-            
-            local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-            if not swap.modified then
-                CACHE.WORLD = AutoTracker:ReadU8(0x7ef3ca, 0)
+        CACHE.OWAREA = owarea
 
-                local swapped = CACHE.OWAREA < CACHE.WORLD
-                swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
-                if OBJ_WORLDSTATE:getState() > 0 then
-                    swapped = not swapped
+        if CACHE.OWAREA < 0xff and Tracker.ActiveVariantUID ~= "vanilla" and not INSTANCE.AUTOTRACKER_HAS_DONE_POST_GAME_SUMMARY then
+            --OW Shuffle Autotracking
+            if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
+                updateRoomSlots(CACHE.OWAREA + 0x1000)
+            end
+
+            --OW Mixed Autotracking
+            if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
+                if CACHE.OWAREA == 0 and MODULE ~= 0x09 then
+                    print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
+                    print("^ Module:", string.format("0x%02x", MODULE), "< REPORT THIS TO CODEMAN ^")
                 end
-                swap:updateSwap(swapped and 1 or 0)
-                swap:updateItem()
-            end
-        end
+                
+                local swap = findObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                if not swap.modified and swap:getState() > 1 then
+                    updateWorldFlagFromMemorySegment(nil)
 
-        --Region Autotracking
-        if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
-            if CACHE.OWAREA < 0xff then
-                if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
-                    local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
-                    if region then
-                        region.Active = true
+                    local swapped = CACHE.OWAREA < CACHE.WORLD
+                    swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
+                    if OBJ_WORLDSTATE:getState() > 0 then
+                        swapped = not swapped
                     end
-                --TODO: Handle better with new mixed functionality
-                elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
-                    local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
-                    if not region.Active then
-                        local swap = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                        if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
-                            local canReach = true
-                            if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
-                                for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
-                                    if Tracker:ProviderCountForCode(item) == 0 then
-                                        canReach = false
-                                        break
+                    swap:updateSwap(swapped and 1 or 0)
+                    swap:updateItem()
+                end
+            end
+
+            --Region Autotracking
+            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
+                if CACHE.OWAREA < 0xff then
+                    if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
+                        local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
+                        if region then
+                            region.Active = true
+                        end
+                    --TODO: Handle better with new mixed functionality
+                    elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
+                        local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
+                        if not region.Active then
+                            local swap = findObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                            if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
+                                local canReach = true
+                                if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
+                                    for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
+                                        if Tracker:ProviderCountForCode(item) == 0 then
+                                            canReach = false
+                                            break
+                                        end
                                     end
                                 end
-                            end
-                            if canReach then
-                                region.Active = true
+                                if canReach then
+                                    region.Active = true
+                                end
                             end
                         end
-                    end
-                end  
+                    end  
+                end
             end
         end
+
+        return true
     end
 
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
@@ -376,40 +392,45 @@ function updateDungeonIdFromMemorySegment(segment)
     if not segment and not isInGame() then
         return false
     end
-    
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: DungeonId")
-    end
 
+    local DUNGEON = 0xffff
     if (segment) then
-        CACHE.DUNGEON = segment:ReadUInt8(0x7e040c)
+        DUNGEON = segment:ReadUInt8(0x7e040c)
     else
-        CACHE.DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
+        DUNGEON = AutoTracker:ReadU8(0x7e040c, 0)
     end
 
-    if CACHE.DUNGEON < 0xff then
+    if DUNGEON ~= CACHE.DUNGEON then
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-            print("CURRENT DUNGEON:", DATA.DungeonIdMap[CACHE.DUNGEON], CACHE.DUNGEON, string.format("0x%2X", CACHE.DUNGEON))
+            print("Segment: DungeonId")
         end
 
-        --Set Door Dungeon Selector
-        if Tracker.ActiveVariantUID ~= "vanilla" then
-            OBJ_DOORDUNGEON:setState(DATA.DungeonData[DATA.DungeonIdMap[CACHE.DUNGEON]][2])
-        end
+        CACHE.DUNGEON = DUNGEON
 
-        --Update Dungeon Image
-        if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
-            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                sendExternalMessage("dungeon", "er-" .. DATA.DungeonIdMap[CACHE.DUNGEON])
-            else
-                sendExternalMessage("dungeon", DATA.DungeonIdMap[CACHE.DUNGEON])
+        if CACHE.DUNGEON < 0xff then
+            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print("CURRENT DUNGEON:", DATA.DungeonIdMap[CACHE.DUNGEON], CACHE.DUNGEON, string.format("0x%2X", CACHE.DUNGEON))
             end
-        end
 
-        --Auto-pin Dungeon Chests
-        if Tracker.ActiveVariantUID == "full_tracker" and CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 then
-            for i = 0, 26, 2 do
-                Tracker:FindObjectForCode(DATA.DungeonData[DATA.DungeonIdMap[i]][1]).Pinned = DATA.DungeonIdMap[i] == DATA.DungeonIdMap[CACHE.DUNGEON]
+            --Set Door Dungeon Selector
+            if Tracker.ActiveVariantUID ~= "vanilla" then
+                OBJ_DOORDUNGEON:setState(DATA.DungeonData[DATA.DungeonIdMap[CACHE.DUNGEON]][2])
+            end
+
+            --Update Dungeon Image
+            if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
+                if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
+                    sendExternalMessage("dungeon", "er-" .. DATA.DungeonIdMap[CACHE.DUNGEON])
+                else
+                    sendExternalMessage("dungeon", DATA.DungeonIdMap[CACHE.DUNGEON])
+                end
+            end
+
+            --Auto-pin Dungeon Chests
+            if Tracker.ActiveVariantUID == "full_tracker" and CONFIG.AUTOTRACKER_ENABLE_AUTOPIN_CURRENT_DUNGEON and OBJ_DOORSHUFFLE:getState() < 2 then
+                for i = 0, 26, 2 do
+                    Tracker:FindObjectForCode(DATA.DungeonData[DATA.DungeonIdMap[i]][1]).Pinned = DATA.DungeonIdMap[i] == DATA.DungeonIdMap[CACHE.DUNGEON]
+                end
             end
         end
     end
@@ -419,18 +440,31 @@ function updateRoomIdFromMemorySegment(segment)
     if not isInGameFromModule() and CACHE.MODULE ~= 0x05 then
         return false
     end
-    
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: RoomId")
+
+    local room = 0xffff
+    if segment then
+        room = segment:ReadUInt16(0x7e00a0)
+    else
+        room = AutoTracker:ReadU16(0x7e00a0, 0)
     end
 
-    if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE:getState() > 0 and CACHE.MODULE ~= 0x19 and CACHE.MODULE ~= 0x1a then
-        updateRoomSlots(CACHE.ROOM)
-    end
+    if room ~= CACHE.ROOM then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: RoomId")
+        end
 
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("CURRENT ROOM:", CACHE.ROOM, string.format("0x%4X", CACHE.ROOM))
-        --print("CURRENT ROOM ORIGDUNGEON:", DATA.DungeonIdMap[DATA.RoomDungeons[CACHE.ROOM]], DATA.RoomDungeons[CACHE.ROOM], string.format("0x%2X", DATA.RoomDungeons[CACHE.ROOM]))
+        CACHE.ROOM = room
+
+        if OBJ_DOORSHUFFLE and OBJ_DOORSHUFFLE:getState() > 0 and CACHE.MODULE ~= 0x19 and CACHE.MODULE ~= 0x1a then
+            updateRoomSlots(CACHE.ROOM)
+        end
+
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("CURRENT ROOM:", CACHE.ROOM, string.format("0x%4X", CACHE.ROOM))
+            --print("CURRENT ROOM ORIGDUNGEON:", DATA.DungeonIdMap[DATA.RoomDungeons[CACHE.ROOM]], DATA.RoomDungeons[CACHE.ROOM], string.format("0x%2X", DATA.RoomDungeons[CACHE.ROOM]))
+        end
+
+        return true
     end
 end
 
@@ -948,11 +982,11 @@ function updateHalfMagicFromMemorySegment(segment)
 end
 
 function updateHealthFromMemorySegment(segment)
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: Health")
-    end
-    
     if segment then
+        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+            print("Segment: Health")
+        end
+
         local maxHealth = segment:ReadUInt8(0x7ef36c)
         local curHealth = segment:ReadUInt8(0x7ef36d)
         local stage = STATUS.HealthState
@@ -2133,9 +2167,16 @@ function updateDungeonsCompletedFromMemorySegment(segment)
     end
 end
 
-function updateDungeonPendantFromMemorySegment(segment)
+function updatePrizeFromMemorySegment(segment)
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: Pendant")
+        print("Segment: Prize")
+    end
+
+    local function setPrize(value)
+        local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
+        if dungeon and dungeon.CurrentStage == 0 then
+            dungeon.CurrentStage = value
+        end
     end
 
     if CACHE.DUNGEON == 0xff then
@@ -2143,38 +2184,17 @@ function updateDungeonPendantFromMemorySegment(segment)
     end
     
     CACHE.PendantData = segment:ReadUInt8(0x7ef374)
-
-    local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
-    if dungeon and dungeon.CurrentStage == 0 then
-        local diffData = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
-        if numberOfSetBits(diffData) == 1 and diffData & CACHE.PendantData > 0 then
-            dungeon.CurrentStage = diffData & CACHE.PendantData == 4 and 4 or 3
-        end
-    end
-
-    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0x00ff) + (CACHE.PendantData << 8)
-end
-
-function updateDungeonCrystalFromMemorySegment(segment)
-    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        print("Segment: Crystal")
-    end
-
-    if CACHE.DUNGEON == 0xff then
-        updateDungeonIdFromMemorySegment(nil)
-    end
-
     CACHE.CrystalData = segment:ReadUInt8(0x7ef37a)
 
-    local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
-    if dungeon and dungeon.CurrentStage == 0 then
-        local diffData = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
-        if numberOfSetBits(diffData) == 1 and diffData & CACHE.CrystalData > 0 then
-            dungeon.CurrentStage = 1
-        end
+    local diffPendants = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
+    local diffCrystals = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
+    if numberOfSetBits(diffPendants) == 1 and diffPendants & CACHE.PendantData > 0 then
+        setPrize(diffPendants & CACHE.PendantData == 4 and 4 or 3)
+    elseif numberOfSetBits(diffCrystals) == 1 and diffCrystals & CACHE.CrystalData > 0 then
+        setPrize(1)
     end
 
-    INSTANCE.DUNGEON_PRIZE_DATA = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) + CACHE.CrystalData
+    INSTANCE.DUNGEON_PRIZE_DATA = (CACHE.PendantData << 8) + CACHE.CrystalData
 end
 
 function updateCollectionFromMemorySegment(segment)
