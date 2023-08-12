@@ -770,27 +770,31 @@ function updateCoordinateFromMemorySegment(segment)
                 if owEntrance ~= nil and uwRoom ~= nil then
                     section = Tracker:FindObjectForCode(owEntrance)
                     if not ((section.CapturedItem and section.CapturedItem.Name ~= "Unknown Dark Connector") or section.AvailableChestCount == 0) then
-                        if uwRoom ~= "" then
-                            captureItem = Tracker:FindObjectForCode(uwRoom)
-                            section.CapturedItem = captureItem
-                            updateGhost(owEntrance, true, true)
-                            if dungeonId < 0xff then
-                                if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then
-                                    INSTANCE.MULTIDUNGEONCAPTURES[roomId] = uwRoom
-                                end
-                            end
-                        else
-                            section.AvailableChestCount = 0
-                            if section.HostedItem then
-                                section.HostedItem.Active = true
-                            end
-                        end
+                        local skipIcon = false
                         if owEntrance == "@Tavern Back/Entrance" then
                             local item = Tracker:FindObjectForCode("tavern_mode")
                             if roomId ~= 0x103 or uwRoom == "" then
                                 item.CurrentStage = 2
                             else
                                 item.CurrentStage = 1
+                                skipIcon = true
+                            end
+                        end
+                        if not skipIcon then
+                            if uwRoom ~= "" then
+                                captureItem = findObjectForCode(uwRoom)
+                                section.CapturedItem = captureItem
+                                updateGhost(owEntrance, true, true)
+                                if dungeonId < 0xff then
+                                    if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then
+                                        INSTANCE.MULTIDUNGEONCAPTURES[roomId] = uwRoom
+                                    end
+                                end
+                            else
+                                section.AvailableChestCount = 0
+                                if section.HostedItem then
+                                    section.HostedItem.Active = true
+                                end
                             end
                         end
                         if OBJ_ENTRANCE:getState() < 4 then
