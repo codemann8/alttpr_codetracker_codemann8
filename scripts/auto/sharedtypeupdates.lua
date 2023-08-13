@@ -201,10 +201,14 @@ function updateDoorKeyCountFromRoomSlotList(segment, doorKeyRef, roomSlots, offs
             print(doorKeyRef, clearedCount)
         end
 
-        doorKey.AcquiredCount = clearedCount
+        if doorKey.AcquiredCount ~= clearedCount then
+            doorKey.AcquiredCount = clearedCount
+            return true
+        end
     else
         print("Couldn't find door/key", doorKeyRef)
     end
+    return false
 end
 
 function updateDoorKeyFromTempRoom(doorKeyRef, data, tempValue, dataMore)
@@ -271,12 +275,16 @@ function updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, roomSlo
                     end
                 end
 
-                item.AcquiredCount = clearedCount
+                if item.AcquiredCount ~= clearedCount then
+                    item.AcquiredCount = clearedCount
+                    return true
+                end
             end
         end
     else
         print("Couldn't find chest:", dungeonPrefix)
     end
+    return false
 end
 
 function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
@@ -299,16 +307,20 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
 
     if INSTANCE.NEW_KEY_SYSTEM then
         if address > 0x7ef400 then
-            chestKeys.AcquiredCount = math.max(segment:ReadUInt8(address), (dungeonPrefix == "hc" and segment:ReadUInt8(address + 1) or 0))
+            local newkeys = math.max(segment:ReadUInt8(address), (dungeonPrefix == "hc" and segment:ReadUInt8(address + 1) or 0))
+            if chestKeys.AcquiredCount ~= newkeys then
+                chestKeys.AcquiredCount = newkeys
+                return true
+            end
         end
     elseif OBJ_KEYSMALL:getState() < 2 and address < 0x7ef400 then
         local doorsOpened = Tracker:FindObjectForCode(dungeonPrefix .. "_door")
-        local currentKeys = 0
+        local currentKeys = AutoTracker:ReadU8(0x7ef36f, 0)
 
-        if DATA.DungeonIdMap[CACHE.DUNGEON] == dungeonPrefix and segment:ReadUInt8(0x7ef36f) ~= 0xff then
-            currentKeys = segment:ReadUInt8(0x7ef36f)
-        else
+        if DATA.DungeonIdMap[CACHE.DUNGEON] ~= dungeonPrefix or currentKeys == 0xff then
             currentKeys = segment:ReadUInt8(address)
+        else
+            currentKeys = 0
         end
 
         local enemyKeys = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
@@ -323,8 +335,13 @@ function updateDungeonKeysFromPrefix(segment, dungeonPrefix, address)
         if potKeys and OBJ_POOL_DUNGEONPOT:getState() == 0 then
             addedKeys = addedKeys + potKeys.AcquiredCount
         end
-        chestKeys.AcquiredCount = currentKeys + doorsOpened.AcquiredCount - addedKeys
+        local newkeys = currentKeys + doorsOpened.AcquiredCount - addedKeys
+        if chestKeys.AcquiredCount ~= newkeys then
+            chestKeys.AcquiredCount = newkeys
+            return true
+        end
     end
+    return false
 end
 
 function updateDungeonTotal(dungeonPrefix, seenFlags)
