@@ -362,29 +362,3 @@ function updateDungeonTotal(dungeonPrefix, seenFlags)
         end
     end
 end
-
-function sleep(ms)
-    local time = os.clock()
-    local newtime = os.clock()
-    while (newtime - time) * 1000 < ms do
-        newtime = os.clock()
-    end
-end
-
-function resetCoords()
-    CACHE.COORDS.CURRENT = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }
-    CACHE.COORDS.PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }
-end
-
-function calcDistance(linkX, linkY, pointX, pointY, use_normal_distance)
-    local xCoefficient = 1
-    local yCoefficient = 1
-    if not use_normal_distance then
-        xCoefficient = 2 -- devalue X coordinate deviation
-        yCoefficient = 0.5
-        if linkY < pointY then
-            yCoefficient = 4 -- devalue when link is above the entrance
-        end
-    end
-    return math.sqrt((((xCoefficient * math.abs(linkX - pointX)) ^ 2)) + ((yCoefficient * math.abs(linkY - pointY)) ^ 2))
-end

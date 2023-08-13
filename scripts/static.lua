@@ -339,11 +339,11 @@ DATA.OverworldEntranceData = {
     [0x00] = {
         {"@Forest Chest Game/Entrance",                 0x02f0, 0x0008, 2.0, false},
         {"@Forest Hideout Exit/Entrance",               0x02e8, 0x0248, 0.5, false},
-        {"@Forest Hideout Drop/Dropdown",               0x0300, 0x0198, 0.5, true}
+        {"@Forest Hideout Drop/Dropdown",               0x0300, 0x0208, 0.5, true}
     },
     [0x02] = {
         {"@Lumberjack Tree Exit/Entrance",              0x0548, 0x0068, 1.0, false},
-        {"@Lumberjack Tree/Dropdown",                   0x04c8, 0x00ac, 0.4, true},
+        {"@Lumberjack Tree/Dropdown",                   0x04c8, 0x0120, 0.4, true},
         {"@Lumberjack House/Entrance",                  0x0558, 0x00d8, 0.4, false}
     },
     [0x03] = {
@@ -380,16 +380,16 @@ DATA.OverworldEntranceData = {
     [0x14] = {
         {"@Graveyard Ledge Cave/Entrance",              0x0918, 0x0448, 2.0, false},
         {"@King's Tomb Grave/Entrance",                 0x0998, 0x04a8, 2.0, false},
-        {"@Sanctuary Grave/Dropdown",                   0x0848, 0x042c, 2.0, true}
+        {"@Sanctuary Grave/Dropdown",                   0x0848, 0x04a0, 2.0, true}
     },
     [0x15] = {
         {"@Useless Fairy Exit/Entrance",                0x0aa8, 0x0448, 0.6, false},
-        {"@Useless Fairy Drop/Dropdown",                0x0a40, 0x0478, 0.4, true}
+        {"@Useless Fairy Drop/Dropdown",                0x0a40, 0x04e8, 0.4, true}
     },
     [0x16] = "@Witch's Hut/Entrance", --0x0cc8, 0x0538
     [0x18] = {
         {"@Kakariko Well Exit/Entrance",                0x00b8, 0x06b8, 1.0, false},
-        {"@Kakariko Well Drop/Dropdown",                0x0058, 0x063c, 1.0, true},
+        {"@Kakariko Well Drop/Dropdown",                0x0058, 0x06c0, 1.0, true},
         {"@Blind's House Entrance/Entrance",            0x0208, 0x0698, 0.6, false},
         {"@Elder Left Door/Entrance",                   0x0268, 0x0698, 0.6, false},
         {"@Elder Right Door/Entrance",                  0x02a8, 0x0698, 0.6, false},
@@ -410,10 +410,10 @@ DATA.OverworldEntranceData = {
         {"@Castle Right Entrance/Entrance",             0x08c8, 0x0604, 1.0, false},
         {"@Agahnim's Tower Entrance/Entrance",          0x07f8, 0x0634, 0.2, false},
         {"@Secret Passage Exit/Entrance",               0x08c8, 0x06c8, 2.0, false},
-        {"@Secret Passage Drop/Dropdown",               0x0980, 0x0624, 2.0, true},
+        {"@Secret Passage Drop/Dropdown",               0x0980, 0x0698, 2.0, true},
         {"@Ganon Hole Exit/Entrance",                   0x0728, 0x06c8, 1.0, false},
         {"@Ganon Hole Exit/Entrance",                   0x06e8, 0x0604, 0.2, false}, --Inverted 2.0
-        {"@Ganon Hole/Dropdown",                        0x07f8, 0x0624, 0.2, true}
+        {"@Ganon Hole/Dropdown",                        0x07f8, 0x0698, 0.2, true}
     },
     [0x1e] = {
         {"@Sahasrahla's Hut Entrance/Entrance",         0x0cf0, 0x0728, 2.0, false},
@@ -422,7 +422,7 @@ DATA.OverworldEntranceData = {
     [0x22] = {
         {"@Smith's House/Entrance",                     0x04d8, 0x0868, 1.0, false},
         {"@Magic Bat Exit/Entrance",                    0x0508, 0x08c4, 0.2, false},
-        {"@Magic Bat Drop/Dropdown",                    0x0528, 0x08e0, 0.2, true}
+        {"@Magic Bat Drop/Dropdown",                    0x0528, 0x08f0, 0.2, true}
     },
     [0x28] = "@Quarreling Brothers Left/Entrance", --0x01b8, 0x0b58
     [0x29] = {
@@ -466,11 +466,11 @@ DATA.OverworldEntranceData = {
         {"@Skull Woods Back South/Entrance",            0x00e8, 0x01f8, 2.0, false},
         {"@Skull Woods Back/Entrance",                  0x0098, 0x00b8, 2.0, false},
         {"@Skull Woods Back/Entrance",                  0x0098, 0x0100, 2.0, false}, -- alternate
-        {"@Skull Woods Back Drop/Dropdown",             0x01e8, 0x0170, 2.0, true},
+        {"@Skull Woods Back Drop/Dropdown",             0x01e8, 0x0160, 2.0, true},
         {"@Skull Woods Back Drop/Dropdown",             0x01e8, 0x0120, 2.0, true}, -- backup
-        {"@Skull Woods Big Chest Drop/Dropdown",        0x0300, 0x0194, 0.4, true},
-        {"@Skull Woods Front Right Drop/Dropdown",      0x0318, 0x0230, 0.4, true},
-        {"@Skull Woods Front Left Drop/Dropdown",       0x0278, 0x0250, 1.0, true},
+        {"@Skull Woods Big Chest Drop/Dropdown",        0x0300, 0x0208, 0.4, true},
+        {"@Skull Woods Front Right Drop/Dropdown",      0x0318, 0x02a0, 0.4, true},
+        {"@Skull Woods Front Left Drop/Dropdown",       0x0278, 0x02c0, 1.0, true},
     },
     [0x42] = "@Dark Lumberjack/Entrance", --0x0558, 0x00c8
     [0x43] = {
@@ -507,7 +507,7 @@ DATA.OverworldEntranceData = {
     [0x5a] = "@Shield Shop Entrance/Entrance", --0x0548, 0x0738
     [0x5b] = {
         {"@Pyramid Fairy Cave/Entrance",                0x0778, 0x07a8, 2.0, false},
-        {"@Ganon Hole/Dropdown",                        0x07f0, 0x0680, 2.0, true},--90->24
+        {"@Ganon Hole/Dropdown",                        0x07f0, 0x0680, 2.0, true},
         {"@Ganon Hole Exit/Entrance",                   0x06e8, 0x07a8, 2.0, false}
     },
     [0x5e] = {
@@ -552,8 +552,7 @@ DATA.RoomLobbyData = {
     [0x000e] = {"cap_ip", true},
     [0x0010] = "cap_drop_ganon",
     [0x0011] = {
-        {0x0393, 0x024c, "cap_drop_sanc"},
-        {0x0393, 0x029c, "cap_drop_sanc"}
+        {0x0393, 0x031a, "cap_drop_sanc"}
     },
     [0x0012] = {"cap_hcsanc", true},
     [0x0018] = "cap_drop_fairy",
@@ -563,18 +562,15 @@ DATA.RoomLobbyData = {
     [0x002c] = "cap_hookcave",
     [0x002f] = "cap_drop_well",
     [0x003c] = "cap_hookcave",
-    --[0x0048] = {"cap_drop_swbigchest", true},
     [0x004a] = {"cap_pod", true},
     [0x0055] = "cap_drop_uncle",
     [0x0056] = {
         {0x0c78, 0x0bd8, "cap_swbacksouth"},
-        {0x0d40, 0x0a18, "cap_drop_swhazard"},
         {0x0d40, 0x0a68, "cap_drop_swhazard"}
     },
     [0x0057] = {"cap_swfrontleft", true},
     [0x0058] = {
         {0x1078, 0x0bd8, "cap_swfrontright"},
-        {0x1190, 0x0a18, "cap_drop_swbigchest"},
         {0x1190, 0x0a68, "cap_drop_swbigchest"}
     },
     [0x0059] = {"cap_sw", true}, --"cap_swback" insanity is handled elsewhere
@@ -583,7 +579,6 @@ DATA.RoomLobbyData = {
     [0x0062] = {"cap_hcright", true},
     [0x0063] = {"cap_dpback", true},
     [0x0067] = {
-        {0xe80, 0x0c18, "cap_drop_swcompass"},
         {0xe80, 0x0c68, "cap_drop_swcompass"}
     },
     [0x0068] = "cap_drop_swpinball",

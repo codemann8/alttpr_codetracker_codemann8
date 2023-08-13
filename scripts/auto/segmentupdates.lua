@@ -526,7 +526,7 @@ function updateCoordinateFromMemorySegment(segment)
                 return DATA.RoomLobbyData[roomId][1]
             else
                 for i,uw in ipairs(DATA.RoomLobbyData[roomId]) do
-                    if calcDistance(coordX, coordY, uw[1], uw[2], true) < 0x40 then
+                    if calcDistance(coordX, coordY, uw[1], uw[2]) < 0x40 then
                         if #uw > 4 and OBJ_POOL_BONK:getState() > 0 then
                             return uw[5]
                         elseif #uw > 3 and OBJ_POOL_CAVEPOT:getState() > 0 then
@@ -622,55 +622,74 @@ function updateCoordinateFromMemorySegment(segment)
 
     local function updateCoords(x, y, transition)
         local clock = os.clock()
-        STATUS.LAST_COORD = {clock, clock - STATUS.LAST_COORD[1]}
-        CACHE.COORDS.CURRENT.X = x
-        CACHE.COORDS.CURRENT.Y = y
-        local s = 0
-        if not CACHE.INDOOR then
-            s = ((y >> 9) << 3) + (x >> 9)
-            if DATA.OverworldSlotAliases[s] ~= nil then
-                s = DATA.OverworldSlotAliases[s]
-            end
-            if s == CACHE.OWAREA & 0x3f and CACHE.OWAREA ~= 0xff then
-                s = CACHE.OWAREA
-            else
-                if transition then
-                    printLog(string.format("OW MISMATCH: 0x%2X: 0x%2X: ", s, CACHE.OWAREA))
-                end
-                s = 0xffff
-            end
+        local mod = 0
+        if segment then
+            mod = segment:ReadUInt8(0x7e0010)
         else
+            mod = AutoTracker:ReadU8(0x7e0010, 0)
+        end
+        local s = 0xffff
+        if not CACHE.INDOOR then
+            if mod == 0x11 then
+                -- gets cached y position before it was modified by hole drop
+                if segment then
+                    y = segment:ReadUInt16(0x7e0051)
+                else
+                    y = AutoTracker:ReadU16(0x7e0051, 0)
+                end
+            end
+            if mod == 0x09 or mod == 0x10 or mod == 0x11 then
+                if segment then
+                    local submod = segment:ReadUInt8(0x7e0011)
+                else
+                    local submod = AutoTracker:ReadU8(0x7e0011, 0)
+                end
+                if submod ~= 0x07 then
+                    s = ((y >> 9) << 3) + (x >> 9)
+                    if DATA.OverworldSlotAliases[s] ~= nil then
+                        s = DATA.OverworldSlotAliases[s]
+                    end
+                    if s == CACHE.OWAREA & 0x3f and CACHE.OWAREA ~= 0xff then
+                        s = CACHE.OWAREA
+                    else
+                        if transition then
+                            printLog(string.format("OW MISMATCH: 0x%2X: 0x%2X: %s 0x%2X", s, CACHE.OWAREA, transition and "trans" or "no", CACHE.MODULE))
+                        end
+                        s = 0xffff
+                    end
+                end
+            end
+        elseif mod == 0x07 then
             s = ((y >> 9) << 4) + (x >> 9)
             CACHE.COORDS.CURRENT.S = s
             if s ~= CACHE.ROOM then
-                if s + 0x10 == CACHE.ROOM and (CACHE.ROOM == 0x58 or CACHE.ROOM == 0x56 or CACHE.ROOM == 0x67) then
-                    s = CACHE.ROOM
-                else
+                if transition then
+                    printLog(string.format("LINK ALTITUDE?: 0x%4X", z))
+                end
+                if s ~= CACHE.ROOM then
                     if transition then
-                        printLog(string.format("ROOM MISMATCH: 0x%4X: 0x%4X: ", s, CACHE.ROOM))
+                        printLog(string.format("ROOM MISMATCH: 0x%4X: 0x%4X: %s 0x%2X", s, CACHE.ROOM, transition and "trans" or "no", CACHE.MODULE))
                     end
                     s = 0xffff
                 end
             end
         end
-        CACHE.COORDS.CURRENT.S = s
-        CACHE.COORDS.CURRENT.D = CACHE.DUNGEON
+        if s ~= 0xffff then
+            STATUS.LAST_COORD = {clock, clock - STATUS.LAST_COORD[1]}
+            CACHE.COORDS.CURRENT.X = x
+            CACHE.COORDS.CURRENT.Y = y
+            CACHE.COORDS.CURRENT.S = s
+            CACHE.COORDS.CURRENT.D = CACHE.DUNGEON
+        end
     end
 
     local function waitForBetterState()
-        if STATUS.COORD_NOT_READY then
-            resetCoords()
-            STATUS.COORD_NOT_READY = false
-            return nil
-        end
         STATUS.COORD_NOT_READY = true
-        local clock = os.clock()
-        STATUS.LAST_COORD = {clock, clock - STATUS.LAST_COORD[1]}
     end
 
         -- TODO: This process doesn't quite work for autotracking DR and OWR connections
     if prevIndoor ~= CACHE.INDOOR or STATUS.COORD_NOT_READY then
-        if xCoord == CACHE.COORDS.CURRENT.X and y == CACHE.COORDS.CURRENT.Y then
+        if xCoord == CACHE.COORDS.CURRENT.X and yCoord == CACHE.COORDS.CURRENT.Y then
             waitForBetterState()
             return false
         end
@@ -685,14 +704,32 @@ function updateCoordinateFromMemorySegment(segment)
             if DATA.OverworldSlotAliases[sId] ~= nil then
                 sId = DATA.OverworldSlotAliases[sId]
             end
-            if mod ~= 0x09 or CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
+            if (mod ~= 0x09 and mod ~= 0x10) or CACHE.OWAREA > 0x90 or sId ~= CACHE.OWAREA & 0x3f then
                 waitForBetterState()
                 return false
             end
             sId = CACHE.OWAREA
         else
+            if mod == 0x11 then
+                if segment then
+                    local submod = segment:ReadUInt8(0x7e0011)
+                else
+                    local submod = AutoTracker:ReadU8(0x7e0011, 0)
+                end
+                if submod == 0x07 then
+                    -- gets cached y position before it was modified by hole drop
+                    if segment then
+                        yCoord = segment:ReadUInt16(0x7e0051)
+                    else
+                        yCoord = AutoTracker:ReadU16(0x7e0051, 0)
+                    end
+                else
+                    waitForBetterState()
+                    return false
+                end
+            end
             sId = ((yCoord >> 9) << 4) + (xCoord >> 9)
-            if mod ~= 0x07 or sId ~= CACHE.ROOM then
+            if (mod ~= 0x07 and mod ~= 0x11) or sId ~= CACHE.ROOM then
                 waitForBetterState()
                 return false
             end
@@ -700,6 +737,7 @@ function updateCoordinateFromMemorySegment(segment)
                 updateDungeonIdFromMemorySegment(nil)
             end
         end
+        STATUS.COORD_NOT_READY = false
 
         updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
 
@@ -709,9 +747,8 @@ function updateCoordinateFromMemorySegment(segment)
             CACHE.COORDS.PREVIOUS.S = CACHE.COORDS.CURRENT.S
             CACHE.COORDS.PREVIOUS.D = CACHE.COORDS.CURRENT.D
             
-            updateCoords(xCoord, yCoord, true)
-            STATUS.COORD_NOT_READY = false
             printLog("----------------------------------")
+            updateCoords(xCoord, yCoord, true)
             printLog(string.format("Last Update: %f @ %f", STATUS.LAST_COORD[2], os.clock()))
             printLog(string.format("Coord Change: 0x%4X: %4Xx%4X @ 0x%2X | 0x%2X: %4Xx%4X", CACHE.COORDS.PREVIOUS.S, CACHE.COORDS.PREVIOUS.X, CACHE.COORDS.PREVIOUS.Y, CACHE.DUNGEON, CACHE.COORDS.CURRENT.S, CACHE.COORDS.CURRENT.X, CACHE.COORDS.CURRENT.Y))
             

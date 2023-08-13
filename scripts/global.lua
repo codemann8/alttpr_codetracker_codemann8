@@ -886,6 +886,34 @@ function shouldShowRoom(roomId, xCoord, yCoord)
     return true
 end
 
+function sleep(ms)
+    local time = os.clock()
+    local newtime = os.clock()
+    while (newtime - time) * 1000 < ms do
+        newtime = os.clock()
+    end
+end
+
+function resetCoords(keepCurrent)
+    if not keepCurrent then
+        CACHE.COORDS.CURRENT = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }
+    end
+    CACHE.COORDS.PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }
+end
+
+function calcDistance(linkX, linkY, pointX, pointY, use_skewed_distance)
+    local xCoefficient = 1
+    local yCoefficient = 1
+    if use_skewed_distance then
+        xCoefficient = xCoefficient * 1.5 -- devalue X coordinate deviation
+        yCoefficient = yCoefficient / 1.5
+        if linkY < pointY - 0x08 then
+            yCoefficient = 3 -- devalue when link is above the entrance
+        end
+    end
+    return math.sqrt((((xCoefficient * math.abs(linkX - pointX)) ^ 2)) + ((yCoefficient * math.abs(linkY - pointY)) ^ 2))
+end
+
 function JObjectToLuaTable(obj)
     local ret = {}
     if obj:GetType():ToString() == "Newtonsoft.Json.Linq.JObject" then

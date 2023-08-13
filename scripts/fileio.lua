@@ -56,6 +56,7 @@ function updateDungeonImage(dungeonId)
                     end
                 end
             end
+        end
     end
 end
 
