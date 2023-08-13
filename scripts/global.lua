@@ -344,7 +344,7 @@ function initialize()
                 local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
                 if item then
                     if item:getProperty("section") == nil then
-                        item:setProperty("section", Tracker:FindObjectForCode(item:getProperty("sectionName")))
+                        item:setProperty("section", findObjectForCode(item:getProperty("sectionName")))
                     end
                 end
             end
@@ -363,6 +363,17 @@ function initialize()
 
     updateLayout()
     initMissingSections()
+end
+
+function findObjectForCode(code)
+    if code:find("^@") then
+        local loc = Tracker:FindObjectForCode(code)
+        if not loc then
+            loc = INSTANCE.MISSING_SECTIONS[code]
+        end
+        return loc
+    end
+    return Tracker:FindObjectForCode(code)
 end
 
 function updateChests()
@@ -712,8 +723,8 @@ function updateGhost(section, clearSection, markHostedItem)
     local target, hiddenTarget
     if not CACHE.CaptureBadges[section] then
         local tempSection = section:gsub("/", " Ghost/")
-        target = Tracker:FindObjectForCode(section)
-        hiddenTarget = Tracker:FindObjectForCode(tempSection)
+        target = findObjectForCode(section)
+        hiddenTarget = findObjectForCode(tempSection)
         CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
     else
         target = CACHE.CaptureBadges[section][1]
@@ -764,8 +775,8 @@ function removeGhost(section)
     local target, hiddenTarget
     if not CACHE.CaptureBadges[section] then
         local tempSection = section:gsub("/", " Ghost/")
-        target = Tracker:FindObjectForCode(section)
-        hiddenTarget = Tracker:FindObjectForCode(tempSection)
+        target = findObjectForCode(section)
+        hiddenTarget = findObjectForCode(tempSection)
         CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
     else
         target = CACHE.CaptureBadges[section][1]

@@ -805,7 +805,7 @@ function updateCoordinateFromMemorySegment(segment)
                 end
 
                 if owEntrance ~= nil and uwRoom ~= nil then
-                    section = Tracker:FindObjectForCode(owEntrance)
+                    section = findObjectForCode(owEntrance)
                     if not ((section.CapturedItem and section.CapturedItem.Name ~= "Unknown Dark Connector") or section.AvailableChestCount == 0) then
                         local skipIcon = false
                         if owEntrance == "@Tavern Back/Entrance" then
@@ -1141,7 +1141,7 @@ function updateOverworldFromMemorySegment(segment)
     end
 
     for name, value in pairs(INSTANCE.MEMORY.Overworld) do
-        local location = Tracker:FindObjectForCode(name)
+        local location = findObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
                 location.AvailableChestCount = location.ChestCount - numberOfSetBits(segment:ReadUInt8(0x7ef280 + value[1]) & value[2])
@@ -1217,7 +1217,7 @@ function updateShopsFromMemorySegment(segment)
     offset = INSTANCE.NEW_SRAM_SYSTEM and 0x71b6 or 0
 
     for name, value in pairs(INSTANCE.MEMORY.Shops) do
-        local location = Tracker:FindObjectForCode(name)
+        local location = findObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
                 local clearedCount = 0
@@ -1269,7 +1269,7 @@ function updateNPCFromMemorySegment(segment)
     CACHE.NPCData = segment:ReadUInt16(0x7ef410)
 
     for name, value in pairs(INSTANCE.MEMORY.Npc) do
-        local location = Tracker:FindObjectForCode(name)
+        local location = findObjectForCode(name)
         if location then
             if not location.Owner.ModifiedByUser then -- Do not auto-track this the user has manually modified it
                 local clearedCount = (CACHE.NPCData & value[1]) ~= 0 and 1 or 0
@@ -1831,13 +1831,13 @@ function updateRoomsFromMemorySegment(segment)
 
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
-        local item = Tracker:FindObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1])
         if item and OBJ_GLITCHMODE:getState() < 3 and not INSTANCE.NEW_SRAM_SYSTEM then
             item.Active = bossflag > 0
         end
 
         if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
-            item = Tracker:FindObjectForCode(INSTANCE.MEMORY.BossLocations[i])
+            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i])
             if item then
                 item.AvailableChestCount = bossflag == 0 and 1 or 0
                 
@@ -2153,7 +2153,7 @@ function updateDungeonsCompletedFromMemorySegment(segment)
 
     CACHE.DungeonsCompleted = segment:ReadUInt16(0x7ef472)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
-        local item = Tracker:FindObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1])
         if item then
             item.Active = CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0
         end

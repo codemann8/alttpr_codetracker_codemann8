@@ -55,7 +55,7 @@ function EntranceShuffleMode:postUpdate()
 
     --Change Dropdown Capture Layouts
     for i = 1, #DATA.CaptureBadgeDropdowns do
-        local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeDropdowns[i])
+        local drop = findObjectForCode(DATA.CaptureBadgeDropdowns[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
         else
@@ -64,7 +64,7 @@ function EntranceShuffleMode:postUpdate()
     end
     
     for i = 1, #DATA.CaptureBadgeSWDropdowns do
-        local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeSWDropdowns[i])
+        local drop = findObjectForCode(DATA.CaptureBadgeSWDropdowns[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
         else
@@ -74,7 +74,7 @@ function EntranceShuffleMode:postUpdate()
 
     --Change Entrance Capture Layouts
     for i = 1, #DATA.CaptureBadgeEntrances do
-        local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeEntrances[i])
+        local drop = findObjectForCode(DATA.CaptureBadgeEntrances[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then
@@ -85,7 +85,7 @@ function EntranceShuffleMode:postUpdate()
     end
 
     for i = 1, #DATA.CaptureBadgeDungeons do
-        local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeDungeons[i])
+        local drop = findObjectForCode(DATA.CaptureBadgeDungeons[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then
@@ -96,7 +96,7 @@ function EntranceShuffleMode:postUpdate()
     end
 
     for i = 1, #DATA.CaptureBadgeConnectors do
-        local drop = Tracker:FindObjectForCode(DATA.CaptureBadgeConnectors[i])
+        local drop = findObjectForCode(DATA.CaptureBadgeConnectors[i])
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then

@@ -321,7 +321,7 @@ function restoreBackup()
 
     if BACKUP.CLEARED_LOCATIONS ~= nil then
         for i, sectionName in pairs(BACKUP.CLEARED_LOCATIONS) do
-            local section = Tracker:FindObjectForCode(sectionName)
+            local section = findObjectForCode(sectionName)
             section.AvailableChestCount = 0
             section.Owner.ModifiedByUser = true
         end

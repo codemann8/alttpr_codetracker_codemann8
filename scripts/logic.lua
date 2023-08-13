@@ -38,7 +38,7 @@ function canClearAgaTowerBarrier()
 end
 
 function canDamageBoss(locationRef)
-    local boss = Tracker:FindObjectForCode(locationRef)
+    local boss = findObjectForCode(locationRef)
     if boss and boss.CapturedItem then
         boss = boss.CapturedItem.Name
     else
@@ -48,21 +48,21 @@ function canDamageBoss(locationRef)
         boss = "Armos"
     end
     if locationRef == "@Thieves Town/Blind" and boss == "Blind" then
-        return 1, Tracker:FindObjectForCode("@Bosses/Blind At Home").AccessibilityLevel
+        return 1, findObjectForCode("@Bosses/Blind At Home").AccessibilityLevel
     else
-        return 1, Tracker:FindObjectForCode("@Bosses/" .. boss).AccessibilityLevel
+        return 1, findObjectForCode("@Bosses/" .. boss).AccessibilityLevel
     end
 end
 
 function canEngageTTBoss()
-    local boss = Tracker:FindObjectForCode("@Thieves Town/Blind")
+    local boss = findObjectForCode("@Thieves Town/Blind")
     if boss and boss.CapturedItem then
         boss = boss.CapturedItem.Name
     else
         boss = "Blind"
     end
     if boss ~= "Blind" then
-        return 1, Tracker:FindObjectForCode("@Thieves Town/Hallway Key").AccessibilityLevel
+        return 1, findObjectForCode("@Thieves Town/Hallway Key").AccessibilityLevel
     else
         return 1, AccessibilityLevel.None
     end
