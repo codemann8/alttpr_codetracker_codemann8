@@ -34,7 +34,7 @@ end
 function updateDungeonImage(dungeonId, owId, worldFlag)
     if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
         local dungeonImage = ""
-        if dungeonId < 0xff then
+        if dungeonId ~= nil and dungeonId < 0xff then
             dungeonImage = (CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and "er-" or "") .. DATA.DungeonIdMap[dungeonId]
         elseif owId < 0xff then
             --Update Dungeon Image
