@@ -76,8 +76,9 @@ function updateLocationFromMemorySegment(segment)
             printLog(string.format("Update Location LAG: %f", os.clock() - clock), 1)
         end
         
+        updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA, CACHE.WORLD)
+        
         if CACHE.MODULE ~= 0x06 and CACHE.MODULE ~= 0x08 and owChanged ~= uwChanged then
-            updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
             saveBackup()
         end
     end
