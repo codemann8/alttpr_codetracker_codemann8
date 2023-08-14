@@ -31,31 +31,18 @@ function itemFlippedOn(item)
     end
 end
 
-function updateDungeonImage(dungeonId)
+function updateDungeonImage(dungeonId, owId, worldFlag)
     if CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE then
+        local dungeonImage = ""
         if dungeonId < 0xff then
-            if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                sendExternalMessage("dungeon", "er-" .. DATA.DungeonIdMap[dungeonId])
-            else
-                sendExternalMessage("dungeon", DATA.DungeonIdMap[dungeonId])
-            end
-        else
-            if CACHE.OWAREA < 0xff then
-                --Update Dungeon Image
-                if CACHE.WORLD == 0x40 then
-                    if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                        sendExternalMessage("dungeon", "er-dw")
-                    else
-                        sendExternalMessage("dungeon", "dw")
-                    end
-                else
-                    if CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 then
-                        sendExternalMessage("dungeon", "er-lw")
-                    else
-                        sendExternalMessage("dungeon", "lw")
-                    end
-                end
-            end
+            dungeonImage = (CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and "er-" or "") .. DATA.DungeonIdMap[dungeonId]
+        elseif owId < 0xff then
+            --Update Dungeon Image
+            dungeonImage = (CONFIG.BROADCAST_ALTERNATE_LAYOUT == 2 and "er-" or "") .. (worldFlag > 0 and "dw" or "lw")
+        end
+        if dungeonImage ~= "" and dungeonImage ~= CACHE.DungeonImage then
+            CACHE.DungeonImage = dungeonImage
+            sendExternalMessage("dungeon", CACHE.DungeonImage)
         end
     end
 end

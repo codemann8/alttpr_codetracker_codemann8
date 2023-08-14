@@ -68,6 +68,7 @@ function updateLocationFromMemorySegment(segment)
         updateCoordinateFromMemorySegment(segment)
         
         if CACHE.MODULE ~= 0x06 and CACHE.MODULE ~= 0x08 and owChanged ~= uwChanged then
+            updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
             saveBackup()
         end
     end
@@ -260,8 +261,6 @@ function updateWorldFlagFromMemorySegment(segment)
                 OWAREA = 0xff
             end
         end
-
-        updateDungeonImage(0xff, OWAREA)
 
         if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
             print("CURRENT WORLD:", CACHE.WORLD, string.format("0x%2X", CACHE.WORLD))
@@ -738,8 +737,6 @@ function updateCoordinateFromMemorySegment(segment)
             end
         end
         STATUS.COORD_NOT_READY = false
-
-        updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
 
         if sId ~= CACHE.COORDS.CURRENT.S or xCoord & 0xfe00 ~= CACHE.COORDS.CURRENT.X & 0xfe00 or yCoord & 0xfe00 ~= CACHE.COORDS.CURRENT.Y & 0xfe00 then
             CACHE.COORDS.PREVIOUS.X = CACHE.COORDS.CURRENT.X
