@@ -65,7 +65,7 @@ function tracker_on_pack_ready()
         print("Package ready at: " .. os.clock() - STATUS.START_CLOCK)
     end
     deleteOverride("", "autoerlog.txt")
-    printLog("**********************************")
-    printLog("**********************************")
-    printLog("**********************************")
+    printLog("**********************************", 1)
+    printLog("**********************************", 1)
+    printLog("**********************************", 1)
 end

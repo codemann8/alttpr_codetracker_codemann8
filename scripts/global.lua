@@ -9,6 +9,10 @@ STATUS.LAST_COORD = {os.clock(), 0}
 STATUS.LAST_BACKUP = os.clock() + 300
 STATUS.GameStarted = 0
 
+METRICS = {}
+METRICS.GETSTATE = {}
+METRICS.SEGMENTREAD = {}
+
 CONFIG.LAYOUT_SHOW_MAP_GRIDLINES = false
 
 CACHE = {}
@@ -18,6 +22,7 @@ CACHE.DUNGEON = -1
 CACHE.ROOM = -1
 CACHE.WORLD = 0
 CACHE.CollectionRate = 0
+CACHE.DungeonImage = ""
 
 INSTANCE = {}
 INSTANCE.NEW_KEY_SYSTEM = false
@@ -923,6 +928,22 @@ function calcDistance(linkX, linkY, pointX, pointY, use_skewed_distance)
         end
     end
     return math.sqrt((((xCoefficient * math.abs(linkX - pointX)) ^ 2)) + ((yCoefficient * math.abs(linkY - pointY)) ^ 2))
+end
+
+function doMetric(metric, label, clock)
+    local newclock = os.clock()
+    if metric[1] == nil then
+        metric[1] = newclock
+        metric[2] = 1
+        metric[3] = newclock - clock
+    else
+        metric[3] = ((metric[2] * metric[3]) + (newclock - clock)) / (metric[2] + 1)
+        metric[2] = metric[2] + 1
+        if newclock - metric[1] > 300 then
+            printLog(string.format("METRIC %s: COUNT %f | AVG %f", label, metric[2], metric[3]), 1)
+            metric[1] = nil
+        end
+    end
 end
 
 function JObjectToLuaTable(obj)

@@ -51,21 +51,30 @@ function updateTitleFromMemorySegment(segment)
 end
 
 function updateLocationFromMemorySegment(segment)
+    local clock = os.clock()
     updateModuleFromMemorySegment(segment)
 
     if isInGameFromModule() and segment:ReadUInt8(0x7e0010) ~= 0x0e then
         -- Overworld Id
         local owChanged = updateOverworldIdFromMemorySegment(segment)
 
+        if os.clock() - clock > 0.005 then
+            printLog(string.format("Update LocationOW LAG: %f", os.clock() - clock), 1)
         end
 
         -- Room Id
         local uwChanged = updateRoomIdFromMemorySegment(segment)
 
+        if os.clock() - clock > 0.005 then
+            printLog(string.format("Update LocationRoom LAG: %f", os.clock() - clock), 1)
         end
 
         -- Coordinates
         updateCoordinateFromMemorySegment(segment)
+
+        if os.clock() - clock > 0.010 then
+            printLog(string.format("Update Location LAG: %f", os.clock() - clock), 1)
+        end
         
         if CACHE.MODULE ~= 0x06 and CACHE.MODULE ~= 0x08 and owChanged ~= uwChanged then
             updateDungeonImage(CACHE.DUNGEON, CACHE.OWAREA)
@@ -75,6 +84,7 @@ function updateLocationFromMemorySegment(segment)
 end
 
 function updateDungeonWorksheetFromMemorySegment(segment)
+    local clock = os.clock()
     if not isInGame() then
         return false
     end
@@ -111,9 +121,14 @@ function updateDungeonWorksheetFromMemorySegment(segment)
             end
         end
     end
+    
+    if os.clock() - clock > 0.010 then
+        printLog(string.format("Update Dungeon Worksheet LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 function updateRandoDataFromMemorySegment(segment)
+    local clock = os.clock()
     if not isInGame() then
         return false
     end
@@ -131,6 +146,10 @@ function updateRandoDataFromMemorySegment(segment)
     if CACHE.CollectionRate & 0xff ~= segment:ReadUInt8(0x7ef423) then
         updateCollectionFromMemorySegment(segment)
     end
+    
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update Rando LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 function updateDungeonAdditionalFromMemorySegment(segment)
@@ -146,6 +165,7 @@ function updateDungeonAdditionalFromMemorySegment(segment)
 end
 
 function updateMiscFromMemorySegment(segment)
+    local clock = os.clock()
     if not isInGame() then
         return false
     end
@@ -183,6 +203,10 @@ function updateMiscFromMemorySegment(segment)
     if CACHE.HealthData ~= data then
         CACHE.HealthData = data
         updateHealthFromMemorySegment(segment)
+    end
+    
+    if os.clock() - clock > 0.010 then
+        printLog(string.format("Update Misc LAG: %f", os.clock() - clock), 1)
     end
 end
     
@@ -493,13 +517,13 @@ function updateCoordinateFromMemorySegment(segment)
                 end
             end
         else
-            printLog(string.format("MISSING OW SCREEN: 0x%2X: ", owid))
+            printLog(string.format("MISSING OW SCREEN: 0x%2X: ", owid), 1)
         end
         if closestEntrance ~= nil and minDistance < 60 then
             entrance = closestEntrance
         end
         if entrance == nil then
-            printLog(string.format("NO ENTRANCE: %f 0x%2X: %4Xx%4X", minDistance, owid, coordX, coordY))
+            printLog(string.format("NO ENTRANCE: %f 0x%2X: %4Xx%4X", minDistance, owid, coordX, coordY), 1)
         end
         return entrance, minDistance
     end
@@ -535,16 +559,16 @@ function updateCoordinateFromMemorySegment(segment)
                     end
                 end
                 if dungeonId < 0xff then
-                    printLog("generic dungeon lobby????")
+                    printLog("generic dungeon lobby????", 1)
                     return ""
                 end
-                printLog(string.format("MULTIPLE ROOM: 0x%4X: %4Xx%4X", roomId, coordX, coordY))
+                printLog(string.format("MULTIPLE ROOM: 0x%4X: %4Xx%4X", roomId, coordX, coordY), 1)
             end
         elseif dungeonId < 0xff then
-            printLog("generic dungeon lobby")
+            printLog("generic dungeon lobby", 1)
             return ""
         else
-            printLog(string.format("MISSING ROOM: 0x%4X: ", roomId))
+            printLog(string.format("MISSING ROOM: 0x%4X: ", roomId), 1)
         end
         return nil
     end
@@ -555,11 +579,11 @@ function updateCoordinateFromMemorySegment(segment)
             local dungeonPrefix = DATA.DungeonIdMap[dungeonId]
             local data = DATA.DungeonData[dungeonPrefix]
             if room:find("^cap_drop_") or type(data[10]) == "string" then
-                print("drop case")
+                printLog("drop case", 1)
                 return room
             end
             if INSTANCE.MULTIDUNGEONCAPTURES[roomId] ~= nil then
-                printLog("prev used case")
+                printLog("prev used case", 1)
                 return INSTANCE.MULTIDUNGEONCAPTURES[roomId]
             end
             if OBJ_ENTRANCE:getState() < 4 then
@@ -567,11 +591,11 @@ function updateCoordinateFromMemorySegment(segment)
                     room = "cap_sw"
                     if entrance:find("Skull Woods") and entrance ~= "@Skull Woods Back/Entrance" then
                         suppressLog = true
-                        printLog("SW METRO AREA - ICON SKIPPED")
+                        printLog("SW METRO AREA - ICON SKIPPED", 1)
                         return nil
                     end
                 elseif dungeonPrefix == "hc" then
-                    printLog(string.format("hc case %s %s 0x%4X", entrance, room, roomId))
+                    printLog(string.format("hc case %s %s 0x%4X", entrance, room, roomId), 1)
                     if DATA.DropdownCouples[entrance] ~= nil or entrance:find("Dropdown") then
                         return "cap_drop_sanc"
                     end
@@ -652,7 +676,7 @@ function updateCoordinateFromMemorySegment(segment)
                         s = CACHE.OWAREA
                     else
                         if transition then
-                            printLog(string.format("OW MISMATCH: 0x%2X: 0x%2X: %s 0x%2X", s, CACHE.OWAREA, transition and "trans" or "no", CACHE.MODULE))
+                            printLog(string.format("OW MISMATCH: 0x%2X: 0x%2X: 0x%2X", s, CACHE.OWAREA, CACHE.MODULE), 1)
                         end
                         s = 0xffff
                     end
@@ -662,12 +686,9 @@ function updateCoordinateFromMemorySegment(segment)
             s = ((y >> 9) << 4) + (x >> 9)
             CACHE.COORDS.CURRENT.S = s
             if s ~= CACHE.ROOM then
-                if transition then
-                    printLog(string.format("LINK ALTITUDE?: 0x%4X", z))
-                end
                 if s ~= CACHE.ROOM then
                     if transition then
-                        printLog(string.format("ROOM MISMATCH: 0x%4X: 0x%4X: %s 0x%2X", s, CACHE.ROOM, transition and "trans" or "no", CACHE.MODULE))
+                        printLog(string.format("ROOM MISMATCH: 0x%4X: 0x%4X: 0x%2X", s, CACHE.ROOM, CACHE.MODULE), 1)
                     end
                     s = 0xffff
                 end
@@ -744,23 +765,23 @@ function updateCoordinateFromMemorySegment(segment)
             CACHE.COORDS.PREVIOUS.S = CACHE.COORDS.CURRENT.S
             CACHE.COORDS.PREVIOUS.D = CACHE.COORDS.CURRENT.D
             
-            printLog("----------------------------------")
+            printLog("----------------------------------", 1)
             updateCoords(xCoord, yCoord, true)
-            printLog(string.format("Last Update: %f @ %f", STATUS.LAST_COORD[2], os.clock()))
-            printLog(string.format("Coord Change: 0x%4X: %4Xx%4X @ 0x%2X | 0x%2X: %4Xx%4X", CACHE.COORDS.PREVIOUS.S, CACHE.COORDS.PREVIOUS.X, CACHE.COORDS.PREVIOUS.Y, CACHE.DUNGEON, CACHE.COORDS.CURRENT.S, CACHE.COORDS.CURRENT.X, CACHE.COORDS.CURRENT.Y))
+            printLog(string.format("Last Update: %f @ %f", STATUS.LAST_COORD[2], os.clock()), 1)
+            printLog(string.format("Coord Change: 0x%4X: %4Xx%4X @ 0x%2X | 0x%2X: %4Xx%4X", CACHE.COORDS.PREVIOUS.S, CACHE.COORDS.PREVIOUS.X, CACHE.COORDS.PREVIOUS.Y, CACHE.DUNGEON, CACHE.COORDS.CURRENT.S, CACHE.COORDS.CURRENT.X, CACHE.COORDS.CURRENT.Y), 1)
             
             if CACHE.COORDS.PREVIOUS.S ~= 0xffff and CACHE.COORDS.CURRENT.S ~= 0xffff and STATUS.LAST_COORD[2] < 4.0 then
                 local function findEntranceRoomPair(owCoord, uwCoord)
                     local ent, dist = findClosestEntrance(owCoord.S, owCoord.X, owCoord.Y)
                     local room = nil
                     if ent ~= nil then
-                        printLog(string.format("Entrance: %s %f", ent, dist))
+                        printLog(string.format("Entrance: %s %f", ent, dist), 1)
                         room = findRoom(uwCoord.D, uwCoord.S, uwCoord.X, uwCoord.Y)
                         if room ~= nil then
-                            printLog(string.format("Room: %s", room))
+                            printLog(string.format("Room: %s", room), 1)
                             local newroom = adjustRoom(uwCoord.D, uwCoord.S, room, ent)
                             if room ~= newroom then
-                                printLog(string.format("Adjusted Room: %s", newroom == "" and "(blank)" or newroom))
+                                printLog(string.format("Adjusted Room: %s", newroom == "" and "(blank)" or newroom), 1)
                             end
                             room = newroom
                         end
@@ -786,7 +807,7 @@ function updateCoordinateFromMemorySegment(segment)
                             owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
                         else
                             suppressLog = true
-                            printLog("BOSS DEFEATED - ICON SKIPPED")
+                            printLog("BOSS DEFEATED - ICON SKIPPED", 1)
                         end
                     else
                         --TODO: this else case isnt necessary if there is no print statement down below
@@ -881,6 +902,7 @@ DATA.MEMORY.Items = {
 }
 
 function updateItemsFromMemorySegment(segment)
+    local clock = os.clock()
     if not isInGame() then
         return false
     end
@@ -944,6 +966,10 @@ function updateItemsFromMemorySegment(segment)
         else
             print("Couldn't find item:", name)
         end
+    end
+    
+    if os.clock() - clock > 0.010 then
+        printLog(string.format("Update Items LAG: %f", os.clock() - clock), 1)
     end
 end
 
@@ -1129,6 +1155,7 @@ DATA.MEMORY.OverworldItems = {
 }
 
 function updateOverworldFromMemorySegment(segment)
+    local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
         return false
     end
@@ -1186,6 +1213,10 @@ function updateOverworldFromMemorySegment(segment)
             print("Couldn't find overworld:", name)
         end
     end
+    
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update OW LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 DATA.MEMORY.Shops = {
@@ -1203,6 +1234,7 @@ DATA.MEMORY.Shops = {
 }
 
 function updateShopsFromMemorySegment(segment)
+    local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
         return false
     end
@@ -1235,6 +1267,10 @@ function updateShopsFromMemorySegment(segment)
         else
             print("Couldn't find shop:", name)
         end
+    end
+    
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update Shops LAG: %f", os.clock() - clock), 1)
     end
 end
 
@@ -1796,6 +1832,7 @@ DATA.MEMORY.DungeonFlags = {
 }
 
 function updateRoomsFromMemorySegment(segment)
+    local clock = os.clock()
     if not isInGame() then
         return false
     end
@@ -1942,6 +1979,10 @@ function updateRoomsFromMemorySegment(segment)
             i = i + 1
         end
     end
+    
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update UW LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 DATA.MEMORY.NewDropData = {
@@ -1962,6 +2003,7 @@ DATA.MEMORY.NewDropData = {
 }
 
 function updateRoomEnemiesFromMemorySegment(segment)
+    local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or not INSTANCE.NEW_POTDROP_SYSTEM or not isInGame() then
         return false
     end
@@ -1997,9 +2039,14 @@ function updateRoomEnemiesFromMemorySegment(segment)
             updateChestCountFromDungeon(nil, DATA.DungeonIdMap[CACHE.DUNGEON], nil)
         end
     end
+    
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update Drops LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 function updateRoomPotsFromMemorySegment(segment)
+    local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID == "vanilla" or not INSTANCE.NEW_POTDROP_SYSTEM or not isInGame() then
         return false
     end
@@ -2058,6 +2105,9 @@ function updateRoomPotsFromMemorySegment(segment)
         end
     end
     
+    if os.clock() - clock > 0.005 then
+        printLog(string.format("Update Pots LAG: %f", os.clock() - clock), 1)
+    end
 end
 
 function updateDungeonItemsFromMemorySegment(segment)

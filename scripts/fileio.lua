@@ -469,21 +469,35 @@ function deleteOverride(path, filename)
     end
 end
 
-function printLog(text)
+function printLog(text, action)
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print(text)
     end
     
-    local fullDir, packRoot = getFullDir()
-    local written = false
-    if fullDir ~= nil then
-        if dirExists(fullDir .. "user_overrides\\" .. packRoot) then
-            local file = io.open(fullDir .. "user_overrides\\" .. packRoot .. "autoerlog.txt", "a")
-            if file then
-                io.output(file)
-                io.write(text .. "\n")
-                io.close(file)
-                return true
+    if action == 1 then
+        if CACHE.PRINTLOG == nil then
+            CACHE.PRINTLOG = {}
+            --CACHE.PRINTLOGSIZE = 0
+        end
+        table.insert(CACHE.PRINTLOG, text)
+    else
+        local fullDir, packRoot = getFullDir()
+        local written = false
+        if fullDir ~= nil then
+            if dirExists(fullDir .. "user_overrides\\" .. packRoot) then
+                local file = io.open(fullDir .. "user_overrides\\" .. packRoot .. "autoerlog.txt", "a")
+                if file then
+                    io.output(file)
+                    if action == 2 then
+                        for i, t in ipairs(CACHE.PRINTLOG) do
+                            io.write(t .. "\n")
+                        end
+                    else
+                        io.write(text .. "\n")
+                    end
+                    io.close(file)
+                    return true
+                end
             end
         end
     end

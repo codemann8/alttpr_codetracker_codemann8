@@ -69,10 +69,13 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
             local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
             local dungeonItems = 0
+            local clock = os.clock()
 
             if map.Active and OBJ_KEYMAP:getState() == 0 then
                 dungeonItems = dungeonItems + 1
             end
+
+            doMetric(METRICS.GETSTATE, "getState", clock)
 
             if compass.Active and OBJ_KEYCOMPASS:getState() == 0 then
                 dungeonItems = dungeonItems + 1
@@ -93,7 +96,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             end
 
             if segment and OBJ_GLITCHMODE:getState() < 2 then
+                clock = os.clock()
                 local value = segment:ReadUInt8(address)
+                doMetric(METRICS.SEGMENTREAD, "segmentRead", clock)
                 if value > 0 then
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
