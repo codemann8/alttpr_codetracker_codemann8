@@ -2,6 +2,12 @@ function updateTitleFromMemorySegment(segment)
     if Tracker.ActiveVariantUID ~= "vanilla" then
         INSTANCE.VERSION_MAJOR = segment:ReadUInt16(0x701ffc)
         INSTANCE.VERSION_MINOR = segment:ReadUInt16(0x701ffe)
+        if INSTANCE.VERSION_MAJOR == 0xffff then
+            INSTANCE.VERSION_MAJOR = 0
+        end
+        if INSTANCE.VERSION_MINOR == 0xffff then
+            INSTANCE.VERSION_MINOR = 0
+        end
         local value = segment:ReadUInt8(0x702000)
         if value > 0 then
             if string.char(segment:ReadUInt8(0x702001)) == 'R' then
