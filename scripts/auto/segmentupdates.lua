@@ -825,7 +825,9 @@ function updateCoordinateFromMemorySegment(segment)
 
                 if owEntrance ~= nil and uwRoom ~= nil then
                     section = findObjectForCode(owEntrance)
-                    if not (section.CapturedItem or section.AvailableChestCount == 0) or section.CapturedItem.Name == "Unknown Dark Connector" then
+                    darkReplacement = section.CapturedItem and section.CapturedItem.Name == "Unknown Dark Connector"
+                        and (uwRoom == "cap_darkmountain" or uwRoom == "cap_oldman" or uwRoom == "cap_mtncave_back")
+                    if not (section.CapturedItem or section.AvailableChestCount == 0) or darkReplacement then
                         local skipIcon = false
                         if owEntrance == "@Tavern Back/Entrance" then
                             local item = Tracker:FindObjectForCode("tavern_mode")
