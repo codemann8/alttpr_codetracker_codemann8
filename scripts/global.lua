@@ -17,9 +17,9 @@ CONFIG.LAYOUT_SHOW_MAP_GRIDLINES = false
 
 CACHE = {}
 CACHE.MODULE = 0
-CACHE.OWAREA = -1
-CACHE.DUNGEON = -1
-CACHE.ROOM = -1
+CACHE.OWAREA = 0xff
+CACHE.DUNGEON = 0xff
+CACHE.ROOM = 0xffff
 CACHE.WORLD = 0
 CACHE.CollectionRate = 0
 CACHE.DungeonImage = ""
@@ -342,6 +342,7 @@ function initialize()
         updateDyk()
 
         if Tracker.ActiveVariantUID == "full_tracker" then
+            initMissingSections()
             CACHE.CaptureBadges = {}
         
             --Link Dungeon Locations to Chest Items
@@ -367,7 +368,6 @@ function initialize()
     end
 
     updateLayout()
-    initMissingSections()
 end
 
 function findObjectForCode(code)
@@ -429,10 +429,10 @@ function updateChests()
         end
 
         local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState
-        local seenFlags = AutoTracker:ReadU16(0x7ef403, 0)
         if shouldChestCountUp() then
             if item.MaxCount ~= 999 then
                 item.MaxCount = 999
+                local seenFlags = AutoTracker:ReadU16(0x7ef403, 0)
                 updateDungeonTotal(DATA.DungeonList[i], seenFlags)
             end
         else
