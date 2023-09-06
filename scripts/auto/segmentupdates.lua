@@ -316,7 +316,8 @@ function updateOverworldIdFromMemorySegment(segment)
                 CACHE.MODULE == 0x11 or --falling in dropdown entrance
                 CACHE.MODULE == 0x08 or --loading overworld
                 CACHE.MODULE == 0x0b or --special overworld areas
-                CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f)) --transitioning into dungeons
+                CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f or --transitioning into dungeons
+                CACHE.MODULE == 0x13 or CACHE.MODULE == 0x16)) --post-boss defeated
                 or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
             owarea = 0xff
         end
@@ -337,9 +338,9 @@ function updateOverworldIdFromMemorySegment(segment)
 
             --OW Mixed Autotracking
             if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
-                if CACHE.OWAREA == 0 and MODULE ~= 0x09 then
+                if CACHE.OWAREA == 0 and (CACHE.MODULE ~= 0x09 and CACHE.MODULE ~= 0x10) then
                     print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
-                    print("^ Module:", string.format("0x%02x", MODULE), "< REPORT THIS TO CODEMAN ^")
+                    print("^ Module:", string.format("0x%02X", CACHE.MODULE), "< REPORT THIS TO CODEMAN ^")
                 end
                 
                 local swap = findObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
