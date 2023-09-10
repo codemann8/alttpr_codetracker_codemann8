@@ -670,10 +670,7 @@ DATA.RoomLobbyData = {
     [0x011a] = {
         {0x1578, 0x23e6, "cap_hint", "cap_chest"} -- Pod Hint
     },
-    [0x011b] = {
-        {0x1778, 0x23e6, "cap_bombfarm", "cap_chest"}, -- Graveyard
-        {0x1678, 0x23ce, "cap_chest"} -- Cave 45
-    },
+    [0x011b] = "cap_chest", -- Graveyard Ledge/Cave 45
     [0x011c] = {
         {0x1878, 0x23e6, "cap_redbomb"},
         {0x1978, 0x23e6, "cap_chest"} -- C-Shaped House
