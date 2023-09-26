@@ -426,6 +426,11 @@ function updateChests()
                 key.DisplayAsFractionOfMax = false
             end
             key.IgnoreUserInput = false
+            if shouldChestCountUp() and key.MaxCount ~= 999 then
+                local seenKeyFlags = AutoTracker:ReadU16(0x7ef474, 0)
+                key.MaxCount = 999
+                updateKeyTotal(DATA.DungeonList[i], seenKeyFlags)
+            end
         end
 
         local item = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_item").ItemState

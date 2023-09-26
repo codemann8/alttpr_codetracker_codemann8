@@ -97,13 +97,23 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
 
             if segment and OBJ_GLITCHMODE:getState() < 2 then
                 clock = os.clock()
-                local value = segment:ReadUInt8(address)
+                local value = 0
+                if INSTANCE.VERSION_MINOR < 5 then
+                    value = segment:ReadUInt8(address)
+                else
+                    value = segment:ReadUInt16(address)
+                end
                 doMetric(METRICS.SEGMENTREAD, "segmentRead", clock)
                 if value > 0 then
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
                 if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
-                    local otherValue = segment:ReadUInt8(address + 1)
+                    local otherValue = 0
+                    if INSTANCE.VERSION_MINOR < 5 then
+                        otherValue = segment:ReadUInt8(address + 1)
+                    else
+                        otherValue = segment:ReadUInt16(address + 2)
+                    end
                     if value ~= otherValue then
                         value = value + otherValue
                     end
@@ -134,12 +144,22 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                 end
                 item.CollectedCount = value
             elseif OBJ_GLITCHMODE:getState() < 2 and address then
-                local value = AutoTracker:ReadU8(address, 0)
+                local value = 0
+                if INSTANCE.VERSION_MINOR < 5 then
+                    value = segment:ReadUInt8(address)
+                else
+                    value = segment:ReadUInt16(address)
+                end
                 if value > 0 then
                     INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
                 end
                 if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
-                    local otherValue = segment:ReadUInt8(address + 1)
+                    local otherValue = 0
+                    if INSTANCE.VERSION_MINOR < 5 then
+                        otherValue = segment:ReadUInt8(address + 1)
+                    else
+                        otherValue = segment:ReadUInt16(address + 2)
+                    end
                     if value ~= otherValue then
                         value = value + otherValue
                     end
@@ -351,15 +371,29 @@ function updateDungeonTotal(dungeonPrefix, seenFlags)
         local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item").ItemState
         if item.MaxCount == 999 then
             local value = 0
-            if dungeonPrefix == "hc" then
-                value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + 1, 0)
+            if INSTANCE.VERSION_MINOR < 5 then
+                value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4] + (dungeonPrefix == "hc" and 1 or 0), 0)
             else
-                value = AutoTracker:ReadU8(0x7f5410 + DATA.DungeonData[dungeonPrefix][4], 0)
+                value = AutoTracker:ReadU16(0x7f5410 + (DATA.DungeonData[dungeonPrefix][4] + (dungeonPrefix == "hc" and 1 or 0)) * 2, 0)
             end
             item.MaxCount = value
 
             if OBJ_DOORDUNGEON:getState() == DATA.DungeonData[dungeonPrefix][2] then
                 OBJ_DOORCHEST:setState(item.MaxCount)
+            end
+        end
+    end
+end
+
+function updateKeyTotal(dungeonPrefix, seenFlags)
+    if OBJ_DOORSHUFFLE:getState() == 2 and INSTANCE.VERSION_MINOR >= 5 and seenFlags & DATA.DungeonData[dungeonPrefix][3] > 0 then
+        local key = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+        if key.MaxCount == 999 then
+            local value = AutoTracker:ReadU8(0x7f5430 + (DATA.DungeonData[dungeonPrefix][4] + (dungeonPrefix == "hc" and 1 or 0)), 0)
+            key.MaxCount = value
+
+            if OBJ_DOORDUNGEON:getState() == DATA.DungeonData[dungeonPrefix][2] then
+                OBJ_DOORKEY:setState(key.MaxCount)
             end
         end
     end

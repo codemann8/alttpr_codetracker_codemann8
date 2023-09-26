@@ -164,6 +164,10 @@ function updateDungeonAdditionalFromMemorySegment(segment)
         return false
     end
 
+    if INSTANCE.VERSION_MINOR >= 5 and OBJ_RACEMODE:getState() == 0 and CACHE.KeysSeen ~= segment:ReadUInt16(0x7ef474) then
+        updateKeyTotalsFromMemorySegment(segment)
+    end
+
     updateDungeonKeysFromMemorySegment(segment)
 
     if INSTANCE.NEW_SRAM_SYSTEM and CACHE.DungeonsCompleted ~= segment:ReadUInt16(0x7ef472) then
@@ -2204,7 +2208,9 @@ function updateDungeonKeysFromMemorySegment(segment)
             if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and OBJ_RACEMODE:getState() == 0
                     and (CACHE.DUNGEON == 0xff or dungeonPrefix == DATA.DungeonIdMap[CACHE.DUNGEON]) then
                 if shouldChestCountUp() then
-                    if INSTANCE.NEW_SRAM_SYSTEM then
+                    if INSTANCE.VERSION_MINOR >= 5 then
+                        updateChestCountFromDungeon(segment, dungeonPrefix, 0x7ef4b0 + (data[4] * 2))
+                    elseif INSTANCE.NEW_SRAM_SYSTEM then
                         updateChestCountFromDungeon(segment, dungeonPrefix, 0x7ef4c0 + data[4])
                     else
                         updateChestCountFromDungeon(segment, dungeonPrefix, (dungeonPrefix == 'hc' and 0x7ef4c0 or 0x7ef4bf) + data[4])
@@ -2226,6 +2232,19 @@ function updateDungeonTotalsFromMemorySegment(segment)
     CACHE.DungeonsSeen = segment:ReadUInt16(0x7ef403)
     for i, dungeonPrefix in ipairs(DATA.DungeonList) do
         updateDungeonTotal(dungeonPrefix, CACHE.DungeonsSeen)
+    end
+end
+
+function updateKeyTotalsFromMemorySegment(segment)
+    if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+        print("Segment: Key Totals")
+    end
+
+    --Key Totals Seen
+    CACHE.KeysSeen = segment:ReadUInt16(0x7ef474)
+    print(string.format("Key Total Seen: 0x%4X", CACHE.KeysSeen))
+    for i, dungeonPrefix in ipairs(DATA.DungeonList) do
+        updateKeyTotal(dungeonPrefix, CACHE.KeysSeen)
     end
 end
 
