@@ -240,6 +240,8 @@ function updateModuleFromMemorySegment(segment)
 
         if not STATUS.AutotrackerInGame and isInGameFromModule() then
             STATUS.AutotrackerInGame = true
+            STATUS.GameStarted = os.clock()
+            STATUS.LastMajorItem = os.clock()
         end
 
         if not isInGameFromModule() then

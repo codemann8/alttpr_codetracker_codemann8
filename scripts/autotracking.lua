@@ -116,9 +116,6 @@ function initMemoryWatch()
     if Tracker.ActiveVariantUID == "full_tracker" then
         SEGMENTS.OverworldData = ScriptHost:AddMemoryWatch("Overworld Data", 0x7ef280, 0x82, updateOverworldFromMemorySegment)
     end
-    
-    STATUS.GameStarted = os.clock()
-    STATUS.LastMajorItem = os.clock()
 end
 
 function disposeMemoryWatch()
