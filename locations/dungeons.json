@@ -1418,6 +1418,9 @@
                     "door_shuffle_off,pool_keypot_off,@Swamp Palace/Beyond Lobby,hammer",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,sp_smallkey:3,hammer",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,keysanity_smallkey_off,hammer",
+                    "door_shuffle_off,pool_keypot_off,@Swamp Palace/Beyond Lobby,bombs,hookshot,[nothing]",
+                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,sp_smallkey:2,bombs,hookshot,[nothing]",
+                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Beyond Lobby,keysanity_smallkey_off,bombs,hookshot,[nothing]",
                     "door_shuffle_off,glitch_mode_hybrid,@MM Special Access/Left Side Access",
                     "door_shuffle_off,glitch_mode_hybrid,@ToH Special Access/Compass Chest",
                     "door_shuffle_on"
@@ -1462,6 +1465,7 @@
                 "access_rules": [
                     "pool_keypot_off,@Swamp Palace/South Side",
                     "pool_keypot_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
+                    "pool_keypot_on,@Swamp Palace/South Side,bombs,hookshot,sp_smallkey:3,[sp_smallkey:6],[nothing]",
                     "pool_keypot_on,@Swamp Palace/South Side,keysanity_smallkey_off",
                     "door_shuffle_on"
                 ],
@@ -1471,10 +1475,7 @@
             {
                 "name": "Big Key Chest",
                 "access_rules": [
-                    "pool_keypot_off,@Swamp Palace/South Side",
-                    "pool_keypot_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:6]",
-                    "pool_keypot_on,@Swamp Palace/South Side,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "@Swamp Palace/Far Left Chest"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1484,6 +1485,7 @@
                 "access_rules": [
                     "pool_keypot_off,@Swamp Palace/South Side,hookshot",
                     "pool_keypot_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
+                    "pool_keypot_on,@Swamp Palace/South Side,sp_smallkey:3,[sp_smallkey:5],hookshot,bombs,[nothing]",
                     "pool_keypot_on,@Swamp Palace/South Side,keysanity_smallkey_off,hookshot",
                     "door_shuffle_on"
                 ],
@@ -1494,10 +1496,7 @@
             {
                 "name": "Snake Waterfall",
                 "access_rules": [
-                    "pool_keypot_off,@Swamp Palace/South Side,hookshot",
-                    "pool_keypot_on,@Swamp Palace/South Side,sp_smallkey:4,[sp_smallkey:5],hookshot",
-                    "pool_keypot_on,@Swamp Palace/South Side,keysanity_smallkey_off,hookshot",
-                    "door_shuffle_on"
+                    "@Swamp Palace/Flooded Treasure"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -1518,6 +1517,7 @@
                 "access_rules": [
                     "door_shuffle_off,pool_keypot_off,@Swamp Palace/Waterway Key",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Waterway Key,sp_smallkey:5,[sp_smallkey:6]",
+                    "door_shuffle_off,pool_keypot_on,@Swamp Palace/Waterway Key,sp_smallkey:4,[sp_smallkey:6],bombs,hookshot,[nothing]",
                     "door_shuffle_off,pool_keypot_on,@Swamp Palace/Waterway Key,keysanity_smallkey_off",
                     "door_shuffle_on,@Swamp Palace/Dungeon Access"
                 ],
