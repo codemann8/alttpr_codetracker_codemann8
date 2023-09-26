@@ -595,6 +595,31 @@ function updateCoordinateFromMemorySegment(segment)
             if INSTANCE.MULTIDUNGEONCAPTURES[roomId] ~= nil then
                 printLog("prev used case", 1)
                 return INSTANCE.MULTIDUNGEONCAPTURES[roomId]
+            else
+                local section = findObjectForCode(entrance)
+                if section.CapturedItem then
+                    local cap = section.CapturedItem.Name
+                    if cap:find("^Hyrule Castle") or cap:find("^Desert Palace") or cap:find("^Skull Woods") or cap:find("^Turtle Rock") then
+                        cap = cap:gsub("Hyrule Castle", "cap_hc")
+                        cap = cap:gsub("Desert Palace", "cap_dp")
+                        cap = cap:gsub("Skull Woods", "cap_sw")
+                        cap = cap:gsub("Turtle Rock", "cap_tr")
+                        cap = cap:gsub("Sanctuary", "sanc")
+                        cap = cap:gsub("Laser Bridge", "back")
+                        cap = cap:gsub("Ledge ", "")
+                        cap = cap:gsub(" ", "")
+                        cap = cap:lower()
+                        
+                        for key, capture in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
+                            if capture == cap then
+                                printLog("prev manual case: " .. cap, 1)
+                                INSTANCE.MULTIDUNGEONCAPTURES[key] = nil
+                                INSTANCE.MULTIDUNGEONCAPTURES[roomId] = cap
+                                return cap
+                            end
+                        end
+                    end
+                end
             end
             if OBJ_ENTRANCE:getState() < 4 then
                 if dungeonPrefix == "sw" then
@@ -833,8 +858,8 @@ function updateCoordinateFromMemorySegment(segment)
                 end
 
                 if owEntrance ~= nil and uwRoom ~= nil then
-                    section = findObjectForCode(owEntrance)
-                    darkReplacement = section.CapturedItem and section.CapturedItem.Name == "Unknown Dark Connector"
+                    local section = findObjectForCode(owEntrance)
+                    local darkReplacement = section.CapturedItem and section.CapturedItem.Name == "Unknown Dark Connector"
                         and (uwRoom == "cap_darkmountain" or uwRoom == "cap_oldman" or uwRoom == "cap_mtncave_back")
                     if not (section.CapturedItem or section.AvailableChestCount == 0) or darkReplacement then
                         local skipIcon = false
@@ -849,8 +874,7 @@ function updateCoordinateFromMemorySegment(segment)
                         end
                         if not skipIcon then
                             if uwRoom ~= "" then
-                                captureItem = findObjectForCode(uwRoom)
-                                section.CapturedItem = captureItem
+                                section.CapturedItem = findObjectForCode(uwRoom)
                                 updateGhost(owEntrance, true, true)
                                 if dungeonId < 0xff then
                                     if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then

@@ -240,7 +240,13 @@ function saveBackup()
         
         textOutput = textOutput .. "BACKUP.MULTIDUNGEONCAPTURES = { \n"
         for roomId, data in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
-            textOutput = textOutput .. "    [" .. math.floor(roomId) .. "] = \"" .. data .. "\",\n"
+            local key = roomId
+            if type(key) == "number" then
+                key = math.floor(roomId) .. ""
+            else
+                key = "\"" .. key .. "\""
+            end
+            textOutput = textOutput .. "    [" .. key .. "] = \"" .. data .. "\",\n"
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 

@@ -756,6 +756,7 @@ function updateGhost(section, clearSection, markHostedItem)
             if clearSection then
                 target.AvailableChestCount = 0
                 target.CapturedItem = CACHE.CaptureBadges[section][4]
+                cacheManualIcon(target, true)
             end
             if markHostedItem then
                 if target.HostedItem then
@@ -794,6 +795,34 @@ function removeGhost(section)
         hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
         CACHE.CaptureBadges[section][3] = nil
         CACHE.CaptureBadges[section][4] = nil
+        cacheManualIcon(target, false)
+    end
+end
+
+function cacheManualIcon(targetSection, isAdding)
+    if targetSection.CapturedItem then
+        local cap = targetSection.CapturedItem.Name
+        if cap:find("^Hyrule Castle") or cap:find("^Desert Palace") or cap:find("^Skull Woods") or cap:find("^Turtle Rock") then
+            cap = cap:gsub("Hyrule Castle", "cap_hc")
+            cap = cap:gsub("Desert Palace", "cap_dp")
+            cap = cap:gsub("Skull Woods", "cap_sw")
+            cap = cap:gsub("Turtle Rock", "cap_tr")
+            cap = cap:gsub("Sanctuary", "sanc")
+            cap = cap:gsub("Laser Bridge", "back")
+            cap = cap:gsub("Ledge ", "")
+            cap = cap:gsub(" ", "")
+            cap = cap:lower()
+            for key, capture in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
+                if capture == cap then
+                    if type(key) == "number" and not isAdding then
+                        INSTANCE.MULTIDUNGEONCAPTURES[key] = nil
+                    end
+                    return
+                end
+            end
+            printLog("manual case: " .. cap, 1)
+            INSTANCE.MULTIDUNGEONCAPTURES[targetSection.Name] = cap
+        end
     end
 end
 
