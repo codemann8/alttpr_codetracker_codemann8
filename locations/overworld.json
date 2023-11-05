@@ -1823,7 +1823,7 @@
                 "x": 880,
                 "y": 1860,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_3ba" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_3b" ]
             }
         ]
     },
