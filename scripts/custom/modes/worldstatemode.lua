@@ -55,7 +55,7 @@ end
 
 function WorldStateMode:postUpdate()
     for i = 1, #DATA.OverworldIds do
-        local item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
+        local item = Tracker:FindObjectForCode("ow_slot_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
         item.clicked = true
         item.ignorePostUpdate = true
 

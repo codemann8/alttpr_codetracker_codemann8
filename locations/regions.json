@@ -3,21 +3,21 @@
     {
         "name": "WLW Regions",
         "access_rules": [
-            "ow_swapped_40,ow_lost_woods_west",
-            "ow_swapped_40,ow_lost_woods_east",
-            "ow_swapped_42,ow_lumberjack",
-            "ow_swapped_4a,ow_mountainentry_entry",
-            "ow_swapped_4a,ow_mountainentry_ledge",
-            "ow_swapped_51,ow_kak_fortune",
-            "ow_swapped_53,ow_sanc_ledge",
-            "ow_swapped_53,ow_sanc",
-            "ow_swapped_54,ow_graveyard_ledge",
-            "ow_swapped_55,ow_river_west",
-            "ow_swapped_58,ow_kakariko",
-            "ow_swapped_58,ow_kak_grasshouse",
-            "ow_swapped_58,ow_kak_bombhut",
-            "ow_swapped_5b,ow_castle_ledge",
-            "ow_swapped_62,ow_blacksmith",
+            "ow_vanilla_00,ow_lost_woods_west",
+            "ow_vanilla_00,ow_lost_woods_east",
+            "ow_vanilla_02,ow_lumberjack",
+            "ow_vanilla_0a,ow_mountainentry_entry",
+            "ow_vanilla_0a,ow_mountainentry_ledge",
+            "ow_vanilla_11,ow_kak_fortune",
+            "ow_vanilla_13,ow_sanc_ledge",
+            "ow_vanilla_13,ow_sanc",
+            "ow_vanilla_14,ow_graveyard_ledge",
+            "ow_vanilla_15,ow_river_west",
+            "ow_vanilla_18,ow_kakariko",
+            "ow_vanilla_18,ow_kak_grasshouse",
+            "ow_vanilla_18,ow_kak_bombhut",
+            "ow_vanilla_1b,ow_castle_ledge",
+            "ow_vanilla_22,ow_blacksmith",
 
             "ow_swapped_00,ow_sw_front",
             "ow_swapped_02,ow_dark_lumberjack",
@@ -31,19 +31,19 @@
     {
         "name": "SLW Regions",
         "access_rules": [
-            "ow_swapped_5b,ow_castle_ledge",
-            "ow_swapped_68,ow_race_ledge",
-            "ow_swapped_69,ow_kak_suburb",
-            "ow_swapped_6b,ow_central_bonk",
-            "ow_swapped_6c,ow_links",
-            "ow_swapped_70,ow_desert",
-            "ow_swapped_70,ow_desert_ledge",
-            "ow_swapped_72,ow_cave45",
-            "ow_swapped_74,ow_statues",
-            "ow_swapped_75,ow_hylia_northwest",
-            "ow_swapped_75,ow_hylia_shore",
-            "ow_swapped_7a,ow_desert_pass",
-            "ow_swapped_7b,ow_dam",
+            "ow_vanilla_1b,ow_castle_ledge",
+            "ow_vanilla_28,ow_race_ledge",
+            "ow_vanilla_29,ow_kak_suburb",
+            "ow_vanilla_2b,ow_central_bonk",
+            "ow_vanilla_2c,ow_links",
+            "ow_vanilla_30,ow_desert",
+            "ow_vanilla_30,ow_desert_ledge",
+            "ow_vanilla_32,ow_cave45",
+            "ow_vanilla_34,ow_statues",
+            "ow_vanilla_35,ow_hylia_northwest",
+            "ow_vanilla_35,ow_hylia_shore",
+            "ow_vanilla_3a,ow_desert_pass",
+            "ow_vanilla_3b,ow_dam",
 
             "ow_swapped_29,ow_archery",
             "ow_swapped_2b,ow_dark_bonk",
@@ -56,9 +56,9 @@
     {
         "name": "ELW Regions",
         "access_rules": [
-            "ow_swapped_5e,ow_eastern_palace",
-            "ow_swapped_6e,ow_treeline",
-            "ow_swapped_6f,ow_eastern_nook",
+            "ow_vanilla_1e,ow_eastern_palace",
+            "ow_vanilla_2e,ow_treeline",
+            "ow_vanilla_2f,ow_eastern_nook",
 
             "ow_swapped_1b,ow_pyramid",
             "ow_swapped_1e,ow_dark_palace",
@@ -69,48 +69,48 @@
     {
         "name": "NELW Regions",
         "access_rules": [
-            "ow_swapped_56,ow_witch",
+            "ow_vanilla_16,ow_witch",
             "ow_swapped_16,ow_dark_witch"
         ]
     },
     {
         "name": "SELW Regions",
         "access_rules": [
-            "ow_swapped_77,ow_ice_cave",
+            "ow_vanilla_37,ow_ice_cave",
             "ow_swapped_37,ow_shopping_mall"
         ]
     },
     {
         "name": "LLW Regions",
         "access_rules": [
-            "ow_swapped_75,ow_hylia_water",
+            "ow_vanilla_35,ow_hylia_water",
             "ow_swapped_35,ow_ice_water"
         ]
     },
     {
         "name": "ZLW Regions",
         "access_rules": [
-            "ow_swapped_4f,ow_zora_waterfall",
+            "ow_vanilla_0f,ow_zora_waterfall",
             "ow_swapped_0f,ow_catfish"
         ]
     },
     {
         "name": "LW Lake Regions",
         "access_rules": [
-            "ow_swapped_75,ow_hylia_upgrade",
+            "ow_vanilla_35,ow_hylia_upgrade",
             "inverted_orig,ow_swapped_35,ow_ice_palace"
         ]
     },
     {
         "name": "WDW Regions",
         "access_rules": [
-            "ow_swapped_40,ow_sw_front",
-            "ow_swapped_42,ow_dark_lumberjack",
-            "ow_swapped_4a,ow_bumper_entry",
-            "ow_swapped_51,ow_outcast_fortune",
-            "ow_swapped_53,ow_chapel",
-            "ow_swapped_58,ow_outcasts",
-            "ow_swapped_5a,ow_shield_shop",
+            "ow_vanilla_00,ow_sw_front",
+            "ow_vanilla_02,ow_dark_lumberjack",
+            "ow_vanilla_0a,ow_bumper_entry",
+            "ow_vanilla_11,ow_outcast_fortune",
+            "ow_vanilla_13,ow_chapel",
+            "ow_vanilla_18,ow_outcasts",
+            "ow_vanilla_1a,ow_shield_shop",
 
             "ow_swapped_00,ow_lost_woods_west",
             "ow_swapped_00,ow_lost_woods_east",
@@ -129,12 +129,12 @@
     {
         "name": "SDW Regions",
         "access_rules": [
-            "ow_swapped_69,ow_archery",
-            "ow_swapped_6b,ow_dark_bonk",
-            "ow_swapped_6c,ow_bomb_shop",
-            "ow_swapped_74,ow_hype",
-            "ow_swapped_75,ow_ice_northwest",
-            "ow_swapped_7b,ow_swamp",
+            "ow_vanilla_29,ow_archery",
+            "ow_vanilla_2b,ow_dark_bonk",
+            "ow_vanilla_2c,ow_bomb_shop",
+            "ow_vanilla_34,ow_hype",
+            "ow_vanilla_35,ow_ice_northwest",
+            "ow_vanilla_3b,ow_swamp",
 
             "ow_swapped_1b,ow_castle_ledge",
             "ow_swapped_1b,ow_castle_courtyard",
@@ -155,10 +155,10 @@
     {
         "name": "EDW Regions",
         "access_rules": [
-            "ow_swapped_5b,ow_pyramid",
-            "ow_swapped_5e,ow_dark_palace",
-            "ow_swapped_6e,ow_dark_treeline",
-            "ow_swapped_6f,ow_dark_nook",
+            "ow_vanilla_1b,ow_pyramid",
+            "ow_vanilla_1e,ow_dark_palace",
+            "ow_vanilla_2e,ow_dark_treeline",
+            "ow_vanilla_2f,ow_dark_nook",
 
             "ow_swapped_1e,ow_eastern_palace",
             "ow_swapped_2e,ow_treeline",
@@ -168,28 +168,28 @@
     {
         "name": "NEDW Regions",
         "access_rules": [
-            "ow_swapped_56,ow_dark_witch",
+            "ow_vanilla_16,ow_dark_witch",
             "ow_swapped_16,ow_witch"
         ]
     },
     {
         "name": "SEDW Regions",
         "access_rules": [
-            "ow_swapped_77,ow_shopping_mall",
+            "ow_vanilla_37,ow_shopping_mall",
             "ow_swapped_37,ow_ice_cave"
         ]
     },
     {
         "name": "LDW Regions",
         "access_rules": [
-            "ow_swapped_75,ow_ice_water",
+            "ow_vanilla_35,ow_ice_water",
             "ow_swapped_35,ow_hylia_water"
         ]
     },
     {
         "name": "ZDW Regions",
         "access_rules": [
-            "ow_swapped_4f,ow_catfish",
+            "ow_vanilla_0f,ow_catfish",
             "ow_swapped_0f,ow_zora_waterfall"
         ]
     },
@@ -202,7 +202,7 @@
     {
         "name": "WDM Top Regions",
         "access_rules": [
-            "ow_swapped_43,ow_dm_west_top",
+            "ow_vanilla_03,ow_dm_west_top",
 
             "ow_swapped_03,ow_ddm_west_top",
             "inverted_orig,ow_swapped_03,ow_ddm_west_bottom"
@@ -211,14 +211,14 @@
     {
         "name": "WDM Bottom Regions",
         "access_rules": [
-            "ow_swapped_43,ow_dm_west_bottom",
+            "ow_vanilla_03,ow_dm_west_bottom",
             "ow_swapped_03,ow_ddm_west_bottom"
         ]
     },
     {
         "name": "EDM Top Regions",
         "access_rules": [
-            "ow_swapped_45,ow_dm_east_top",
+            "ow_vanilla_05,ow_dm_east_top",
 
             "ow_swapped_05,ow_ddm_east_top",
             "ow_swapped_05,ow_ddm_floating",
@@ -228,9 +228,9 @@
     {
         "name": "EDM Bottom Regions",
         "access_rules": [
-            "ow_swapped_45,ow_dm_east_bottom",
-            "ow_swapped_45,ow_dm_east_connect",
-            "ow_swapped_45,ow_dm_east_spiral",
+            "ow_vanilla_05,ow_dm_east_bottom",
+            "ow_vanilla_05,ow_dm_east_connect",
+            "ow_vanilla_05,ow_dm_east_spiral",
 
             "ow_swapped_05,ow_ddm_east_bottom"
         ]
@@ -239,7 +239,7 @@
     {
         "name": "WDDM Top Regions",
         "access_rules": [
-            "ow_swapped_43,ow_ddm_west_top",
+            "ow_vanilla_03,ow_ddm_west_top",
 
             "ow_swapped_03,ow_dm_west_top"
         ]
@@ -247,7 +247,7 @@
     {
         "name": "WDDM Bottom Regions",
         "access_rules": [
-            "ow_swapped_43,ow_ddm_west_bottom",
+            "ow_vanilla_03,ow_ddm_west_bottom",
 
             "ow_swapped_03,ow_dm_west_bottom"
         ]
@@ -255,9 +255,9 @@
     {
         "name": "EDDM Top Regions",
         "access_rules": [
-            "ow_swapped_45,ow_ddm_east_top",
-            "ow_swapped_45,ow_ddm_floating",
-            "ow_swapped_47,ow_turtlerock",
+            "ow_vanilla_05,ow_ddm_east_top",
+            "ow_vanilla_05,ow_ddm_floating",
+            "ow_vanilla_07,ow_turtlerock",
 
             "ow_swapped_05,ow_dm_east_top"
         ]
@@ -265,7 +265,7 @@
     {
         "name": "EDDM Bottom Regions",
         "access_rules": [
-            "ow_swapped_45,ow_ddm_east_bottom",
+            "ow_vanilla_05,ow_ddm_east_bottom",
 
             "ow_swapped_05,ow_dm_east_bottom",
             "ow_swapped_05,ow_dm_east_connect",
@@ -284,9 +284,9 @@
     {
         "name": "WLW To ELW",
         "access_rules": [
-            "ow_swapped_5d",
-            "ow_swapped_6d",
-            "ow_swapped_5b,lift1"
+            "ow_vanilla_1d",
+            "ow_vanilla_2d",
+            "ow_vanilla_1b,lift1"
         ]
     },
     {
@@ -300,7 +300,7 @@
         "name": "WLW To SELW",
         "access_rules": [
             "whirlpool_shuffle_off,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_55,ow_swapped_73,glitch_mode_owg"
+            "whirlpool_shuffle_off,ow_vanilla_15,ow_vanilla_33,glitch_mode_owg"
         ]
     },
     {
@@ -319,23 +319,23 @@
     {
         "name": "WLW To EDW",
         "access_rules": [
-            "ow_swapped_5b,aga",
+            "ow_vanilla_1b,aga",
             "lift1,hammer,pearl"
         ]
     },
     {
         "name": "SLW To WLW",
         "access_rules": [
-            "ow_swapped_69",
+            "ow_vanilla_29",
             "lift2",
-            "ow_swapped_5b",
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_52,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_33,ow_swapped_55,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_33,ow_swapped_55",
-            "glitch_mode_owg,ow_swapped_1b,ow_swapped_62,boots",
+            "ow_vanilla_1b",
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_vanilla_12,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_33,ow_vanilla_15,[flippers]",
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_33,ow_vanilla_15",
+            "glitch_mode_owg,ow_swapped_1b,ow_vanilla_22,boots",
             "glitch_mode_owg,ow_swapped_1b,boots,lift2",
             "glitch_mode_owg,ow_swapped_1b,boots,hookshot", //TODO: requires sword or bombs, revisit with bombbag
-            "glitch_mode_major,ow_swapped_1b,ow_swapped_62",
+            "glitch_mode_major,ow_swapped_1b,ow_vanilla_22",
             "glitch_mode_major,ow_swapped_1b,lift2",
             "glitch_mode_major,ow_swapped_1b,hookshot" //TODO: requires sword or bombs, revisit with bombbag
         ]
@@ -343,25 +343,25 @@
     {
         "name": "SLW To ELW",
         "access_rules": [
-            "ow_swapped_6d",
+            "ow_vanilla_2d",
             "hammer",
             "[flippers]",
             "glitch_mode_owg,boots",
             "glitch_mode_major",
-            "ow_swapped_5b,lift1"
+            "ow_vanilla_1b,lift1"
         ]
     },
     {
         "name": "SLW To NELW",
         "access_rules": [
             "whirlpool_shuffle_off,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_73,ow_swapped_55,glitch_mode_owg"
+            "whirlpool_shuffle_off,ow_vanilla_33,ow_vanilla_15,glitch_mode_owg"
         ]
     },
     {
         "name": "SLW To SELW",
         "access_rules": [
-            "ow_swapped_75",
+            "ow_vanilla_35",
             "[flippers]"
         ]
     },
@@ -369,7 +369,7 @@
         "name": "SLW To LLW",
         "access_rules": [
             "[flippers]",
-            "glitch_mode_owg,ow_swapped_75"
+            "glitch_mode_owg,ow_vanilla_35"
         ]
     },
     {
@@ -387,7 +387,7 @@
     {
         "name": "SLW To EDW",
         "access_rules": [
-            "ow_swapped_5b,aga",
+            "ow_vanilla_1b,aga",
             "aga,pearl,lift1",
             "lift1,hammer,pearl"
         ]
@@ -407,14 +407,14 @@
     {
         "name": "ELW To WLW",
         "access_rules": [
-            "ow_swapped_5d",
-            "ow_swapped_55,[flippers]",
-            "ow_swapped_5b,lift1",
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_52,[flippers]",
-            "glitch_mode_owg,ow_swapped_1b,ow_swapped_62,boots",
+            "ow_vanilla_1d",
+            "ow_vanilla_15,[flippers]",
+            "ow_vanilla_1b,lift1",
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_vanilla_12,[flippers]",
+            "glitch_mode_owg,ow_swapped_1b,ow_vanilla_22,boots",
             "glitch_mode_owg,ow_swapped_1b,boots,lift2",
             "glitch_mode_owg,ow_swapped_1b,boots,hookshot", //TODO: requires sword or bombs, revisit with bombbag
-            "glitch_mode_major,ow_swapped_1b,ow_swapped_62",
+            "glitch_mode_major,ow_swapped_1b,ow_vanilla_22",
             "glitch_mode_major,ow_swapped_1b,lift2",
             "glitch_mode_major,ow_swapped_1b,hookshot" //TODO: requires sword or bombs, revisit with bombbag
         ]
@@ -422,11 +422,11 @@
     {
         "name": "ELW To SLW",
         "access_rules": [
-            "ow_swapped_6d",
+            "ow_vanilla_2d",
             "hammer",
-            "ow_swapped_75,[flippers]",
-            "ow_swapped_5b,lift1",
-            "whirlpool_shuffle_off,ow_swapped_55,ow_swapped_73,[flippers]",
+            "ow_vanilla_35,[flippers]",
+            "ow_vanilla_1b,lift1",
+            "whirlpool_shuffle_off,ow_vanilla_15,ow_vanilla_33,[flippers]",
             "glitch_mode_owg,boots",
             "glitch_mode_major"
         ]
@@ -435,7 +435,7 @@
         "name": "ELW To NELW",
         "access_rules": [
             "[flippers]",
-            "ow_swapped_5d",
+            "ow_vanilla_1d",
             "lift1",
             "hammer",
             "glitch_mode_owg,boots",
@@ -459,15 +459,15 @@
     {
         "name": "ELW To ZLW",
         "access_rules": [
-            "glitch_mode_owg,ow_swapped_5e,boots",
-            "glitch_mode_major,ow_swapped_5e"
+            "glitch_mode_owg,ow_vanilla_1e,boots",
+            "glitch_mode_major,ow_vanilla_1e"
         ]
     },
     {
         "name": "ELW To EDW",
         "access_rules": [
             "lift1,hammer,pearl",
-            "ow_swapped_5b,lift1,aga"
+            "ow_vanilla_1b,lift1,aga"
         ]
     },
     {
@@ -491,24 +491,24 @@
     {
         "name": "NELW To WLW",
         "access_rules": [
-            "ow_swapped_55,[flippers]",
+            "ow_vanilla_15,[flippers]",
             "ow_swapped_1d,hookshot",
-            "ow_swapped_55,glitch_mode_owg"
+            "ow_vanilla_15,glitch_mode_owg"
         ]
     },
     {
         "name": "NELW To SLW",
         "access_rules": [
-            "whirlpool_shuffle_off,ow_swapped_55,ow_swapped_73,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_15,ow_swapped_3f,ow_swapped_75,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_73",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_15,ow_swapped_3f,ow_swapped_75"
+            "whirlpool_shuffle_off,ow_vanilla_15,ow_vanilla_33,[flippers]",
+            "whirlpool_shuffle_off,ow_swapped_15,ow_swapped_3f,ow_vanilla_35,[flippers]",
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_33",
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_15,ow_swapped_3f,ow_vanilla_35"
         ]
     },
     {
         "name": "NELW To ELW",
         "access_rules": [
-            "ow_swapped_5d",
+            "ow_vanilla_1d",
             "lift1",
             "hammer",
             "whirlpool_shuffle_off,[flippers]",
@@ -560,14 +560,14 @@
     {
         "name": "SELW To WLW",
         "access_rules": [
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_52,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_7f,ow_swapped_52"
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_vanilla_12,[flippers]",
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_3f,ow_vanilla_12"
         ]
     },
     {
         "name": "SELW To SLW",
         "access_rules": [
-            "ow_swapped_75"
+            "ow_vanilla_35"
         ]
     },
     {
@@ -581,7 +581,7 @@
         "name": "SELW To NELW",
         "access_rules": [
             "[flippers]",
-            "glitch_mode_owg,ow_swapped_5d"
+            "glitch_mode_owg,ow_vanilla_1d"
         ]
     },
     {
@@ -624,27 +624,27 @@
     {
         "name": "LLW To WLW",
         "access_rules": [
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_52"
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_vanilla_12"
         ]
     },
     {
         "name": "LLW To SLW",
         "access_rules": [
-            "ow_swapped_75"
+            "ow_vanilla_35"
         ]
     },
     {
         "name": "LLW To NELW",
         "access_rules": [
             "[flippers]",
-            "ow_swapped_5d",
+            "ow_vanilla_1d",
             "whirlpool_shuffle_off,ow_swapped_3f,ow_swapped_15"
         ]
     },
     {
         "name": "LLW To ZLW",
         "access_rules": [
-            "whirlpool_shuffle_off,ow_swapped_75,ow_swapped_4f"
+            "whirlpool_shuffle_off,ow_vanilla_35,ow_vanilla_0f"
         ]
     },
     {
@@ -695,7 +695,7 @@
     {
         "name": "ZLW To LLW",
         "access_rules": [
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_swapped_75,[flippers]"
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_vanilla_35,[flippers]"
         ]
     },
     {
@@ -705,7 +705,7 @@
     {
         "name": "WDW To NELW",
         "access_rules": [
-            "ow_swapped_5d,mirror",
+            "ow_vanilla_1d,mirror",
             "pearl,mirror",
             "glitch_mode_owg,mirror"
         ]
@@ -723,8 +723,8 @@
             "ow_swapped_2d",
             "ow_swapped_1b,pearl,lift1",
             "whirlpool_shuffle_off,pearl,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_7f,bottle"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl",
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_3f,bottle"
         ]
     },
     {
@@ -739,16 +739,16 @@
         "name": "WDW To SEDW",
         "access_rules": [
             "whirlpool_shuffle_off,pearl,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_7f,bottle"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl",
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_3f,bottle"
         ]
     },
     {
         "name": "WDW To LDW",
         "access_rules": [
             "pearl,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_7f,bottle"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl",
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_3f,bottle"
         ]
     },
     {
@@ -820,7 +820,7 @@
     {
         "name": "EDW To NELW",
         "access_rules": [
-            "ow_swapped_5d,mirror",
+            "ow_vanilla_1d,mirror",
             "pearl,mirror"
         ]
     },
@@ -835,9 +835,9 @@
     {
         "name": "EDW To ZLW",
         "access_rules": [
-            "glitch_mode_owg,mirror,ow_swapped_5e,boots",
+            "glitch_mode_owg,mirror,ow_vanilla_1e,boots",
             "glitch_mode_owg,mirror,pearl,boots",
-            "glitch_mode_major,mirror,ow_swapped_5e",
+            "glitch_mode_major,mirror,ow_vanilla_1e",
             "glitch_mode_major,mirror,bottle"
         ]
     },
@@ -848,12 +848,12 @@
             "ow_swapped_1b,pearl,lift1",
             "ow_swapped_15,pearl,[flippers]",
             "whirlpool_shuffle_off,ow_swapped_3f,ow_swapped_12,pearl,[flippers]",
-            "glitch_mode_owg,ow_swapped_5b,ow_swapped_22,pearl,boots",
-            "glitch_mode_owg,ow_swapped_5b,pearl,boots,lift2",
-            "glitch_mode_owg,ow_swapped_5b,pearl,boots,hookshot", //TODO: requires sword or bombs, revisit with bombbag
-            "glitch_mode_major,ow_swapped_5b,ow_swapped_22,bottle",
-            "glitch_mode_major,ow_swapped_5b,bottle,lift2",
-            "glitch_mode_major,ow_swapped_5b,bottle,hookshot" //TODO: requires sword or bombs, revisit with bombbag
+            "glitch_mode_owg,ow_vanilla_1b,ow_swapped_22,pearl,boots",
+            "glitch_mode_owg,ow_vanilla_1b,pearl,boots,lift2",
+            "glitch_mode_owg,ow_vanilla_1b,pearl,boots,hookshot", //TODO: requires sword or bombs, revisit with bombbag
+            "glitch_mode_major,ow_vanilla_1b,ow_swapped_22,bottle",
+            "glitch_mode_major,ow_vanilla_1b,bottle,lift2",
+            "glitch_mode_major,ow_vanilla_1b,bottle,hookshot" //TODO: requires sword or bombs, revisit with bombbag
         ]
     },
     {
@@ -906,10 +906,10 @@
     {
         "name": "NEDW To WLW",
         "access_rules": [
-            "ow_swapped_5d,mirror",
+            "ow_vanilla_1d,mirror",
             "pearl,mirror",
-            "ow_swapped_55,mirror,[flippers]",
-            "ow_swapped_55,glitch_mode_owg,mirror"
+            "ow_vanilla_15,mirror,[flippers]",
+            "ow_vanilla_15,glitch_mode_owg,mirror"
         ]
     },
     {
@@ -923,7 +923,7 @@
     {
         "name": "NEDW To ELW",
         "access_rules": [
-            "ow_swapped_5d,mirror",
+            "ow_vanilla_1d,mirror",
             "pearl,mirror",
             "whirlpool_shuffle_off,pearl,[flippers],mirror",
             "whirlpool_shuffle_off,glitch_mode_owg,pearl,mirror",
@@ -958,11 +958,11 @@
         "name": "NEDW To SDW",
         "access_rules": [
             "whirlpool_shuffle_off,ow_swapped_15,ow_swapped_33,pearl,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_55,ow_swapped_73,ow_swapped_35,pearl,[flippers]",
+            "whirlpool_shuffle_off,ow_vanilla_15,ow_vanilla_33,ow_swapped_35,pearl,[flippers]",
             "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_15,ow_swapped_33,pearl",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_73,ow_swapped_35,pearl",
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_33,ow_swapped_35,pearl",
             "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_15,ow_swapped_33,bottle",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_73,ow_swapped_35,bottle"
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_33,ow_swapped_35,bottle"
         ]
     },
     {
@@ -974,23 +974,23 @@
             "whirlpool_shuffle_off,pearl,[flippers]",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_major",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl"
         ]
     },
     {
         "name": "NEDW To SEDW",
         "access_rules": [
             "whirlpool_shuffle_off,pearl,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_7f,bottle"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl",
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_3f,bottle"
         ]
     },
     {
         "name": "NEDW To LDW",
         "access_rules": [
             "whirlpool_shuffle_off,pearl,[flippers]",
-            "whirlpool_shuffle_off,glitch_mode_owg,ow_swapped_55,ow_swapped_7f,pearl",
-            "whirlpool_shuffle_off,glitch_mode_major,ow_swapped_55,ow_swapped_7f,bottle"
+            "whirlpool_shuffle_off,glitch_mode_owg,ow_vanilla_15,ow_vanilla_3f,pearl",
+            "whirlpool_shuffle_off,glitch_mode_major,ow_vanilla_15,ow_vanilla_3f,bottle"
         ]
     },
     {
@@ -1062,7 +1062,7 @@
         "name": "LDW To NELW",
         "access_rules": [
             "mirror,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_15,mirror"
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_swapped_15,mirror"
         ]
     },
     {
@@ -1099,7 +1099,7 @@
         "name": "LDW To NEDW",
         "access_rules": [
             "[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_7f,ow_swapped_55"
+            "whirlpool_shuffle_off,ow_vanilla_3f,ow_vanilla_15"
         ]
     },
     {
@@ -1161,7 +1161,7 @@
     {
         "name": "WLW To WDM",
         "access_rules": [
-            "entrance_shuffle_minor,ow_swapped_4a,lift1,[lamp]",
+            "entrance_shuffle_minor,ow_vanilla_0a,lift1,[lamp]",
             "entrance_shuffle_minor,inverted_orig,ow_swapped_0a,lift1,[lamp]",
             "glitch_mode_owg,boots",
             "glitch_mode_major"
@@ -1170,7 +1170,7 @@
     {
         "name": "WDM To WLW",
         "access_rules": [
-            "entrance_shuffle_minor,ow_swapped_43,[lamp]",
+            "entrance_shuffle_minor,ow_vanilla_03,[lamp]",
             "glitch_mode_owg,boots",
             "glitch_mode_major"
         ]
@@ -1210,7 +1210,7 @@
     {
         "name": "WDM Bottom To Top",
         "access_rules": [
-            "ow_swapped_43,mirror",
+            "ow_vanilla_03,mirror",
             "ow_swapped_03,inverted_orig",
             "glitch_mode_owg,boots",
             "glitch_mode_major"
@@ -1219,10 +1219,10 @@
     {
         "name": "EDM Top To EDDM",
         "access_rules": [
-            "ow_swapped_47,lift2,hammer",
+            "ow_vanilla_07,lift2,hammer",
             "lift2,hammer,pearl",
-            "ow_swapped_47,glitch_mode_owg,boots,hammer",
-            "ow_swapped_47,glitch_mode_major,hammer",
+            "ow_vanilla_07,glitch_mode_owg,boots,hammer",
+            "ow_vanilla_07,glitch_mode_major,hammer",
             "ow_swapped_07,glitch_mode_owg,boots,lift2,pearl",
             "ow_swapped_07,glitch_mode_major,lift2,pearl",
             "ow_swapped_07,glitch_mode_major,lift2,bottle"
@@ -1273,7 +1273,7 @@
     {
         "name": "WDDM Bottom To WDM Top",
         "access_rules": [
-            "ow_swapped_43,mirror",
+            "ow_vanilla_03,mirror",
             "glitch_mode_owg,mirror,boots",
             "glitch_mode_major,mirror"
         ]
@@ -1282,8 +1282,8 @@
         "name": "EDDM Bottom To Top",
         "access_rules": [
             "entrance_shuffle_minor",
-            "ow_swapped_45,glitch_mode_owg,pearl,boots,[entrance_shuffle_minor]",
-            "ow_swapped_45,glitch_mode_major,[entrance_shuffle_minor]"
+            "ow_vanilla_05,glitch_mode_owg,pearl,boots,[entrance_shuffle_minor]",
+            "ow_vanilla_05,glitch_mode_major,[entrance_shuffle_minor]"
         ]
     },
     {
@@ -1340,14 +1340,14 @@
     {
         "name": "LDM Broken Bridge",
         "access_rules": [
-            "ow_swapped_45,hookshot"
+            "ow_vanilla_05,hookshot"
         ]
     },
     {
         "name": "DDM Hammer Bridge",
         "access_rules": [
             "pearl,hammer",
-            "ow_swapped_45",
+            "ow_vanilla_05",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_major"
         ]
@@ -1366,7 +1366,7 @@
         "name": "Free Flute",
         "access_rules": [
             "activated_flute",
-            "ow_swapped_58,ow_kakariko,flute",
+            "ow_vanilla_18,ow_kakariko,flute",
             "ow_swapped_18,inverted_orig,ow_kakariko,pearl,flute",
             "ow_swapped_18,inverted_new,flute"
         ]
@@ -1378,34 +1378,34 @@
         "access_rules": [
             "@WLW Regions",
             
-            "ow_swapped_53,world_state_open,entrance_shuffle_minor,door_shuffle_sameset", //sanc start
+            "ow_vanilla_13,world_state_open,entrance_shuffle_minor,door_shuffle_sameset", //sanc start
             "ow_swapped_13,world_state_inverted", //dark chapel start
-            "entrance_shuffle_minor,ow_swapped_5b", //assumed access from Links
-            "entrance_shuffle_minor,ow_swapped_69",
-            "entrance_shuffle_minor,ow_swapped_5d,ow_swapped_6d",
+            "entrance_shuffle_minor,ow_vanilla_1b", //assumed access from Links
+            "entrance_shuffle_minor,ow_vanilla_29",
+            "entrance_shuffle_minor,ow_vanilla_1d,ow_vanilla_2d",
             
             "ow_swapped,40,ow_sw_back,mirror",
             "ow_swapped,00,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
-            "ow_swapped_4f,ow_zora_waterfall_fairy,flippers",
+            "ow_vanilla_0f,ow_zora_waterfall_fairy,flippers",
             "ow_swapped_0f,ow_zora_waterfall_fairy,flippers,mirror",
-            "ow_swapped_4a,ow_bumper_ledge,mirror",
-            "ow_swapped_4a,ow_bumper_ledge,mirror",
-            "ow_swapped_4a,ow_bumper_ledge,mirror",
+            "ow_vanilla_0a,ow_bumper_ledge,mirror",
+            "ow_vanilla_0a,ow_bumper_ledge,mirror",
+            "ow_vanilla_0a,ow_bumper_ledge,mirror",
             "ow_swapped_0a,ow_bumper_ledge,[sword]",
             "ow_swapped_0a,ow_bumper_ledge,[cape]",
             "ow_swapped_0a,ow_bumper_ledge,[byrna]",
-            "ow_swapped_54,ow_graveyard_tomb,lift2",
+            "ow_vanilla_14,ow_graveyard_tomb,lift2",
             "ow_swapped_14,ow_graveyard_tomb,mirror",
             "ow_swapped,18,ow_outcasts_hammer,hammer",
             "ow_swapped,58,ow_outcasts_hammer,mirror",
-            "ow_swapped_5b,ow_castle_courtyard,[mirror]",
+            "ow_vanilla_1b,ow_castle_courtyard,[mirror]",
             "ow_swapped_1b,ow_castle_courtyard,mirror",
             "ow_swapped,22,ow_hammerpegs,lift2",
             "ow_swapped,22,ow_hammerpegs,[lift2],hookshot", //TODO: Revisit with bombbag mode, this requires bombs or sword
             "ow_swapped,62,ow_hammerpegs,mirror",
             "flute_shuffle_off,@Free Flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_zora_waterfall_fairy,ow_vanilla_35,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror"
         ],
         "children": [
@@ -1447,15 +1447,15 @@
             "@SLW Regions",
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
-            "ow_swapped_5b,ow_castle_courtyard,[mirror]",
+            "ow_vanilla_1b,ow_castle_courtyard,[mirror]",
             "ow_swapped_1b,ow_castle_courtyard,mirror",
-            "ow_swapped_70,ow_desert_back,lift1",
+            "ow_vanilla_30,ow_desert_back,lift1",
             "ow_swapped_30,ow_desert_back,mirror",
-            "ow_swapped_70,ow_mire,mirror",
+            "ow_vanilla_30,ow_mire,mirror",
             "@Free Flute",
-            "ow_swapped_58,@WLW Entry,flute",
+            "ow_vanilla_18,@WLW Entry,flute",
             "ow_swapped_18,@WDW Regions,pearl,flute",
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_zora_waterfall_fairy,ow_vanilla_35,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror"
         ],
         "children": [
@@ -1507,14 +1507,14 @@
             "@ELW Regions",
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
-            "ow_swapped_5b,ow_castle_ledge,lift1",
+            "ow_vanilla_1b,ow_castle_ledge,lift1",
             "ow_swapped_1b,ow_castle_ledge,mirror",
-            "ow_swapped_5b,ow_castle_courtyard,[mirror],lift1",
+            "ow_vanilla_1b,ow_castle_courtyard,[mirror],lift1",
             "ow_swapped_1b,ow_castle_courtyard,mirror",
             "flute_shuffle_off,@Free Flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_zora_waterfall_fairy,ow_vanilla_35,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror"
         ],
         "children": [
@@ -1564,10 +1564,10 @@
         "name": "NELW Entry",
         "access_rules": [
             "@NELW Regions",
-            "ow_swapped_4f,ow_zora_waterfall_fairy,flippers",
+            "ow_vanilla_0f,ow_zora_waterfall_fairy,flippers",
             "ow_swapped_0f,ow_zora_waterfall_fairy,pearl,flippers,mirror",
             "flute_shuffle_off,@Free Flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute"
         ],
         "children": [
@@ -1616,12 +1616,12 @@
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
             "flute_shuffle_off,@Free Flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute",
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_75,flippers",
-            "whirlpool_shuffle_off,ow_swapped_4f,ow_zora_waterfall_fairy,ow_swapped_15,ow_swapped_3f,flippers",
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_zora_waterfall_fairy,ow_vanilla_35,flippers",
+            "whirlpool_shuffle_off,ow_vanilla_0f,ow_zora_waterfall_fairy,ow_swapped_15,ow_swapped_3f,flippers",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers,mirror",
-            "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_55,ow_swapped_7f,pearl,flippers,mirror"
+            "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_vanilla_15,ow_vanilla_3f,pearl,flippers,mirror"
         ],
         "children": [
             {
@@ -1673,7 +1673,7 @@
             "@LW Lake Regions,[flippers]",
             "@DW Lake Regions,mirror,[flippers]",
             "flute_shuffle_off,@Free Flute,[flippers]",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute,[flippers]",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute,[flippers]",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute,[flippers]"
         ],
         "children": [
@@ -1719,8 +1719,8 @@
         "name": "ZLW Entry",
         "access_rules": [
             "@ZLW Regions",
-            "whirlpool_shuffle_off,ow_swapped_75,ow_swapped_4f,@LW Lake Regions,[flippers]",
-            "whirlpool_shuffle_off,ow_swapped_75,ow_swapped_4f,@DW Lake Regions,mirror,[flippers]"
+            "whirlpool_shuffle_off,ow_vanilla_35,ow_vanilla_0f,@LW Lake Regions,[flippers]",
+            "whirlpool_shuffle_off,ow_vanilla_35,ow_vanilla_0f,@DW Lake Regions,mirror,[flippers]"
         ],
         "children": [
             {
@@ -1742,8 +1742,8 @@
         "access_rules": [
             "@WDM Top Regions",
             "flute_shuffle_off,inverted_new,ow_swapped_03,@Free Flute",
-            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Entry,flute",
-            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Access,flute" //Intentional Reverse Reference
+            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_vanilla_18,@WLW Entry,flute",
+            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_vanilla_18,@WLW Access,flute" //Intentional Reverse Reference
         ],
         "children": [
             {
@@ -1759,8 +1759,8 @@
             "@WDM Top Entry",
             "@WLW Entry To WDM",
             "flute_shuffle_off,@Free Flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute", //Intentional Reverse Reference
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute", //Intentional Reverse Reference
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Regions,pearl,flute",
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Entry,pearl,flute", //Intentional Reverse Reference
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Access,pearl,flute" //Intentional Reverse Reference
@@ -1815,8 +1815,8 @@
             "@EDM Bottom Regions",
             "@EDM Top Entry",
             "@WDM Bottom Entry To EDM",
-            "ow_swapped_45,ow_ddm_tr_bridge,mirror",
-            "ow_swapped_45,ow_ddm_tr_safety,mirror"
+            "ow_vanilla_05,ow_ddm_tr_bridge,mirror",
+            "ow_vanilla_05,ow_ddm_tr_safety,mirror"
         ],
         "children": [
             {
@@ -1847,20 +1847,20 @@
             "@WDW Regions",
 
             "ow_swapped_13,world_state_open,entrance_shuffle_minor,door_shuffle_sameset", //sanc start
-            "ow_swapped_53,world_state_inverted", //dark chapel start
+            "ow_vanilla_13,world_state_inverted", //dark chapel start
 
             "ow_swapped,40,ow_sw_back,entrance_shuffle_off,door_shuffle_off",
-            "ow_swapped_4a,ow_bumper_ledge,[pearl],[sword]",
-            "ow_swapped_4a,ow_bumper_ledge,[pearl],[cape]",
-            "ow_swapped_4a,ow_bumper_ledge,[pearl],[byrna]",
+            "ow_vanilla_0a,ow_bumper_ledge,[pearl],[sword]",
+            "ow_vanilla_0a,ow_bumper_ledge,[pearl],[cape]",
+            "ow_vanilla_0a,ow_bumper_ledge,[pearl],[byrna]",
             "ow_swapped_14,ow_graveyard_ledge,pearl",
             "ow_swapped_14,ow_graveyard_tomb,pearl,lift2",
-            "ow_swapped_5b,aga2,ow_swapped_1d,[aga],[mirror]",
-            "ow_swapped_5b,aga2,ow_swapped_15,pearl,[flippers],[aga],[mirror]",
+            "ow_vanilla_1b,aga2,ow_swapped_1d,[aga],[mirror]",
+            "ow_vanilla_1b,aga2,ow_swapped_15,pearl,[flippers],[aga],[mirror]",
             "ow_swapped_1b,aga2,[aga],[mirror]",
-            "ow_swapped_58,ow_outcasts_hammer,pearl,hammer",
-            "ow_swapped_62,ow_hammerpegs,pearl,lift2",
-            "ow_swapped_62,ow_hammerpegs,pearl,[lift2],hookshot" //TODO: Revisit with bombbag mode, this requires bombs or sword
+            "ow_vanilla_18,ow_outcasts_hammer,pearl,hammer",
+            "ow_vanilla_22,ow_hammerpegs,pearl,lift2",
+            "ow_vanilla_22,ow_hammerpegs,pearl,[lift2],hookshot" //TODO: Revisit with bombbag mode, this requires bombs or sword
         ],
         "children": [
             {
@@ -1906,9 +1906,9 @@
         "access_rules": [
             "@WDW Regions",
             "@SDW Regions",
-            "ow_swapped_5b,aga2,ow_swapped_2d,[aga],[mirror]",
-            "ow_swapped_5b,aga2,hammer,[aga],[mirror]",
-            "ow_swapped_5b,aga2,ow_swapped_35,pearl,[flippers],[aga],[mirror]",
+            "ow_vanilla_1b,aga2,ow_swapped_2d,[aga],[mirror]",
+            "ow_vanilla_1b,aga2,hammer,[aga],[mirror]",
+            "ow_vanilla_1b,aga2,ow_swapped_35,pearl,[flippers],[aga],[mirror]",
             "ow_swapped_1b,aga2,[aga],[mirror]",
             "ow_swapped_30,ow_desert_back,pearl,lift1",
             "ow_swapped_30,@Free Flute,lift2",
@@ -1957,7 +1957,7 @@
         "name": "EDW Entry",
         "access_rules": [
             "@EDW Regions",
-            "ow_swapped_5b,aga2,[aga],[mirror]",
+            "ow_vanilla_1b,aga2,[aga],[mirror]",
             "ow_swapped_1b,aga2,pearl,lift1,[aga],[mirror]",
             "ow_swapped_1b,ow_castle_ledge,pearl,lift1",
             "ow_swapped_1b,ow_castle_courtyard,pearl,lift1",
@@ -2076,7 +2076,7 @@
         "access_rules": [
             "@SEDW Regions",
             "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_35,pearl,flippers",
-            "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_swapped_55,ow_swapped_7f,pearl,flippers"
+            "whirlpool_shuffle_off,ow_swapped_0f,ow_zora_waterfall_fairy,ow_vanilla_15,ow_vanilla_3f,pearl,flippers"
         ],
         "children": [
             {
@@ -2118,7 +2118,7 @@
         "access_rules": [
             "@LDW Regions",
             "flute_shuffle_off,@Free Flute,ow_swapped_35,[flippers],lift2,pearl",
-            "flute_shuffle_off,ow_swapped_58,@WLW Entry,flute,ow_swapped_35,[flippers],lift2,pearl",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Entry,flute,ow_swapped_35,[flippers],lift2,pearl",
             "flute_shuffle_off,ow_swapped_18,@WDW Regions,pearl,flute,ow_swapped_35,[flippers],lift2,pearl"
         ],
         "children": [
@@ -2405,7 +2405,7 @@
             "@NEDW Entry To SLW",
             "@SEDW Entry To SLW",
             "@LDW Entry To SLW",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Entry,pearl,flute"
         ],
         "children": [
@@ -2467,7 +2467,7 @@
             "@NEDW Entry To ELW",
             "@LDW Entry To ELW",
             "@ZDW Entry To ELW",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Entry,pearl,flute"
         ],
         "children": [
@@ -2537,7 +2537,7 @@
             "@LDW Entry To NELW",
             "@ZDW Entry To NELW",
             "@EDDM Bottom Entry To NELW",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Entry,pearl,flute"
         ],
         "children": [
@@ -2591,7 +2591,7 @@
             "@SEDW Entry To SELW",
             "@LDW Entry To SELW",
             "@ZDW Entry To SELW",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,ow_swapped_18,@WDW Entry,pearl,flute"
         ],
         "children": [
@@ -2731,7 +2731,7 @@
             "@WDDM Top Entry To WDM",
             "@WDDM Bottom Entry To WDM Top",
             "@EDDM Top Entry To WDM",
-            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,inverted_new,ow_swapped_03,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_18,@WDW Entry,pearl,flute",
             "flute_shuffle_off,inverted_new,ow_swapped_03,ow_swapped_18,@WDW Access,pearl,flute" //Intentional Reverse Reference
         ],
@@ -2750,7 +2750,7 @@
             "@WLW Access To WDM",
             "@EDM Bottom Entry To WDM",
             "@WDDM Bottom Entry To WDM",
-            "flute_shuffle_off,ow_swapped_58,@WLW Access,flute",
+            "flute_shuffle_off,ow_vanilla_18,@WLW Access,flute",
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Entry,pearl,flute",
             "flute_shuffle_off,inverted_orig,ow_swapped_18,@WDW Access,pearl,flute" //Intentional Reverse Reference
         ],
@@ -3691,7 +3691,7 @@
         "name": "Flute Access",
         "access_rules": [
             "@Free Flute",
-            "ow_swapped_58,@Northwest Light World,flute",
+            "ow_vanilla_18,@Northwest Light World,flute",
             "ow_swapped_18,inverted_orig,@Northwest Dark World,pearl,flute"
         ]
     }

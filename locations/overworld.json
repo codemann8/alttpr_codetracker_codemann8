@@ -23,14 +23,14 @@
                 "x": 83,
                 "y": 50,
                 "badge_size": 100,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_00" ]
             },
             {
                 "map": "lightworld",
                 "x": 83,
                 "y": 53,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_00" ]
             },
             {
                 "map": "darkworld",
@@ -54,7 +54,7 @@
             {
                 "name": "Shroom",
                 "access_rules": [
-                    "ow_swapped_40",
+                    "ow_vanilla_00",
                     "pearl",
                     "glitch_mode_major,bottle",
                     "{ow_swapped_00}"
@@ -68,14 +68,14 @@
                 "map": "lightworld",
                 "x": 250,
                 "y": 180,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_00" ]
             },
             {
                 "map": "lightworld",
                 "x": 250,
                 "y": 180,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_00" ]
             },
             {
                 "map": "darkworld",
@@ -96,7 +96,7 @@
         "name": "Lost Woods Hideout Tree",
         "parent": "OW Lost Woods East",
         "access_rules": [
-            "ow_swapped_40",
+            "ow_vanilla_00",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -118,14 +118,14 @@
                 "map": "lightworld",
                 "x": 311,
                 "y": 290,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_00" ]
             },
             {
                 "map": "lightworld",
                 "x": 308,
                 "y": 290,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_00" ]
             },
             {
                 "map": "darkworld",
@@ -161,14 +161,14 @@
                 "map": "lightworld",
                 "x": 844,
                 "y": 38,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_03" ]
             },
             {
                 "map": "lightworld",
                 "x": 844,
                 "y": 38,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_03" ]
             },
             {
                 "map": "darkworld",
@@ -192,9 +192,9 @@
             {
                 "name": "Up On Top",
                 "access_rules": [
-                    "ow_swapped_43,mirror",
+                    "ow_vanilla_03,mirror",
                     "ow_swapped_03,@OW Death Mountain West Top",
-                    "ow_swapped_43,glitch_mode_owg,boots",
+                    "ow_vanilla_03,glitch_mode_owg,boots",
                     "glitch_mode_owg,pearl,boots",
                     "glitch_mode_major",
                     "{}"
@@ -213,14 +213,14 @@
                 "map": "lightworld",
                 "x": 980,
                 "y": 198,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_03" ]
             },
             {
                 "map": "lightworld",
                 "x": 1034,
                 "y": 160,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_03" ]
             },
             {
                 "map": "darkworld",
@@ -244,9 +244,9 @@
             {
                 "name": "Island",
                 "access_rules": [
-                    "ow_swapped_45,@OW Dark Death Mountain East Top,entrance_shuffle_minor,pearl,lift1,bombs,mirror",
-                    "ow_swapped_45,ow_ddm_floating,mirror",
-                    "ow_swapped_45,glitch_mode_owg,boots",
+                    "ow_vanilla_05,@OW Dark Death Mountain East Top,entrance_shuffle_minor,pearl,lift1,bombs,mirror",
+                    "ow_vanilla_05,ow_ddm_floating,mirror",
+                    "ow_vanilla_05,glitch_mode_owg,boots",
                     "ow_swapped_05,glitch_mode_none",
                     "ow_swapped_05,inverted_orig,glitch_mode_owg",
                     "ow_swapped_05,inverted_new,glitch_mode_owg,pearl,boots",
@@ -262,21 +262,21 @@
                 "map": "lightworld",
                 "x": 1627,
                 "y": 40,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_05" ]
             },
             {
                 "map": "lightworld",
                 "x": 1627,
                 "y": 40,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_45" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_05" ]
             },
             {
                 "map": "darkworld",
                 "x": 1627,
                 "y": 40,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_45,glitch_mode_none" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_vanilla_05,glitch_mode_none" ]
             },
 
             {
@@ -298,7 +298,7 @@
         "name": "Death Mountain Bonk Rocks",
         "parent": "OW Death Mountain East Top",
         "access_rules": [
-            "ow_swapped_45",
+            "ow_vanilla_05",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -320,14 +320,14 @@
                 "map": "lightworld",
                 "x": 1652,
                 "y": 115,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_45" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_05" ]
             },
             {
                 "map": "lightworld",
                 "x": 1652,
                 "y": 110,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_45" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_05" ]
             },
             {
                 "map": "darkworld",
@@ -348,7 +348,7 @@
         "name": "Mountain Entry Pull Tree",
         "parent": "OW Mountain Entry",
         "access_rules": [
-            "ow_swapped_4a",
+            "ow_vanilla_0a",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -370,14 +370,14 @@
                 "map": "lightworld",
                 "x": 612,
                 "y": 322,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_0a" ]
             },
             {
                 "map": "lightworld",
                 "x": 612,
                 "y": 308,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_0a" ]
             },
             {
                 "map": "darkworld",
@@ -398,7 +398,7 @@
         "name": "Mountain Entry Southeast Tree",
         "parent": "OW Mountain Entry",
         "access_rules": [
-            "ow_swapped_4a",
+            "ow_vanilla_0a",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -420,14 +420,14 @@
                 "map": "lightworld",
                 "x": 698,
                 "y": 455,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_0a" ]
             },
             {
                 "map": "lightworld",
                 "x": 698,
                 "y": 455,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_0a" ]
             },
             {
                 "map": "darkworld",
@@ -456,7 +456,7 @@
                 "name": "Ledge",
                 "access_rules": [
                     "[flippers]",
-                    "ow_swapped_4f,glitch_mode_owg,boots",
+                    "ow_vanilla_0f,glitch_mode_owg,boots",
                     "glitch_mode_owg,pearl,boots",
                     "glitch_mode_major",
                     "{}"
@@ -470,27 +470,27 @@
                 "map": "lightworld",
                 "x": 1920,
                 "y": 243,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_vanilla_0f" ]
             },
             {
                 "map": "lightworld",
                 "x": 1920,
                 "y": 243,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_vanilla_0f" ]
             },
             {
                 "map": "lightworld",
                 "x": 1924,
                 "y": 213,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_vanilla_0f" ]
             },
             {
                 "map": "lightworld",
                 "x": 1924,
                 "y": 223,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_vanilla_0f" ]
             },
             {
                 "map": "darkworld",
@@ -524,7 +524,7 @@
         "name": "Lost Woods Pass West Tree",
         "parent": "OW Lost Woods Pass West",
         "access_rules": [
-            "ow_swapped_50",
+            "ow_vanilla_10",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -546,14 +546,14 @@
                 "map": "lightworld",
                 "x": 55,
                 "y": 596,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_50" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_10" ]
             },
             {
                 "map": "lightworld",
                 "x": 55,
                 "y": 596,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_50" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_10" ]
             },
             {
                 "map": "darkworld",
@@ -574,7 +574,7 @@
         "name": "Kakariko Portal Tree",
         "parent": "OW Lost Woods Pass East Top",
         "access_rules": [
-            "ow_swapped_50",
+            "ow_vanilla_10",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -596,14 +596,14 @@
                 "map": "lightworld",
                 "x": 180,
                 "y": 619,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_50" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_10" ]
             },
             {
                 "map": "lightworld",
                 "x": 180,
                 "y": 619,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_50" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_10" ]
             },
             {
                 "map": "darkworld",
@@ -624,7 +624,7 @@
         "name": "Fortune Bonk Rocks",
         "parent": "OW Kakariko Fortune",
         "access_rules": [
-            "ow_swapped_51",
+            "ow_vanilla_11",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -646,14 +646,14 @@
                 "map": "lightworld",
                 "x": 314,
                 "y": 627,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_51" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_11" ]
             },
             {
                 "map": "lightworld",
                 "x": 308,
                 "y": 627,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_51" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_11" ]
             },
             {
                 "map": "darkworld",
@@ -674,7 +674,7 @@
         "name": "Kakariko Pond Tree",
         "parent": "OW Kakariko Pond",
         "access_rules": [
-            "ow_swapped_52",
+            "ow_vanilla_12",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -696,14 +696,14 @@
                 "map": "lightworld",
                 "x": 659,
                 "y": 590,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_52" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_12" ]
             },
             {
                 "map": "lightworld",
                 "x": 659,
                 "y": 590,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_52" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_12" ]
             },
             {
                 "map": "darkworld",
@@ -724,7 +724,7 @@
         "name": "Bonk Rocks Tree",
         "parent": "OW Bonk Rocks",
         "access_rules": [
-            "ow_swapped_53",
+            "ow_vanilla_13",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -746,20 +746,20 @@
                 "map": "lightworld",
                 "x": 842,
                 "y": 618,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_vanilla_13" ]
             },
             {
                 "map": "lightworld",
                 "x": 838,
                 "y": 618,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_vanilla_13" ]
             },
             {
                 "map": "lightworld",
                 "x": 856,
                 "y": 616,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_13" ]
             },
             {
                 "map": "darkworld",
@@ -786,7 +786,7 @@
         "name": "Sanctuary Tree",
         "parent": "OW Sanctuary",
         "access_rules": [
-            "ow_swapped_53",
+            "ow_vanilla_13",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -808,14 +808,14 @@
                 "map": "lightworld",
                 "x": 941,
                 "y": 640,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_13" ]
             },
             {
                 "map": "lightworld",
                 "x": 941,
                 "y": 612,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_13" ]
             },
             {
                 "map": "darkworld",
@@ -836,7 +836,7 @@
         "name": "River Bend West Tree",
         "parent": "OW River Bend West",
         "access_rules": [
-            "ow_swapped_55",
+            "ow_vanilla_15",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -858,14 +858,14 @@
                 "map": "lightworld",
                 "x": 1296,
                 "y": 706,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_15" ]
             },
             {
                 "map": "lightworld",
                 "x": 1290,
                 "y": 714,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
@@ -886,7 +886,7 @@
         "name": "River Bend East Tree",
         "parent": "OW River Bend East",
         "access_rules": [
-            "ow_swapped_55",
+            "ow_vanilla_15",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -908,20 +908,20 @@
                 "map": "lightworld",
                 "x": 1456,
                 "y": 619,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_vanilla_15" ]
             },
             {
                 "map": "lightworld",
                 "x": 1418,
                 "y": 619,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_vanilla_15" ]
             },
             {
                 "map": "lightworld",
                 "x": 1440,
                 "y": 619,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
@@ -958,14 +958,14 @@
                 "map": "lightworld",
                 "x": 186,
                 "y": 940,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_18" ]
             },
             {
                 "map": "lightworld",
                 "x": 186,
                 "y": 933,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_18" ]
             },
             {
                 "map": "darkworld",
@@ -989,7 +989,7 @@
             {
                 "name": "Activate Flute",
                 "access_rules": [
-                    "ow_swapped_58,flute",
+                    "ow_vanilla_18,flute",
                     "pearl,flute"
                 ],
                 "chest_unopened_img": "images/items/flute.png",
@@ -1003,7 +1003,7 @@
                 "x": 256,
                 "y": 964,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_swapped_58,flute" ],
+                "restrict_visibility_rules": [ "ow_vanilla_18,flute" ],
                 "force_invisibility_rules": [ "activated_flute" ]
             },
             {
@@ -1020,7 +1020,7 @@
         "name": "Blinds Hideout Tree",
         "parent": "OW Kakariko Village",
         "access_rules": [
-            "ow_swapped_58",
+            "ow_vanilla_18",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1042,14 +1042,14 @@
                 "map": "lightworld",
                 "x": 178,
                 "y": 840,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_18" ]
             },
             {
                 "map": "lightworld",
                 "x": 168,
                 "y": 805,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_18" ]
             },
             {
                 "map": "darkworld",
@@ -1070,7 +1070,7 @@
         "name": "Kakariko Welcome Tree",
         "parent": "OW Kakariko Village",
         "access_rules": [
-            "ow_swapped_58",
+            "ow_vanilla_18",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1092,14 +1092,14 @@
                 "map": "lightworld",
                 "x": 416,
                 "y": 1152,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_18" ]
             },
             {
                 "map": "lightworld",
                 "x": 423,
                 "y": 1152,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_18" ]
             },
             {
                 "map": "darkworld",
@@ -1120,7 +1120,7 @@
         "name": "Forgotten Forest Trees",
         "parent": "OW Forgotten Forest",
         "access_rules": [
-            "ow_swapped_5a",
+            "ow_vanilla_1a",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1143,14 +1143,14 @@
                 "map": "lightworld",
                 "x": 584,
                 "y": 913,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1a" ]
             },
             {
                 "map": "lightworld",
                 "x": 584,
                 "y": 913,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1a" ]
             },
             {
                 "map": "darkworld",
@@ -1171,7 +1171,7 @@
         "name": "Hyrule Castle Tree",
         "parent": "OW Castle Courtyard",
         "access_rules": [
-            "ow_swapped_5b",
+            "ow_vanilla_1b",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1193,14 +1193,14 @@
                 "map": "lightworld",
                 "x": 913,
                 "y": 909,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 925,
                 "y": 900,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1b" ]
             },
             {
                 "map": "darkworld",
@@ -1221,7 +1221,7 @@
         "name": "Wooden Bridge Tree",
         "parent": "OW Wooden Bridge",
         "access_rules": [
-            "ow_swapped_5d",
+            "ow_vanilla_1d",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1243,14 +1243,14 @@
                 "map": "lightworld",
                 "x": 1341,
                 "y": 820,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5d" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1d" ]
             },
             {
                 "map": "lightworld",
                 "x": 1341,
                 "y": 830,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5d" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1d" ]
             },
             {
                 "map": "darkworld",
@@ -1271,7 +1271,7 @@
         "name": "Eastern Palace Tree",
         "parent": "OW Eastern Palace",
         "access_rules": [
-            "ow_swapped_5e",
+            "ow_vanilla_1e",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1293,14 +1293,14 @@
                 "map": "lightworld",
                 "x": 1796,
                 "y": 1184,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1e" ]
             },
             {
                 "map": "lightworld",
                 "x": 1796,
                 "y": 1184,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1e" ]
             },
             {
                 "map": "darkworld",
@@ -1321,7 +1321,7 @@
         "name": "Race Game",
         "parent": "OW Race Game",
         "access_rules": [
-            "ow_swapped_68",
+            "ow_vanilla_28",
             "pearl",
             "glitch_mode_major",
             "{}"
@@ -1344,14 +1344,14 @@
                 "map": "lightworld",
                 "x": 80,
                 "y": 1380,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_68" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_28" ]
             },
             {
                 "map": "lightworld",
                 "x": 80,
                 "y": 1386,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_68" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_28" ]
             },
             {
                 "map": "darkworld",
@@ -1373,7 +1373,7 @@
         "short_name": "Dig Spot",
         "parent": "OW Flute Boy",
         "access_rules": [
-            "ow_swapped_6a",
+            "ow_vanilla_2a",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1389,14 +1389,14 @@
                 "map": "lightworld",
                 "x": 590,
                 "y": 1330,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2a" ]
             },
             {
                 "map": "lightworld",
                 "x": 585,
                 "y": 1320,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2a" ]
             },
             {
                 "map": "darkworld",
@@ -1417,7 +1417,7 @@
         "name": "Flute Boy Trees",
         "parent": "OW Flute Boy",
         "access_rules": [
-            "ow_swapped_6a",
+            "ow_vanilla_2a",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1440,14 +1440,14 @@
                 "map": "lightworld",
                 "x": 652,
                 "y": 1417,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2a" ]
             },
             {
                 "map": "lightworld",
                 "x": 652,
                 "y": 1427,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2a" ]
             },
             {
                 "map": "darkworld",
@@ -1468,7 +1468,7 @@
         "name": "Central Bonk Rocks Tree",
         "parent": "OW Central Bonk Rocks",
         "access_rules": [
-            "ow_swapped_6b",
+            "ow_vanilla_2b",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1490,14 +1490,14 @@
                 "map": "lightworld",
                 "x": 908,
                 "y": 1376,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2b" ]
             },
             {
                 "map": "lightworld",
                 "x": 916,
                 "y": 1396,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2b" ]
             },
             {
                 "map": "darkworld",
@@ -1528,27 +1528,27 @@
                 "map": "lightworld",
                 "x": 1390,
                 "y": 1394,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_6d" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_vanilla_2d" ]
             },
             {
                 "map": "lightworld",
                 "x": 1390,
                 "y": 1390,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_swapped_6d" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_vanilla_2d" ]
             },
             {
                 "map": "lightworld",
                 "x": 1375,
                 "y": 1394,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_swapped_6d" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_vanilla_2d" ]
             },
             {
                 "map": "lightworld",
                 "x": 1382,
                 "y": 1390,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_swapped_6d" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_vanilla_2d" ]
             },
             {
                 "map": "darkworld",
@@ -1582,7 +1582,7 @@
         "name": "Tree Line Trees",
         "parent": "OW Tree Line",
         "access_rules": [
-            "ow_swapped_6e",
+            "ow_vanilla_2e",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1605,14 +1605,14 @@
                 "map": "lightworld",
                 "x": 1630,
                 "y": 1348,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2e" ]
             },
             {
                 "map": "lightworld",
                 "x": 1630,
                 "y": 1353,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2e" ]
             },
             {
                 "map": "darkworld",
@@ -1648,14 +1648,14 @@
                 "map": "lightworld",
                 "x": 40,
                 "y": 1835,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 40,
                 "y": 1835,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_30" ]
             },
             {
                 "map": "darkworld",
@@ -1691,34 +1691,34 @@
                 "map": "lightworld",
                 "x": 448,
                 "y": 1852,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_minor,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 448,
                 "y": 1852,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "ow_layout_off,entrance_shuffle_all,ow_vanilla_30" ]
             },
             {
                 "map": "darkworld",
                 "x": 540,
                 "y": 1885,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_layout_off,glitch_mode_none,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "ow_layout_off,glitch_mode_none,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 448,
                 "y": 1808,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_minor,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 448,
                 "y": 1820,
                 "size": 64,
-                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "ow_layout_on,entrance_shuffle_all,ow_vanilla_30" ]
             },
             
             {
@@ -1753,7 +1753,7 @@
         "name": "Flute Boy Approach Trees",
         "parent": "OW Cave 45",
         "access_rules": [
-            "ow_swapped_72",
+            "ow_vanilla_32",
             "pearl",
             "glitch_mode_major,bottle"
         ],
@@ -1776,14 +1776,14 @@
                 "map": "lightworld",
                 "x": 702,
                 "y": 1641,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_72" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_32" ]
             },
             {
                 "map": "lightworld",
                 "x": 702,
                 "y": 1641,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_72" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_32" ]
             },
             {
                 "map": "darkworld",
@@ -1816,7 +1816,7 @@
                 "x": 880,
                 "y": 1860,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_7b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_3b" ]
             },
             {
                 "map": "darkworld",
@@ -1834,11 +1834,11 @@
             {
                 "name": "Island",
                 "access_rules": [
-                    "ow_swapped_75,@OW Ice Lake Water,pearl,flippers,mirror",
+                    "ow_vanilla_35,@OW Ice Lake Water,pearl,flippers,mirror",
                     "ow_swapped_35,inverted_orig,@OW Lake Hylia Water",
                     "ow_swapped_35,inverted_new,glitch_mode_none,@OW Lake Hylia Water",
-                    "ow_swapped_75,@South Light World,glitch_mode_owg,boots",
-                    "ow_swapped_75,@South Light World,glitch_mode_major",
+                    "ow_vanilla_35,@South Light World,glitch_mode_owg,boots",
+                    "ow_vanilla_35,@South Light World,glitch_mode_major",
                     "ow_swapped_35,@South Dark World,glitch_mode_owg,pearl,boots",
                     "ow_swapped_35,@South Dark World,glitch_mode_major",
                     "{}"
@@ -1852,21 +1852,21 @@
                 "map": "lightworld",
                 "x": 1450,
                 "y": 1666,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_35" ]
             },
             {
                 "map": "darkworld",
                 "x": 1450,
                 "y": 1676,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_layout_off,glitch_mode_none,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "ow_layout_off,glitch_mode_none,ow_vanilla_35" ]
             },
             {
                 "map": "lightworld",
                 "x": 1450,
                 "y": 1666,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_35" ]
             },
 
             {
@@ -1925,14 +1925,14 @@
                 "map": "darkworld",
                 "x": 569,
                 "y": 162,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_42" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_02" ]
             },
             {
                 "map": "darkworld",
                 "x": 569,
                 "y": 172,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_42" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_02" ]
             }
         ]
     },
@@ -1951,14 +1951,14 @@
                 "map": "darkworld",
                 "x": 669,
                 "y": 315,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_0a" ]
             },
             {
                 "map": "darkworld",
                 "x": 669,
                 "y": 315,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_0a" ]
             },
             {
                 "map": "darkworld",
@@ -2002,14 +2002,14 @@
                 "map": "darkworld",
                 "x": 1820,
                 "y": 347,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_0f" ]
             },
             {
                 "map": "darkworld",
                 "x": 1813,
                 "y": 347,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_4f" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_0f" ]
             },
             {
                 "map": "lightworld",
@@ -2066,14 +2066,14 @@
                 "map": "darkworld",
                 "x": 314,
                 "y": 627,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_51" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_11" ]
             },
             {
                 "map": "darkworld",
                 "x": 308,
                 "y": 627,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_51" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_11" ]
             }
         ]
     },
@@ -2117,14 +2117,14 @@
                 "map": "darkworld",
                 "x": 1121,
                 "y": 616,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_54" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_14" ]
             },
             {
                 "map": "darkworld",
                 "x": 1121,
                 "y": 606,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_54" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_14" ]
             }
         ]
     },
@@ -2167,14 +2167,14 @@
                 "map": "darkworld",
                 "x": 1340,
                 "y": 680,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
                 "x": 1340,
                 "y": 690,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_15" ]
             }
         ]
     },
@@ -2223,20 +2223,20 @@
                 "map": "darkworld",
                 "x": 1456,
                 "y": 619,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_off,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
                 "x": 1418,
                 "y": 619,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_layout_on,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
                 "x": 1440,
                 "y": 619,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_55" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_15" ]
             }
         ]
     },
@@ -2279,14 +2279,14 @@
                 "map": "darkworld",
                 "x": 1587,
                 "y": 602,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_56" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_16" ]
             },
             {
                 "map": "darkworld",
                 "x": 1567,
                 "y": 612,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_56" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_16" ]
             }
         ]
     },
@@ -2304,14 +2304,14 @@
                 "map": "darkworld",
                 "x": 1164,
                 "y": 922,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1b" ]
             },
             {
                 "map": "darkworld",
                 "x": 1164,
                 "y": 922,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
@@ -2367,14 +2367,14 @@
                 "map": "darkworld",
                 "x": 933,
                 "y": 1086,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1b" ]
             },
             {
                 "map": "darkworld",
                 "x": 933,
                 "y": 1086,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1b" ]
             }
         ]
     },
@@ -2417,14 +2417,14 @@
                 "map": "darkworld",
                 "x": 1882,
                 "y": 1128,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1e" ]
             },
             {
                 "map": "darkworld",
                 "x": 1882,
                 "y": 1128,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1e" ]
             }
         ]
     },
@@ -2447,14 +2447,14 @@
                 "map": "darkworld",
                 "x": 100,
                 "y": 1385,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_68" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_28" ]
             },
             {
                 "map": "darkworld",
                 "x": 100,
                 "y": 1385,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_68" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_28" ]
             },
             {
                 "map": "lightworld",
@@ -2479,7 +2479,7 @@
             "pearl,lift2",
             "ow_swapped_29,lift2",
             "ow_swapped_29,@OW Kakariko Suburb,mirror",
-            "ow_swapped_69,glitch_mode_owg,pearl,boots,mirror,[lift2]",
+            "ow_vanilla_29,glitch_mode_owg,pearl,boots,mirror,[lift2]",
             "glitch_mode_owg,pearl,boots,bottle,[lift2]",
             "ow_swapped_29,glitch_mode_owg,boots,bottle,[lift2]",
             "glitch_mode_major,bottle"
@@ -2499,20 +2499,20 @@
                 "map": "lightworld",
                 "x": 616,
                 "y": 1054,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_62" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_22" ]
             },
             {
                 "map": "darkworld",
                 "x": 295,
                 "y": 1325,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_69" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_29" ]
             },
             {
                 "map": "darkworld",
                 "x": 295,
                 "y": 1325,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_69" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_29" ]
             },
 
             {
@@ -2553,27 +2553,27 @@
                 "map": "lightworld",
                 "x": 680,
                 "y": 1805,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_7a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_3a" ]
             },
             {
                 "map": "darkworld",
                 "x": 601,
                 "y": 1050,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_62" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_22" ]
             },
             {
                 "map": "lightworld",
                 "x": 680,
                 "y": 1805,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_7a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_3a" ]
             },
             {
                 "map": "darkworld",
                 "x": 601,
                 "y": 1050,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_62" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_22" ]
             },
 
             {
@@ -2618,14 +2618,14 @@
                 "map": "darkworld",
                 "x": 622,
                 "y": 1383,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2a" ]
             },
             {
                 "map": "darkworld",
                 "x": 622,
                 "y": 1383,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6a" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2a" ]
             },
             {
                 "map": "lightworld",
@@ -2682,14 +2682,14 @@
                 "map": "darkworld",
                 "x": 1630,
                 "y": 1348,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_6e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_2e" ]
             },
             {
                 "map": "darkworld",
                 "x": 1630,
                 "y": 1353,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_6e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_2e" ]
             }
         ]
     },
@@ -2732,14 +2732,14 @@
                 "map": "darkworld",
                 "x": 1113,
                 "y": 1652,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_74" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_34" ]
             },
             {
                 "map": "darkworld",
                 "x": 1113,
                 "y": 1662,
                 "size": 64,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_74" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_34" ]
             }
         ]
     },
@@ -2751,8 +2751,8 @@
             "inverted_orig,world_state_open,@OW Dark Death Mountain West Top",
             "inverted_orig,world_state_inverted,@OW Castle Ledge",
             
-            "inverted_new,ow_swapped_43,@OW Dark Death Mountain West Top",
-            "inverted_new,ow_swapped_03,ow_swapped_5b,@OW Dark Death Mountain West Top",
+            "inverted_new,ow_vanilla_03,@OW Dark Death Mountain West Top",
+            "inverted_new,ow_swapped_03,ow_vanilla_1b,@OW Dark Death Mountain West Top",
             "inverted_new,ow_swapped_03,ow_swapped_1b,@OW Castle Ledge"
         ],
         "sections": [
@@ -2769,7 +2769,7 @@
                 "x": 1046,
                 "y": 89,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_swapped_43,gt_crystals_unknown" ]
+                "restrict_visibility_rules": [ "ow_vanilla_03,gt_crystals_unknown" ]
             },
             {
                 "map": "darkworld",
@@ -2783,7 +2783,7 @@
                 "x": 1046,
                 "y": 89,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_swapped_03,ow_swapped_5b,gt_crystals_unknown" ]
+                "restrict_visibility_rules": [ "ow_swapped_03,ow_vanilla_1b,gt_crystals_unknown" ]
             }
         ]
     },
@@ -2791,7 +2791,7 @@
         "name": "Ganon Sign",
         "parent": "Dark World Color",
         "access_rules": [
-            "ow_swapped_5b,@OW Pyramid",
+            "ow_vanilla_1b,@OW Pyramid",
             "ow_swapped_1b,@OW Castle Ledge"
         ],
         "sections": [
@@ -2808,7 +2808,7 @@
                 "x": 940,
                 "y": 880,
                 "size": 48,
-                "restrict_visibility_rules": [ "ow_swapped_5b,goal_ganon_unknown" ]
+                "restrict_visibility_rules": [ "ow_vanilla_1b,goal_ganon_unknown" ]
             },
             {
                 "map": "darkworld",

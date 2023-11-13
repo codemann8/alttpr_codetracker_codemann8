@@ -42,7 +42,7 @@ function updateRoomLocation(segment, location, offset)
             if (roomData & (1 << slot[2])) ~= 0 then
                 clearedCount = clearedCount + 1
             elseif OBJ_ENTRANCE:getState() < 2 and OBJ_RACEMODE:getState() == 0 and slot[3] and roomData & slot[3] ~= 0 then
-                if #location < 3 or Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", (location[3] + 0x40) % 0x80)).ItemState:getState() == 0 or Tracker:FindObjectForCode("pearl").Active then
+                if #location < 3 or Tracker:FindObjectForCode("ow_slot_" .. string.format("%02x", (location[3] + 0x40) % 0x80)).ItemState:getState() == 0 or Tracker:FindObjectForCode("pearl").Active then
                     clearedCount = clearedCount + 1
                 end
             end

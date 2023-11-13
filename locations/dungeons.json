@@ -4,7 +4,7 @@
         "name": "HC Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "ow_swapped_5b,@OW Castle Courtyard",
+            "ow_vanilla_1b,@OW Castle Courtyard",
             "ow_swapped_1b,@OW Castle Courtyard,[pearl]",
             "ow_swapped_1b,glitch_mode_owg,@OW Castle Courtyard",
             "entrance_shuffle_on"
@@ -14,7 +14,7 @@
         "name": "HC Sanc Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "ow_swapped_53,entrance_shuffle_minor,@OW Sanctuary",
+            "ow_vanilla_13,entrance_shuffle_minor,@OW Sanctuary",
             "ow_swapped_13,entrance_shuffle_minor,@OW Sanctuary,pearl",
             "ow_swapped_13,entrance_shuffle_minor,@OW Sanctuary,[pearl],mirror",
             "ow_swapped_13,entrance_shuffle_minor,glitch_mode_owg,door_shuffle_on,@OW Sanctuary",
@@ -25,7 +25,7 @@
         "name": "HC Sanc Drop Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "ow_swapped_54,entrance_shuffle_minor,@OW Graveyard,lift1",
+            "ow_vanilla_14,entrance_shuffle_minor,@OW Graveyard,lift1",
             "ow_swapped_14,entrance_shuffle_minor,@OW Graveyard,pearl,lift1",
             "entrance_shuffle_all"
         ]
@@ -34,7 +34,7 @@
         "name": "EP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_5e,@OW Eastern Palace",
+            "ow_vanilla_1e,@OW Eastern Palace",
             "ow_swapped_1e,@OW Eastern Palace,[pearl]",
             "ow_swapped_1e,glitch_mode_owg,@OW Eastern Palace",
             "entrance_shuffle_on"
@@ -44,8 +44,8 @@
         "name": "DP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_70,@OW Desert,book",
-            "ow_swapped_70,@OW Desert Ledge",
+            "ow_vanilla_30,@OW Desert,book",
+            "ow_vanilla_30,@OW Desert Ledge",
             "ow_swapped_30,@OW Desert,[pearl],book",
             "ow_swapped_30,@OW Desert Ledge,[pearl]",
             "ow_swapped_30,glitch_mode_owg,@OW Desert,book",
@@ -69,7 +69,7 @@
             {
                 "name": "Bunny Rules",
                 "access_rules": [
-                    "ow_swapped_70,pearl",
+                    "ow_vanilla_30,pearl",
                     "ow_swapped_30",
                     "glitch_mode_major,bottle"
                 ],
@@ -125,7 +125,7 @@
         "name": "ToH Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_43,@OW Death Mountain West Top",
+            "ow_vanilla_03,@OW Death Mountain West Top",
             "ow_swapped_03,@OW Death Mountain West Top,pearl",
             "ow_swapped_03,@OW Death Mountain West Top,glitch_mode_major,bottle",
             "ow_swapped_03,@OW Death Mountain West Top,[pearl],mirror,sword",
@@ -156,21 +156,21 @@
         "name": "AT Access",
         "parent": "Semi-Dungeon Color",
         "access_rules": [
-            "inverted_orig,ow_swapped_5b,@OW Castle Ledge,$canClearAgaTowerBarrier",
-            "inverted_orig,ow_swapped_5b,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
-            "inverted_orig,ow_swapped_5b,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
-            "inverted_orig,ow_swapped_5b,glitch_mode_major,@OW Kakariko Pond",
-            "inverted_orig,ow_swapped_5b,glitch_mode_major,@OW Castle Perimeter",
-            "inverted_new,ow_swapped_5b,@OW Castle Ledge,$canClearAgaTowerBarrier",
-            "inverted_new,ow_swapped_5b,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
-            "inverted_new,ow_swapped_5b,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
-            "inverted_new,ow_swapped_5b,glitch_mode_major,@OW Kakariko Pond",
-            "inverted_new,ow_swapped_5b,glitch_mode_major,@OW Castle Perimeter",
-            "inverted_new,ow_swapped_43,@OW Castle Ledge,$canClearAgaTowerBarrier",
-            "inverted_new,ow_swapped_43,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
-            "inverted_new,ow_swapped_43,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
-            "inverted_new,ow_swapped_43,glitch_mode_major,@OW Kakariko Pond",
-            "inverted_new,ow_swapped_43,glitch_mode_major,@OW Castle Perimeter",
+            "inverted_orig,ow_vanilla_1b,@OW Castle Ledge,$canClearAgaTowerBarrier",
+            "inverted_orig,ow_vanilla_1b,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
+            "inverted_orig,ow_vanilla_1b,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
+            "inverted_orig,ow_vanilla_1b,glitch_mode_major,@OW Kakariko Pond",
+            "inverted_orig,ow_vanilla_1b,glitch_mode_major,@OW Castle Perimeter",
+            "inverted_new,ow_vanilla_1b,@OW Castle Ledge,$canClearAgaTowerBarrier",
+            "inverted_new,ow_vanilla_1b,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
+            "inverted_new,ow_vanilla_1b,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
+            "inverted_new,ow_vanilla_1b,glitch_mode_major,@OW Kakariko Pond",
+            "inverted_new,ow_vanilla_1b,glitch_mode_major,@OW Castle Perimeter",
+            "inverted_new,ow_vanilla_03,@OW Castle Ledge,$canClearAgaTowerBarrier",
+            "inverted_new,ow_vanilla_03,glitch_mode_owg,@OW Kakariko Pond,boots,[$canClearAgaTowerBarrier]",
+            "inverted_new,ow_vanilla_03,glitch_mode_owg,@OW Castle Perimeter,boots,[$canClearAgaTowerBarrier]",
+            "inverted_new,ow_vanilla_03,glitch_mode_major,@OW Kakariko Pond",
+            "inverted_new,ow_vanilla_03,glitch_mode_major,@OW Castle Perimeter",
             
             "inverted_orig,ow_swapped_1b,@OW Dark Death Mountain West Top",
             "inverted_new,ow_swapped_1b,ow_swapped_03,@OW Dark Death Mountain West Top",
@@ -181,7 +181,7 @@
         "name": "PoD Special Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_5e,glitch_mode_hybrid,entrance_shuffle_off,@OW Death Mountain West Bottom",
+            "ow_vanilla_1e,glitch_mode_hybrid,entrance_shuffle_off,@OW Death Mountain West Bottom",
             "ow_swapped_1e,glitch_mode_hybrid,entrance_shuffle_off,@OW Death Mountain West Bottom,pearl",
             "glitch_mode_major,entrance_shuffle_off,@OW Death Mountain West Bottom"
         ]
@@ -190,9 +190,9 @@
         "name": "PoD Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_5e,@OW Palace of Darkness,pearl",
-            //"ow_swapped_5e,glitch_mode_owg,@OW Palace of Darkness,[pearl],bottle",
-            "ow_swapped_5e,glitch_mode_major,@OW Palace of Darkness,bottle",
+            "ow_vanilla_1e,@OW Palace of Darkness,pearl",
+            //"ow_vanilla_1e,glitch_mode_owg,@OW Palace of Darkness,[pearl],bottle",
+            "ow_vanilla_1e,glitch_mode_major,@OW Palace of Darkness,bottle",
             "ow_swapped_1e,@OW Palace of Darkness",
             "@PoD Special Access",
             "entrance_shuffle_on"
@@ -202,7 +202,7 @@
         "name": "SP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_7b,entrance_shuffle_off,@OW Swamp,mirror,pearl,flippers",
+            "ow_vanilla_3b,entrance_shuffle_off,@OW Swamp,mirror,pearl,flippers",
             "ow_swapped_3b,entrance_shuffle_off,@OW Dam,mirror,[pearl],flippers",
             "glitch_mode_owg,ow_swapped_3b,entrance_shuffle_off,@OW Dam,mirror,flippers",
             "door_shuffle_off,glitch_mode_hybrid,[flippers],[@OW Death Mountain West Bottom],[lamp],@MM Special Access/Left Side Access,[mm_bigkey]",
@@ -217,9 +217,9 @@
         "name": "SW Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_40,@OW Skull Woods Front,[pearl]",
-            "ow_swapped_40,@OW Skull Woods Back,[pearl]",
-            "ow_swapped_40,glitch_mode_owg,@OW Skull Woods Front",
+            "ow_vanilla_00,@OW Skull Woods Front,[pearl]",
+            "ow_vanilla_00,@OW Skull Woods Back,[pearl]",
+            "ow_vanilla_00,glitch_mode_owg,@OW Skull Woods Front",
             "ow_swapped_00,@OW Skull Woods Front",
             "ow_swapped_00,@OW Skull Woods Back",
             "entrance_shuffle_on"
@@ -229,9 +229,9 @@
         "name": "TT Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_58,@OW Village of Outcasts,pearl",
-            //"ow_swapped_58,glitch_mode_owg,@OW Village of Outcasts,[pearl],bottle",
-            "ow_swapped_58,glitch_mode_major,@OW Village of Outcasts,bottle",
+            "ow_vanilla_18,@OW Village of Outcasts,pearl",
+            //"ow_vanilla_18,glitch_mode_owg,@OW Village of Outcasts,[pearl],bottle",
+            "ow_vanilla_18,glitch_mode_major,@OW Village of Outcasts,bottle",
             "ow_swapped_18,@OW Village of Outcasts",
             "entrance_shuffle_on"
         ]
@@ -240,8 +240,8 @@
         "name": "IP Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_75,@OW Ice Lake Island,[pearl]",
-            "ow_swapped_75,glitch_mode_owg,@OW Ice Lake Island",
+            "ow_vanilla_35,@OW Ice Lake Island,[pearl]",
+            "ow_vanilla_35,glitch_mode_owg,@OW Ice Lake Island",
             "ow_swapped_35,@OW Ice Lake Island",
             "entrance_shuffle_on"
         ]
@@ -256,18 +256,18 @@
     {
         "name": "TR Main Entrance",
         "access_rules": [
-            "ow_swapped_47,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
-            "ow_swapped_47,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+            "ow_vanilla_07,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,tr_medallion",
+            "ow_vanilla_07,@OW Turtle Rock Pegs,lift2,hammer,pearl,$canUseMedallions,bombos,ether,quake",
             "ow_swapped_07,@OW Turtle Rock,$canUseMedallions,tr_medallion",
             "ow_swapped_07,@OW Turtle Rock,$canUseMedallions,bombos,ether,quake",
-            "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock Pegs,boots,hammer,pearl,$canUseMedallions,tr_medallion",
-            "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock Pegs,boots,hammer,pearl,$canUseMedallions,bombos,ether,quake",
-            "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock,pearl,boots,$canUseMedallions,tr_medallion",
-            "ow_swapped_47,glitch_mode_owg,@OW Turtle Rock,pearl,boots,$canUseMedallions,bombos,ether,quake",
-            "ow_swapped_47,glitch_mode_major,@OW Turtle Rock Pegs,hammer,pearl,$canUseMedallions,tr_medallion",
-            "ow_swapped_47,glitch_mode_major,@OW Turtle Rock Pegs,hammer,pearl,$canUseMedallions,bombos,ether,quake",
-            "ow_swapped_47,glitch_mode_major,@OW Turtle Rock,pearl,$canUseMedallions,tr_medallion",
-            "ow_swapped_47,glitch_mode_major,@OW Turtle Rock,pearl,$canUseMedallions,bombos,ether,quake",
+            "ow_vanilla_07,glitch_mode_owg,@OW Turtle Rock Pegs,boots,hammer,pearl,$canUseMedallions,tr_medallion",
+            "ow_vanilla_07,glitch_mode_owg,@OW Turtle Rock Pegs,boots,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+            "ow_vanilla_07,glitch_mode_owg,@OW Turtle Rock,pearl,boots,$canUseMedallions,tr_medallion",
+            "ow_vanilla_07,glitch_mode_owg,@OW Turtle Rock,pearl,boots,$canUseMedallions,bombos,ether,quake",
+            "ow_vanilla_07,glitch_mode_major,@OW Turtle Rock Pegs,hammer,pearl,$canUseMedallions,tr_medallion",
+            "ow_vanilla_07,glitch_mode_major,@OW Turtle Rock Pegs,hammer,pearl,$canUseMedallions,bombos,ether,quake",
+            "ow_vanilla_07,glitch_mode_major,@OW Turtle Rock,pearl,$canUseMedallions,tr_medallion",
+            "ow_vanilla_07,glitch_mode_major,@OW Turtle Rock,pearl,$canUseMedallions,bombos,ether,quake",
             "entrance_shuffle_on"
         ]
     },
@@ -334,9 +334,9 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "@GT Crystals",
-            "glitch_mode_owg,ow_swapped_43,pearl,boots",
-            "glitch_mode_owg,ow_swapped_5b,pearl,boots",
-            "glitch_mode_owg,ow_swapped_5b,ow_swapped_03,boots",
+            "glitch_mode_owg,ow_vanilla_03,pearl,boots",
+            "glitch_mode_owg,ow_vanilla_1b,pearl,boots",
+            "glitch_mode_owg,ow_vanilla_1b,ow_swapped_03,boots",
             "glitch_mode_major"
         ]
     },
@@ -344,8 +344,8 @@
         "name": "GT Access",
         "parent": "Dungeon Color",
         "access_rules": [
-            "ow_swapped_43,@OW Dark Death Mountain West Top,@GT Entry",
-            "inverted_new,ow_swapped_5b,@OW Dark Death Mountain West Top,@GT Entry",
+            "ow_vanilla_03,@OW Dark Death Mountain West Top,@GT Entry",
+            "inverted_new,ow_vanilla_1b,@OW Dark Death Mountain West Top,@GT Entry",
             
             "inverted_orig,ow_swapped_03,@OW Castle Ledge,@GT Entry",
             "inverted_new,ow_swapped_03,ow_swapped_1b,@OW Castle Ledge,@GT Entry",
@@ -494,21 +494,21 @@
                 "x": 925,
                 "y": 546,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_53" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_13" ]
             },
             {
                 "map": "lightworld",
                 "x": 1003,
                 "y": 912,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 1003,
                 "y": 952,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_1b" ]
             },
             {
                 "map": "darkworld",
@@ -536,7 +536,7 @@
                 "x": 963,
                 "y": 969,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1b" ]
             },
             {
                 "map": "darkworld",
@@ -655,14 +655,14 @@
                 "x": 1924,
                 "y": 775,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1e" ]
             },
             {
                 "map": "lightworld",
                 "x": 1924,
                 "y": 757,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1e" ]
             },
             {
                 "map": "darkworld",
@@ -737,9 +737,9 @@
             {
                 "name": "Back Lobby Key",
                 "access_rules": [
-                    "door_shuffle_off,ow_swapped_70,lift1",
+                    "door_shuffle_off,ow_vanilla_30,lift1",
                     "door_shuffle_off,pearl,lift1",
-                    "door_shuffle_off,ow_swapped_70,glitch_mode_owg,boots",
+                    "door_shuffle_off,ow_vanilla_30,glitch_mode_owg,boots",
                     "door_shuffle_off,glitch_mode_owg,pearl,boots",
                     "door_shuffle_off,glitch_mode_major",
                     "door_shuffle_on",
@@ -818,21 +818,21 @@
                 "x": 148,
                 "y": 1584,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 148,
                 "y": 1700,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
                 "x": 148,
                 "y": 1700,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_30" ]
             },
             {
                 "map": "darkworld",
@@ -943,21 +943,21 @@
                 "x": 1125,
                 "y": 58,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_03" ]
             },
             {
                 "map": "lightworld",
                 "x": 1125,
                 "y": 21,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_03" ]
             },
             {
                 "map": "lightworld",
                 "x": 1125,
                 "y": 4,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_03" ]
             },
             {
                 "map": "darkworld",
@@ -1087,21 +1087,21 @@
                 "x": 1003,
                 "y": 790,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 1003,
                 "y": 730,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 1043,
                 "y": 969,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1b" ]
             },
 
             {
@@ -1109,21 +1109,21 @@
                 "x": 1003,
                 "y": 790,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_43,ow_swapped_1b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_03,ow_swapped_1b" ]
             },
             {
                 "map": "darkworld",
                 "x": 1003,
                 "y": 730,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_43,ow_swapped_1b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_03,ow_swapped_1b" ]
             },
             {
                 "map": "darkworld",
                 "x": 1043,
                 "y": 978,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43,ow_swapped_1b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_03,ow_swapped_1b" ]
             },
 
             {
@@ -1323,14 +1323,14 @@
                 "x": 1924,
                 "y": 775,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_1e" ]
             },
             {
                 "map": "darkworld",
                 "x": 1924,
                 "y": 757,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_5e" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_1e" ]
             },
             {
                 "map": "lightworld",
@@ -1542,21 +1542,21 @@
                 "x": 940,
                 "y": 1860,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_7b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_3b" ]
             },
             {
                 "map": "darkworld",
                 "x": 940,
                 "y": 1822,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_7b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_3b" ]
             },
             {
                 "map": "darkworld",
                 "x": 940,
                 "y": 1804,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_7b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_3b" ]
             },
             {
                 "map": "lightworld",
@@ -1654,11 +1654,11 @@
             {
                 "name": "Bridge",
                 "access_rules": [
-                    "ow_swapped_40,pearl,firerod",
-                    "ow_swapped_40,entrance_shuffle_off,[pearl],boots,firerod,mirror",
-                    "ow_swapped_40,entrance_shuffle_off,[pearl],boots,firerod,bottle",
-                    "ow_swapped_40,glitch_mode_owg,entrance_shuffle_off,boots,firerod,mirror",
-                    "ow_swapped_40,glitch_mode_owg,entrance_shuffle_off,boots,firerod,bottle",
+                    "ow_vanilla_00,pearl,firerod",
+                    "ow_vanilla_00,entrance_shuffle_off,[pearl],boots,firerod,mirror",
+                    "ow_vanilla_00,entrance_shuffle_off,[pearl],boots,firerod,bottle",
+                    "ow_vanilla_00,glitch_mode_owg,entrance_shuffle_off,boots,firerod,mirror",
+                    "ow_vanilla_00,glitch_mode_owg,entrance_shuffle_off,boots,firerod,bottle",
                     "ow_swapped_00,firerod",
                     "door_shuffle_on",
                     "entrance_shuffle_on"
@@ -1717,21 +1717,21 @@
                 "x": 80,
                 "y": 100,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_00" ]
             },
             {
                 "map": "darkworld",
                 "x": 80,
                 "y": 55,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_00" ]
             },
             {
                 "map": "darkworld",
                 "x": 80,
                 "y": 38,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_40" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_00" ]
             },
             {
                 "map": "lightworld",
@@ -1901,21 +1901,21 @@
                 "x": 254,
                 "y": 971,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_18" ]
             },
             {
                 "map": "darkworld",
                 "x": 254,
                 "y": 920,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_18" ]
             },
             {
                 "map": "darkworld",
                 "x": 254,
                 "y": 904,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_58" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_18" ]
             },
             {
                 "map": "lightworld",
@@ -2184,21 +2184,21 @@
                 "x": 1600,
                 "y": 1728,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_35" ]
             },
             {
                 "map": "darkworld",
                 "x": 1600,
                 "y": 1682,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_35" ]
             },
             {
                 "map": "darkworld",
                 "x": 1600,
                 "y": 1664,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_75" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_35" ]
             },
             {
                 "map": "lightworld",
@@ -2394,14 +2394,14 @@
                 "x": 148,
                 "y": 1697,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_30" ]
             },
             {
                 "map": "darkworld",
                 "x": 148,
                 "y": 1700,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_70" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_30" ]
             },
             {
                 "map": "lightworld",
@@ -2434,7 +2434,7 @@
             {
                 "name": "Bunny Rules",
                 "access_rules": [
-                    "ow_swapped_45,ow_swapped_47,pearl",
+                    "ow_vanilla_05,ow_vanilla_07,pearl",
                     "ow_swapped_05",
                     "ow_swapped_07",
                     "glitch_mode_major,bottle",
@@ -2495,7 +2495,7 @@
                 "name": "Chain Chomp Pokey",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:1",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:1",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,tr_smallkey:1",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:1,[tr_smallkey:2]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Side Access,@TR Bridge Entrances,tr_smallkey:1,[tr_smallkey:5]",
@@ -2514,7 +2514,7 @@
                 "name": "Chain Chomp",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:1",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:2",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,tr_smallkey:2",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:2,[tr_smallkey:3]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Side Access,@TR Bridge Entrances",
@@ -2528,8 +2528,8 @@
             {
                 "name": "Lava Pokey",
                 "access_rules": [
-                    "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,pool_enemydrop_off,tr_smallkey:2",
-                    "@Turtle Rock/Dungeon Access,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,pool_enemydrop_on,tr_smallkey:3",
+                    "@Turtle Rock/Dungeon Access,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,pool_enemydrop_off,tr_smallkey:2",
+                    "@Turtle Rock/Dungeon Access,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,pool_enemydrop_on,tr_smallkey:3",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,[tr_smallkey:3]",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
@@ -2565,7 +2565,7 @@
                 "name": "Big Chest Room",
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,tr_smallkey:3",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4]",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off",
                     "@TR Side Access,@TR Bridge Entrances",
@@ -2599,9 +2599,9 @@
                 "access_rules": [
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_off,tr_smallkey:2,keysanity_bigkey_off",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3,tr_bigkey",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,tr_smallkey:3,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4],tr_bigkey",
-                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_swapped_45,ow_swapped_47,entrance_shuffle_off,tr_smallkey:3,keysanity_bigkey_off",
+                    "@Turtle Rock/Dungeon Access,pool_enemydrop_on,ow_vanilla_05,ow_vanilla_07,entrance_shuffle_off,tr_smallkey:3,keysanity_bigkey_off",
                     "@Turtle Rock/Dungeon Access,pool_enemydrop_on,tr_smallkey:3,[tr_smallkey:4],keysanity_bigkey_off",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,tr_bigkey",
                     "@Turtle Rock/Dungeon Access,keysanity_smallkey_off,keysanity_bigkey_off",
@@ -2717,14 +2717,14 @@
                 "x": 1890,
                 "y": 120,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_swapped_47" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_minor,ow_vanilla_07" ]
             },
             {
                 "map": "darkworld",
                 "x": 1890,
                 "y": 102,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_47" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_07" ]
             },
             {
                 "map": "lightworld",
@@ -3065,21 +3065,21 @@
                 "x": 1125,
                 "y": 58,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_vanilla_03" ]
             },
             {
                 "map": "darkworld",
                 "x": 1125,
                 "y": 21,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_vanilla_03" ]
             },
             {
                 "map": "darkworld",
                 "x": 1125,
                 "y": 4,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_43" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_vanilla_03" ]
             },
             
             {
@@ -3087,21 +3087,21 @@
                 "x": 1125,
                 "y": 58,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_03,ow_swapped_5b"  ]
+                "restrict_visibility_rules": [ "entrance_shuffle_off,ow_swapped_03,ow_vanilla_1b"  ]
             },
             {
                 "map": "lightworld",
                 "x": 1125,
                 "y": 21,
                 "size": 110,
-                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_03,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_dungeon,ow_swapped_03,ow_vanilla_1b" ]
             },
             {
                 "map": "lightworld",
                 "x": 1125,
                 "y": 4,
                 "size": 80,
-                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_03,ow_swapped_5b" ]
+                "restrict_visibility_rules": [ "entrance_shuffle_all,ow_swapped_03,ow_vanilla_1b" ]
             },
             
             {

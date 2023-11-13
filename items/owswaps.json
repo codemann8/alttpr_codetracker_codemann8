@@ -1,0 +1,1082 @@
+[
+    {
+        "name": "OW 00",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_00,ow_vanilla_00",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_00,ow_swapped_00",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_00,ow_unknown_00,ow_swapped_00",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_00,ow_unknown_00,ow_vanilla_00",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 02",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_02,ow_vanilla_02",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_02,ow_swapped_02",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_02,ow_unknown_02,ow_swapped_02",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_02,ow_unknown_02,ow_vanilla_02",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 03",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_03,ow_vanilla_03",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_03,ow_swapped_03",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_03,ow_unknown_03,ow_swapped_03",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_03,ow_unknown_03,ow_vanilla_03",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 05",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_05,ow_vanilla_05",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_05,ow_swapped_05",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_05,ow_unknown_05,ow_swapped_05",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_05,ow_unknown_05,ow_vanilla_05",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 07",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_07,ow_vanilla_07",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_07,ow_swapped_07",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_07,ow_unknown_07,ow_swapped_07",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_07,ow_unknown_07,ow_vanilla_07",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 0a",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0a,ow_vanilla_0a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0a,ow_swapped_0a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0a,ow_unknown_0a,ow_swapped_0a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0a,ow_unknown_0a,ow_vanilla_0a",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 0f",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0f,ow_vanilla_0f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0f,ow_swapped_0f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0f,ow_unknown_0f,ow_swapped_0f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_0f,ow_unknown_0f,ow_vanilla_0f",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 10",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_10,ow_vanilla_10",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_10,ow_swapped_10",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_10,ow_unknown_10,ow_swapped_10",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_10,ow_unknown_10,ow_vanilla_10",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 11",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_11,ow_vanilla_11",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_11,ow_swapped_11",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_11,ow_unknown_11,ow_swapped_11",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_11,ow_unknown_11,ow_vanilla_11",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 12",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_12,ow_vanilla_12",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_12,ow_swapped_12",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_12,ow_unknown_12,ow_swapped_12",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_12,ow_unknown_12,ow_vanilla_12",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 13",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_13,ow_vanilla_13",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_13,ow_swapped_13",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_13,ow_unknown_13,ow_swapped_13",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_13,ow_unknown_13,ow_vanilla_13",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 14",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_14,ow_vanilla_14",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_14,ow_swapped_14",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_14,ow_unknown_14,ow_swapped_14",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_14,ow_unknown_14,ow_vanilla_14",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 15",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_15,ow_vanilla_15",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_15,ow_swapped_15",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_15,ow_unknown_15,ow_swapped_15",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_15,ow_unknown_15,ow_vanilla_15",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 16",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_16,ow_vanilla_16",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_16,ow_swapped_16",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_16,ow_unknown_16,ow_swapped_16",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_16,ow_unknown_16,ow_vanilla_16",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 17",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_17,ow_vanilla_17",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_17,ow_swapped_17",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_17,ow_unknown_17,ow_swapped_17",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_17,ow_unknown_17,ow_vanilla_17",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 18",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_18,ow_vanilla_18",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_18,ow_swapped_18",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_18,ow_unknown_18,ow_swapped_18",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_18,ow_unknown_18,ow_vanilla_18",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 1a",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1a,ow_vanilla_1a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1a,ow_swapped_1a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1a,ow_unknown_1a,ow_swapped_1a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1a,ow_unknown_1a,ow_vanilla_1a",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 1b",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1b,ow_vanilla_1b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1b,ow_swapped_1b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1b,ow_unknown_1b,ow_swapped_1b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1b,ow_unknown_1b,ow_vanilla_1b",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 1d",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1d,ow_vanilla_1d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1d,ow_swapped_1d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1d,ow_unknown_1d,ow_swapped_1d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1d,ow_unknown_1d,ow_vanilla_1d",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 1e",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1e,ow_vanilla_1e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1e,ow_swapped_1e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1e,ow_unknown_1e,ow_swapped_1e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_1e,ow_unknown_1e,ow_vanilla_1e",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 22",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_22,ow_vanilla_22",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_22,ow_swapped_22",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_22,ow_unknown_22,ow_swapped_22",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_22,ow_unknown_22,ow_vanilla_22",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 25",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_25,ow_vanilla_25",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_25,ow_swapped_25",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_25,ow_unknown_25,ow_swapped_25",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_25,ow_unknown_25,ow_vanilla_25",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 28",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_28,ow_vanilla_28",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_28,ow_swapped_28",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_28,ow_unknown_28,ow_swapped_28",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_28,ow_unknown_28,ow_vanilla_28",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 29",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_29,ow_vanilla_29",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_29,ow_swapped_29",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_29,ow_unknown_29,ow_swapped_29",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_29,ow_unknown_29,ow_vanilla_29",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2a",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2a,ow_vanilla_2a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2a,ow_swapped_2a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2a,ow_unknown_2a,ow_swapped_2a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2a,ow_unknown_2a,ow_vanilla_2a",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2b",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2b,ow_vanilla_2b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2b,ow_swapped_2b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2b,ow_unknown_2b,ow_swapped_2b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2b,ow_unknown_2b,ow_vanilla_2b",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2c",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2c,ow_vanilla_2c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2c,ow_swapped_2c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2c,ow_unknown_2c,ow_swapped_2c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2c,ow_unknown_2c,ow_vanilla_2c",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2d",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2d,ow_vanilla_2d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2d,ow_swapped_2d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2d,ow_unknown_2d,ow_swapped_2d",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2d,ow_unknown_2d,ow_vanilla_2d",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2e",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2e,ow_vanilla_2e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2e,ow_swapped_2e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2e,ow_unknown_2e,ow_swapped_2e",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2e,ow_unknown_2e,ow_vanilla_2e",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 2f",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2f,ow_vanilla_2f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2f,ow_swapped_2f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2f,ow_unknown_2f,ow_swapped_2f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_2f,ow_unknown_2f,ow_vanilla_2f",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 30",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_30,ow_vanilla_30",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_30,ow_swapped_30",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_30,ow_unknown_30,ow_swapped_30",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_30,ow_unknown_30,ow_vanilla_30",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 32",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_32,ow_vanilla_32",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_32,ow_swapped_32",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_32,ow_unknown_32,ow_swapped_32",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_32,ow_unknown_32,ow_vanilla_32",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 33",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_33,ow_vanilla_33",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_33,ow_swapped_33",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_33,ow_unknown_33,ow_swapped_33",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_33,ow_unknown_33,ow_vanilla_33",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 34",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_34,ow_vanilla_34",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_34,ow_swapped_34",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_34,ow_unknown_34,ow_swapped_34",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_34,ow_unknown_34,ow_vanilla_34",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 35",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_35,ow_vanilla_35",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_35,ow_swapped_35",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_35,ow_unknown_35,ow_swapped_35",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_35,ow_unknown_35,ow_vanilla_35",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 37",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_37,ow_vanilla_37",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_37,ow_swapped_37",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_37,ow_unknown_37,ow_swapped_37",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_37,ow_unknown_37,ow_vanilla_37",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 3a",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3a,ow_vanilla_3a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3a,ow_swapped_3a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3a,ow_unknown_3a,ow_swapped_3a",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3a,ow_unknown_3a,ow_vanilla_3a",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 3b",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3b,ow_vanilla_3b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3b,ow_swapped_3b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3b,ow_unknown_3b,ow_swapped_3b",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3b,ow_unknown_3b,ow_vanilla_3b",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 3c",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3c,ow_vanilla_3c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3c,ow_swapped_3c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3c,ow_unknown_3c,ow_swapped_3c",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3c,ow_unknown_3c,ow_vanilla_3c",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "OW 3f",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3f,ow_vanilla_3f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3f,ow_swapped_3f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3f,ow_unknown_3f,ow_swapped_3f",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/icons/gomode.png",
+                "codes": "ow_swap_3f,ow_unknown_3f,ow_vanilla_3f",
+                "inherit_codes": false
+            }
+        ]
+    }
+]
