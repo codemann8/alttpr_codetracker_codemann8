@@ -355,7 +355,7 @@ function updateOverworldIdFromMemorySegment(segment)
                     print("^ Module:", string.format("0x%02X", CACHE.MODULE), "< REPORT THIS TO CODEMAN ^")
                 end
                 
-                local swap = findObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
                 if not swap.modified and swap:getState() > 1 then
                     updateWorldFlagFromMemorySegment(nil)
 
@@ -381,7 +381,7 @@ function updateOverworldIdFromMemorySegment(segment)
                     elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
                         local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
                         if not region.Active then
-                            local swap = findObjectForCode("ow_swapped_" .. string.format("%02x", CACHE.OWAREA)).ItemState
+                            local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
                             if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
                                 local canReach = true
                                 if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
@@ -511,7 +511,7 @@ function updateCoordinateFromMemorySegment(segment)
                 for i,ent in ipairs(DATA.OverworldEntranceData[owid]) do
                     local e = ent[1]
                     if owid & 0x3f == 0x1b and e:find("^Ganon") then
-                        local is_swapped = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", owid | 0x40)).ItemState:getState()
+                        local is_swapped = Tracker:FindObjectForCode("ow_slot_" .. string.format("%02x", owid | 0x40)).ItemState:getState()
                         if is_swapped < 2 and is_swapped << 6 == owid & 0x40 then
                             goto continue
                         end

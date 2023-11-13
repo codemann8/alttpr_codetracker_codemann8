@@ -80,6 +80,7 @@ Tracker:AddItems("items/prizes.json")
 
 if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddItems("items/regions.json")
+    Tracker:AddItems("items/owswaps.json")
     Tracker:AddItems("items/capture.json")
 end
 

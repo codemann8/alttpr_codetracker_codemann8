@@ -58,7 +58,7 @@ end
 
 function OverworldMixedMode:updateItem()
     for i = 1, #DATA.OverworldIds do
-        local item = Tracker:FindObjectForCode("ow_swapped_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
+        local item = Tracker:FindObjectForCode("ow_slot_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
         if not item.modified then
             item:setState(self:getState() == 0 and OBJ_WORLDSTATE:getState() or (OBJ_WORLDSTATE:getState() == 0 and 3 or 2))
         end
