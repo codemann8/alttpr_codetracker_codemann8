@@ -4,6 +4,8 @@ function OverworldLayoutMode:init(isAlt)
     self.baseCode = "ow_layout"
     self.label = "Overworld Shuffle"
 
+    self.linkedSetting = Tracker:FindObjectForCode("ow_layout_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -12,13 +14,6 @@ function OverworldLayoutMode:init(isAlt)
 end
 
 function OverworldLayoutMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "ow_layout_off" and self:getState() == 0 then
-            return 1
-        elseif code == "ow_layout_on" and self:getState() > 0 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -31,6 +26,10 @@ function OverworldLayoutMode:updateIcon()
 end
 
 function OverworldLayoutMode:postUpdate()
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
+    end
+
     if self:getState() > 0 then
         Tracker.DisplayAllLocations = true
         Tracker.AlwaysAllowClearing = true

@@ -5,6 +5,8 @@ function PoolPotMode:init(altNum, item)
     self.baseCode = "pool_" .. self.itemCode
     self.label = item .. " Shuffle"
 
+    self.linkedSetting = Tracker:FindObjectForCode(self.baseCode .. "_off")
+
     self:initSuffix(altNum)
     self:initCode()
 
@@ -70,6 +72,10 @@ function PoolPotMode:updateIcon()
 end
 
 function PoolPotMode:postUpdate()
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
+    end
+
     if self.itemCode == "dungeonpot" then
         updateChests()
 
@@ -86,24 +92,5 @@ function PoolPotMode:postUpdate()
 end
 
 function PoolPotMode:providesCode(code)
-    if self.suffix == "" then
-        if self.baseCode ~= "pool_dungeonpot" then
-            if code == self.baseCode .. "_off" and self:getState() == 0 then
-                return 1
-            elseif code == self.baseCode .. "_on" and self:getState() > 0 then
-                return 1
-            end
-        else
-            if code == "pool_keypot_off" and self:getState() == 0 then
-                return 1
-            elseif code == "pool_keypot_on" and self:getState() > 0 then
-                return 1
-            elseif code == "pool_dungeonpot_off" and self:getState() <= 1 then
-                return 1
-            elseif code == "pool_dungeonpot_on" and self:getState() >= 2 then
-                return 1
-            end
-        end
-    end
     return 0
 end

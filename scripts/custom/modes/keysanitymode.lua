@@ -5,6 +5,8 @@ function KeysanityMode:init(isAlt, item)
     self.baseCode = "keysanity_" .. self.itemCode
     self.label = item .. " Shuffle"
 
+    self.linkedSetting = Tracker:FindObjectForCode("keysanity_" .. self.itemCode .. "_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -18,15 +20,6 @@ function KeysanityMode:init(isAlt, item)
 end
 
 function KeysanityMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "keysanity_" .. self.itemCode .. "_off" and self:getState() ~= 1 then
-            return 1
-        elseif code == "keysanity_" .. self.itemCode .. "_on" and self:getState() == 1 then
-            return 1
-        elseif code == "keysanity_" .. self.itemCode .. "_universal" and self:getState() == 2 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -41,6 +34,10 @@ function KeysanityMode:updateIcon()
 end
 
 function KeysanityMode:postUpdate()
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
+    end
+    
     updateChests()
 end
 

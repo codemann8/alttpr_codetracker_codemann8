@@ -4,6 +4,8 @@ function RetroMode:init(isAlt)
     self.baseCode = "retro_mode"
     self.label = "Retro Mode"
 
+    self.linkedSetting = Tracker:FindObjectForCode("retro_mode_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -29,5 +31,15 @@ function RetroMode:updateItem()
         item.Active = not item.Active
         item.Active = not item.Active
         item.IgnoreUserInput = false
+    end
+end
+
+function RetroMode:providesCode(code)
+    return 0
+end
+
+function RetroMode:postUpdate()
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
     end
 end

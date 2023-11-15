@@ -85,9 +85,6 @@ function MapCompassBK:canProvideCode(code)
 end
 
 function MapCompassBK:providesCode(code)
-    if code == self.code and self:getState() ~= 0 then
-        return 1
-    end
     return 0
 end
 
