@@ -4,6 +4,8 @@ function DoorShuffleMode:init(isAlt)
     self.baseCode = "door_shuffle"
     self.label = "Door Shuffle"
 
+    self.linkedSetting = Tracker:FindObjectForCode("door_shuffle_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -12,19 +14,6 @@ function DoorShuffleMode:init(isAlt)
 end
 
 function DoorShuffleMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "door_shuffle_off" and self:getState() == 0 then
-            return 1
-        elseif code == "door_shuffle_on" and self:getState() > 0 then
-            return 1
-        elseif code == "door_shuffle_crossed" and self:getState() == 2 then
-            return 1
-        elseif code == "door_shuffle_sameset" and self:getState() < 2 then
-            return 1
-        elseif code == "door_shuffle_basic" and self:getState() == 1 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -56,6 +45,10 @@ end
 function DoorShuffleMode:postUpdate()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Door shuffle mode changed")
+    end
+
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
     end
     
     updateChests()

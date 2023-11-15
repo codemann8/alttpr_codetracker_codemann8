@@ -4,6 +4,9 @@ function WorldStateMode:init(isAlt)
     self.baseCode = "world_state_mode"
     self.label = "World State"
 
+    self.linkedSetting = Tracker:FindObjectForCode("world_state_open")
+    self.linkedSettingAlt = Tracker:FindObjectForCode("inverted_orig")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -26,17 +29,6 @@ function WorldStateMode:updateSurrogate()
 end
 
 function WorldStateMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "world_state_open" and self:getState() == 0 then
-            return 1
-        elseif code == "world_state_inverted" and self:getState() == 1 then
-            return 1
-        elseif code == "inverted_orig" and self:getProperty("version") == 0 then
-            return 1
-        elseif code == "inverted_new" and self:getProperty("version") == 1 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -54,6 +46,11 @@ function WorldStateMode:updateIcon()
 end
 
 function WorldStateMode:postUpdate()
+    if self.linkedSetting and self.linkedSettingAlt then
+        self.linkedSetting.CurrentStage = self:getState()
+        self.linkedSettingAlt.CurrentStage = self:getProperty("version")
+    end
+
     for i = 1, #DATA.OverworldIds do
         local item = Tracker:FindObjectForCode("ow_slot_" .. string.format("%02x", DATA.OverworldIds[i])).ItemState
         item.clicked = true

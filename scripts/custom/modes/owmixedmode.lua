@@ -4,6 +4,8 @@ function OverworldMixedMode:init(isAlt)
     self.baseCode = "ow_mixed"
     self.label = "Overworld Tile Swap"
 
+    self.linkedSetting = Tracker:FindObjectForCode("ow_mixed_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -32,13 +34,6 @@ function OverworldMixedMode:onRightClick()
 end
 
 function OverworldMixedMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "ow_mixed_off" and self:getState() == 0 then
-            return 1
-        elseif code == "ow_mixed_on" and self:getState() > 0 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -68,6 +63,10 @@ end
 function OverworldMixedMode:postUpdate()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("OW Mixed updated")
+    end
+
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
     end
 
     Layout:FindLayout("map").Root.HitTestVisible = self:getState() < 2

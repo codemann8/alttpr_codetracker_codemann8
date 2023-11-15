@@ -1,4 +1,352 @@
 [
+    // World State
+    {
+        "name": "World State",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/world_state_open.png",
+                "codes": "world_state_open",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/world_state_inverted.png",
+                "codes": "world_state_inverted",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Inverted Version
+    {
+        "name": "Inverted Version",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/world_state_inverted.png",
+                "codes": "inverted_orig",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/world_state_inverted.png",
+                "codes": "inverted_new",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Keysanity Mode
+    {
+        "name": "Keysanity Map",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/keysanity_map.png",
+                "codes": "keysanity_map_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_map.png",
+                "codes": "keysanity_map_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Compass",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/keysanity_compass.png",
+                "codes": "keysanity_compass_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_compass.png",
+                "codes": "keysanity_compass_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Small Key",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/keysanity_smallkey.png",
+                "codes": "keysanity_smallkey_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_smallkey.png",
+                "codes": "keysanity_smallkey_on",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_smallkey_universal.png",
+                "codes": "keysanity_smallkey_off,keysanity_smallkey_universal",
+                "inherit_codes": false
+            }
+        ]
+    },
+    {
+        "name": "Keysanity Big Key",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/keysanity_bigkey.png",
+                "codes": "keysanity_bigkey_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_bigkey.png",
+                "codes": "keysanity_bigkey_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Entrance Mode
+    {
+        "name": "Entrance Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/entrance_shuffle_off.png",
+                "codes": "entrance_shuffle_off,entrance_shuffle_minor",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/entrance_shuffle_dungeon.png",
+                "codes": "entrance_shuffle_on,entrance_shuffle_minor,entrance_shuffle_dungeon",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/entrance_shuffle_lite.png",
+                "codes": "entrance_shuffle_on,entrance_shuffle_all,entrance_shuffle_lite",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/entrance_shuffle_entrance.png",
+                "codes": "entrance_shuffle_on,entrance_shuffle_all,entrance_shuffle_crossed",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/entrance_shuffle_insanity.png",
+                "codes": "entrance_shuffle_on,entrance_shuffle_all,entrance_shuffle_insanity",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Door Shuffle
+    {
+        "name": "Door Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/door_shuffle_off.png",
+                "codes": "door_shuffle_off,door_shuffle_sameset",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/door_shuffle_basic.png",
+                "codes": "door_shuffle_on,door_shuffle_sameset,door_shuffle_basic",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/door_shuffle_crossed.png",
+                "codes": "door_shuffle_on,door_shuffle_crossed",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Overworld Shuffle
+    {
+        "name": "Overworld Shuffle",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/ow_layout.png",
+                "codes": "ow_layout_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/ow_layout.png",
+                "codes": "ow_layout_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Overworld Tile Flip
+    {
+        "name": "Overworld Tile Flip",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/ow_mixed.png",
+                "codes": "ow_mixed_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/ow_mixed.png",
+                "codes": "ow_mixed_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Retro Mode
+    {
+        "name": "Retro Mode",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/retro_off.png",
+                "codes": "retro_mode_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/retro_on.png",
+                "codes": "retro_mode_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode Shopsanity
+    {
+        "name": "Pool Mode Shopsanity",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/pool_shopsanity.png",
+                "codes": "pool_shopsanity_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_shopsanity.png",
+                "codes": "pool_shopsanity_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode Shopsanity
+    {
+        "name": "Pool Mode Bonk Drops",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/pool_bonkdrop.png",
+                "codes": "pool_bonkdrop_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_bonkdrop.png",
+                "codes": "pool_bonkdrop_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode Shopsanity
+    {
+        "name": "Pool Mode Enemy Drops",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/pool_enemydrop.png",
+                "codes": "pool_enemydrop_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_enemydrop.png",
+                "codes": "pool_enemydrop_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Pool Mode Dungeon Pots
+    {
+        "name": "Pool Mode Dungeon Pots",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/pool_dungeonpot.png",
+                "codes": "pool_dungeonpot_off,pool_keypot_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_keypot.png",
+                "codes": "pool_keypot_on",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_variedpot.png",
+                "codes": "pool_dungeonpot_on",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/modes/pool_dungeonpot.png",
+                "codes": "",
+                "inherit_codes": true
+            }
+        ]
+    },
+    // Pool Mode Cave Pots
+    {
+        "name": "Pool Mode Cave Pots",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/pool_cavepot.png",
+                "codes": "pool_cavepot_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/pool_cavepot.png",
+                "codes": "pool_cavepot_on",
+                "inherit_codes": false
+            }
+        ]
+    },
+    // Glitch Mode
+    {
+        "name": "Glitch Logic",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/glitches_none.png",
+                "codes": "glitch_mode_none",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/glitches_ow.png",
+                "codes": "glitch_mode_ow",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/glitches_hybrid.png",
+                "codes": "glitch_mode_hybrid",
+                "inherit_codes": true
+            },
+            {
+                "img": "images/modes/glitches_major.png",
+                "codes": "glitch_mode_major",
+                "inherit_codes": true
+            }
+        ]
+    },
     // OW Flute Shuffle
     {
         "name": "Flute Shuffle",

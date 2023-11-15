@@ -4,6 +4,8 @@ function EntranceShuffleMode:init(isAlt)
     self.baseCode = "entrance_shuffle"
     self.label = "Entrance Shuffle"
 
+    self.linkedSetting = Tracker:FindObjectForCode("entrance_shuffle_off")
+
     self:initSuffix(isAlt)
     self:initCode()
 
@@ -12,25 +14,6 @@ function EntranceShuffleMode:init(isAlt)
 end
 
 function EntranceShuffleMode:providesCode(code)
-    if self.suffix == "" then
-        if code == "entrance_shuffle_off" and self:getState() == 0 then
-            return 1
-        elseif code == "entrance_shuffle_on" and self:getState() > 0 then
-            return 1
-        elseif code == "entrance_shuffle_minor" and self:getState() < 2 then
-            return 1
-        elseif code == "entrance_shuffle_crossed" and self:getState() == 3 then
-            return 1
-        elseif code == "entrance_shuffle_all" and self:getState() > 1 then
-            return 1
-        elseif code == "entrance_shuffle_dungeon" and self:getState() == 1 then
-            return 1
-        elseif code == "entrance_shuffle_lite" and self:getState() == 2 then
-            return 1
-        elseif code == "entrance_shuffle_insanity" and self:getState() == 4 then
-            return 1
-        end
-    end
     return 0
 end
 
@@ -51,6 +34,10 @@ end
 function EntranceShuffleMode:postUpdate()
     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
         print("Entrance shuffle mode changed")
+    end
+
+    if self.linkedSetting then
+        self.linkedSetting.CurrentStage = self:getState()
     end
 
     --Change Dropdown Capture Layouts
