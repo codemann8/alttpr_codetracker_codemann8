@@ -62,6 +62,35 @@ function sendExternalMessage(filename, value)
     end
 end
 
+function overrideAppSettings()
+    local fullDir, packRoot = getFullDir()
+
+    if fullDir ~= nil then
+        local text = readFile(fullDir, "", "application_settings.json")
+        if text then
+            local ndiRate = "10.0"
+            local shouldWrite = true
+            if text == "" then
+                text = '{\n  "ndi_frame_rate": ' .. ndiRate .. '\n}'
+            else
+                local idx = text:find("ndi_frame_rate")
+                if idx then
+                    local rest = text:find(",", idx)
+                    if text:sub(rest - ndiRate:len(), rest - 1) == ndiRate then
+                        shouldWrite = false
+                    end
+                    text = text:sub(1, idx + 14) .. ": " .. ndiRate .. text:sub(rest)
+                else
+                    text = '{\n  "ndi_frame_rate": ' .. ndiRate .. ',' .. text:sub(2)
+                end
+            end
+            if shouldWrite then
+                writeFile(fullDir, "", "application_settings.json", text)
+            end
+        end
+    end
+end
+
 function saveBackup()
     local clock = os.clock()
     if CONFIG.ENABLE_BACKUP_FILE and clock - STATUS.GameStarted > 300 and clock - STATUS.LAST_BACKUP > 60 then
@@ -530,6 +559,21 @@ function getFullDir()
     end
 
     return baseDir .. emoDir, packRoot
+end
+
+function readFile(rootpath, localpath, filename)
+    if not dirExists(rootpath .. localpath) then
+        return false
+    end
+
+    local file = io.open(rootpath .. localpath .. filename, "r")
+    if file then
+        local text = file:read("*a")
+        io.close(file)
+        return text
+    end
+
+    return ""
 end
 
 function writeFile(rootpath, localpath, filename, text)

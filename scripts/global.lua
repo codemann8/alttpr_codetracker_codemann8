@@ -338,6 +338,8 @@ function loadMisc()
 end
 
 function initialize()
+    overrideAppSettings()
+
     if Tracker.ActiveVariantUID ~= "vanilla" then
         updateDyk()
 
