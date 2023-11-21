@@ -428,7 +428,7 @@ function updateChests()
                 key.DisplayAsFractionOfMax = false
             end
             key.IgnoreUserInput = false
-            if shouldChestCountUp() and key.MaxCount ~= 999 then
+            if shouldChestCountUp() and OBJ_KEYSMALL:getState() ~= 2 and OBJ_DOORSHUFFLE:getState() == 2 and key.MaxCount ~= 999 then
                 local seenKeyFlags = AutoTracker:ReadU16(0x7ef474, 0)
                 key.MaxCount = 999
                 updateKeyTotal(DATA.DungeonList[i], seenKeyFlags)
