@@ -68,7 +68,7 @@ function overrideAppSettings()
     if fullDir ~= nil then
         local text = readFile(fullDir, "", "application_settings.json")
         if text then
-            local ndiRate = "10.0"
+            local ndiRate = "3.0"
             local shouldWrite = true
             if text == "" then
                 text = '{\n  "ndi_frame_rate": ' .. ndiRate .. '\n}'
