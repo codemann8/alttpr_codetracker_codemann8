@@ -63,6 +63,7 @@ function KeysanityMode:onRightClick()
             state = 0
         else
             changedItem = setState(Tracker:FindObjectForCode("keysanity_" .. items[i]).ItemState, state)
+            changedItem.linkedSetting.CurrentStage = state
         end
 
         if changedItem then
