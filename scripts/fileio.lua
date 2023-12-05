@@ -65,7 +65,7 @@ end
 function overrideAppSettings()
     local fullDir, packRoot = getFullDir()
 
-    if fullDir ~= nil then
+    if fullDir ~= nil and dirExists(fullDir) then
         local text = readFile(fullDir, "", "application_settings.json")
         if text then
             local ndiRate = "3.0"
@@ -543,10 +543,10 @@ function getFullDir()
     local packRoot = "alttpr_codetracker_codemann8\\"
     local baseDir = ""
     
-    if os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-        baseDir = os.getenv("OneDrive") .. "\\"
-    elseif dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
+    if dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
         baseDir = CONFIG.DOCUMENTS_FOLDER
+    elseif os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
+        baseDir = os.getenv("OneDrive") .. "\\"
     else
         print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
         print("OneDrive:", os.getenv("OneDrive"))
