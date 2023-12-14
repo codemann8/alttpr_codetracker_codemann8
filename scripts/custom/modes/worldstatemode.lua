@@ -18,7 +18,11 @@ end
 function WorldStateMode:onRightClick()
     self.clicked = true
     self.ignorePostUpdate = true
-    self:setProperty("version", (self:getProperty("version") + 1) % 2)
+    local stateAlt = (self:getProperty("version") + 1) % 2
+    self:setProperty("version", stateAlt)
+    if self.linkedSettingAlt then
+        self.linkedSettingAlt.CurrentStage = stateAlt
+    end
 end
 
 function WorldStateMode:updateSurrogate()
@@ -46,9 +50,8 @@ function WorldStateMode:updateIcon()
 end
 
 function WorldStateMode:postUpdate()
-    if self.linkedSetting and self.linkedSettingAlt then
+    if self.linkedSetting then
         self.linkedSetting.CurrentStage = self:getState()
-        self.linkedSettingAlt.CurrentStage = self:getProperty("version")
     end
 
     for i = 1, #DATA.OverworldIds do
