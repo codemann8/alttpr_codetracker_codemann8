@@ -103,7 +103,7 @@
                     "@MM Special Access/Dungeon Access,somaria",
                     "@MM Special Access/Dungeon Access,retro_mode_off,bow",
                     "@MM Special Access/Dungeon Access,retro_mode_on,arrows,bow",
-                    "@MM Special Access/Dungeon Access,door_shuffle_on"
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
                 "item_count": 1
             },
@@ -112,10 +112,10 @@
                 "access_rules": [
                     "@MM Special Access/Mire 2,pool_enemydrop_off,pool_keypot_off,[mm_smallkey:3]",
                     "@MM Special Access/Mire 2,pool_enemydrop_on,pool_keypot_off,mm_smallkey:1,[mm_smallkey:5]",
-                    "@MM Special Access/Mire 2,pool_enemydrop_off,pool_keypot_on,[mm_smallkey:4]",
+                    "@MM Special Access/Mire 2,pool_enemydrop_off,pool_keypot_on,mm_smallkey:1,[mm_smallkey:4]",
                     "@MM Special Access/Mire 2,pool_enemydrop_on,pool_keypot_on,mm_smallkey:2,[mm_smallkey:6]",
                     "@MM Special Access/Mire 2,keysanity_smallkey_off",
-                    "@MM Special Access/Mire 2,door_shuffle_on"
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
                 "item_count": 1
             }
@@ -2244,6 +2244,36 @@
                 "hosted_item": "dummy"
             },
             {
+                "name": "Big Key",
+                "access_rules": [
+                    "@MM Special Access/Mire 2,mm_bigkey",
+                    "@MM Special Access/Mire 2,keysanity_bigkey_off"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "West Bridge",
+                "access_rules": [
+                    "@Misery Mire/Big Key",
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
+                "name": "Crystal Switch Access",
+                "access_rules": [
+                    "@MM Special Access/Mire 2,pool_keypot_off,[mm_smallkey:1]",
+                    "@MM Special Access/Mire 2,pool_keypot_on,mm_smallkey:1,[mm_smallkey:2]",
+                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
+                    "@Misery Mire/West Bridge,hookshot",
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Bridge",
                 "access_rules": [
                     "@MM Special Access/Mire 2"
@@ -2272,12 +2302,7 @@
             {
                 "name": "Main Hub",
                 "access_rules": [
-                    "@MM Special Access/Mire 2,mm_bigkey",
-                    "@MM Special Access/Mire 2,keysanity_bigkey_off",
-                    "@MM Special Access/Mire 2,pool_keypot_off,[mm_smallkey:1]",
-                    "@MM Special Access/Mire 2,pool_keypot_on,mm_smallkey:1,[mm_smallkey:2]",
-                    "@MM Special Access/Mire 2,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "@MM Special Access/Mire 2,@Misery Mire/Crystal Switch Access"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
@@ -2287,9 +2312,9 @@
                 "access_rules": [
                     "@MM Special Access/Mire 2,mm_bigkey",
                     "@MM Special Access/Mire 2,keysanity_bigkey_off",
-                    "@MM Special Access/Mire 2,mm_smallkey:2,[mm_smallkey:5]",
+                    "@MM Special Access/Mire 2,mm_smallkey:1,[mm_smallkey:4]",
                     "@MM Special Access/Mire 2,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -2299,11 +2324,12 @@
             {
                 "name": "Conveyor Jelly",
                 "access_rules": [
-                    "@MM Special Access/Mire 2,mm_smallkey:1,[mm_smallkey:5]",
+                    "@MM Special Access/Mire 2,pool_keypot_on,mm_smallkey:1,[mm_smallkey:5]",
+                    "@MM Special Access/Mire 2,pool_keypot_off,[mm_smallkey:3]",
                     "@MM Special Access/Mire 2,keysanity_smallkey_off",
-                    "door_shuffle_on"
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
-                "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
+                "visibility_rules": [ "door_shuffle_sameset,pool_enemydrop_on" ],
                 "chest_unopened_img": "images/icons/keydrops/enemy-jelly.png",
                 "chest_opened_img": "images/icons/keydrops/enemy-defeated.png",
                 "item_count": 1
@@ -2335,19 +2361,9 @@
             {
                 "name": "Big Chest",
                 "access_rules": [
-                    "@MM Special Access/Mire 2,mm_bigkey",
-                    "@MM Special Access/Mire 2,keysanity_bigkey_off"
+                    "@MM Special Access/Mire 2,@Misery Mire/Big Key"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
-                "item_count": 1
-            },
-            {
-                "name": "West Bridge",
-                "access_rules": [
-                    "@Misery Mire/Big Chest",
-                    "@MM Special Access/Mire 2,door_shuffle_on"
-                ],
-                "visibility_rules": [ "nothing" ],
                 "item_count": 1
             },
             {
@@ -2359,19 +2375,10 @@
                 "item_count": 1
             },
             {
-                "name": "Somaria Switch",
-                "access_rules": [
-                    "@Misery Mire/Dark Room,somaria",
-                    "@Misery Mire/Dark Room,door_shuffle_on"
-                ],
-                "visibility_rules": [ "nothing" ],
-                "item_count": 1
-            },
-            {
                 "name": "Vitreous Access",
                 "access_rules": [
-                    "@Misery Mire/Somaria Switch,bombs",
-                    "@MM Special Access/Mire 2,@Misery Mire/Dungeon Access,door_shuffle_on"
+                    "@Misery Mire/Dark Room,somaria,bombs",
+                    "@MM Special Access/Open Entrance,door_shuffle_on"
                 ],
                 "visibility_rules": [ "nothing" ],
                 "item_count": 1
