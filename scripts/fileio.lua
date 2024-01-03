@@ -49,15 +49,16 @@ end
 
 function sendExternalMessage(filename, value)
     if value then
-        if (filename == "item" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE)
-                or (filename == "dungeon" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE)
-                or (filename == "health" and CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
-            local file = io.open(os.getenv("USERPROFILE") .. "\\Documents\\EmoTracker\\" .. filename .. ".txt", "w+")
-            if file then
-                io.output(file)
-                io.write(value)
-                io.close(file)
-            end
+        if (filename == "item" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_ITEM_FILE)
+                or (filename == "dungeon" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_DUNGEON_IMAGE)
+                or (filename == "health" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
+            return
+        end
+        local file = io.open(os.getenv("USERPROFILE") .. "\\Documents\\EmoTracker\\" .. filename .. ".txt", "w+")
+        if file then
+            io.output(file)
+            io.write(value)
+            io.close(file)
         end
     end
 end
