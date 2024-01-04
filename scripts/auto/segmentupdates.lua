@@ -329,7 +329,8 @@ function updateOverworldIdFromMemorySegment(segment)
                 CACHE.MODULE == 0x08 or --loading overworld
                 CACHE.MODULE == 0x0b or --special overworld areas
                 CACHE.MODULE == 0x06 or CACHE.MODULE == 0x0f or --transitioning into dungeons
-                CACHE.MODULE == 0x13 or CACHE.MODULE == 0x16)) --post-boss defeated
+                CACHE.MODULE == 0x13 or CACHE.MODULE == 0x16 or --post-boss defeated
+                CACHE.MODULE == 0x18)) --ganon emerging from aga2 defeat
                 or owarea > 0x81 then --transitional OW IDs are ignored ie. 0x96
             owarea = 0xff
         end
