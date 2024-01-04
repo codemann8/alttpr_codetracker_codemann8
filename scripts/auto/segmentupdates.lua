@@ -1468,7 +1468,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Turtle Rock/Trinexx", "@TR Trinexx/Prize"}, {{164, 11}} },
 
     { {"@Ganon's Tower/Hope Room", "@GT Hope Room/Chest"}, {{140, 5}, {140, 6}} },
-    { {"@Ganon's Tower/Torch", "@GT Torch/Torch"}, {{140, 9}} },
+    { {"@Ganon's Tower/Torch", "@GT Torch/Torch"}, {{140, 10}} },
     { {"@Ganon's Tower/Stalfos Room", "@GT Stalfos Room/Chest"}, {{123, 4}, {123, 5}, {123, 6}, {123, 7}} },
     { {"@Ganon's Tower/Map Chest", "@GT Map Chest/Chest"}, {{139, 4}} },
     { {"@Ganon's Tower/Firesnake", "@GT Firesnake/Chest"}, {{125, 4}} },
