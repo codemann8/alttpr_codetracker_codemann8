@@ -83,6 +83,9 @@ function WorldStateMode:load(data)
     end
     if data["version"] ~= nil then
         self:setProperty("version", data["version"])
+        if self.linkedSettingAlt then
+            self.linkedSettingAlt.CurrentStage = data["version"]
+        end
     end
     return true
 end

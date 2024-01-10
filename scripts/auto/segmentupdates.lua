@@ -19,6 +19,9 @@ function updateTitleFromMemorySegment(segment)
                 OBJ_WORLDSTATE.clicked = true
                 OBJ_WORLDSTATE.ignorePostUpdate = true
                 OBJ_WORLDSTATE:setProperty("version", value)
+                if OBJ_WORLDSTATE.linkedSettingAlt then
+                    OBJ_WORLDSTATE.linkedSettingAlt.CurrentStage = value
+                end
             end
 
             INSTANCE.NEW_SRAM_SYSTEM = INSTANCE.VERSION_MINOR > 1

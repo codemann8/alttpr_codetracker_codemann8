@@ -314,6 +314,9 @@ function restoreBackup()
         for mode, value in pairs(BACKUP.MODE_SETTINGS) do
             if mode == "world_state_mode_inverted" then
                 OBJ_WORLDSTATE:setProperty("version", value)
+                if OBJ_WORLDSTATE.linkedSettingAlt then
+                    OBJ_WORLDSTATE.linkedSettingAlt.CurrentStage = value
+                end
             else
                 MODES[mode]:setStateExternal(value)
             end
