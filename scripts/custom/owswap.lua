@@ -35,11 +35,20 @@ function OWSwap:onLeftClick()
 end
 
 function OWSwap:onRightClick()
-    self:onLeftClick()
+    if OBJ_MIXED:getState() > 1 then
+        if self:getState() < 2 then
+            self:updateSwap(3) -- reset to unknown
+        else
+            self:updateSwap(self:getState() % self:getCount()) -- set to flipped
+        end
+        if OBJ_MIXED:getState() < 3 then
+            OBJ_MIXED:onRightClick()
+        end
+    end
 end
 
 function OWSwap:updateSwap(state)
-    self.modified = true
+    self.modified = state < 2
     self.clicked = true
     self:setState(state)
     if self.linkedSwap then
