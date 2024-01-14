@@ -802,13 +802,13 @@ function removeGhost(section)
         hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
         CACHE.CaptureBadges[section][3] = nil
         CACHE.CaptureBadges[section][4] = nil
-        cacheManualIcon(target, false)
     end
 end
 
 function cacheManualIcon(targetSection, isAdding)
     if targetSection.CapturedItem then
         local cap = targetSection.CapturedItem.Name
+        local sectionKey = targetSection.Owner.Name .. "/" .. targetSection.Name
         if cap:find("^Hyrule Castle") or cap:find("^Desert Palace") or cap:find("^Skull Woods") or cap:find("^Turtle Rock") then
             cap = cap:gsub("Hyrule Castle", "cap_hc")
             cap = cap:gsub("Desert Palace", "cap_dp")
@@ -819,16 +819,20 @@ function cacheManualIcon(targetSection, isAdding)
             cap = cap:gsub("Ledge ", "")
             cap = cap:gsub(" ", "")
             cap = cap:lower()
-            for key, capture in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
-                if capture == cap then
-                    if type(key) == "number" and not isAdding then
+            if isAdding then
+                for key, capture in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
+                    if capture == cap and key ~= sectionKey then
                         INSTANCE.MULTIDUNGEONCAPTURES[key] = nil
                     end
-                    return
                 end
+                INSTANCE.MULTIDUNGEONCAPTURES[sectionKey] = cap
+            else
+                INSTANCE.MULTIDUNGEONCAPTURES[sectionKey] = nil
             end
-            printLog("manual case: " .. cap, 1)
-            INSTANCE.MULTIDUNGEONCAPTURES[targetSection.Name] = cap
+        else
+            if isAdding then
+                INSTANCE.MULTIDUNGEONCAPTURES[sectionKey] = nil
+            end
         end
     end
 end

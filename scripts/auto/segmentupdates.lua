@@ -600,34 +600,11 @@ function updateCoordinateFromMemorySegment(segment)
                 printLog("drop case", 1)
                 return room
             end
-            if INSTANCE.MULTIDUNGEONCAPTURES[roomId] ~= nil then
+            local section = findObjectForCode(entrance)
+            if INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name] ~= nil then
                 printLog("prev used case", 1)
-                return INSTANCE.MULTIDUNGEONCAPTURES[roomId]
-            else
-                local section = findObjectForCode(entrance)
-                if section.CapturedItem then
-                    local cap = section.CapturedItem.Name
-                    if cap:find("^Hyrule Castle") or cap:find("^Desert Palace") or cap:find("^Skull Woods") or cap:find("^Turtle Rock") then
-                        cap = cap:gsub("Hyrule Castle", "cap_hc")
-                        cap = cap:gsub("Desert Palace", "cap_dp")
-                        cap = cap:gsub("Skull Woods", "cap_sw")
-                        cap = cap:gsub("Turtle Rock", "cap_tr")
-                        cap = cap:gsub("Sanctuary", "sanc")
-                        cap = cap:gsub("Laser Bridge", "back")
-                        cap = cap:gsub("Ledge ", "")
-                        cap = cap:gsub(" ", "")
-                        cap = cap:lower()
+                return INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name]
                         
-                        for key, capture in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
-                            if capture == cap then
-                                printLog("prev manual case: " .. cap, 1)
-                                INSTANCE.MULTIDUNGEONCAPTURES[key] = nil
-                                INSTANCE.MULTIDUNGEONCAPTURES[roomId] = cap
-                                return cap
-                            end
-                        end
-                    end
-                end
             end
             if OBJ_ENTRANCE:getState() < 4 then
                 if dungeonPrefix == "sw" then
@@ -654,8 +631,12 @@ function updateCoordinateFromMemorySegment(segment)
                 local rI = 1
                 for i,v in ipairs(fullList) do
                     remaining[rI] = v
-                    for r,c in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
-                        if c == v then
+                    for e,c in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
+                        cAlt = c
+                        if OBJ_ENTRANCE:getState() == 4 and c == "cap_swback" then
+                            cAlt = "cap_sw"
+                        end
+                        if cAlt == v then
                             remaining[rI] = nil
                             rI = rI - 1
                             break
@@ -884,11 +865,6 @@ function updateCoordinateFromMemorySegment(segment)
                             if uwRoom ~= "" then
                                 section.CapturedItem = findObjectForCode(uwRoom)
                                 updateGhost(owEntrance, true, true)
-                                if dungeonId < 0xff then
-                                    if uwRoom:find("^cap_hc") or uwRoom:find("^cap_dp") or uwRoom:find("^cap_sw") or uwRoom:find("^cap_tr") then
-                                        INSTANCE.MULTIDUNGEONCAPTURES[roomId] = uwRoom
-                                    end
-                                end
                             else
                                 section.AvailableChestCount = 0
                                 if section.HostedItem then
