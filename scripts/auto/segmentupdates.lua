@@ -2225,7 +2225,6 @@ function updateKeyTotalsFromMemorySegment(segment)
 
     --Key Totals Seen
     CACHE.KeysSeen = segment:ReadUInt16(0x7ef474)
-    print(string.format("Key Total Seen: 0x%4X", CACHE.KeysSeen))
     for i, dungeonPrefix in ipairs(DATA.DungeonList) do
         updateKeyTotal(dungeonPrefix, CACHE.KeysSeen)
     end
