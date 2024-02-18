@@ -10,7 +10,9 @@ function updateTitleFromMemorySegment(segment)
         end
         local value = segment:ReadUInt8(0x702000)
         if value > 0 then
-            if string.char(segment:ReadUInt8(0x702001)) == 'R' then
+            if string.char(value) == 'O' then
+                value = 1
+            elseif string.char(segment:ReadUInt8(0x702001)) == 'R' then
                 value = string.char(segment:ReadUInt8(0x702013)) == 'O' and 1 or 0
             else
                 value = string.char(AutoTracker:ReadU8(0x2a8000, 0)) == 'O' and 1 or 0
