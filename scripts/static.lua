@@ -173,7 +173,7 @@ DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, o
     ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5, 56, "cap_sp" },
     ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0, 39, "cap_pod" },
     ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2, 37, "cap_mm" },
-    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81, {"cap_sw", "cap_swbacksouth", "cap_swfrontleft", "cap_swfrontright"} },
+    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81, {"cap_sw", "cap_swfrontright", "cap_swfrontleft", "cap_swbacksouth"} },
     ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2, 51, "cap_ip" },
     ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0, 37, "cap_toh" },
     ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2, 44, "cap_tt" },
