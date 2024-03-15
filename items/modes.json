@@ -474,8 +474,8 @@
                 "inherit_codes": false
             },
             {
-                "img": "images/icons/goals/triforce.png",
-                "codes": "goal_setting,goal_triforce",
+                "img": "images/icons/goals/pedestal.png",
+                "codes": "goal_setting,goal_pedestal",
                 "inherit_codes": false
             },
             {
@@ -484,8 +484,8 @@
                 "inherit_codes": false
             },
             {
-                "img": "images/icons/goals/pedestal.png",
-                "codes": "goal_setting,goal_pedestal",
+                "img": "images/icons/goals/triforce.png",
+                "codes": "goal_setting,goal_triforce",
                 "inherit_codes": false
             }
         ]
