@@ -145,7 +145,7 @@ function updateRandoDataFromMemorySegment(segment)
         return false
     end
 
-    if INSTANCE.NEW_SRAM_SYSTEM and OBJ_RACEMODE:getState() == 0 and shouldChestCountUp() and CACHE.DungeonsSeen ~= segment:ReadUInt16(0x7ef403) then
+    if INSTANCE.NEW_SRAM_SYSTEM and shouldChestCountUp() and CACHE.DungeonsSeen ~= segment:ReadUInt16(0x7ef403) then
         updateDungeonTotalsFromMemorySegment(segment)
     end
 
@@ -169,7 +169,7 @@ function updateDungeonAdditionalFromMemorySegment(segment)
         return false
     end
 
-    if INSTANCE.VERSION_MINOR >= 5 and OBJ_RACEMODE:getState() == 0 and CACHE.KeysSeen ~= segment:ReadUInt16(0x7ef474) then
+    if INSTANCE.VERSION_MINOR >= 5 and CACHE.KeysSeen ~= segment:ReadUInt16(0x7ef474) then
         updateKeyTotalsFromMemorySegment(segment)
     end
 
@@ -197,7 +197,7 @@ function updateMiscFromMemorySegment(segment)
     end
 
     if Tracker.ActiveVariantUID ~= "vanilla" then
-        if OBJ_RACEMODE:getState() == 0 and OBJ_GLITCHMODE:getState() <= 3 then
+        if OBJ_GLITCHMODE:getState() <= 3 then
             if CACHE.CrystalData ~= segment:ReadUInt8(0x7ef37a)
                     or CACHE.PendantData ~= segment:ReadUInt8(0x7ef374) then
                 updatePrizeFromMemorySegment(segment)
@@ -607,7 +607,6 @@ function updateCoordinateFromMemorySegment(segment)
             if INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name] ~= nil then
                 printLog("prev used case", 1)
                 return INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name]
-                        
             end
             if OBJ_ENTRANCE:getState() < 4 then
                 if dungeonPrefix == "sw" then
@@ -1915,63 +1914,61 @@ function updateRoomsFromMemorySegment(segment)
         return true
     end
 
-    if OBJ_RACEMODE:getState() == 0 then
-        local function updateChest(dungeonPrefix, slotList)
-            if updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, slotList) then
-                --Refresh Dungeon Calc
-                if OBJ_GLITCHMODE:getState() >= 2 or dungeonPrefix == DATA.DungeonIdMap[CACHE.DUNGEON] then
-                    updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+    local function updateChest(dungeonPrefix, slotList)
+        if updateDungeonChestCountFromRoomSlotList(segment, dungeonPrefix, slotList) then
+            --Refresh Dungeon Calc
+            if OBJ_GLITCHMODE:getState() >= 2 or dungeonPrefix == DATA.DungeonIdMap[CACHE.DUNGEON] then
+                updateChestCountFromDungeon(nil, dungeonPrefix, nil)
+            end
+        end
+    end
+
+    --Dungeon Chests
+    updateChest("hc", {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}})
+    updateChest("ep", {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}})
+    updateChest("dp", {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}})
+    updateChest("toh", {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}})
+    updateChest("at", {{224, 4}, {208, 4}})
+    updateChest("pod", {{9, 4}, {43, 4}, {42, 4}, {42, 5}, {58, 4}, {10, 4}, {26, 4}, {26, 5}, {26, 6}, {25, 4},  {25, 5}, {106, 4}, {106, 5}, {90, 11}})
+    updateChest("sp", {{40, 4}, {55, 4}, {54, 4}, {53, 4}, {52, 4}, {70, 4}, {118, 4}, {118, 5}, {102, 4}, {6, 11}})
+    updateChest("sw", {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 4}, {88, 5}, {89, 4}, {41, 11}})
+    updateChest("tt", {{219, 4}, {219, 5}, {203, 4}, {220, 4}, {101, 4}, {69, 4}, {68, 4}, {172, 11}})
+    updateChest("ip", {{46, 4}, {63, 4}, {31, 4}, {95, 4}, {126, 4}, {174, 4}, {158, 4}, {222, 11}})
+    updateChest("mm", {{162, 4}, {179, 4}, {194, 4}, {193, 4}, {209, 4}, {195, 4}, {195, 5}, {144, 11}})
+    updateChest("tr", {{214, 4}, {183, 4}, {183, 5}, {182, 4}, {20, 4}, {36, 4}, {4, 4}, {213, 4}, {213, 5}, {213, 6}, {213, 7}, {164, 11}})
+    updateChest("gt", {{140, 10}, {123, 4}, {123, 5}, {123, 6}, {123, 7}, {139, 4}, {125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}, {140, 4}, {140, 5}, {140, 6}, {140, 7}, {28, 4}, {28, 5}, {28, 6}, {141, 4}, {157, 4}, {157, 5}, {157, 6}, {157, 7}, {61, 4}, {61, 5}, {61, 6}, {77, 4}})
+
+    --Keysanity Dungeon Map Locations
+    local i = 1
+    while i <= #INSTANCE.MEMORY.DungeonChests do
+        if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonChests[i]) then
+            table.remove(INSTANCE.MEMORY.DungeonChests, i)
+        else
+            i = i + 1
+        end
+    end
+
+    --Key Drop Locations
+    if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
+        if not INSTANCE.NEW_POTDROP_SYSTEM then
+            i = 1
+            while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i]) then
+                    table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
+                else
+                    i = i + 1
                 end
             end
         end
-
-        --Dungeon Chests
-        updateChest("hc", {{114, 4}, {113, 4}, {128, 4}, {50, 4}, {17, 4}, {17, 5}, {17, 6}, {18, 4}})
-        updateChest("ep", {{185, 4}, {170, 4}, {168, 4}, {169, 4}, {184, 4}, {200, 11}})
-        updateChest("dp", {{115, 4}, {115, 10}, {116, 4}, {133, 4}, {117, 4}, {51, 11}})
-        updateChest("toh", {{135, 10}, {119, 4}, {135, 4}, {39, 4}, {39, 5}, {7, 11}})
-        updateChest("at", {{224, 4}, {208, 4}})
-        updateChest("pod", {{9, 4}, {43, 4}, {42, 4}, {42, 5}, {58, 4}, {10, 4}, {26, 4}, {26, 5}, {26, 6}, {25, 4},  {25, 5}, {106, 4}, {106, 5}, {90, 11}})
-        updateChest("sp", {{40, 4}, {55, 4}, {54, 4}, {53, 4}, {52, 4}, {70, 4}, {118, 4}, {118, 5}, {102, 4}, {6, 11}})
-        updateChest("sw", {{103, 4}, {104, 4}, {87, 4}, {87, 5}, {88, 4}, {88, 5}, {89, 4}, {41, 11}})
-        updateChest("tt", {{219, 4}, {219, 5}, {203, 4}, {220, 4}, {101, 4}, {69, 4}, {68, 4}, {172, 11}})
-        updateChest("ip", {{46, 4}, {63, 4}, {31, 4}, {95, 4}, {126, 4}, {174, 4}, {158, 4}, {222, 11}})
-        updateChest("mm", {{162, 4}, {179, 4}, {194, 4}, {193, 4}, {209, 4}, {195, 4}, {195, 5}, {144, 11}})
-        updateChest("tr", {{214, 4}, {183, 4}, {183, 5}, {182, 4}, {20, 4}, {36, 4}, {4, 4}, {213, 4}, {213, 5}, {213, 6}, {213, 7}, {164, 11}})
-        updateChest("gt", {{140, 10}, {123, 4}, {123, 5}, {123, 6}, {123, 7}, {139, 4}, {125, 4}, {124, 4}, {124, 5}, {124, 6}, {124, 7}, {140, 4}, {140, 5}, {140, 6}, {140, 7}, {28, 4}, {28, 5}, {28, 6}, {141, 4}, {157, 4}, {157, 5}, {157, 6}, {157, 7}, {61, 4}, {61, 5}, {61, 6}, {77, 4}})
-
-        --Keysanity Dungeon Map Locations
-        local i = 1
-        while i <= #INSTANCE.MEMORY.DungeonChests do
-            if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonChests[i]) then
-                table.remove(INSTANCE.MEMORY.DungeonChests, i)
-            else
-                i = i + 1
-            end
-        end
-
-        --Key Drop Locations
-        if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
-            if not INSTANCE.NEW_POTDROP_SYSTEM then
-                i = 1
-                while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i]) then
-                        table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
-                    else
-                        i = i + 1
-                    end
-                end
-            end
-        end
-        if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
-            if not INSTANCE.NEW_POTDROP_SYSTEM then
-                i = 1
-                while i <= #INSTANCE.MEMORY.DungeonPotKeys do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i]) then
-                        table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
-                    else
-                        i = i + 1
-                    end
+    end
+    if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
+        if not INSTANCE.NEW_POTDROP_SYSTEM then
+            i = 1
+            while i <= #INSTANCE.MEMORY.DungeonPotKeys do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i]) then
+                    table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
+                else
+                    i = i + 1
                 end
             end
         end
@@ -2045,22 +2042,20 @@ function updateRoomEnemiesFromMemorySegment(segment)
         end
     end
 
-    if OBJ_RACEMODE:getState() == 0 then
-        --Enemy Key Drop Locations
-        if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
-            i = 1
-            while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268) then
-                    table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
-                else
-                    i = i + 1
-                end
+    --Enemy Key Drop Locations
+    if OBJ_POOL_ENEMYDROP and OBJ_POOL_ENEMYDROP:getState() > 0 then
+        i = 1
+        while i <= #INSTANCE.MEMORY.DungeonEnemyKeys do
+            if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonEnemyKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7850 or 0x7268) then
+                table.remove(INSTANCE.MEMORY.DungeonEnemyKeys, i)
+            else
+                i = i + 1
             end
         end
-        if modified and CACHE.DUNGEON ~= 0xff then
-            --Refresh Dungeon Calc
-            updateChestCountFromDungeon(nil, DATA.DungeonIdMap[CACHE.DUNGEON], nil)
-        end
+    end
+    if modified and CACHE.DUNGEON ~= 0xff then
+        --Refresh Dungeon Calc
+        updateChestCountFromDungeon(nil, DATA.DungeonIdMap[CACHE.DUNGEON], nil)
     end
     
     if os.clock() - clock > 0.005 then
@@ -2098,34 +2093,32 @@ function updateRoomPotsFromMemorySegment(segment)
         end
     end
 
-    if OBJ_RACEMODE:getState() == 0 then
-        if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
-            --Key Pot Locations
+    if OBJ_POOL_DUNGEONPOT and OBJ_POOL_DUNGEONPOT:getState() > 0 then
+        --Key Pot Locations
+        i = 1
+        while i <= #INSTANCE.MEMORY.DungeonPotKeys do
+            if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
+                table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
+            else
+                i = i + 1
+            end
+        end
+
+        --Dungeon Pot Drop Locations
+        if OBJ_POOL_DUNGEONPOT:getState() > 1 then
             i = 1
-            while i <= #INSTANCE.MEMORY.DungeonPotKeys do
-                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotKeys[i], INSTANCE.VERSION_MINOR < 2 and 0x7600 or 0x7018) then
-                    table.remove(INSTANCE.MEMORY.DungeonPotKeys, i)
+            while i <= #INSTANCE.MEMORY.DungeonPotDrops do
+                if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7018) then
+                    table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
                 else
                     i = i + 1
                 end
             end
-
-            --Dungeon Pot Drop Locations
-            if OBJ_POOL_DUNGEONPOT:getState() > 1 then
-                i = 1
-                while i <= #INSTANCE.MEMORY.DungeonPotDrops do
-                    if updateRoomLocation(segment, INSTANCE.MEMORY.DungeonPotDrops[i], 0x7018) then
-                        table.remove(INSTANCE.MEMORY.DungeonPotDrops, i)
-                    else
-                        i = i + 1
-                    end
-                end
-            end
         end
-        if modified and CACHE.DUNGEON ~= 0xff then
-            --Refresh Dungeon Calc
-            updateChestCountFromDungeon(nil, DATA.DungeonIdMap[CACHE.DUNGEON], nil)
-        end
+    end
+    if modified and CACHE.DUNGEON ~= 0xff then
+        --Refresh Dungeon Calc
+        updateChestCountFromDungeon(nil, DATA.DungeonIdMap[CACHE.DUNGEON], nil)
     end
     
     if os.clock() - clock > 0.005 then
@@ -2188,7 +2181,7 @@ function updateDungeonKeysFromMemorySegment(segment)
             updateDungeonKeysFromPrefix(segment, dungeonPrefix, 0x7ef4e0 + data[4])
             
             --Collected Chests/Items In Dungeons
-            if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and OBJ_RACEMODE:getState() == 0
+            if not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING
                     and (CACHE.DUNGEON == 0xff or dungeonPrefix == DATA.DungeonIdMap[CACHE.DUNGEON]) then
                 if shouldChestCountUp() then
                     if INSTANCE.VERSION_MINOR >= 5 then

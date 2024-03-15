@@ -57,120 +57,119 @@ function updateRoomLocation(segment, location, offset)
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
-    if OBJ_RACEMODE:getState() == 0 then
-        local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item")
-        if item then
-            item = item.ItemState
-            local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
-            local enemykey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
-            local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
-            local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
-            local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
-            local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
-            local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
-            local dungeonItems = 0
-            local clock = os.clock()
 
-            if map.Active and OBJ_KEYMAP:getState() == 0 then
-                dungeonItems = dungeonItems + 1
-            end
+    local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item")
+    if item then
+        item = item.ItemState
+        local chest = Tracker:FindObjectForCode(dungeonPrefix .. "_chest")
+        local enemykey = Tracker:FindObjectForCode(dungeonPrefix .. "_enemykey")
+        local potkey = Tracker:FindObjectForCode(dungeonPrefix .. "_potkey")
+        local map = Tracker:FindObjectForCode(dungeonPrefix .. "_map")
+        local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
+        local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
+        local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+        local dungeonItems = 0
+        local clock = os.clock()
 
-            doMetric(METRICS.GETSTATE, "getState", clock)
+        if map.Active and OBJ_KEYMAP:getState() == 0 then
+            dungeonItems = dungeonItems + 1
+        end
 
-            if compass.Active and OBJ_KEYCOMPASS:getState() == 0 then
-                dungeonItems = dungeonItems + 1
-            end
+        doMetric(METRICS.GETSTATE, "getState", clock)
 
-            if smallkey.AcquiredCount > 0 and OBJ_KEYSMALL:getState() == 0 then
-                dungeonItems = dungeonItems + smallkey.AcquiredCount
-            end
+        if compass.Active and OBJ_KEYCOMPASS:getState() == 0 then
+            dungeonItems = dungeonItems + 1
+        end
 
-            if bigkey.Active and OBJ_KEYBIG:getState() == 0 and (dungeonPrefix ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
-                dungeonItems = dungeonItems + 1
-            end
+        if smallkey.AcquiredCount > 0 and OBJ_KEYSMALL:getState() == 0 then
+            dungeonItems = dungeonItems + smallkey.AcquiredCount
+        end
 
-            if OBJ_DOORSHUFFLE:getState() < 2 and OBJ_GLITCHMODE:getState() < 2 then
-                item.DeductedCount = dungeonItems
+        if bigkey.Active and OBJ_KEYBIG:getState() == 0 and (dungeonPrefix ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
+            dungeonItems = dungeonItems + 1
+        end
+
+        if OBJ_DOORSHUFFLE:getState() < 2 and OBJ_GLITCHMODE:getState() < 2 then
+            item.DeductedCount = dungeonItems
+        else
+            item.DeductedCount = 0
+        end
+
+        if segment and OBJ_GLITCHMODE:getState() < 2 then
+            clock = os.clock()
+            local value = 0
+            if INSTANCE.VERSION_MINOR < 5 then
+                value = segment:ReadUInt8(address)
             else
-                item.DeductedCount = 0
+                value = segment:ReadUInt16(address)
             end
-
-            if segment and OBJ_GLITCHMODE:getState() < 2 then
-                clock = os.clock()
-                local value = 0
-                if INSTANCE.VERSION_MINOR < 5 then
-                    value = segment:ReadUInt8(address)
-                else
-                    value = segment:ReadUInt16(address)
-                end
-                doMetric(METRICS.SEGMENTREAD, "segmentRead", clock)
-                if value > 0 then
-                    INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
-                end
-                if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
-                    local otherValue = 0
-                    if INSTANCE.VERSION_MINOR < 5 then
-                        otherValue = segment:ReadUInt8(address + 1)
-                    else
-                        otherValue = segment:ReadUInt16(address + 2)
-                    end
-                    if value ~= otherValue then
-                        value = value + otherValue
-                    end
-                end
-                if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " from direct memory:")
-                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
-                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
-                end
-                item.CollectedCount = value
-
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount)
-                    print(dungeonPrefix .. " Checks:", item.CollectedCount)
-                end
-            elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM and OBJ_GLITCHMODE:getState() < 2) and not shouldChestCountUp() then
-                local value = chest.AcquiredCount
-                if enemykey and OBJ_POOL_ENEMYDROP:getState() > 0 then
-                    value = value + enemykey.AcquiredCount
-                end
-                if potkey and OBJ_POOL_DUNGEONPOT:getState() > 0 then
-                    value = value + potkey.AcquiredCount
-                end
-                if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " after calculation:")
-                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
-                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
-                end
-                item.CollectedCount = value
-            elseif OBJ_GLITCHMODE:getState() < 2 and address then
-                local value = 0
-                if INSTANCE.VERSION_MINOR < 5 then
-                    value = segment:ReadUInt8(address)
-                else
-                    value = segment:ReadUInt16(address)
-                end
-                if value > 0 then
-                    INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
-                end
-                if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
-                    local otherValue = 0
-                    if INSTANCE.VERSION_MINOR < 5 then
-                        otherValue = segment:ReadUInt8(address + 1)
-                    else
-                        otherValue = segment:ReadUInt16(address + 2)
-                    end
-                    if value ~= otherValue then
-                        value = value + otherValue
-                    end
-                end
-                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                    print(dungeonPrefix .. " adhoc direct memory:")
-                    print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
-                    print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
-                end
-                item.CollectedCount = value
+            doMetric(METRICS.SEGMENTREAD, "segmentRead", clock)
+            if value > 0 then
+                INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
             end
+            if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
+                local otherValue = 0
+                if INSTANCE.VERSION_MINOR < 5 then
+                    otherValue = segment:ReadUInt8(address + 1)
+                else
+                    otherValue = segment:ReadUInt16(address + 2)
+                end
+                if value ~= otherValue then
+                    value = value + otherValue
+                end
+            end
+            if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print(dungeonPrefix .. " from direct memory:")
+                print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
+            end
+            item.CollectedCount = value
+
+            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount)
+                print(dungeonPrefix .. " Checks:", item.CollectedCount)
+            end
+        elseif (not INSTANCE.NEW_DUNGEONCOUNT_SYSTEM and OBJ_GLITCHMODE:getState() < 2) and not shouldChestCountUp() then
+            local value = chest.AcquiredCount
+            if enemykey and OBJ_POOL_ENEMYDROP:getState() > 0 then
+                value = value + enemykey.AcquiredCount
+            end
+            if potkey and OBJ_POOL_DUNGEONPOT:getState() > 0 then
+                value = value + potkey.AcquiredCount
+            end
+            if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print(dungeonPrefix .. " after calculation:")
+                print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
+            end
+            item.CollectedCount = value
+        elseif OBJ_GLITCHMODE:getState() < 2 and address then
+            local value = 0
+            if INSTANCE.VERSION_MINOR < 5 then
+                value = segment:ReadUInt8(address)
+            else
+                value = segment:ReadUInt16(address)
+            end
+            if value > 0 then
+                INSTANCE.NEW_DUNGEONCOUNT_SYSTEM = true
+            end
+            if INSTANCE.NEW_SRAM_SYSTEM and dungeonPrefix == "hc" then
+                local otherValue = 0
+                if INSTANCE.VERSION_MINOR < 5 then
+                    otherValue = segment:ReadUInt8(address + 1)
+                else
+                    otherValue = segment:ReadUInt16(address + 2)
+                end
+                if value ~= otherValue then
+                    value = value + otherValue
+                end
+            end
+            if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                print(dungeonPrefix .. " adhoc direct memory:")
+                print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
+                print(dungeonPrefix .. " Checks:", value .. "/" .. item.MaxCount)
+            end
+            item.CollectedCount = value
         end
     end
 end
