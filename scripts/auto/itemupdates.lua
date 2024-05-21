@@ -109,15 +109,15 @@ function updateFlute(segment)
 end
 
 function updateBottles(segment)
-    local item = Tracker:FindObjectForCode("bottle")
-    local count = 0
     for i = 0, 3, 1 do
-        if segment:ReadUInt8(0x7ef35c + i) > 0 then
-            count = count + 1
+        local item = Tracker:FindObjectForCode("bottle"..i)
+        local contents = segment:ReadUInt8(0x7ef35c + i)
+        print(string.format("bottle %d contents: %d", i, contents))
+        if contents == 0 then
+            item.CurrentStage = 0
+        else
+            item.CurrentStage = contents - 1
         end
-    end
-    if count > item.CurrentStage or not STATUS.AutotrackerInGame then
-        item.CurrentStage = count
     end
 end
 
