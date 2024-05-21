@@ -1,50 +1,66 @@
 {
     "shared_item_grid": {
-        "type": "itemgrid",
-        "h_alignment": "center",
-        "item_margin": "1,2",
-        "item_size": 42,
-        "rows": [
-            [
-                "bow",
-                "boomerang_red",
-                "hookshot",
-                "bombs",
-                "powder_used",
-                "mushroom_used",
-                "boots",
-                "owsword"
-            ],
-            [
-                "firerod",
-                "icerod",
-                "bombos",
-                "ether",
-                "quake",
-                "halfmagic",
-                "lift1",
-                "shield"
-            ],
-            [
-                "lamp",
-                "hammer",
-                "ocarina",
-                "net",
-                "book",
-                "shovel_used",
-                "flippers",
-                "armor"
-            ],
-            [
-                "bottle",
-                "somaria",
-                "byrna",
-                "cape",
-                "mirror",
-                "agas",
-                "moonpearl",
-                "gomode"
-            ]
+        "type": "container",
+        "margin": 0,
+        "content": [
+            {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "item_margin": "1,2",
+                "item_size": 42,
+                "rows": [
+                    [
+                        "bow",
+                        "boomerang_red",
+                        "hookshot",
+                        "bombs",
+                        "powder_used",
+                        "mushroom_used",
+                        "boots",
+                        "owsword"
+                    ],
+                    [
+                        "firerod",
+                        "icerod",
+                        "bombos",
+                        "ether",
+                        "quake",
+                        "halfmagic",
+                        "lift1",
+                        "shield"
+                    ],
+                    [
+                        "lamp",
+                        "hammer",
+                        "ocarina",
+                        "net",
+                        "book",
+                        "shovel_used",
+                        "flippers",
+                        "armor"
+                    ],
+                    [
+                        "",
+                        "somaria",
+                        "byrna",
+                        "cape",
+                        "mirror",
+                        "agas",
+                        "moonpearl",
+                        "gomode"
+                    ]
+                ]
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 21,
+                "item_margin": "0,1",
+                "margin": "-153,72,0,0",
+                "rows":[
+                    [ "bottle0", "bottle1" ],
+                    [ "bottle2", "bottle3" ]
+                ]
+            }
         ]
     },
     "shared_pendant_grid": {

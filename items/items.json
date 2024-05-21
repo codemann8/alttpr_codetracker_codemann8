@@ -296,6 +296,142 @@
             }
         ]
     },
+    {
+        "name": "Bottle 1",
+        "type": "progressive",
+        "allow_disabled": "false",
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/items/bottle_empty.png",
+                "img_mods": "@disabled"
+            },
+            {
+                "img": "images/items/bottle_empty.png",
+                "codes": "bottle0,bottle"
+            },
+            {
+                "img": "images/items/bottle_red.png"
+            },
+            {
+                "img": "images/items/bottle_green.png"
+            },
+            {
+                "img": "images/items/bottle_blue.png"
+            },
+            {
+                "img": "images/items/bottle_fairy.png"
+            },
+            {
+                "img": "images/items/bottle_bee.png"
+            },
+            {
+                "img": "images/items/bottle_goodbee.png"
+            }
+        ]
+    },
+    {
+        "name": "Bottle 2",
+        "type": "progressive",
+        "allow_disabled": "false",
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/items/bottle_empty.png",
+                "img_mods": "@disabled"
+            },
+            {
+                "img": "images/items/bottle_empty.png",
+                "codes": "bottle1,bottle"
+            },
+            {
+                "img": "images/items/bottle_red.png"
+            },
+            {
+                "img": "images/items/bottle_green.png"
+            },
+            {
+                "img": "images/items/bottle_blue.png"
+            },
+            {
+                "img": "images/items/bottle_fairy.png"
+            },
+            {
+                "img": "images/items/bottle_bee.png"
+            },
+            {
+                "img": "images/items/bottle_goodbee.png"
+            }
+        ]
+    },
+    {
+        "name": "Bottle 3",
+        "type": "progressive",
+        "allow_disabled": "false",
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/items/bottle_empty.png",
+                "img_mods": "@disabled"
+            },
+            {
+                "img": "images/items/bottle_empty.png",
+                "codes": "bottle2,bottle"
+            },
+            {
+                "img": "images/items/bottle_red.png"
+            },
+            {
+                "img": "images/items/bottle_green.png"
+            },
+            {
+                "img": "images/items/bottle_blue.png"
+            },
+            {
+                "img": "images/items/bottle_fairy.png"
+            },
+            {
+                "img": "images/items/bottle_bee.png"
+            },
+            {
+                "img": "images/items/bottle_goodbee.png"
+            }
+        ]
+    },
+    {
+        "name": "Bottle 4",
+        "type": "progressive",
+        "allow_disabled": "false",
+        "loop": true,
+        "stages": [
+            {
+                "img": "images/items/bottle_empty.png",
+                "img_mods": "@disabled"
+            },
+            {
+                "img": "images/items/bottle_empty.png",
+                "codes": "bottle3,bottle"
+            },
+            {
+                "img": "images/items/bottle_red.png"
+            },
+            {
+                "img": "images/items/bottle_green.png"
+            },
+            {
+                "img": "images/items/bottle_blue.png"
+            },
+            {
+                "img": "images/items/bottle_fairy.png"
+            },
+            {
+                "img": "images/items/bottle_bee.png"
+            },
+            {
+                "img": "images/items/bottle_goodbee.png"
+            }
+        ]
+    },
     // Somaria
     {
         "name": "Cane of Somaria",
