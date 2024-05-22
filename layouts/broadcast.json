@@ -36,7 +36,7 @@
                         "armor"
                     ],
                     [
-                        "bottle",
+                        "",
                         "somaria",
                         "byrna",
                         "cape",
@@ -69,6 +69,16 @@
                 "item": "mushroom_used",
                 "width": 24,
                 "margin": "88,18,0,0"
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 16,
+                "item_margin": "0,1",
+                "margin": "-101,65,0,0",
+                "rows":[
+                    [ "bottle0", "bottle1" ],
+                    [ "bottle2", "bottle3" ]
+                ]
             }
         ]
     },
