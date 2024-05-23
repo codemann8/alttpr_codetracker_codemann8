@@ -1164,10 +1164,20 @@
                 "item_count": 1
             },
             {
+                "name": "Right Path",
+                "access_rules": [
+                    "door_shuffle_off,bombs",
+                    "door_shuffle_off,boots",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Bow Side",
                 "access_rules": [
-                    "door_shuffle_off,retro_mode_off,[bow]",
-                    "door_shuffle_off,retro_mode_on,[arrows],[bow]",
+                    "door_shuffle_off,@Palace of Darkness/Right Path,retro_mode_off,[bow]",
+                    "door_shuffle_off,@Palace of Darkness/Right Path,retro_mode_on,[arrows],[bow]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],

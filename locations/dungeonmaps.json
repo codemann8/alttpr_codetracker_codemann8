@@ -2056,7 +2056,7 @@
             },
             {
                 "name": "PoD Mimics 1",
-                "access_rules": [ "@Palace of Darkness/Shooter Chest" ],
+                "access_rules": [ "@Palace of Darkness/Right Path" ],
                 "sections": [
                     {
                         "name": "Pots",
