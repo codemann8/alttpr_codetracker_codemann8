@@ -2250,9 +2250,10 @@
             {
                 "name": "Big Bomb Spot",
                 "access_rules": [
-                    "@Pyramid Fairy/Escort Big Bomb,crystal56:2",
-                    "@Pyramid Fairy/Escort Big Bomb,crystal:7",
-                    "@Pyramid Fairy/Escort Big Bomb,prize:10",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,crystal56:2",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,crystal:7",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,prize:10",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_on,crystal5,crystal6",
                     "ow_vanilla_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
                     "ow_vanilla_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror",
                     "@OW Helper Pyramid Moat,[nothing]"

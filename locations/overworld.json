@@ -8,9 +8,10 @@
             {
                 "name": "Pedestal",
                 "access_rules": [
-                    "greenpendant,pendant:2",
-                    "pendant:3",
-                    "prize:10",
+                    "keysanity_prize_off,greenpendant,pendant:2",
+                    "keysanity_prize_off,pendant:3",
+                    "keysanity_prize_off,prize:10",
+                    "keysanity_prize_on,greenpendantalt,pendantalt:2",
                     "{book}"
                 ],
                 "capture_item": true,

@@ -57,7 +57,6 @@ function updateRoomLocation(segment, location, offset)
 end
 
 function updateChestCountFromDungeon(segment, dungeonPrefix, address)
-
     local item = Tracker:FindObjectForCode(dungeonPrefix .. "_item")
     if item then
         item = item.ItemState
@@ -68,6 +67,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
         local compass = Tracker:FindObjectForCode(dungeonPrefix .. "_compass")
         local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
         local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
+        local prize = Tracker:FindObjectForCode(dungeonPrefix)
         local dungeonItems = 0
         local clock = os.clock()
 
@@ -86,6 +86,10 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
         end
 
         if bigkey.Active and OBJ_KEYBIG:getState() == 0 and (dungeonPrefix ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
+            dungeonItems = dungeonItems + 1
+        end
+
+        if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() == 0 then
             dungeonItems = dungeonItems + 1
         end
 

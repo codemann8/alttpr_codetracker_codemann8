@@ -1,4 +1,81 @@
 [
+    // Green Pendant
+    {
+        "name": "Green Pendant",
+        "type": "toggle",
+        "img": "images/items/greenpendant.png",
+        "codes": "greenpendantalt,prizealt"
+    },
+    // Blue Pendant
+    {
+        "name": "Blue Pendant",
+        "type": "toggle",
+        "img": "images/items/bluependant.png",
+        "codes": "bluependantalt,pendantalt,prizealt"
+    },
+    // Red Pendant
+    {
+        "name": "Red Pendant",
+        "type": "toggle",
+        "img": "images/items/redpendant.png",
+        "codes": "redpendantalt,pendantalt,prizealt"
+    },
+    // Crystal 1
+    {
+        "name": "Crystal 1",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal1,crystalalt,prizealt"
+    },
+    // Crystal 2
+    {
+        "name": "Crystal 2",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal2,crystalalt,prizealt"
+    },
+    // Crystal 3
+    {
+        "name": "Crystal 3",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal3,crystalalt,prizealt"
+    },
+    // Crystal 4
+    {
+        "name": "Crystal 4",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal4,crystalalt,prizealt"
+    },
+    // Crystal 5
+    {
+        "name": "Crystal 5",
+        "type": "toggle",
+        "img": "images/items/redcrystal.png",
+        "mask_input": true,
+        "codes": "crystal5,crystalalt,prizealt"
+    },
+    // Crystal 6
+    {
+        "name": "Crystal 6",
+        "type": "toggle",
+        "img": "images/items/redcrystal.png",
+        "mask_input": true,
+        "codes": "crystal6,crystalalt,prizealt"
+    },
+    // Crystal 7
+    {
+        "name": "Crystal 7",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal7,crystalalt,prizealt"
+    },
     // Eastern Palace
     {
         "name": "Eastern Palace",

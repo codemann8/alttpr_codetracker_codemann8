@@ -233,6 +233,7 @@ function loadModes()
     OBJ_KEYCOMPASS = KeysanityMode(false, "Compass"):linkSurrogate(KeysanityMode(true, "Compass"))
     OBJ_KEYSMALL = KeysanityMode(false, "Small Key"):linkSurrogate(KeysanityMode(true, "Small Key"))
     OBJ_KEYBIG = KeysanityMode(false, "Big Key"):linkSurrogate(KeysanityMode(true, "Big Key"))
+    OBJ_KEYPRIZE = KeysanityMode(false, "Prize"):linkSurrogate(KeysanityMode(true, "Prize"))
     OBJ_ENTRANCE = EntranceShuffleMode(false):linkSurrogate(EntranceShuffleMode(true))
     OBJ_DOORSHUFFLE = DoorShuffleMode(false):linkSurrogate(DoorShuffleMode(true))
     OBJ_MIXED = OverworldMixedMode(false):linkSurrogate(OverworldMixedMode(true))
@@ -258,6 +259,7 @@ function loadModes()
         ["keysanity_compass"] = OBJ_KEYCOMPASS,
         ["keysanity_smallkey"] = OBJ_KEYSMALL,
         ["keysanity_bigkey"] = OBJ_KEYBIG,
+        ["keysanity_prize"] = OBJ_KEYPRIZE,
         ["entrance_shuffle"] = OBJ_ENTRANCE,
         ["door_shuffle"] = OBJ_DOORSHUFFLE,
         ["ow_mixed"] = OBJ_MIXED,
@@ -481,6 +483,12 @@ function updateChests()
                     newDeducted = newDeducted + 1
                 end
             end
+            if OBJ_KEYPRIZE:getState() == 0 and dungData[10] > 0 then
+                newMax = newMax + 1
+                if Tracker:FindObjectForCode(DATA.DungeonList[i]).Active then
+                    newDeducted = newDeducted + 1
+                end
+            end
 
             local potKeys = Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_potkey")
             if potKeys then
@@ -524,6 +532,30 @@ function updateLayout(setting)
             print("Updating layout")
         end
 
+        local e = Layout:FindLayout("shared_dungeon_misc_grid").Root.Items:GetEnumerator()
+        e:MoveNext()
+        if OBJ_KEYPRIZE:getState() > 0 then
+            e.Current.Layout = Layout:FindLayout("ref_prize_grid")
+            e:MoveNext()
+            if OBJ_DOORSHUFFLE:getState() == 2 then
+                e.Current.Layout = Layout:FindLayout("shared_doortotal_grid")
+            else
+                e.Current.Layout = nil
+            end
+            e:MoveNext()
+            e.Current.Layout = nil
+        else
+            e.Current.Layout = nil
+            e:MoveNext()
+            e.Current.Layout = nil
+            e:MoveNext()
+            if OBJ_DOORSHUFFLE:getState() == 2 then
+                e.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
+            else
+                e.Current.Layout = nil
+            end
+        end
+
         if setting == nil or setting.file == "defaults.lua" then
             Tracker.DisplayAllLocations = true
             -- if setting == nil or setting.textcode == "CONFIG.PREFERENCE_DISPLAY_ALL_LOCATIONS" then
@@ -558,20 +590,20 @@ function updateLayout(setting)
                 end
                 e:MoveNext()
                 if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
-                e.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
+                    e.Current.Layout = Layout:FindLayout("ref_dungeon_misc_grid")
                 else
-                e.Current.Layout = nil
+                    e.Current.Layout = nil
                 end
 
                 --Change vertical layout
                 e = Layout:FindLayout("shared_dungeon_v_grid").Root.Children:GetEnumerator()
                 e:MoveNext()
-                local e2 = e.Current.Items:GetEnumerator()
+                local e2 = e.Current.Children:GetEnumerator()
                 e2:MoveNext()
                 if CONFIG.LAYOUT_ENABLE_ALTERNATE_DUNGEON_VIEW then
                     e2.Current.Layout = Layout:FindLayout("shared_lw_keys_alt_grid")
                     e2:MoveNext()
-                    e2.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
+                    e2.Current.Layout = Layout:FindLayout("ref_dungeon_misc_grid")
                 else
                     e2.Current.Layout = Layout:FindLayout("shared_lw_keys_grid")
                     e2:MoveNext()

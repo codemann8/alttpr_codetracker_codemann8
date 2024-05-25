@@ -326,7 +326,8 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "gt_crystals",
-            "prize:10"
+            "keysanity_prize_off,prize:10",
+            "keysanity_prize_on,prizealt:10"
         ]
     },
     {
@@ -645,6 +646,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Eastern Palace/Armos Access,$canDamageBoss|@Eastern Palace/Armos",
+                    "{@Eastern Palace/Armos Access}"
+                ],
                 "item_count": 1,
                 "hosted_item": "easternpalace"
             }
@@ -808,6 +817,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Desert Palace/Lanmolas Access,$canDamageBoss|@Desert Palace/Lanmolas",
+                    "{@Desert Palace/Lanmolas Access}"
+                ],
                 "hosted_item": "desertpalace",
                 "item_count": 1
             }
@@ -933,6 +950,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Tower of Hera/Moldorm Access,$canDamageBoss|@Tower of Hera/Moldorm",
+                    "{@Tower of Hera/Moldorm Access}"
+                ],
                 "hosted_item": "towerofhera",
                 "item_count": 1
             }
@@ -1317,12 +1342,21 @@
             },
             {
                 "name": "King Helmasaur",
+                "short_name": "Helma",
                 "access_rules": [
                     "@Palace of Darkness/Helmasaur Access,$canDamageBoss|@Palace of Darkness/King Helmasaur",
                     "{@Palace of Darkness/Helmasaur Access}"
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Palace of Darkness/Helmasaur Access,$canDamageBoss|@Palace of Darkness/King Helmasaur",
+                    "{@Palace of Darkness/Helmasaur Access}"
+                ],
                 "hosted_item": "palaceofdarkness",
                 "item_count": 1
             }
@@ -1542,6 +1576,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Swamp Palace/Arrghus Access,$canDamageBoss|@Swamp Palace/Arrghus",
+                    "{@Swamp Palace/Arrghus Access}"
+                ],
                 "hosted_item": "swamppalace",
                 "item_count": 1
             }
@@ -1717,6 +1759,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Skull Woods/Mothula Access,$canDamageBoss|@Skull Woods/Mothula",
+                    "{@Skull Woods/Mothula Access}"
+                ],
                 "hosted_item": "skullwoods",
                 "item_count": 1
             }
@@ -1901,6 +1951,15 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Thieves Town/Blind Access,$canDamageBoss|@Thieves Town/Blind",
+                    "{@Thieves Town/Hallway Key}",
+                    "{door_shuffle_on,@Thieves Town/Dungeon Access}"
+                ],
                 "hosted_item": "thievestown",
                 "item_count": 1
             }
@@ -2184,6 +2243,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Ice Palace/Kholdstare Access,hammer,lift1,$canDamageBoss|@Ice Palace/Kholdstare",
+                    "{@Ice Palace/Kholdstare Access,hammer,lift1}"
+                ],
                 "hosted_item": "icepalace",
                 "item_count": 1
             }
@@ -2401,6 +2468,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Misery Mire/Vitreous Access,$canDamageBoss|@Misery Mire/Vitreous",
+                    "{@Misery Mire/Vitreous Access}"
+                ],
                 "hosted_item": "miserymire",
                 "item_count": 1
             }
@@ -2724,6 +2799,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Turtle Rock/Trinexx Access,$canDamageBoss|@Turtle Rock/Trinexx",
+                    "{@Turtle Rock/Trinexx Access}"
+                ],
                 "hosted_item": "turtlerock",
                 "item_count": 1
             }

@@ -552,8 +552,8 @@ function updateCoordinateFromMemorySegment(segment)
     local function findRoom(dungeonId, roomId, coordX, coordY)
         if dungeonId < 0xff then
             local data = DATA.DungeonData[DATA.DungeonIdMap[dungeonId]]
-            if type(data[10]) == "string" then
-                return data[10]
+            if type(data[11]) == "string" then
+                return data[11]
             end
         end
         if DATA.RoomLobbyData[roomId] ~= nil then
@@ -599,7 +599,7 @@ function updateCoordinateFromMemorySegment(segment)
         if dungeonId < 0xff then
             local dungeonPrefix = DATA.DungeonIdMap[dungeonId]
             local data = DATA.DungeonData[dungeonPrefix]
-            if room:find("^cap_drop_") or type(data[10]) == "string" then
+            if room:find("^cap_drop_") or type(data[11]) == "string" then
                 printLog("drop case", 1)
                 return room
             end
@@ -626,7 +626,7 @@ function updateCoordinateFromMemorySegment(segment)
 
             local function pickNext(fullList)
                 --return value must meet the following conditions:
-                --1) value must exist in data[10], static list of all icons for this dungeon
+                --1) value must exist in data[11], static list of all icons for this dungeon
                 --2) value cannot be in MULTIDUNGEONCAPTURES, list of already used icons
                 --3) value must prefer to use existing value of room, or else use the first of the remaining icons
                 local remaining = {}
@@ -664,7 +664,7 @@ function updateCoordinateFromMemorySegment(segment)
                 return ret
             end
             
-            room = pickNext(data[10])
+            room = pickNext(data[11])
         end
         return room
     end
@@ -1361,21 +1361,21 @@ DATA.MEMORY.DungeonChests = {
     { {"@Eastern Palace/Stalfos Spawn", "@EP Stalfos Spawn/Chest"}, {{168, 4}} },
     { {"@Eastern Palace/Big Chest", "@EP Big Chest/Chest"}, {{169, 4}} },
     { {"@Eastern Palace/Big Key Chest", "@EP Big Key Chest/Chest"}, {{184, 4}} },
-    { {"@Eastern Palace/Armos", "@EP Armos/Prize"}, {{200, 11}} },
+    { {"@Eastern Palace/Armos", "@EP Armos/Boss"}, {{200, 11}} },
 
     { {"@Desert Palace/Eyegore Switch", "@DP Eyegore Switch/Chest"}, {{116, 4}} },
     { {"@Desert Palace/Popo Chest", "@DP Popo Chest/Chest"}, {{133, 4}} },
     { {"@Desert Palace/Cannonball Chest", "@DP Cannonball/Chest"}, {{117, 4}} },
     { {"@Desert Palace/Torch", "@DP Torch/Torch"}, {{115, 10}} },
     { {"@Desert Palace/Big Chest", "@DP Big Chest/Chest"}, {{115, 4}} },
-    { {"@Desert Palace/Lanmolas", "@DP Lanmolas/Prize"}, {{51, 11}} },
+    { {"@Desert Palace/Lanmolas", "@DP Lanmolas/Boss"}, {{51, 11}} },
 
     { {"@Tower of Hera/Lobby", "@TH Lobby/Chest"}, {{119, 4}} },
     { {"@Tower of Hera/Cage", "@TH Cage/Item"}, {{135, 10}} },
     { {"@Tower of Hera/Basement", "@TH Basement/Chest"}, {{135, 4}} },
     { {"@Tower of Hera/Compass Chest", "@TH Compass Room/Chest"}, {{39, 5}} },
     { {"@Tower of Hera/Big Chest", "@TH Big Chest/Chest"}, {{39, 4}} },
-    { {"@Tower of Hera/Moldorm", "@TH Moldorm/Prize"}, {{7, 11}} },
+    { {"@Tower of Hera/Moldorm", "@TH Moldorm/Boss"}, {{7, 11}} },
 
     { {"@Agahnim's Tower/Lobby", "@AT Lobby/Chest"}, {{224, 4}} },
     { {"@Agahnim's Tower/Dark Chest", "@AT Dark Chest/Chest"}, {{208, 4}} },
@@ -1391,7 +1391,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Palace of Darkness/Turtle Room", "@PoD Turtle Room/Chest"}, {{26, 5}} },
     { {"@Palace of Darkness/Rupee Basement", "@PoD Rupee Basement/Chest"}, {{106, 4}, {106, 5}} },
     { {"@Palace of Darkness/Harmless Hellway", "@PoD Harmless Hellway/Chest"}, {{26, 6}} },
-    { {"@Palace of Darkness/King Helmasaur", "@PoD King Helmasaur/Prize"}, {{90, 11}} },
+    { {"@Palace of Darkness/King Helmasaur", "@PoD King Helmasaur/Boss"}, {{90, 11}} },
 
     { {"@Swamp Palace/Entrance Chest", "@SP Entrance/Chest"}, {{40, 4}} },
     { {"@Swamp Palace/Bomb Wall", "@SP Bomb Wall/Chest"}, {{55, 4}} },
@@ -1401,7 +1401,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Swamp Palace/Big Chest", "@SP Big Chest/Chest"}, {{54, 4}} },
     { {"@Swamp Palace/Flooded Treasure", "@SP Flooded Treasure/Chest"}, {{118, 4}, {118, 5}} },
     { {"@Swamp Palace/Snake Waterfall", "@SP Snake Waterfall/Chest"}, {{102, 4}} },
-    { {"@Swamp Palace/Arrghus", "@SP Arrghus/Prize"}, {{6, 11}} },
+    { {"@Swamp Palace/Arrghus", "@SP Arrghus/Boss"}, {{6, 11}} },
 
     { {"@Skull Woods/Map Chest", "@SW Map Chest/Chest"}, {{88, 5}} },
     { {"@Skull Woods/Gibdo Prison", "@SW Gibdo Prison/Chest"}, {{87, 5}} },
@@ -1410,7 +1410,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Skull Woods/Statue Switch", "@SW Statue Switch/Chest"}, {{87, 4}} },
     { {"@Skull Woods/Big Chest", "@SW Big Chest/Chest"}, {{88, 4}} },
     { {"@Skull Woods/Bridge", "@SW Bridge/Chest"}, {{89, 4}} },
-    { {"@Skull Woods/Mothula", "@SW Mothula/Prize"}, {{41, 11}} },
+    { {"@Skull Woods/Mothula", "@SW Mothula/Boss"}, {{41, 11}} },
 
     { {"@Thieves Town/Main Lobby", "@TT Main Lobby/Chest"}, {{219, 4}} },
     { {"@Thieves Town/Ambush", "@TT Ambush/Chest"}, {{203, 4}} },
@@ -1419,7 +1419,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Thieves Town/Attic Chest", "@TT Attic/Chest"}, {{101, 4}} },
     { {"@Thieves Town/Prison Cell", "@TT Prison Cell/Chest"}, {{69, 4}} },
     { {"@Thieves Town/Big Chest", "@TT Big Chest/Chest"}, {{68, 4}} },
-    { {"@Thieves Town/Blind", "@TT Blind/Prize"}, {{172, 11}} },
+    { {"@Thieves Town/Blind", "@TT Blind/Boss"}, {{172, 11}} },
 
     { {"@Ice Palace/Pengator Room", "@IP Pengator Room/Chest"}, {{46, 4}} },
     { {"@Ice Palace/Spike Room", "@IP Spike Room/Chest"}, {{95, 4}} },
@@ -1428,7 +1428,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Ice Palace/Freezor Chest", "@IP Freezor/Chest"}, {{126, 4}} },
     { {"@Ice Palace/Ice T", "@IP Ice T/Chest"}, {{174, 4}} },
     { {"@Ice Palace/Big Chest", "@IP Big Chest/Chest"}, {{158, 4}} },
-    { {"@Ice Palace/Kholdstare", "@IP Kholdstare/Prize"}, {{222, 11}} },
+    { {"@Ice Palace/Kholdstare", "@IP Kholdstare/Boss"}, {{222, 11}} },
 
     { {"@Misery Mire/Spike Switch", "@MM Spike Room/Chest"}, {{179, 4}} },
     { {"@Misery Mire/Bridge", "@MM Bridge/Chest"}, {{162, 4}} },
@@ -1437,7 +1437,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Misery Mire/Torch Cutscene", "@MM Torch Cutscene/Chest"}, {{209, 4}} },
     { {"@Misery Mire/Right Blue Pegs Chest", "@MM Right Blue Pegs/Chest"}, {{195, 5}} },
     { {"@Misery Mire/Big Chest", "@MM Big Chest/Chest"}, {{195, 4}} },
-    { {"@Misery Mire/Vitreous", "@MM Vitreous/Prize"}, {{144, 11}} },
+    { {"@Misery Mire/Vitreous", "@MM Vitreous/Boss"}, {{144, 11}} },
 
     { {"@Turtle Rock/Compass Room", "@TR Compass Room/Chest"}, {{214, 4}} },
     { {"@Turtle Rock/Roller Room", "@TR Roller Room/Chest"}, {{183, 4}, {183, 5}} },
@@ -1446,7 +1446,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Turtle Rock/Big Chest", "@TR Big Chest/Chest"}, {{36, 4}} },
     { {"@Turtle Rock/Crystaroller Chest", "@TR Crystaroller/Chest"}, {{4, 4}} },
     { {"@Turtle Rock/Laser Bridge", "@TR Laser Bridge/Chest"}, {{213, 4}, {213, 5}, {213, 6}, {213, 7}} },
-    { {"@Turtle Rock/Trinexx", "@TR Trinexx/Prize"}, {{164, 11}} },
+    { {"@Turtle Rock/Trinexx", "@TR Trinexx/Boss"}, {{164, 11}} },
 
     { {"@Ganon's Tower/Hope Room", "@GT Hope Room/Chest"}, {{140, 5}, {140, 6}} },
     { {"@Ganon's Tower/Torch", "@GT Torch/Torch"}, {{140, 10}} },
@@ -1777,16 +1777,16 @@ DATA.MEMORY.Bosses = {
 }
 
 DATA.MEMORY.BossLocations = {
-    "@Eastern Palace/Armos",
-    "@Desert Palace/Lanmolas",
-    "@Tower of Hera/Moldorm",
-    "@Palace of Darkness/King Helmasaur",
-    "@Swamp Palace/Arrghus",
-    "@Skull Woods/Mothula",
-    "@Thieves Town/Blind",
-    "@Ice Palace/Kholdstare",
-    "@Misery Mire/Vitreous",
-    "@Turtle Rock/Trinexx"
+    { "@Eastern Palace/Armos", "@Eastern Palace/Prize", "@EP Armos/Prize" },
+    { "@Desert Palace/Lanmolas", "@Desert Palace/Prize", "@DP Lanmolas/Prize" },
+    { "@Tower of Hera/Moldorm", "@Tower of Hera/Prize", "@TH Moldorm/Prize" },
+    { "@Palace of Darkness/King Helmasaur", "@Palace of Darkness/Prize", "@PoD King Helmasaur/Prize" },
+    { "@Swamp Palace/Arrghus", "@Swamp Palace/Prize", "@SP Arrghus/Prize" },
+    { "@Skull Woods/Mothula", "@Skull Woods/Prize", "@SW Mothula/Prize" },
+    { "@Thieves Town/Blind", "@Thieves Town/Prize", "@TT Blind/Prize" },
+    { "@Ice Palace/Kholdstare", "@Ice Palace/Prize", "@IP Kholdstare/Prize" },
+    { "@Misery Mire/Vitreous", "@Misery Mire/Prize", "@MM Vitreous/Prize" },
+    { "@Turtle Rock/Trinexx", "@Turtle Rock/Prize", "@TR Trinexx/Prize" }
 }
 
 DATA.MEMORY.Underworld = {
@@ -1893,19 +1893,33 @@ function updateRoomsFromMemorySegment(segment)
         end
 
         if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
-            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i])
+            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][1])
             if item then
                 item.AvailableChestCount = bossflag == 0 and 1 or 0
                 
                 if item.AvailableChestCount == 0 then
-                    INSTANCE.MEMORY.BossLocations[i] = nil
+                    --INSTANCE.MEMORY.BossLocations[i] = nil
 
                     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i])
+                        print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][1])
                     end
                 end
             else
                 print("Couldn't find location", item)
+            end
+            if not INSTANCE.NEW_SRAM_SYSTEM then
+                item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][2])
+                if item then
+                    item.AvailableChestCount = bossflag == 0 and 1 or 0
+                    item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][3])
+                    item.AvailableChestCount = bossflag == 0 and 1 or 0
+                    
+                    if item.AvailableChestCount == 0 then
+                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                            print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][2])
+                        end
+                    end
+                end
             end
         end
     end
@@ -2216,10 +2230,28 @@ function updateKeyTotalsFromMemorySegment(segment)
         print("Segment: Key Totals")
     end
 
-    --Key Totals Seen
+    --Key Totals and Prizes Seen
     CACHE.KeysSeen = segment:ReadUInt16(0x7ef474)
     for i, dungeonPrefix in ipairs(DATA.DungeonList) do
         updateKeyTotal(dungeonPrefix, CACHE.KeysSeen)
+        local dungData = DATA.DungeonData[dungeonPrefix]
+        if dungData[10] > 0 and OBJ_KEYPRIZE:getState() > 0 and INSTANCE.VERSION_MINOR >= 5 and CACHE.KeysSeen & DATA.DungeonData[dungeonPrefix][3] > 0 then
+            local prizeIdx = AutoTracker:ReadU8(0x30efe0+dungData[4], 0)
+            if prizeIdx > 0 then
+                local dungeon = Tracker:FindObjectForCode(dungeonPrefix)
+                if prizeIdx == 5 or prizeIdx == 6 then
+                    dungeon.CurrentStage = 2
+                elseif prizeIdx == 8 then
+                    dungeon.CurrentStage = 4
+                elseif prizeIdx > 8 then
+                    dungeon.CurrentStage = 3
+                else
+                    dungeon.CurrentStage = 1
+                end
+            else
+                print('error', dungeonPrefix, prizeIdx, dungData[4])
+            end
+        end
     end
 end
 
@@ -2233,6 +2265,18 @@ function updateDungeonsCompletedFromMemorySegment(segment)
         local item = findObjectForCode(boss[1])
         if item then
             item.Active = CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0
+        end
+        item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][2])
+        if item and item.AvailableChestCount > 0 then
+            item.AvailableChestCount = (CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3]) == 0 and 1 or 0
+            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][3])
+            item.AvailableChestCount = (CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3]) == 0 and 1 or 0
+            
+            if item.AvailableChestCount == 0 then
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][2])
+                end
+            end
         end
     end
 end
@@ -2256,15 +2300,36 @@ function updatePrizeFromMemorySegment(segment)
     CACHE.PendantData = segment:ReadUInt8(0x7ef374)
     CACHE.CrystalData = segment:ReadUInt8(0x7ef37a)
 
-    local diffPendants = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
-    local diffCrystals = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
-    if numberOfSetBits(diffPendants) == 1 and diffPendants & CACHE.PendantData > 0 then
-        setPrize(diffPendants & CACHE.PendantData == 4 and 4 or 3)
-    elseif numberOfSetBits(diffCrystals) == 1 and diffCrystals & CACHE.CrystalData > 0 then
-        setPrize(1)
+    if OBJ_KEYPRIZE:getState() < 2 then
+        local diffPendants = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
+        local diffCrystals = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
+        if numberOfSetBits(diffPendants) == 1 and diffPendants & CACHE.PendantData > 0 then
+            setPrize(diffPendants & CACHE.PendantData == 4 and 4 or 3)
+        elseif numberOfSetBits(diffCrystals) == 1 and diffCrystals & CACHE.CrystalData > 0 then
+            setPrize(1)
+        end
     end
 
     INSTANCE.DUNGEON_PRIZE_DATA = (CACHE.PendantData << 8) + CACHE.CrystalData
+    
+    if OBJ_KEYPRIZE:getState() > 0 then
+        local prizes = {
+            ["greenpendant"] = 0x0400,
+            ["bluependant"] = 0x0200,
+            ["redpendant"] = 0x0100,
+            ["crystal1"] = 0x0002,
+            ["crystal2"] = 0x0010,
+            ["crystal3"] = 0x0040,
+            ["crystal4"] = 0x0020,
+            ["crystal5"] = 0x0004,
+            ["crystal6"] = 0x0001,
+            ["crystal7"] = 0x0008
+        }
+        for prize, mask in pairs(prizes) do
+            local item = Tracker:FindObjectForCode(prize)
+            item.Active = INSTANCE.DUNGEON_PRIZE_DATA & mask > 0
+        end
+    end
 end
 
 function updateCollectionFromMemorySegment(segment)

@@ -5420,9 +5420,10 @@
         "short_name": "Pyramid Fairy",
         "parent": "OW Pyramid",
         "access_rules": [
-            "crystal56:2",
-            "crystal:7",
-            "prize:10",
+            "keysanity_prize_off,crystal56:2",
+            "keysanity_prize_off,crystal:7",
+            "keysanity_prize_off,prize:10",
+            "keysanity_prize_on,crystal5,crystal6",
             "ow_vanilla_1b,glitch_mode_owg,ow_layout_off,boots,mirror",
             "ow_vanilla_1b,glitch_mode_major,ow_layout_off,mirror",
             "@OW Helper Pyramid Moat,[nothing]"

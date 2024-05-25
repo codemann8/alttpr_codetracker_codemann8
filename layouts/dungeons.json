@@ -31,111 +31,122 @@
         "margin": 0,
         "content": [
             {
-                "type": "array",
-                "orientation": "vertical",
-                "h_alignment": "center",
-                "v_alignment": "center",
+                "type": "container",
                 "margin": 0,
                 "content": [
                     {
                         "type": "array",
-                        "orientation": "horizontal",
-                        "margin": "0,0,0,14",
-                        "content": [
-                            {
-                                "type": "array",
-                                "orientation": "horizontal",
-                                "margin": "0,0,8,0",
-                                "content": [
-                                    {
-                                        "type": "itemgrid",
-                                        "v_alignment": "center",
-                                        "margin": "0,0,-2,0",
-                                        "item_size": 32,
-                                        "rows": [ [ "hc_label" ] ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "item_margin": 0,
-                                        "margin": 0,
-                                        "item_size": 40,
-                                        "badge_font_size": 20,
-                                        "rows": [ [ "hc_item", "hc_mcbk", "hc_smallkey" ] ]
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "array",
-                                "orientation": "horizontal",
-                                "margin": "0,0,8,0",
-                                "content": [
-                                    {
-                                        "type": "itemgrid",
-                                        "v_alignment": "center",
-                                        "margin": "0,0,-2,0",
-                                        "item_size": 32,
-                                        "rows": [ [ "at_label" ] ]
-                                    },
-                                    {
-                                        "type": "itemgrid",
-                                        "item_margin": 0,
-                                        "margin": 0,
-                                        "item_size": 40,
-                                        "badge_font_size": 20,
-                                        "rows": [ [ "at_item", "at_mcbk", "at_smallkey" ] ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "array",
                         "orientation": "vertical",
                         "h_alignment": "center",
+                        "v_alignment": "center",
                         "margin": 0,
                         "content": [
                             {
-                                "type": "itemgrid",
-                                "v_alignment": "center",
-                                "item_margin": 0,
-                                "margin": "0,0,0,4",
-                                "item_size": 40,
-                                "badge_font_size": 20,
-                                "rows": [ [ "", "toh_item", "towerofhera", "toh_mcbk", "toh_smallkey" ] ]
+                                "type": "array",
+                                "orientation": "horizontal",
+                                "margin": "0,0,0,14",
+                                "content": [
+                                    {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "margin": "0,0,8,0",
+                                        "content": [
+                                            {
+                                                "type": "itemgrid",
+                                                "v_alignment": "center",
+                                                "margin": "0,0,-2,0",
+                                                "item_size": 32,
+                                                "rows": [ [ "hc_label" ] ]
+                                            },
+                                            {
+                                                "type": "itemgrid",
+                                                "item_margin": 0,
+                                                "margin": 0,
+                                                "item_size": 40,
+                                                "badge_font_size": 20,
+                                                "rows": [ [ "hc_item", "hc_mcbk", "hc_smallkey" ] ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "margin": "0,0,8,0",
+                                        "content": [
+                                            {
+                                                "type": "itemgrid",
+                                                "v_alignment": "center",
+                                                "margin": "0,0,-2,0",
+                                                "item_size": 32,
+                                                "rows": [ [ "at_label" ] ]
+                                            },
+                                            {
+                                                "type": "itemgrid",
+                                                "item_margin": 0,
+                                                "margin": 0,
+                                                "item_size": 40,
+                                                "badge_font_size": 20,
+                                                "rows": [ [ "at_item", "at_mcbk", "at_smallkey" ] ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "type": "array",
-                                "orientation": "horizontal",
+                                "orientation": "vertical",
                                 "h_alignment": "center",
                                 "margin": 0,
                                 "content": [
                                     {
                                         "type": "itemgrid",
                                         "v_alignment": "center",
-                                        "item_margin": "1,0",
-                                        "margin": "4,0",
+                                        "item_margin": 0,
+                                        "margin": "0,0,0,4",
                                         "item_size": 40,
                                         "badge_font_size": 20,
-                                        "rows": [
-                                            [ "", "desertpalace", "" ],
-                                            [ "dp_item", "dp_mcbk", "dp_smallkey" ]
-                                        ]
+                                        "rows": [ [ "", "toh_item", "towerofhera", "toh_mcbk", "toh_smallkey" ] ]
                                     },
                                     {
-                                        "type": "itemgrid",
-                                        "v_alignment": "center",
-                                        "item_margin": "1,0",
-                                        "margin": "4,0",
-                                        "item_size": 40,
-                                        "badge_font_size": 20,
-                                        "rows": [
-                                            [ "", "easternpalace", "" ],
-                                            [ "ep_item", "ep_mcbk", "ep_smallkey" ]
+                                        "type": "array",
+                                        "orientation": "horizontal",
+                                        "h_alignment": "center",
+                                        "margin": 0,
+                                        "content": [
+                                            {
+                                                "type": "itemgrid",
+                                                "v_alignment": "center",
+                                                "item_margin": "1,0",
+                                                "margin": "4,0",
+                                                "item_size": 40,
+                                                "badge_font_size": 20,
+                                                "rows": [
+                                                    [ "", "desertpalace", "" ],
+                                                    [ "dp_item", "dp_mcbk", "dp_smallkey" ]
+                                                ]
+                                            },
+                                            {
+                                                "type": "itemgrid",
+                                                "v_alignment": "center",
+                                                "item_margin": "1,0",
+                                                "margin": "4,0",
+                                                "item_size": 40,
+                                                "badge_font_size": 20,
+                                                "rows": [
+                                                    [ "", "easternpalace", "" ],
+                                                    [ "ep_item", "ep_mcbk", "ep_smallkey" ]
+                                                ]
+                                            }
                                         ]
                                     }
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "type": "layout",
+                        "margin": "-240,-36,0,0",
+                        "key": "ref_pendant_grid"
                     }
                 ]
             },
@@ -172,29 +183,91 @@
                 "type": "layout",
                 "margin": "252,144,0,0",
                 "key": "shared_doortotal_grid"
+            },
+            {
+                "type": "layout",
+                "margin": "-258,144,0,0",
+                "key": "ref_crystal_grid"
             }
         ]
         
     },
-    "shared_dungeon_grid": {
+    "shared_prize_grid": {
         "type": "array",
-        "orientation": "horizontal",
+        "orientation": "vertical",
+        "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": "0,0,0,50",
         "content": [
             {
                 "type": "layout",
+                "margin": "0,6",
+                "key": "ref_pendant_grid"
+            },
+            {
+                "type": "layout",
+                "margin": "0,6",
+                "key": "ref_crystal_grid"
+            }
+        ]
+    },
+    "ref_prize_grid": {
+        "type": "layout",
+        "margin": 0,
+        "key": "shared_prize_grid"
+    },
+    "shared_dungeon_misc_grid": {
+        "type": "container",
+        "orientation": "horizontal",
+        "h_alignment": "left",
+        "margin:": 0,
+        "content": [
+            {
+                "type": "layout",
+                "margin": 0,
+                "key": "ref_prize_grid"
+            },
+            {
+                "type": "layout",
+                "margin": "2,144,0,0",
+                "key": "shared_doortotal_grid"
+            },
+            {
+                "type": "layout",
+                "margin": 0,
+                "key": "blank"
+            }
+        ]
+    },
+    "ref_dungeon_misc_grid": {
+        "type": "layout",
+        "margin": 0,
+        "key": "shared_dungeon_misc_grid"
+    },
+    "shared_dungeon_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": 0,
+        "content": [
+            {
+                "type": "layout",
+                "margin": 0,
                 "key": "shared_lw_keys_grid"
             },
             {
                 "type": "itemgrid",
+                "margin": 0,
                 "width": 20,
                 "rows": [ ]
             },
             {
                 "type": "layout",
+                "margin": 0,
                 "key": "shared_dw_keys_grid"
             },
             {
                 "type": "layout",
+                "margin": 0,
                 "key": "blank"
             }
         ]
@@ -204,18 +277,19 @@
         "orientation": "vertical",
         "content": [
             {
-                "type": "container",
+                "type": "array",
                 "orientation": "horizontal",
                 "h_alignment": "center",
                 "content": [
                     {
                         "type": "layout",
+                        "margin": "0,0,0,0",
                         "key": "shared_lw_keys_grid"
                     },
                     {
                         "type": "layout",
-                        "margin": "275,0,0,0",
-                        "key": "shared_doortotal_v_grid"
+                        "margin": "0,0,0,0",
+                        "key": "ref_dungeon_misc_grid"
                     }
                 ]
             },

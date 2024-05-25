@@ -40,6 +40,7 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
   - Compasses
   - Small Keys (Also has extra option for Universal Keys, commonly paired with Retro mode)
   - Big Keys
+  - Prizes (In Dungeon vs Wild)
 - Entrance Shuffle
   - Vanilla
   - Dungeon (Only the dungeon entrances are shuffled)

@@ -106,7 +106,7 @@ function saveBackup()
         textOutput = textOutput .. "BACKUP.MODE_SETTINGS = {\n"
         local objects = {
             "world_state_mode","entrance_shuffle","door_shuffle","ow_mixed","ow_layout",
-            "keysanity_map","keysanity_compass","keysanity_smallkey","keysanity_bigkey",
+            "keysanity_map","keysanity_compass","keysanity_smallkey","keysanity_bigkey","keysanity_prize",
             "pool_shopsanity","pool_bonkdrop","pool_enemydrop","pool_dungeonpot","pool_cavepot",
             "pool_district","retro_mode","glitch_mode","race_mode","gt_crystals"
         }

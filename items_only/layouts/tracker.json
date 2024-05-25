@@ -58,14 +58,9 @@
                                     "margin": "1,0",
                                     "content": [
                                         {
-                                            "type": "itemgrid",
+                                            "type": "layout",
                                             "margin": 0,
-                                            "item_margin": 0,
-                                            "item_size": 20,
-                                            "rows": [
-                                                [ "keysanity_map_small", "keysanity_compass_small" ],
-                                                [ "keysanity_smallkey_small", "keysanity_bigkey_small" ]
-                                            ]
+                                            "key": "shared_keysanity_grid"
                                         },
                                         {
                                             "type": "itemgrid",

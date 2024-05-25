@@ -52,6 +52,7 @@ function DoorShuffleMode:postUpdate()
     end
     
     updateChests()
+    updateLayout("nothing")
 
     if self:getState() == 0 then
         INSTANCE.NEW_KEY_SYSTEM = false
