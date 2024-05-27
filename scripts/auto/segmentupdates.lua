@@ -2314,9 +2314,9 @@ function updatePrizeFromMemorySegment(segment)
     
     if OBJ_KEYPRIZE:getState() > 0 then
         local prizes = {
-            ["greenpendant"] = 0x0400,
-            ["bluependant"] = 0x0200,
-            ["redpendant"] = 0x0100,
+            ["greenpendantalt"] = 0x0400,
+            ["bluependantalt"] = 0x0200,
+            ["redpendantalt"] = 0x0100,
             ["crystal1"] = 0x0002,
             ["crystal2"] = 0x0010,
             ["crystal3"] = 0x0040,

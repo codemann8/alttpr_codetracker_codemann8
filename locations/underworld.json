@@ -1070,9 +1070,10 @@
                 "name": "Sahasrahla",
                 "short_name": "Sah",
                 "access_rules": [
-                    "greenpendant",
-                    "pendant:3",
-                    "prize:10"
+                    "keysanity_prize_off,greenpendant",
+                    "keysanity_prize_off,pendant:3",
+                    "keysanity_prize_off,prize:10",
+                    "keysanity_prize_on,greenpendantalt"
                 ],
                 "item_count": 1
             }
