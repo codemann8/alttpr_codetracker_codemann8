@@ -455,6 +455,9 @@ function updateChests()
                     newMax = newMax + dungData[9]
                 end
             end
+            if OBJ_KEYPRIZE:getState() > 0 then
+                newMax = newMax + dungData[10]
+            end
             item.MaxCount = newMax
         end
 
@@ -480,12 +483,6 @@ function updateChests()
             if OBJ_KEYBIG:getState() == 0 and DATA.DungeonList[i] ~= "at" and (DATA.DungeonList[i] ~= "hc" or OBJ_POOL_ENEMYDROP:getState() > 0) then
                 newMax = newMax + 1
                 if Tracker:FindObjectForCode(DATA.DungeonList[i] .. "_bigkey").Active then
-                    newDeducted = newDeducted + 1
-                end
-            end
-            if OBJ_KEYPRIZE:getState() == 0 and dungData[10] > 0 then
-                newMax = newMax + 1
-                if Tracker:FindObjectForCode(DATA.DungeonList[i]).Active then
                     newDeducted = newDeducted + 1
                 end
             end

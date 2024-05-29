@@ -89,10 +89,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             dungeonItems = dungeonItems + 1
         end
 
-        if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() == 0 then
-            dungeonItems = dungeonItems + 1
-        end
-
         if OBJ_DOORSHUFFLE:getState() < 2 and OBJ_GLITCHMODE:getState() < 2 then
             item.DeductedCount = dungeonItems
         else
@@ -122,6 +118,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     value = value + otherValue
                 end
             end
+            if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() > 0 then
+                value = value + 1
+            end
             if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                 print(dungeonPrefix .. " from direct memory:")
                 print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
@@ -140,6 +139,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             end
             if potkey and OBJ_POOL_DUNGEONPOT:getState() > 0 then
                 value = value + potkey.AcquiredCount
+            end
+            if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() > 0 then
+                value = value + 1
             end
             if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                 print(dungeonPrefix .. " after calculation:")
