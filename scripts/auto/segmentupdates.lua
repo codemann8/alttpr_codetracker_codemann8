@@ -66,15 +66,23 @@ function updateLocationFromMemorySegment(segment)
     updateModuleFromMemorySegment(segment)
 
     if isInGameFromModule() and segment:ReadUInt8(0x7e0010) ~= 0x0e then
+        local indoor = segment:ReadUInt8(0x7e001b) == 1
+        
         -- Overworld Id
-        local owChanged = updateOverworldIdFromMemorySegment(segment)
+        local owChanged = false
+        if not indoor or indoor ~= CACHE.INDOOR then
+            owChanged = updateOverworldIdFromMemorySegment(segment)
+        end
 
         if os.clock() - clock > 0.005 then
             printLog(string.format("Update LocationOW LAG: %f", os.clock() - clock), 1)
         end
 
         -- Room Id
-        local uwChanged = updateRoomIdFromMemorySegment(segment)
+        local uwChanged = false
+        if indoor or indoor ~= CACHE.INDOOR then
+            uwChanged = updateRoomIdFromMemorySegment(segment)
+        end
 
         if os.clock() - clock > 0.005 then
             printLog(string.format("Update LocationRoom LAG: %f", os.clock() - clock), 1)
@@ -490,10 +498,6 @@ end
 
 CACHE.COORDS = { PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }, CURRENT = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }}
 function updateCoordinateFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGameFromModule() then
-        return false
-    end
-    
     local yCoord = 0
     local xCoord = 0
     local prevIndoor = CACHE.INDOOR
@@ -507,6 +511,10 @@ function updateCoordinateFromMemorySegment(segment)
         CACHE.INDOOR = AutoTracker:ReadU8(0x7e001b, 0) == 1
     end
 
+    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGameFromModule() then
+        return false
+    end
+    
     local function findClosestEntrance(owid, coordX, coordY, entrance, room)
         local minDistance = 9999
         local closestEntrance = nil
