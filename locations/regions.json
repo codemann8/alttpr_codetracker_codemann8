@@ -1186,7 +1186,7 @@
     {
         "name": "WDDM To WDW",
         "access_rules": [
-            "entrance_shuffle_minor,inverted_new,ow_swapped_03,[lamp]",
+            "entrance_shuffle_minor,inverted_new,ow_swapped_03,[pearl],[lamp]",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_owg,mirror",
             "glitch_mode_major"
