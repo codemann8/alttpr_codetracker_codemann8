@@ -43,20 +43,12 @@ function EntranceShuffleMode:postUpdate()
     --Change Dropdown Capture Layouts
     for i = 1, #DATA.CaptureBadgeDropdowns do
         local drop = findObjectForCode(DATA.CaptureBadgeDropdowns[i])
-        if self:getState() > 3 then
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
-        else
-            drop.ItemCaptureLayout = "tracker_capture_dropdown"
-        end
+        drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
     end
     
     for i = 1, #DATA.CaptureBadgeSWDropdowns do
         local drop = findObjectForCode(DATA.CaptureBadgeSWDropdowns[i])
-        if self:getState() > 3 then
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
-        else
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_sw"
-        end
+        drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
     end
 
     --Change Entrance Capture Layouts
