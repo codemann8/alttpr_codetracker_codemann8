@@ -2082,9 +2082,9 @@
                     "pool_enemydrop_off,bombs,hookshot",
                     "pool_enemydrop_on,ip_smallkey:2,bombs,hookshot",
                     //bomb floor/key usage
-                    "pool_enemydrop_off,pool_keypot_off,ip_smallkey:1,[ip_smallkey:2],bombs",
+                    "pool_enemydrop_off,pool_keypot_off,[ip_smallkey:2],bombs",
                     "pool_enemydrop_on,pool_keypot_off,ip_smallkey:2,[ip_smallkey:4],bombs",
-                    "pool_enemydrop_off,pool_keypot_on,ip_smallkey:1,[ip_smallkey:4],bombs",
+                    "pool_enemydrop_off,pool_keypot_on,[ip_smallkey:4],bombs",
                     "pool_enemydrop_on,pool_keypot_on,ip_smallkey:3,[ip_smallkey:6],bombs",
                     "keysanity_smallkey_off,bombs",
                     //icebreaker
