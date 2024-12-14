@@ -2911,7 +2911,10 @@
             {
                 "name": "Double Switch Key",
                 "access_rules": [
-                    "@Ganon's Tower/Pit Room Traversal"
+                    "@Ganon's Tower/Pit Room Traversal,bombs",
+                    "@Ganon's Tower/Pit Room Traversal,somaria",
+                    "@Ganon's Tower/Pit Room Traversal,boomerang",
+                    "@Ganon's Tower/Pit Room Traversal,redboomerang"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -2921,18 +2924,10 @@
             {
                 "name": "Firesnake",
                 "access_rules": [
-                    "pool_keypot_off,[gt_smallkey:2],hammer,hookshot",
-                    "pool_keypot_off,[gt_smallkey:2],hammer,bombs,[hookshot]",
-                    "pool_keypot_off,[gt_smallkey:2],hammer,boots,[hookshot]",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,hookshot",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,bombs,[hookshot]",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,boots,[hookshot]",
-                    "keysanity_smallkey_off,hammer,hookshot",
-                    "keysanity_smallkey_off,hammer,bombs,[hookshot]",
-                    "keysanity_smallkey_off,hammer,boots,[hookshot]",
-                    "door_shuffle_on,hookshot",
-                    "door_shuffle_on,bombs,[hookshot]",
-                    "door_shuffle_on,boots,[hookshot]"
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_off,[gt_smallkey:2]",
+                    "@Ganon's Tower/Pit Room Traversalpool_keypot_on,gt_smallkey:1,[gt_smallkey:6]",
+                    "@Ganon's Tower/Pit Room Traversal,keysanity_smallkey_off",
+                    "@Ganon's Tower/Pit Room Traversal,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1
