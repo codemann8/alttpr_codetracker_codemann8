@@ -41,6 +41,7 @@ All of the modes can be set by clicking the `Gear` in the `Modes` section. Addit
   - Small Keys (Also has extra option for Universal Keys, commonly paired with Retro mode)
   - Big Keys
   - Prizes (In Dungeon vs Wild)
+    - *\*When any prize shuffle is enabled, when a prize boss is defeated, only the label portion of the Dungeon Prize icon will illuminate, while the actual collection of prizes are indicated in the other provided prize grids\**
 - Entrance Shuffle
   - Vanilla
   - Dungeon (Only the dungeon entrances are shuffled)

@@ -47,13 +47,6 @@ function KeysanityMode:postUpdate()
     end
 
     if self.itemCode == "prize" then
-        if self:getState() > 0 then
-            Layout:FindLayout("ref_pendant_grid").Root.Layout = Layout:FindLayout("shared_pendant_grid")
-            Layout:FindLayout("ref_crystal_grid").Root.Layout = Layout:FindLayout("shared_crystal_grid")
-        else
-            Layout:FindLayout("ref_pendant_grid").Root.Layout = nil
-            Layout:FindLayout("ref_crystal_grid").Root.Layout = nil
-        end
         updateLayout("prize")
     end
     

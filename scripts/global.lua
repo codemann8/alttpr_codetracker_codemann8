@@ -544,7 +544,10 @@ function updateLayout(setting)
 
         local e = Layout:FindLayout("shared_dungeon_misc_grid").Root.Items:GetEnumerator()
         e:MoveNext()
-        if OBJ_KEYPRIZE:getState() > 0 then
+        if MODES['keysanity_prize']:getState() > 0 then
+            Layout:FindLayout("ref_pendant_grid").Root.Layout = Layout:FindLayout("shared_pendant_grid")
+            Layout:FindLayout("ref_crystal_grid").Root.Layout = Layout:FindLayout("shared_crystal_grid")
+
             e.Current.Layout = Layout:FindLayout("ref_prize_grid")
             e:MoveNext()
             if OBJ_DOORSHUFFLE:getState() == 2 then
@@ -555,6 +558,9 @@ function updateLayout(setting)
             e:MoveNext()
             e.Current.Layout = nil
         else
+            Layout:FindLayout("ref_pendant_grid").Root.Layout = nil
+            Layout:FindLayout("ref_crystal_grid").Root.Layout = nil
+
             e.Current.Layout = nil
             e:MoveNext()
             e.Current.Layout = nil
