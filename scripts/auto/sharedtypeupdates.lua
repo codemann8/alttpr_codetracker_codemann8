@@ -68,6 +68,9 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
         local smallkey = Tracker:FindObjectForCode(dungeonPrefix .. "_smallkey")
         local bigkey = Tracker:FindObjectForCode(dungeonPrefix .. "_bigkey")
         local prize = Tracker:FindObjectForCode(dungeonPrefix)
+        if prize then
+            prize = prize.ItemState
+        end
         local dungeonItems = 0
         local clock = os.clock()
 
@@ -118,9 +121,6 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
                     value = value + otherValue
                 end
             end
-            if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() > 0 then
-                value = value + 1
-            end
             if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
                 print(dungeonPrefix .. " from direct memory:")
                 print(dungeonPrefix .. " Dungeon Items:", item.DeductedCount .. "/" .. item.ExemptedCount)
@@ -140,7 +140,7 @@ function updateChestCountFromDungeon(segment, dungeonPrefix, address)
             if potkey and OBJ_POOL_DUNGEONPOT:getState() > 0 then
                 value = value + potkey.AcquiredCount
             end
-            if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize.Active and OBJ_KEYPRIZE:getState() > 0 then
+            if (DATA.DungeonData[dungeonPrefix][10] > 0) and prize:getBoss() and OBJ_KEYPRIZE:getState() > 0 then
                 value = value + 1
             end
             if value ~= item.CollectedCount and CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then

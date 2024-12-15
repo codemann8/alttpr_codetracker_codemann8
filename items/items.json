@@ -129,19 +129,19 @@
             },
             {
                 "img": "images/items/bombos.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
+                "img_mods": "overlay|images/overlays/dungeons/mm.png",
                 "codes": "bombos,mm_medallion",
                 "secondary_codes": "mm"
             },
             {
                 "img": "images/items/bombos.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
+                "img_mods": "overlay|images/overlays/dungeons/tr.png",
                 "codes": "bombos,tr_medallion",
                 "secondary_codes": "tr"
             },
             {
                 "img": "images/items/bombos.png",
-                "img_mods": "overlay|images/overlays/overlay-BOTH.png",
+                "img_mods": "overlay|images/overlays/dungeons/both.png",
                 "codes": "bombos,mm_medallion,tr_medallion",
                 "secondary_codes": "both"
             }
@@ -159,19 +159,19 @@
             },
             {
                 "img": "images/items/ether.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
+                "img_mods": "overlay|images/overlays/dungeons/mm.png",
                 "codes": "ether,mm_medallion",
                 "secondary_codes": "mm, misery mire, mire"
             },
             {
                 "img": "images/items/ether.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
+                "img_mods": "overlay|images/overlays/dungeons/tr.png",
                 "codes": "ether,tr_medallion",
                 "secondary_codes": "tr, turtle rock"
             },
             {
                 "img": "images/items/ether.png",
-                "img_mods": "overlay|images/overlays/overlay-BOTH.png",
+                "img_mods": "overlay|images/overlays/dungeons/both.png",
                 "codes": "ether,mm_medallion,tr_medallion",
                 "secondary_codes": "both"
             }
@@ -189,19 +189,19 @@
             },
             {
                 "img": "images/items/quake.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
+                "img_mods": "overlay|images/overlays/dungeons/mm.png",
                 "codes": "quake,mm_medallion",
                 "secondary_codes": "mm"
             },
             {
                 "img": "images/items/quake.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
+                "img_mods": "overlay|images/overlays/dungeons/tr.png",
                 "codes": "quake,tr_medallion",
                 "secondary_codes": "tr"
             },
             {
                 "img": "images/items/quake.png",
-                "img_mods": "overlay|images/overlays/overlay-BOTH.png",
+                "img_mods": "overlay|images/overlays/dungeons/both.png",
                 "codes": "quake,mm_medallion,tr_medallion",
                 "secondary_codes": "both"
             }

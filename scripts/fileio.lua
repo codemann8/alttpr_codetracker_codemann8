@@ -125,8 +125,6 @@ function saveBackup()
             "dropdown_uncle", "dropdown_sanc", "dropdown_lumberjack", "dropdown_thief",
             "dropdown_well", "dropdown_bat", "dropdown_fairy", "dropdown_ganon",
             "dropdown_swpinball", "dropdown_swcompass", "dropdown_swbigchest", "dropdown_swhazard",
-            "easternpalace", "desertpalace", "towerofhera", "palaceofdarkness", "swamppalace",
-            "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock",
             "takeanycave"
         }
         local regions = {
@@ -157,10 +155,7 @@ function saveBackup()
         }
         local progressives = {
             "bombs","bombos","ether","quake","sword",
-
-            "takeanycave", "flute_shuffle", "whirlpool_shuffle", "goal_setting",
-            "easternpalace", "desertpalace", "towerofhera", "palaceofdarkness", "swamppalace",
-            "skullwoods", "thievestown", "icepalace", "miserymire", "turtlerock"
+            "takeanycave", "flute_shuffle", "whirlpool_shuffle", "goal_setting"
         }
         local items = {
             "bow", "boomerang_blue", "boomerang_red", "hookshot", "bombs", "powder", "mushroom", "boots", "sword",
@@ -193,6 +188,15 @@ function saveBackup()
         textOutput = textOutput .. "BACKUP.PROGRESSIVE_ITEMS = {\n"
         for i, icon in pairs(progressives) do
             textOutput = textOutput .. "    [\"" .. icon .. "\"] = " .. math.floor(Tracker:FindObjectForCode(icon).CurrentStage) .. ",\n"
+        end
+        textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
+
+        textOutput = textOutput .. "BACKUP.PRIZE_DUNGEONS = {\n"
+        for dungeonPrefix, data in pairs(DATA.DungeonData) do
+            if data[10] > 0 then
+                local item = Tracker:FindObjectForCode(dungeonPrefix).ItemState
+                textOutput = textOutput .. "    [\"" .. dungeonPrefix .. "\"] = {" .. (item:getBoss() and "true" or "false") .. ", " .. (item.PrizeCollected and "true" or "false") .. ", " .. (item:getState() and "true" or "false") .. "},\n"
+            end
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 
@@ -342,6 +346,15 @@ function restoreBackup()
     if BACKUP.PROGRESSIVE_ITEMS ~= nil then
         for item, value in pairs(BACKUP.PROGRESSIVE_ITEMS) do
             Tracker:FindObjectForCode(item).CurrentStage = value
+        end
+    end
+
+    if BACKUP.PRIZE_DUNGEONS ~= nil then
+        for item, value in pairs(BACKUP.PRIZE_DUNGEONS) do
+            local item = Tracker:FindObjectForCode(item).ItemState
+            item:setBoss(value[1])
+            item.PrizeCollected = value[2]
+            item:setState(value[3])
         end
     end
 

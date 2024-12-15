@@ -54,7 +54,7 @@ function KeysanityMode:postUpdate()
             Layout:FindLayout("ref_pendant_grid").Root.Layout = nil
             Layout:FindLayout("ref_crystal_grid").Root.Layout = nil
         end
-        updateLayout("nothing")
+        updateLayout("prize")
     end
     
     updateChests()

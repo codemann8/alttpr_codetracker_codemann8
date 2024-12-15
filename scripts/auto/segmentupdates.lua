@@ -1895,9 +1895,9 @@ function updateRoomsFromMemorySegment(segment)
 
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
-        local item = findObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1]).ItemState
         if item and OBJ_GLITCHMODE:getState() < 3 and not INSTANCE.NEW_SRAM_SYSTEM then
-            item.Active = bossflag > 0
+            item:setBoss(bossflag > 0)
         end
 
         if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
@@ -2246,15 +2246,15 @@ function updateKeyTotalsFromMemorySegment(segment)
         if dungData[10] > 0 and OBJ_KEYPRIZE:getState() > 0 and INSTANCE.VERSION_MINOR >= 5 and CACHE.KeysSeen & DATA.DungeonData[dungeonPrefix][3] > 0 then
             local prizeIdx = AutoTracker:ReadU8(0x30efe0+dungData[4], 0)
             if prizeIdx > 0 then
-                local dungeon = Tracker:FindObjectForCode(dungeonPrefix)
+                local dungeon = Tracker:FindObjectForCode(dungeonPrefix).ItemState
                 if prizeIdx == 5 or prizeIdx == 6 then
-                    dungeon.CurrentStage = 2
+                    dungeon:setState(2)
                 elseif prizeIdx == 8 then
-                    dungeon.CurrentStage = 4
+                    dungeon:setState(4)
                 elseif prizeIdx > 8 then
-                    dungeon.CurrentStage = 3
+                    dungeon:setState(3)
                 else
-                    dungeon.CurrentStage = 1
+                    dungeon:setState(1)
                 end
             else
                 print('error', dungeonPrefix, prizeIdx, dungData[4])
@@ -2270,9 +2270,9 @@ function updateDungeonsCompletedFromMemorySegment(segment)
 
     CACHE.DungeonsCompleted = segment:ReadUInt16(0x7ef472)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
-        local item = findObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1]).ItemState
         if item then
-            item.Active = CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0
+            item:setBoss(CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0)
         end
         item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][2])
         if item and item.AvailableChestCount > 0 then

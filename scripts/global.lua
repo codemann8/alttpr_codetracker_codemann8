@@ -285,6 +285,19 @@ function loadSwaps()
     end
 end
 
+function loadDungeonPrizes()
+    DungeonPrize("Eastern Palace",     "ep",  "easternpalace")
+    DungeonPrize("Desert Palace",      "dp",  "desertpalace")
+    DungeonPrize("Tower of Hera",      "toh", "towerofhera")
+    DungeonPrize("Palace of Darkness", "pod", "palaceofdarkness")
+    DungeonPrize("Swamp Palace",       "sp",  "swamppalace")
+    DungeonPrize("Skull Woods",        "sw",  "skullwoods")
+    DungeonPrize("Thieves Town",       "tt",  "thievestown")
+    DungeonPrize("Ice Palace",         "ip",  "icepalace")
+    DungeonPrize("Misery Mire",        "mm",  "miserymire")
+    DungeonPrize("Turtle Rock",        "tr",  "turtlerock")
+end
+
 function loadDungeonChests()
     ExtendedChestCounter("Hyrule Castle Items",      "hc",  "@Hyrule Castle & Escape", 8,  2)
     ExtendedChestCounter("Eastern Palace Items",     "ep",  "@Eastern Palace",         6,  3)
@@ -550,6 +563,14 @@ function updateLayout(setting)
                 e.Current.Layout = Layout:FindLayout("shared_doortotal_v_grid")
             else
                 e.Current.Layout = nil
+            end
+        end
+
+        if setting == "prize" then
+            for dungeonPrefix, data in pairs(DATA.DungeonData) do
+                if data[10] > 0 then
+                    findObjectForCode(dungeonPrefix).ItemState:UpdateIcon()
+                end
             end
         end
 
