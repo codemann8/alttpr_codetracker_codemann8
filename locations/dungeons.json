@@ -2925,7 +2925,7 @@
                 "name": "Firesnake",
                 "access_rules": [
                     "@Ganon's Tower/Pit Room Traversal,pool_keypot_off,[gt_smallkey:2]",
-                    "@Ganon's Tower/Pit Room Traversalpool_keypot_on,gt_smallkey:1,[gt_smallkey:6]",
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_on,gt_smallkey:1,[gt_smallkey:6]",
                     "@Ganon's Tower/Pit Room Traversal,keysanity_smallkey_off",
                     "@Ganon's Tower/Pit Room Traversal,door_shuffle_on"
                 ],
