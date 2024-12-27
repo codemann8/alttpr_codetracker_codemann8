@@ -54,7 +54,9 @@ function sendExternalMessage(filename, value)
                 or (filename == "health" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
             return
         end
-        local file = io.open(os.getenv("USERPROFILE") .. "\\Documents\\EmoTracker\\" .. filename .. ".txt", "w+")
+        
+        local fullDir, packRoot = getFullDir()
+        local file = io.open(fullDir .. filename .. ".txt", "w+")
         if file then
             io.output(file)
             io.write(value)
