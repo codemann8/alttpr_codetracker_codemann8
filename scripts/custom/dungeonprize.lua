@@ -35,10 +35,8 @@ function DungeonPrize:setBoss(state)
 end
 
 function DungeonPrize:UpdateIcon()
-    local prizeIcon = 0
-    if self:getState() == 0 then
-        prizeIcon = DungeonPrize.UnknownIcon
-    elseif self:getState() == 1 then
+    local prizeIcon = DungeonPrize.UnknownIcon
+    if self:getState() == 1 then
         prizeIcon = DungeonPrize.CrystalIcon
     elseif self:getState() == 2 then
         prizeIcon = DungeonPrize.CrystalRedIcon
