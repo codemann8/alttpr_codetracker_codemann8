@@ -381,7 +381,8 @@
     {
         "name": "SLW To SDW",
         "access_rules": [
-            "lift1,hammer,pearl"
+            "lift1,hammer,pearl",
+            "glitch_mode_owg,ow_swapped_30,lift2"
         ]
     },
     {
