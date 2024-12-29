@@ -54,8 +54,7 @@ function sendExternalMessage(filename, value)
                 or (filename == "health" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
             return
         end
-        
-        local fullDir, packRoot = getFullDir()
+        local fullDir, packRoot = getFullDir(CONFIG.OUTPUT_FOLDER)
         local file = io.open(fullDir .. filename .. ".txt", "w+")
         if file then
             io.output(file)
@@ -557,13 +556,14 @@ function printLog(text, action)
     end
 end
 
-function getFullDir()
+function getFullDir(configDir)
+    configDir = configDir or CONFIG.DOCUMENTS_FOLDER
     local emoDir = "Documents\\EmoTracker\\"
     local packRoot = "alttpr_codetracker_codemann8\\"
     local baseDir = ""
     
-    if dirExists(CONFIG.DOCUMENTS_FOLDER .. emoDir) then
-        baseDir = CONFIG.DOCUMENTS_FOLDER
+    if dirExists(configDir .. emoDir) then
+        baseDir = configDir
     elseif os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
         baseDir = os.getenv("OneDrive") .. "\\"
     else
