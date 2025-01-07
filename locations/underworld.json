@@ -1903,13 +1903,16 @@
                 "map": "darkworld",
                 "x": 722,
                 "y": 390,
-                "restrict_visibility_rules": [ "ow_vanilla_0a,entrance_shuffle_minor" ]
+                "restrict_visibility_rules": [
+                    "ow_vanilla_0a,inverted_new,entrance_shuffle_minor",
+                    "inverted_orig,entrance_shuffle_minor"
+                ]
             },
             {
                 "map": "lightworld",
                 "x": 722,
                 "y": 390,
-                "restrict_visibility_rules": [ "ow_swapped_0a,entrance_shuffle_minor" ]
+                "restrict_visibility_rules": [ "ow_swapped_0a,inverted_new,entrance_shuffle_minor" ]
             }
         ]
     },
