@@ -111,6 +111,7 @@
                 "name": "Pot",
                 "access_rules": [
                     "ow_vanilla_03",
+                    "inverted_orig",
                     "pearl",
                     "mirror,[pearl]",
                     "glitch_mode_owg,mirror",
