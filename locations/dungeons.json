@@ -362,13 +362,15 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@HC Access",
                     "@HC Sanc Access",
                     "@HC Sanc Drop Access"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "First",
@@ -555,7 +557,9 @@
             {
                 "name": "Dungeon Access",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1,
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png"
             },
             {
                 "name": "Cannonball Chest",
@@ -695,8 +699,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Eyegore Switch",
@@ -880,8 +886,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby",
@@ -1017,7 +1025,9 @@
         "sections": [
             {
                 "name": "Dungeon Access",
-                "hosted_item": "dummy"
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1043,8 +1053,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby",
@@ -1180,8 +1192,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Shooter Chest",
@@ -1398,8 +1412,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Entrance Chest",
@@ -1639,8 +1655,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Map Chest",
@@ -1822,8 +1840,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Main Lobby",
@@ -2021,8 +2041,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby Key",
@@ -2314,11 +2336,13 @@
             },
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@MM Special Access/Dungeon Access"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Big Key",
@@ -2556,6 +2580,8 @@
             },
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria",
                     "door_shuffle_on,@Turtle Rock/Open Entrance,@TR Main Entrance",
@@ -2563,7 +2589,7 @@
                     "@TR Laser Entrance"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Compass Room",
@@ -2857,8 +2883,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Hope Room",
