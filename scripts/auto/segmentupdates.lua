@@ -515,6 +515,8 @@ function updateCoordinateFromMemorySegment(segment)
         return false
     end
     
+    local insanity_funct = OBJ_ENTRANCE:getState() > 1
+    
     local function findClosestEntrance(owid, coordX, coordY, entrance, room)
         local minDistance = 9999
         local closestEntrance = nil
@@ -617,7 +619,7 @@ function updateCoordinateFromMemorySegment(segment)
                 return INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name]
             end
             if OBJ_ENTRANCE:getState() < 4 then
-                if dungeonPrefix == "sw" then
+                if dungeonPrefix == "sw" and not insanity_funct then
                     room = "cap_sw"
                     if entrance:find("Skull Woods") and entrance ~= "@Skull Woods Back/Entrance" then
                         suppressLog = true
@@ -643,7 +645,7 @@ function updateCoordinateFromMemorySegment(segment)
                     remaining[rI] = v
                     for e,c in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
                         cAlt = c
-                        if OBJ_ENTRANCE:getState() == 4 and c == "cap_swback" then
+                        if insanity_funct and c == "cap_swback" then
                             cAlt = "cap_sw"
                         end
                         if cAlt == v then
@@ -666,7 +668,7 @@ function updateCoordinateFromMemorySegment(segment)
                     ret = remaining[1]
                 end
 
-                if OBJ_ENTRANCE:getState() == 4 and ret == "cap_sw" then
+                if insanity_funct and ret == "cap_sw" then
                     return "cap_swback"
                 end
                 return ret
@@ -835,7 +837,7 @@ function updateCoordinateFromMemorySegment(segment)
                     owId = CACHE.COORDS.CURRENT.S
                     roomId = CACHE.COORDS.PREVIOUS.S
                     dungeonId = CACHE.COORDS.PREVIOUS.D
-                    if OBJ_ENTRANCE:getState() < 4 then
+                    if not insanity_funct then
                         if CACHE.COORDS.PREVIOUS.S ~= 0x0d and CACHE.COORDS.PREVIOUS.S ~= 0x20 -- aga bosses
                                 and CACHE.COORDS.PREVIOUS.S ~= 0x33 and CACHE.COORDS.PREVIOUS.S ~= 0x29 and CACHE.COORDS.PREVIOUS.S ~= 0xa4 then -- multi-entrance bosses
                             owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
@@ -882,7 +884,7 @@ function updateCoordinateFromMemorySegment(segment)
                                 end
                             end
                         end
-                        if OBJ_ENTRANCE:getState() < 4 then
+                        if not insanity_funct then
                             resetCoords()
                         end
                     end
