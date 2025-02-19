@@ -322,7 +322,12 @@
         "name": "Mirror",
         "type": "progressive",
         "allow_disabled": false,
+        "initial_stage_idx": 1,
         "stages": [
+            {
+                "img": "images/items/mirror-scroll.png",
+                "codes": ""
+            },
             {
                 "img": "images/items/mirror.png",
                 "img_mods": "@disabled",

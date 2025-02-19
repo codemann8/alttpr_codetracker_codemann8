@@ -29,15 +29,13 @@ end
 
 function DoorShuffleMode:updateItem()
     local mirror = Tracker:FindObjectForCode("mirror")
-    if mirror.CurrentStage == 0 then
+    if mirror.CurrentStage < 2 then
         if self:getState() == 0 then
             --Unacquired Mirror Item
-            mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/items/mirror.png", "@disabled")
-            mirror.Icon = mirror.Stages[mirror.CurrentStage].Icon
+            mirror.CurrentStage = 1
         else
             --Enable Mirror Scroll Item
-            mirror.Stages[mirror.CurrentStage].Icon = ImageReference:FromPackRelativePath("images/items/mirror-scroll.png")
-            mirror.Icon = mirror.Stages[mirror.CurrentStage].Icon
+            mirror.CurrentStage = 0
         end
     end
 end
