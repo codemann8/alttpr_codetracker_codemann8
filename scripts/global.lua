@@ -573,6 +573,11 @@ function updateLayout(setting)
         end
 
         if setting == "prize" then
+            if OBJ_KEYPRIZE:getState() > 0 then
+                Layout:FindLayout("ref_broadcast_prize_grid").Root.Layout = Layout:FindLayout("broadcast_prize_grid")
+            else
+                Layout:FindLayout("ref_broadcast_prize_grid").Root.Layout = nil
+            end
             for dungeonPrefix, data in pairs(DATA.DungeonData) do
                 if data[10] > 0 then
                     findObjectForCode(dungeonPrefix).ItemState:UpdateIcon()
