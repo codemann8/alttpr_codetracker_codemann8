@@ -96,6 +96,11 @@ function CustomItem:getProperty(key)
 	return self.ItemInstance:Get(key)
 end
 
+--  Call to read a transaction-backed property that will use an open transaction. DO NOT OVERRIDE
+function CustomItem:getUpdatedProperty(key)
+    return self.ItemInstance:Get(key, true)
+end
+
 --	Called when a transaction-backed property's value has changed. This will also happen
 --	as part of setting a transaction-backed property.
 function CustomItem:propertyChanged(key, value)
