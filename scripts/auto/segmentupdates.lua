@@ -362,59 +362,7 @@ function updateOverworldIdFromMemorySegment(segment)
             if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
                 updateRoomSlots(CACHE.OWAREA + 0x1000)
             end
-
-            --OW Mixed Autotracking
-            if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
-                if CACHE.OWAREA == 0 and (CACHE.MODULE ~= 0x09 and CACHE.MODULE ~= 0x10) then
-                    print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
-                    print("^ Module:", string.format("0x%02X", CACHE.MODULE), "< REPORT THIS TO CODEMAN ^")
-                end
                 
-                local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                if not swap.modified and swap:getState() > 1 then
-                    updateWorldFlagFromMemorySegment(nil)
-
-                    local swapped = CACHE.OWAREA < CACHE.WORLD
-                    swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
-                    if OBJ_WORLDSTATE:getState() > 0 then
-                        swapped = not swapped
-                    end
-                    swap:updateSwap(swapped and 1 or 0)
-                    swap:updateItem()
-                end
-            end
-
-            --Region Autotracking
-            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
-                if CACHE.OWAREA < 0xff then
-                    if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
-                        if region then
-                            region.Active = true
-                        end
-                    --TODO: Handle better with new mixed functionality
-                    elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
-                        if not region.Active then
-                            local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                            if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
-                                local canReach = true
-                                if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
-                                    for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
-                                        if Tracker:ProviderCountForCode(item) == 0 then
-                                            canReach = false
-                                            break
-                                        end
-                                    end
-                                end
-                                if canReach then
-                                    region.Active = true
-                                end
-                            end
-                        end
-                    end  
-                end
-            end
         end
 
         return true
@@ -1186,6 +1134,49 @@ DATA.MEMORY.OverworldItems = {
     --["bombs"] = { 0x5b, 0x02, nil, 1 } -- pyramid crack
 }
 
+DATA.MEMORY.OverworldSwaps = {
+    ["ow_slot_00"] = { 0x00, 0x40 },
+    ["ow_slot_02"] = { 0x02, 0x42 },
+    ["ow_slot_03"] = { 0x03, 0x43 },
+    ["ow_slot_05"] = { 0x05, 0x45 },
+    ["ow_slot_07"] = { 0x07, 0x47 },
+    ["ow_slot_0a"] = { 0x0a, 0x4a },
+    ["ow_slot_0f"] = { 0x0f, 0x4f },
+    ["ow_slot_10"] = { 0x10, 0x50 },
+    ["ow_slot_11"] = { 0x11, 0x51 },
+    ["ow_slot_12"] = { 0x12, 0x52 },
+    ["ow_slot_13"] = { 0x13, 0x53 },
+    ["ow_slot_14"] = { 0x14, 0x54 },
+    ["ow_slot_15"] = { 0x15, 0x55 },
+    ["ow_slot_16"] = { 0x16, 0x56 },
+    ["ow_slot_17"] = { 0x17, 0x57 },
+    ["ow_slot_18"] = { 0x18, 0x58 },
+    ["ow_slot_1a"] = { 0x1a, 0x5a },
+    ["ow_slot_1b"] = { 0x1b, 0x5b },
+    ["ow_slot_1d"] = { 0x1d, 0x5d },
+    ["ow_slot_1e"] = { 0x1e, 0x5e },
+    ["ow_slot_22"] = { 0x22, 0x62 },
+    ["ow_slot_25"] = { 0x25, 0x65 },
+    ["ow_slot_28"] = { 0x28, 0x68 },
+    ["ow_slot_29"] = { 0x29, 0x69 },
+    ["ow_slot_2a"] = { 0x2a, 0x6a },
+    ["ow_slot_2b"] = { 0x2b, 0x6b },
+    ["ow_slot_2c"] = { 0x2c, 0x6c },
+    ["ow_slot_2d"] = { 0x2d, 0x6d },
+    ["ow_slot_2e"] = { 0x2e, 0x6e },
+    ["ow_slot_2f"] = { 0x2f, 0x6f },
+    ["ow_slot_30"] = { 0x30, 0x70 },
+    ["ow_slot_32"] = { 0x32, 0x72 },
+    ["ow_slot_33"] = { 0x33, 0x73 },
+    ["ow_slot_34"] = { 0x34, 0x74 },
+    ["ow_slot_35"] = { 0x35, 0x75 },
+    ["ow_slot_37"] = { 0x37, 0x77 },
+    ["ow_slot_3a"] = { 0x3a, 0x7a },
+    ["ow_slot_3b"] = { 0x3b, 0x7b },
+    ["ow_slot_3c"] = { 0x3c, 0x7c },
+    ["ow_slot_3f"] = { 0x3f, 0x7f }
+}
+
 function updateOverworldFromMemorySegment(segment)
     local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
@@ -1216,6 +1207,74 @@ function updateOverworldFromMemorySegment(segment)
             end
         else
             print("Couldn't find overworld:", name)
+        end
+    end
+
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        local function markRegionVisited(owid, swap)
+            if DATA.OverworldIdRegionMap[owid] then
+                local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[owid])
+                if not region.Active then
+                    region.Active = true
+                end
+            elseif DATA.OverworldIdItemRegionMap[owid] then
+                local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[owid][1])
+                if not region.Active then
+                    if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((owid < 0x40 and swap:getState() == 0) or (owid >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
+                        local canReach = true
+                        if #DATA.OverworldIdItemRegionMap[owid][2] > 0 then
+                            for i, item in ipairs(DATA.OverworldIdItemRegionMap[owid][2]) do
+                                if Tracker:ProviderCountForCode(item) == 0 then
+                                    canReach = false
+                                    break
+                                end
+                            end
+                        end
+                        if canReach then
+                            region.Active = true
+                        end
+                    end
+                end
+            end
+        end
+        for name, value in pairs(DATA.MEMORY.OverworldSwaps) do
+            local lw_visit = segment:ReadUInt8(0x7ef280 + value[1]) & 0x80
+            local dw_visit = segment:ReadUInt8(0x7ef280 + value[2]) & 0x80
+            local swap = findObjectForCode(name).ItemState
+
+            --OW Mixed Autotracking
+            if INSTANCE.MEMORY.OverworldSwaps[name] and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
+                if swap then
+                    if not swap.modified and swap:getState() > 1 then -- Do not auto-track this the user has manually modified it
+                        if (lw_visit | dw_visit) > 0 then
+                            --updateWorldFlagFromMemorySegment(nil)
+                            local swapped = AutoTracker:ReadU8(0x2ab9b0 + value[1], 0) > 0
+                            swap:updateSwap(swapped and 1 or 0)
+                            swap:updateItem()
+                        end
+                        
+                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and swap:getState() < 2 then
+                            print("Overworld Swap:", name, swap:getState())
+                        end
+                    end
+
+                    if swap:getState() < 2 then
+                        INSTANCE.MEMORY.OverworldSwaps[name] = nil
+                    end
+                else
+                    print("Couldn't find overworld swap:", name)
+                end
+            end
+
+            --Region Autotracking
+            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) then
+                if lw_visit > 0 then
+                    markRegionVisited(value[1], swap)
+                end
+                if dw_visit > 0 then
+                    markRegionVisited(value[2], swap)
+                end
+            end
         end
     end
 
