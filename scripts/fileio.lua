@@ -558,7 +558,7 @@ end
 
 function getFullDir(configDir)
     configDir = configDir or CONFIG.DOCUMENTS_FOLDER
-    local emoDir = "Documents\\EmoTracker\\"
+    local emoDir = CONFIG.EMOTRACKER_FOLDER or "Documents\\EmoTracker\\"
     local packRoot = "alttpr_codetracker_codemann8\\"
     local baseDir = ""
     
