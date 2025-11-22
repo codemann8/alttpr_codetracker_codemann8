@@ -10,10 +10,11 @@
 --   saves. Only change this if this folder structure is different on your system.
 --
 -- CONFIG.OUTPUT_FOLDER is the folder that output txt files will be saved to.
--- By default, this uses the same folder as DOCUMENTS_FOLDER
+--   By default, this uses the same folder as DOCUMENTS_FOLDER
 --
 -- Please note, backslashes need to be doubled and all folders needs to end with \\
 -----------------------------------------------------------------
 
 CONFIG.DOCUMENTS_FOLDER = os.getenv("UserProfile") .. "\\"
+CONFIG.EMOTRACKER_FOLDER = "Documents\\EmoTracker\\"
 CONFIG.OUTPUT_FOLDER = CONFIG.DOCUMENTS_FOLDER
