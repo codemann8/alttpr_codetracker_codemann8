@@ -338,6 +338,7 @@
         "type": "array",
         "dropshadow": true,
         "margin": 10,
+        "scale": 1.5,
         "content": [
             {
                 "type": "array",
