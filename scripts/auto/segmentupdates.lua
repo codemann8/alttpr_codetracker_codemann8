@@ -2358,12 +2358,10 @@ function updatePrizeFromMemorySegment(segment)
     local function setPrize(value)
         local dungeonId = DATA.DungeonIdMap[CACHE.DUNGEON]
         if dungeonId ~= "OW" and DATA.DungeonData[dungeonId][10] > 0 then
-            local dungeon = Tracker:FindObjectForCode()
+            local dungeon = Tracker:FindObjectForCode(dungeonId)
             if dungeon and dungeon.ItemState and dungeon.ItemState:getState() == 0 then
                 dungeon.ItemState:setState(value)
             end
-        else
-            OBJ_KEYPRIZE:setState(2)
         end
     end
 
