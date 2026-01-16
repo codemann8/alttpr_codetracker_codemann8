@@ -115,7 +115,7 @@
                         "book"
                     ],
                     [
-                        "bottle",
+                        "",
                         "somaria",
                         "byrna",
                         "cape",
@@ -160,6 +160,16 @@
                 "item": "powder_used",
                 "width": 24,
                 "margin": "114,1,0,0"
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 16,
+                "item_margin": "0,1",
+                "margin": "-69,55,0,0",
+                "rows":[
+                    [ "bottle0", "bottle1" ],
+                    [ "bottle2", "bottle3" ]
+                ]
             }
         ]
     },
