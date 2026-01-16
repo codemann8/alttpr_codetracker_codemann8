@@ -233,7 +233,7 @@
     "broadcast_standard": {
         "type": "array",
         "dropshadow": true,
-        "margin": 10,
+        "margin": 0,
         "content": [
             {
                 "type": "layout",
