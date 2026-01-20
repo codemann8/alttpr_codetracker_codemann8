@@ -326,7 +326,8 @@
         "parent": "Dungeon Color",
         "access_rules": [
             "gt_crystals",
-            "prize:10"
+            "keysanity_prize_off,prize:10",
+            "keysanity_prize_on,prizealt:10"
         ]
     },
     {
@@ -361,13 +362,15 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@HC Access",
                     "@HC Sanc Access",
                     "@HC Sanc Drop Access"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "First",
@@ -554,7 +557,9 @@
             {
                 "name": "Dungeon Access",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1,
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png"
             },
             {
                 "name": "Cannonball Chest",
@@ -645,6 +650,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Eastern Palace/Armos Access,$canDamageBoss|@Eastern Palace/Armos",
+                    "{@Eastern Palace/Armos Access}"
+                ],
                 "item_count": 1,
                 "hosted_item": "easternpalace"
             }
@@ -686,8 +699,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Eyegore Switch",
@@ -808,6 +823,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Desert Palace/Lanmolas Access,$canDamageBoss|@Desert Palace/Lanmolas",
+                    "{@Desert Palace/Lanmolas Access}"
+                ],
                 "hosted_item": "desertpalace",
                 "item_count": 1
             }
@@ -863,8 +886,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby",
@@ -933,6 +958,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Tower of Hera/Moldorm Access,$canDamageBoss|@Tower of Hera/Moldorm",
+                    "{@Tower of Hera/Moldorm Access}"
+                ],
                 "hosted_item": "towerofhera",
                 "item_count": 1
             }
@@ -992,7 +1025,9 @@
         "sections": [
             {
                 "name": "Dungeon Access",
-                "hosted_item": "dummy"
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
+                "item_count": 1
             }
         ],
         "map_locations": [
@@ -1018,8 +1053,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby",
@@ -1155,8 +1192,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Shooter Chest",
@@ -1164,10 +1203,20 @@
                 "item_count": 1
             },
             {
+                "name": "Right Path",
+                "access_rules": [
+                    "door_shuffle_off,bombs",
+                    "door_shuffle_off,boots",
+                    "door_shuffle_on"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Bow Side",
                 "access_rules": [
-                    "door_shuffle_off,retro_mode_off,[bow]",
-                    "door_shuffle_off,retro_mode_on,[arrows],[bow]",
+                    "door_shuffle_off,@Palace of Darkness/Right Path,retro_mode_off,[bow]",
+                    "door_shuffle_off,@Palace of Darkness/Right Path,retro_mode_on,[arrows],[bow]",
                     "door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
@@ -1307,12 +1356,21 @@
             },
             {
                 "name": "King Helmasaur",
+                "short_name": "Helma",
                 "access_rules": [
                     "@Palace of Darkness/Helmasaur Access,$canDamageBoss|@Palace of Darkness/King Helmasaur",
                     "{@Palace of Darkness/Helmasaur Access}"
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Palace of Darkness/Helmasaur Access,$canDamageBoss|@Palace of Darkness/King Helmasaur",
+                    "{@Palace of Darkness/Helmasaur Access}"
+                ],
                 "hosted_item": "palaceofdarkness",
                 "item_count": 1
             }
@@ -1354,8 +1412,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Entrance Chest",
@@ -1532,6 +1592,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Swamp Palace/Arrghus Access,$canDamageBoss|@Swamp Palace/Arrghus",
+                    "{@Swamp Palace/Arrghus Access}"
+                ],
                 "hosted_item": "swamppalace",
                 "item_count": 1
             }
@@ -1587,8 +1655,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Map Chest",
@@ -1707,6 +1777,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Skull Woods/Mothula Access,$canDamageBoss|@Skull Woods/Mothula",
+                    "{@Skull Woods/Mothula Access}"
+                ],
                 "hosted_item": "skullwoods",
                 "item_count": 1
             }
@@ -1762,8 +1840,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Main Lobby",
@@ -1891,6 +1971,15 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Thieves Town/Blind Access,$canDamageBoss|@Thieves Town/Blind",
+                    "{@Thieves Town/Hallway Key}",
+                    "{door_shuffle_on,@Thieves Town/Dungeon Access}"
+                ],
                 "hosted_item": "thievestown",
                 "item_count": 1
             }
@@ -1952,8 +2041,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Lobby Key",
@@ -2013,9 +2104,9 @@
                     "pool_enemydrop_off,bombs,hookshot",
                     "pool_enemydrop_on,ip_smallkey:2,bombs,hookshot",
                     //bomb floor/key usage
-                    "pool_enemydrop_off,pool_keypot_off,ip_smallkey:1,[ip_smallkey:2],bombs",
+                    "pool_enemydrop_off,pool_keypot_off,[ip_smallkey:2],bombs",
                     "pool_enemydrop_on,pool_keypot_off,ip_smallkey:2,[ip_smallkey:4],bombs",
-                    "pool_enemydrop_off,pool_keypot_on,ip_smallkey:1,[ip_smallkey:4],bombs",
+                    "pool_enemydrop_off,pool_keypot_on,[ip_smallkey:4],bombs",
                     "pool_enemydrop_on,pool_keypot_on,ip_smallkey:3,[ip_smallkey:6],bombs",
                     "keysanity_smallkey_off,bombs",
                     //icebreaker
@@ -2174,6 +2265,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Ice Palace/Kholdstare Access,hammer,lift1,$canDamageBoss|@Ice Palace/Kholdstare",
+                    "{@Ice Palace/Kholdstare Access,hammer,lift1}"
+                ],
                 "hosted_item": "icepalace",
                 "item_count": 1
             }
@@ -2237,11 +2336,13 @@
             },
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@MM Special Access/Dungeon Access"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Big Key",
@@ -2375,6 +2476,15 @@
                 "item_count": 1
             },
             {
+                "name": "Somaria Switch",
+                "access_rules": [
+                    "@Misery Mire/Dark Room,somaria",
+                    "@MM Special Access/Open Entrance,door_shuffle_on,[lamp]"
+                ],
+                "visibility_rules": [ "nothing" ],
+                "item_count": 1
+            },
+            {
                 "name": "Vitreous Access",
                 "access_rules": [
                     "@Misery Mire/Dark Room,somaria,bombs",
@@ -2391,6 +2501,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Misery Mire/Vitreous Access,$canDamageBoss|@Misery Mire/Vitreous",
+                    "{@Misery Mire/Vitreous Access}"
+                ],
                 "hosted_item": "miserymire",
                 "item_count": 1
             }
@@ -2462,6 +2580,8 @@
             },
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "access_rules": [
                     "@Turtle Rock/Open Entrance,@TR Main Entrance,somaria",
                     "door_shuffle_on,@Turtle Rock/Open Entrance,@TR Main Entrance",
@@ -2469,7 +2589,7 @@
                     "@TR Laser Entrance"
                 ],
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Compass Room",
@@ -2714,6 +2834,14 @@
                 ],
                 "capture_item": true,
                 "capture_item_layout": "tracker_capture_bosses",
+                "item_count": 1
+            },
+            {
+                "name": "Prize",
+                "access_rules": [
+                    "@Turtle Rock/Trinexx Access,$canDamageBoss|@Turtle Rock/Trinexx",
+                    "{@Turtle Rock/Trinexx Access}"
+                ],
                 "hosted_item": "turtlerock",
                 "item_count": 1
             }
@@ -2755,8 +2883,10 @@
         "sections": [
             {
                 "name": "Dungeon Access",
+                "chest_unopened_img": "images/icons/gomode.png",
+                "chest_opened_img": "images/icons/gomode.png",
                 "visibility_rules": [ "door_shuffle_crossed" ],
-                "hosted_item": "dummy"
+                "item_count": 1
             },
             {
                 "name": "Hope Room",
@@ -2818,7 +2948,10 @@
             {
                 "name": "Double Switch Key",
                 "access_rules": [
-                    "@Ganon's Tower/Pit Room Traversal"
+                    "@Ganon's Tower/Pit Room Traversal,bombs",
+                    "@Ganon's Tower/Pit Room Traversal,somaria",
+                    "@Ganon's Tower/Pit Room Traversal,boomerang",
+                    "@Ganon's Tower/Pit Room Traversal,redboomerang"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset,pool_keypot_on" ],
                 "chest_unopened_img": "images/icons/keydrops/pot-dw.png",
@@ -2828,18 +2961,10 @@
             {
                 "name": "Firesnake",
                 "access_rules": [
-                    "pool_keypot_off,[gt_smallkey:2],hammer,hookshot",
-                    "pool_keypot_off,[gt_smallkey:2],hammer,bombs,[hookshot]",
-                    "pool_keypot_off,[gt_smallkey:2],hammer,boots,[hookshot]",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,hookshot",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,bombs,[hookshot]",
-                    "pool_keypot_on,gt_smallkey:1,[gt_smallkey:6],hammer,boots,[hookshot]",
-                    "keysanity_smallkey_off,hammer,hookshot",
-                    "keysanity_smallkey_off,hammer,bombs,[hookshot]",
-                    "keysanity_smallkey_off,hammer,boots,[hookshot]",
-                    "door_shuffle_on,hookshot",
-                    "door_shuffle_on,bombs,[hookshot]",
-                    "door_shuffle_on,boots,[hookshot]"
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_off,[gt_smallkey:2]",
+                    "@Ganon's Tower/Pit Room Traversal,pool_keypot_on,gt_smallkey:1,[gt_smallkey:6]",
+                    "@Ganon's Tower/Pit Room Traversal,keysanity_smallkey_off",
+                    "@Ganon's Tower/Pit Room Traversal,door_shuffle_on"
                 ],
                 "visibility_rules": [ "door_shuffle_sameset" ],
                 "item_count": 1

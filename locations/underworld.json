@@ -111,6 +111,7 @@
                 "name": "Pot",
                 "access_rules": [
                     "ow_vanilla_03",
+                    "inverted_orig",
                     "pearl",
                     "mirror,[pearl]",
                     "glitch_mode_owg,mirror",
@@ -179,6 +180,7 @@
             "entrance_shuffle_off,door_shuffle_off,ow_vanilla_05,@TR Main Entrance,somaria,pool_enemydrop_off,tr_smallkey:2,mirror",
             "entrance_shuffle_off,door_shuffle_off,ow_vanilla_05,@TR Main Entrance,somaria,pool_enemydrop_on,tr_smallkey:3,mirror",
             "entrance_shuffle_off,door_shuffle_off,ow_vanilla_05,@TR Main Entrance,somaria,[firerod],keysanity_smallkey_off,mirror",
+            "entrance_shuffle_off,door_shuffle_on,ow_vanilla_05,@TR Main Entrance,mirror",
             "ow_vanilla_05,entrance_shuffle_minor,@OW TR Bridge,mirror",
             "ow_vanilla_05,glitch_mode_owg,mirror",
             "ow_swapped_05,pearl",
@@ -1070,9 +1072,10 @@
                 "name": "Sahasrahla",
                 "short_name": "Sah",
                 "access_rules": [
-                    "greenpendant",
-                    "pendant:3",
-                    "prize:10"
+                    "keysanity_prize_off,greenpendant",
+                    "keysanity_prize_off,pendant:3",
+                    "keysanity_prize_off,prize:10",
+                    "keysanity_prize_on,greenpendantalt"
                 ],
                 "item_count": 1
             }
@@ -1670,9 +1673,9 @@
             "@OW Dark Death Mountain East Top,pearl,lift1",
             "ow_swapped_05,@OW Dark Death Mountain East Top,lift1",
             "ow_swapped_05,@OW Death Mountain East Top,mirror",
-            "glitch_mode_owg,pearl,boots",
-            "ow_swapped_05,glitch_mode_owg,boots",
-            "glitch_mode_major,bottle"
+            "glitch_mode_owg,pearl,boots,bombs",
+            "ow_swapped_05,glitch_mode_owg,boots,bombs",
+            "glitch_mode_major,bottle,bombs"
         ],
         "sections": [
             {
@@ -1901,13 +1904,16 @@
                 "map": "darkworld",
                 "x": 722,
                 "y": 390,
-                "restrict_visibility_rules": [ "ow_vanilla_0a,entrance_shuffle_minor" ]
+                "restrict_visibility_rules": [
+                    "ow_vanilla_0a,inverted_new,entrance_shuffle_minor",
+                    "inverted_orig,entrance_shuffle_minor"
+                ]
             },
             {
                 "map": "lightworld",
                 "x": 722,
                 "y": 390,
-                "restrict_visibility_rules": [ "ow_swapped_0a,entrance_shuffle_minor" ]
+                "restrict_visibility_rules": [ "ow_swapped_0a,inverted_new,entrance_shuffle_minor" ]
             }
         ]
     },
@@ -2250,9 +2256,10 @@
             {
                 "name": "Big Bomb Spot",
                 "access_rules": [
-                    "@Pyramid Fairy/Escort Big Bomb,crystal56:2",
-                    "@Pyramid Fairy/Escort Big Bomb,crystal:7",
-                    "@Pyramid Fairy/Escort Big Bomb,prize:10",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,crystal56:2",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,crystal:7",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_off,prize:10",
+                    "@Pyramid Fairy/Escort Big Bomb,keysanity_prize_on,crystal5,crystal6",
                     "ow_vanilla_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_owg,boots,mirror",
                     "ow_vanilla_1b,ow_layout_off,@OW Death Mountain West Bottom,glitch_mode_major,mirror",
                     "@OW Helper Pyramid Moat,[nothing]"

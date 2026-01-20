@@ -24,6 +24,7 @@ end
 ScriptHost:LoadScript("scripts/custom/setting.lua")
 if Tracker.ActiveVariantUID ~= "vanilla" then
     ScriptHost:LoadScript("scripts/custom/savestorage.lua")
+    ScriptHost:LoadScript("scripts/custom/dungeonprize.lua")
     ScriptHost:LoadScript("scripts/custom/extchestcounter.lua")
     ScriptHost:LoadScript("scripts/custom/mapcompassbk.lua")
     ScriptHost:LoadScript("scripts/custom/dykclose.lua")
@@ -90,6 +91,7 @@ if Tracker.ActiveVariantUID ~= "vanilla" then
     loadMCBK()
     loadModes()
     loadSwaps()
+    loadDungeonPrizes()
     loadDungeonChests()
     loadDoorObjects()
     loadMisc()

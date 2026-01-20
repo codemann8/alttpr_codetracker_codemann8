@@ -115,7 +115,7 @@
                         "book"
                     ],
                     [
-                        "bottle",
+                        "",
                         "somaria",
                         "byrna",
                         "cape",
@@ -160,6 +160,16 @@
                 "item": "powder_used",
                 "width": 24,
                 "margin": "114,1,0,0"
+            },
+            {
+                "type": "itemgrid",
+                "item_size": 16,
+                "item_margin": "0,1",
+                "margin": "-69,55,0,0",
+                "rows":[
+                    [ "bottle0", "bottle1" ],
+                    [ "bottle2", "bottle3" ]
+                ]
             }
         ]
     },
@@ -206,10 +216,24 @@
             [ "pod_bigkey", "sp_bigkey", "sw_bigkey", "tt_bigkey", "ip_bigkey", "mm_bigkey", "tr_bigkey", "gt_bigkey" ]
         ]
     },
+    "broadcast_prize_grid": {
+        "type": "itemgrid",
+        "v_alignment": "center",
+        "margin": 0,
+        "item_margin": "1,1",
+        "item_size": 26,
+        "rows": [
+            [ "greenpendantalt", "bluependantalt", "redpendantalt", "", "crystal1", "crystal2", "crystal3", "crystal4", "crystal5", "crystal6", "crystal7" ]
+        ]
+    },
+    "ref_broadcast_prize_grid": {
+        "type": "layout",
+        "key": ""
+    },
     "broadcast_standard": {
         "type": "array",
         "dropshadow": true,
-        "margin": 10,
+        "margin": 0,
         "content": [
             {
                 "type": "layout",
@@ -301,6 +325,12 @@
                                                 ]
                                             }
                                         ]
+                                    },
+                                    {
+                                        "type": "layout",
+                                        "h_alignment": "left",
+                                        "margin": "12,-6,0,2",
+                                        "key": "ref_broadcast_prize_grid"
                                     }
                                 ]
                             },
@@ -328,6 +358,7 @@
         "type": "array",
         "dropshadow": true,
         "margin": 10,
+        "scale": 1.5,
         "content": [
             {
                 "type": "array",
@@ -390,9 +421,21 @@
                                 "background": "#3F000000",
                                 "margin": 0,
                                 "content": {
-                                    "type": "layout",
-                                    "margin": "0,2,6,4",
-                                    "key": "broadcast_keys_grid"
+                                    "type": "array",
+                                    "orientation": "vertical",
+                                    "margin": 0,
+                                    "content": [
+                                        {
+                                            "type": "layout",
+                                            "margin": "0,2,6,0",
+                                            "key": "broadcast_keys_grid"
+                                        },
+                                        {
+                                            "type": "layout",
+                                            "margin": "0,1,6,2",
+                                            "key": "ref_broadcast_prize_grid"
+                                        }
+                                    ]
                                 }
                             }
                         ]

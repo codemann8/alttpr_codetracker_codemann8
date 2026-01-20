@@ -381,7 +381,8 @@
     {
         "name": "SLW To SDW",
         "access_rules": [
-            "lift1,hammer,pearl"
+            "lift1,hammer,pearl",
+            "glitch_mode_owg,ow_swapped_30,lift2"
         ]
     },
     {
@@ -1186,7 +1187,7 @@
     {
         "name": "WDDM To WDW",
         "access_rules": [
-            "entrance_shuffle_minor,inverted_new,ow_swapped_03,[lamp]",
+            "entrance_shuffle_minor,inverted_new,ow_swapped_03,[pearl],[lamp]",
             "glitch_mode_owg,pearl,boots",
             "glitch_mode_owg,mirror",
             "glitch_mode_major"
@@ -3530,7 +3531,6 @@
                     "@East Top Death Mountain",
                     "@EDM Bottom Access",
                     "@WDM Bottom Access To EDM",
-                    "@EDDM Bottom Access To Top",
                     "@EDDM Bottom Access To EDM"
                 ]
             }

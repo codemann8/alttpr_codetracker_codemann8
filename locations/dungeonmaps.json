@@ -1071,6 +1071,10 @@
                 "access_rules": [ "@Eastern Palace/Armos" ],
                 "sections": [
                     {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
+                    {
                         "name": "Prize",
                         "hosted_item": "easternpalace",
                         "item_count": 1
@@ -1514,6 +1518,10 @@
                 "access_rules": [ "@Desert Palace/Lanmolas" ],
                 "sections": [
                     {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
+                    {
                         "name": "Prize",
                         "hosted_item": "desertpalace",
                         "item_count": 1
@@ -1773,6 +1781,10 @@
                 "name": "TH Moldorm",
                 "access_rules": [ "@Tower of Hera/Moldorm" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "towerofhera",
@@ -2056,7 +2068,7 @@
             },
             {
                 "name": "PoD Mimics 1",
-                "access_rules": [ "@Palace of Darkness/Shooter Chest" ],
+                "access_rules": [ "@Palace of Darkness/Right Path" ],
                 "sections": [
                     {
                         "name": "Pots",
@@ -2534,6 +2546,10 @@
                 "name": "PoD King Helmasaur",
                 "access_rules": [ "@Palace of Darkness/King Helmasaur" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "palaceofdarkness",
@@ -3292,6 +3308,10 @@
                 "access_rules": [ "@Swamp Palace/Arrghus" ],
                 "sections": [
                     {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
+                    {
                         "name": "Prize",
                         "hosted_item": "swamppalace",
                         "item_count": 1
@@ -3897,6 +3917,10 @@
                 "name": "SW Mothula",
                 "access_rules": [ "@Skull Woods/Mothula" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "skullwoods",
@@ -4595,6 +4619,10 @@
                 "name": "TT Blind",
                 "access_rules": [ "@Thieves Town/Blind" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "thievestown",
@@ -5340,6 +5368,10 @@
                 "access_rules": [ "@Ice Palace/Kholdstare" ],
                 "sections": [
                     {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
+                    {
                         "name": "Prize",
                         "hosted_item": "icepalace",
                         "item_count": 1
@@ -5964,6 +5996,10 @@
                 "name": "MM Vitreous",
                 "access_rules": [ "@Misery Mire/Vitreous" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "miserymire",
@@ -6813,6 +6849,10 @@
                 "name": "TR Trinexx",
                 "access_rules": [ "@Turtle Rock/Trinexx" ],
                 "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
                     {
                         "name": "Prize",
                         "hosted_item": "turtlerock",

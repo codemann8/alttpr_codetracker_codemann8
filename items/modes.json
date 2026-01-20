@@ -109,6 +109,28 @@
             }
         ]
     },
+    {
+        "name": "Keysanity Prize",
+        "type": "progressive",
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/modes/keysanity_prize.png",
+                "codes": "keysanity_prize_off",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_prize.png",
+                "codes": "keysanity_prize_on,keysanity_prize_dungeon",
+                "inherit_codes": false
+            },
+            {
+                "img": "images/modes/keysanity_prize_wild.png",
+                "codes": "keysanity_prize_on,keysanity_prize_wild",
+                "inherit_codes": false
+            }
+        ]
+    },
     // Entrance Mode
     {
         "name": "Entrance Shuffle",

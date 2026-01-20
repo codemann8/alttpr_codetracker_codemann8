@@ -148,7 +148,7 @@ end
 
 function ConsumableItem:advanceToCode(code)
     if code == nil or code == self.code then
-        self:OnLeftClick()
+        self:onLeftClick()
     end
 end
 

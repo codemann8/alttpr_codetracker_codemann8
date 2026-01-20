@@ -165,20 +165,20 @@ DATA.DykTexts = {
 
 DATA.DungeonList = { "hc", "ep", "dp", "toh", "at", "pod", "sp", "sw", "tt", "ip", "mm", "tr", "gt" }
 
-DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots, capture badges
-    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 34, {"cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc"} },
-    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1, 50, "cap_ep" },
-    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3, 47, {"cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback"} },
-    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0, 25, "cap_at" },
-    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5, 56, "cap_sp" },
-    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0, 39, "cap_pod" },
-    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2, 37, "cap_mm" },
-    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81, {"cap_sw", "cap_swfrontright", "cap_swfrontleft", "cap_swbacksouth"} },
-    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2, 51, "cap_ip" },
-    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0, 37, "cap_toh" },
-    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2, 44, "cap_tt" },
-    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0, 49, {"cap_trmain", "cap_trleft", "cap_trright", "cap_trback"} },
-    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3, 89, "cap_gt" }
+DATA.DungeonData = { --prefix = location header, dungeon order index, bitmask, offset, chests, chest keys, enemy keys, pot keys, other pots, prizes, capture badges
+    ["hc"] = { "@Hyrule Castle & Escape", 1, 0xc000, 0x00,  8, 1, 3, 0, 34, 0, {"cap_hcleft", "cap_hcmain", "cap_hcright", "cap_hcsanc"} },
+    ["ep"] = { "@Eastern Palace",         2, 0x2000, 0x02,  6, 0, 1, 1, 50, 1, "cap_ep" },
+    ["dp"] = { "@Desert Palace",          3, 0x1000, 0x03,  6, 1, 0, 3, 47, 1, {"cap_dpmain", "cap_dpleft", "cap_dpright", "cap_dpback"} },
+    ["at"] = { "@Agahnim's Tower",        5, 0x0800, 0x04,  2, 2, 2, 0, 25, 0, "cap_at" },
+    ["sp"] = { "@Swamp Palace",           7, 0x0400, 0x05, 10, 1, 0, 5, 56, 1, "cap_sp" },
+    ["pod"] = { "@Palace of Darkness",    6, 0x0200, 0x06, 14, 6, 0, 0, 39, 1, "cap_pod" },
+    ["mm"] = { "@Misery Mire",           11, 0x0100, 0x07,  8, 3, 1, 2, 37, 1, "cap_mm" },
+    ["sw"] = { "@Skull Woods",            8, 0x0080, 0x08,  8, 3, 1, 1, 81, 1, {"cap_sw", "cap_swfrontright", "cap_swfrontleft", "cap_swbacksouth"} },
+    ["ip"] = { "@Ice Palace",            10, 0x0040, 0x09,  8, 2, 2, 2, 51, 1, "cap_ip" },
+    ["toh"] = { "@Tower of Hera",         4, 0x0020, 0x0a,  6, 1, 0, 0, 37, 1, "cap_toh" },
+    ["tt"] = { "@Thieves Town",           9, 0x0010, 0x0b,  8, 1, 0, 2, 44, 1, "cap_tt" },
+    ["tr"] = { "@Turtle Rock",           12, 0x0008, 0x0c, 12, 4, 2, 0, 49, 1, {"cap_trmain", "cap_trleft", "cap_trright", "cap_trback"} },
+    ["gt"] = { "@Ganon's Tower",         13, 0x0004, 0x0d, 27, 4, 1, 3, 89, 0, "cap_gt" }
 }
 
 DATA.DungeonIdMap = {

@@ -43,8 +43,14 @@ end
 
 function GTCrystalReq:providesCode(code)
     if code == self.code then
-        if Tracker:ProviderCountForCode("prize") > 10 or Tracker:ProviderCountForCode("crystal") >= math.min(self:getState(), 7) then
-            return 1
+        if OBJ_KEYPRIZE:getState() == 0 then
+            if Tracker:ProviderCountForCode("prize") > 10 or Tracker:ProviderCountForCode("crystal") >= math.min(self:getState(), 7) then
+                return 1
+            end
+        else
+            if Tracker:ProviderCountForCode("crystalalt") >= math.min(self:getState(), 7) then
+                return 1
+            end
         end
     elseif code == "gt_crystals_unknown" and self:getState() == 8 then
         return 1

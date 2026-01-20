@@ -40,6 +40,7 @@ function initMemoryWatch()
     INSTANCE.MEMORY.Progress = {}
     INSTANCE.MEMORY.Overworld = {}
     INSTANCE.MEMORY.OverworldItems = {}
+    INSTANCE.MEMORY.OverworldSwaps = {}
     INSTANCE.MEMORY.Shops = {}
     INSTANCE.MEMORY.Npc = {}
     INSTANCE.MEMORY.DungeonChests = {}
@@ -85,6 +86,9 @@ function initMemoryWatch()
     if Tracker.ActiveVariantUID == "full_tracker" then
         for k, v in pairs(DATA.MEMORY.Overworld) do
             INSTANCE.MEMORY.Overworld[k] = v
+        end
+        for k, v in pairs(DATA.MEMORY.OverworldSwaps) do
+            INSTANCE.MEMORY.OverworldSwaps[k] = v
         end
         for k, v in pairs(DATA.MEMORY.Shops) do
             INSTANCE.MEMORY.Shops[k] = v

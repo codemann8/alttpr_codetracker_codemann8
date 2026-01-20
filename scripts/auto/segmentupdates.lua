@@ -66,15 +66,23 @@ function updateLocationFromMemorySegment(segment)
     updateModuleFromMemorySegment(segment)
 
     if isInGameFromModule() and segment:ReadUInt8(0x7e0010) ~= 0x0e then
+        local indoor = segment:ReadUInt8(0x7e001b) == 1
+        
         -- Overworld Id
-        local owChanged = updateOverworldIdFromMemorySegment(segment)
+        local owChanged = false
+        if not indoor or indoor ~= CACHE.INDOOR then
+            owChanged = updateOverworldIdFromMemorySegment(segment)
+        end
 
         if os.clock() - clock > 0.005 then
             printLog(string.format("Update LocationOW LAG: %f", os.clock() - clock), 1)
         end
 
         -- Room Id
-        local uwChanged = updateRoomIdFromMemorySegment(segment)
+        local uwChanged = false
+        if indoor or indoor ~= CACHE.INDOOR then
+            uwChanged = updateRoomIdFromMemorySegment(segment)
+        end
 
         if os.clock() - clock > 0.005 then
             printLog(string.format("Update LocationRoom LAG: %f", os.clock() - clock), 1)
@@ -354,59 +362,7 @@ function updateOverworldIdFromMemorySegment(segment)
             if OBJ_OWSHUFFLE and OBJ_OWSHUFFLE:getState() > 0 then
                 updateRoomSlots(CACHE.OWAREA + 0x1000)
             end
-
-            --OW Mixed Autotracking
-            if CACHE.OWAREA < 0x80 and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
-                if CACHE.OWAREA == 0 and (CACHE.MODULE ~= 0x09 and CACHE.MODULE ~= 0x10) then
-                    print("NULL OW CASE NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL")
-                    print("^ Module:", string.format("0x%02X", CACHE.MODULE), "< REPORT THIS TO CODEMAN ^")
-                end
                 
-                local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                if not swap.modified and swap:getState() > 1 then
-                    updateWorldFlagFromMemorySegment(nil)
-
-                    local swapped = CACHE.OWAREA < CACHE.WORLD
-                    swapped = swapped or (CACHE.OWAREA >= 0x40 and CACHE.WORLD == 0x00)
-                    if OBJ_WORLDSTATE:getState() > 0 then
-                        swapped = not swapped
-                    end
-                    swap:updateSwap(swapped and 1 or 0)
-                    swap:updateItem()
-                end
-            end
-
-            --Region Autotracking
-            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) and Tracker.ActiveVariantUID == "full_tracker" then
-                if CACHE.OWAREA < 0xff then
-                    if DATA.OverworldIdRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[CACHE.OWAREA])
-                        if region then
-                            region.Active = true
-                        end
-                    --TODO: Handle better with new mixed functionality
-                    elseif CACHE.OWAREA < 0x80 and DATA.OverworldIdItemRegionMap[CACHE.OWAREA] then
-                        local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][1])
-                        if not region.Active then
-                            local swap = findObjectForCode("ow_slot_" .. string.format("%02x", CACHE.OWAREA)).ItemState
-                            if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((CACHE.OWAREA < 0x40 and swap:getState() == 0) or (CACHE.OWAREA >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
-                                local canReach = true
-                                if #DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2] > 0 then
-                                    for i, item in ipairs(DATA.OverworldIdItemRegionMap[CACHE.OWAREA][2]) do
-                                        if Tracker:ProviderCountForCode(item) == 0 then
-                                            canReach = false
-                                            break
-                                        end
-                                    end
-                                end
-                                if canReach then
-                                    region.Active = true
-                                end
-                            end
-                        end
-                    end  
-                end
-            end
         end
 
         return true
@@ -490,10 +446,6 @@ end
 
 CACHE.COORDS = { PREVIOUS = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }, CURRENT = { X = 0xffff, Y = 0xffff, S = 0xffff, D = 0xff }}
 function updateCoordinateFromMemorySegment(segment)
-    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGameFromModule() then
-        return false
-    end
-    
     local yCoord = 0
     local xCoord = 0
     local prevIndoor = CACHE.INDOOR
@@ -507,6 +459,12 @@ function updateCoordinateFromMemorySegment(segment)
         CACHE.INDOOR = AutoTracker:ReadU8(0x7e001b, 0) == 1
     end
 
+    if CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING or OBJ_RACEMODE:getState() > 0 or OBJ_ENTRANCE:getState() == 0 or not isInGameFromModule() then
+        return false
+    end
+    
+    local insanity_funct = OBJ_ENTRANCE:getState() > 1
+    
     local function findClosestEntrance(owid, coordX, coordY, entrance, room)
         local minDistance = 9999
         local closestEntrance = nil
@@ -552,8 +510,8 @@ function updateCoordinateFromMemorySegment(segment)
     local function findRoom(dungeonId, roomId, coordX, coordY)
         if dungeonId < 0xff then
             local data = DATA.DungeonData[DATA.DungeonIdMap[dungeonId]]
-            if type(data[10]) == "string" then
-                return data[10]
+            if type(data[11]) == "string" then
+                return data[11]
             end
         end
         if DATA.RoomLobbyData[roomId] ~= nil then
@@ -599,7 +557,7 @@ function updateCoordinateFromMemorySegment(segment)
         if dungeonId < 0xff then
             local dungeonPrefix = DATA.DungeonIdMap[dungeonId]
             local data = DATA.DungeonData[dungeonPrefix]
-            if room:find("^cap_drop_") or type(data[10]) == "string" then
+            if room:find("^cap_drop_") or type(data[11]) == "string" then
                 printLog("drop case", 1)
                 return room
             end
@@ -609,7 +567,7 @@ function updateCoordinateFromMemorySegment(segment)
                 return INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name]
             end
             if OBJ_ENTRANCE:getState() < 4 then
-                if dungeonPrefix == "sw" then
+                if dungeonPrefix == "sw" and not insanity_funct then
                     room = "cap_sw"
                     if entrance:find("Skull Woods") and entrance ~= "@Skull Woods Back/Entrance" then
                         suppressLog = true
@@ -626,7 +584,7 @@ function updateCoordinateFromMemorySegment(segment)
 
             local function pickNext(fullList)
                 --return value must meet the following conditions:
-                --1) value must exist in data[10], static list of all icons for this dungeon
+                --1) value must exist in data[11], static list of all icons for this dungeon
                 --2) value cannot be in MULTIDUNGEONCAPTURES, list of already used icons
                 --3) value must prefer to use existing value of room, or else use the first of the remaining icons
                 local remaining = {}
@@ -635,7 +593,7 @@ function updateCoordinateFromMemorySegment(segment)
                     remaining[rI] = v
                     for e,c in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
                         cAlt = c
-                        if OBJ_ENTRANCE:getState() == 4 and c == "cap_swback" then
+                        if insanity_funct and c == "cap_swback" then
                             cAlt = "cap_sw"
                         end
                         if cAlt == v then
@@ -658,13 +616,13 @@ function updateCoordinateFromMemorySegment(segment)
                     ret = remaining[1]
                 end
 
-                if OBJ_ENTRANCE:getState() == 4 and ret == "cap_sw" then
+                if insanity_funct and ret == "cap_sw" then
                     return "cap_swback"
                 end
                 return ret
             end
             
-            room = pickNext(data[10])
+            room = pickNext(data[11])
         end
         return room
     end
@@ -827,7 +785,7 @@ function updateCoordinateFromMemorySegment(segment)
                     owId = CACHE.COORDS.CURRENT.S
                     roomId = CACHE.COORDS.PREVIOUS.S
                     dungeonId = CACHE.COORDS.PREVIOUS.D
-                    if OBJ_ENTRANCE:getState() < 4 then
+                    if not insanity_funct then
                         if CACHE.COORDS.PREVIOUS.S ~= 0x0d and CACHE.COORDS.PREVIOUS.S ~= 0x20 -- aga bosses
                                 and CACHE.COORDS.PREVIOUS.S ~= 0x33 and CACHE.COORDS.PREVIOUS.S ~= 0x29 and CACHE.COORDS.PREVIOUS.S ~= 0xa4 then -- multi-entrance bosses
                             owEntrance, uwRoom = findEntranceRoomPair(CACHE.COORDS.CURRENT, CACHE.COORDS.PREVIOUS)
@@ -874,7 +832,7 @@ function updateCoordinateFromMemorySegment(segment)
                                 end
                             end
                         end
-                        if OBJ_ENTRANCE:getState() < 4 then
+                        if not insanity_funct then
                             resetCoords()
                         end
                     end
@@ -1176,6 +1134,49 @@ DATA.MEMORY.OverworldItems = {
     --["bombs"] = { 0x5b, 0x02, nil, 1 } -- pyramid crack
 }
 
+DATA.MEMORY.OverworldSwaps = {
+    ["ow_slot_00"] = { 0x00, 0x40 },
+    ["ow_slot_02"] = { 0x02, 0x42 },
+    ["ow_slot_03"] = { 0x03, 0x43 },
+    ["ow_slot_05"] = { 0x05, 0x45 },
+    ["ow_slot_07"] = { 0x07, 0x47 },
+    ["ow_slot_0a"] = { 0x0a, 0x4a },
+    ["ow_slot_0f"] = { 0x0f, 0x4f },
+    ["ow_slot_10"] = { 0x10, 0x50 },
+    ["ow_slot_11"] = { 0x11, 0x51 },
+    ["ow_slot_12"] = { 0x12, 0x52 },
+    ["ow_slot_13"] = { 0x13, 0x53 },
+    ["ow_slot_14"] = { 0x14, 0x54 },
+    ["ow_slot_15"] = { 0x15, 0x55 },
+    ["ow_slot_16"] = { 0x16, 0x56 },
+    ["ow_slot_17"] = { 0x17, 0x57 },
+    ["ow_slot_18"] = { 0x18, 0x58 },
+    ["ow_slot_1a"] = { 0x1a, 0x5a },
+    ["ow_slot_1b"] = { 0x1b, 0x5b },
+    ["ow_slot_1d"] = { 0x1d, 0x5d },
+    ["ow_slot_1e"] = { 0x1e, 0x5e },
+    ["ow_slot_22"] = { 0x22, 0x62 },
+    ["ow_slot_25"] = { 0x25, 0x65 },
+    ["ow_slot_28"] = { 0x28, 0x68 },
+    ["ow_slot_29"] = { 0x29, 0x69 },
+    ["ow_slot_2a"] = { 0x2a, 0x6a },
+    ["ow_slot_2b"] = { 0x2b, 0x6b },
+    ["ow_slot_2c"] = { 0x2c, 0x6c },
+    ["ow_slot_2d"] = { 0x2d, 0x6d },
+    ["ow_slot_2e"] = { 0x2e, 0x6e },
+    ["ow_slot_2f"] = { 0x2f, 0x6f },
+    ["ow_slot_30"] = { 0x30, 0x70 },
+    ["ow_slot_32"] = { 0x32, 0x72 },
+    ["ow_slot_33"] = { 0x33, 0x73 },
+    ["ow_slot_34"] = { 0x34, 0x74 },
+    ["ow_slot_35"] = { 0x35, 0x75 },
+    ["ow_slot_37"] = { 0x37, 0x77 },
+    ["ow_slot_3a"] = { 0x3a, 0x7a },
+    ["ow_slot_3b"] = { 0x3b, 0x7b },
+    ["ow_slot_3c"] = { 0x3c, 0x7c },
+    ["ow_slot_3f"] = { 0x3f, 0x7f }
+}
+
 function updateOverworldFromMemorySegment(segment)
     local clock = os.clock()
     if CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING or Tracker.ActiveVariantUID ~= "full_tracker" or not isInGame() then
@@ -1206,6 +1207,74 @@ function updateOverworldFromMemorySegment(segment)
             end
         else
             print("Couldn't find overworld:", name)
+        end
+    end
+
+    if Tracker.ActiveVariantUID == "full_tracker" then
+        local function markRegionVisited(owid, swap)
+            if DATA.OverworldIdRegionMap[owid] then
+                local region = Tracker:FindObjectForCode(DATA.OverworldIdRegionMap[owid])
+                if not region.Active then
+                    region.Active = true
+                end
+            elseif DATA.OverworldIdItemRegionMap[owid] then
+                local region = Tracker:FindObjectForCode(DATA.OverworldIdItemRegionMap[owid][1])
+                if not region.Active then
+                    if (not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING and ((owid < 0x40 and swap:getState() == 0) or (owid >= 0x40 and swap:getState() == 1))) or Tracker:FindObjectForCode('pearl').Active then
+                        local canReach = true
+                        if #DATA.OverworldIdItemRegionMap[owid][2] > 0 then
+                            for i, item in ipairs(DATA.OverworldIdItemRegionMap[owid][2]) do
+                                if Tracker:ProviderCountForCode(item) == 0 then
+                                    canReach = false
+                                    break
+                                end
+                            end
+                        end
+                        if canReach then
+                            region.Active = true
+                        end
+                    end
+                end
+            end
+        end
+        for name, value in pairs(DATA.MEMORY.OverworldSwaps) do
+            local lw_visit = segment:ReadUInt8(0x7ef280 + value[1]) & 0x80
+            local dw_visit = segment:ReadUInt8(0x7ef280 + value[2]) & 0x80
+            local swap = findObjectForCode(name).ItemState
+
+            --OW Mixed Autotracking
+            if INSTANCE.MEMORY.OverworldSwaps[name] and OBJ_MIXED:getState() > 0 and not CONFIG.AUTOTRACKER_DISABLE_OWMIXED_TRACKING then
+                if swap then
+                    if not swap.modified and swap:getState() > 1 then -- Do not auto-track this the user has manually modified it
+                        if (lw_visit | dw_visit) > 0 then
+                            --updateWorldFlagFromMemorySegment(nil)
+                            local swapped = AutoTracker:ReadU8(0x2ab9b0 + value[1], 0) > 0
+                            swap:updateSwap(swapped and 1 or 0)
+                            swap:updateItem()
+                        end
+                        
+                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING and swap:getState() < 2 then
+                            print("Overworld Swap:", name, swap:getState())
+                        end
+                    end
+
+                    if swap:getState() < 2 then
+                        INSTANCE.MEMORY.OverworldSwaps[name] = nil
+                    end
+                else
+                    print("Couldn't find overworld swap:", name)
+                end
+            end
+
+            --Region Autotracking
+            if (OBJ_ENTRANCE:getState() > 0 or OBJ_OWSHUFFLE:getState() > 0) and OBJ_RACEMODE:getState() == 0 and (not CONFIG.AUTOTRACKER_DISABLE_ENTRANCE_TRACKING) then
+                if lw_visit > 0 then
+                    markRegionVisited(value[1], swap)
+                end
+                if dw_visit > 0 then
+                    markRegionVisited(value[2], swap)
+                end
+            end
         end
     end
 
@@ -1361,21 +1430,21 @@ DATA.MEMORY.DungeonChests = {
     { {"@Eastern Palace/Stalfos Spawn", "@EP Stalfos Spawn/Chest"}, {{168, 4}} },
     { {"@Eastern Palace/Big Chest", "@EP Big Chest/Chest"}, {{169, 4}} },
     { {"@Eastern Palace/Big Key Chest", "@EP Big Key Chest/Chest"}, {{184, 4}} },
-    { {"@Eastern Palace/Armos", "@EP Armos/Prize"}, {{200, 11}} },
+    { {"@Eastern Palace/Armos", "@EP Armos/Boss"}, {{200, 11}} },
 
     { {"@Desert Palace/Eyegore Switch", "@DP Eyegore Switch/Chest"}, {{116, 4}} },
     { {"@Desert Palace/Popo Chest", "@DP Popo Chest/Chest"}, {{133, 4}} },
     { {"@Desert Palace/Cannonball Chest", "@DP Cannonball/Chest"}, {{117, 4}} },
     { {"@Desert Palace/Torch", "@DP Torch/Torch"}, {{115, 10}} },
     { {"@Desert Palace/Big Chest", "@DP Big Chest/Chest"}, {{115, 4}} },
-    { {"@Desert Palace/Lanmolas", "@DP Lanmolas/Prize"}, {{51, 11}} },
+    { {"@Desert Palace/Lanmolas", "@DP Lanmolas/Boss"}, {{51, 11}} },
 
     { {"@Tower of Hera/Lobby", "@TH Lobby/Chest"}, {{119, 4}} },
     { {"@Tower of Hera/Cage", "@TH Cage/Item"}, {{135, 10}} },
     { {"@Tower of Hera/Basement", "@TH Basement/Chest"}, {{135, 4}} },
     { {"@Tower of Hera/Compass Chest", "@TH Compass Room/Chest"}, {{39, 5}} },
     { {"@Tower of Hera/Big Chest", "@TH Big Chest/Chest"}, {{39, 4}} },
-    { {"@Tower of Hera/Moldorm", "@TH Moldorm/Prize"}, {{7, 11}} },
+    { {"@Tower of Hera/Moldorm", "@TH Moldorm/Boss"}, {{7, 11}} },
 
     { {"@Agahnim's Tower/Lobby", "@AT Lobby/Chest"}, {{224, 4}} },
     { {"@Agahnim's Tower/Dark Chest", "@AT Dark Chest/Chest"}, {{208, 4}} },
@@ -1391,7 +1460,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Palace of Darkness/Turtle Room", "@PoD Turtle Room/Chest"}, {{26, 5}} },
     { {"@Palace of Darkness/Rupee Basement", "@PoD Rupee Basement/Chest"}, {{106, 4}, {106, 5}} },
     { {"@Palace of Darkness/Harmless Hellway", "@PoD Harmless Hellway/Chest"}, {{26, 6}} },
-    { {"@Palace of Darkness/King Helmasaur", "@PoD King Helmasaur/Prize"}, {{90, 11}} },
+    { {"@Palace of Darkness/King Helmasaur", "@PoD King Helmasaur/Boss"}, {{90, 11}} },
 
     { {"@Swamp Palace/Entrance Chest", "@SP Entrance/Chest"}, {{40, 4}} },
     { {"@Swamp Palace/Bomb Wall", "@SP Bomb Wall/Chest"}, {{55, 4}} },
@@ -1401,7 +1470,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Swamp Palace/Big Chest", "@SP Big Chest/Chest"}, {{54, 4}} },
     { {"@Swamp Palace/Flooded Treasure", "@SP Flooded Treasure/Chest"}, {{118, 4}, {118, 5}} },
     { {"@Swamp Palace/Snake Waterfall", "@SP Snake Waterfall/Chest"}, {{102, 4}} },
-    { {"@Swamp Palace/Arrghus", "@SP Arrghus/Prize"}, {{6, 11}} },
+    { {"@Swamp Palace/Arrghus", "@SP Arrghus/Boss"}, {{6, 11}} },
 
     { {"@Skull Woods/Map Chest", "@SW Map Chest/Chest"}, {{88, 5}} },
     { {"@Skull Woods/Gibdo Prison", "@SW Gibdo Prison/Chest"}, {{87, 5}} },
@@ -1410,7 +1479,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Skull Woods/Statue Switch", "@SW Statue Switch/Chest"}, {{87, 4}} },
     { {"@Skull Woods/Big Chest", "@SW Big Chest/Chest"}, {{88, 4}} },
     { {"@Skull Woods/Bridge", "@SW Bridge/Chest"}, {{89, 4}} },
-    { {"@Skull Woods/Mothula", "@SW Mothula/Prize"}, {{41, 11}} },
+    { {"@Skull Woods/Mothula", "@SW Mothula/Boss"}, {{41, 11}} },
 
     { {"@Thieves Town/Main Lobby", "@TT Main Lobby/Chest"}, {{219, 4}} },
     { {"@Thieves Town/Ambush", "@TT Ambush/Chest"}, {{203, 4}} },
@@ -1419,7 +1488,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Thieves Town/Attic Chest", "@TT Attic/Chest"}, {{101, 4}} },
     { {"@Thieves Town/Prison Cell", "@TT Prison Cell/Chest"}, {{69, 4}} },
     { {"@Thieves Town/Big Chest", "@TT Big Chest/Chest"}, {{68, 4}} },
-    { {"@Thieves Town/Blind", "@TT Blind/Prize"}, {{172, 11}} },
+    { {"@Thieves Town/Blind", "@TT Blind/Boss"}, {{172, 11}} },
 
     { {"@Ice Palace/Pengator Room", "@IP Pengator Room/Chest"}, {{46, 4}} },
     { {"@Ice Palace/Spike Room", "@IP Spike Room/Chest"}, {{95, 4}} },
@@ -1428,7 +1497,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Ice Palace/Freezor Chest", "@IP Freezor/Chest"}, {{126, 4}} },
     { {"@Ice Palace/Ice T", "@IP Ice T/Chest"}, {{174, 4}} },
     { {"@Ice Palace/Big Chest", "@IP Big Chest/Chest"}, {{158, 4}} },
-    { {"@Ice Palace/Kholdstare", "@IP Kholdstare/Prize"}, {{222, 11}} },
+    { {"@Ice Palace/Kholdstare", "@IP Kholdstare/Boss"}, {{222, 11}} },
 
     { {"@Misery Mire/Spike Switch", "@MM Spike Room/Chest"}, {{179, 4}} },
     { {"@Misery Mire/Bridge", "@MM Bridge/Chest"}, {{162, 4}} },
@@ -1437,7 +1506,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Misery Mire/Torch Cutscene", "@MM Torch Cutscene/Chest"}, {{209, 4}} },
     { {"@Misery Mire/Right Blue Pegs Chest", "@MM Right Blue Pegs/Chest"}, {{195, 5}} },
     { {"@Misery Mire/Big Chest", "@MM Big Chest/Chest"}, {{195, 4}} },
-    { {"@Misery Mire/Vitreous", "@MM Vitreous/Prize"}, {{144, 11}} },
+    { {"@Misery Mire/Vitreous", "@MM Vitreous/Boss"}, {{144, 11}} },
 
     { {"@Turtle Rock/Compass Room", "@TR Compass Room/Chest"}, {{214, 4}} },
     { {"@Turtle Rock/Roller Room", "@TR Roller Room/Chest"}, {{183, 4}, {183, 5}} },
@@ -1446,7 +1515,7 @@ DATA.MEMORY.DungeonChests = {
     { {"@Turtle Rock/Big Chest", "@TR Big Chest/Chest"}, {{36, 4}} },
     { {"@Turtle Rock/Crystaroller Chest", "@TR Crystaroller/Chest"}, {{4, 4}} },
     { {"@Turtle Rock/Laser Bridge", "@TR Laser Bridge/Chest"}, {{213, 4}, {213, 5}, {213, 6}, {213, 7}} },
-    { {"@Turtle Rock/Trinexx", "@TR Trinexx/Prize"}, {{164, 11}} },
+    { {"@Turtle Rock/Trinexx", "@TR Trinexx/Boss"}, {{164, 11}} },
 
     { {"@Ganon's Tower/Hope Room", "@GT Hope Room/Chest"}, {{140, 5}, {140, 6}} },
     { {"@Ganon's Tower/Torch", "@GT Torch/Torch"}, {{140, 10}} },
@@ -1777,16 +1846,16 @@ DATA.MEMORY.Bosses = {
 }
 
 DATA.MEMORY.BossLocations = {
-    "@Eastern Palace/Armos",
-    "@Desert Palace/Lanmolas",
-    "@Tower of Hera/Moldorm",
-    "@Palace of Darkness/King Helmasaur",
-    "@Swamp Palace/Arrghus",
-    "@Skull Woods/Mothula",
-    "@Thieves Town/Blind",
-    "@Ice Palace/Kholdstare",
-    "@Misery Mire/Vitreous",
-    "@Turtle Rock/Trinexx"
+    { "@Eastern Palace/Armos", "@Eastern Palace/Prize", "@EP Armos/Prize" },
+    { "@Desert Palace/Lanmolas", "@Desert Palace/Prize", "@DP Lanmolas/Prize" },
+    { "@Tower of Hera/Moldorm", "@Tower of Hera/Prize", "@TH Moldorm/Prize" },
+    { "@Palace of Darkness/King Helmasaur", "@Palace of Darkness/Prize", "@PoD King Helmasaur/Prize" },
+    { "@Swamp Palace/Arrghus", "@Swamp Palace/Prize", "@SP Arrghus/Prize" },
+    { "@Skull Woods/Mothula", "@Skull Woods/Prize", "@SW Mothula/Prize" },
+    { "@Thieves Town/Blind", "@Thieves Town/Prize", "@TT Blind/Prize" },
+    { "@Ice Palace/Kholdstare", "@Ice Palace/Prize", "@IP Kholdstare/Prize" },
+    { "@Misery Mire/Vitreous", "@Misery Mire/Prize", "@MM Vitreous/Prize" },
+    { "@Turtle Rock/Trinexx", "@Turtle Rock/Prize", "@TR Trinexx/Prize" }
 }
 
 DATA.MEMORY.Underworld = {
@@ -1887,25 +1956,39 @@ function updateRoomsFromMemorySegment(segment)
 
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
         local bossflag = segment:ReadUInt16(0x7ef000 + (boss[2][1] * 2)) & (1 << boss[2][2])
-        local item = findObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1]).ItemState
         if item and OBJ_GLITCHMODE:getState() < 3 and not INSTANCE.NEW_SRAM_SYSTEM then
-            item.Active = bossflag > 0
+            item:setBoss(bossflag > 0)
         end
 
         if INSTANCE.MEMORY.BossLocations[i] and not CONFIG.AUTOTRACKER_DISABLE_LOCATION_TRACKING and Tracker.ActiveVariantUID ~= "vanilla" then
-            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i])
+            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][1])
             if item then
                 item.AvailableChestCount = bossflag == 0 and 1 or 0
                 
                 if item.AvailableChestCount == 0 then
-                    INSTANCE.MEMORY.BossLocations[i] = nil
+                    --INSTANCE.MEMORY.BossLocations[i] = nil
 
                     if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-                        print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i])
+                        print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][1])
                     end
                 end
             else
                 print("Couldn't find location", item)
+            end
+            if not INSTANCE.NEW_SRAM_SYSTEM then
+                item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][2])
+                if item then
+                    item.AvailableChestCount = bossflag == 0 and 1 or 0
+                    item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][3])
+                    item.AvailableChestCount = bossflag == 0 and 1 or 0
+                    
+                    if item.AvailableChestCount == 0 then
+                        if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                            print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][2])
+                        end
+                    end
+                end
             end
         end
     end
@@ -2216,10 +2299,28 @@ function updateKeyTotalsFromMemorySegment(segment)
         print("Segment: Key Totals")
     end
 
-    --Key Totals Seen
+    --Key Totals and Prizes Seen
     CACHE.KeysSeen = segment:ReadUInt16(0x7ef474)
     for i, dungeonPrefix in ipairs(DATA.DungeonList) do
         updateKeyTotal(dungeonPrefix, CACHE.KeysSeen)
+        local dungData = DATA.DungeonData[dungeonPrefix]
+        if dungData[10] > 0 and OBJ_KEYPRIZE:getState() > 0 and INSTANCE.VERSION_MINOR >= 5 and CACHE.KeysSeen & DATA.DungeonData[dungeonPrefix][3] > 0 then
+            local prizeIdx = AutoTracker:ReadU8(0x30efe0+dungData[4], 0)
+            if prizeIdx > 0 then
+                local dungeon = Tracker:FindObjectForCode(dungeonPrefix).ItemState
+                if prizeIdx == 5 or prizeIdx == 6 then
+                    dungeon:setState(2)
+                elseif prizeIdx == 8 then
+                    dungeon:setState(4)
+                elseif prizeIdx > 8 then
+                    dungeon:setState(3)
+                else
+                    dungeon:setState(1)
+                end
+            else
+                print('error', dungeonPrefix, prizeIdx, dungData[4])
+            end
+        end
     end
 end
 
@@ -2230,9 +2331,21 @@ function updateDungeonsCompletedFromMemorySegment(segment)
 
     CACHE.DungeonsCompleted = segment:ReadUInt16(0x7ef472)
     for i, boss in ipairs(INSTANCE.MEMORY.Bosses) do
-        local item = findObjectForCode(boss[1])
+        local item = findObjectForCode(boss[1]).ItemState
         if item then
-            item.Active = CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0
+            item:setBoss(CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3] > 0)
+        end
+        item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][2])
+        if item and item.AvailableChestCount > 0 then
+            item.AvailableChestCount = (CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3]) == 0 and 1 or 0
+            item = findObjectForCode(INSTANCE.MEMORY.BossLocations[i][3])
+            item.AvailableChestCount = (CACHE.DungeonsCompleted & DATA.DungeonData[boss[1]][3]) == 0 and 1 or 0
+            
+            if item.AvailableChestCount == 0 then
+                if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
+                    print("Boss Defeated:", INSTANCE.MEMORY.BossLocations[i][2])
+                end
+            end
         end
     end
 end
@@ -2243,9 +2356,12 @@ function updatePrizeFromMemorySegment(segment)
     end
 
     local function setPrize(value)
-        local dungeon = Tracker:FindObjectForCode(DATA.DungeonIdMap[CACHE.DUNGEON])
-        if dungeon and dungeon.CurrentStage == 0 then
-            dungeon.CurrentStage = value
+        local dungeonId = DATA.DungeonIdMap[CACHE.DUNGEON]
+        if dungeonId ~= "OW" and DATA.DungeonData[dungeonId][10] > 0 then
+            local dungeon = Tracker:FindObjectForCode(dungeonId)
+            if dungeon and dungeon.ItemState and dungeon.ItemState:getState() == 0 then
+                dungeon.ItemState:setState(value)
+            end
         end
     end
 
@@ -2256,15 +2372,36 @@ function updatePrizeFromMemorySegment(segment)
     CACHE.PendantData = segment:ReadUInt8(0x7ef374)
     CACHE.CrystalData = segment:ReadUInt8(0x7ef37a)
 
-    local diffPendants = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
-    local diffCrystals = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
-    if numberOfSetBits(diffPendants) == 1 and diffPendants & CACHE.PendantData > 0 then
-        setPrize(diffPendants & CACHE.PendantData == 4 and 4 or 3)
-    elseif numberOfSetBits(diffCrystals) == 1 and diffCrystals & CACHE.CrystalData > 0 then
-        setPrize(1)
+    if OBJ_KEYPRIZE:getState() < 2 then
+        local diffPendants = ((INSTANCE.DUNGEON_PRIZE_DATA & 0xff00) >> 8) ~ CACHE.PendantData
+        local diffCrystals = (INSTANCE.DUNGEON_PRIZE_DATA & 0xff) ~ CACHE.CrystalData
+        if numberOfSetBits(diffPendants) == 1 and diffPendants & CACHE.PendantData > 0 then
+            setPrize(diffPendants & CACHE.PendantData == 4 and 4 or 3)
+        elseif numberOfSetBits(diffCrystals) == 1 and diffCrystals & CACHE.CrystalData > 0 then
+            setPrize(1)
+        end
     end
 
     INSTANCE.DUNGEON_PRIZE_DATA = (CACHE.PendantData << 8) + CACHE.CrystalData
+    
+    if OBJ_KEYPRIZE:getState() > 0 then
+        local prizes = {
+            ["greenpendantalt"] = 0x0400,
+            ["bluependantalt"] = 0x0200,
+            ["redpendantalt"] = 0x0100,
+            ["crystal1"] = 0x0002,
+            ["crystal2"] = 0x0010,
+            ["crystal3"] = 0x0040,
+            ["crystal4"] = 0x0020,
+            ["crystal5"] = 0x0004,
+            ["crystal6"] = 0x0001,
+            ["crystal7"] = 0x0008
+        }
+        for prize, mask in pairs(prizes) do
+            local item = Tracker:FindObjectForCode(prize)
+            item.Active = INSTANCE.DUNGEON_PRIZE_DATA & mask > 0
+        end
+    end
 end
 
 function updateCollectionFromMemorySegment(segment)

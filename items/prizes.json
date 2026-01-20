@@ -1,382 +1,79 @@
 [
-    // Eastern Palace
+    // Green Pendant
     {
-        "name": "Eastern Palace",
-        "type": "progressive_toggle",
-        "capturable": false,
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-EP.png",
-                "codes": "ep,easternpalace,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Green Pendant",
+        "type": "toggle",
+        "img": "images/items/greenpendant.png",
+        "codes": "greenpendantalt,prizealt"
     },
-    // Desert Palace
+    // Blue Pendant
     {
-        "name": "Desert Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-DP.png",
-                "codes": "dp,desertpalace,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Blue Pendant",
+        "type": "toggle",
+        "img": "images/items/bluependant.png",
+        "codes": "bluependantalt,pendantalt,prizealt"
     },
-    // Tower of Hera
+    // Red Pendant
     {
-        "name": "Tower of Hera",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TOH.png",
-                "codes": "toh,towerofhera,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Red Pendant",
+        "type": "toggle",
+        "img": "images/items/redpendant.png",
+        "codes": "redpendantalt,pendantalt,prizealt"
     },
-    // Palace of Darkness
+    // Crystal 1
     {
-        "name": "Palace of Darkness",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-POD.png",
-                "codes": "pod,palaceofdarkness,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 1",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal1,crystalalt,prizealt"
     },
-    // Swamp Palace
+    // Crystal 2
     {
-        "name": "Swamp Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-SP.png",
-                "codes": "sp,swamppalace,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 2",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal2,crystalalt,prizealt"
     },
-    // Skull Woods
+    // Crystal 3
     {
-        "name": "Skull Woods",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-SW.png",
-                "codes": "sw,skullwoods,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 3",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal3,crystalalt,prizealt"
     },
-    // Thieve's Town
+    // Crystal 4
     {
-        "name": "Thieves Town",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TT.png",
-                "codes": "tt,thievestown,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 4",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal4,crystalalt,prizealt"
     },
-    // Ice Palace
+    // Crystal 5
     {
-        "name": "Ice Palace",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-IP.png",
-                "codes": "ip,icepalace,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 5",
+        "type": "toggle",
+        "img": "images/items/redcrystal.png",
+        "mask_input": true,
+        "codes": "crystal5,crystalalt,prizealt"
     },
-    // Misery Mire
+    // Crystal 6
     {
-        "name": "Misery Mire",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-MM.png",
-                "codes": "mm,miserymire,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
+        "name": "Crystal 6",
+        "type": "toggle",
+        "img": "images/items/redcrystal.png",
+        "mask_input": true,
+        "codes": "crystal6,crystalalt,prizealt"
     },
-    // Turtle Rock
+    // Crystal 7
     {
-        "name": "Turtle Rock",
-        "capturable": false,
-        "type": "progressive_toggle",
-        "stages": [
-            {
-                "img": "images/dungeon/prize-unknown.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,prize",
-                "secondary_codes": "none, unknown"
-            },
-            {
-                "img": "images/dungeon/prize-crystal.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,crystal,prize",
-                "secondary_codes": "crystal"
-            },
-            {
-                "img": "images/dungeon/prize-crystal56.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,crystal,crystal56,redcrystal,red,prize",
-                "secondary_codes": "crystal five six, red crystal, fairy crystal"
-            },
-            {
-                "img": "images/dungeon/prize-pendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,pendant,prize",
-                "secondary_codes": "pendant, red pendant, blue pendant"
-            },
-            {
-                "img": "images/dungeon/prize-greenpendant.png",
-                "img_mods": "overlay|images/overlays/overlay-TR.png",
-                "codes": "tr,turtlerock,greenpendant,green,prize",
-                "secondary_codes": "green pendant"
-            }
-        ]
-    }
+        "name": "Crystal 7",
+        "type": "toggle",
+        "img": "images/items/bluecrystal.png",
+        "mask_input": true,
+        "codes": "crystal7,crystalalt,prizealt"
+    },
 ]

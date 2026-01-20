@@ -63,6 +63,92 @@
             }
         ]
     },
+    "shared_pendant_grid": {
+        "type": "container",
+        "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "margin": "24,0,24,24",
+                "height": 30,
+                "item": "greenpendantalt"
+            },
+            {
+                "type": "item",
+                "margin": "0,24,44,0",
+                "height": 30,
+                "item": "bluependantalt"
+            },
+            {
+                "type": "item",
+                "margin": "44,24,0,0",
+                "height": 30,
+                "item": "redpendantalt"
+            }
+        ]
+    },
+    "shared_crystal_grid": {
+        "type": "container",
+        "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": 0,
+        "content": [
+            {
+                "type": "item",
+                "margin": "0,18,96,-10",
+                "height": 40,
+                "item": "crystal1"
+            },
+            {
+                "type": "item",
+                "margin": "16,-6,80,14",
+                "height": 40,
+                "item": "crystal2"
+            },
+            {
+                "type": "item",
+                "margin": "32,18,64,-10",
+                "height": 40,
+                "item": "crystal3"
+            },
+            {
+                "type": "item",
+                "margin": "48,-6,48,14",
+                "height": 40,
+                "item": "crystal4"
+            },
+            {
+                "type": "item",
+                "margin": "64,18,32,-10",
+                "height": 40,
+                "item": "crystal5"
+            },
+            {
+                "type": "item",
+                "margin": "80,-6,16,14",
+                "height": 40,
+                "item": "crystal6"
+            },
+            {
+                "type": "item",
+                "margin": "96,18,0,-10",
+                "height": 40,
+                "item": "crystal7"
+            }
+        ]
+    },
+    "ref_pendant_grid": {
+        "type": "layout",
+        "margin": 0,
+        "key": "blank"
+    },
+    "ref_crystal_grid": {
+        "type": "layout",
+        "margin": 0,
+        "key": "blank"
+    },
     "shared_basic_lw_grid": {
         "type": "itemgrid",
         "h_alignment": "center",
@@ -116,16 +202,27 @@
                         "header_background": "#3e4b57",
                         "content":[
                             {
-                                "type": "container",
-                                "margin": "-10,-10,-10,-7",
+                                "type": "array",
+                                "orientation": "vertical",
+                                "margin": "-5,-5,-5,-2",
                                 "content": [
                                     {
                                         "type": "itemgrid",
+                                        "margin": 0,
+                                        "item_margin": 0,
+                                        "item_width": 64,
+                                        "item_height": 24,
+                                        "rows": [
+                                            [ "keysanity_map", "keysanity_compass", "keysanity_prize" ]
+                                        ]
+                                    },
+                                    {
+                                        "type": "itemgrid",
+                                        "margin": 0,
                                         "item_margin": 0,
                                         "item_width": 96,
                                         "item_height": 24,
                                         "rows": [
-                                            [ "keysanity_map", "keysanity_compass" ],
                                             [ "keysanity_smallkey", "keysanity_bigkey" ]
                                         ]
                                     }
@@ -298,6 +395,30 @@
             }
         ]
     },
+    "shared_keysanity_grid": {
+        "type": "container",
+        "h_alignment": "center",
+        "v_alignment": "center",
+        "margin": 0,
+        "content": [
+            {
+                "type": "itemgrid",
+                "margin": 0,
+                "item_margin": 0,
+                "item_size": 20,
+                "rows": [
+                    [ "keysanity_map_small", "keysanity_compass_small" ],
+                    [ "keysanity_smallkey_small", "keysanity_bigkey_small" ]
+                ]
+            },
+            {
+                "type": "item",
+                "margin": "0,-1,0,0",
+                "height": 40,
+                "item": "keysanity_prize_small"
+            }
+        ]
+    },
     "shared_mode_grid": {
         "type": "array",
         "orientation": "horizontal",
@@ -315,14 +436,9 @@
                 ]
             },
             {
-                "type": "itemgrid",
-                "margin": "1,0",
-                "item_margin": 0,
-                "item_size": 20,
-                "rows": [
-                    [ "keysanity_map_small", "keysanity_compass_small" ],
-                    [ "keysanity_smallkey_small", "keysanity_bigkey_small" ]
-                ]
+                "type": "layout",
+                "margin": "-1,0",
+                "key": "shared_keysanity_grid"
             },
             {
                 "type": "itemgrid",
@@ -405,14 +521,9 @@
                         ]
                     },
                     {
-                        "type": "itemgrid",
+                        "type": "layout",
                         "margin": 0,
-                        "item_margin": 0,
-                        "item_size": 20,
-                        "rows": [
-                            [ "keysanity_map_small", "keysanity_compass_small" ],
-                            [ "keysanity_smallkey_small", "keysanity_bigkey_small" ]
-                        ]
+                        "key": "shared_keysanity_grid"
                     },
                     {
                         "type": "array",

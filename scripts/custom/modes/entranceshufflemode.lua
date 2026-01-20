@@ -43,20 +43,12 @@ function EntranceShuffleMode:postUpdate()
     --Change Dropdown Capture Layouts
     for i = 1, #DATA.CaptureBadgeDropdowns do
         local drop = findObjectForCode(DATA.CaptureBadgeDropdowns[i])
-        if self:getState() > 3 then
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
-        else
-            drop.ItemCaptureLayout = "tracker_capture_dropdown"
-        end
+        drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
     end
     
     for i = 1, #DATA.CaptureBadgeSWDropdowns do
         local drop = findObjectForCode(DATA.CaptureBadgeSWDropdowns[i])
-        if self:getState() > 3 then
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
-        else
-            drop.ItemCaptureLayout = "tracker_capture_dropdown_sw"
-        end
+        drop.ItemCaptureLayout = "tracker_capture_dropdown_insanity"
     end
 
     --Change Entrance Capture Layouts
@@ -65,7 +57,7 @@ function EntranceShuffleMode:postUpdate()
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then
-            drop.ItemCaptureLayout = "tracker_capture_entrance"
+            drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         else
             drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
         end
@@ -76,7 +68,7 @@ function EntranceShuffleMode:postUpdate()
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then
-            drop.ItemCaptureLayout = "tracker_capture_entrance"
+            drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         else
             drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
         end
@@ -87,39 +79,39 @@ function EntranceShuffleMode:postUpdate()
         if self:getState() > 3 then
             drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         elseif self:getState() > 1 then
-            drop.ItemCaptureLayout = "tracker_capture_entrance"
+            drop.ItemCaptureLayout = "tracker_capture_entrance_insanity"
         else
             drop.ItemCaptureLayout = "tracker_capture_entrance_dungeon"
         end
     end
 
-    
     --Change Dropdown Layouts
+    local insanity_view = self:getState() > 1
     local e = Layout:FindLayout("shared_dropdown_grid").Root.Items:GetEnumerator()
     e:MoveNext()
     e = e.Current.Children:GetEnumerator()
     e:MoveNext()
     e:MoveNext()
-    e.Current.MaxWidth = self:getState() == 4 and -1 or 0
+    e.Current.MaxWidth = insanity_view and -1 or 0
     
     Layout:FindLayout("shared_bottom_grid").Root.Layout = self:getState() < 2 and Layout:FindLayout("shared_bottom_misc_grid") or Layout:FindLayout("shared_bottom_all_grid")
 
     e = Layout:FindLayout("shared_dropdown_vertical_grid").Root
-    e.MaxWidth = self:getState() == 4 and -1 or self:getState() < 2 and 0 or 107
+    e.MaxWidth = insanity_view and -1 or self:getState() < 2 and 0 or 107
     e.Margin = self:getState() < 2 and 0 or "0,0,2,0"
     
     e = Layout:FindLayout("shared_dropdown_v_grid").Root
     e.MaxHeight = self:getState() < 2 and 0 or -1
     e = e.Items:GetEnumerator()
     e:MoveNext()
-    e.Current.Margin = self:getState() == 4 and "0,0,0,22" or 0
+    e.Current.Margin = insanity_view and "0,0,0,22" or 0
 
-    Layout:FindLayout("ref_dropdown_insanity_grid").Root.Layout = (self:getState() == 4 and Layout:FindLayout("shared_dropdown_insanity_grid") or nil)
+    Layout:FindLayout("ref_dropdown_insanity_grid").Root.Layout = (insanity_view and Layout:FindLayout("shared_dropdown_insanity_grid") or nil)
     
     e = Layout:FindLayout("shared_misc_v_grid").Root
-    e.Margin = self:getState() == 4 and "-196,-74,0,0" or 0
-    e.MaxWidth = self:getState() == 4 and 180 or -1
-    e.Background = self:getState() == 4 and "#00000000" or ""
+    e.Margin = insanity_view and "-196,-74,0,0" or 0
+    e.MaxWidth = insanity_view and 180 or -1
+    e.Background = insanity_view and "#00000000" or ""
     
     
     if self:getState() > 0 then

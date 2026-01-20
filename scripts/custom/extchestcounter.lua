@@ -21,7 +21,13 @@ ExtendedChestCounter:set {
             end
     },
     RemainingCount = {
-        get = function(self) return math.max(0, (self.MaxCount - self.ExemptedCount) - math.max(0, self.CollectedCount - self.DeductedCount)) end
+        get = function(self) return math.max(0, (self.MaxCount - self.ExemptedCount) - math.max(0, (self.CollectedCount + self.ManualCount) - self.DeductedCount)) end
+    },
+    ManualCount = {
+        value = 0,
+        afterSet = function(self)
+                self.CollectedCount = self.CollectedCount
+            end
     },
 }
 
@@ -92,11 +98,24 @@ function ExtendedChestCounter:InvalidateAccessibility()
     
 end
 
+function ExtendedChestCounter:Increment(count)
+    count = count or 1
+    self.ManualCount = self.ManualCount + (self.CountIncrement * count)
+    return num
+end
+
+function ExtendedChestCounter:Decrement(count)
+    count = count or 1
+    self.ManualCount = self.ManualCount - (self.CountIncrement * count)
+    return num
+end
+
 function ExtendedChestCounter:save()
     local data = {}
     data["min_count"] = self.MinCount
     data["max_count"] = self.MaxCount
     data["collected_count"] = self.CollectedCount
+    data["manual_count"] = self.ManualCount
     data["exempted_count"] = self.ExemptedCount
     data["deducted_count"] = self.DeductedCount
     return data
@@ -111,6 +130,9 @@ function ExtendedChestCounter:load(data)
     end
     if data["collected_count"] ~= nil then
         self.CollectedCount = data["collected_count"]
+    end
+    if data["manual_count"] ~= nil then
+        self.ManualCount = data["manual_count"]
     end
     if data["exempted_count"] ~= nil then
         self.ExemptedCount = data["exempted_count"]
