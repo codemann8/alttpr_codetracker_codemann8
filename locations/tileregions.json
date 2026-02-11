@@ -861,6 +861,7 @@
             "ow_vanilla_30,@South Light World",
             "ow_vanilla_30,@Flute Access",
             "ow_swapped_30,@South Dark World",
+            "ow_swapped_30,@Flute Access,lift2",
 
             "ow_vanilla_30,ow_desert_back,lift1",
             "ow_vanilla_30,ow_mire,mirror",
@@ -1435,6 +1436,8 @@
             "ow_sw_pass_west",
             "ow_vanilla_10,ow_sw_pass_east_top,pearl",
             "ow_vanilla_10,ow_sw_pass_east_bottom,pearl,lift2",
+            "ow_vanilla_10,ow_lost_woods_pass_east_top,hammer,pearl",
+            "ow_vanilla_10,ow_lost_woods_pass_east_bottom,lift2,pearl",
             "ow_swapped_10,ow_sw_pass_east_top",
             "ow_swapped_10,ow_sw_pass_east_bottom,lift2,hammer",
             "ow_swapped_10,ow_lost_woods_pass_west,mirror",
