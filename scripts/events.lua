@@ -1,9 +1,11 @@
 function tracker_on_begin_loading_save_file()
     STATUS.TRACKER_READY = false
+    prepareForSaveLoad()
 end
 
 function tracker_on_finish_loading_save_file()
     updateAllGhosts()
+    updateChests()
     updateLayout()
     STATUS.TRACKER_READY = true
 end

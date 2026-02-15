@@ -522,6 +522,25 @@ function updateChests()
     end
 end
 
+function prepareForSaveLoad()
+    if DATA == nil or DATA.DungeonList == nil then
+        return
+    end
+
+    for i = 1, #DATA.DungeonList do
+        local prefix = DATA.DungeonList[i]
+        local key = Tracker:FindObjectForCode(prefix .. "_smallkey")
+        if key then
+            key.MaxCount = 999
+        end
+
+        local item = Tracker:FindObjectForCode(prefix .. "_item")
+        if item and item.ItemState then
+            item.ItemState.MaxCount = 999
+        end
+    end
+end
+
 function updateMaps()
     local e = Layout:FindLayout("map").Root.Maps:GetEnumerator()
     e:MoveNext()
