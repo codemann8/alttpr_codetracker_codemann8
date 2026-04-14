@@ -463,7 +463,8 @@ function updateCoordinateFromMemorySegment(segment)
         return false
     end
     
-    local insanity_funct = OBJ_ENTRANCE:getState() > 1
+    local insanity_funct = OBJ_ENTRANCE:getState() > 3
+    local zelgawoods_funct = OBJ_ENTRANCE:getState() > 1
     
     local function findClosestEntrance(owid, coordX, coordY, entrance, room)
         local minDistance = 9999
@@ -567,7 +568,7 @@ function updateCoordinateFromMemorySegment(segment)
                 return INSTANCE.MULTIDUNGEONCAPTURES[section.Owner.Name .. "/" .. section.Name]
             end
             if OBJ_ENTRANCE:getState() < 4 then
-                if dungeonPrefix == "sw" and not insanity_funct then
+                if dungeonPrefix == "sw" and not zelgawoods_funct then
                     room = "cap_sw"
                     if entrance:find("Skull Woods") and entrance ~= "@Skull Woods Back/Entrance" then
                         suppressLog = true
@@ -593,7 +594,7 @@ function updateCoordinateFromMemorySegment(segment)
                     remaining[rI] = v
                     for e,c in pairs(INSTANCE.MULTIDUNGEONCAPTURES) do
                         cAlt = c
-                        if insanity_funct and c == "cap_swback" then
+                        if zelgawoods_funct and c == "cap_swback" then
                             cAlt = "cap_sw"
                         end
                         if cAlt == v then
@@ -616,7 +617,7 @@ function updateCoordinateFromMemorySegment(segment)
                     ret = remaining[1]
                 end
 
-                if insanity_funct and ret == "cap_sw" then
+                if zelgawoods_funct and ret == "cap_sw" then
                     return "cap_swback"
                 end
                 return ret
