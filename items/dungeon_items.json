@@ -693,61 +693,61 @@
     // Bosses
     {
         "name": "Armos",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/armos.png",
         "codes": "boss_armos"
     },
     {
         "name": "Lanmolas",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/lanmolas.png",
         "codes": "boss_lanmolas"
     },
     {
         "name": "Moldorm",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/moldorm.png",
         "codes": "boss_moldorm"
     },
     {
         "name": "King Helmasaur",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/helmasaur.png",
         "codes": "boss_helmasaur"
     },
     {
         "name": "Arrghus",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/arrghus.png",
         "codes": "boss_arrghus"
     },
     {
         "name": "Mothula",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/mothula.png",
         "codes": "boss_mothula"
     },
     {
         "name": "Blind",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/blind.png",
         "codes": "boss_blind"
     },
     {
         "name": "Kholdstare",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/kholdstare.png",
         "codes": "boss_kholdstare"
     },
     {
         "name": "Vitreous",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/vitreous.png",
         "codes": "boss_vitreous"
     },
     {
         "name": "Trinexx",
-        "type": "toggle",
+        "type": "static",
         "img": "images/icons/bosses/trinexx.png",
         "codes": "boss_trinexx"
     }
