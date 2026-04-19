@@ -736,6 +736,36 @@
         "capturable": true,
         "codes": "cap_map"
     },
+
+    // Prizes
+    {
+        "name": "Crystal",
+        "type": "static",
+        "img": "images/capture/items/crystal.png",
+        "capturable": true,
+        "codes": "cap_crystal"
+    },
+    {
+        "name": "Red Crystal",
+        "type": "static",
+        "img": "images/capture/items/redcrystal.png",
+        "capturable": true,
+        "codes": "cap_redcrystal"
+    },
+    {
+        "name": "Green Pendant",
+        "type": "static",
+        "img": "images/capture/items/greenpendant.png",
+        "capturable": true,
+        "codes": "cap_greenpendant"
+    },
+    {
+        "name": "Pendant",
+        "type": "static",
+        "img": "images/capture/items/pendant.png",
+        "capturable": true,
+        "codes": "cap_pendant"
+    },
     
     // Misc
     {

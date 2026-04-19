@@ -148,6 +148,18 @@
             ]
         }
     },
+    "tracker_capture_prizes": {
+        "type": "container",
+        "content": {
+            "type": "itemgrid",
+            "h_alignment": "center",
+            "item_margin": "1,2",
+            "item_size": 80,
+            "rows": [
+                [ "cap_crystal", "cap_redcrystal", "cap_greenpendant", "cap_pendant" ]
+            ]
+        }
+    },
     "tracker_capture_medallion": {
         "type": "container",
         "content": {
