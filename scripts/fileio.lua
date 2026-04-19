@@ -202,49 +202,17 @@ function saveBackup()
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 
         textOutput = textOutput .. "BACKUP.LOCATION_CAPTURES = { \n"
-        for i, section in pairs(DATA.CaptureBadgeOverworld) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeUnderworld) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeDungeons) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeEntrances) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeConnectors) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeDropdowns) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeSWDungeons) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeSWDropdowns) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
-            end
-        end
-        for i, section in pairs(DATA.CaptureBadgeInsanity) do
-            if CACHE.CaptureBadges[section] ~= nil and CACHE.CaptureBadges[section][4] ~= nil then
-                textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. CACHE.CaptureBadges[section][4].Name .. "\",\n"
+        local captureLists = {
+            DATA.CaptureBadgeOverworld, DATA.CaptureBadgeUnderworld, DATA.CaptureBadgeDungeons,
+            DATA.CaptureBadgeEntrances, DATA.CaptureBadgeConnectors, DATA.CaptureBadgeDropdowns,
+            DATA.CaptureBadgeSWDungeons, DATA.CaptureBadgeSWDropdowns, DATA.CaptureBadgeInsanity
+        }
+        for _, list in ipairs(captureLists) do
+            for _, section in pairs(list) do
+                local target = findObjectForCode(section)
+                if target ~= nil and target.CapturedItem ~= nil then
+                    textOutput = textOutput .. "    [\"" .. section .. "\"] = \"" .. target.CapturedItem.Name .. "\",\n"
+                end
             end
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"

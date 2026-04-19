@@ -1060,14 +1060,14 @@
             {
                 "map": "lightworld",
                 "x": 1229,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_vanilla_14" ]
             },
             {
                 "map": "darkworld",
                 "x": 1229,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -1089,14 +1089,14 @@
             {
                 "map": "lightworld",
                 "x": 1279,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_vanilla_15" ]
             },
             {
                 "map": "darkworld",
                 "x": 1279,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
             }
@@ -5177,14 +5177,14 @@
             {
                 "map": "darkworld",
                 "x": 1229,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_vanilla_14" ]
             },
             {
                 "map": "lightworld",
                 "x": 1229,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_14" ]
             }
@@ -5206,14 +5206,14 @@
             {
                 "map": "darkworld",
                 "x": 1279,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_vanilla_15" ]
             },
             {
                 "map": "lightworld",
                 "x": 1279,
-                "y": 659,
+                "y": 669,
                 "size": 48,
                 "restrict_visibility_rules": [ "ow_layout_on,ow_swapped_15" ]
             }

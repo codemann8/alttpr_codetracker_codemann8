@@ -115,7 +115,6 @@ if Tracker.ActiveVariantUID == "full_tracker" then
     Tracker:AddLocations("locations/entrances.json")
     Tracker:AddLocations("locations/overworld.json")
     Tracker:AddLocations("locations/underworld.json")
-    Tracker:AddLocations("locations/ghosts.json")
 elseif Tracker.ActiveVariantUID == "items_only" then
     Tracker:AddLocations("locations/dungeons.json")
     Tracker:AddLocations("locations/dungeonmaps.json")

@@ -825,7 +825,6 @@ function updateCoordinateFromMemorySegment(segment)
                         if not skipIcon then
                             if uwRoom ~= "" then
                                 section.CapturedItem = findObjectForCode(uwRoom)
-                                updateGhost(owEntrance, true, true)
                             else
                                 section.AvailableChestCount = 0
                                 if section.HostedItem then
