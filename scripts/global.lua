@@ -23,6 +23,8 @@ CACHE.ROOM = 0xffff
 CACHE.WORLD = 0
 CACHE.CollectionRate = 0
 CACHE.DungeonImage = ""
+CACHE.CaptureBadges = {}
+CACHE.CurrentCapture = {}
 
 INSTANCE = {}
 INSTANCE.NEW_KEY_SYSTEM = false
@@ -360,7 +362,6 @@ function initialize()
 
         if Tracker.ActiveVariantUID == "full_tracker" then
             initMissingSections()
-            CACHE.CaptureBadges = {}
         
             --Link Dungeon Locations to Chest Items
             for i = 1, #DATA.DungeonList do
@@ -774,121 +775,10 @@ function initMissingSections()
     end
 end
 
-function updateAllGhosts()
-    if Tracker.ActiveVariantUID == "full_tracker" then
-        --Update Ghost Badges
-        -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        --     print("Before ghost update: " .. os.clock() - STATUS.START_CLOCK)
-        -- end
-        updateGhosts(DATA.CaptureBadgeOverworld, false, false)
-        if OBJ_ENTRANCE:getState() < 2 then
-            updateGhosts(DATA.CaptureBadgeUnderworld, false, true)
-        end
-        if OBJ_ENTRANCE:getState() > 0 then
-            updateGhosts(DATA.CaptureBadgeDungeons, true, true)
-            
-            if OBJ_ENTRANCE:getState() > 1 then
-                updateGhosts(DATA.CaptureBadgeEntrances, true, true)
-                updateGhosts(DATA.CaptureBadgeConnectors, true, true)
-                updateGhosts(DATA.CaptureBadgeDropdowns, true, true)
-                updateGhosts(DATA.CaptureBadgeSWDungeons, true, true)
-                updateGhosts(DATA.CaptureBadgeSWDropdowns, true, true)
-
-                if OBJ_ENTRANCE:getState() == 4 then
-                    updateGhosts(DATA.CaptureBadgeInsanity, true, true)
-                end
-            end
-        end
-        -- if CONFIG.PREFERENCE_ENABLE_DEBUG_LOGGING then
-        --     print("After ghost update: " .. os.clock() - STATUS.START_CLOCK)
-        -- end
-    end
-end
-
-function updateGhosts(list, clearSection, markHostedItem)
-    for i,section in pairs(list) do
-        updateGhost(section, clearSection, markHostedItem)
-    end
-end
-
-function updateGhost(section, clearSection, markHostedItem)
-    local target, hiddenTarget
-    if not CACHE.CaptureBadges[section] then
-        local tempSection = section:gsub("/", " Ghost/")
-        target = findObjectForCode(section)
-        hiddenTarget = findObjectForCode(tempSection)
-        CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
-    else
-        target = CACHE.CaptureBadges[section][1]
-        hiddenTarget = CACHE.CaptureBadges[section][2]
-    end
-
-    if target == nil or hiddenTarget == nil then
-        print("Failed to resolve " .. section .. " please check for typos.")
-        return false
-    elseif target.CapturedItem and hiddenTarget and not hiddenTarget.Visible then
-        INSTANCE.CAPTURE_BADGES_CHANGED = true
-        removeGhost(section)
-    end
-    if target.CapturedItem ~= CACHE.CaptureBadges[section][4] and hiddenTarget.Visible then
-        INSTANCE.CAPTURE_BADGES_CHANGED = true
-        if CACHE.CaptureBadges[section][3] then
-            hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
-            CACHE.CaptureBadges[section][3] = nil
-            CACHE.CaptureBadges[section][4] = nil
-        end
-        if target.CapturedItem and hiddenTarget.Visible then
-            CACHE.CaptureBadges[section][3] = hiddenTarget.Owner:AddBadge(target.CapturedItem.PotentialIcon)
-            CACHE.CaptureBadges[section][4] = target.CapturedItem
-            if clearSection then
-                target.AvailableChestCount = 0
-                target.CapturedItem = CACHE.CaptureBadges[section][4]
-                cacheManualIcon(target, true)
-            end
-            if markHostedItem then
-                if target.HostedItem then
-                    target.HostedItem.Active = true
-                end
-            end
-
-            if OBJ_DOORSHUFFLE:getState() == 2 and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "capture/dungeons") or target.CapturedItem.Name == "Sanctuary Dropdown" or string.match(target.CapturedItem.Name, "^SW .* Dropdown")) then
-                target.Owner.Pinned = true
-            elseif CONFIG.PREFERENCE_PIN_LOCATIONS_ON_ITEM_CAPTURE and not target.Owner.Pinned and (string.match(tostring(target.CapturedItem.Icon.URI), "capture/items") or string.match(tostring(target.CapturedItem.Icon.URI), "capture/misc")) then
-                target.Owner.Pinned = true
-            end
-
-            if target.Owner.Pinned and target.CapturedItem.Name == "Dead Entrance" then
-                target.Owner.Pinned = false
-            end
-        end
-    end
-end
-
-function removeGhost(section)
-    local target, hiddenTarget
-    if not CACHE.CaptureBadges[section] then
-        local tempSection = section:gsub("/", " Ghost/")
-        target = findObjectForCode(section)
-        hiddenTarget = findObjectForCode(tempSection)
-        CACHE.CaptureBadges[section] = {target, hiddenTarget, nil, nil}
-    else
-        target = CACHE.CaptureBadges[section][1]
-        hiddenTarget = CACHE.CaptureBadges[section][2]
-    end
-
-    if target == nil or hiddenTarget == nil then
-        print("Failed to resolve " .. section .. " please check for typos.")
-    elseif CACHE.CaptureBadges[section][4] then
-        hiddenTarget.Owner:RemoveBadge(CACHE.CaptureBadges[section][3])
-        CACHE.CaptureBadges[section][3] = nil
-        CACHE.CaptureBadges[section][4] = nil
-    end
-end
-
 function cacheManualIcon(targetSection, isAdding)
+    local sectionKey = targetSection.Owner.Name .. "/" .. targetSection.Name
     if targetSection.CapturedItem then
         local cap = targetSection.CapturedItem.Name
-        local sectionKey = targetSection.Owner.Name .. "/" .. targetSection.Name
         if cap:find("^Hyrule Castle") or cap:find("^Desert Palace") or cap:find("^Skull Woods") or cap:find("^Turtle Rock") then
             cap = cap:gsub("Hyrule Castle", "cap_hc")
             cap = cap:gsub("Desert Palace", "cap_dp")
@@ -914,6 +804,8 @@ function cacheManualIcon(targetSection, isAdding)
                 INSTANCE.MULTIDUNGEONCAPTURES[sectionKey] = nil
             end
         end
+    else
+        INSTANCE.MULTIDUNGEONCAPTURES[sectionKey] = nil
     end
 end
 
