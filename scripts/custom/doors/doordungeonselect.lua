@@ -70,6 +70,10 @@ function DoorDungeonSelect:canProvideCode(code)
     return code == self.code
 end
 
+function DoorDungeonSelect:getAllProvidedCodes()
+    return { self.code }
+end
+
 function DoorDungeonSelect:save()
     return {}
 end

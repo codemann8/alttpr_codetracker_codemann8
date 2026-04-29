@@ -81,6 +81,10 @@ function DoorTotalChest:canProvideCode(code)
     return code == self.code
 end
 
+function DoorTotalChest:getAllProvidedCodes()
+    return { self.code }
+end
+
 function DoorTotalChest:save()
     return {}
 end

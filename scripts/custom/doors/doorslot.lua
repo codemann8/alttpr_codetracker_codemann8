@@ -127,6 +127,10 @@ function DoorSlot:canProvideCode(code)
     return code == self.code
 end
 
+function DoorSlot:getAllProvidedCodes()
+    return { self.code }
+end
+
 function DoorSlot:propertyChanged(key, value)
     if key == "state" then
         self:updateIcon()

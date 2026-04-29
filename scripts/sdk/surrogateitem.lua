@@ -116,6 +116,15 @@ function SurrogateItem:providesCode(code)
     return 0
 end
 
+function SurrogateItem:getAllProvidedCodes()
+    local codes = { self.code .. self.suffix }
+    if self.suffix == "" and self.baseCode then
+        table.insert(codes, self.baseCode .. "_off")
+        table.insert(codes, self.baseCode .. "_on")
+    end
+    return codes
+end
+
 function SurrogateItem:save()
     local data = {
         ["state"] = self:getState()

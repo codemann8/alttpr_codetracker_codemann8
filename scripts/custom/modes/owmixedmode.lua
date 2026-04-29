@@ -37,6 +37,10 @@ function OverworldMixedMode:providesCode(code)
     return 0
 end
 
+function OverworldMixedMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function OverworldMixedMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/ow_mixed" .. self.suffix .. ".png", "@disabled")

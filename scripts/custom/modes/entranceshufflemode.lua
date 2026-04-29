@@ -17,6 +17,10 @@ function EntranceShuffleMode:providesCode(code)
     return 0
 end
 
+function EntranceShuffleMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function EntranceShuffleMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/entrance_shuffle_off" .. self.suffix .. ".png")

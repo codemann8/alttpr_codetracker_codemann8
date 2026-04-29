@@ -57,3 +57,7 @@ function GTCrystalReq:providesCode(code)
     end
     return 0
 end
+
+function GTCrystalReq:getAllProvidedCodes()
+    return { "gt_crystals", "gt_crystals_unknown" }
+end

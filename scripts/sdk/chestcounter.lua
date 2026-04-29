@@ -106,6 +106,10 @@ function ChestCounter:providesCode(code)
     return 0
 end
 
+function ChestCounter:getAllProvidedCodes()
+    return { self.code }
+end
+
 function ChestCounter:advanceToCode(code)
     if code == nil or code == self.code then
         self:onLeftClick()

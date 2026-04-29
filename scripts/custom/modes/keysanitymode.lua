@@ -27,6 +27,10 @@ function KeysanityMode:providesCode(code)
     return 0
 end
 
+function KeysanityMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function KeysanityMode:updateIcon()
     if self:getState() == 0 and self.itemCode == "prize" then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/keysanity_" .. self.itemCode .. "_wild"  .. self.suffix .. ".png", "@disabled")

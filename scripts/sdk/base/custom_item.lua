@@ -18,25 +18,29 @@ function CustomItem:createItem(name)
 	end
 	local function invokeAdvanceToCode(item, code)
 		return item.ItemState:advanceToCode(code)
-	end		
+	end
+	local function invokeGetAllProvidedCodes(item)
+		return item.ItemState:getAllProvidedCodes()
+	end
 	local function invokeSave(item)
 		return item.ItemState:save()
 	end
 	local function invokeLoad(item, data)
 		return item.ItemState:load(data)
-	end		 
+	end
 	local function invokePropertyChanged(item, key, value)
 		return item.ItemState:propertyChanged(key, value)
-	end				 
+	end
 
 	self.ItemInstance = ScriptHost:CreateLuaItem()
 	self.ItemInstance.Name = name
 	self.ItemInstance.ItemState = self
 	self.ItemInstance.OnLeftClickFunc = invokeLeftClick
 	self.ItemInstance.OnRightClickFunc = invokeRightClick
-	self.ItemInstance.CanProvideCodeFunc = invokeCanProvideCode		
-	self.ItemInstance.ProvidesCodeFunc = invokeProvidesCode		
-	self.ItemInstance.AdvanceToCodeFunc = invokeAdvanceToCode		
+	self.ItemInstance.CanProvideCodeFunc = invokeCanProvideCode
+	self.ItemInstance.ProvidesCodeFunc = invokeProvidesCode
+	self.ItemInstance.AdvanceToCodeFunc = invokeAdvanceToCode
+	self.ItemInstance.GetAllProvidedCodesFunc = invokeGetAllProvidedCodes
 	self.ItemInstance.SaveFunc = invokeSave
 	self.ItemInstance.LoadFunc = invokeLoad
 	self.ItemInstance.PropertyChangedFunc = invokePropertyChanged
@@ -68,6 +72,25 @@ end
 
 --	Called to request that your item advance to the given code.
 function CustomItem:advanceToCode(code)
+end
+
+--	Called once after the item is created, to advertise the complete static
+--	set of codes this item could ever provide via providesCode() across any
+--	state. EmoTracker uses the result to build a code → providers index;
+--	codes NOT in this list will skip this item entirely on accessibility-rule
+--	lookups (no per-rule providesCode invocation).
+--
+--	Return:
+--	  - A table of code strings — array-style { "lamp", "fire" }
+--	    or set-style { lamp = true, fire = true } both work. Return {}
+--	    if your item never returns >0 from providesCode for any code.
+--	  - nil to signal "indeterminate" — EmoTracker will fall back to
+--	    brute-force providesCode dispatch on every lookup (legacy behavior).
+--
+--	The base default is nil; override in subclasses whose code set is
+--	statically determinable to enable the indexing optimization.
+function CustomItem:getAllProvidedCodes()
+	return nil
 end
 
 --	Called when the user is saving progress.

@@ -88,6 +88,10 @@ function MapCompassBK:providesCode(code)
     return 0
 end
 
+function MapCompassBK:getAllProvidedCodes()
+    return { self.code }
+end
+
 function MapCompassBK:advanceToCode(code)
     if code == nil or code == self.code then
         self:setState((self:getState() + 1) % 8)

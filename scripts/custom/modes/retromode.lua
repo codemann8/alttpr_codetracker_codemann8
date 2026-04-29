@@ -38,6 +38,10 @@ function RetroMode:providesCode(code)
     return 0
 end
 
+function RetroMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function RetroMode:postUpdate()
     if self.linkedSetting then
         self.linkedSetting.CurrentStage = self:getState()

@@ -17,6 +17,10 @@ function DoorShuffleMode:providesCode(code)
     return 0
 end
 
+function DoorShuffleMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function DoorShuffleMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/door_shuffle_off" .. self.suffix .. ".png")

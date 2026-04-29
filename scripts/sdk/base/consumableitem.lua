@@ -146,6 +146,10 @@ function ConsumableItem:providesCode(code)
     return 0
 end
 
+function ConsumableItem:getAllProvidedCodes()
+    return { self.code }
+end
+
 function ConsumableItem:advanceToCode(code)
     if code == nil or code == self.code then
         self:onLeftClick()

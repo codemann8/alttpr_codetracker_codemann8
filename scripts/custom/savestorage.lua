@@ -18,3 +18,7 @@ function SaveStorage:load(data)
     updateRoomSlots(0, true)
     INSTANCE.ROOMCURSORPOSITION = data["roomCursor"]
 end
+
+function SaveStorage:getAllProvidedCodes()
+    return {}
+end

@@ -36,6 +36,10 @@ function PoolMode:providesCode(code)
     return 0
 end
 
+function PoolMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function PoolMode:postUpdate()
     if self.linkedSetting then
         self.linkedSetting.CurrentStage = self:getState()

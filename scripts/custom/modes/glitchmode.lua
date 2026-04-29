@@ -17,6 +17,10 @@ function GlitchMode:providesCode(code)
     return 0
 end
 
+function GlitchMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function GlitchMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/glitches_none" .. self.suffix .. ".png")

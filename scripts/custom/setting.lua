@@ -127,6 +127,10 @@ function Setting:canProvideCode(code)
     return code == self.code
 end
 
+function Setting:getAllProvidedCodes()
+    return { self.code }
+end
+
 function Setting:propertyChanged(key, value)
     if key == "state" then
         self:updateSetting()

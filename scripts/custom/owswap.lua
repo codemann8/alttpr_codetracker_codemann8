@@ -25,6 +25,10 @@ function OWSwap:providesCode(code)
     return 0
 end
 
+function OWSwap:getAllProvidedCodes()
+    return { self.code }
+end
+
 function OWSwap:onLeftClick()
     if OBJ_MIXED:getState() > 1 then
         self:updateSwap((self:getState() + 1) % self:getCount())

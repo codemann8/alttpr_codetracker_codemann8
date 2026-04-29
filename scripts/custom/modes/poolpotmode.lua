@@ -94,3 +94,7 @@ end
 function PoolPotMode:providesCode(code)
     return 0
 end
+
+function PoolPotMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end

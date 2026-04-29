@@ -20,3 +20,7 @@ end
 function RoomSelectSlot:canProvideCode(code)
     return code == self.code
 end
+
+function RoomSelectSlot:getAllProvidedCodes()
+    return { self.code }
+end

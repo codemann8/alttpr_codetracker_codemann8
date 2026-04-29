@@ -17,6 +17,10 @@ function OverworldLayoutMode:providesCode(code)
     return 0
 end
 
+function OverworldLayoutMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function OverworldLayoutMode:updateIcon()
     if self:getState() == 0 then
         self.ItemInstance.Icon = ImageReference:FromPackRelativePath("images/modes/ow_layout" .. self.suffix .. ".png", "@disabled")

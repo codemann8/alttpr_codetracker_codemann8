@@ -20,3 +20,7 @@ end
 function ActionItem:canProvideCode(code)
     return code == self.code
 end
+
+function ActionItem:getAllProvidedCodes()
+    return { self.code }
+end

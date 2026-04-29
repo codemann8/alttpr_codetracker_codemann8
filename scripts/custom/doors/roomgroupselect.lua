@@ -72,6 +72,10 @@ function RoomGroupSelection:canProvideCode(code)
     return code == self.code
 end
 
+function RoomGroupSelection:getAllProvidedCodes()
+    return { self.code }
+end
+
 function RoomGroupSelection:propertyChanged(key, value)
     if key == "state" then
         self:updateIcon()

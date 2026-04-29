@@ -36,6 +36,10 @@ function WorldStateMode:providesCode(code)
     return 0
 end
 
+function WorldStateMode:getAllProvidedCodes()
+    return { self.code .. self.suffix }
+end
+
 function WorldStateMode:updateIcon()
     local overlay = ""
     if self:getProperty("version") == 1 then
