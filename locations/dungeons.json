@@ -651,6 +651,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -659,8 +660,6 @@
                     "@Eastern Palace/Armos Access,$canDamageBoss|@Eastern Palace/Armos",
                     "{@Eastern Palace/Armos Access}"
                 ],
-                "capture_item": true,
-                "capture_badge_offset": "42,0",
                 "item_count": 1,
                 "hosted_item": "easternpalace"
             }
@@ -831,6 +830,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -973,6 +973,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -1385,6 +1386,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -1619,6 +1621,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -1811,6 +1814,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -2012,6 +2016,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -2313,6 +2318,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -2556,6 +2562,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -2894,6 +2901,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "item_count": 1
             },
             {
@@ -3118,6 +3126,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "42,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "clear_as_group": true,
                 "item_count": 3
             },
@@ -3173,6 +3182,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "-42,0",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "hosted_item": "lanmolas2"
             },
             {
@@ -3234,6 +3244,7 @@
                 "capture_item": true,
                 "capture_badge_offset": "0,-42",
                 "capture_item_layout": "tracker_capture_bosses",
+                "capture_persist": true,
                 "hosted_item": "moldorm2"
             },
             {
