@@ -42,10 +42,10 @@ end
 
 function ExtendedChestCounter:UpdateBadgeAndIcon()
     if (not shouldChestCountUp()) and self.RemainingCount == 0 then
-        self.ItemInstance.Icon = self.RemainingCount > 0 and self.FullIcon or self.EmptyIcon
+        self.ItemInstance.Icon = self.EmptyIcon
         self.ItemInstance.BadgeText = nil
     else
-        if shouldChestCountUp() and self.MaxCount ~= 999 and self.CollectedCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
+        if shouldChestCountUp() and self.MaxCount ~= 999 and self.CollectedCount + self.ManualCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
             self.ItemInstance.Icon = self.EmptyIcon
         else
             self.ItemInstance.Icon = self.FullIcon
@@ -53,8 +53,8 @@ function ExtendedChestCounter:UpdateBadgeAndIcon()
         local text = nil
         if shouldChestCountUp() then
             if self.MaxCount == 999 then
-                text = tostring(math.floor(self.CollectedCount - self.DeductedCount))
-            elseif self.CollectedCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
+                text = tostring(math.max(0, math.floor(self.CollectedCount + self.ManualCount - self.DeductedCount)))
+            elseif self.CollectedCount + self.ManualCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
                 text = tostring(math.floor(self.MaxCount - self.ExemptedCount))
             else
                 text = tostring(math.floor(self.RemainingCount))
@@ -79,7 +79,7 @@ function ExtendedChestCounter:UpdateBadgeAndIcon()
         if self.MaxCount == 999 then
             self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(AccessibilityLevel.SequenceBreak)
         else
-            if self.CollectedCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
+            if self.CollectedCount + self.ManualCount - self.DeductedCount >= self.MaxCount - self.ExemptedCount then
                 self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(AccessibilityLevel.None)
             else
                 self.ItemInstance.BadgeTextColor = Layout:GetColorForAccessibility(AccessibilityLevel.Partial)
@@ -100,13 +100,17 @@ end
 
 function ExtendedChestCounter:Increment(count)
     count = count or 1
-    self.ManualCount = self.ManualCount + (self.CountIncrement * count)
+    local newManual = self.ManualCount + (self.CountIncrement * count)
+    if self.MaxCount ~= 999 then
+        newManual = math.min(newManual, self.MaxCount - self.ExemptedCount - self.CollectedCount + self.DeductedCount)
+    end
+    self.ManualCount = newManual
     return num
 end
 
 function ExtendedChestCounter:Decrement(count)
     count = count or 1
-    self.ManualCount = self.ManualCount - (self.CountIncrement * count)
+    self.ManualCount = math.max(self.ManualCount - (self.CountIncrement * count), -(self.CollectedCount - self.DeductedCount))
     return num
 end
 

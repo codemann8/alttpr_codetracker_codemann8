@@ -51,7 +51,7 @@ function DoorTotalChest:onLeftClick()
                     item.BadgeText = "0"
                 end
             else
-                item.MaxCount = item.CollectedCount + item.ExemptedCount
+                item.MaxCount = item.CollectedCount + item.ManualCount - item.DeductedCount + item.ExemptedCount
             end
             self:setState(item.MaxCount)
         else
@@ -68,7 +68,7 @@ function DoorTotalChest:onRightClick()
             item = item.ItemState
         end
         
-        if item.MaxCount == (item.AcquiredCount and item.AcquiredCount or item.CollectedCount) then
+        if item.MaxCount == (item.CollectedCount or item.AcquiredCount) then
             item.MaxCount = 999
         else
             item.MaxCount = item.MaxCount - 1
