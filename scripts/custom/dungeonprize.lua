@@ -90,6 +90,10 @@ function DungeonPrize:providesCode(code)
     return 0
 end
 
+function DungeonPrize:getAllProvidedCodes()
+    return { self.code, self.verboseCode }
+end
+
 function DungeonPrize:advanceToCode(code)
     if code == nil or code == self.code then
         self:onLeftClick()
