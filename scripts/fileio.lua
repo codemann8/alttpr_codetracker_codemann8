@@ -54,8 +54,8 @@ function sendExternalMessage(filename, value)
                 or (filename == "health" and not CONFIG.AUTOTRACKER_ENABLE_EXTERNAL_HEALTH_FILE) then
             return
         end
-        local fullDir, packRoot = getFullDir(CONFIG.OUTPUT_FOLDER)
-        local file = io.open(fullDir .. filename .. ".txt", "w+")
+        local fullDir, packRoot = getFullDir()
+        local file = io.open(Tracker:ConcatenatePaths(fullDir, filename .. ".txt"), "w+")
         if file then
             io.output(file)
             io.write(value)
@@ -273,7 +273,7 @@ function saveBackup()
         end
         textOutput = string.sub(textOutput, 1, string.len(textOutput) - 2) .. "\n}\n\n"
 
-        writeOverride("settings\\", "backup.lua", textOutput)
+        writeOverride("settings", "backup.lua", textOutput)
     end
 end
 
@@ -447,9 +447,9 @@ function saveSettings(setting)
         textOutput = textOutput .. textcode .. " = " .. tostring(otherSetting:getState()) .. "\n"
     end
     if isDefault then
-        deleteOverride("settings\\", setting.file)
+        deleteOverride("settings", setting.file)
     else
-        writeOverride("settings\\", setting.file, textOutput)
+        writeOverride("settings", setting.file, textOutput)
     end
 
     postSettings()
@@ -463,10 +463,10 @@ function writeOverride(path, filename, text)
 
     local written = false
     if fullDir ~= nil then
-        written = writeFile(fullDir .. "user_overrides\\" .. packRoot, path, filename, text)
+        written = writeFile(Tracker:ConcatenatePaths(fullDir, "user_overrides", packRoot), path, filename, text)
     
-        if dirExists(fullDir .. "dev\\") then
-            written = writeFile(fullDir .. "dev\\user_overrides\\" .. packRoot, path, filename, text) or written
+        if dirExists(Tracker:ConcatenatePaths(fullDir, "dev")) then
+            written = writeFile(Tracker:ConcatenatePaths(fullDir, "dev", "user_overrides", packRoot), path, filename, text) or written
         end
 
         if not written then
@@ -480,13 +480,16 @@ end
 
 function deleteOverride(path, filename)
     local fullDir, packRoot = getFullDir()
+    if fullDir == nil then return end
 
-    if dirExists(fullDir .. "user_overrides\\" .. packRoot .. path .. filename) then
-        os.remove(fullDir .. "user_overrides\\" .. packRoot .. path .. filename)
+    local overridePath = Tracker:ConcatenatePaths(fullDir, "user_overrides", packRoot, path, filename)
+    if dirExists(overridePath) then
+        os.remove(overridePath)
     end
     
-    if dirExists(fullDir .. "dev\\user_overrides\\" .. packRoot .. path .. filename) then
-        os.remove(fullDir .. "dev\\user_overrides\\" .. packRoot .. path .. filename)
+    local devOverridePath = Tracker:ConcatenatePaths(fullDir, "dev", "user_overrides", packRoot, path, filename)
+    if dirExists(devOverridePath) then
+        os.remove(devOverridePath)
     end
 end
 
@@ -505,8 +508,9 @@ function printLog(text, action)
         local fullDir, packRoot = getFullDir()
         local written = false
         if fullDir ~= nil then
-            if dirExists(fullDir .. "user_overrides\\" .. packRoot) then
-                local file = io.open(fullDir .. "user_overrides\\" .. packRoot .. "autoerlog.txt", "a")
+            local overrideDir = Tracker:ConcatenatePaths(fullDir, "user_overrides", packRoot)
+            if dirExists(overrideDir) then
+                local file = io.open(Tracker:ConcatenatePaths(overrideDir, "autoerlog.txt"), "a")
                 if file then
                     io.output(file)
                     if action == 2 then
@@ -524,36 +528,25 @@ function printLog(text, action)
     end
 end
 
-function getFullDir(configDir)
-    configDir = configDir or CONFIG.DOCUMENTS_FOLDER
-    local emoDir = CONFIG.EMOTRACKER_FOLDER or "Documents\\EmoTracker\\"
-    local packRoot = "alttpr_codetracker_codemann8\\"
-    local baseDir = ""
-    
-    if dirExists(configDir .. emoDir) then
-        baseDir = configDir
-    elseif os.getenv("OneDrive") and dirExists(os.getenv("OneDrive") .. "\\" .. emoDir) then
-        baseDir = os.getenv("OneDrive") .. "\\"
-    else
-        print("ERROR: User has changed the location of their 'Documents' folder. Press F1 to read the documentation for steps to resolve.")
-        print("OneDrive:", os.getenv("OneDrive"))
-        print("UserProfile:", os.getenv("UserProfile"))
+function getFullDir()
+    local emoDir = Tracker.UserDirectory
+    local packRoot = "alttpr_codetracker_codemann8"
+
+    if not dirExists(emoDir) then
+        print("ERROR: EmoTracker user directory not found: " .. tostring(emoDir))
         return nil, nil
     end
 
-    if baseDir == "" then
-        return nil, nil
-    end
-
-    return baseDir .. emoDir, packRoot
+    return emoDir, packRoot
 end
 
 function readFile(rootpath, localpath, filename)
-    if not dirExists(rootpath .. localpath) then
+    local dirpath = Tracker:ConcatenatePaths(rootpath, localpath)
+    if not dirExists(dirpath) then
         return false
     end
 
-    local file = io.open(rootpath .. localpath .. filename, "r")
+    local file = io.open(Tracker:ConcatenatePaths(dirpath, filename), "r")
     if file then
         local text = file:read("*a")
         io.close(file)
@@ -564,13 +557,14 @@ function readFile(rootpath, localpath, filename)
 end
 
 function writeFile(rootpath, localpath, filename, text)
-    if not dirExists(rootpath .. localpath) then
+    local dirpath = Tracker:ConcatenatePaths(rootpath, localpath)
+    if not dirExists(dirpath) then
         --Tracker.ActiveGamePackage:ExportUserOverride(localpath .. filename)
         --TODO: Revisit when Emo adds ability to export overrides from code
         return false
     end
 
-    local file = io.open(rootpath .. localpath .. filename, "w+")
+    local file = io.open(Tracker:ConcatenatePaths(dirpath, filename), "w+")
     if file then
         io.output(file)
         io.write(text)
