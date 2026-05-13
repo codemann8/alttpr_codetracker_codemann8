@@ -91,7 +91,7 @@ function DungeonPrize:providesCode(code)
 end
 
 function DungeonPrize:getAllProvidedCodes()
-    return { self.code, self.verboseCode }
+    return { self.code, self.verboseCode, "prize", "crystal", "crystal56", "redcrystal", "pendant", "greenpendant" }
 end
 
 function DungeonPrize:advanceToCode(code)
