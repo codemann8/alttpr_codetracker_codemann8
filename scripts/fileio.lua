@@ -55,7 +55,12 @@ function sendExternalMessage(filename, value)
             return
         end
         local fullDir, packRoot = getFullDir()
-        local file = io.open(Tracker:ConcatenatePaths(fullDir, filename .. ".txt"), "w+")
+        if fullDir == nil then return end
+        -- External output files must always go to the base EmoTracker dir,
+        -- not a dev subfolder, so both dev-mode and non-dev-mode write to the same spot.
+        local outputDir = fullDir:gsub("[/\\]+$", "")
+        outputDir = outputDir:match("^(.+)[/\\]dev$") or outputDir
+        local file = io.open(Tracker:ConcatenatePaths(outputDir, filename .. ".txt"), "w+")
         if file then
             io.output(file)
             io.write(value)
@@ -532,7 +537,7 @@ function getFullDir()
     local emoDir = Tracker.UserDirectory
     local packRoot = "alttpr_codetracker_codemann8"
 
-    if not dirExists(emoDir) then
+    if emoDir == nil or not dirExists(emoDir) then
         print("ERROR: EmoTracker user directory not found: " .. tostring(emoDir))
         return nil, nil
     end
